@@ -10,9 +10,10 @@ __pycache__/
 .Python
 build/
 develop-eggs/
-_notebooks/data/db
 dist/
-db/
+db/chroma_db/
+db/healthcare_db/
+# db/sessions/
 downloads/
 eggs/
 .eggs/
@@ -141,6 +142,7 @@ celerybeat.pid
 .env
 .envrc
 .venv
+.venv/
 env/
 venv/
 ENV/
