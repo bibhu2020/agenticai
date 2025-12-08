@@ -31,7 +31,7 @@ jobs:
         # Create parent directories for nested copies
         mkdir -p deploy_temp/src
         mkdir -p deploy_temp/data
-        
+
         # Copy required folders
         cp -r common deploy_temp/
         cp -r data/healthcare deploy_temp/data/
@@ -48,7 +48,8 @@ jobs:
         
         # Copy Dockerfile and run.py from healthcare-assistant to root of deploy_temp
         cp src/healthcare-assistant/Dockerfile deploy_temp/
-        cp src/healthcare-assistant/run.py deploy_temp/
+        cp src/healthcare-assistant/README.md deploy_temp/
+        cp run.py deploy_temp/
         
         echo "Deployment directory structure created"
         ls -la deploy_temp/
