@@ -1,7 +1,7 @@
 name: Deploy AI Trip-planner App to Hugging Face
 
 env:
-  PROJECT_PATH: projects/ai-trip-planner/app
+  PROJECT_PATH: src/ai-trip-planner/app
   HF_TOKEN: ${{ secrets.HF_TOKEN }}
   HF_USERNAME: ${{ secrets.HF_USERNAME }}
   HF_SPACE_NAME: ${{ secrets.HF_SPACE_TRIP_PLANNER_UI }}
@@ -12,7 +12,7 @@ on:
     branches:
       - main
     paths:
-      - 'projects/ai-trip-planner/app/**'
+      - 'src/ai-trip-planner/app/**'
   workflow_dispatch:
 
 jobs:

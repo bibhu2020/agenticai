@@ -1,7 +1,7 @@
 name: Deploy Deep Research App to Hugging Face
 
 env:
-  PROJECT_PATH: projects/deep-research
+  PROJECT_PATH: src/deep-research
   HF_TOKEN: ${{ secrets.HF_TOKEN }}
   HF_USERNAME: ${{ secrets.HF_USERNAME }}
   HF_SPACE_NAME: deep-research
@@ -12,7 +12,7 @@ on:
     branches:
       - main
     paths:
-      - 'projects/deep-research/**'
+      - 'src/deep-research/**'
   workflow_dispatch:
 
 jobs:

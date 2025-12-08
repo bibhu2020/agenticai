@@ -1,7 +1,7 @@
 name: Deploy Chatbot API to Hugging Face
 
 env:
-  PROJECT_PATH: projects/chatbot
+  PROJECT_PATH: src/chatbot
   HF_TOKEN: ${{ secrets.HF_TOKEN }}
   HF_USERNAME: ${{ secrets.HF_USERNAME }}
   HF_SPACE_NAME: chatbot-app
@@ -12,7 +12,7 @@ on:
     branches:
       - main
     paths:
-      - 'projects/chatbot/**'
+      - 'src/chatbot/**'
   workflow_dispatch:
 
 jobs:

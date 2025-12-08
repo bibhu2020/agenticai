@@ -1,7 +1,7 @@
 name: Deploy AI Travel Agent to Hugging Face
 
 env:
-  PROJECT_PATH: projects/travel-agent
+  PROJECT_PATH: src/travel-agent
   HF_TOKEN: ${{ secrets.HF_TOKEN }}
   HF_USERNAME: ${{ secrets.HF_USERNAME }}
   HF_SPACE_NAME: travel-agent
@@ -12,7 +12,7 @@ on:
   #   branches:
   #     - main
   #   paths:
-  #     - 'projects/travel-agent/**'
+  #     - 'src/travel-agent/**'
   workflow_dispatch:
 
 jobs:
