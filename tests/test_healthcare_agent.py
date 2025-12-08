@@ -3,11 +3,11 @@ import pytest
 import sys
 from pathlib import Path
 
-# Add src to path
-sys.path.insert(0, str(Path(__file__).parent.parent / "src" / "healthcare-rag-chatbot"))
+# Add common to path
+sys.path.insert(0, str(Path(__file__).parent.parent / "common"))
 
 from agents import Runner, trace
-from src.agents.healthcare_agent import healthcare_agent
+from aagents.healthcare_agent import healthcare_agent
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -19,7 +19,7 @@ async def test_healthcare_agent_diabetes_query():
     with trace("Healthcare Agent Diabetes Query"):
         response = await Runner.run(
             healthcare_agent,
-            "who is aurangjeb?"
+            "I am having chest burning from 12 hours. what could be the reasons?"
             # "What is diabetes and how is it managed?",
         )
 
@@ -32,11 +32,11 @@ async def test_healthcare_agent_diabetes_query():
     assert isinstance(response.final_output, str)
     assert len(response.final_output) > 50
     
-    # Check for diabetes-related content
+    # # Check for diabetes-related content
     # output_lower = response.final_output.lower()
-    # assert "icd-10" in output_lower, "Response should mention icd10"
+    # assert "diabetes" in output_lower, "Response should mention diabetes"
     
-    print("\n✓ Test passed: Healthcare agent responded to icd10 query")
+    print("\n✓ Test passed: Healthcare agent responded to diabetes query")
 
 
 # @pytest.mark.asyncio
@@ -91,29 +91,29 @@ async def test_healthcare_agent_diabetes_query():
 #     print("\n✓ Test passed: Healthcare agent responded to nutrition query")
 
 
-# @pytest.mark.asyncio
-# async def test_healthcare_agent_includes_disclaimer():
-#     """Test that healthcare agent includes medical disclaimer"""
-#     with trace("Healthcare Agent Disclaimer Check"):
-#         response = await Runner.run(
-#             healthcare_agent,
-#             "Should I take aspirin for my headache?",
-#         )
+@pytest.mark.asyncio
+async def test_healthcare_agent_includes_disclaimer():
+    """Test that healthcare agent includes medical disclaimer"""
+    with trace("Healthcare Agent Disclaimer Check"):
+        response = await Runner.run(
+            healthcare_agent,
+            "Should I take aspirin for my headache?",
+        )
 
-#     # Print for debugging
-#     print("\n[DEBUG] Agent Final Output:\n")
-#     print(response.final_output)
+    # Print for debugging
+    print("\n[DEBUG] Agent Final Output:\n")
+    print(response.final_output)
 
-#     # Basic assertions
-#     assert response.final_output is not None
-#     assert isinstance(response.final_output, str)
+    # Basic assertions
+    assert response.final_output is not None
+    assert isinstance(response.final_output, str)
     
-#     # Check for disclaimer
-#     output_lower = response.final_output.lower()
-#     assert any(term in output_lower for term in ["disclaimer", "consult", "healthcare provider", "medical advice"]), \
-#         "Response should include medical disclaimer"
+    # Check for disclaimer
+    output_lower = response.final_output.lower()
+    assert any(term in output_lower for term in ["disclaimer", "consult", "healthcare provider", "medical advice"]), \
+        "Response should include medical disclaimer"
     
-#     print("\n✓ Test passed: Healthcare agent includes appropriate disclaimer")
+    print("\n✓ Test passed: Healthcare agent includes appropriate disclaimer")
 
 
 # Run tests with: pytest -s tests/test_healthcare_agent.py

@@ -1,24 +1,28 @@
 import pytest
 import os
 from pathlib import Path
-
-# Add src to path for imports
 import sys
-sys.path.insert(0, str(Path(__file__).parent.parent / "src" / "healthcare-rag-chatbot"))
 
-from src.rag.rag import Retriever
+# Add common to path
+sys.path.insert(0, str(Path(__file__).parent.parent / "common"))
+
+from rag.rag import Retriever
 
 
 # Shared fixture for the database path
 @pytest.fixture(scope="module")
 def db_path():
     """Provide the database path for all tests"""
-    return "/home/azureuser/ws/agenticaiprojects/src/healthcare-rag-chatbot/"
+    return "/home/azureuser/ws/agenticaiprojects/db/"
 
+@pytest.fixture(scope="module")
+def file_path():
+    """Provide the file path for all tests"""
+    return "/home/azureuser/ws/agenticaiprojects/data/"
 
-def test_1_create_rag_db(db_path):
+def test_1_create_rag_db(db_path, file_path):
     """Test 1: Create RAG database from PDF files"""
-    retriever = Retriever(db_path=db_path)
+    retriever = Retriever(file_path=file_path, db_path=db_path)
     
     # Create the knowledge base
     retriever.load_knowledge_base()
@@ -37,9 +41,9 @@ def test_1_create_rag_db(db_path):
     print(f"  Database location: {retriever.db_path}")
 
 
-def test_2_perform_similarity_search(db_path):
+def test_2_perform_similarity_search(db_path, file_path):
     """Test 2: Perform similarity search on existing database"""
-    retriever = Retriever(db_path=db_path)
+    retriever = Retriever(file_path=file_path, db_path=db_path)
     
     # Load existing knowledge base
     retriever.load_knowledge_base()
@@ -65,9 +69,9 @@ def test_2_perform_similarity_search(db_path):
         print(f"  ⚠ Warning: No results found for query")
 
 
-# def test_3_delete_rag_db(db_path):
+# def test_3_delete_rag_db(db_path, file_path):
 #     """Test 3: Delete the RAG database"""
-#     retriever = Retriever(db_path=db_path)
+#     retriever = Retriever(file_path=file_path, db_path=db_path)
     
 #     # Verify database exists before deletion
 #     db_exists_before = os.path.exists(retriever.db_path)

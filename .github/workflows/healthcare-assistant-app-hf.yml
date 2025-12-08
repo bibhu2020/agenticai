@@ -1,0 +1,124 @@
+name: Deploy Healthcare Assistant to Hugging Face
+
+env:
+  PROJECT_PATH: src/healthcare-assistant
+  HF_TOKEN: ${{ secrets.HF_TOKEN }}
+  HF_USERNAME: ${{ secrets.HF_USERNAME }}
+  HF_SPACE_NAME: healthcare-assistant
+  REPO_ID: ${{ secrets.HF_USERNAME }}/healthcare-assistant
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'src/healthcare-assistant/**'
+  workflow_dispatch:
+
+jobs:
+  upload-to-hf:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Create deployment directory structure
+      run: |
+        # Create a temporary deployment directory
+        mkdir -p deploy_temp
+        
+        # Copy required folders
+        cp -r common deploy_temp/
+        cp -r data/healthcare deploy_temp/data/
+        cp -r db deploy_temp/
+        cp -r src/healthcare-assistant deploy_temp/src/
+        
+        # Copy project metadata files
+        cp uv.lock deploy_temp/
+        cp pyproject.toml deploy_temp/
+        
+        # Copy Dockerfile and run.py from healthcare-assistant to root of deploy_temp
+        cp src/healthcare-assistant/Dockerfile deploy_temp/
+        cp src/healthcare-assistant/run.py deploy_temp/
+        
+        echo "Deployment directory structure created"
+        ls -la deploy_temp/
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install huggingface_hub
+
+    - name: Create upload script
+      run: |
+        cat << 'EOF' > upload_to_hf.py
+        from huggingface_hub import HfApi, create_repo
+        import os
+        import sys
+        from pathlib import Path
+
+        DEPLOY_PATH = "deploy_temp"
+        REPO_ID = os.environ["REPO_ID"]
+        TOKEN = os.environ["HF_TOKEN"]
+
+        def main():
+            # Authenticate
+            api = HfApi()
+
+            # Create the Space if it doesn't exist
+            try:
+                create_repo(
+                    repo_id=REPO_ID,
+                    token=TOKEN,
+                    repo_type="space",
+                    space_sdk="docker",
+                    private=False
+                )
+                print(f"Created new repository: {REPO_ID}")
+            except Exception as e:
+                if "You already created this space" in str(e):
+                    print(f"Repository {REPO_ID} already exists")
+                else:
+                    print(f"Error creating repository: {e}")
+                    sys.exit(1)
+
+            # Upload folder
+            try:
+                print(f"Uploading files from {DEPLOY_PATH} to {REPO_ID}...")
+                api.upload_folder(
+                    folder_path=DEPLOY_PATH,
+                    repo_id=REPO_ID,
+                    repo_type="space",
+                    token=TOKEN,
+                    ignore_patterns=[
+                        ".env*",
+                        ".venv/**",
+                        "venv/**",
+                        "__pycache__/**",
+                        "*.pyc",
+                        ".git/**",
+                        ".pytest_cache/**",
+                        ".coverage",
+                        "dockers/**",
+                        "*.pdfZone.Identifier",
+                        "*.pdfmshield",
+                    ],
+                )
+                print("Upload completed successfully")
+            except Exception as e:
+                print(f"Error uploading files: {e}")
+                sys.exit(1)
+
+        if __name__ == "__main__":
+            main()
+        EOF
+
+    - name: Upload to Hugging Face Hub
+      run: python upload_to_hf.py
+

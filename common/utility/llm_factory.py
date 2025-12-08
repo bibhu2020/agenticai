@@ -3,7 +3,7 @@ import tiktoken
 from typing import Any
 from langchain_openai.chat_models import ChatOpenAI, AzureChatOpenAI
 from langchain_openai.embeddings import AzureOpenAIEmbeddings, OpenAIEmbeddings
-from azure.identity import DefaultAzureCredential
+# from azure.identity import DefaultAzureCredential
 from huggingface_hub import login
 from langchain_huggingface import ChatHuggingFace, HuggingFaceEmbeddings
 from langchain_ollama import ChatOllama, OllamaEmbeddings
@@ -28,18 +28,18 @@ class LLMFactory:
                 model_name=kwargs.get("model_name", "gpt-4")
             )
 
-        elif provider == "azureopenai":
-            # Azure OpenAI Chat Model using Azure Identity for token
-            credential = DefaultAzureCredential()
-            token = credential.get_token("https://cognitiveservices.azure.com/.default").token
-            if not token:
-                raise ValueError("Token is required for AzureChatOpenAI.")
-            return AzureChatOpenAI(
-                azure_endpoint=kwargs["endpoint"],
-                azure_deployment=kwargs.get("deployment_name", "gpt-4"),
-                api_version=kwargs["api_version"],
-                api_key=token
-            )
+        # elif provider == "azureopenai":
+        #     # Azure OpenAI Chat Model using Azure Identity for token
+        #     credential = DefaultAzureCredential()
+        #     token = credential.get_token("https://cognitiveservices.azure.com/.default").token
+        #     if not token:
+        #         raise ValueError("Token is required for AzureChatOpenAI.")
+        #     return AzureChatOpenAI(
+        #         azure_endpoint=kwargs["endpoint"],
+        #         azure_deployment=kwargs.get("deployment_name", "gpt-4"),
+        #         api_version=kwargs["api_version"],
+        #         api_key=token
+        #     )
 
         # pip install langchain langchain-huggingface huggingface_hub
         elif provider == "huggingface":
@@ -84,19 +84,19 @@ class LLMFactory:
                 model=kwargs.get("model_name", "text-embedding-3-large"),
                 openai_api_key=kwargs.get("api_key", os.environ.get("OPENAI_API_KEY"))
             )
-        if provider == "azureopenai":
-            # Get the Azure Credential
-            credential = DefaultAzureCredential()
-            token=credential.get_token("https://cognitiveservices.azure.com/.default").token
+        # if provider == "azureopenai":
+        #     # Get the Azure Credential
+        #     credential = DefaultAzureCredential()
+        #     token=credential.get_token("https://cognitiveservices.azure.com/.default").token
 
-            if not token:
-                raise ValueError("Token is required for AzureOpenAIEmbeddings.")
-            return AzureOpenAIEmbeddings(
-                azure_endpoint=os.environ["AZURE_OPENAI_API_URI"],
-                azure_deployment=kwargs.get("azure_deployment", "text-embedding-3-large"), 
-                api_version=os.environ["AZURE_OPENAI_API_VERSION"],
-                api_key=token
-            )
+        #     if not token:
+        #         raise ValueError("Token is required for AzureOpenAIEmbeddings.")
+        #     return AzureOpenAIEmbeddings(
+        #         azure_endpoint=os.environ["AZURE_OPENAI_API_URI"],
+        #         azure_deployment=kwargs.get("azure_deployment", "text-embedding-3-large"), 
+        #         api_version=os.environ["AZURE_OPENAI_API_VERSION"],
+        #         api_key=token
+        #     )
         elif provider == "huggingface":
             # If using a private model or endpoint, authenticate
             login(token=kwargs.get("api_key", os.environ.get("HF_TOKEN")))  
