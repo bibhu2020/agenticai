@@ -23,9 +23,9 @@ from typing import Dict, Optional
 # App registry - maps app names to their paths and entry points
 APP_REGISTRY: Dict[str, Dict[str, str]] = {
     "healthcare": {
-        "path": "src/healthcare-rag-chatbot",
+        "path": "src/healthcare-assistant",
         "entry": "app.py",
-        "description": "Healthcare RAG Chatbot - Medical information with RAG and web search"
+        "description": "Healthcare Assistant - Medical information with RAG and web search"
     },
     "deep-research": {
         "path": "src/deep-research/ui",

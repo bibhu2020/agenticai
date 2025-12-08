@@ -1,5 +1,5 @@
 ---
-title: Healthcare RAG Chatbot
+title: Healthcare Assistant
 emoji: 🤖
 colorFrom: green
 colorTo: indigo
@@ -9,7 +9,7 @@ app_file: app.py
 pinned: false
 ---
 
-# Healthcare RAG Chatbot
+# Healthcare Assistant
 
 A Streamlit-based healthcare chatbot that uses RAG (Retrieval-Augmented Generation) combined with web search to provide comprehensive medical information.
 
