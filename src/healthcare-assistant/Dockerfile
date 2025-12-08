@@ -35,4 +35,4 @@ COPY run.py .
 
 EXPOSE 7860
 
-CMD ["python", "run.py", "healthcare"]
+CMD ["python", "run.py", "healthcare", "--port", "7860"]
