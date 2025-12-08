@@ -18,6 +18,7 @@ ENV PATH="/root/.local/bin:$PATH"
 # Copy project metadata
 COPY pyproject.toml .
 COPY uv.lock .
+COPY README.md .
 
 # Install dependencies using uv, then export and install with pip to system
 RUN uv sync --frozen --no-dev && \
