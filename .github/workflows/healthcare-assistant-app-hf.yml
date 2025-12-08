@@ -27,6 +27,14 @@ jobs:
       run: |
         # Create a temporary deployment directory
         mkdir -p deploy_temp
+
+        # Create parent directories for nested copies
+        mkdir -p deploy_temp/src
+        mkdir -p deploy_temp/data
+        
+        # Copy required folders
+        cp -r common deploy_temp/
+        cp -r data/healthcare deploy_temp/data/
         
         # Copy required folders
         cp -r common deploy_temp/
