@@ -20,15 +20,15 @@ COPY pyproject.toml .
 COPY uv.lock .
 COPY README.md .
 
-# Install dependencies using uv, then export and install with pip to system
-RUN uv sync --frozen --no-dev && \
-    uv pip install -e . --system
-
 # Copy required folders
 COPY common/ ./common/
 COPY data/healthcare/ ./data/healthcare/
 COPY db/ ./db/
 COPY src/healthcare-assistant/ ./src/healthcare-assistant/
+
+# Install dependencies using uv, then export and install with pip to system
+RUN uv sync --frozen --no-dev && \
+    uv pip install -e . --system
 
 # Copy entry point
 COPY run.py .
