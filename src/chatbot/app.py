@@ -81,18 +81,36 @@ st.markdown("""
         position: sticky;
         top: 0;
         z-index: 1000;
-        padding: 2rem 0;
+        padding: 2rem 1rem;
         text-align: center;
         margin-bottom: 2rem;
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        border-radius: 0 0 16px 16px; /* Rounded only at bottom to look like a header */
+        border-radius: 0 0 16px 16px;
         color: white;
         box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        /* Default Desktop Margins */
         width: auto;
         margin-left: -5rem;
         margin-right: -5rem;
         margin-top: -3rem;
     }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+        .hero-container {
+            margin-left: -1rem !important;
+            margin-right: -1rem !important;
+            padding: 1.5rem 1rem;
+            border-radius: 0 0 12px 12px;
+        }
+        .hero-title {
+            font-size: 1.5rem !important;
+        }
+        .hero-subtitle {
+            font-size: 0.9rem !important;
+        }
+    }
+
     .hero-title {
         font-size: 2rem;
         margin-bottom: 0.5rem;
@@ -100,12 +118,15 @@ st.markdown("""
     }
     .hero-subtitle {
         font-size: 1rem;
-        opacity: 0.9;
+        opacity: 0.95; /* Increased contrast */
         font-weight: 400;
     }
     
-    /* Spacer to prevent content form being hidden under sticky header initially if needed, 
-       but standard flow usually puts it after. */
+    /* Accessibility: Focus Indicators */
+    *:focus-visible {
+        outline: 2px solid #764ba2 !important;
+        outline-offset: 2px;
+    }
 
     /* Chat Bubbles */
     .stChatMessage {
@@ -113,7 +134,14 @@ st.markdown("""
         border-radius: 10px;
         padding: 1rem;
         margin-bottom: 0.5rem;
+        border: 1px solid transparent; /* High contrast border fallback if needed */
     }
+    
+    /* Ensure text readability in chat */
+    .stChatMessage p {
+        color: #2c3e50;
+    }
+
     div[data-testid="stChatMessageContent"] {
         font-size: 1.05rem;
         line-height: 1.6;
@@ -144,6 +172,11 @@ st.markdown("""
         border-color: #dae0e5;
         text-decoration: none;
         color: #212529;
+    }
+    
+    /* Button accessibility */
+    .stButton button {
+        min-height: 44px; /* ADA Minimum Touch Target */
     }
 
 </style>
@@ -196,7 +229,7 @@ with st.sidebar:
 
 # Hero Banner (Always visible & Sticky)
 st.markdown("""
-    <div class="hero-container">
+    <div class="hero-container" role="banner">
         <div class="hero-title">🤖 AI Companion</div>
         <div class="hero-subtitle">Your intelligent partner for research, analysis, and more.</div>
     </div>
