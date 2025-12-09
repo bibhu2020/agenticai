@@ -24,6 +24,7 @@ jobs:
           "https://mishrabp-trip-advisor-api.hf.space/"
           "https://mishrabp-trip-advisor-app.hf.space/"
           "https://mishrabp-northwind.hf.space"
+          "https://mishrabp-healthcare-assistant.hf.space"
         )
 
         # Loop through URLs and send HEAD requests

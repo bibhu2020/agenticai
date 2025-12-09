@@ -28,27 +28,27 @@ APP_REGISTRY: Dict[str, Dict[str, str]] = {
         "description": "Healthcare Assistant - Medical information with RAG and web search"
     },
     "deep-research": {
-        "path": "src/deep-research/ui",
+        "path": "src/deep-research",
         "entry": "app.py",
         "description": "Deep Research AI - Comprehensive research assistant"
     },
     "stock-advisor": {
-        "path": "src/stock-advisor/ui",
+        "path": "src/stock-advisor",
         "entry": "app.py",
         "description": "Stock Advisor - Financial analysis and stock recommendations"
     },
     "travel-agent": {
-        "path": "src/travel-agent/ui",
+        "path": "src/travel-agent",
         "entry": "app.py",
         "description": "Travel Agent - Trip planning and travel recommendations"
     },
     "trip-planner": {
-        "path": "src/trip-planner/app",
+        "path": "src/trip-planner",
         "entry": "app.py",
         "description": "Trip Planner - Detailed trip itinerary planning"
     },
     "chatbot": {
-        "path": "src/chatbot/ui",
+        "path": "src/chatbot",
         "entry": "app.py",
         "description": "General Chatbot - Multi-purpose conversational AI"
     },

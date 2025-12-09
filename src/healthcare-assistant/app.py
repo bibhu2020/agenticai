@@ -18,7 +18,7 @@ from aagents.healthcare_agent import healthcare_agent
 # --------------------
 st.set_page_config(
     page_title="Healthcare Assistant",
-    page_icon="🏥",
+    page_icon="⚕️",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -31,7 +31,7 @@ CUSTOM_CSS = """
     /* Main container */
     .block-container {
         max-width: 1200px;
-        padding-top: 2rem;
+        padding-top: 1rem;
         padding-bottom: 2rem;
     }
     
@@ -132,6 +132,12 @@ CUSTOM_CSS = """
         transition: all 0.3s ease;
     }
     
+    /* specific sidebar button styling to prevent wrapping */
+    section[data-testid="stSidebar"] .stButton > button {
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+    }
+    
     .stButton > button:hover {
         transform: translateY(-2px);
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -171,7 +177,7 @@ if "messages" not in st.session_state:
 # Sidebar
 # --------------------
 with st.sidebar:
-    st.header("🏥 Healthcare Assistant")
+    st.header("⚙️ Assistant Controls")
     st.markdown("---")
     
     st.subheader("About")
@@ -229,7 +235,7 @@ with st.sidebar:
 # --------------------
 # Main Chat Interface
 # --------------------
-st.title("🏥 Healthcare Assistant")
+st.title("🩺 Healthcare Assistant")
 st.markdown('<p class="subtitle">Ask me anything about healthcare topics</p>', unsafe_allow_html=True)
 
 # Display disclaimer at the top

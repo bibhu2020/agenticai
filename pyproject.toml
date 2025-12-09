@@ -67,6 +67,7 @@ dependencies = [
     "logfire",
     "serpapi",
     "smithery>=0.4.4",
+    "sendgrid",
 
     # =======================
     # WEB SCRAPING

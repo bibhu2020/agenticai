@@ -23,16 +23,29 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: Copy uv.lock and pyproject.toml to project folder
+    - name: Create deployment directory structure
       run: |
-        if [ -f "uv.lock" ]; then
-          cp uv.lock "${{ env.PROJECT_PATH }}/"
-          echo "Copied uv.lock to ${{ env.PROJECT_PATH }}"
-        fi
-        if [ -f "pyproject.toml" ]; then
-          cp pyproject.toml "${{ env.PROJECT_PATH }}/"
-          echo "Copied pyproject.toml to ${{ env.PROJECT_PATH }}"
-        fi
+        # Create a temporary deployment directory
+        mkdir -p deploy_temp
+
+        # Create parent directories for nested copies
+        mkdir -p deploy_temp/src
+
+        # Copy required folders
+        cp -r common deploy_temp/
+        cp -r src/chatbot deploy_temp/src/
+        
+        # Copy project metadata files
+        cp uv.lock deploy_temp/
+        cp pyproject.toml deploy_temp/
+        
+        # Copy Dockerfile and run.py from chatbot to root of deploy_temp
+        cp src/chatbot/Dockerfile deploy_temp/
+        cp src/chatbot/README.md deploy_temp/
+        cp run.py deploy_temp/
+        
+        echo "Deployment directory structure created"
+        ls -la deploy_temp/
 
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -52,7 +65,7 @@ jobs:
         import sys
         from pathlib import Path
 
-        PROJECT_PATH = os.environ["PROJECT_PATH"]
+        DEPLOY_PATH = "deploy_temp"
         REPO_ID = os.environ["REPO_ID"]
         TOKEN = os.environ["HF_TOKEN"]
 
@@ -79,9 +92,9 @@ jobs:
 
             # Upload folder
             try:
-                print(f"Uploading files from {PROJECT_PATH} to {REPO_ID}...")
+                print(f"Uploading files from {DEPLOY_PATH} to {REPO_ID}...")
                 api.upload_folder(
-                    folder_path=PROJECT_PATH,
+                    folder_path=DEPLOY_PATH,
                     repo_id=REPO_ID,
                     repo_type="space",
                     token=TOKEN,

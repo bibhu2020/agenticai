@@ -1,6 +1,6 @@
 ---
 title: Healthcare Assistant
-emoji: 🤖
+emoji: ⚕️
 colorFrom: green
 colorTo: indigo
 sdk: docker

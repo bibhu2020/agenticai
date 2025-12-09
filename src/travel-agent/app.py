@@ -1,10 +1,15 @@
+import os
+import sys
+# Add project root
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), ".")))
+
 import streamlit as st
 import asyncio
 import uuid
 import json
+import logfire
 from datetime import datetime
 from typing import List, Dict, Any
-import os
 from aagents import travel_agent
 from contexts import UserContext
 from output_types import TravelPlan
@@ -12,7 +17,6 @@ from output_types import FlightRecommendation
 from output_types import HotelRecommendation
 from agents import Runner
 from dotenv import load_dotenv
-import logfire
 
 # Load environment variables
 load_dotenv()

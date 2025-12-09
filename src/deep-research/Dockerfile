@@ -2,7 +2,7 @@ FROM python:3.12-slim
 
 ENV PYTHONUNBUFFERED=1 \
     DEBIAN_FRONTEND=noninteractive \
-    PYTHONPATH=/app:$PYTHONPATH
+    PYTHONPATH=/app:/app/common:$PYTHONPATH
 
 WORKDIR /app
 
@@ -19,13 +19,17 @@ ENV PATH="/root/.local/bin:$PATH"
 COPY pyproject.toml .
 COPY uv.lock .
 
+# Copy required folders
+COPY common/ ./common/
+COPY src/deep-research/ ./src/deep-research/
+
 # Install dependencies using uv, then export and install with pip to system
 RUN uv sync --frozen --no-dev && \
     uv pip install -e . --system
 
-# Copy your source code
-COPY . .
+# Copy entry point
+COPY run.py .
 
 EXPOSE 7860
 
-CMD ["streamlit", "run", "ui/app.py", "--server.port=7860", "--server.address=0.0.0.0", "--server.headless=true"]
+CMD ["python", "run.py", "deep-research", "--port", "7860"]
