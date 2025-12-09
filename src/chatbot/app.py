@@ -67,12 +67,31 @@ st.markdown("""
     
     .stApp, [data-testid="stAppViewContainer"] {
         /* Standard Streamlit background */
-        background-color: #f8f9fa; 
+        background-color: #f8f9fa;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+    }
+    
+    html {
+        -webkit-text-size-adjust: 100%; /* Prevent iOS font boosting */
     }
     
     /* ---------------------------------------------------------------------
        2. LAYOUT & HERO BANNER
        --------------------------------------------------------------------- */
+    
+    /* Mobile font optimization */
+    @media (max-width: 768px) {
+        /* Target all markdown text specifically */
+        .stMarkdown p, .stMarkdown li, .stChatMessage p, .message-content, .stDataFrame, .stTable {
+            font-size: 16px !important;
+            line-height: 1.6 !important;
+            color: #1a1a1a !important;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            color: #1a1a1a !important;
+        }
+    }
     
     /* Desktop Layout */
     @media (min-width: 769px) {
