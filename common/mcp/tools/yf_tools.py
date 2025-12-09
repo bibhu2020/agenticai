@@ -37,6 +37,7 @@ def get_summary(symbol: str, period: str = "1d", interval: str = "1h") -> str:
         - Volume
         - Period and interval used
     """
+    print(f"[DEBUG] get_summary called for symbol='{symbol}', period='{period}', interval='{interval}'")
     try:
         ticker = yf.Ticker(symbol)
 
@@ -109,6 +110,7 @@ def get_market_sentiment(symbol: str, period: str = "1mo") -> str:
     str
         A human-readable sentiment string including percentage change.
     """
+    print(f"[DEBUG] get_market_sentiment called for symbol='{symbol}', period='{period}'")
     try:
         ticker = yf.Ticker(symbol)
 
@@ -164,6 +166,7 @@ def get_history(symbol: str, period: str = "1mo") -> str:
     str
         A formatted string showing the last 5 rows of historical prices (Open, High, Low, Close, Volume).
     """
+    print(f"[DEBUG] get_history called for symbol='{symbol}', period='{period}'")
     try:
         ticker = yf.Ticker(symbol)
 
@@ -190,3 +193,65 @@ def get_history(symbol: str, period: str = "1mo") -> str:
 
     except Exception as e:
         return f"Error fetching historical data for '{symbol}': {e}"
+
+@function_tool
+def get_analyst_recommendations(symbol: str) -> str:
+    """
+    Fetch analyst recommendations for a given ticker.
+    
+    Parameters:
+    -----------
+    symbol : str
+        The ticker symbol.
+
+    Returns:
+    --------
+    str
+        Formatted string string of analyst recommendations.
+    """
+    print(f"[DEBUG] get_analyst_recommendations called for symbol='{symbol}'")
+    try:
+        ticker = yf.Ticker(symbol)
+        recs = ticker.recommendations
+        if recs is None or recs.empty:
+             return f"No analyst recommendations found for {symbol}."
+        
+        # Format the last few recommendations
+        latest = recs.tail(5)
+        return f"Analyst Recommendations for {symbol}:\n{latest.to_string()}"
+    except Exception as e:
+         return f"Error fetching recommendations for '{symbol}': {e}"
+
+@function_tool
+def get_earnings_calendar(symbol: str) -> str:
+    """
+    Fetch the next earnings date for a ticker.
+
+    Parameters:
+    -----------
+    symbol : str
+        The ticker symbol.
+
+    Returns:
+    --------
+    str
+        Next earnings date info.
+    """
+    print(f"[DEBUG] get_earnings_calendar called for symbol='{symbol}'")
+    try:
+        ticker = yf.Ticker(symbol)
+        calendar = ticker.calendar
+        if calendar is None:
+            return f"No earnings calendar found for {symbol}."
+        
+        # Handle dict (new yfinance) or DataFrame (old yfinance)
+        if isinstance(calendar, dict):
+             if not calendar:
+                 return f"No earnings calendar found for {symbol}."
+        elif hasattr(calendar, 'empty') and calendar.empty:
+             return f"No earnings calendar found for {symbol}."
+            
+        return f"Earnings Calendar for {symbol}:\n{calendar}"
+    except Exception as e:
+         return f"Error fetching earnings calendar for '{symbol}': {e}"
+

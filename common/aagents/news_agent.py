@@ -3,7 +3,6 @@ import os
 from agents import Agent, OpenAIChatCompletionsModel
 from dotenv import load_dotenv
 from mcp.tools.news_tools import get_top_headlines, search_news, get_news_by_category
-from mcp.tools.search_tools import duckduckgo_search
 from mcp.tools.time_tools import current_datetime
 from openai import AsyncOpenAI
 
@@ -25,7 +24,7 @@ groq_model = OpenAIChatCompletionsModel(model="groq/compound", openai_client=gro
 news_agent = Agent(
     name="NewsAgent",
     model=gemini_model,
-    tools=[current_datetime, get_top_headlines, search_news, get_news_by_category, duckduckgo_search],
+    tools=[current_datetime, get_top_headlines, search_news, get_news_by_category],
     instructions="""
         You are a NewsAgent specialized in fetching and analyzing recent news articles and headlines.
         Your role is to provide users with up-to-date, relevant news information from reliable sources.
@@ -46,13 +45,8 @@ news_agent = Agent(
            - Categories: "business", "entertainment", "general", "health", "science", "sports", "technology"
            - Input: { "category": "business", "country": "us", "num_results": 5 }
 
-        **FALLBACK TOOL (DuckDuckGo Search):**
-        4. 'duckduckgo_search': Use ONLY when NewsAPI tools fail or API key is missing
-           - Set search_type to "news" for news-specific results
-           - Input: { "query": "topic", "max_results": 5, "search_type": "news", "timelimit": "d" }
-
         **TIME CONTEXT:**
-        5. 'current_datetime': Use to provide current date/time context in your responses
+        4. 'current_datetime': Use to provide current date/time context in your responses
            - Input: { "format": "natural" }
 
         ## Workflow
@@ -62,14 +56,11 @@ news_agent = Agent(
            - Topic-specific → use search_news
            - Category-specific → use get_news_by_category
         
-        2. **Try Primary Tools First**: Always attempt NewsAPI tools before fallback
+        2. **Execute Search**: Use the appropriate NewsAPI tool.
         
-        3. **Fallback if Needed**: If NewsAPI returns an error (missing API key, no results), 
-           use duckduckgo_search with search_type="news"
+        3. **Include Time Context**: Use current_datetime to provide temporal context.
         
-        4. **Include Time Context**: Use current_datetime to provide temporal context
-        
-        5. **Format Response**: Present news in a clear, organized format with:
+        4. **Format Response**: Present news in a clear, organized format with:
            - Headlines/titles
            - Sources
            - Publication dates
@@ -95,12 +86,12 @@ news_agent = Agent(
 
         - Always cite sources and include publication dates
         - Prioritize recent news (within last 7 days unless specified otherwise)
-        - If API key is missing, inform the user and use the fallback tool
         - Never fabricate news or sources
         - Present news objectively without bias
         - Include URLs so users can read full articles
         - Use current_datetime to ensure temporal accuracy
         """,
 )
+news_agent.description = "A news agent that fetches top headlines and searches for news articles by category or topic."
 
-__all__ = ["news_agent", "get_top_headlines", "search_news", "get_news_by_category", "duckduckgo_search", "current_datetime"]
+__all__ = ["news_agent", "get_top_headlines", "search_news", "get_news_by_category", "current_datetime"]

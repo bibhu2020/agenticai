@@ -18,6 +18,7 @@ def current_datetime(format: str = "natural") -> str:
     Returns:
         str: Current date and time in the specified format
     """
+    print(f"[DEBUG] current_datetime called with format='{format}'")
     now = datetime.now()
     
     # Natural format options

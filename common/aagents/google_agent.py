@@ -135,5 +135,6 @@ google_agent = Agent(
         - Respect timeouts and handle errors gracefully
         """,
 )
+google_agent.description = "A Google search agent that finds accurate, up-to-date information and recent news using Google Search."
 
 __all__ = ["google_agent", "google_search", "google_search_recent", "duckduckgo_search", "fetch_page_content", "current_datetime"]

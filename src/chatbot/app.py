@@ -4,11 +4,14 @@ import glob
 import asyncio
 import sys
 import uuid
-
+from pathlib import Path
 # Add project root
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), ".")))
+# sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), ".")))
+# Add common directory to path for imports
+project_root = Path(__file__).resolve().parent.parent.parent
+sys.path.insert(0, str(project_root))
 
-from appagents.OrchestratorAgent import OrchestratorAgent
+from aagents.orchestrator_agent import orchestrator_agent
 from agents import Runner, trace, SQLiteSession
 from agents.exceptions import InputGuardrailTripwireTriggered
 
@@ -187,7 +190,7 @@ st.markdown("""
 # -----------------------------
 async def get_ai_response(prompt: str) -> str:
     try:
-        agent = OrchestratorAgent.create()
+        agent = orchestrator_agent
         # Ensure session is valid
         current_session = st.session_state.ai_session
         with trace("Chatbot Agent Run"):
@@ -216,6 +219,11 @@ with st.sidebar:
     for idx, prompt_text in enumerate(prompts):
         label = prompt_labels[idx] if idx < len(prompt_labels) else f"Prompt {idx+1}"
         if st.button(label, key=f"sidebar_btn_{idx}", use_container_width=True):
+            # Reset conversation
+            st.session_state.messages = []
+            st.session_state.ai_session_id = str(uuid.uuid4())
+            # Recreate session object with new ID
+            st.session_state.ai_session = SQLiteSession(f"conversation_{st.session_state.ai_session_id}.db")
             selected_prompt = prompt_text
 
     st.markdown("---")

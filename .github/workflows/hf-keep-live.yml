@@ -16,14 +16,14 @@ jobs:
 
     - name: Curl URLs (HEAD requests)
       run: |
-        # Define URLs to curl
+        # Define URLs to be curled so that they remain alive
+          # "https://mishrabp-travel-agent.hf.space"
+          # "https://mishrabp-trip-advisor-api.hf.space/"
+          # "https://mishrabp-trip-advisor-app.hf.space/"
+          # "https://mishrabp-northwind.hf.space"
         URLS=(
           "https://mishrabp-chatbot-app.hf.space"
           "https://mishrabp-deep-research.hf.space"
-          "https://mishrabp-travel-agent.hf.space"
-          "https://mishrabp-trip-advisor-api.hf.space/"
-          "https://mishrabp-trip-advisor-app.hf.space/"
-          "https://mishrabp-northwind.hf.space"
           "https://mishrabp-healthcare-assistant.hf.space"
         )
 

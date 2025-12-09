@@ -29,9 +29,7 @@ groq_client = AsyncOpenAI(base_url=GROQ_BASE_URL, api_key=groq_api_key)
 groq_model = OpenAIChatCompletionsModel(model="groq/compound", openai_client=groq_client)
 
 web_research_agent = Agent(
-    name="WebResearchAgent",
     model="gpt-4o-mini",
-    # description="An agent that can perform web searches using DuckDuckGo.",
     tools=[duckduckgo_search, fetch_page_content],
     instructions="""
 You are WebResearchAgent — an advanced internet research assistant with two core abilities:
@@ -79,5 +77,6 @@ IMPORTANT RULES
 """
     ,
 )
+web_research_agent.description = "A deep research agent that performs extensive web searches and content fetching for complex research queries."
 
 __all__ = ["web_research_agent", "duckduckgo_search", "fetch_page_content", "searchQuery", "searchResult"]

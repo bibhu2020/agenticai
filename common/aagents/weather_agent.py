@@ -32,7 +32,6 @@ groq_model = OpenAIChatCompletionsModel(model="groq/compound", openai_client=gro
 weather_agent = Agent(
     name="WeatherAgent",
     model=gemini_model, #"gpt-4o-mini",
-    # description="An agent that can perform web searches using DuckDuckGo.",
     tools=[current_datetime, get_weather_forecast, search_weather_fallback_ddgs, search_weather_fallback_bs],
     instructions="""
         You are a Weather Forecast agent who forecasts weather information ONLY.
@@ -61,9 +60,7 @@ weather_agent = Agent(
             }.
         ]
         """,
-    # output_type=AgentOutputSchema(list[searchResult], strict_json_schema=False),
-    # output_type=list[dict],  # safer than list[searchResult],    
-    # output_type=list[searchResult],
 )
+weather_agent.description = "A weather agent that provides current and forecasted weather information for specific cities."
 
 __all__ = ["weather_agent", "get_weather_forecast", "search_weather_fallback_ddgs", "search_weather_fallback_bs"]

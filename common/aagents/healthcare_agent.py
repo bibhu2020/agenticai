@@ -6,7 +6,7 @@ from openai import AsyncOpenAI
 
 # Import tools
 from mcp.tools.rag_tool import rag_search, UserContext
-from mcp.tools.search_tools import duckduckgo_search
+from mcp.tools.search_tools import duckduckgo_search, fetch_page_content
 from mcp.tools.time_tools import current_datetime
 
 
@@ -34,7 +34,7 @@ groq_model = OpenAIChatCompletionsModel(model="groq/compound", openai_client=gro
 healthcare_agent = Agent[UserContext](
     name="HealthcareRAGAgent",
     model=gemini_model,
-    tools=[rag_search, duckduckgo_search],
+    tools=[rag_search, duckduckgo_search, fetch_page_content],
     instructions="""
         You are a healthcare information retrieval agent. You retrieve information from tools and synthesize it into well-formatted markdown responses.
         
@@ -96,5 +96,6 @@ healthcare_agent = Agent[UserContext](
         - Accept useless RAG results without calling web search
         """,
 )
+healthcare_agent.description = "A healthcare agent that combines RAG (Retrieval Augmented Generation) with web search to answer medical questions."
 
 __all__ = ["healthcare_agent"]
