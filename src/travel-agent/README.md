@@ -8,7 +8,7 @@ sdk_version: "0.0.1"
 app_file: app.py
 pinned: false
 license: mit
-short_description: An agentic Travel Agent (uses OpenAI Agent SDK). Demonstrates Agent Contexts, Tool Calls, and more.
+short_description: An agentic Travel Agent (with context).
 ---
 
 # AI Travel Agent
