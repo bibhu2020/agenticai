@@ -7,7 +7,7 @@ sdk: docker                     # SDK type
 sdk_version: "4.39.0"           # Example Gradio version
 app_file: app.py             # <-- points to your app.py inside ui/
 pinned: false
-license: mis
+license: mit
 short_description: An agentic deep-researcher (uses OpenAI Agent SDK)
 ---
 

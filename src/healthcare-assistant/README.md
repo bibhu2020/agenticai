@@ -7,7 +7,7 @@ sdk: docker
 sdk_version: "0.0.1"
 app_file: app.py
 pinned: false
-license: mis
+license: mit
 short_description: An agentic RAG solution (uses OpenAI Agent SDK)
 ---
 
