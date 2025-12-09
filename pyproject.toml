@@ -65,7 +65,7 @@ dependencies = [
     "httpx>=0.28.1",
     "speedtest-cli>=2.1.3",
     "logfire",
-    "serpapi",
+    "google-search-results",
     "smithery>=0.4.4",
     "sendgrid",
 
@@ -125,26 +125,30 @@ dev = [
 # ============================================================
 # BUILD SYSTEM
 # ============================================================
+# Defines how to build the project.
+# We use setuptools as the build backend, ensuring consistent packaging.
 [build-system]
 requires = ["setuptools>=80.9.0"]
 build-backend = "setuptools.build_meta"
 
 # ============================================================
-# CORRECT: TELL SETUPTOOLS YOUR CODE LIVES IN src/
+# PACKAGING & DISCOVERY
 # ============================================================
-[tool.setuptools]
-package-dir = {"" = "src"}
-
-# ensures src and common become importable
+# Tells setuptools where to find the source code.
+# This makes 'common' and 'src' importable when installed (pip install -e .).
 [tool.setuptools.packages.find]
-where = ["src", "common"]
-
+where = ["."]  # Look in the project root
+include = ["common*", "src*"]  # Treat 'common' and 'src' folders as packages
 
 
 # ============================================================
 # PYTEST SETTINGS
 # ============================================================
+# Configures the test runner to automatically find code.
 [tool.pytest.ini_options]
+# Adds 'src' and 'common' to the python path during tests.
+# This allows tests to import modules (e.g., 'import travel_agent')
+# just like the apps do locally, preventing ModuleNotFoundError.
 pythonpath = ["src", "common"]
-testpaths = ["tests"]
-addopts = "-q"
+testpaths = ["tests"]  # Only look for tests in the 'tests' directory
+addopts = "-q"  # Run in quiet mode (less verbose output)

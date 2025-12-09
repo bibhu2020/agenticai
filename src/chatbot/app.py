@@ -1,16 +1,8 @@
-import streamlit as st
 import os
 import glob
-import asyncio
-import sys
 import uuid
-from pathlib import Path
-# Add project root
-# sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), ".")))
-# Add common directory to path for imports
-project_root = Path(__file__).resolve().parent.parent.parent
-sys.path.insert(0, str(project_root))
-
+import asyncio
+import streamlit as st
 from aagents.orchestrator_agent import orchestrator_agent
 from agents import Runner, trace, SQLiteSession
 from agents.exceptions import InputGuardrailTripwireTriggered

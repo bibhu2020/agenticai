@@ -4,9 +4,9 @@ import sys
 import html
 from pathlib import Path
 
-# Add common directory to path for imports
-project_root = Path(__file__).parent.parent.parent
-sys.path.insert(0, str(project_root / "common"))
+# # Add common directory to path for imports
+# project_root = Path(__file__).parent.parent.parent
+# sys.path.insert(0, str(project_root / "common"))
 
 from chat import ChatManager
 from aagents.healthcare_agent import healthcare_agent

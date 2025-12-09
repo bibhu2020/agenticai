@@ -7,6 +7,7 @@ class UserContext:
     user_id: str
     source_destination: str = None
     target_destination: str = None
+    travel_dates: str = None
     preferred_airlines: List[str] = None
     hotel_amenities: List[str] = None
     budget_level: str = None

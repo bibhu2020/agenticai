@@ -2,8 +2,8 @@
 import os
 from agents import Agent, OpenAIChatCompletionsModel
 from dotenv import load_dotenv
-from mcp.tools.news_tools import get_top_headlines, search_news, get_news_by_category
-from mcp.tools.time_tools import current_datetime
+from common.mcp.tools.news_tools import get_top_headlines, search_news, get_news_by_category
+from common.mcp.tools.time_tools import current_datetime
 from openai import AsyncOpenAI
 
 # ---------------------------------------------------------

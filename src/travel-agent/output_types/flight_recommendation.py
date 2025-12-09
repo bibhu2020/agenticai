@@ -10,3 +10,6 @@ class FlightRecommendation(BaseModel):
     price: float
     direct_flight: bool
     recommendation_reason: str
+
+class FlightSearchResults(BaseModel):
+    results: List[FlightRecommendation]

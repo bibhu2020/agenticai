@@ -5,9 +5,9 @@ from dotenv import load_dotenv
 from openai import AsyncOpenAI
 
 # Import tools
-from mcp.tools.rag_tool import rag_search, UserContext
-from mcp.tools.search_tools import duckduckgo_search, fetch_page_content
-from mcp.tools.time_tools import current_datetime
+from common.mcp.tools.rag_tool import rag_search, UserContext
+from common.mcp.tools.search_tools import duckduckgo_search, fetch_page_content
+from common.mcp.tools.time_tools import current_datetime
 
 
 # ---------------------------------------------------------

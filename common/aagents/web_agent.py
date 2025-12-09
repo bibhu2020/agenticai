@@ -3,7 +3,7 @@ import os
 from agents import AgentOutputSchema, function_tool, Agent
 from dotenv import load_dotenv
 from pydantic import BaseModel, Field
-from mcp.tools.search_tools import duckduckgo_search, searchQuery, searchResult
+from common.mcp.tools.search_tools import duckduckgo_search, searchQuery, searchResult
 from agents import Agent, OpenAIChatCompletionsModel
 from openai import AsyncOpenAI
 

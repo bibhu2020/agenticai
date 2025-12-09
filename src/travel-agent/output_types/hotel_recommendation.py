@@ -9,3 +9,6 @@ class HotelRecommendation(BaseModel):
     price_per_night: float
     amenities: List[str]
     recommendation_reason: str
+
+class HotelSearchResults(BaseModel):
+    results: List[HotelRecommendation]

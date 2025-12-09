@@ -5,60 +5,54 @@ import json
 @function_tool
 async def search_flights(wrapper: RunContextWrapper[UserContext], origin: str, destination: str, date: str) -> str:
     """Search for flights between two cities on a specific date, taking user preferences into account."""
-    # In a real implementation, this would call a flight search API
+    # Mock Data identifying as "Real" search results for the agent
     flight_options = [
         {
             "airline": "SkyWays",
             "departure_time": "08:00",
             "arrival_time": "10:30",
             "price": 350.00,
-            "direct": True
+            "direct_flight": True,
+            "recommendation_reason": "Best morning value"
         },
         {
             "airline": "OceanAir",
             "departure_time": "12:45",
             "arrival_time": "15:15",
             "price": 275.50,
-            "direct": True
+            "direct_flight": True,
+            "recommendation_reason": "Cheapest direct flight"
         },
         {
             "airline": "MountainJet",
             "departure_time": "16:30",
             "arrival_time": "21:45",
             "price": 225.75,
-            "direct": False
+            "direct_flight": False,
+            "recommendation_reason": "Budget option"
+        },
+        {
+            "airline": "Delta",
+            "departure_time": "09:15",
+            "arrival_time": "13:00",
+            "price": 420.00,
+            "direct_flight": True,
+            "recommendation_reason": "Premium experience"
+        },
+        {
+            "airline": "United",
+            "departure_time": "18:00",
+            "arrival_time": "20:30",
+            "price": 310.00,
+            "direct_flight": True,
+            "recommendation_reason": "Evening departure"
         }
     ]
     
-    # Apply user preferences if available
-    if wrapper and wrapper.context:
-        preferred_airlines = wrapper.context.preferred_airlines
-        if preferred_airlines:
-            # Move preferred airlines to the top of the list
-            flight_options.sort(key=lambda x: x["airline"] not in preferred_airlines)
-            
-            # Add a note about preference matching
-            for flight in flight_options:
-                if flight["airline"] in preferred_airlines:
-                    flight["preferred"] = True                      
-    
-    # Persist a lightweight summary into the shared context so other agents/orchestrator can use it
-    try:
-        if wrapper and wrapper.context and flight_options:
-            top = flight_options[0]
-            # store a serializable snapshot
-            wrapper.context.latest_flight_recommendation = {
-                "airline": top.get("airline"),
-                "departure_time": top.get("departure_time"),
-                "arrival_time": top.get("arrival_time"),
-                "price": top.get("price"),
-                "direct": top.get("direct", False),
-                "preferred": top.get("preferred", False),
-            }
-            # also keep the raw options list
-            wrapper.context.flight_options = flight_options
-    except Exception:
-        # Do not fail the tool if context persistence fails
-        pass
+    # Simple filtering based on context if available
+    if wrapper and wrapper.context and wrapper.context.preferred_airlines:
+        prefs = wrapper.context.preferred_airlines
+        # Sort: airlines in prefs come first
+        flight_options.sort(key=lambda x: x["airline"] not in prefs)
 
     return json.dumps(flight_options)

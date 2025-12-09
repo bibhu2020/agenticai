@@ -144,10 +144,15 @@ def launch_app(app_name: str, port: Optional[int] = None):
     print("\n" + "=" * 70)
     print("\n🎯 Starting application...\n")
     
+    # Prepare environment with project root in PYTHONPATH to fix imports
+    env = os.environ.copy()
+    env["PYTHONPATH"] = str(project_root) + os.pathsep + env.get("PYTHONPATH", "")
+    print(f"\n\nPYTHONPATH: {env['PYTHONPATH']}")
+
     try:
         # Change to app directory and run
         os.chdir(app_dir)
-        subprocess.run(cmd)
+        subprocess.run(cmd, env=env)
     except KeyboardInterrupt:
         print("\n\n👋 Application stopped by user")
     except FileNotFoundError:

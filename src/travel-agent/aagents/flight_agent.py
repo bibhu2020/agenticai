@@ -1,7 +1,7 @@
 from agents import Agent, RunContextWrapper, Runner, function_tool, ModelSettings, InputGuardrail, GuardrailFunctionOutput, InputGuardrailTripwireTriggered
 from contexts import UserContext
 from tools import search_flights
-from output_types import FlightRecommendation
+from output_types import FlightSearchResults
 
 flight_agent = Agent[UserContext](
     name="Flight Specialist",
@@ -9,16 +9,13 @@ flight_agent = Agent[UserContext](
     instructions="""
     You are a flight specialist who helps users find the best flights for their trips.
     
-    Use the search_flights tool to find flight options, and then provide personalized recommendations
-    based on the user's preferences (price, time, direct vs. connecting).
+    Use the search_flights tool to find flight options.
     
-    The user's preferences are available in the context, including preferred airlines.
+    CRITICAL: You MUST provide at least 3 distinct flight options if available.
     
-    Always explain the reasoning behind your recommendations.
-    
-    Format your response in a clear, organized way with flight details and prices.
+    Format your response as a FlightSearchResults object containing a list of FlightRecommendation items.
     """,
     model="gpt-4o-mini",
     tools=[search_flights],
-    output_type=FlightRecommendation
+    output_type=FlightSearchResults
 )

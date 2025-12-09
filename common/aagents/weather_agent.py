@@ -3,8 +3,8 @@ import os
 from agents import Agent
 from dotenv import load_dotenv
 from pydantic import BaseModel, Field
-from mcp.tools.weather_tools import get_weather_forecast, search_weather_fallback_ddgs, search_weather_fallback_bs
-from mcp.tools.time_tools import current_datetime
+from common.mcp.tools.weather_tools import get_weather_forecast, search_weather_fallback_ddgs, search_weather_fallback_bs
+from common.mcp.tools.time_tools import current_datetime
 from agents import Agent, OpenAIChatCompletionsModel
 from openai import AsyncOpenAI
 

@@ -1,6 +1,6 @@
 ---
 title: AI Travel Agent
-emoji: 🤖
+emoji: ✈️
 colorFrom: purple
 colorTo: pink
 sdk: docker

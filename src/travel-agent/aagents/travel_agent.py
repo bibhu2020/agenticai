@@ -1,37 +1,32 @@
 from agents import Agent, RunContextWrapper, Runner, function_tool, ModelSettings, InputGuardrail, GuardrailFunctionOutput, InputGuardrailTripwireTriggered
 from contexts import UserContext
-from tools import get_weather_forecast
-from aagents import flight_agent, hotel_agent, conversational_agent, budget_guardrail
+from tools import get_weather_forecast, search_flights, search_hotels
+from aagents import conversational_agent, budget_guardrail
 from output_types.travel_plan import TravelPlan
 
 travel_agent = Agent[UserContext](
     name="Travel Planner",
     instructions="""
-    You are a travel planning assistant who helps users plan their trips.
-    
-    You can provide personalized travel recommendations based on the user's destination, duration, budget, and preferences.
-    
-    The user's preferences are available in the context, which you can use to tailor your recommendations.
+    You are a travel planning assistant.
     
     Follow this workflow:
-    1. Get weather forecasts for destinations
-    2. If flight_result and hotel_result are BOTH missing:
-      • Do NOT create an itinerary yet.
-      • Hand off to flight_agent AND hotel_agent sequentially.
-    3. If only one of them is missing:
-      • Hand off to the agent whose result is missing.
-
-    4. If BOTH results exist:
-        • Combine them with weather data.
-        • Produce a final TravelPlan.
-    5. Create comprehensive travel plans with activities and notes
-    6. Final output should be a day-wise itinerary.
+    1. Call 'get_weather_forecast' for the destination.
+    2. Call 'search_flights' to get a list of flight options.
+    3. Call 'search_hotels' to get a list of hotel options.
+    4. Compile all results into a final 'TravelPlan'.
     
-    Always be helpful, informative, and enthusiastic about travel.
+    CRITICAL: The final output MUST be a 'TravelPlan' object containing:
+    - 'flight_options': The list of flights returned by search_flights.
+    - 'hotel_options': The list of hotels returned by search_hotels.
+    - 'weather_remark': A summary of the weather forecast.
+    - 'activities': Recommended activities based on location and weather.
+    - 'notes': Any final travel advice.
+    
+    Do not output single recommendations. Use the lists.
     """,
     model="gpt-4o-mini",
-    tools=[get_weather_forecast],
-    handoffs=[flight_agent, hotel_agent, conversational_agent],
+    tools=[get_weather_forecast, search_flights, search_hotels],
+    handoffs=[conversational_agent],
     input_guardrails=[
         InputGuardrail(guardrail_function=budget_guardrail),
     ],

@@ -2,9 +2,9 @@
 import os
 from agents import Agent, OpenAIChatCompletionsModel
 from dotenv import load_dotenv
-from mcp.tools.google_tools import google_search, google_search_recent
-from mcp.tools.search_tools import duckduckgo_search, fetch_page_content
-from mcp.tools.time_tools import current_datetime
+from common.mcp.tools.google_tools import google_search, google_search_recent
+from common.mcp.tools.search_tools import duckduckgo_search, fetch_page_content
+from common.mcp.tools.time_tools import current_datetime
 from openai import AsyncOpenAI
 
 # ---------------------------------------------------------

@@ -5,9 +5,10 @@ import html
 from io import BytesIO
 import os
 import sys
+from pathlib import Path
 
 # Add project root
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), ".")))
+# sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), ".")))
 
 from dotenv import load_dotenv
 from reportlab.platypus import SimpleDocTemplate, Paragraph

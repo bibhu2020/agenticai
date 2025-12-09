@@ -1,8 +1,8 @@
+import requests
 from ddgs import DDGS
 from agents import function_tool
 from dotenv import load_dotenv
 from pydantic import BaseModel, Field
-import requests
 from bs4 import BeautifulSoup
 from typing import Optional
 
