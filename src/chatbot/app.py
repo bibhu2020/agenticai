@@ -59,17 +59,25 @@ session = st.session_state.ai_session
 st.markdown("""
 <style>
     /* Global Cleanliness */
-    .stApp {
+    .stApp, [data-testid="stAppViewContainer"] {
         background-color: #f8f9fa;
+        overflow-x: hidden !important; /* Force hide horizontal scroll */
     }
     
     .block-container {
-        padding-top: 1rem !important;
+        max-width: 1200px;
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
     }
     
     /* Remove default header decoration */
     header[data-testid="stHeader"] {
-        background-color: transparent;
+        background-color: transparent !important;
+        z-index: 100 !important; /* Ensure it stays clickable but transparent */
+    }
+    
+    div[data-testid="stDecoration"] {
+        display: none;
     }
     
     /* Typography */
@@ -81,37 +89,19 @@ st.markdown("""
     
     /* Hero Section */
     .hero-container {
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        padding: 2rem 1rem;
+        position: relative;
+        width: 100vw;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        margin-top: -6rem; /* Pull up to cover top padding */
+        padding: 4rem 1rem 2rem 1rem; /* Extra top padding for status bar area */
         text-align: center;
         margin-bottom: 2rem;
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        border-radius: 0 0 16px 16px;
         color: white;
         box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        /* Default Desktop Margins */
-        width: auto;
-        margin-left: -5rem;
-        margin-right: -5rem;
-        margin-top: -3rem;
-    }
-
-    /* Mobile Responsiveness */
-    @media (max-width: 768px) {
-        .hero-container {
-            margin-left: -1rem !important;
-            margin-right: -1rem !important;
-            padding: 1.5rem 1rem;
-            border-radius: 0 0 12px 12px;
-        }
-        .hero-title {
-            font-size: 1.5rem !important;
-        }
-        .hero-subtitle {
-            font-size: 0.9rem !important;
-        }
     }
 
     .hero-title {
@@ -121,7 +111,7 @@ st.markdown("""
     }
     .hero-subtitle {
         font-size: 1rem;
-        opacity: 0.95; /* Increased contrast */
+        opacity: 0.95;
         font-weight: 400;
     }
     
@@ -133,16 +123,23 @@ st.markdown("""
 
     /* Chat Bubbles */
     .stChatMessage {
-        background-color: transparent;
-        border-radius: 10px;
+        background-color: white;
+        border-radius: 12px;
         padding: 1rem;
-        margin-bottom: 0.5rem;
-        border: 1px solid transparent; /* High contrast border fallback if needed */
+        margin-bottom: 0.75rem;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        border: 1px solid #f0f0f0;
+    }
+    
+    .stChatMessage[data-testid="stChatMessage"]:nth-of-type(odd) {
+         background-color: #f8f9fa; /* Slight contract for user/assistant if needed, but keeping white clean is fine */
     }
     
     /* Ensure text readability in chat */
     .stChatMessage p {
         color: #2c3e50;
+        font-size: 1rem !important;
+        line-height: 1.6;
     }
 
     div[data-testid="stChatMessageContent"] {
@@ -155,6 +152,7 @@ st.markdown("""
         background-color: #ffffff;
         border-right: 1px solid #eaeaea;
     }
+    
     .suggestion-btn {
         width: 100%;
         text-align: left;
@@ -177,9 +175,24 @@ st.markdown("""
         color: #212529;
     }
     
+    /* Mobile Responsiveness Fixes */
+    @media (max-width: 768px) {
+        .block-container {
+            padding-left: 1rem !important;
+            padding-right: 1rem !important;
+        }
+        .hero-title {
+            font-size: 1.5rem;
+        }
+        .stChatMessage {
+            padding: 0.75rem;
+        }
+    }
+    
     /* Button accessibility */
     .stButton button {
         min-height: 44px; /* ADA Minimum Touch Target */
+        border-radius: 8px;
     }
 
 </style>

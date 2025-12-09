@@ -28,70 +28,82 @@ st.set_page_config(page_title="Deep Research AI", layout="wide", page_icon="🧠
 st.markdown("""
 <style>
     /* Global Defaults */
-    .stApp {
+    .stApp, [data-testid="stAppViewContainer"] {
         background-color: #f8f9fa;
         font-family: 'Inter', sans-serif;
+        overflow-x: hidden !important; /* Force hide horizontal scroll */
     }
     
-    /* Remove default Streamlit top padding but add space for Fixed Header - Revert: Just remove top padding */
     .block-container {
-        padding-top: 1rem !important; /* Small buffer */
+        max-width: 1200px;
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
     }
     
-    /* Sticky Header */
-    header[data-testid="stHeader"] { display: none; } /* Hide default streamlit header */
+    /* Remove default header decoration */
+    header[data-testid="stHeader"] {
+        background-color: transparent !important;
+        z-index: 100 !important;
+    }
     
-    .header-container {
-        position: sticky;
-        top: 0;
-        z-index: 999;
-        
+    div[data-testid="stDecoration"] {
+        display: none;
+    }
+
+    /* Hero Section (Matching Chatbot Style) */
+    .hero-container {
+        position: relative;
+        width: 100vw;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        margin-top: -6rem; /* Pull up to cover top padding */
+        padding: 4rem 1rem 2rem 1rem; /* Extra top padding for status bar area */
+        text-align: center;
+        margin-bottom: 2rem;
         background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
-        color: #ffffff;
-        padding: 3rem 2rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-        
-        margin-top: -4rem; /* Pull up aggressively to cover top gap */
-        margin-left: -5rem;
-        margin-right: -5rem;
-        
-        border-bottom: none;
-        border-radius: 0 0 1rem 1rem;
+        color: white;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
-    
-    .app-brand {
-        font-family: 'Inter', sans-serif;
-        font-size: 1.6rem;
+
+    .hero-title {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
         font-weight: 700;
-        letter-spacing: -0.02em;
-        color: #ffffff;
-        display: flex;
-        gap: 0.75rem;
-        align-items: center;
+    }
+    .hero-subtitle {
+        font-size: 1rem;
+        opacity: 0.95;
+        font-weight: 400;
     }
 
     /* Centered Search Area */
     .search-wrapper {
         max-width: 800px;
-        margin: 4rem auto 2rem auto;
+        margin: 2rem auto;
         text-align: center;
+        padding: 0 1rem;
     }
     
     .search-headline {
-        font-size: 2.5rem;
+        font-size: 2rem;
         font-weight: 800;
         color: #111;
         margin-bottom: 0.5rem;
-        letter-spacing: -0.03em;
     }
     
     .search-subtext {
-        font-size: 1.1rem;
+        font-size: 1rem;
         color: #666;
-        margin-bottom: 2.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    /* Mobile font sizes */
+    @media (max-width: 768px) {
+        .search-headline {
+            font-size: 1.75rem;
+        }
     }
 
     /* Input styling override */
@@ -101,11 +113,8 @@ st.markdown("""
         padding: 1rem !important;
         background: white !important;
         box-shadow: 0 4px 12px rgba(0,0,0,0.03) !important;
-        font-size: 1.1rem !important;
-    }
-    .stTextArea textarea:focus {
-        border-color: #667eea !important;
-        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.1) !important;
+        font-size: 1rem !important; /* Proper reading size */
+        color: #333 !important;
     }
     
     /* Custom Button */
@@ -115,8 +124,9 @@ st.markdown("""
         border-radius: 30px !important;
         padding: 0.5rem 2rem !important;
         border: none !important;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.2) !important;
         transition: transform 0.1s ease;
+        min-height: 48px; /* Large touch target */
+        white-space: nowrap !important; /* Prevent label wrapping */
     }
     .stButton button:hover {
         transform: scale(1.02);
@@ -127,11 +137,11 @@ st.markdown("""
         max-width: 850px;
         margin: 2rem auto;
         background: white;
-        padding: 4rem;
-        min-height: 800px;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 20px 40px rgba(0,0,0,0.05);
+        padding: 2rem;
+        min-height: 600px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         color: #2c3e50;
-        border: 1px solid #f0f0f0;
+        border-radius: 8px;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -221,13 +231,9 @@ async def run_research(query: str):
 
 # Custom Header
 st.markdown("""
-<div class="header-container">
-    <div class="app-brand">
-        <span>🧠</span> Deep Research <i>(OpenAI Agentic)</i>
-    </div>
-    <div>
-        <!-- Could add profile or other links here -->
-    </div>
+<div class="hero-container">
+    <div class="hero-title">🧠 Deep Research</div>
+    <div class="hero-subtitle">OpenAI Agentic Research Assistant</div>
 </div>
 """, unsafe_allow_html=True)
 
