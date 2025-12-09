@@ -1,6 +1,6 @@
 ---
 title: AI Deep Researcher        # Give your app a title
-emoji: 🤖                       # Pick an emoji
+emoji: 🔬                       # Pick an emoji
 colorFrom: indigo               # Theme start color
 colorTo: blue                   # Theme end color
 sdk: docker                     # SDK type
