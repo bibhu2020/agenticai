@@ -27,56 +27,90 @@ st.set_page_config(page_title="Deep Research AI", layout="wide", page_icon="🧠
 # --------------------
 st.markdown("""
 <style>
-    /* Global Defaults */
+    /* ---------------------------------------------------------------------
+       1. GLOBAL & RESET
+       --------------------------------------------------------------------- */
+    * {
+        box-sizing: border-box;
+    }
+    
     .stApp, [data-testid="stAppViewContainer"] {
         background-color: #f8f9fa;
-        font-family: 'Inter', sans-serif;
-        overflow-x: hidden !important; /* Force hide horizontal scroll */
     }
     
-    .block-container {
-        max-width: 1200px;
-        padding-top: 2rem !important;
-        padding-bottom: 2rem !important;
+    /* ---------------------------------------------------------------------
+       2. LAYOUT & HERO BANNER
+       --------------------------------------------------------------------- */
+    
+    /* Desktop Layout */
+    @media (min-width: 769px) {
+        .block-container {
+            padding-top: 0 !important;
+            padding-bottom: 2rem !important;
+            padding-left: 5rem !important;
+            padding-right: 5rem !important;
+            max-width: 100% !important;
+        }
+        
+        .hero-container {
+            margin-top: 0;
+            margin-left: -5rem;
+            margin-right: -5rem;
+            padding: 2.5rem 1rem 2rem 1rem; /* Compact desktop padding */
+        }
     }
     
-    /* Remove default header decoration */
-    header[data-testid="stHeader"] {
-        background-color: transparent !important;
-        z-index: 100 !important;
+    /* Mobile Layout */
+    @media (max-width: 768px) {
+        .block-container {
+            padding-left: 1rem !important;
+            padding-right: 1rem !important;
+            padding-top: 0 !important;
+        }
+        
+        .hero-container {
+            margin-top: 0;
+            margin-left: -1rem;
+            margin-right: -1rem;
+            padding: 2rem 1rem 1.5rem 1rem; /* Compact mobile padding */
+            border-radius: 0 0 12px 12px;
+        }
     }
     
-    div[data-testid="stDecoration"] {
-        display: none;
-    }
-
-    /* Hero Section (Matching Chatbot Style) */
+    /* Hero Styling */
     .hero-container {
-        position: relative;
-        width: 100vw;
-        left: 50%;
-        right: 50%;
-        margin-left: -50vw;
-        margin-right: -50vw;
-        margin-top: -6rem; /* Pull up to cover top padding */
-        padding: 4rem 1rem 2rem 1rem; /* Extra top padding for status bar area */
-        text-align: center;
-        margin-bottom: 2rem;
         background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
         color: white;
+        text-align: center;
+        border-radius: 0 0 16px 16px;
         box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        margin-bottom: 2rem;
     }
 
     .hero-title {
-        font-size: 2rem;
-        margin-bottom: 0.5rem;
+        font-size: 2rem; /* Slightly smaller */
         font-weight: 700;
+        margin-bottom: 0.25rem;
+        color: white !important;
     }
     .hero-subtitle {
         font-size: 1rem;
         opacity: 0.95;
         font-weight: 400;
+        color: rgba(255,255,255,0.95) !important;
     }
+
+    /* Remove Header Decoration */
+    header[data-testid="stHeader"] {
+        background-color: transparent !important;
+        height: 0 !important;
+        z-index: 100;
+    }
+    div[data-testid="stDecoration"] { display: none; }
+
+    /* ---------------------------------------------------------------------
+       3. COMPONENT STYLING (Healthcare-like)
+       --------------------------------------------------------------------- */
 
     /* Centered Search Area */
     .search-wrapper {
@@ -87,7 +121,7 @@ st.markdown("""
     }
     
     .search-headline {
-        font-size: 2rem;
+        font-size: 1.8rem;
         font-weight: 800;
         color: #111;
         margin-bottom: 0.5rem;
@@ -98,35 +132,25 @@ st.markdown("""
         color: #666;
         margin-bottom: 2rem;
     }
-    
-    /* Mobile font sizes */
-    @media (max-width: 768px) {
-        .search-headline {
-            font-size: 1.75rem;
-        }
-    }
 
-    /* Input styling override */
+    /* Inputs */
     .stTextArea textarea {
-        border-radius: 12px !important;
-        border: 1px solid #e0e0e0 !important;
-        padding: 1rem !important;
-        background: white !important;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.03) !important;
-        font-size: 1rem !important; /* Proper reading size */
-        color: #333 !important;
+        border-radius: 12px; /* Standard rounded */
+        border: 1px solid #e0e0e0;
+        padding: 1rem;
+        background: white;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        color: #333;
     }
     
-    /* Custom Button */
+    /* Buttons */
     .stButton button {
+        border-radius: 20px; /* Matching healthcare */
+        min-height: 48px;
+        font-weight: 500;
         background: black !important;
         color: white !important;
-        border-radius: 30px !important;
-        padding: 0.5rem 2rem !important;
-        border: none !important;
-        transition: transform 0.1s ease;
-        min-height: 48px; /* Large touch target */
-        white-space: nowrap !important; /* Prevent label wrapping */
+        white-space: nowrap !important;
     }
     .stButton button:hover {
         transform: scale(1.02);

@@ -58,143 +58,129 @@ session = st.session_state.ai_session
 # -----------------------------
 st.markdown("""
 <style>
-    /* Global Cleanliness */
+    /* ---------------------------------------------------------------------
+       1. GLOBAL & RESET
+       --------------------------------------------------------------------- */
+    * {
+        box-sizing: border-box;
+    }
+    
     .stApp, [data-testid="stAppViewContainer"] {
-        background-color: #f8f9fa;
-        overflow-x: hidden !important; /* Force hide horizontal scroll */
+        /* Standard Streamlit background */
+        background-color: #f8f9fa; 
     }
     
-    .block-container {
-        max-width: 1200px;
-        padding-top: 2rem !important;
-        padding-bottom: 2rem !important;
+    /* ---------------------------------------------------------------------
+       2. LAYOUT & HERO BANNER
+       --------------------------------------------------------------------- */
+    
+    /* Desktop Layout */
+    @media (min-width: 769px) {
+        .block-container {
+            padding-top: 0 !important;
+            padding-bottom: 2rem !important;
+            padding-left: 5rem !important;
+            padding-right: 5rem !important;
+            max-width: 100% !important;
+        }
+        
+        .hero-container {
+            margin-top: 0;
+            margin-left: -5rem;
+            margin-right: -5rem;
+            /* Simple negative margins to pull edge-to-edge */
+            padding: 2.5rem 1rem 2rem 1rem; /* Compact desktop padding */
+        }
     }
     
-    /* Remove default header decoration */
-    header[data-testid="stHeader"] {
-        background-color: transparent !important;
-        z-index: 100 !important; /* Ensure it stays clickable but transparent */
+    /* Mobile Layout */
+    @media (max-width: 768px) {
+        .block-container {
+            padding-left: 1rem !important;
+            padding-right: 1rem !important;
+            padding-top: 0 !important;
+        }
+        
+        .hero-container {
+            margin-top: 0;
+            margin-left: -1rem;
+            margin-right: -1rem;
+            /* Break out of the 1rem padding */
+            padding: 2rem 1rem 1.5rem 1rem; /* Compact mobile padding */
+            border-radius: 0 0 12px 12px;
+        }
+        
+        /* Ensure font sizes are standard (Streamlit defaults is ~16px) */
+        /* We DO NOT override them to 17px/fixed, allowing system zoom to work. */
     }
-    
-    div[data-testid="stDecoration"] {
-        display: none;
-    }
-    
-    /* Typography */
-    h1, h2, h3 {
-        font-family: 'Inter', sans-serif;
-        font-weight: 600;
-        color: #1a1a1a;
-    }
-    
-    /* Hero Section */
+
+    /* Hero Styling */
     .hero-container {
-        position: relative;
-        width: 100vw;
-        left: 50%;
-        right: 50%;
-        margin-left: -50vw;
-        margin-right: -50vw;
-        margin-top: -6rem; /* Pull up to cover top padding */
-        padding: 4rem 1rem 2rem 1rem; /* Extra top padding for status bar area */
-        text-align: center;
-        margin-bottom: 2rem;
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         color: white;
+        text-align: center;
+        border-radius: 0 0 16px 16px;
         box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        margin-bottom: 2rem;
     }
 
     .hero-title {
-        font-size: 2rem;
-        margin-bottom: 0.5rem;
+        font-size: 2rem; /* Slightly smaller */
         font-weight: 700;
+        margin-bottom: 0.25rem;
+        color: white !important;
     }
     .hero-subtitle {
         font-size: 1rem;
         opacity: 0.95;
         font-weight: 400;
+        color: rgba(255,255,255,0.95) !important;
     }
     
-    /* Accessibility: Focus Indicators */
-    *:focus-visible {
-        outline: 2px solid #764ba2 !important;
-        outline-offset: 2px;
+    /* Remove Header Decoration */
+    header[data-testid="stHeader"] {
+        background-color: transparent !important;
+        height: 0 !important;
+        z-index: 100;
     }
-
-    /* Chat Bubbles */
+    div[data-testid="stDecoration"] { display: none; }
+    
+    /* ---------------------------------------------------------------------
+       3. COMPONENT STYLING (Healthcare-like)
+       --------------------------------------------------------------------- */
+    
+    /* Chat Bubbles - Clean & Readable */
     .stChatMessage {
         background-color: white;
         border-radius: 12px;
+        border: 1px solid #e5e5e5;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.05);
         padding: 1rem;
-        margin-bottom: 0.75rem;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-        border: 1px solid #f0f0f0;
     }
     
     .stChatMessage[data-testid="stChatMessage"]:nth-of-type(odd) {
-         background-color: #f8f9fa; /* Slight contract for user/assistant if needed, but keeping white clean is fine */
+         background-color: #f8f9fa;
     }
     
-    /* Ensure text readability in chat */
-    .stChatMessage p {
-        color: #2c3e50;
-        font-size: 1rem !important;
-        line-height: 1.6;
+    /* Input Fields */
+    .stTextInput input {
+        border-radius: 20px; /* Matching healthcare-assistant roundness */
+        border: 1px solid #ddd;
+        padding: 0.75rem 1rem;
+    }
+    
+    /* Buttons */
+    .stButton button {
+        border-radius: 20px; /* Matching healthcare-assistant */
+        min-height: 48px;
+        font-weight: 500;
     }
 
-    div[data-testid="stChatMessageContent"] {
-        font-size: 1.05rem;
-        line-height: 1.6;
-    }
-
-    /* Sidebar Styling */
+    /* Sidebar */
     section[data-testid="stSidebar"] {
         background-color: #ffffff;
         border-right: 1px solid #eaeaea;
     }
-    
-    .suggestion-btn {
-        width: 100%;
-        text-align: left;
-        padding: 0.75rem 1rem;
-        margin-bottom: 0.5rem;
-        background-color: #f8f9fa;
-        border: 1px solid #e9ecef;
-        border-radius: 8px;
-        color: #495057;
-        font-size: 0.95rem;
-        transition: all 0.2s ease;
-        cursor: pointer;
-        display: block;
-        text-decoration: none;
-    }
-    .suggestion-btn:hover {
-        background-color: #e2e6ea;
-        border-color: #dae0e5;
-        text-decoration: none;
-        color: #212529;
-    }
-    
-    /* Mobile Responsiveness Fixes */
-    @media (max-width: 768px) {
-        .block-container {
-            padding-left: 1rem !important;
-            padding-right: 1rem !important;
-        }
-        .hero-title {
-            font-size: 1.5rem;
-        }
-        .stChatMessage {
-            padding: 0.75rem;
-        }
-    }
-    
-    /* Button accessibility */
-    .stButton button {
-        min-height: 44px; /* ADA Minimum Touch Target */
-        border-radius: 8px;
-    }
-
 </style>
 """, unsafe_allow_html=True)
 
