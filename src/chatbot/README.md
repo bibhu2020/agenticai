@@ -5,8 +5,10 @@ colorFrom: pink
 colorTo: yellow
 sdk: docker
 sdk_version: "0.0.1"
-app_file: ui/app.py
+app_file: app.py
 pinned: false
+license: mis
+short_description: An Experimental Agentic Chatbot (uses OpenAI Agent SDK)
 ---
 
 # AI Chatbot
@@ -45,9 +47,7 @@ https://github.com/openai/openai-agents-python/tree/main/examples/mcp
 
 ```
 chatbot/
-├── ui/
-│   ├── __init__.py               # Package initialization
-│   └── app.py                    # Main Streamlit chatbot interface
+├── app.py                    # Main Streamlit chatbot interface
 ├── appagents/
 │   ├── __init__.py               # Package initialization
 │   ├── OrchestratorAgent.py      # Main orchestrator - coordinates all agents
@@ -79,7 +79,7 @@ chatbot/
 
 ## File Descriptions
 
-### UI Layer (`ui/`)
+### UI Layer
 - **app.py** - Main Streamlit chatbot interface that provides:
   - Chat message display with user and AI messages
   - Text input for user queries
@@ -206,8 +206,8 @@ export OPENAI_API_KEY="your-key"
 export SERPER_API_KEY="your-key"
 export NEWS_API_KEY="your-key"
 
-# Run the Streamlit app
-python run.py
+# Run the Streamlit app (from the root)
+python run.py chatbot
 ```
 
 ## Deployment

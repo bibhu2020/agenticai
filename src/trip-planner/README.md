@@ -5,6 +5,8 @@ colorFrom: blue
 colorTo: green
 sdk: docker
 app_port: 7860
+license: mis
+short_description: An agentic Trip Planner (uses Langgraph). Demonstrates Agent Contexts, Tool Calls, and more.
 ---
 
 # AI Trip Planner API

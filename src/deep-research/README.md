@@ -5,8 +5,10 @@ colorFrom: indigo               # Theme start color
 colorTo: blue                   # Theme end color
 sdk: docker                     # SDK type
 sdk_version: "4.39.0"           # Example Gradio version
-app_file: ui/app.py             # <-- points to your app.py inside ui/
+app_file: app.py             # <-- points to your app.py inside ui/
 pinned: false
+license: mis
+short_description: An agentic deep-researcher (uses OpenAI Agent SDK)
 ---
 
 # AI Deep Researcher

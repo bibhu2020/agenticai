@@ -5,8 +5,10 @@ colorFrom: purple
 colorTo: pink
 sdk: docker
 sdk_version: "0.0.1"
-app_file: ui/app.py
+app_file: app.py
 pinned: false
+license: mis
+short_description: An agentic Travel Agent (uses OpenAI Agent SDK). Demonstrates Agent Contexts, Tool Calls, and more.
 ---
 
 # AI Travel Agent
