@@ -2,7 +2,7 @@
 title: AI Chatbot
 emoji: 🤖
 colorFrom: pink
-colorTo: fuchsia
+colorTo: yellow
 sdk: docker
 sdk_version: "0.0.1"
 app_file: ui/app.py
