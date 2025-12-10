@@ -13,7 +13,7 @@ short_description: An Experimental Agentic Chatbot (uses OpenAI Agent SDK)
 
 # AI Chatbot
 
-This is an experimental chatbot for chatting with AI. It is equipped with agents & tools to give you realtime data from the web. It uses **OpenAI - SDK** and **OpenAI - Agents**.
+This is an experimental chatbot for chatting with AI. It is equipped with agents & tools to give you realtime data from the web. It uses **OpenAI - SDK** and **OpenAI - Agents**...
 
 ## Features
 - Predefined prompts for quick analysis

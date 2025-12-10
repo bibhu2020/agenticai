@@ -1,18 +1,18 @@
-name: Deploy Chatbot APP to Hugging Face
+name: Deploy Literature Reviewer to Hugging Face
 
 env:
-  PROJECT_PATH: src/chatbot
+  PROJECT_PATH: src/literature-review
   HF_TOKEN: ${{ secrets.HF_TOKEN }}
   HF_USERNAME: ${{ secrets.HF_USERNAME }}
-  HF_SPACE_NAME: chatbot-app
-  REPO_ID: ${{ secrets.HF_USERNAME }}/chatbot-app
+  HF_SPACE_NAME: literature-reviewer
+  REPO_ID: ${{ secrets.HF_USERNAME }}/literature-reviewer
 
 on:
   push:
     branches:
       - main
     paths:
-      - 'src/chatbot/**'
+      - 'src/literature-review/**'
   workflow_dispatch:
 
 jobs:
@@ -33,15 +33,15 @@ jobs:
 
         # Copy required folders
         cp -r common deploy_temp/
-        cp -r src/chatbot deploy_temp/src/
+        cp -r src/literature-review deploy_temp/src/
         
         # Copy project metadata files
         cp uv.lock deploy_temp/
         cp pyproject.toml deploy_temp/
         
-        # Copy Dockerfile and run.py from chatbot to root of deploy_temp
-        cp src/chatbot/Dockerfile deploy_temp/
-        cp src/chatbot/README.md deploy_temp/
+        # Copy Dockerfile and run.py from literature-review to root of deploy_temp
+        cp src/literature-review/Dockerfile deploy_temp/
+        cp src/literature-review/README.md deploy_temp/
         cp run.py deploy_temp/
         
         echo "Deployment directory structure created"
