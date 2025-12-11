@@ -1,9 +1,9 @@
 name: Keep My HF Sites Live
 
-# Run every 30 minutes
+# Run every 24 hours
 on:
   schedule:
-    - cron: '*/30 * * * *'
+    - cron: '0 0 * * *'
   workflow_dispatch: # optional manual trigger
 
 jobs:
@@ -25,6 +25,7 @@ jobs:
           "https://mishrabp-chatbot-app.hf.space"
           "https://mishrabp-deep-research.hf.space"
           "https://mishrabp-healthcare-assistant.hf.space"
+          "https://mishrabp-stock-analyst.hf.space"
         )
 
         # Loop through URLs and send HEAD requests
