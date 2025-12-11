@@ -1,6 +1,6 @@
 import streamlit as st
 import asyncio
-from teams.team import get_investment_team
+from teams.investment_team import get_investment_team
 
 st.set_page_config(page_title="Stock Investment Analyst", layout="wide", page_icon="📈")
 
