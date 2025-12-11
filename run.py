@@ -44,7 +44,7 @@ APP_REGISTRY: Dict[str, Dict[str, str]] = {
     },
     "trip-planner": {
         "path": "src/trip-planner",
-        "entry": "app.py",
+        "entry": "main.py",
         "description": "Trip Planner - Detailed trip itinerary planning"
     },
     "chatbot": {

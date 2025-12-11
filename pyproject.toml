@@ -90,6 +90,7 @@ dependencies = [
     "plotly>=6.5.0",
     "streamlit>=1.51.0",
     "reportlab>=4.4.5",
+    "fastapi",
 
     # =======================
     # AUDIO / VIDEO

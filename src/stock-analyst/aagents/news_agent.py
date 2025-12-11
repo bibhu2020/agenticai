@@ -11,9 +11,9 @@ def get_news_agent():
         Search for latest news regarding a topic or stock.
         """
         # Anchor search to reputable sources as per Suggestion 3
-        reputable_sources = " (site:bloomberg.com OR site:reuters.com OR site:cnbc.com OR site:wsj.com OR site:finance.yahoo.com)"
-        if "site:" not in query:
-             query += reputable_sources
+        # reputable_sources = " (site:bloomberg.com OR site:reuters.com OR site:cnbc.com OR site:wsj.com OR site:finance.yahoo.com)"
+        # if "site:" not in query:
+        #      query += reputable_sources
 
         # Use underlying function with proper params
         params = searchQuery(query=query, search_type="news", timelimit="d", max_results=5)

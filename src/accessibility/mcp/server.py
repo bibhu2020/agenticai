@@ -11,7 +11,7 @@ import math
 
 load_dotenv()
 
-mcp = FastMCP("accessibility_server", version="1.1.0")
+mcp = FastMCP("accessibility_server")
 
 # Path to axe script (must exist next to this file or set AXE_JS_PATH env)
 DEFAULT_AXE_PATH = os.path.join(os.path.dirname(__file__), "axe.min.js")
@@ -275,26 +275,53 @@ async def check_semantics(url: str):
 async def full_audit(url: str, timeout: int = 60000):
     """
     Runs axe + all custom checks and returns a comprehensive report with suggested remediation hints.
+    Optimized to reuse a single browser session.
     """
-    # Run axe and custom checks concurrently but within limit
-    tasks = {
-        "axe": asyncio.create_task(run_axe_audit(url, timeout=timeout)),
-        "headings": asyncio.create_task(check_headings(url)),
-        "language": asyncio.create_task(check_language(url)),
-        "images": asyncio.create_task(check_images(url)),
-        "forms": asyncio.create_task(check_forms(url)),
-        "aria": asyncio.create_task(check_aria(url)),
-        "keyboard": asyncio.create_task(check_keyboard(url)),
-        "videos": asyncio.create_task(check_videos(url)),
-        "contrast": asyncio.create_task(check_contrast(url)),
-        "semantics": asyncio.create_task(check_semantics(url)),
-    }
+    playwright = browser = context = page = None
     results: Dict[str, Any] = {}
-    for k, t in tasks.items():
+    
+    try:
+        # Launch browser once
+        playwright, browser, context, page = await _open_page(url, timeout=timeout)
+        
+        # 1. Run Axe (needs injection)
         try:
-            results[k] = await t
+            await _ensure_axe(page)
+            axe_result = await _run_axe(page, tags=["wcag2a", "wcag2aa"])
+            results["axe"] = {"url": url, "axe": axe_result}
         except Exception as e:
-            results[k] = {"error": str(e)}
+            results["axe"] = {"error": str(e)}
+
+        # 2. Run all custom JS checks sequentially on the SAME page
+        # This avoids spawning 10+ browser instances
+        check_definitions = {
+            "headings": HEADINGS_JS,
+            "language": LANG_JS,
+            "images": IMAGES_JS,
+            "forms": FORMS_JS,
+            "aria": ARIA_JS,
+            "keyboard": KEYBOARD_JS,
+            "videos": VIDEO_JS,
+            "contrast": CONTRAST_JS,
+            "semantics": SEMANTICS_JS
+        }
+
+        for key, js_code in check_definitions.items():
+            try:
+                res = await page.evaluate(js_code)
+                results[key] = {"url": url, "result": res}
+            except Exception as e:
+                results[key] = {"error": str(e)}
+
+    except Exception as e:
+        return {"url": url, "error": f"Fatal browser error: {str(e)}"}
+    finally:
+        if context:
+            await context.close()
+        if browser:
+            await browser.close()
+        if playwright:
+            await playwright.stop()
 
     # Build summary: count axe violations of level 'serious' or 'critical' (if present), map to quick remediation hints
     summary = {"url": url, "total_axe_violations": 0, "by_impact": {}, "quick_fixes": []}
@@ -336,9 +363,11 @@ async def full_audit(url: str, timeout: int = 60000):
     # Return combined report
     return {"url": url, "summary": summary, "results": results}
 
+import sys
+
 # Run MCP server via stdio transport
 if __name__ == "__main__":
-    print("Starting Accessibility MCP server (stdio transport).")
+    print("Starting Accessibility MCP server (stdio transport).", file=sys.stderr)
     if not os.path.exists(AXE_JS_PATH):
-        print(f"WARNING: axe.min.js not found at {AXE_JS_PATH}. Download axe-core (axe.min.js) and place it beside this file or set AXE_JS_PATH.")
+        print(f"WARNING: axe.min.js not found at {AXE_JS_PATH}. Download axe-core (axe.min.js) and place it beside this file or set AXE_JS_PATH.", file=sys.stderr)
     mcp.run(transport="stdio")
