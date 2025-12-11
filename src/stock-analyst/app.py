@@ -29,7 +29,7 @@ st.warning(
     "Do not use this tool to make real-world financial decisions. Always consult with a qualified financial advisor."
 )
 
-st.markdown("#### Get a comprehensive analysis from our AI team.")
+st.markdown("#### Get a comprehensive analysis from our AI team of agents.")
 
 # Input section with better spacing
 st.divider()
