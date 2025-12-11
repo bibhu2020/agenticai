@@ -28,6 +28,9 @@ COPY src/stock-analyst/ ./src/stock-analyst/
 RUN uv sync --frozen --no-dev && \
     uv pip install -e . --system
 
+# Copy entry point
+COPY run.py .
+
 EXPOSE 7860
 
 CMD ["python", "run.py", "stock-analyst", "--port", "7860"]
