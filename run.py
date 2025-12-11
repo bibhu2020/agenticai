@@ -8,7 +8,7 @@ Usage:
 Examples:
     python run.py healthcare
     python run.py deep-research --port 8502
-    python run.py stock-advisor
+    python run.py stock-analyst
     python run.py --list
 """
 
@@ -32,10 +32,10 @@ APP_REGISTRY: Dict[str, Dict[str, str]] = {
         "entry": "app.py",
         "description": "Deep Research AI - Comprehensive research assistant"
     },
-    "stock-advisor": {
-        "path": "src/stock-advisor",
+    "stock-analyst": {
+        "path": "src/stock-analyst",
         "entry": "app.py",
-        "description": "Stock Advisor - Financial analysis and stock recommendations"
+        "description": "Stock Analyst - Financial analysis and stock recommendations"
     },
     "travel-agent": {
         "path": "src/travel-agent",

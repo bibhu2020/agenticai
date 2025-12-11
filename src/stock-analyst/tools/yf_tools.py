@@ -125,6 +125,9 @@ def _get_history(symbol: str, period: str = "1mo") -> str:
 
         if data.empty:
             return f"No historical data found for '{symbol}'."
+        
+        # Convert to JSON format (reset index to include Date)
+        # return data.tail(5).reset_index().to_json(orient='records', date_format='iso')
         return f"Historical data for {symbol} ({period}):\n{data.tail(5).to_string()}"
 
     except Exception as e:
