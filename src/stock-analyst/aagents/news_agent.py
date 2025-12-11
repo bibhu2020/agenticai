@@ -16,7 +16,7 @@ def get_news_agent():
         #      query += reputable_sources
 
         # Use underlying function with proper params
-        params = searchQuery(query=query, search_type="news", timelimit="d", max_results=5)
+        params = searchQuery(query=query, search_type="news", timelimit="w", max_results=5)
         # _duckduckgo_search returns list[dict], convert to str
         results = _duckduckgo_search(params)
         return str(results)
