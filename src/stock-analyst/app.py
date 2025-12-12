@@ -3,6 +3,11 @@ import asyncio
 import os
 from teams.investment_team import get_investment_team
 
+st.set_page_config(page_title="Stock Investment Analyst", layout="wide", page_icon="📈")
+
+# ------------------------------------------------------------------------------
+# OpenTelemetry Setup
+# ------------------------------------------------------------------------------
 from opentelemetry import trace
 # from opentelemetry.exporter.otlp.proto.grpc.trace_exporter import OTLPSpanExporter
 from opentelemetry.exporter.otlp.proto.http.trace_exporter import OTLPSpanExporter
@@ -11,27 +16,13 @@ from opentelemetry.sdk.resources import Resource
 from opentelemetry.sdk.trace import TracerProvider
 from opentelemetry.sdk.trace.export import BatchSpanProcessor
 
-st.set_page_config(page_title="Stock Investment Analyst", layout="wide", page_icon="📈")
-
-# ------------------------------------------------------------------------------
-# OpenTelemetry Setup
-# ------------------------------------------------------------------------------
-# 1. Check for explicit endpoint env var
-# 2. If not set, check if running in HF Space. If so, SKIP OTEL to prevent breakages.
-# 3. If not in HF and no var set, default to localhost (dev mode).
-
 otel_endpoint = os.getenv("OTEL_EXPORTER_OTLP_ENDPOINT")
-is_hf = os.getenv("SPACE_ID") is not None
 
 if otel_endpoint:
     enable_otel = True
-elif not is_hf:
-    # Local development default
+else:
     otel_endpoint = "https://mishrabp-otel.hf.space/v1/traces"
     enable_otel = True
-else:
-    # In HF Space but no endpoint provided -> Disable to prevent crash
-    enable_otel = False
 
 if enable_otel:
     try:
