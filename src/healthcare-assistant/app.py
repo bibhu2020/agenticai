@@ -34,6 +34,20 @@ else:
 
 if enable_otel:
     try:
+        # Monkeypatch the internals of the OpenAI instrumentation to fix "Invalid type Omit" error
+        # This is necessary because the official instrumentation library doesn't handle 'Omit' types correctly
+        # and blindly tries to set them as attributes, causing console errors.
+        import opentelemetry.instrumentation.openai.shared
+        original_set_span_attribute = opentelemetry.instrumentation.openai.shared._set_span_attribute
+    
+        def patched_set_span_attribute(span, name, value):
+            # Check for Omit/NotGiven types by name to avoid importing internal types
+            if value is not None and type(value).__name__ in ["Omit", "NotGiven"]:
+                return
+            original_set_span_attribute(span, name, value)
+            
+        opentelemetry.instrumentation.openai.shared._set_span_attribute = patched_set_span_attribute
+
         # Set up telemetry span exporter.
         # otel_exporter = OTLPSpanExporter(endpoint=otel_endpoint, insecure=True)
         otel_exporter = OTLPSpanExporter(endpoint=otel_endpoint)
@@ -44,19 +58,8 @@ if enable_otel:
         tracer_provider.add_span_processor(span_processor)
         trace_api.set_tracer_provider(tracer_provider)
 
-        # Custom hook to filter out Omit/NotGiven types from attributes
-        def request_hook(span, kwargs):
-            if span and span.is_recording():
-                for key, value in kwargs.items():
-                    # Check for "Omit" or "NotGiven" types which OTEL can't serialize
-                    type_name = type(value).__name__
-                    if type_name in ["Omit", "NotGiven"]:
-                        # Setup correct attribute name expected by semantic conventions or just use key
-                        # The instrumentation might use gen_ai.request.{key}
-                        span.set_attribute(f"gen_ai.request.{key}", str(value))
-
         # Instrument the OpenAI Python library
-        OpenAIInstrumentor().instrument(request_hook=request_hook)
+        OpenAIInstrumentor().instrument()
         print(f"OpenTelemetry enabled with endpoint: {otel_endpoint}")
     except Exception as e:
         print(f"Failed to initialize OpenTelemetry: {e}")
