@@ -13,6 +13,7 @@ def get_model_client(model="gemini-flash-latest", temperature=0):
             "vision": True,
             "function_calling": True,
             "json_output": True,
+            "structured_output": True,
         },
         api_key=gemini_api_key,
         temperature=temperature

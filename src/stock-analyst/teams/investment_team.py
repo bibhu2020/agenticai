@@ -28,6 +28,7 @@ def get_investment_team():
                         "vision": True,
                         "function_calling": True,
                         "json_output": True,
+                        "structured_output": True,
                     },
         temperature=0
     )

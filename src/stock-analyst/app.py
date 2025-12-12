@@ -1,8 +1,60 @@
 import streamlit as st
 import asyncio
+import os
 from teams.investment_team import get_investment_team
 
+from opentelemetry import trace
+# from opentelemetry.exporter.otlp.proto.grpc.trace_exporter import OTLPSpanExporter
+from opentelemetry.exporter.otlp.proto.http.trace_exporter import OTLPSpanExporter
+from opentelemetry.instrumentation.openai import OpenAIInstrumentor
+from opentelemetry.sdk.resources import Resource
+from opentelemetry.sdk.trace import TracerProvider
+from opentelemetry.sdk.trace.export import BatchSpanProcessor
+
 st.set_page_config(page_title="Stock Investment Analyst", layout="wide", page_icon="📈")
+
+# ------------------------------------------------------------------------------
+# OpenTelemetry Setup
+# ------------------------------------------------------------------------------
+# 1. Check for explicit endpoint env var
+# 2. If not set, check if running in HF Space. If so, SKIP OTEL to prevent breakages.
+# 3. If not in HF and no var set, default to localhost (dev mode).
+
+otel_endpoint = os.getenv("OTEL_EXPORTER_OTLP_ENDPOINT")
+is_hf = os.getenv("SPACE_ID") is not None
+
+if otel_endpoint:
+    enable_otel = True
+elif not is_hf:
+    # Local development default
+    otel_endpoint = "https://mishrabp-otel.hf.space/v1/traces"
+    enable_otel = True
+else:
+    # In HF Space but no endpoint provided -> Disable to prevent crash
+    enable_otel = False
+
+if enable_otel:
+    try:
+        # Set up telemetry span exporter.
+        # otel_exporter = OTLPSpanExporter(endpoint=otel_endpoint, insecure=True)
+        otel_exporter = OTLPSpanExporter(endpoint=otel_endpoint)
+        span_processor = BatchSpanProcessor(otel_exporter)
+
+        # Set up telemetry trace provider.
+        tracer_provider = TracerProvider(resource=Resource({"service.name": "stock-analyst"}))
+        tracer_provider.add_span_processor(span_processor)
+        trace.set_tracer_provider(tracer_provider)
+
+        # Instrument the OpenAI Python library
+        OpenAIInstrumentor().instrument()
+        print(f"OpenTelemetry enabled with endpoint: {otel_endpoint}")
+    except Exception as e:
+        print(f"Failed to initialize OpenTelemetry: {e}")
+else:
+    print("OpenTelemetry disabled (Running in HF Space with no configured endpoint).")
+
+# Get a tracer (works even if OTEL is disabled, returning a NoOp tracer)
+tracer = trace.get_tracer("stock-analyst")
 
 # ------------------------------------------------------------------------------
 # Custom CSS for layout improvements
@@ -50,53 +102,61 @@ with st.container():
 st.divider()
 
 async def run_analysis(ticker):
-    task = f"Analyze stock trends, news, and sentiment for {ticker}, plus analyst reports and expert opinions, and then decide whether to invest."
-    
-    st.markdown(f"### Analysis for **{ticker}**")
-    
-    # Container for live updates
-    chat_container = st.container()
-    
-    try:
-        # Run the team stream
-        investment_team = get_investment_team()
-        stream = investment_team.run_stream(task=task)
+    # Start a span for the analysis task. 
+    # This becomes the parent for all subsequent spans (like OpenAI calls).
+    with tracer.start_as_current_span("run_analysis") as span:
+        span.set_attribute("stock.ticker", ticker) # Add useful metadata
         
-        # Define icons for each agent
-        AGENT_ICONS = {
-            "stock_trends_agent": "📈",
-            "news_agent": "📰",
-            "sentiment_agent": "💡",
-            "decision_agent": "⚖️",
-            "user": "👤",
-            "System": "⚙️"
-        }
+        task = f"Analyze stock trends, news, and sentiment for {ticker}, plus analyst reports and expert opinions, and then decide whether to invest."
         
-        async for message in stream:
-            # Check if message has source and content attributes typical of agent messages
-            source = getattr(message, 'source', 'System')
+        st.markdown(f"### Analysis for **{ticker}**")
+        
+        # Container for live updates
+        chat_container = st.container()
+        
+        try:
+            # Run the team stream
+            investment_team = get_investment_team()
+            stream = investment_team.run_stream(task=task)
             
-            with chat_container:
-                if 'TaskResult' in message.__class__.__name__:
-                    if hasattr(message, 'stop_reason') and message.stop_reason:
-                         st.info(f"Analysis Completed: {message.stop_reason}")
-                    continue
-
-                # Use the icon mapping, default to None (Streamlit default) if not found
-                avatar = AGENT_ICONS.get(source, None)
+            # Define icons for each agent
+            AGENT_ICONS = {
+                "stock_trends_agent": "📈",
+                "news_agent": "📰",
+                "sentiment_agent": "💡",
+                "decision_agent": "⚖️",
+                "user": "👤",
+                "System": "⚙️"
+            }
+            
+            async for message in stream:
+                # Check if message has source and content attributes typical of agent messages
+                source = getattr(message, 'source', 'System')
                 
-                with st.chat_message(source, avatar=avatar):
-                    # Handle Tool Call events specifically to make them look like system logs
-                    if 'ToolCall' in message.__class__.__name__:
-                        with st.expander(f"⚙️ Tool Usage: {source}", expanded=False):
-                            st.write(message)
+                with chat_container:
+                    if 'TaskResult' in message.__class__.__name__:
+                        if hasattr(message, 'stop_reason') and message.stop_reason:
+                             st.info(f"Analysis Completed: {message.stop_reason}")
                         continue
-
-                    content = getattr(message, 'content', "")
-                    st.write(content)
+    
+                    # Use the icon mapping, default to None (Streamlit default) if not found
+                    avatar = AGENT_ICONS.get(source, None)
                     
-    except Exception as e:
-        st.error(f"An error occurred during analysis: {e}")
+                    with st.chat_message(source, avatar=avatar):
+                        # Handle Tool Call events specifically to make them look like system logs
+                        if 'ToolCall' in message.__class__.__name__:
+                            with st.expander(f"⚙️ Tool Usage: {source}", expanded=False):
+                                st.write(message)
+                            continue
+    
+                        content = getattr(message, 'content', "")
+                        st.write(content)
+                        
+        except Exception as e:
+            # Record the exception in the span if something crashes
+            span.record_exception(e)
+            span.set_status(trace.Status(trace.StatusCode.ERROR))
+            st.error(f"An error occurred during analysis: {e}")
 
 if analyze_btn:
     if stock_name:
