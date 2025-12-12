@@ -16,6 +16,50 @@ st.set_page_config(
     page_icon="🤖"
 )
 
+# ------------------------------------------------------------------------------
+# OpenTelemetry Setup
+# ------------------------------------------------------------------------------
+from opentelemetry import trace as trace_api
+# from opentelemetry.exporter.otlp.proto.grpc.trace_exporter import OTLPSpanExporter
+from opentelemetry.exporter.otlp.proto.http.trace_exporter import OTLPSpanExporter
+from opentelemetry.instrumentation.openai import OpenAIInstrumentor
+from opentelemetry.sdk.resources import Resource
+from opentelemetry.sdk.trace import TracerProvider
+from opentelemetry.sdk.trace.export import BatchSpanProcessor
+
+otel_endpoint = os.getenv("OTEL_EXPORTER_OTLP_ENDPOINT")
+
+if otel_endpoint:
+    enable_otel = True
+else:
+    # Local development default
+    otel_endpoint = "https://mishrabp-otel.hf.space/v1/traces"
+    enable_otel = True
+
+if enable_otel:
+    try:
+        # Set up telemetry span exporter.
+        # otel_exporter = OTLPSpanExporter(endpoint=otel_endpoint, insecure=True)
+        otel_exporter = OTLPSpanExporter(endpoint=otel_endpoint)
+        span_processor = BatchSpanProcessor(otel_exporter)
+
+        # Set up telemetry trace provider.
+        tracer_provider = TracerProvider(resource=Resource({"service.name": "chatbot"}))
+        tracer_provider.add_span_processor(span_processor)
+        trace_api.set_tracer_provider(tracer_provider)
+
+        # Instrument the OpenAI Python library
+        OpenAIInstrumentor().instrument()
+        print(f"OpenTelemetry enabled with endpoint: {otel_endpoint}")
+    except Exception as e:
+        print(f"Failed to initialize OpenTelemetry: {e}")
+else:
+    print("OpenTelemetry disabled (Running in HF Space with no configured endpoint).")
+
+# Get a tracer (works even if OTEL is disabled, returning a NoOp tracer)
+tracer = trace_api.get_tracer("chatbot")
+
+
 def load_prompts(folder="prompts"):
     prompts = []
     prompt_labels = []
@@ -203,10 +247,14 @@ async def get_ai_response(prompt: str) -> str:
         agent = orchestrator_agent
         # Ensure session is valid
         current_session = st.session_state.ai_session
-        with trace("Chatbot Agent Run"):
-            # Run agent
-            result = await Runner.run(agent, prompt, session=current_session)
-            return result.final_output
+        current_session = st.session_state.ai_session
+        with trace("Chatbot Agent Run"): # Keep existing custom trace wrapper if it exists, or just use new tracer
+             with tracer.start_as_current_span("get_ai_response") as span:
+                span.set_attribute("input.prompt", prompt)
+                # Run agent
+                result = await Runner.run(agent, prompt, session=current_session)
+                span.set_attribute("output.response", result.final_output)
+                return result.final_output
     except InputGuardrailTripwireTriggered as e:
         reasoning = getattr(e, "reasoning", None) \
             or getattr(getattr(e, "output", None), "reasoning", None) \
