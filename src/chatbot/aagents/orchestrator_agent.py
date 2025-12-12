@@ -8,6 +8,8 @@ from aagents.input_validation_agent import input_validation_guardrail
 from agents import Agent, OpenAIChatCompletionsModel, Runner, function_tool
 from openai import AsyncOpenAI
 from dotenv import load_dotenv
+from langsmith import wrappers
+
 
 load_dotenv()
 
@@ -15,6 +17,7 @@ load_dotenv()
 GEMINI_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/openai/"
 google_api_key = os.getenv("GOOGLE_API_KEY")
 gemini_client = AsyncOpenAI(base_url=GEMINI_BASE_URL, api_key=google_api_key)
+gemini_client = wrappers.wrap_openai(gemini_client)
 gemini_model = OpenAIChatCompletionsModel(
     model="gemini-2.0-flash",
     openai_client=gemini_client

@@ -2,10 +2,24 @@ import os
 import glob
 import uuid
 import asyncio
+import langfuse
+import logging
 import streamlit as st
 from aagents.orchestrator_agent import orchestrator_agent
 from agents import Runner, trace, SQLiteSession
 from agents.exceptions import InputGuardrailTripwireTriggered
+from langsmith import traceable
+
+# Make Langfuse optional to avoid "Client will be disabled" errors
+if os.environ.get("LANGFUSE_PUBLIC_KEY"):
+    from langfuse import observe
+else:
+    # Dummy decorator if keys are missing
+    def observe(*args, **kwargs):
+        def decorator(func):
+            return func
+        return decorator
+
 
 # -----------------------------
 # Configuration & Utils
@@ -16,63 +30,14 @@ st.set_page_config(
     page_icon="🤖"
 )
 
-# ------------------------------------------------------------------------------
-# OpenTelemetry Setup
-# ------------------------------------------------------------------------------
-from opentelemetry import trace as trace_api
-# from opentelemetry.exporter.otlp.proto.grpc.trace_exporter import OTLPSpanExporter
-from opentelemetry.exporter.otlp.proto.http.trace_exporter import OTLPSpanExporter
-from opentelemetry.instrumentation.openai import OpenAIInstrumentor
-from opentelemetry.sdk.resources import Resource
-from opentelemetry.sdk.trace import TracerProvider
-from opentelemetry.sdk.trace.export import BatchSpanProcessor
+# Load environment variables explicitly
+from dotenv import load_dotenv
+load_dotenv(override=True)
 
-otel_endpoint = os.getenv("OTEL_EXPORTER_OTLP_ENDPOINT")
-
-if otel_endpoint:
-    enable_otel = True
-else:
-    # Local development default
-    otel_endpoint = "https://myotel.azurewebsites.net/v1/traces"
-    enable_otel = True
-
-if enable_otel:
-    try:
-        # Monkeypatch the internals of the OpenAI instrumentation to fix "Invalid type Omit" error
-        # This is necessary because the official instrumentation library doesn't handle 'Omit' types correctly
-        # and blindly tries to set them as attributes, causing console errors.
-        import opentelemetry.instrumentation.openai.shared
-        original_set_span_attribute = opentelemetry.instrumentation.openai.shared._set_span_attribute
-    
-        def patched_set_span_attribute(span, name, value):
-            # Check for Omit/NotGiven types by name to avoid importing internal types
-            if value is not None and type(value).__name__ in ["Omit", "NotGiven"]:
-                return
-            original_set_span_attribute(span, name, value)
-            
-        opentelemetry.instrumentation.openai.shared._set_span_attribute = patched_set_span_attribute
-
-        # Set up telemetry span exporter.
-        # otel_exporter = OTLPSpanExporter(endpoint=otel_endpoint, insecure=True)
-        otel_exporter = OTLPSpanExporter(endpoint=otel_endpoint)
-        span_processor = BatchSpanProcessor(otel_exporter)
-
-        # Set up telemetry trace provider.
-        tracer_provider = TracerProvider(resource=Resource({"service.name": "chatbot"}))
-        tracer_provider.add_span_processor(span_processor)
-        trace_api.set_tracer_provider(tracer_provider)
-
-        # Instrument the OpenAI Python library
-        OpenAIInstrumentor().instrument()
-        print(f"OpenTelemetry enabled with endpoint: {otel_endpoint}")
-    except Exception as e:
-        print(f"Failed to initialize OpenTelemetry: {e}")
-else:
-    print("OpenTelemetry disabled (Running in HF Space with no configured endpoint).")
-
-# Get a tracer (works even if OTEL is disabled, returning a NoOp tracer)
-tracer = trace_api.get_tracer("chatbot")
-
+# Configure debug logging for Langfuse only if enabled
+if os.environ.get("LANGFUSE_PUBLIC_KEY"):
+    logging.basicConfig()
+    logging.getLogger("langfuse").setLevel(logging.INFO)
 
 def load_prompts(folder="prompts"):
     prompts = []
@@ -83,7 +48,8 @@ def load_prompts(folder="prompts"):
                 content = f.read().strip()
                 if content:
                     prompts.append(content)
-                    prompt_labels.append(os.path.basename(file_path).replace("_", " ").replace(".txt", "").title())
+
+            prompt_labels.append(os.path.basename(file_path).replace("_", " ").replace(".txt", "").title())
     return prompts, prompt_labels
 
 prompts, prompt_labels = load_prompts()
@@ -256,19 +222,18 @@ st.markdown("""
 # -----------------------------
 # Logic
 # -----------------------------
+@observe()
+@traceable(name="Chatbot Interaction")
 async def get_ai_response(prompt: str) -> str:
     try:
         agent = orchestrator_agent
         # Ensure session is valid
         current_session = st.session_state.ai_session
         current_session = st.session_state.ai_session
-        with trace("Chatbot Agent Run"): # Keep existing custom trace wrapper if it exists, or just use new tracer
-             with tracer.start_as_current_span("get_ai_response") as span:
-                span.set_attribute("input.prompt", prompt)
-                # Run agent
-                result = await Runner.run(agent, prompt, session=current_session)
-                span.set_attribute("output.response", result.final_output)
-                return result.final_output
+        with trace("Chatbot Agent Run"): # Keep existing custom trace wrapper
+            # Run agent
+            result = await Runner.run(agent, prompt, session=current_session)
+            return result.final_output
     except InputGuardrailTripwireTriggered as e:
         reasoning = getattr(e, "reasoning", None) \
             or getattr(getattr(e, "output", None), "reasoning", None) \
@@ -333,6 +298,13 @@ if prompt := (st.chat_input("Type your message...") or selected_prompt):
         with st.spinner("Thinking..."):
             response_text = asyncio.run(get_ai_response(prompt))
             st.markdown(response_text)
+
+            # Ensure traces are sent before the script may stop/rerun
+            if os.environ.get("LANGFUSE_PUBLIC_KEY"):
+                try:
+                    langfuse.Langfuse().flush()
+                except:
+                    pass
             
     st.session_state.messages.append({"role": "assistant", "content": response_text})
     

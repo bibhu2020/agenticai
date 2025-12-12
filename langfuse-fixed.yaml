@@ -1,0 +1,262 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: langfuse-db
+spec:
+  ports:
+  - port: 5432
+    targetPort: 5432
+  selector:
+    app: langfuse-db
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: langfuse-db
+spec:
+  selector:
+    matchLabels:
+      app: langfuse-db
+  template:
+    metadata:
+      labels:
+        app: langfuse-db
+    spec:
+      containers:
+      - name: postgres
+        image: postgres:latest
+        env:
+        - name: POSTGRES_USER
+          value: "langfuse"
+        - name: POSTGRES_PASSWORD
+          value: "langfuse"
+        - name: POSTGRES_DB
+          value: "langfuse"
+        ports:
+        - containerPort: 5432
+        volumeMounts:
+        - name: db-data
+          mountPath: /var/lib/postgresql
+      volumes:
+      - name: db-data
+        hostPath:
+          path: /microk8s/langfuse-db-data
+          type: Directory
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: langfuse-redis
+spec:
+  ports:
+  - port: 6379
+    targetPort: 6379
+  selector:
+    app: langfuse-redis
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: langfuse-redis
+spec:
+  selector:
+    matchLabels:
+      app: langfuse-redis
+  template:
+    metadata:
+      labels:
+        app: langfuse-redis
+    spec:
+      containers:
+      - name: redis
+        image: redis:7-alpine
+        # FIXED: Removed --requirepass to match the running state and avoid auth errors
+        ports:
+        - containerPort: 6379
+        volumeMounts:
+        - name: redis-data
+          mountPath: /data
+      volumes:
+      - name: redis-data
+        hostPath:
+          path: /microk8s/langfuse-redis-data
+          type: Directory
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: langfuse-clickhouse
+spec:
+  ports:
+  - name: http
+    port: 8123
+    targetPort: 8123
+  - name: native
+    port: 9000
+    targetPort: 9000
+  selector:
+    app: langfuse-clickhouse
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: langfuse-clickhouse
+spec:
+  selector:
+    matchLabels:
+      app: langfuse-clickhouse
+  template:
+    metadata:
+      labels:
+        app: langfuse-clickhouse
+    spec:
+      containers:
+      - name: clickhouse
+        image: clickhouse/clickhouse-server:24
+        env:
+        - name: CLICKHOUSE_DB
+          value: "default"
+        - name: CLICKHOUSE_USER
+          value: "default"
+        - name: CLICKHOUSE_PASSWORD
+          value: "langfuse"
+        ports:
+        - containerPort: 8123
+        - containerPort: 9000
+        volumeMounts:
+        - name: clickhouse-data
+          mountPath: /var/lib/clickhouse
+      volumes:
+      - name: clickhouse-data
+        hostPath:
+          path: /microk8s/langfuse-clickhouse-data
+          type: Directory
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: langfuse-minio
+spec:
+  type: NodePort
+  ports:
+  - name: api
+    port: 9000
+    targetPort: 9000
+  - name: console
+    port: 9001
+    targetPort: 9001
+    nodePort: 30001
+  selector:
+    app: langfuse-minio
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: langfuse-minio
+spec:
+  selector:
+    matchLabels:
+      app: langfuse-minio
+  template:
+    metadata:
+      labels:
+        app: langfuse-minio
+    spec:
+      containers:
+      - name: minio
+        image: minio/minio:latest
+        args:
+        - server
+        - /data
+        - --console-address
+        - :9001
+        env:
+        - name: MINIO_ROOT_USER
+          value: "minioadmin"
+        - name: MINIO_ROOT_PASSWORD
+          value: "minioadmin"
+        ports:
+        - containerPort: 9000
+        - containerPort: 9001
+        volumeMounts:
+        - name: minio-data
+          mountPath: /data
+      volumes:
+      - name: minio-data
+        hostPath:
+          path: /microk8s/langfuse-minio-data
+          type: Directory
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: langfuse-web
+spec:
+  type: NodePort
+  ports:
+  - port: 3000
+    targetPort: 3000
+    nodePort: 30000 
+  selector:
+    app: langfuse-web
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: langfuse-web
+spec:
+  selector:
+    matchLabels:
+      app: langfuse-web
+  template:
+    metadata:
+      labels:
+        app: langfuse-web
+    spec:
+      containers:
+      - name: langfuse-web
+        image: langfuse/langfuse:3.39.0
+        ports:
+        - containerPort: 3000
+        env:
+        - name: DATABASE_URL
+          value: "postgresql://langfuse:langfuse@langfuse-db:5432/langfuse"
+        - name: DIRECT_URL
+          value: "postgresql://langfuse:langfuse@langfuse-db:5432/langfuse"
+        - name: REDIS_HOST
+          value: "langfuse-redis"
+        - name: REDIS_PORT
+          value: "6379"
+        # FIXED: Removed REDIS_AUTH to match Redis configuration
+        - name: CLICKHOUSE_URL
+          value: "http://langfuse-clickhouse:8123"
+        - name: CLICKHOUSE_MIGRATION_URL
+          value: "clickhouse://langfuse-clickhouse:9000"
+        - name: CLICKHOUSE_USER
+          value: "default"
+        - name: CLICKHOUSE_PASSWORD
+          value: "langfuse"
+        - name: CLICKHOUSE_CLUSTER_ENABLED
+          value: "false"
+        - name: NEXTAUTH_SECRET
+          value: "b4d7c5a9e3f2d1c8b7a6e5d4c3b2a1f0e9d8c7b6a5f4e3d2c1b0a9f8e7d6c5b4"
+        - name: SALT
+          value: "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2"
+        - name: ENCRYPTION_KEY
+          value: "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2"
+        - name: NEXTAUTH_URL
+          value: "http://172.19.202.201:30000"
+        - name: LANGFUSE_S3_EVENT_UPLOAD_BUCKET
+          value: "langfuse"
+        - name: LANGFUSE_S3_EVENT_UPLOAD_ENDPOINT
+          value: "http://langfuse-minio:9000"
+        - name: LANGFUSE_S3_EVENT_UPLOAD_REGION
+          value: "us-east-1"
+        - name: LANGFUSE_S3_EVENT_UPLOAD_ACCESS_KEY_ID
+          value: "minioadmin"
+        - name: LANGFUSE_S3_EVENT_UPLOAD_SECRET_ACCESS_KEY
+          value: "minioadmin"
+        - name: LANGFUSE_S3_EVENT_UPLOAD_FORCE_PATH_STYLE
+          value: "true"
+        - name: LANGFUSE_LOG_LEVEL
+          value: "debug"

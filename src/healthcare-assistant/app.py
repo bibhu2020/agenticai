@@ -13,61 +13,9 @@ from chat import ChatManager
 from aagents.healthcare_agent import healthcare_agent
 
 # ------------------------------------------------------------------------------
-# OpenTelemetry Setup
+# OpenTelemetry Setup (Removed)
 # ------------------------------------------------------------------------------
-from opentelemetry import trace as trace_api
-# from opentelemetry.exporter.otlp.proto.grpc.trace_exporter import OTLPSpanExporter
-from opentelemetry.exporter.otlp.proto.http.trace_exporter import OTLPSpanExporter
-from opentelemetry.instrumentation.openai import OpenAIInstrumentor
-from opentelemetry.sdk.resources import Resource
-from opentelemetry.sdk.trace import TracerProvider
-from opentelemetry.sdk.trace.export import BatchSpanProcessor
 
-otel_endpoint = os.getenv("OTEL_EXPORTER_OTLP_ENDPOINT")
-
-if otel_endpoint:
-    enable_otel = True
-else:
-    # Local development default
-    otel_endpoint = "https://myotel.azurewebsites.net/v1/traces"
-    enable_otel = True
-
-if enable_otel:
-    try:
-        # Monkeypatch the internals of the OpenAI instrumentation to fix "Invalid type Omit" error
-        # This is necessary because the official instrumentation library doesn't handle 'Omit' types correctly
-        # and blindly tries to set them as attributes, causing console errors.
-        import opentelemetry.instrumentation.openai.shared
-        original_set_span_attribute = opentelemetry.instrumentation.openai.shared._set_span_attribute
-    
-        def patched_set_span_attribute(span, name, value):
-            # Check for Omit/NotGiven types by name to avoid importing internal types
-            if value is not None and type(value).__name__ in ["Omit", "NotGiven"]:
-                return
-            original_set_span_attribute(span, name, value)
-            
-        opentelemetry.instrumentation.openai.shared._set_span_attribute = patched_set_span_attribute
-
-        # Set up telemetry span exporter.
-        # otel_exporter = OTLPSpanExporter(endpoint=otel_endpoint, insecure=True)
-        otel_exporter = OTLPSpanExporter(endpoint=otel_endpoint)
-        span_processor = BatchSpanProcessor(otel_exporter)
-
-        # Set up telemetry trace provider.
-        tracer_provider = TracerProvider(resource=Resource({"service.name": "healthcare-assistant"}))
-        tracer_provider.add_span_processor(span_processor)
-        trace_api.set_tracer_provider(tracer_provider)
-
-        # Instrument the OpenAI Python library
-        OpenAIInstrumentor().instrument()
-        print(f"OpenTelemetry enabled with endpoint: {otel_endpoint}")
-    except Exception as e:
-        print(f"Failed to initialize OpenTelemetry: {e}")
-else:
-    print("OpenTelemetry disabled (Running in HF Space with no configured endpoint).")
-
-# Get a tracer (works even if OTEL is disabled, returning a NoOp tracer)
-tracer = trace_api.get_tracer("healthcare-assistant")
 
 
 
@@ -360,10 +308,8 @@ if send_button and user_input:
     # Show loading spinner while getting response
     with st.spinner("🤔 Thinking..."):
         # Get response from chat manager
-        with tracer.start_as_current_span("get_response") as span:
-            span.set_attribute("input.message", user_input)
-            response = st.session_state.chat_manager.get_response(user_input)
-            span.set_attribute("output.response", response["content"])
+        # Get response from chat manager
+        response = st.session_state.chat_manager.get_response(user_input)
         
         # Add assistant response to display
         st.session_state.messages.append({
