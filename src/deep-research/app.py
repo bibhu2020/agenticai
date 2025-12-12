@@ -3,8 +3,13 @@ import asyncio
 import time
 import html
 from io import BytesIO
-import os
 import sys
+import os
+
+# LangSmith Configuration (Overwrites)
+os.environ["LANGCHAIN_TRACING_V2"] = "true"
+os.environ["LANGCHAIN_PROJECT"] = "deep-research"
+
 from pathlib import Path
 
 # Add project root

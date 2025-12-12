@@ -2,6 +2,11 @@
 import streamlit as st
 import sys
 import os  # Added for OTEL setup
+
+# LangSmith Configuration (Overwrites)
+os.environ["LANGCHAIN_TRACING_V2"] = "true"
+os.environ["LANGCHAIN_PROJECT"] = "healthcare-assistant"
+
 import html
 from pathlib import Path
 

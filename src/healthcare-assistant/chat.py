@@ -4,6 +4,8 @@ from typing import List, Dict, Any, Optional
 from datetime import datetime
 from agents import Runner
 from mcp.tools.rag_tool import UserContext
+from langsmith import traceable
+
 
 class ChatManager:
     """Manages conversation history and agent interactions."""
@@ -47,6 +49,7 @@ class ChatManager:
         self.conversation_history = []
         self.session_id = datetime.now().strftime("%Y%m%d_%H%M%S")
     
+    @traceable(name="Healthcare Chat Response")
     async def get_response_async(self, user_message: str) -> Dict[str, Any]:
         """
         Get a response from the agent asynchronously.

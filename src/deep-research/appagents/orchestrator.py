@@ -6,6 +6,8 @@ from appagents.email_agent import email_agent
 from agents.exceptions import InputGuardrailTripwireTriggered
 from core.logger import log_call
 import asyncio
+from langsmith import traceable
+
 
 class Orchestrator:
 
@@ -13,6 +15,7 @@ class Orchestrator:
         self.session = session or SQLiteSession()
 
     @log_call
+    @traceable(name="Deep Research Run")
     async def run(self, query: str):
         """ Run the deep research process, yielding the status updates and the final report"""
         trace_id = gen_trace_id()

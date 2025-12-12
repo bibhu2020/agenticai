@@ -121,7 +121,11 @@ dependencies = [
     # =======================
     # OBSERVABILITY
     # =======================
-
+    "openinference-instrumentation-autogen>=0.1.0",
+    "openinference-instrumentation-openai>=0.1.0",
+    "opentelemetry-sdk>=1.20.0",
+    "opentelemetry-exporter-otlp>=1.20.0",
+    "opentelemetry-api>=1.20.0",
 ]
 
 [dependency-groups]

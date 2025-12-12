@@ -1,6 +1,8 @@
 import os
 from agents import Agent, OpenAIChatCompletionsModel, WebSearchTool
 from openai import AsyncOpenAI
+from langsmith import wrappers
+
 
 from agents.model_settings import ModelSettings
 from tools.google_tools import GoogleTools
@@ -27,6 +29,7 @@ essence and ignore any fluff. Do not include any additional commentary other tha
 GEMINI_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/openai/"
 google_api_key = os.getenv('GOOGLE_API_KEY')
 gemini_client = AsyncOpenAI(base_url=GEMINI_BASE_URL, api_key=google_api_key)
+gemini_client = wrappers.wrap_openai(gemini_client)
 gemini_model = OpenAIChatCompletionsModel(model="gemini-2.0-flash", openai_client=gemini_client)
 
 # search_agent = Agent(

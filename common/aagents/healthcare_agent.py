@@ -3,6 +3,8 @@ import os
 from agents import Agent, OpenAIChatCompletionsModel
 from dotenv import load_dotenv
 from openai import AsyncOpenAI
+from langsmith import wrappers
+
 
 # Import tools
 from common.mcp.tools.rag_tool import rag_search, UserContext
@@ -21,6 +23,7 @@ load_dotenv()
 GEMINI_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/openai/"
 google_api_key = os.getenv('GOOGLE_API_KEY')
 gemini_client = AsyncOpenAI(base_url=GEMINI_BASE_URL, api_key=google_api_key)
+gemini_client = wrappers.wrap_openai(gemini_client)
 gemini_model = OpenAIChatCompletionsModel(model="gemini-2.0-flash-exp", openai_client=gemini_client)
 
 GROQ_BASE_URL = "https://api.groq.com/openai/v1"
