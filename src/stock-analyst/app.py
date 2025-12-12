@@ -21,7 +21,7 @@ otel_endpoint = os.getenv("OTEL_EXPORTER_OTLP_ENDPOINT")
 if otel_endpoint:
     enable_otel = True
 else:
-    otel_endpoint = "https://mishrabp-otel.hf.space/v1/traces"
+    otel_endpoint = "https://myotel.azurewebsites.net/v1/traces"
     enable_otel = True
 
 if enable_otel:

@@ -33,7 +33,7 @@ if otel_endpoint:
     enable_otel = True
 else:
     # Local development default
-    otel_endpoint = "https://mishrabp-otel.hf.space/v1/traces"
+    otel_endpoint = "https://myotel.azurewebsites.net/v1/traces"
     enable_otel = True
 
 if enable_otel:
@@ -48,8 +48,19 @@ if enable_otel:
         tracer_provider.add_span_processor(span_processor)
         trace_api.set_tracer_provider(tracer_provider)
 
+        # Custom hook to filter out Omit/NotGiven types from attributes
+        def request_hook(span, kwargs):
+            if span and span.is_recording():
+                for key, value in kwargs.items():
+                    # Check for "Omit" or "NotGiven" types which OTEL can't serialize
+                    type_name = type(value).__name__
+                    if type_name in ["Omit", "NotGiven"]:
+                        # Setup correct attribute name expected by semantic conventions or just use key
+                        # The instrumentation might use gen_ai.request.{key}
+                        span.set_attribute(f"gen_ai.request.{key}", str(value))
+
         # Instrument the OpenAI Python library
-        OpenAIInstrumentor().instrument()
+        OpenAIInstrumentor().instrument(request_hook=request_hook)
         print(f"OpenTelemetry enabled with endpoint: {otel_endpoint}")
     except Exception as e:
         print(f"Failed to initialize OpenTelemetry: {e}")
