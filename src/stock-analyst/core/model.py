@@ -4,7 +4,7 @@ def get_model_client(provider:str = "google"):
     if provider.lower() == "google":
         return AutoGenModelFactory.get_model(
             provider="google",
-            model_name="gemini-3.0-flash",
+            model_name="gemini-3-pro-preview",
             temperature=0,
         model_info={
             "family": "gemini",
