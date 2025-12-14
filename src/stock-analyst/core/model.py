@@ -1,6 +1,6 @@
 from common.utility.autogen_model_factory import AutoGenModelFactory
 
-def get_model_client(provider:str = "openai"):
+def get_model_client(provider:str = "google"):
     if provider.lower() == "google":
         return AutoGenModelFactory.get_model(
             provider="google",
@@ -14,7 +14,7 @@ def get_model_client(provider:str = "openai"):
             "structured_output": True,
         },
     )
-    elif provider.lower() == "openai":
+    elif provider.lower() == "google":
         return AutoGenModelFactory.get_model(
             provider="openai",
             model_name="gpt-4o-mini",
