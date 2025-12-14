@@ -1,6 +1,6 @@
 import os
 from typing import List
-from dotenv import load_dotenv
+
 from langchain.tools import tool
 from logger.decorators import log_entry
 from utils.place_info_search import GooglePlaceSearchTool, TavilyPlaceSearchTool
@@ -17,7 +17,7 @@ class PlaceSearchTool:
         """
         Initialize the PlaceSearchTool with required API keys and setup tool functions.
         """
-        load_dotenv()
+        
         self.google_api_key = os.environ.get("GPLACES_API_KEY")
         self.google_places_search = GooglePlaceSearchTool(self.google_api_key)
         self.tavily_search = TavilyPlaceSearchTool()

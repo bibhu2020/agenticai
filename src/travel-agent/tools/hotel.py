@@ -3,6 +3,8 @@ from contexts import UserContext
 from typing import List, Optional
 import json
 
+
+
 @function_tool
 async def search_hotels(wrapper: RunContextWrapper[UserContext], city: str, check_in: str, check_out: str, max_price: Optional[float] = None) -> str:
     """Search for hotels in a city for specific dates within a price range, taking user preferences into account."""

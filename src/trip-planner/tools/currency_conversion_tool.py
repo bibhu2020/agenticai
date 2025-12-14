@@ -1,6 +1,6 @@
 import os
 from typing import List
-from dotenv import load_dotenv
+
 from langchain.tools import tool
 from logger.decorators import log_entry
 from utils.currency_converter import CurrencyConverter
@@ -20,7 +20,7 @@ class CurrencyConverterTool:
         """
         Initialize the CurrencyConverterTool with API credentials and tool setup.
         """
-        load_dotenv()
+        
         self.api_key = os.environ.get("EXCHANGE_RATE_API_KEY")
         self.currency_service = CurrencyConverter(self.api_key)
         self.currency_converter_tool_list = self._setup_tools()

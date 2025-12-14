@@ -1,11 +1,7 @@
 import os
 import requests
-from dotenv import load_dotenv
 from agents import function_tool
-from core.logger import log_call
-
-# Load environment variables once
-load_dotenv()
+from common.utility.logger import log_call
 
 
 # ============================================================

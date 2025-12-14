@@ -2,6 +2,8 @@ from agents import function_tool, RunContextWrapper
 from contexts import UserContext
 import json
 
+
+
 @function_tool
 async def search_flights(wrapper: RunContextWrapper[UserContext], origin: str, destination: str, date: str) -> str:
     """Search for flights between two cities on a specific date, taking user preferences into account."""

@@ -17,7 +17,7 @@ class Retriever:
         self.embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
         self.text_splitter = RecursiveCharacterTextSplitter(
             chunk_size=1024,
-            chunk_overlap=200,
+            chunk_overlap=300,
             length_function=len,
             # separators=["\n\n", "\n", ".", "!", "?", ",", " ", ""],
             is_separator_regex=False,

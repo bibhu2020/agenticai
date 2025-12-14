@@ -1,6 +1,8 @@
 from datetime import datetime
 from agents import function_tool
-from core.logger import log_call
+from common.utility.logger import log_call
+
+
 
 class TimeTools:
     """Provides tools related to current date and time."""

@@ -1,12 +1,12 @@
 import os
-from dotenv import load_dotenv
+
 from utils.config_loader import load_config
 from langchain_groq import ChatGroq
 from langchain_openai import ChatOpenAI, AzureChatOpenAI
 from azure.identity import AzureCliCredential, ManagedIdentityCredential
 
 # Load .env file
-load_dotenv()
+
 
 class ConfigLoader:
     def __init__(self):

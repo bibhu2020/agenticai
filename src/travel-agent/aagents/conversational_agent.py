@@ -8,5 +8,5 @@ conversational_agent = Agent[UserContext](
     You are a trip planning expert who answers basic user questions about their trip and offers any suggestions.
     Act as a helpful assistant and be helpful in any way you can be.
     """,
-    model="gpt-4o-mini",
+    model="gpt-4-turbo",
 )

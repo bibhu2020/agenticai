@@ -1,12 +1,14 @@
 import os
 import requests
 import yfinance as yf
-from dotenv import load_dotenv
+
 from agents import function_tool
 from datetime import datetime, timedelta
 
+
+
 # Load environment variables
-load_dotenv()
+
 
 
 # ============================================================

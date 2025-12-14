@@ -24,7 +24,7 @@ travel_agent = Agent[UserContext](
     
     Do not output single recommendations. Use the lists.
     """,
-    model="gpt-4o-mini",
+    model="gpt-4-turbo",
     tools=[get_weather_forecast, search_flights, search_hotels],
     handoffs=[conversational_agent],
     input_guardrails=[

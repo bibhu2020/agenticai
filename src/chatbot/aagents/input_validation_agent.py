@@ -4,18 +4,11 @@ import json
 from agents import Agent, OpenAIChatCompletionsModel, Runner, GuardrailFunctionOutput
 from pydantic import BaseModel
 from openai import AsyncOpenAI
-from dotenv import load_dotenv
-
-load_dotenv()
+from core.model import get_model_client
 
 class ValidatedOutput(BaseModel):
     is_valid: bool
     reasoning: str
-
-GEMINI_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/openai/"
-google_api_key = os.getenv('GOOGLE_API_KEY')
-gemini_client = AsyncOpenAI(base_url=GEMINI_BASE_URL, api_key=google_api_key)
-gemini_model = OpenAIChatCompletionsModel(model="gemini-2.0-flash", openai_client=gemini_client)
 
 input_validation_agent = Agent(
     name="Guardrail Input Validation Agent",
@@ -38,7 +31,7 @@ input_validation_agent = Agent(
             "reasoning": <string>
         }
     """,
-    model=gemini_model,
+    model=get_model_client(),
     output_type=ValidatedOutput,
 )
 input_validation_agent.description = "A guardrail agent that validates user input for unparliamentary language."

@@ -1,29 +1,13 @@
 """Yahoo Finance agent module for financial analysis and market research."""
-import os
-from agents import Agent, OpenAIChatCompletionsModel
-from dotenv import load_dotenv
+from agents import Agent
 from common.mcp.tools.yf_tools import get_summary, get_market_sentiment, get_history, get_analyst_recommendations, get_earnings_calendar
 from common.mcp.tools.time_tools import current_datetime
-from openai import AsyncOpenAI
+from .core.model import get_model_client
 
-# ---------------------------------------------------------
-# Load environment variables
-# ---------------------------------------------------------
-load_dotenv()
 
-GEMINI_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/openai/"
-google_api_key = os.getenv('GOOGLE_API_KEY')
-gemini_client = AsyncOpenAI(base_url=GEMINI_BASE_URL, api_key=google_api_key)
-gemini_model = OpenAIChatCompletionsModel(model="gemini-2.0-flash-exp", openai_client=gemini_client) 
-
-GROQ_BASE_URL = "https://api.groq.com/openai/v1"
-groq_api_key = os.getenv('GROQ_API_KEY')
-groq_client = AsyncOpenAI(base_url=GROQ_BASE_URL, api_key=groq_api_key)
-groq_model = OpenAIChatCompletionsModel(model="groq/compound", openai_client=groq_client)
-
-yf_agent = Agent(
+yf_agent = Agent( 
     name="YahooFinanceAgent",
-    model=gemini_model,
+    model=get_model_client(),
     tools=[current_datetime, get_summary, get_market_sentiment, get_history, get_analyst_recommendations, get_earnings_calendar],
     instructions="""
         You are a specialized **Financial Analysis Agent** 💰, expert in market research, financial data retrieval, and market analysis. 

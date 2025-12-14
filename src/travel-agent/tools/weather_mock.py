@@ -4,6 +4,8 @@ from serpapi import GoogleSearch
 import os
 import json
 
+
+
 SERPAPI_KEY = os.getenv("SERPAPI_KEY")  # Make sure you export your key
 
 @function_tool

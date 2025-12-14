@@ -5,28 +5,12 @@ import html
 from io import BytesIO
 import sys
 import os
-
-# LangSmith Configuration (Overwrites)
-os.environ["LANGCHAIN_TRACING_V2"] = "true"
-os.environ["LANGCHAIN_PROJECT"] = "deep-research"
-
 from pathlib import Path
-
-# Add project root
-# sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), ".")))
-
-from dotenv import load_dotenv
 from reportlab.platypus import SimpleDocTemplate, Paragraph
 from reportlab.lib.styles import getSampleStyleSheet
 from appagents.orchestrator import Orchestrator
 from agents import SQLiteSession
 
-# ------------------------------------------------------------------------------
-# OpenTelemetry Setup (Removed)
-# ------------------------------------------------------------------------------
-
-
-load_dotenv(override=True)
 
 # --------------------
 # Page config
@@ -82,7 +66,7 @@ st.markdown("""
         }
         
         .hero-container {
-            margin-top: 0;
+            margin-top: -3rem;
             margin-left: -5rem;
             margin-right: -5rem;
             padding: 2.5rem 1rem 2rem 1rem; /* Compact desktop padding */
@@ -98,7 +82,7 @@ st.markdown("""
         }
         
         .hero-container {
-            margin-top: 0;
+            margin-top: -2rem;
             margin-left: -1rem;
             margin-right: -1rem;
             padding: 2rem 1rem 1.5rem 1rem; /* Compact mobile padding */
@@ -172,8 +156,8 @@ st.markdown("""
         color: #333;
     }
     
-    /* Buttons */
-    .stButton button {
+    /* Buttons (including Download Button) */
+    .stButton button, .stDownloadButton button {
         border-radius: 20px; /* Matching healthcare */
         min-height: 48px;
         font-weight: 500;
@@ -245,7 +229,7 @@ def make_pdf_bytes(text: str) -> bytes:
 # --------------------
 # Logic
 # --------------------
-async def run_research(query: str):
+async def run_research(query: str, report_format: str = "Academic", research_depth: str = "Standard"):
     session_id = st.session_state.session_id
     session = SQLiteSession(f"session_{session_id}.db")
     orchestrator = Orchestrator(session=session)
@@ -254,7 +238,7 @@ async def run_research(query: str):
     status_container = st.status("🔍 Researching...", expanded=True)
     
     try:
-        async for chunk in orchestrator.run(query):
+        async for chunk in orchestrator.run(query, report_format=report_format, research_depth=research_depth):
             # Filtering heuristic: Orchestrator yields status messages then the final report.
             # Status messages are short and specific.
             if (chunk.startswith("View trace") or 
@@ -286,7 +270,7 @@ async def run_research(query: str):
 st.markdown("""
 <div class="hero-container">
     <div class="hero-title">🧠 Deep Research</div>
-    <div class="hero-subtitle">OpenAI Agentic Research Assistant</div>
+    <div class="hero-subtitle">OpenAI SDK Powered Agentic Research Assistant</div>
 </div>
 """, unsafe_allow_html=True)
 
@@ -294,7 +278,7 @@ st.markdown("""
 with st.sidebar:
     st.header("⚙️ Configuration")
     research_depth = st.select_slider("Research Depth", options=["Quick", "Standard", "Deep"], value="Standard")
-    report_format = st.selectbox("Report Format", ["Academic", "Business", "Creative"])
+    report_format = st.selectbox("Report Format", ["Academic", "Business", "Humorous"], index=2)
     st.caption("Settings affect the tone and depth of the final report.")
     
     st.divider()
@@ -314,7 +298,7 @@ if not st.session_state.final_report and not st.session_state.is_researching:
     
     col_c1, col_c2, col_c3 = st.columns([1, 2, 1])
     with col_c2:
-        query = st.text_area("Research Topic", height=60, placeholder="e.g. The future of quantum computing in drug discovery...", label_visibility="collapsed", value="The future of quantum computing in drug discovery")
+        query = st.text_area("Research Topic", height=60, placeholder="e.g. The future of quantum computing in drug discovery...", label_visibility="collapsed", value="Impact of Quantum Computing on Drug Research.")
         
         col_b1, col_b2, col_b3 = st.columns([1, 1, 1])
         with col_b2:
@@ -333,14 +317,14 @@ elif st.session_state.is_researching:
     """, unsafe_allow_html=True)
     
     # Trigger async run
-    asyncio.run(run_research(st.session_state.current_query))
+    asyncio.run(run_research(st.session_state.current_query, report_format=report_format, research_depth=research_depth))
 
 else:
     # Result View - Title removed to let Sticky Header be the main branding, 
     # and Report itself be the focus.
     
     # Action Toolbar
-    col_a1, col_a2, col_a3, col_a4 = st.columns([2, 1, 1, 2])
+    col_a1, col_a2, col_a3, col_a4 = st.columns([1, 2, 2, 1])
     with col_a2:
         pdf_bytes = make_pdf_bytes(st.session_state.final_report)
         st.download_button("📄 Download PDF", pdf_bytes, "report.pdf", mime="application/pdf", use_container_width=True)

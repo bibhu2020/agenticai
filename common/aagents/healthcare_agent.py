@@ -1,42 +1,17 @@
 """Healthcare RAG Agent - Combines RAG retrieval with web search for comprehensive medical information."""
-import os
-from agents import Agent, OpenAIChatCompletionsModel
-from dotenv import load_dotenv
-from openai import AsyncOpenAI
-from langsmith import wrappers
-
-
-# Import tools
+from agents import Agent
 from common.mcp.tools.rag_tool import rag_search, UserContext
 from common.mcp.tools.search_tools import duckduckgo_search, fetch_page_content
 from common.mcp.tools.time_tools import current_datetime
-
-
-# ---------------------------------------------------------
-# Load environment variables
-# ---------------------------------------------------------
-load_dotenv()
-
-# ---------------------------------------------------------
-# Model Configuration
-# ---------------------------------------------------------
-GEMINI_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/openai/"
-google_api_key = os.getenv('GOOGLE_API_KEY')
-gemini_client = AsyncOpenAI(base_url=GEMINI_BASE_URL, api_key=google_api_key)
-gemini_client = wrappers.wrap_openai(gemini_client)
-gemini_model = OpenAIChatCompletionsModel(model="gemini-2.0-flash-exp", openai_client=gemini_client)
-
-GROQ_BASE_URL = "https://api.groq.com/openai/v1"
-groq_api_key = os.getenv('GROQ_API_KEY')
-groq_client = AsyncOpenAI(base_url=GROQ_BASE_URL, api_key=groq_api_key)
-groq_model = OpenAIChatCompletionsModel(model="groq/compound", openai_client=groq_client)
+from .core.model import get_model_client
+      
 
 # ---------------------------------------------------------
 # Healthcare RAG Agent
 # ---------------------------------------------------------
 healthcare_agent = Agent[UserContext](
     name="HealthcareRAGAgent",
-    model=gemini_model,
+    model=get_model_client(),
     tools=[rag_search, duckduckgo_search, fetch_page_content],
     instructions="""
         You are a healthcare information retrieval agent. You retrieve information from tools and synthesize it into well-formatted markdown responses.

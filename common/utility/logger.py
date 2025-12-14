@@ -14,7 +14,7 @@ def log_call(func):
         print(f"[{timestamp}] 🚀 Calling: {func.__name__}({arg_list})")
         try:
             result = func(*args, **kwargs)
-            print(f"[{timestamp}] ✅ Finished: {func.__name__}")
+            # print(f"[{timestamp}] ✅ Finished: {func.__name__}")
             return result
         except Exception as e:
             print(f"[{timestamp}] ❌ Error in {func.__name__}: {e}")

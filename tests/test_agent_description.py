@@ -9,7 +9,7 @@ try:
     from agents import Agent
     print(f"Agent class: {Agent}")
     try:
-        a = Agent(name="test", model="gpt-4o", instructions="test", description="test description")
+        a = Agent(name="test", model="gpt-4-turbo", instructions="test", description="test description")
         print("Success: Agent accepts description in __init__")
     except TypeError as e:
         print(f"Failed: {e}")

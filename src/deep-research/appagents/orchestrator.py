@@ -4,7 +4,7 @@ from appagents.planner_agent import planner_agent, WebSearchItem, WebSearchPlan
 from appagents.writer_agent import writer_agent, ReportData
 from appagents.email_agent import email_agent
 from agents.exceptions import InputGuardrailTripwireTriggered
-from core.logger import log_call
+from common.utility.logger import log_call
 import asyncio
 from langsmith import traceable
 
@@ -16,14 +16,19 @@ class Orchestrator:
 
     @log_call
     @traceable(name="Deep Research Run")
-    async def run(self, query: str):
+    async def run(self, query: str, report_format: str = "Academic", research_depth: str = "Standard"):
         """ Run the deep research process, yielding the status updates and the final report"""
         trace_id = gen_trace_id()
         with trace("Deep Research Orchestrator", trace_id=trace_id):
             print(f"View trace: https://platform.openai.com/traces/trace?trace_id={trace_id}")
             yield f"View trace: https://platform.openai.com/traces/trace?trace_id={trace_id}"
             print("Starting research...")
-            search_plan = await self.plan_searches(query)
+
+            # Map depth to number of searches
+            depth_map = {"Quick": 5, "Standard": 10, "Deep": 15}
+            num_searches = depth_map.get(research_depth, 10)
+
+            search_plan = await self.plan_searches(query, num_searches)
 
             if not search_plan or not getattr(search_plan, "searches", []):
                 note = getattr(search_plan, "note", "")
@@ -34,24 +39,24 @@ class Orchestrator:
                     yield note or "No search results found, ending research."
                     return
             
-            yield "Searches planned, starting to search..."     
+            yield f"Planned {len(search_plan.searches)} searches (Depth: {research_depth}), starting to search..."     
             search_results = await self.perform_searches(search_plan)
             yield "Searches complete, writing report..."
-            report = await self.write_report(query, search_results)
+            report = await self.write_report(query, search_results, report_format, research_depth)
             yield "Report written, sending email..."
             # await self.send_email(report)
             # yield "Email sent, research complete"
             yield report.markdown_report
         
     @log_call
-    async def plan_searches(self, query: str) -> WebSearchPlan:
+    async def plan_searches(self, query: str, num_searches: int = 10) -> WebSearchPlan:
         """Plan the searches to perform for the query."""
-        print("Planning searches...")
+        print(f"Planning {num_searches} searches...")
 
         try:
             result = await Runner.run(
                 planner_agent,              # use self. unless global
-                f"Query: {query}",
+                f"Query: {query}\nGenerate exactly {num_searches} search terms.",
                 session=self.session,
             )
 
@@ -99,10 +104,15 @@ class Orchestrator:
             return None
 
     @log_call
-    async def write_report(self, query: str, search_results: list[str]) -> ReportData:
+    async def write_report(self, query: str, search_results: list[str], report_format: str, research_depth: str) -> ReportData:
         """ Write the report for the query """
         print("Thinking about report...")
-        input = f"Original query: {query}\nSummarized search results: {search_results}"
+        input = (
+            f"Original query: {query}\n"
+            f"Report Format: {report_format}\n"
+            f"Research Depth: {research_depth}\n"
+            f"Summarized search results: {search_results}"
+        )
         result = await Runner.run(
             writer_agent,
             input,

@@ -1,5 +1,28 @@
-Tell me the top 3 world headlines. Present me the headlines in the following way:
-- Show the title in Bold
-- Summerize the headline in 3 lines.
-- show me the headline publish date and time.
-- give me a link to the exct source url.
+##### Task
+Tell me the **top 3 USA headlines**. Use **emojis** and, where supported, **HTML color tags** to make the output engaging.
+
+###### For each headline, provide:
+- **Title in bold** and optionally in color, e.g., `<span style="color:blue">Title</span>`  
+- A **3-line summary** with an emoji indicating the type of news:
+  - 📰 Politics
+  - 💼 Business
+  - 🌎 World
+  - ⚡ Breaking news
+- **Publish date and time** (UTC)
+- A **link to the exact source URL**
+
+###### Requirements
+- Use **credible news sources** (Reuters, AP, BBC, Guardian, etc.)
+- Headlines should be **recent (last 24 hours)**
+- If publish time is unavailable, indicate **“Time not provided”**
+
+###### Fallback
+- If fewer than 3 headlines are found, state:  
+  **“Only X recent headlines found for the USA.”**
+- Do not fabricate headlines, dates, or URLs
+
+###### Output Style
+- Structured list sorted by **most recent first**
+- Use emojis consistently to indicate news type
+- Use `<span style="color:...">` for coloring the title if the renderer supports it
+- Keep the output **concise, factual, and visually engaging**

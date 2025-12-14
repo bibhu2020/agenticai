@@ -15,7 +15,7 @@ hotel_agent = Agent[UserContext](
     
     Format your response as a HotelSearchResults object containing a list of HotelRecommendation items.
     """,
-    model="gpt-4o-mini",
+    model="gpt-4-turbo",
     tools=[search_hotels],
     output_type=HotelSearchResults
 )

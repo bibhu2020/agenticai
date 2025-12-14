@@ -1,9 +1,9 @@
 import pytest
-from dotenv import load_dotenv
+
 from agents import Runner, trace
 from ..common.aagents.news_agent import news_agent
 
-load_dotenv()
+
 
 @pytest.mark.asyncio
 async def test_news_agent_top_headlines():

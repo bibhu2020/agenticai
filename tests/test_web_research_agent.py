@@ -1,10 +1,10 @@
 # tests/test_web_research_agent.py
 import pytest
-from dotenv import load_dotenv
+
 from agents import Runner, trace
 from ..common.aagents.web_research_agent import web_research_agent
 
-load_dotenv()
+
 
 
 @pytest.mark.asyncio

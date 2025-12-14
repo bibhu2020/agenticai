@@ -4,12 +4,12 @@ import asyncio
 import json
 from typing import Any, Dict, List, Optional
 from mcp.server.fastmcp import FastMCP
-from dotenv import load_dotenv
+
 from playwright.async_api import async_playwright, Page
 import textwrap
 import math
 
-load_dotenv()
+
 
 mcp = FastMCP("accessibility_server")
 

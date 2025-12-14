@@ -1,12 +1,12 @@
 import asyncio
 import os
-from dotenv import load_dotenv
+
 from stock_analyst.aagents.agents import get_news_agent
 from autogen_agentchat.messages import TextMessage
 
 # Load env vars (ensure GEMINI_API_KEY is available if needed by the agent's internal logic, 
 # though agents.py loads it globally, we might need to be sure)
-load_dotenv()
+
 
 async def run_debug():
     print("Initializing News Agent...")

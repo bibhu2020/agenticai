@@ -14,10 +14,10 @@ from output_types import TravelPlan
 from output_types import FlightRecommendation
 from output_types import HotelRecommendation
 from agents import Runner
-from dotenv import load_dotenv
+
 
 # Load environment variables
-load_dotenv()
+
 
 # Logger configuration
 logfire.configure(send_to_logfire='if-token-present')

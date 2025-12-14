@@ -1,12 +1,12 @@
 # tests/test_web_agent.py
 import pytest
-from dotenv import load_dotenv
+
 from agents import Runner, trace
 from ..common.aagents.web_agent import web_agent
 import json
 from typing import Any, List
 
-load_dotenv()
+
 
 
 def format_search_results_md(results: Any) -> str:

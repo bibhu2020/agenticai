@@ -6,8 +6,7 @@ from agents import (
     input_guardrail,
     GuardrailFunctionOutput,
 )
-from tools.time_tools import TimeTools
-from openai import AsyncOpenAI
+from core.model import get_model_client
 
 
 # ✅ Step 1: Define structured output schema
@@ -26,7 +25,7 @@ guardrail_agent = Agent(
         "Otherwise, set it to false."
     ),
     output_type=UnparliamentaryCheckOutput,
-    model="gpt-4o-mini",
+    model=get_model_client(),
 )
 
 

@@ -1,13 +1,15 @@
 import os
 import requests
-from dotenv import load_dotenv
+
 from agents import function_tool
 from typing import Optional
+
+
 
 # ---------------------------------------------------------
 # Load environment variables
 # ---------------------------------------------------------
-load_dotenv()
+
 
 # ============================================================
 # 🔹 GOOGLE SEARCH TOOLSET (Serper.dev API)

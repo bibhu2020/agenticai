@@ -2,36 +2,12 @@ import streamlit as st
 import asyncio
 import os
 
-# LangSmith Configuration (Overwrites)
-os.environ["LANGCHAIN_TRACING_V2"] = "true"
-os.environ["LANGCHAIN_PROJECT"] = "stock-analyst"
 
-# AutoGen Tracing Setup
-try:
-    from openinference.instrumentation.autogen import AutogenInstrumentor
-    from openinference.instrumentation.openai import OpenAIInstrumentor
-    from langsmith.integrations.otel import configure as langsmith_configure
-
-    # Configure LangSmith tracing via OTEL
-    langsmith_configure(project_name="stock-analyst")
-
-    # Instrument AutoGen and OpenAI
-    AutogenInstrumentor().instrument()
-    OpenAIInstrumentor().instrument()
-except ImportError:
-    pass # Dependencies might not be installed yet
-except Exception as e:
-    print(f"Tracing setup failed: {e}")
 
 
 from teams.investment_team import get_investment_team
 
 st.set_page_config(page_title="Stock Investment Analyst", layout="wide", page_icon="📈")
-
-# ------------------------------------------------------------------------------
-# OpenTelemetry Setup (Removed)
-# ------------------------------------------------------------------------------
-
 
 # ------------------------------------------------------------------------------
 # Custom CSS for layout improvements
@@ -76,9 +52,8 @@ with st.container():
         st.write("") # Spacer
         st.write("") # Spacer
         analyze_btn = st.button("🔍 Analyze Stock", type="primary", use_container_width=True)
-from langsmith import traceable
 
-@traceable(name="Stock Analysis Run")
+
 async def run_analysis(ticker):
     # Start a span for the analysis task. 
     # This becomes the parent for all subsequent spans (like OpenAI calls).

@@ -1,11 +1,10 @@
 import os
 from typing import Dict
-
 import sendgrid
 from sendgrid.helpers.mail import Email, Mail, Content, To
 from agents import Agent, function_tool
-from core.logger import log_call
-
+from common.utility.logger import log_call
+from core.model import get_model_client
 
 @function_tool
 @log_call
@@ -28,5 +27,5 @@ email_agent = Agent(
     name="Email agent",
     instructions=INSTRUCTIONS,
     tools=[send_email],
-    model="gpt-4o-mini",
+    model=get_model_client(),
 )

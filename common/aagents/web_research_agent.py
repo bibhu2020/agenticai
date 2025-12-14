@@ -1,35 +1,11 @@
 """Web search agent module for internet queries."""
-import os
 from agents import AgentOutputSchema, function_tool, Agent
-from dotenv import load_dotenv
 from pydantic import BaseModel, Field
 from common.mcp.tools.search_tools import duckduckgo_search, searchQuery, searchResult, fetch_page_content
-from agents import Agent, OpenAIChatCompletionsModel
-from openai import AsyncOpenAI
-
-# ---------------------------------------------------------
-# Load environment variables
-# ---------------------------------------------------------
-load_dotenv()
-
-################################
-# Learning: gemini models struggles to construct the output_type when it's a Pydantic model.
-# So we use list[dict] as output_type instead of list[searchResult].
-# Then in the calling code, we can convert dicts back to searchResult models if needed.
-################################
-
-GEMINI_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/openai/"
-google_api_key = os.getenv('GOOGLE_API_KEY')
-gemini_client = AsyncOpenAI(base_url=GEMINI_BASE_URL, api_key=google_api_key)
-gemini_model = OpenAIChatCompletionsModel(model="gemini-2.0-flash-exp", openai_client=gemini_client) 
-
-GROQ_BASE_URL = "https://api.groq.com/openai/v1"
-groq_api_key = os.getenv('GROQ_API_KEY')
-groq_client = AsyncOpenAI(base_url=GROQ_BASE_URL, api_key=groq_api_key)
-groq_model = OpenAIChatCompletionsModel(model="groq/compound", openai_client=groq_client)
+from .core.model import get_model_client
 
 web_research_agent = Agent(
-    model="gpt-4o-mini",
+    model=get_model_client(),
     tools=[duckduckgo_search, fetch_page_content],
     instructions="""
 You are WebResearchAgent — an advanced internet research assistant with two core abilities:

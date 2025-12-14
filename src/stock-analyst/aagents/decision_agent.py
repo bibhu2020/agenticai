@@ -1,10 +1,10 @@
 from autogen_agentchat.agents import AssistantAgent
-from aagents.common import get_model_client
+from core.model import get_model_client
 
 def get_decision_agent():
     # Upgrade to Pro model for better reasoning
     # Using 1.5-pro as requested for better decision making
-    model_client = get_model_client(model="gemini-3-pro-preview", temperature=0.1)
+    model_client = get_model_client()
 
     decision_agent = AssistantAgent(
         name="decision_agent",

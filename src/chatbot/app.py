@@ -2,24 +2,35 @@ import os
 import glob
 import uuid
 import asyncio
-import langfuse
+# import trace_config
 import logging
 import streamlit as st
 from aagents.orchestrator_agent import orchestrator_agent
 from agents import Runner, trace, SQLiteSession
 from agents.exceptions import InputGuardrailTripwireTriggered
-from langsmith import traceable
+# from langsmith import traceable
 
-# Make Langfuse optional to avoid "Client will be disabled" errors
-if os.environ.get("LANGFUSE_PUBLIC_KEY"):
-    from langfuse import observe
-else:
-    # Dummy decorator if keys are missing
-    def observe(*args, **kwargs):
-        def decorator(func):
-            return func
-        return decorator
+from traceloop.sdk import Traceloop
+from opentelemetry.sdk.trace import Span
 
+# --- Monkeypatch to fix "Invalid type Omit" errors ---
+# This filters out 'NotGiven'/'Omit' values from OpenAI that crash the OTel exporter
+_original_set_attribute = Span.set_attribute
+
+def _safe_set_attribute(self, key, value):
+    # Check string representation of type to avoid importing specific internal types
+    type_str = str(type(value))
+    if "Omit" in type_str or "NotGiven" in type_str:
+        return self
+    return _original_set_attribute(self, key, value)
+
+Span.set_attribute = _safe_set_attribute
+# -----------------------------------------------------
+
+Traceloop.init(
+  disable_batch=True,
+  api_key="tl_1c19b8e8fcfd411fb9fcdb02d381faef"
+)
 
 # -----------------------------
 # Configuration & Utils
@@ -29,15 +40,6 @@ st.set_page_config(
     layout="wide",
     page_icon="🤖"
 )
-
-# Load environment variables explicitly
-from dotenv import load_dotenv
-load_dotenv(override=True)
-
-# Configure debug logging for Langfuse only if enabled
-if os.environ.get("LANGFUSE_PUBLIC_KEY"):
-    logging.basicConfig()
-    logging.getLogger("langfuse").setLevel(logging.INFO)
 
 def load_prompts(folder="prompts"):
     prompts = []
@@ -120,7 +122,7 @@ st.markdown("""
         }
         
         .hero-container {
-            margin-top: 0;
+            margin-top: -3rem;
             margin-left: -5rem;
             margin-right: -5rem;
             /* Simple negative margins to pull edge-to-edge */
@@ -137,7 +139,7 @@ st.markdown("""
         }
         
         .hero-container {
-            margin-top: 0;
+            margin-top: -2rem;
             margin-left: -1rem;
             margin-right: -1rem;
             /* Break out of the 1rem padding */
@@ -216,14 +218,19 @@ st.markdown("""
         background-color: #ffffff;
         border-right: 1px solid #eaeaea;
     }
+    
+    /* Minimize Sidebar Top Padding */
+    section[data-testid="stSidebar"] .block-container {
+        padding-top: 0rem !important;
+        padding-bottom: 0rem !important;
+    }
 </style>
 """, unsafe_allow_html=True)
 
 # -----------------------------
 # Logic
 # -----------------------------
-@observe()
-@traceable(name="Chatbot Interaction")
+# @traceable(name="chatbot")
 async def get_ai_response(prompt: str) -> str:
     try:
         agent = orchestrator_agent
@@ -283,7 +290,7 @@ st.markdown("""
 # Display Chat History
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
-        st.markdown(message["content"])
+        st.markdown(message["content"], unsafe_allow_html=True)
 
 # Chat Input Handling
 # We handle both the chat input widget and the sidebar selection here
@@ -297,14 +304,9 @@ if prompt := (st.chat_input("Type your message...") or selected_prompt):
     with st.chat_message("assistant"):
         with st.spinner("Thinking..."):
             response_text = asyncio.run(get_ai_response(prompt))
-            st.markdown(response_text)
+            st.markdown(response_text, unsafe_allow_html=True)
 
-            # Ensure traces are sent before the script may stop/rerun
-            if os.environ.get("LANGFUSE_PUBLIC_KEY"):
-                try:
-                    langfuse.Langfuse().flush()
-                except:
-                    pass
+
             
     st.session_state.messages.append({"role": "assistant", "content": response_text})
     

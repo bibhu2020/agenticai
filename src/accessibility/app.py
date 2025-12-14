@@ -7,14 +7,14 @@ from datetime import datetime
 import streamlit as st
 from agents import Agent, Runner, trace, OpenAIChatCompletionsModel
 from agents.mcp import MCPServerStdio
-from dotenv import load_dotenv
+
 import aiohttp
 from xml.etree import ElementTree as ET
 from openai import AsyncOpenAI
 
 # Allow nested async in Jupyter/Streamlit
 nest_asyncio.apply()
-load_dotenv()  # Load .env with OPENAI_API_KEY
+nest_asyncio.apply()
 
 TEMPLATE_PATH = os.path.abspath("templates/dashboard_template.html")
 

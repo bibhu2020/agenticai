@@ -2,10 +2,10 @@ import gradio as gr
 import requests
 import datetime
 import os
-from dotenv import load_dotenv
+
 
 # Load environment variables
-load_dotenv()
+
 
 # Backend endpoint - use environment variable or default to Hugging Face
 BASE_URL = os.getenv("API_BASE_URL", "https://mishrabp-trip-advisor-api.hf.space")

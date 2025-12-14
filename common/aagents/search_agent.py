@@ -1,24 +1,12 @@
 """Search agent module for comprehensive web searches."""
-import os
-from agents import Agent, OpenAIChatCompletionsModel
-from openai import AsyncOpenAI
-from dotenv import load_dotenv
+from agents import Agent
 from common.mcp.tools.search_tools import duckduckgo_search, fetch_page_content
 from common.mcp.tools.time_tools import current_datetime
-
-# ---------------------------------------------------------
-# Load environment variables
-# ---------------------------------------------------------
-load_dotenv()
-
-GEMINI_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/openai/"
-google_api_key = os.getenv('GOOGLE_API_KEY')
-gemini_client = AsyncOpenAI(base_url=GEMINI_BASE_URL, api_key=google_api_key)
-gemini_model = OpenAIChatCompletionsModel(model="gemini-2.0-flash-exp", openai_client=gemini_client)
+from .core.model import get_model_client
 
 search_agent = Agent(
     name="Web Search Agent",
-    model=gemini_model,
+    model=get_model_client(),    
     tools=[current_datetime, duckduckgo_search, fetch_page_content],
     instructions="""
         You are a highly efficient and specialized **Web Search Agent** 🌐. Your sole function is to retrieve and analyze information from the internet using the **duckduckgo_search** and **fetch_page_content** functions. You must act as a digital librarian and researcher, providing synthesized, cited, and up-to-date answers.

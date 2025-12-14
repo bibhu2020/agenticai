@@ -1,7 +1,7 @@
 from autogen_agentchat.agents import AssistantAgent
 from autogen_core.tools import FunctionTool 
 from tools.yf_tools import _get_analyst_recommendations
-from aagents.common import get_model_client
+from core.model import get_model_client
 
 def get_sentiment_agent():
     model_client = get_model_client()

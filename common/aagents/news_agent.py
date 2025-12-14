@@ -1,29 +1,12 @@
 """News agent module for fetching and analyzing news articles."""
-import os
-from agents import Agent, OpenAIChatCompletionsModel
-from dotenv import load_dotenv
+from agents import Agent
 from common.mcp.tools.news_tools import get_top_headlines, search_news, get_news_by_category
 from common.mcp.tools.time_tools import current_datetime
-from openai import AsyncOpenAI
-
-# ---------------------------------------------------------
-# Load environment variables
-# ---------------------------------------------------------
-load_dotenv()
-
-GEMINI_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/openai/"
-google_api_key = os.getenv('GOOGLE_API_KEY')
-gemini_client = AsyncOpenAI(base_url=GEMINI_BASE_URL, api_key=google_api_key)
-gemini_model = OpenAIChatCompletionsModel(model="gemini-2.0-flash-exp", openai_client=gemini_client) 
-
-GROQ_BASE_URL = "https://api.groq.com/openai/v1"
-groq_api_key = os.getenv('GROQ_API_KEY')
-groq_client = AsyncOpenAI(base_url=GROQ_BASE_URL, api_key=groq_api_key)
-groq_model = OpenAIChatCompletionsModel(model="groq/compound", openai_client=groq_client)
+from .core.model import get_model_client
 
 news_agent = Agent(
     name="NewsAgent",
-    model=gemini_model,
+    model=get_model_client(),
     tools=[current_datetime, get_top_headlines, search_news, get_news_by_category],
     instructions="""
         You are a NewsAgent specialized in fetching and analyzing recent news articles and headlines.

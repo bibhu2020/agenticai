@@ -18,7 +18,13 @@ import subprocess
 import argparse
 from pathlib import Path
 from typing import Dict, Optional
+from agents import Runner, SQLiteSession
+# from agents import set_trace_processors
+# from langsmith.wrappers import OpenAIAgentsTracingProcessor
 
+# Load environment variables explicitly
+from dotenv import load_dotenv
+load_dotenv(override=True)
 
 # App registry - maps app names to their paths and entry points
 APP_REGISTRY: Dict[str, Dict[str, str]] = {
@@ -168,7 +174,6 @@ def launch_app(app_name: str, port: Optional[int] = None):
         print(f"\n❌ Error launching app: {e}")
         sys.exit(1)
 
-
 def main():
     """Main entry point."""
     parser = argparse.ArgumentParser(
@@ -222,4 +227,5 @@ Available Apps:
 
 
 if __name__ == "__main__":
+    # set_trace_processors([OpenAIAgentsTracingProcessor()])
     main()

@@ -1,7 +1,7 @@
 from autogen_agentchat.agents import AssistantAgent
 from autogen_core.tools import FunctionTool 
 from tools.search_tools import _duckduckgo_search, searchQuery
-from aagents.common import get_model_client
+from core.model import get_model_client
 
 def get_news_agent():
     model_client = get_model_client()

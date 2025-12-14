@@ -3,12 +3,12 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from agent.agentic_workflow import GraphBuilder
 from fastapi.responses import JSONResponse
-from dotenv import load_dotenv
+
 from pydantic import BaseModel
 import datetime
 from typing import List
 
-load_dotenv()
+
 
 app = FastAPI()
 

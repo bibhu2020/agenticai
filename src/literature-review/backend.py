@@ -18,7 +18,7 @@ from __future__ import annotations
 import os
 import asyncio
 from typing import AsyncGenerator, Dict, List
-from dotenv import load_dotenv
+
 import arxiv 
 from autogen_core.tools import FunctionTool
 from autogen_agentchat.agents import AssistantAgent
@@ -27,11 +27,6 @@ from autogen_agentchat.messages import (
 )
 from autogen_agentchat.teams import RoundRobinGroupChat
 from autogen_ext.models.openai import OpenAIChatCompletionClient
-
-# ---------------------------------------------------------
-# Load environment variables
-# ---------------------------------------------------------
-load_dotenv()
 
 # ---------------------------------------------------------------------------
 # 1. Tool definition ---------------------------------------------------------

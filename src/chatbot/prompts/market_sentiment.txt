@@ -1,1 +1,34 @@
-What is the current market sentiment based on the news and market index?
+##### Task
+Act as a **Senior Market Analyst** and provide a concise market sentiment update for the **US Stock Market / S&P 500**.
+
+###### Steps
+1. **Data Gathering**: Search for the **top 5 financial news headlines** from the last 24 hours related to the [US Stock Market / S&P 500].
+2. **Market Check**: Retrieve the **current value** and **today’s percentage change** for:
+   - **S&P 500 (SPX)**
+   - **VIX (Volatility Index)**
+3. **Synthesis**: Based on the **tone of the news headlines** and the **index performance**, determine whether the **current market sentiment** is:
+   - **Bullish**
+   - **Bearish**
+   - **Neutral**
+4. **Output**: Provide a:
+   - **Sentiment Score (1–10)**
+   - **Top 3 key drivers** influencing this sentiment
+
+###### Guidelines
+- Prioritize **reliable financial news sources** (e.g., Bloomberg, Reuters, WSJ, CNBC)
+- Use **accurate, real-time market data** for indices
+- Base sentiment on both **news tone** and **market movement**
+- Avoid subjective or unsupported judgments
+
+###### Fallback
+- If no relevant financial headlines are found in the last 24 hours, clearly state:  
+  **“No significant market news available in the last 24 hours.”**
+- If either index value or change is unavailable, report available data and note missing values explicitly
+- Do not invent or estimate values — only use verified data
+
+###### Output Style
+- Concise, factual, and structured
+- Use clear bullet points or short paragraphs
+- Include numerical values and data timestamps
+- Provide **sources for headlines and index data**
+- Use color and emoji to make it more engaging.

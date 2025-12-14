@@ -2,27 +2,10 @@
 import streamlit as st
 import sys
 import os  # Added for OTEL setup
-
-# LangSmith Configuration (Overwrites)
-os.environ["LANGCHAIN_TRACING_V2"] = "true"
-os.environ["LANGCHAIN_PROJECT"] = "healthcare-assistant"
-
 import html
 from pathlib import Path
-
-# # Add common directory to path for imports
-# project_root = Path(__file__).parent.parent.parent
-# sys.path.insert(0, str(project_root / "common"))
-
 from chat import ChatManager
-from aagents.healthcare_agent import healthcare_agent
-
-# ------------------------------------------------------------------------------
-# OpenTelemetry Setup (Removed)
-# ------------------------------------------------------------------------------
-
-
-
+from common.aagents.healthcare_agent import healthcare_agent
 
 # --------------------
 # Page Configuration
@@ -375,15 +358,15 @@ if not st.session_state.messages:
             st.rerun()
     
     with example_col3:
-        if st.button("What is the use of HL7 in Healthcare?", use_container_width=True, key="example3"):
+        if st.button("What is the use of ICD-10 in Healthcare?", use_container_width=True, key="example3"):
             # Add the example question directly as a user message
             st.session_state.messages.append({
                 "role": "user",
-                "content": "What is the use of HL7 in Healthcare?"
+                "content": "What is the use of ICD-10 in Healthcare?"
             })
             # Get response
             with st.spinner("🤔 Thinking..."):
-                response = st.session_state.chat_manager.get_response("What is the use of HL7 in Healthcare?")
+                response = st.session_state.chat_manager.get_response("What is the use of ICD-10 in Healthcare?")
                 st.session_state.messages.append({
                     "role": "assistant",
                     "content": response["content"],

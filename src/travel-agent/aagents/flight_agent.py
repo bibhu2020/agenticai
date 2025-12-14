@@ -15,7 +15,7 @@ flight_agent = Agent[UserContext](
     
     Format your response as a FlightSearchResults object containing a list of FlightRecommendation items.
     """,
-    model="gpt-4o-mini",
+    model="gpt-4-turbo",
     tools=[search_flights],
     output_type=FlightSearchResults
 )

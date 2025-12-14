@@ -1,14 +1,16 @@
 import os
 import requests
-from dotenv import load_dotenv
+
 from agents import function_tool
 from typing import Optional
 import datetime
 
+
+
 # ---------------------------------------------------------
 # Load environment variables
 # ---------------------------------------------------------
-load_dotenv()
+
 
 # ============================================================
 # 🔹 NEWS TOOLSET (NewsAPI.org)

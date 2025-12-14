@@ -1,15 +1,17 @@
 import requests
 from ddgs import DDGS
 from agents import function_tool
-from dotenv import load_dotenv
+
 from pydantic import BaseModel, Field
 from bs4 import BeautifulSoup
 from typing import Optional
 
+
+
 # ---------------------------------------------------------
 # Load environment variables
 # ---------------------------------------------------------
-load_dotenv()
+
 
 # ---------------------- MODELS ---------------------------
 class searchQuery(BaseModel):

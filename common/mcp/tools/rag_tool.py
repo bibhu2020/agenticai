@@ -2,10 +2,9 @@
 import os
 from pathlib import Path
 from agents import function_tool, RunContextWrapper
-from dotenv import load_dotenv
-from rag.rag import Retriever
-from dataclasses import dataclass
 
+from common.rag.rag import Retriever
+from dataclasses import dataclass
 
 @dataclass
 class UserContext:
@@ -14,18 +13,6 @@ class UserContext:
     file_path: str = ""
     similarity_threshold: float = 0.4  # FAISS L2 distance threshold for RAG relevance
 
-
-# ---------------------------------------------------------
-# Load environment variables
-# ---------------------------------------------------------
-load_dotenv()
-
-# ---------------------------------------------------------
-# Initialize RAG Retriever
-# ---------------------------------------------------------
-# Get the healthcare-rag-chatbot directory path
-# healthcare_dir = str(Path(__file__).parent.parent.parent)
-# retriever = None
 
 # ---------------------------------------------------------
 # RAG Search Tool

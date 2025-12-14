@@ -1,15 +1,17 @@
 import requests
 from ddgs import DDGS
 from agents import function_tool
-from dotenv import load_dotenv
+
 from pydantic import BaseModel, Field
 from bs4 import BeautifulSoup
 from typing import Optional
 
+
+
 # ---------------------------------------------------------
 # Load environment variables
 # ---------------------------------------------------------
-load_dotenv()
+
 
 # ---------------------- MODELS ---------------------------
 class searchQuery(BaseModel):
@@ -118,8 +120,23 @@ def _duckduckgo_search(params: searchQuery) -> list[dict]:
     return results
 
 @function_tool
-def duckduckgo_search(params: searchQuery) -> list[dict]:
-    """Perform a DuckDuckGo search and return only snippets.  
-    No page content fetched here."""
+def duckduckgo_search(query: str, max_results: int = 5, search_type: str = "text", timelimit: str = "d", region: str = "us-en") -> list[dict]:
+    """
+    Perform a DuckDuckGo search and return only snippets.
+    
+    Args:
+        query: The search query string.
+        max_results: The maximum number of search results to return (default: 5).
+        search_type: Search type: 'text' (default) or 'news'. Use 'news' to get publication dates.
+        timelimit: Time limit for search results: 'd' (day), 'w' (week), 'm' (month), 'y' (year).
+        region: Region for search results (e.g., 'us-en').
+    """
+    params = searchQuery(
+        query=query, 
+        max_results=max_results, 
+        search_type=search_type, 
+        timelimit=timelimit, 
+        region=region
+    )
     return _duckduckgo_search(params)
 

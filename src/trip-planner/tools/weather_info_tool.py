@@ -1,6 +1,6 @@
 import os
 from typing import List
-from dotenv import load_dotenv
+
 from langchain.tools import tool
 from logger.decorators import log_entry
 from utils.weather_info import WeatherForecastTool
@@ -17,7 +17,7 @@ class WeatherInfoTool:
         """
         Initialize the WeatherInfoTool with API credentials and set up weather-related tools.
         """
-        load_dotenv()
+        
         self.api_key = os.environ.get("OPENWEATHERMAP_API_KEY")
         self.weather_service = WeatherForecastTool(self.api_key)
         self.weather_tool_list = self._setup_tools()

@@ -5,9 +5,9 @@ from agent.agentic_workflow import GraphBuilder
 from utils.save_to_document import save_document
 from fastapi.responses import JSONResponse
 import datetime
-from dotenv import load_dotenv
+
 from pydantic import BaseModel
-load_dotenv()
+
 
 
 app = FastAPI()

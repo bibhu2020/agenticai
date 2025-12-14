@@ -2,16 +2,18 @@ import os
 import re
 import requests
 import datetime
-from dotenv import load_dotenv
+
 from typing import Optional
 
 from ddgs import DDGS
 from agents import function_tool
 
+
+
 # ---------------------------------------------------------
 # Load environment variables
 # ---------------------------------------------------------
-load_dotenv()
+
 
 @function_tool
 def get_weather_forecast(city: str, date: Optional[str] = None) -> str:

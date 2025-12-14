@@ -1,6 +1,8 @@
 from agents import function_tool, RunContextWrapper
 from contexts import UserContext
 
+
+
 @function_tool
 def get_weather_forecast(wrapper: RunContextWrapper[UserContext], city: str, date: str) -> str:
     """Get the weather forecast for a city on a specific date."""

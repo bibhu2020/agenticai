@@ -1,9 +1,9 @@
 import pytest
-from dotenv import load_dotenv
+
 from agents import Runner, trace
 from ..common.aagents.yf_agent import yf_agent
 
-load_dotenv()
+
 
 # @pytest.mark.asyncio
 # async def test_yf_agent_basic_query():

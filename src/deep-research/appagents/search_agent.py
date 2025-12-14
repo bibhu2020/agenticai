@@ -1,11 +1,9 @@
 import os
-from agents import Agent, OpenAIChatCompletionsModel, WebSearchTool
-from openai import AsyncOpenAI
-from langsmith import wrappers
-
-
-from agents.model_settings import ModelSettings
+from agents import Agent
 from tools.google_tools import GoogleTools
+from core.model import get_model_client
+from common.utility.logger import log_call
+from agents.model_settings import ModelSettings
 
 # INSTRUCTIONS = "You are a research assistant. Given a search term, you search the web for that term and \
 # produce a concise summary of the results. The summary must 2-3 paragraphs and less than 300 \
@@ -21,29 +19,16 @@ from tools.google_tools import GoogleTools
 # Format the entire output as a single, detailed block of text in markdown format, ensuring ALL source links are visible and preserved."
 
 INSTRUCTIONS = "You are a research assistant. Given a search term, you search the web for that term and \
-produce a concise summary of the results. The summary must 3-5 paragraphs and less than 500 \
+produce a concise summary of the results. The summary must 5-6 paragraphs and less than 500 \
 words. Capture the main points. Write succintly, no need to have complete sentences or good \
 grammar. This will be consumed by someone synthesizing a report, so it's vital you capture the \
 essence and ignore any fluff. Do not include any additional commentary other than the summary itself."
 
-GEMINI_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/openai/"
-google_api_key = os.getenv('GOOGLE_API_KEY')
-gemini_client = AsyncOpenAI(base_url=GEMINI_BASE_URL, api_key=google_api_key)
-gemini_client = wrappers.wrap_openai(gemini_client)
-gemini_model = OpenAIChatCompletionsModel(model="gemini-2.0-flash", openai_client=gemini_client)
-
-# search_agent = Agent(
-#     name="Search agent",
-#     instructions=INSTRUCTIONS,
-#     tools=[WebSearchTool(search_context_size="low")],
-#     # tools=[GoogleTools.search],
-#     model="gpt-4o-mini",
-#     model_settings=ModelSettings(tool_choice="required"),
-# )
 
 # -----------------------------
 # CONNECT TO MCP SERVER
 # -----------------------------
+@log_call
 async def setup_mcp_tools():
     """
     Starts the MCP server via stdio and returns its list of tools
@@ -68,23 +53,12 @@ async def setup_mcp_tools():
         print(f"✅ Connected to MCP server with {len(mcp_tools)} tool(s).")
         return mcp_tools
 
-# # Note: Gemini does not like 
-# search_agent = Agent(
-#     name="Search agent",
-#     instructions=INSTRUCTIONS,
-#     # tools=[WebSearchTool(search_context_size="low")],
-#     tools=[GoogleTools.search],
-#     model=gemini_model,
-#     model_settings=ModelSettings(tool_choice="required"),
-# )
-
-
 search_agent = Agent(
     name="Search agent",
     instructions=INSTRUCTIONS,
     # tools=[WebSearchTool(search_context_size="low")],
     tools=[GoogleTools.search],
-    model=gemini_model,
+    model=get_model_client(),
     model_settings=ModelSettings(tool_choice="required"),
 )
 

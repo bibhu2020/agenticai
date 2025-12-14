@@ -2,6 +2,8 @@ from datetime import datetime
 from agents import function_tool
 # from ..common.utility.logger import log_call
 
+
+
 @function_tool
 # @log_call
 def current_datetime(format: str = "natural") -> str:
