@@ -4,7 +4,7 @@ def get_model_client(provider:str = "google"):
     if provider.lower() == "google":
         return AutoGenModelFactory.get_model(
             provider="google",
-            model_name="gemini-2.5-flash",
+            model_name="gemini-3.0-flash",
             temperature=0,
         model_info={
             "family": "gemini",
@@ -14,7 +14,7 @@ def get_model_client(provider:str = "google"):
             "structured_output": True,
         },
     )
-    elif provider.lower() == "google":
+    elif provider.lower() == "openai":
         return AutoGenModelFactory.get_model(
             provider="openai",
             model_name="gpt-4o-mini",
