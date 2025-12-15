@@ -67,6 +67,11 @@ APP_REGISTRY: Dict[str, Dict[str, str]] = {
         "path": "src/literature-review",
         "entry": "app.py",
         "description": "Literature Review Assistant - Multi-agent literature review tool"
+    },
+    "market-analyst": {
+        "path": "src/market-analyst",
+        "entry": "app.py",
+        "description": "Market Analyst - Multi-agent market analysis tool"
     }
 }
 
