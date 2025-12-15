@@ -2,7 +2,7 @@
 title: Market Analyst
 emoji: 📈
 colorFrom: blue
-colorTo: cyan
+colorTo: gray
 sdk: docker
 app_port: 7860
 pinned: false
