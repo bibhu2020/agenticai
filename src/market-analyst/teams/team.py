@@ -16,16 +16,23 @@ from autogen_agentchat.conditions import MaxMessageTermination, TextMentionTermi
 # Import agents
 # Adjust imports to work whether called from here or app.py
 try:
-    from ..agents.market_analyst import get_market_analyst
-    from ..agents.sentiment_analyst import get_sentiment_analyst
-    from ..agents.strategy_advisor import get_strategy_advisor
-    from ..agents.risk_manager import get_risk_manager
+    from ..aagents.market_analyst import get_market_analyst
+    from ..aagents.sentiment_analyst import get_sentiment_analyst
+    from ..aagents.strategy_advisor import get_strategy_advisor
+    from ..aagents.risk_manager import get_risk_manager
 except ImportError:
     # Fallback if running from proper package context
-    from agents.market_analyst import get_market_analyst
-    from agents.sentiment_analyst import get_sentiment_analyst
-    from agents.strategy_advisor import get_strategy_advisor
-    from agents.risk_manager import get_risk_manager
+    try:
+        from aagents.market_analyst import get_market_analyst
+        from aagents.sentiment_analyst import get_sentiment_analyst
+        from aagents.strategy_advisor import get_strategy_advisor
+        from aagents.risk_manager import get_risk_manager
+    except ImportError:
+         # Try absolute (if market-analyst is in path but not as package)
+         from src.market_analyst.aagents.market_analyst import get_market_analyst
+         from src.market_analyst.aagents.sentiment_analyst import get_sentiment_analyst
+         from src.market_analyst.aagents.strategy_advisor import get_strategy_advisor
+         from src.market_analyst.aagents.risk_manager import get_risk_manager
 
 def get_trading_team(model_client):
     """

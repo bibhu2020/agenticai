@@ -28,6 +28,9 @@ COPY src/market-analyst/ ./src/market-analyst/
 RUN uv sync --frozen --no-dev && \
     uv pip install -e . --system
 
+# Preload FinBERT model into standard cache directory
+RUN python -c "from transformers import pipeline; pipeline('sentiment-analysis', model='ProsusAI/finbert')"
+
 # Copy entry point
 COPY run.py .
 

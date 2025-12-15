@@ -33,7 +33,7 @@ A sophisticated **Multi-Agent System** that performs real-time technical and sen
 ```
 src/market-analyst/
 ├── app.py                  # Streamlit UI (Orchestrator)
-├── agents/                 # Agent Definitions
+├── aagents/                # Agent Definitions
 │   ├── market_analyst.py   # Technical Analysis Agent
 │   ├── sentiment_analyst.py# FinBERT Agent
 │   ├── strategy_advisor.py # Option Strategist
