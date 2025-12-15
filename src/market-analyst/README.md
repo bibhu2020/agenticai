@@ -7,7 +7,7 @@ sdk: docker
 app_port: 7860
 pinned: false
 license: mit
-short_description: Multi-Agent AI System for Real-Time Stock Analysis & Strategy
+short_description: Multi-Agent AI for Real-Time Stock Analysis & Strategy
 ---
 
 # 📈 AI Market Analyst
