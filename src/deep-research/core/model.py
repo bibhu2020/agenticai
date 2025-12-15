@@ -4,7 +4,7 @@ def get_model_client(provider:str = "openai"):
     if provider.lower() == "google":
         return OpenAIModelFactory.get_model(
             provider="google",
-            model_name="gemini-2.5-flash",
+            model_name="gemini-3-pro-preview",
             temperature=0
     )
     elif provider.lower() == "openai":
@@ -22,7 +22,7 @@ def get_model_client(provider:str = "openai"):
     elif provider.lower() == "groq":
         return OpenAIModelFactory.get_model(
             provider="groq",
-            model_name="gpt-4o-mini",
+            model_name="llama-3.3-70b-versatile",
             temperature=0
     )
     elif provider.lower() == "ollama":
