@@ -21,12 +21,13 @@ jobs:
           # "https://mishrabp-trip-advisor-api.hf.space/"
           # "https://mishrabp-trip-advisor-app.hf.space/"
           # "https://mishrabp-northwind.hf.space"
+          # "https://myotel.azurewebsites.net"
+          #"https://mishrabp-stock-analyst.hf.space"
+          #"https://mishrabp-chatbot-app.hf.space"
         URLS=(
-          "https://mishrabp-chatbot-app.hf.space"
           "https://mishrabp-deep-research.hf.space"
           "https://mishrabp-healthcare-assistant.hf.space"
-          "https://mishrabp-stock-analyst.hf.space"
-          "https://myotel.azurewebsites.net"
+          "https://mishrabp-market-analyst.hf.space"
         )
 
         # Loop through URLs and send HEAD requests
