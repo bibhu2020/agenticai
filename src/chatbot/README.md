@@ -8,6 +8,10 @@ sdk_version: "0.0.1"
 app_file: app.py
 pinned: false
 license: mit
+tags:
+  - text-generation
+  - agentic-ai
+  - openai-sdk
 short_description: An Experimental Agentic Chatbot (uses OpenAI Agent SDK)
 ---
 

@@ -1,0 +1,32 @@
+from common.utility.autogen_model_factory import AutoGenModelFactory
+
+def get_model_client(provider:str = "openai"):
+    # Defaulting to Google/Gemini as per project standard
+    if provider.lower() == "google":
+        return AutoGenModelFactory.get_model(
+            provider="google",
+            model_name="gemini-2.5-flash",
+            temperature=0.7, # Higher creativity for images
+            model_info={
+                "family": "gemini",
+                "vision": True,
+                "function_calling": True,
+                "json_output": True,
+                "structured_output": True,
+            },
+        )
+    elif provider.lower() == "openai":
+        return AutoGenModelFactory.get_model(
+            provider="openai",
+            model_name="gpt-4o",
+            temperature=0.7,
+            model_info={
+                "family": "gpt",
+                "vision": True,
+                "function_calling": True,
+                "json_output": True,
+                "structured_output": True,
+            },
+        )
+    else: 
+        raise ValueError(f"Unsupported provider: {provider}")

@@ -72,6 +72,11 @@ APP_REGISTRY: Dict[str, Dict[str, str]] = {
         "path": "src/market-analyst",
         "entry": "app.py",
         "description": "Market Analyst - Multi-agent market analysis tool"
+    },
+    "image": {
+        "path": "src/image-generator",
+        "entry": "app.py",
+        "description": "Image Generator - Multi-agent image generation tool"
     }
 }
 
