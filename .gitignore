@@ -13,6 +13,7 @@ develop-eggs/
 dist/
 db/chroma_db/
 db/healthcare_db/
+src/image-generator/
 # db/sessions/
 downloads/
 eggs/
