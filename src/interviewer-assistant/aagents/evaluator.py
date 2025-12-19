@@ -12,8 +12,12 @@ def get_evaluator(model_client):
         2. Context includes "Approved JD Analysis" (from Job_Analyst/Reviewer).
         
         Task:
-        1. Compare the Candidate's profile against the approved JD requirements.
-        2. Score the fitness (1-10).
+        1. Compare the Candidate's profile against the approved JD requirements across FOUR dimensions:
+           - Technical Proficiency
+           - Behavioral Fit
+           - Situational Judgment & Problem Solving
+           - Leadership Potential (Ownership/Influence)
+        2. Score the overall fitness (1-10) weighted by the priorities defined in the JD Analysis.
         3. Identify Strengths and Gaps.
         4. List specific areas to probe in the interview.
         

@@ -29,7 +29,7 @@ def get_candidate_profiler(model_client):
         Task:
         1. Read the candidate's resume (using `read_local_file` if path provided) and/or LinkedIn profile (using `scrape_web_page` if URL provided).
         2. Summarize the candidate's professional profile, key skills, years of experience, and notable achievements.
-        3. Do NOT evaluate the candidate against any job description yet. Just provide a factual, comprehensive summary.
+        3. Do NOT evaluate the candidate against any job description yet. Just provide a factual, comprehensive summary. Also extract the Candidate's Name if available.
         
         IMPORTANT: 
         - If you have the Resume content, that is sufficient. exact LinkedIn data is secondary. 
@@ -41,6 +41,7 @@ def get_candidate_profiler(model_client):
         Return a JSON object:
         ```json
         {
+          "candidate_name": "...",
           "candidate_summary": "...",
           "key_skills": ["..."],
           "years_of_experience": "...",

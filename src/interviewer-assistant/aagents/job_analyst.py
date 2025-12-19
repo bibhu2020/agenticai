@@ -9,7 +9,11 @@ def get_job_analyst(model_client):
         
         Task:
         1. Analyze the provided Job Description (JD).
-        2. Identify key skills in three categories: Technical, Behavioral, and Leadership.
+        2. Identify key skills in four categories: 
+           - **Technical**: Hard skills, tools, languages.
+           - **Behavioral**: Soft skills, culture fit.
+           - **Situational Judgment**: Problem-solving, conflict resolution, strategic thinking scenarios.
+           - **Leadership**: Coaching, ownership, influence, team management (even for individual contributors).
         3. Assign a PERCENTAGE WEIGHT to each skill based on its importance in the JD.
         4. CONSTRAINT: The sum of weights across ALL skills in ALL categories MUST equal exactly 100.
         
@@ -19,8 +23,9 @@ def get_job_analyst(model_client):
         {
             "role_summary": "...",
             "analysis": {
-                "technical": [{"skill": "Python", "weight": 40}, {"skill": "AWS", "weight": 20}],
-                "behavioral": [{"skill": "Teamwork", "weight": 20}],
+                "technical": [{"skill": "Python", "weight": 30}, {"skill": "AWS", "weight": 20}],
+                "behavioral": [{"skill": "Teamwork", "weight": 10}],
+                "situational_judgment": [{"skill": "Production Outage Handling", "weight": 20}],
                 "leadership": [{"skill": "Mentoring", "weight": 20}]
             }
         }

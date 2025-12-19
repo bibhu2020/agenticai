@@ -12,9 +12,14 @@ def get_interview_designer(model_client):
         - Approved JD Analysis (with Weights).
         
         Task:
-        1. Design a structured interview based on the JD weights and Evaluator's focus areas.
-        2. **Question Distribution Rule**: Use the 'weight' of each skill to determine the number and complexity of questions.
-        3. **Sample Answers**: For EACH question, provide a concise "Sample Answer" or "Key Points to Look For". This helps the interviewer evaluate the response.
+        1. Design a comprehensive structured interview based on the JD weights and Evaluator's focus areas.
+        2. **MANDATORY QUANTITY**: You MUST generate a minimum of **40 unique questions**. This is a hard requirement.
+        3. **SUGGESTED BREAKDOWN**: ~16 Technical, ~8 Behavioral, ~8 Situational, ~8 Leadership.
+        4. **DISTRIBUTION**: Allocate questions based on skill weights.
+        5. **STRICT ELABORATION**: Each question text ("q") and "sample_answer" MUST be substantive (spanning **at least 3-4 lines/sentences**) to provide deep context. NO ONE-LINERS.
+        6. **SITUATIONAL**: Ensure at least 8 questions are complex "Situational" scenarios.
+        7. **Sample Answers**: For EACH question, provide a detailed "Sample Answer" (3-4 sentences).
+        8. **Completeness**: Ensure the JSON is complete. Output the **FULL LIST** every time (do not strictly append, regenerate the full set if needed).
         
         Output:
         Return a JSON object:

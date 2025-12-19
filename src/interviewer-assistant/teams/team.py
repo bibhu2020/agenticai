@@ -20,6 +20,7 @@ try:
     from ..aagents.candidate_profiler import get_candidate_profiler
     from ..aagents.evaluator import get_evaluator
     from ..aagents.interview_designer import get_interview_designer
+    from ..aagents.team_lead import get_team_lead
 
 except ImportError:
     from aagents.job_analyst import get_job_analyst
@@ -27,12 +28,13 @@ except ImportError:
     from aagents.candidate_profiler import get_candidate_profiler
     from aagents.evaluator import get_evaluator
     from aagents.interview_designer import get_interview_designer
+    from aagents.team_lead import get_team_lead
 
 
 def get_interview_team(model_client):
     """
     Creates the Interview Team using SelectorGroupChat to enforce order.
-    The order is: Profiler -> Job Analyst -> Reviewer -> Evaluator -> Designer
+    The order is: Profiler -> Job Analyst -> Reviewer -> Evaluator -> Designer -> Team Lead
     """
     print(f"[DEBUG] Creating Interview Team")
     
@@ -42,38 +44,21 @@ def get_interview_team(model_client):
     reviewer = get_job_analyst_reviewer(model_client)
     evaluator = get_evaluator(model_client)
     designer = get_interview_designer(model_client)
+    lead = get_team_lead(model_client)
     
     
-    # 2. Define Selector/Transition Logic
+    # 2. Define Selector/Transition Logic (Deprecated in RoundRobin but kept for ref)
     selector_prompt = """
-    You are the Team Coordinator. Select the next speaker based on the conversation state:
-
-    - BEGINNING: Select 'Candidate_Profiler' to read the resume/LinkedIn.
-    - AFTER 'Candidate_Profiler' provides a JSON summary (look for 'HANDOFF_TO_JOB_ANALYST'): Select 'Job_Analyst'.
-    - AFTER 'Job_Analyst' provides a JSON analysis: Select 'Job_Analyst_Reviewer'.
-    - AFTER 'Job_Analyst_Reviewer' speaks:
-        - If they APPROVE: Select 'Evaluator'.
-        - If they REJECT or ask for changes: Select 'Job_Analyst'.
-    - AFTER 'Evaluator' provides a JSON score: Select 'Interview_Designer'.
-    - AFTER 'Interview_Designer' provides the interview guide: Select 'TERMINATE'.
+    ...
     """
-    
-    # Restore full team with Selector
-    # team = SelectorGroupChat(
-    #     participants=[profiler, job_analyst, reviewer, evaluator, designer],
-    #     model_client=model_client,
-    #     termination_condition=TextMentionTermination("TERMINATE") | MaxMessageTermination(10),
-    #     selector_prompt=selector_prompt,
-    #     allow_repeated_speaker=True
-    # )
     
     # Use RoundRobin as requested ("Keep it simple like market-analyst")
     # This avoids Selector logic loops. 
     # The agents must be robust enough to handle the sequential flow.
     print(f"[DEBUG] Using RoundRobinGroupChat")
     team = RoundRobinGroupChat(
-        participants=[profiler, job_analyst, reviewer, evaluator, designer],
-        termination_condition=TextMentionTermination("TERMINATE") | MaxMessageTermination(13)
+        participants=[profiler, job_analyst, reviewer, evaluator, designer, lead],
+        termination_condition=TextMentionTermination("TERMINATE") | MaxMessageTermination(15)
     )
     print(f"[DEBUG] Team created: {team}")
     
