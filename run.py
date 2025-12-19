@@ -78,10 +78,10 @@ APP_REGISTRY: Dict[str, Dict[str, str]] = {
         "entry": "app.py",
         "description": "Image Generator - Multi-agent image generation tool"
     },
-    "interviewer-assistant": {
-        "path": "src/interviewer-assistant",
+    "interview-assistant": {
+        "path": "src/interview-assistant",
         "entry": "app.py",
-        "description": "Interviewer Assistant - Multi-agent interview tool"
+        "description": "Interview Assistant - Multi-agent interview tool"
     }
 }
 

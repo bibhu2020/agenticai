@@ -2,7 +2,7 @@ FROM python:3.12-slim
 
 ENV PYTHONUNBUFFERED=1 \
     DEBIAN_FRONTEND=noninteractive \
-    PYTHONPATH=/app/src/interviewer-assistant:$PYTHONPATH
+    PYTHONPATH=/app/src/interview-assistant:$PYTHONPATH
 
 WORKDIR /app
 
@@ -21,7 +21,7 @@ COPY uv.lock .
 
 # Copy application code
 COPY common/ ./common/
-COPY src/interviewer-assistant/ ./src/interviewer-assistant/
+COPY src/interview-assistant/ ./src/interview-assistant/
 
 # Install dependencies using uv, then export and install with pip to system
 # We use --no-dev to exclude dev dependencies if any
@@ -33,4 +33,4 @@ COPY run.py .
 
 EXPOSE 7860
 
-CMD ["python", "run.py", "interviewer-assistant", "--port", "7860"]
+CMD ["python", "run.py", "interview-assistant", "--port", "7860"]

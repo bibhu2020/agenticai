@@ -27,7 +27,7 @@ A **Multi-Agent System** designed to assist HR and technical interviewers by aut
 ## 🛠️ Architecture
 
 ```
-src/interviewer-assistant/
+src/interview-assistant/
 ├── app.py                  # Streamlit UI (Orchestrator)
 ├── teams/                  # Team Definitions
 │   └── team.py             # GroupChat Configuration
