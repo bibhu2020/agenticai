@@ -6,7 +6,7 @@ A comprehensive collection of AI-powered agentic applications built with modern 
 
 ```bash
 # Install dependencies
-uv sync
+uv sync --prerelease=allow
 
 # Activate virtual environment
 source .venv/bin/activate  # Linux/Mac

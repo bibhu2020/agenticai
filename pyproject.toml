@@ -34,6 +34,16 @@ dependencies = [
     "traceloop-sdk>=0.33.0",
 
     # =======================
+    # MICROSOFT AGENT FRAMEWORK
+    # =======================
+    #"agent-framework==1.0.0b251204",
+    #"agent-framework-azure-ai==1.0.0b251204",
+    #"azure-ai-projects",
+    #"azure-ai-agents",
+    #"azure-ai-agents>=1.2.0b5",
+    #"agent-framework-azure-ai",
+
+    # =======================
     # VECTOR DB / INDEXING
     # =======================
     "faiss-cpu>=1.13.0",
@@ -94,6 +104,11 @@ dependencies = [
     "reportlab>=4.4.5",
     "fastapi",
     "Pillow",
+    "python-docx",
+    "matplotlib",
+    "fpdf",
+    "extra-streamlit-components",
+    "nest_asyncio",
 
     # =======================
     # AUDIO / VIDEO
