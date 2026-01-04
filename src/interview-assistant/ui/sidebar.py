@@ -10,12 +10,10 @@ def render_sidebar(cookie_manager):
         
         # Initialize Defaults from Cookies
         # Note: cookie_manager.get can vary in timing, but usually fine.
-        cookie_linkedin = cookie_manager.get(cookie="linkedin_url")
         cookie_jd = cookie_manager.get(cookie="job_description")
         
         job_description = None
         uploaded_resume = None
-        linkedin_url = None
         
         if mode == "Interviewer":
             st.info("Upload JD and Resume to generate a structured interview guide.")
@@ -27,10 +25,6 @@ def render_sidebar(cookie_manager):
             st.subheader("2. Candidate Resume")
             uploaded_resume = st.file_uploader("Upload Resume (PDF/DOCX)", type=["pdf", "docx", "txt"])
             
-            st.subheader("3. LinkedIn (Optional)")
-            default_linkedin = cookie_linkedin if cookie_linkedin else ""
-            linkedin_url = st.text_input("LinkedIn Profile URL", value=default_linkedin, placeholder="https://www.linkedin.com/in/...", key="linkedin_input")
-
             st.markdown("---")
             # State Initialization
             if "analyzing" not in st.session_state:
@@ -45,8 +39,6 @@ def render_sidebar(cookie_manager):
                 st.session_state.generated_report = None # Clear previous
                 st.session_state.generated_pdf = None
                 # Save cookies when button is clicked
-                if st.session_state.get("linkedin_input"):
-                    cookie_manager.set("linkedin_url", st.session_state.linkedin_input, key="set_linkedin")
                 if st.session_state.get("jd_input"):
                      cookie_manager.set("job_description", st.session_state.jd_input, key="set_jd")
 
@@ -66,6 +58,5 @@ def render_sidebar(cookie_manager):
         return {
             "mode": mode,
             "job_description": job_description,
-            "uploaded_resume": uploaded_resume,
-            "linkedin_url": linkedin_url
+            "uploaded_resume": uploaded_resume
         }

@@ -28,6 +28,7 @@ jobs:
           "https://mishrabp-deep-research.hf.space"
           "https://mishrabp-healthcare-assistant.hf.space"
           "https://mishrabp-market-analyst.hf.space"
+          "https://mishrabp-twitter-sentiment-analysis.hf.space"
         )
 
         # Loop through URLs and send HEAD requests
