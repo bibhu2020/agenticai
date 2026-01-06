@@ -1,45 +1,60 @@
 ---
-title: Healthcare Assistant
-emoji: ⚕️
+app_file: app.py
 colorFrom: green
 colorTo: indigo
-sdk: docker
-sdk_version: "0.0.1"
-app_file: app.py
-pinned: false
+emoji: 🩺
 license: mit
-short_description: An agentic RAG solution (uses OpenAI Agent SDK)
+pinned: false
+sdk: docker
+sdk_version: 0.0.1
+short_description: Ask healthcare questions and get source-cited answers
+  from medical documents and trusted web search
+title: Ask Medical Questions with Verified Sources
 ---
 
-# Healthcare Assistant
+# 🩺 Ask Medical Questions --- Get Cited Answers
 
-A Streamlit-based healthcare chatbot that uses RAG (Retrieval-Augmented Generation) combined with web search to provide comprehensive medical information.
+Ask healthcare-related questions and receive **clear, source-backed
+answers** retrieved from: - 📚 Curated medical knowledge bases\
+- 🌐 Trusted web sources (only when needed)
 
-## Features
+This assistant is designed to **reduce hallucinations** by **never
+answering without sources**.
 
-- 🏥 **Healthcare Information Retrieval**: Get accurate healthcare information from knowledge base and web
-- 📚 **RAG Search**: Primary search through medical knowledge base
-- 🌐 **Web Search Fallback**: DuckDuckGo search when knowledge base doesn't have information
-- 💬 **Conversation Memory**: Maintains context across the conversation
-- 📝 **Source Citations**: Clear indication of information source (Knowledge Base vs Web Search)
-- 📥 **Export Conversations**: Export chat history in text, markdown, or JSON format
-- 🎨 **Modern UI**: Clean, professional chat interface with message bubbles
+## 👉 Try asking (click an example or type your own)
 
-## Architecture
+-   "What are the symptoms of diabetes?"
+-   "How is hypertension diagnosed?"
+-   "Difference between Type 1 and Type 2 diabetes?"
+-   "What is HL7 in healthcare?"
 
-```
-src/healthcare-rag-chatbot/
-├── app.py          # Streamlit UI
-├── chat.py         # Chat management & memory
-└── README.md       # This file
-```
+⬆️ Start with a simple question and ask follow-ups naturally.
 
-The chatbot integrates with:
-- `common/aagents/healthcare_agent.py` - Healthcare RAG agent
-- `common/mcp/tools/rag_tool.py` - RAG search tool
-- `common/mcp/tools/search_tools.py` - DuckDuckGo search tool
+## ✨ Why this is different
 
-## How It Works
+Most healthcare chatbots rely on hidden model knowledge.\
+This one **does not**.
+
+✔️ Answers only from retrieved sources\
+✔️ Shows where the information comes from\
+✔️ Falls back to web search when documents are insufficient\
+✔️ Designed for transparency and auditability
+
+## 🚀 Features
+
+-   🩺 Source-cited answers\
+-   📚 Retrieval-Augmented Generation (RAG)\
+-   🌐 Automatic web search fallback\
+-   🧠 Conversation memory\
+-   📥 Export conversations\
+-   🎨 Clean Streamlit UI
+
+## ⚠️ Important Notice
+
+This assistant provides **educational information only**.\
+It does **not** provide medical advice, diagnosis, or treatment.
+
+## 🔍 How it works
 
 1. **User asks a question** → Sent to healthcare agent
 2. **Agent calls `rag_search`** → Searches medical knowledge base
@@ -48,7 +63,20 @@ The chatbot integrates with:
 5. **If web search succeeds** → Returns with "Web Search" citation
 6. **If both fail** → Returns "no information available" message
 
-## Running the Application
+## 🔧 Under the hood
+
+    src/healthcare-rag-chatbot/
+    ├── app.py
+    ├── chat.py
+    └── README.md
+
+## ⚙️ Configuration
+
+-   Model: Gemini 2.0 Flash
+-   UI: Streamlit
+-   Web Search: DuckDuckGo
+
+## ▶️ Running the Application locally
 
 ### Prerequisites
 
@@ -64,67 +92,6 @@ cd src/healthcare-rag-chatbot
 streamlit run app.py
 ```
 
-The app will open in your browser at `http://localhost:8501`
+## 💡 Feedback
 
-## Usage
-
-### Ask Questions
-
-Simply type your healthcare question in the input box and click "Send". Examples:
-- "What is diabetes?"
-- "What are the symptoms of hypertension?"
-- "What is HL7?"
-
-### View Tool Usage
-
-The chatbot shows which tools were used for each response via badges:
-- 🔧 `rag_search` - Searched knowledge base
-- 🔧 `duckduckgo_search` - Searched the web
-
-### Export Conversations
-
-1. Click "Export Chat" in the sidebar
-2. Select format (text, markdown, or JSON)
-3. Click "Download" to save the conversation
-
-### Clear History
-
-Click "🗑️ Clear Conversation" in the sidebar to start fresh.
-
-## Configuration
-
-The chatbot uses:
-- **Model**: Gemini 2.0 Flash (via OpenAI-compatible API)
-- **Knowledge Base**: Medical documents in RAG system
-- **Web Search**: DuckDuckGo (no API key required)
-
-Environment variables are loaded from `.env` in the project root.
-
-## Medical Disclaimer
-
-⚠️ **Important**: This chatbot provides information for educational purposes only. Always consult a qualified healthcare professional for medical advice, diagnosis, or treatment.
-
-## Technical Details
-
-### Chat Manager (`chat.py`)
-
-- Manages conversation history with timestamps
-- Handles async agent interactions
-- Tracks tool usage and metadata
-- Provides export functionality
-
-### Streamlit UI (`app.py`)
-
-- Modern chat interface with message bubbles
-- Session state management
-- Tool call visualization
-- Responsive design with custom CSS
-
-### Healthcare Agent
-
-The agent follows strict rules:
-- NEVER uses pre-trained knowledge
-- ALWAYS calls `rag_search` first
-- MUST call `duckduckgo_search` if RAG fails
-- Only provides information from tools
-- Includes source citations and disclaimers
+⭐ Like the Space · 🔁 Duplicate · 💬 Share feedback
