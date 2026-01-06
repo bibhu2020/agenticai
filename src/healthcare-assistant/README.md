@@ -7,8 +7,7 @@ license: mit
 pinned: false
 sdk: docker
 sdk_version: 0.0.1
-short_description: Ask healthcare questions and get source-cited answers
-  from medical documents and trusted web search
+short_description: Ask healthcare questions and get source-cited answers.
 title: Ask Medical Questions with Verified Sources
 ---
 
@@ -95,3 +94,4 @@ streamlit run app.py
 ## 💡 Feedback
 
 ⭐ Like the Space · 🔁 Duplicate · 💬 Share feedback
+
