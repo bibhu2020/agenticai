@@ -1,0 +1,26 @@
+##### Task
+Tell me the **top 3 headlines from Odisha**.
+
+###### For each headline, provide:
+- **Title in bold**
+- A **3‑line summary**
+- **Publish date and time**
+- A **link to the exact source URL**
+
+###### Requirements
+- Use authoritative news sources (e.g., major national/regional news outlets)
+- Headlines should be **recent (last 24 hours)**
+- Provide timestamps in **UTC**
+- If publish date/time is not available, indicate “Date/Time not provided”
+
+###### Fallback
+- If fewer than 3 headlines are found, provide what is available and state:
+  **“Only X recent headlines found for Odisha.”**
+- Do not fabricate headlines, dates, or URLs
+
+###### Output Style
+- Structured list sorted by **most recent first**
+- Clear and concise formatting as requested
+- Use color and emoji to make it more engaging.
+- Use `<span style="color:...">` for coloring the title if the renderer supports it
+- Keep the output **concise, factual, and visually engaging**

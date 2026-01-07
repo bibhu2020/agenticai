@@ -1,0 +1,27 @@
+##### Task
+Provide a concise update on **major economic indicators released recently** in USA.
+
+###### Include
+- **Interest Rates**: Latest central bank decisions, current policy rates, and forward guidance.
+- **Labor Market**: Unemployment rate, job creation figures, and key labor metrics (if available).
+- **Inflation**: CPI, PCE, or other inflation data with MoM and YoY changes.
+- **Growth Indicators**: GDP, PMIs, or industrial production released recently.
+- **Market Reaction**: Brief impact on equities, bonds, FX, and commodities.
+
+###### Guidelines
+- Compare results against forecasts and prior releases
+- Highlight notable surprises and their implications
+- Keep the summary brief, factual, and structured
+- **Always retrieve numerical data from primary or authoritative sources**
+
+###### Fallback
+- If no relevant data was released recently, explicitly state **“No major economic indicators were released during this period.”**
+- If data is partially unavailable, summarize what is available and clearly note missing indicators.
+- Do not infer or fabricate numbers under any circumstance.
+
+###### Output Style
+- Concise, factual, and well-structured
+- Use clear bullet points or short paragraphs
+- Avoid speculation unless explicitly labeled as interpretation
+- **Cite data sources clearly**
+- Use color and emoji to make it more engaging.

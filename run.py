@@ -58,6 +58,11 @@ APP_REGISTRY: Dict[str, Dict[str, str]] = {
         "entry": "app.py",
         "description": "General Chatbot - Multi-purpose conversational AI"
     },
+    "chatbot_v2": {
+        "path": "src/chatbot_v2",
+        "entry": "app.py",
+        "description": "Layered Chatbot (ReAct) - Advanced Architecture"
+    },
     "accessibility": {
         "path": "src/accessibility",
         "entry": "app.py",
