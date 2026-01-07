@@ -53,8 +53,8 @@ APP_REGISTRY: Dict[str, Dict[str, str]] = {
         "entry": "main.py",
         "description": "Trip Planner - Detailed trip itinerary planning"
     },
-    "chatbot": {
-        "path": "src/chatbot",
+    "chatbot_v1": {
+        "path": "src/chatbot_v1",
         "entry": "app.py",
         "description": "General Chatbot - Multi-purpose conversational AI"
     },
@@ -63,8 +63,13 @@ APP_REGISTRY: Dict[str, Dict[str, str]] = {
         "entry": "app.py",
         "description": "Layered Chatbot (ReAct) - Advanced Architecture"
     },
-    "accessibility": {
-        "path": "src/accessibility",
+    "accessibility_v2": {
+        "path": "src/accessibility_v2",
+        "entry": "app.py",
+        "description": "Accessibility Auditor V2 - Layered Architecture"
+    },
+    "accessibility_v1": {
+        "path": "src/accessibility_v1",
         "entry": "app.py",
         "description": "Accessibility Tools - Assistive technology applications"
     },

@@ -29,5 +29,21 @@ def main():
     print("\n>>> User: read the note hello.txt")
     agent.run("read the note hello.txt")
 
+    # Scene 4: Collaboration
+    print("\n=== Scene 4: Collaboration Service ===")
+    print("Scenario: A Manager Agent delegating to a Worker Agent.")
+    
+    manager = ReActAgent(name="Manager")
+    worker = ReActAgent(name="Worker")
+    
+    # Network Discovery (Collaboration Layer)
+    network = {"Manager": manager, "Worker": worker}
+    manager.collaboration.discover_peers(network)
+    worker.collaboration.discover_peers(network)
+    
+    print("\n>>> User (to Manager): Ask Worker to calculate 50 * 12")
+    # We guide the logic to ensure it uses the tool
+    manager.run("Ask the agent named 'Worker' to calculate 50 * 12. Return the result to me.")
+
 if __name__ == "__main__":
     main()

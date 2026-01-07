@@ -2,6 +2,7 @@ from layers.perception import PerceptionLayer
 from layers.cognition import CognitionLayer, CognitiveOutput
 from layers.action import ActionLayer
 from layers.memory import MemoryLayer
+from layers.collaboration import CollaborationLayer
 
 class ReActAgent:
     """
@@ -15,12 +16,18 @@ class ReActAgent:
        - If Final Answer -> Return
     """
     
-    def __init__(self):
+    def __init__(self, name: str = "Assistant"):
+        self.name = name
         # Initialize the 'Organs' (Layers)
         self.perception = PerceptionLayer()
         self.brain = CognitionLayer()
         self.hands = ActionLayer()
         self.memory = MemoryLayer()
+        self.collaboration = CollaborationLayer(name)
+        
+        # Wire up collaboration
+        self.hands.register_tool("ask_agent", self.collaboration.ask_agent)
+        self.brain.add_tool("ask_agent(target_name: str, question: str)", "Ask another agent for help.")
         
     def run(self, user_input: str):
         # 1. Perception Layer (Input)
@@ -29,29 +36,29 @@ class ReActAgent:
         
         # Max steps to prevent infinite loops (Pattern Safeguard)
         for step in range(5):
-            print(f"\n--- Step {step+1} (ReAct Loop) ---")
+            print(f"\n--- [{self.name}] Step {step+1} (ReAct Loop) ---")
             
             # 2. Cognition Layer (Reasoning)
             # The 'Pattern' here is feeding the entire history to the brain at each step
             history = self.memory.get_history()
             decision: CognitiveOutput = self.brain.decide(history)
             
-            print(f"[Think]: {decision.thought}")
+            print(f"[{self.name} Think]: {decision.thought}")
             
             # 3. Handling Decision (Pattern Logic)
             if decision.final_answer:
-                print(f"[Final Answer]: {decision.final_answer}")
+                print(f"[{self.name} Final Answer]: {decision.final_answer}")
                 self.memory.add_entry("assistant", decision.final_answer)
                 return decision.final_answer
                 
             if decision.action:
                 # 4. Action Layer (Execution)
-                print(f"[Action Needed]: Call {decision.action} with {decision.action_input}")
+                print(f"[{self.name} Action Needed]: Call {decision.action} with {decision.action_input}")
                 tool_result = self.hands.execute(decision.action, decision.action_input)
                 
                 # 5. Feedback Loop (Pattern Logic)
                 # We feed the result back into memory so the brain sees it next time
-                print(f"[Observation]: {tool_result}")
+                print(f"[{self.name} Observation]: {tool_result}")
                 self.memory.add_entry("system", f"Tool {decision.action} returned: {tool_result}")
                 
         return "Agent stuck in a loop."

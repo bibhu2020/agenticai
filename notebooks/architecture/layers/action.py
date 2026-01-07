@@ -15,6 +15,9 @@ class ActionLayer:
             "read_note": self._tool_read_note
         }
     
+    def register_tool(self, name: str, func):
+        self.tools[name] = func
+    
     def execute(self, tool_name: str, args: Dict[str, Any]) -> str:
         if tool_name not in self.tools:
             return f"Error: Tool '{tool_name}' not found."

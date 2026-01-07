@@ -56,6 +56,15 @@ Instructions:
 - "action_input" should be a dictionary of arguments matching the tool signature.
         """
 
+    def add_tool(self, tool_name: str, tool_description: str):
+        # Insert the new tool properly
+        marker = "3. read_note(filename: str): Reads the content of a file."
+        if marker in self.system_prompt:
+             new_entry = f"\n4. {tool_name}: {tool_description}"
+             self.system_prompt = self.system_prompt.replace(marker, marker + new_entry)
+        else:
+             print("Warning: Could not inject tool description automatically.")
+
     def decide(self, history: List[Dict[str, str]]) -> CognitiveOutput:
         """
         Calls the LLM to decide the next step.
