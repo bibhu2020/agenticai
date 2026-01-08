@@ -1,8 +1,19 @@
-# Agentic AI: Architecture Layers vs. Design Patterns
+# Agentic AI: V2 - OpenAI Agents SDK Implementation
 
-This project demonstrates the core distinction between **Agentic Architecture Layers** (the structural components) and **Design Patterns** (the behavioral logic).
+> **Framework Integration**
+> This version refactors the agentic architecture to leverage the **OpenAI Agents SDK** (`agents` library).
+> It demonstrates how the core layers (Perception, Cognition, Action) can wrap robust, production-ready framework primitives.
+>
+> Key Upgrades:
+> - **Cognition**: Uses `agents.Agent` (not manual API calls).
+> - **Patterns**: Uses `agents.Runner` for the ReAct loop (not manual while-loops).
+> - **Handoffs**: Demonstrates native multi-agent handoffs (Swarm pattern).
+>
+> 👉 For the explicit, from-scratch implementation, see **[Architecture V1](../architecture_v1)**.
 
-It is designed as a "Glass Box" implementation—no external libraries (like LangChain or AutoGen) are heavily used, so you can see exactly how the components interact.
+## Project Overview
+
+This project maintains the **Layered Architecture** but upgrades the engine significantly.
 
 ## 📂 Project Structure
 
@@ -31,8 +42,8 @@ Layers represent the *separation of concerns* in the codebase.
 
 ### 2. Cognition Layer (`layers/cognition.py`)
 - **Role**: The decision engine (Brain).
-- **Function**: Takes the current `Memory` and `Perception` state to decide **what to do next**.
-- *Note*: In a production app, this would call OpenAI/Anthropic. Here, it uses a "Mock Intelligence" to simulate reasoning without API keys.
+- **Function**: Initializes and wraps the OpenAI `Agent` object.
+- **Upgrade**: Instead of manual parsing, it delegates reasoning and tool selection to the SDK.
 
 ### 3. Action Layer (`layers/action.py`)
 - **Role**: The execution unit (Hands).
