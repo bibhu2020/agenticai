@@ -9,8 +9,8 @@ __pycache__/
 *.tar*
 *.zip
 *.whl
-client_secret.json
-notebooks/architecture_v2/client_secret.json
+# client_secret.json
+# notebooks/architecture_v2/client_secret.json
 
 # Distribution / packaging
 .Python
