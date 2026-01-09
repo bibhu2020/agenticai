@@ -1,0 +1,9 @@
+langgraph
+langchain
+langchain_openai
+langchain_ollama
+langchain_huggingface
+huggingface_hub
+langchain_groq
+streamlit
+azure.identity
