@@ -33,8 +33,13 @@ APP_REGISTRY: Dict[str, Dict[str, str]] = {
         "entry": "app.py",
         "description": "Healthcare Assistant - Medical information with RAG and web search"
     },
-    "deep-research": {
-        "path": "src/deep-research",
+    "deep-research_v1": {
+        "path": "src/deep-research_v1",
+        "entry": "app.py",
+        "description": "Deep Research AI - Comprehensive research assistant"
+    },
+    "deep-research_v2": {
+        "path": "src/deep-research_v2",
         "entry": "app.py",
         "description": "Deep Research AI - Comprehensive research assistant"
     },
@@ -78,8 +83,13 @@ APP_REGISTRY: Dict[str, Dict[str, str]] = {
         "entry": "app.py",
         "description": "Literature Review Assistant - Multi-agent literature review tool"
     },
-    "market-analyst": {
-        "path": "src/market-analyst",
+    "market-analyst_v1": {
+        "path": "src/market-analyst_v1",
+        "entry": "app.py",
+        "description": "Market Analyst - Multi-agent market analysis tool"
+    },
+    "market-analyst_v2": {
+        "path": "src/market-analyst_v2",
         "entry": "app.py",
         "description": "Market Analyst - Multi-agent market analysis tool"
     },
