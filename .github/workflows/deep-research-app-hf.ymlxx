@@ -1,19 +1,18 @@
 name: Deploy Deep Research App to Hugging Face
 
 env:
-  PROJECT_PATH: src/src/deep-research
+  PROJECT_PATH: src/deep-research
   HF_TOKEN: ${{ secrets.HF_TOKEN }}
   HF_USERNAME: ${{ secrets.HF_USERNAME }}
-  HF_SPACE_NAME: src/deep-research
-  REPO_ID: ${{ secrets.HF_USERNAME }}/src/deep-research
+  HF_SPACE_NAME: deep-research
+  REPO_ID: ${{ secrets.HF_USERNAME }}/deep-research
 
 on:
   push:
     branches:
       - main
     paths:
-      - 'src/src/deep-research_v1/**'
-      - 'src/src/deep-research_v2/**'
+      - 'src/deep-research/**'
   workflow_dispatch:
 
 jobs:
@@ -24,50 +23,28 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - uses: dorny/paths-filter@v2
-      id: changes
-      with:
-        filters: |
-          v2:
-            - 'src/src/deep-research_v2/**'
-          v1:
-            - 'src/src/deep-research_v1/**'
-
-    - name: Determine configuration
-      run: |
-        if [[ "${{ steps.changes.outputs.v2 }}" == "true" ]]; then
-          echo "APP_NAME=src/deep-research_v2" >> $GITHUB_ENV
-          echo "APP_PATH=src/src/deep-research_v2" >> $GITHUB_ENV
-          echo "Deploying src/deep-research V2"
-        else
-          echo "APP_NAME=src/deep-research_v1" >> $GITHUB_ENV
-          echo "APP_PATH=src/src/deep-research_v1" >> $GITHUB_ENV
-          echo "Deploying src/deep-research V1"
-        fi
-
     - name: Create deployment directory structure
       run: |
         # Create a temporary deployment directory
         mkdir -p deploy_temp
-        
+
         # Create parent directories for nested copies
         mkdir -p deploy_temp/src
-        
+
         # Copy required folders
         cp -r common deploy_temp/
-        # Copy specific app folder to its correct path structure
-        cp -r ${{ env.APP_PATH }} deploy_temp/src/
+        cp -r src/deep-research deploy_temp/src/
         
         # Copy project metadata files
         cp uv.lock deploy_temp/
         cp pyproject.toml deploy_temp/
         
-        # Copy Dockerfile and run.py from the detected app to root of deploy_temp
-        cp ${{ env.APP_PATH }}/Dockerfile deploy_temp/
-        cp ${{ env.APP_PATH }}/README.md deploy_temp/ || true
+        # Copy Dockerfile and run.py from deep-research to root of deploy_temp
+        cp src/deep-research/Dockerfile deploy_temp/
+        cp src/deep-research/README.md deploy_temp/
         cp run.py deploy_temp/
         
-        echo "Deployment directory structure created for ${{ env.APP_NAME }}"
+        echo "Deployment directory structure created"
         ls -la deploy_temp/
 
     - name: Set up Python
