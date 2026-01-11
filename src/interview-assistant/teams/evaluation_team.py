@@ -2,29 +2,30 @@ from autogen_agentchat.teams import RoundRobinGroupChat
 from autogen_agentchat.conditions import TextMentionTermination, MaxMessageTermination
 from autogen_agentchat.agents import UserProxyAgent
 from agents.definitions import (
-    get_jd_summarizer, 
-    get_resume_summarizer, 
     get_evaluator, 
     get_coordinator
 )
 
 async def run_evaluation_team(candidate_name: str, job_description: str):
-    # Initialize Agents
-    jd_agent = get_jd_summarizer()
-    resume_agent = get_resume_summarizer()
+    # PRE-OPTIMIZATION: Fetch context directly to save LLM turns
+    from tools.rag_tools import search_candidate_knowledge_base
+    print(f"[DEBUG] Pre-fetching context for {candidate_name}...", flush=True)
+    resume_context = await search_candidate_knowledge_base(f"Summary and skills for {candidate_name}", candidate_name)
+
+    # Initialize Agents (Reduced Team)
+    # We merged JD & Resume analysis into the prompt for the Evaluator
     evaluator = get_evaluator()
     coordinator = get_coordinator()
 
     TERMINATION_KEYWORD = "EVALUATION" + "_" + "APPROVED"
 
     # Define Termination
-    # Stop when Coordinator says "EVALUATION_APPROVED"
-    termination = TextMentionTermination(TERMINATION_KEYWORD) | MaxMessageTermination(30)
+    termination = TextMentionTermination(TERMINATION_KEYWORD) | MaxMessageTermination(10)
 
-    # Create Team
-    # Analysis Flow: JD Agent -> Resume Agent -> Evaluator -> Coordinator -> (Loop)
+    # Create Team (2 Agents)
+    # Flow: Evaluator (Analysis) -> Coordinator (Validation) -> Loop
     team = RoundRobinGroupChat(
-        participants=[jd_agent, resume_agent, evaluator, coordinator], 
+        participants=[evaluator, coordinator], 
         termination_condition=termination
     )
 
@@ -32,20 +33,22 @@ async def run_evaluation_team(candidate_name: str, job_description: str):
     task = f"""
     PROJECT: Candidate Evaluation
     Candidate Name: {candidate_name}
-    Job Description: {job_description}
+    
+    JOB DESCRIPTION:
+    {job_description}
+    
+    RESUME CONTEXT (Pre-retrieved):
+    {resume_context}
     
     GOAL: Produce a high-quality, data-driven evaluation JSON.
 
     PROCESS:
-    1. JD_Summarizer, extract key requirements.
-    2. Resume_Summarizer, find matches for these requirements for {candidate_name}.
-    3. Evaluator, score the candidate (0-10) and analyze Strengths/Weaknesses.
-    4. Coordinator, review against the rules.
+    1. Evaluator: Analyze JD requirements vs Resume Context. Score (0-10) and identify Strengths/Weaknesses.
+    2. Coordinator: Review against strict JSON rules.
     
     ITERATION RULES:
-    - If the Coordinator REJECTS (due to vague data or bad format), the team must refine the analysis.
-    - Continue looping until the quality is perfect.
-    - When satisfied, Coordinator outputs the JSON and the signal: "EVALUATION", underscore, "APPROVED".
+    - If Coordinator REJECTS, Evaluator must fix.
+    - When satisfied, Coordinator outputs "EVALUATION", underscore, "APPROVED".
     """
 
     print(f"[DEBUG] Starting Evaluation Team for {candidate_name}")

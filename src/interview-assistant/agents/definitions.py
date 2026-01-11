@@ -29,18 +29,7 @@ model_client = OpenAIChatCompletionClient(
 )
 
 # --- Tools ---
-async def search_candidate_knowledge_base(query: str, candidate_name: str) -> str:
-    """Searches RAG for candidate details."""
-    print(f"[DEBUG] Tool 'search_candidate_knowledge_base' called with query='{query}', candidate='{candidate_name}'")
-    db = get_db()
-    results = db.query(query, candidate_name=candidate_name, n_results=5)
-    
-    if not results['documents'][0]:
-        print(f"[DEBUG] Tool found NO results for {candidate_name}")
-        return "No relevant info found."
-    
-    print(f"[DEBUG] Tool found {len(results['documents'][0])} segments for {candidate_name}")
-    return f"Context for {candidate_name}:\n" + "\n".join(results['documents'][0])
+# Tools moved to src/interview-assistant/tools/rag_tools.py
 
 # --- Evaluation Agents ---
 
@@ -67,15 +56,21 @@ def get_evaluator():
     return AssistantAgent(
         name="Evaluator",
         model_client=model_client,
-        system_message="""You are the Lead Evaluator. You receive the JD requirements and the Candidate's Resume evidence.
-        Compare them objectively.
+        system_message="""You are the Lead Evaluator. 
+        You will receive the Job Description and the Candidate's Resume Context.
         
-        Outputs required:
-        1. Fitness Score (0-10)
-        2. Top 3 Strengths
-        3. Top 3 Weaknesses
+        TASK:
+        1. Compare the Candidate's skills/experience against the JD critical requirements.
+        2. Identify specific Matches and Gaps.
+        3. Assign a Fitness Score (0-10).
         
-        Format your response clearly as a draft analysis."""
+        OUTPUT:
+        Produce a draft analysis with:
+        - Score
+        - Top 3 Strengths (Matches)
+        - Top 3 Weaknesses (Gaps)
+        - Brief Summary
+        """
     )
 
 def get_coordinator():
@@ -99,53 +94,28 @@ def get_coordinator():
         DECISION:
         - If satisfied, output the valid JSON immediately followed by "EVALUATION_APPROVED".
         - If NOT satisfied (e.g., vague analysis, missing JSON, unstructured), REJECT.
-           - Provide specific instructions to the Evaluator (or Resume_Summarizer) on what to fix.
+           - Provide specific instructions to the Evaluator on what to fix.
            - Do NOT output the termination keyword.
         """
     )
 
 # --- Interview Design Agents (Flow 3) ---
 
-def get_interview_strategist():
-    return AssistantAgent(
-        name="Interview_Strategist",
-        model_client=model_client,
-        system_message="""You are an Interview Strategist. Your goal is to decide the focus areas for the interview based on the Job Description (JD) and Candidate Profile.
-        
-        You will be provided with:
-        1. Job Description.
-        2. Candidate's Resume Context.
-        
-        TASK:
-        1. **Analyze the Role Type & Seniority**:
-           - **Developer/Junior**: Focus heavily on **Technical** execution (coding, syntax).
-           - **Senior/Principal**: Focus on **Technical** depth + **Leadership** (mentoring).
-           - **Architect**: Focus on **Technical** (System Design/Architecture) + **Leadership** (influence).
-           - **Manager/Lead**: Focus less on coding, more on **Leadership** (people management, strategy) & **Behavioral**.
-           
-        2. **Assign Weights** for 3 areas (Total 100%):
-           - Technical (Hard skills, System Design)
-           - Leadership (Soft skills, management, collaboration)
-           - Behavioral (Culture fit, problem solving)
-           
-        3. **Define Scope**:
-           - For Architects, "Technical" means System Design & patterns, not just coding.
-           - For Leads, "Leadership" means Delivery & People management.
-        
-        4. Output a Strategy Plan with the recommended % weights and specific topics to probe.
-        """
-    )
-
 def get_question_generator():
     return AssistantAgent(
         name="Question_Generator",
         model_client=model_client,
-        system_message="""You are a Senior Interviewer. 
-        Based on the Strategy Plan provided by the Strategist, generate exactly 20 Interview Questions.
+        system_message="""You are a Strategy-Driven Senior Interviewer.
         
-        DISTRIBUTION RULES:
-        - Distribute the 20 questions according to the % weights (Technical/Leadership/Behavioral).
-        - Vary complexity (Junior/Mid/Senior) based on the JD level.
+        PHASE 1: STRATEGY
+        - Analyze the JD Role & Seniority (Junior vs Senior vs Architect vs Manager).
+        - Determine weights:
+           * Developer: Focus on Tech.
+           * Architect: Focus on System Design/Tech.
+           * Manager: Focus on Leadership/Behavioral.
+        
+        PHASE 2: GENERATION
+        - Generate exactly 20 Interview Questions based on the strategy.
         
         CRITICAL INSTRUCTION:
         - Each Question MUST be detailed and descriptive (approx. 100-200 words). 

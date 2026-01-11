@@ -2,11 +2,10 @@ from autogen_agentchat.teams import RoundRobinGroupChat
 from autogen_agentchat.conditions import TextMentionTermination, MaxMessageTermination
 from autogen_agentchat.agents import UserProxyAgent
 from agents.definitions import (
-    get_interview_strategist, 
     get_question_generator, 
-    get_question_reviewer,
-    search_candidate_knowledge_base
+    get_question_reviewer
 )
+from tools.rag_tools import search_candidate_knowledge_base
 
 async def run_interview_generation_team(candidate_name: str, job_description: str):
     # Pre-fetch Context to simplify agent flow
@@ -15,20 +14,19 @@ async def run_interview_generation_team(candidate_name: str, job_description: st
     resume_context = await search_candidate_knowledge_base(f"Summary and skills for {candidate_name}", candidate_name)
 
     # Initialize Agents
-    strategist = get_interview_strategist()
+    # OPTIMIZATION: Removed Strategist agent to save calls. Generator handles both.
     generator = get_question_generator()
     reviewer = get_question_reviewer()
 
     TERMINATION_KEYWORD = "GUIDE" + "_" + "APPROVED"
     
-    # Define Termination
-    # Stop when Reviewer says "GUIDE_APPROVED"
-    termination = TextMentionTermination(TERMINATION_KEYWORD) | MaxMessageTermination(30)
+    # Define Termination (Reduced max turns slightly as we have fewer agents)
+    termination = TextMentionTermination(TERMINATION_KEYWORD) | MaxMessageTermination(15)
 
-    # Create Team
-    # Analysis Flow: Strategist -> Generator -> Reviewer -> (Loop)
+    # Create Team (2 Agents)
+    # Flow: Generator -> Reviewer -> Loop
     team = RoundRobinGroupChat(
-        participants=[strategist, generator, reviewer], 
+        participants=[generator, reviewer], 
         termination_condition=termination
     )
 
@@ -41,17 +39,18 @@ async def run_interview_generation_team(candidate_name: str, job_description: st
     RESUME CONTEXT:
     {resume_context}
     
-    GOAL: Create a high-quality, detailed Interview Guide.
+    GOAL: Create a high-quality, detailed Interview Guide (20 Questions).
     
     PROCESS:
-    1. Strategist: Analyze and set the plan (Weights/Topics).
-    2. Generator: Draft 20 detailed questions (100-200 words each).
-    3. Reviewer: Critically review against the checklist (Role fit, Depth, Logic, Format).
+    1. Generator:
+       - First, analyze Role/Seniority (e.g. Architect = System Design, Junior = Syntax) and determine Weights.
+       - Then, generate 20 Detailed Questions (100-200 words each) based on that strategy. Group by Category.
+    2. Reviewer: Critically review against checklist.
     
     ITERATION RULES:
-    - If the Reviewer REJECTS, the Strategist must refine parameters or calling out specific fixes, and the Generator must rewrite.
-    - Continue this loop until the quality is perfect.
-    - ONLY when the Reviewer is 100% satisfied, output the valid JSON list followed by the termination signal: "GUIDE", underscore, "APPROVED".
+    - If Reviewer REJECTS, Generator must rewrite.
+    - Loop until quality is perfect.
+    - When satisfied, output JSON + "GUIDE", underscore, "APPROVED".
     """
 
     print(f"[DEBUG] Starting Interview Generation Team for {candidate_name}", flush=True)
