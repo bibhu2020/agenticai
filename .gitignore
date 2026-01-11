@@ -20,6 +20,7 @@ dist/
 db/chroma_db/
 db/healthcare_db/
 src/image-generator/
+node_modules/
 # db/sessions/
 downloads/
 eggs/
