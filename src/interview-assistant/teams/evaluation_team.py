@@ -53,12 +53,20 @@ async def run_evaluation_team(candidate_name: str, job_description: str):
 
     print(f"[DEBUG] Starting Evaluation Team for {candidate_name}")
     last_message = ""
+    last_json_message = ""
+    
     async for message in team.run_stream(task=task):
         if hasattr(message, 'content') and isinstance(message.content, str):
-            print(f"[DEBUG] Agent '{message.source}' says: {message.content[:60]}...")
-            last_message = message.content
-            # Optional: Print stream for debug
-            # print(f"{message.source}: {message.content[:50]}...")
+            content = message.content
+            print(f"[DEBUG] Agent '{message.source}' says: {content[:60]}...")
+            last_message = content
+            
+            # Simple heuristic to trap the JSON payload
+            # look for keys that MUST be present
+            if '"score"' in content and '"key_matches"' in content:
+                last_json_message = content
     
     print(f"[DEBUG] Evaluation Team finished. Final message length: {len(last_message)}")
-    return last_message
+    
+    # Prefer the structured JSON message if we found one
+    return last_json_message if last_json_message else last_message

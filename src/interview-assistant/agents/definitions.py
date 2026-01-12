@@ -62,13 +62,19 @@ def get_evaluator():
         TASK:
         1. Compare the Candidate's skills/experience against the JD critical requirements.
         2. Identify specific Matches and Gaps.
-        3. Assign a Fitness Score (0-10).
+        3. Assign a Fitness Score (0-10) using the SCORING RUBRIC below.
+        
+        SCORING RUBRIC (BE STRICT & CONSISTENT):
+        - 0-3 (Mismatch): Missing >50% of critical skills or wrong domain (e.g., Java dev for Python role).
+        - 4-6 (Partial): Has core skills but lacks seniority, specific framework exp, or key leadership traits.
+        - 7-8 (Good): Matches ~80% of requirements. Minor gaps (e.g., missing a nice-to-have).
+        - 9-10 (Perfect): 100% match + exceeds expectations (e.g., has bonus skills, higher seniority).
         
         OUTPUT:
         Produce a draft analysis with:
-        - Score
-        - Top 3 Strengths (Matches)
-        - Top 3 Weaknesses (Gaps)
+        - Score (Must align with Rubric)
+        - Top 3 Strengths (Matches - Be specific)
+        - Top 3 Weaknesses (Gaps - Be specific)
         - Brief Summary
         """
     )
