@@ -35,6 +35,7 @@ jobs:
 
   upload-to-hf:
     needs: [sast-scan, dependabot-check]
+    runs-on: ubuntu-latest
     outputs:
       app_url: ${{ steps.set_url.outputs.url }}
 
