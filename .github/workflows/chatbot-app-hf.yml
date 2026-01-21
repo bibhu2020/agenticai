@@ -20,6 +20,7 @@ permissions:
   security-events: write
   actions: read
   contents: read
+  issues: write
 
 jobs:
   sast-scan:
@@ -178,3 +179,10 @@ jobs:
 
     - name: Upload to Hugging Face Hub
       run: python upload_to_hf.py
+
+  dast-scan:
+    name: DAST Security Scan
+    needs: upload-to-hf
+    uses: ./.github/workflows/reusable-dast-zap.yml
+    with:
+      target_url: "https://${{ secrets.HF_USERNAME }}-chatbot-app.hf.space"
