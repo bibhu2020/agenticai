@@ -1,0 +1,102 @@
+name: SAST CodeQL Scanning
+
+on:
+  workflow_call:
+    inputs:
+      language:
+        description: "Language to scan"
+        required: true
+        type: string
+    outputs:
+      critical_high_issues:
+        description: "Count of Critical and High issues"
+        value: ${{ jobs.codeql-scan.outputs.issue_count }}
+
+jobs:
+  codeql-scan:
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+      actions: read
+      contents: read
+    outputs:
+      issue_count: ${{ steps.count_issues.outputs.count }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v2
+        with:
+          languages: ${{ inputs.language }}
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v2
+        with:
+          category: "/language:${{ inputs.language }}"
+          output: results
+          upload: false
+
+      - name: Count Critical and High Issues
+        id: count_issues
+        shell: python
+        run: |
+          import json
+          import os
+          import glob
+
+          # Find the SARIF file in the results directory
+          sarif_files = glob.glob('results/*.sarif')
+          if not sarif_files:
+              print("No SARIF file found.")
+              with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
+                  fh.write("count=0\n")
+              exit(0)
+
+          sarif_file = sarif_files[0]
+          print(f"Processing {sarif_file}")
+
+          try:
+              with open(sarif_file) as f:
+                  data = json.load(f)
+
+              count = 0
+              for run in data.get('runs', []):
+                  # Create a map of rule_id -> rule object
+                  rules = {r['id']: r for r in run.get('tool', {}).get('driver', {}).get('rules', [])}
+                  
+                  for result in run.get('results', []):
+                      rule_id = result.get('ruleId')
+                      rule = rules.get(rule_id)
+                      
+                      if rule:
+                          # Check security-severity (7.0+ is High/Critical)
+                          # See: https://docs.github.com/en/code-security/code-scanning/integrating-with-code-scanning/sarif-support-for-code-scanning#severity-score
+                          properties = rule.get('properties', {})
+                          security_severity = properties.get('security-severity')
+                          
+                          if security_severity:
+                              try:
+                                  if float(security_severity) >= 7.0:
+                                      count += 1
+                              except ValueError:
+                                  pass
+                          else:
+                              # Fallback to 'problem.severity' if security-severity is missing?
+                              # Usually security-severity is the standard for CVSS-based severity.
+                              # 'level' can be 'error', 'warning', 'note'.
+                              # 'error' typically aligns with High/Critical in default CodeQL queries.
+                              level = result.get('level')
+                              # Some SARIFs put level in result.level or rule.defaultConfiguration.level
+                              pass
+
+              print(f"Found {count} critical/high issues")
+              with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
+                  fh.write(f"count={count}\n")
+                  
+          except Exception as e:
+              print(f"Error parsing SARIF: {e}")
+              # Fail closed or open? Let's report error but maybe 0 to invoke manual check?
+              # Better to fail.
+              exit(1)

@@ -1,0 +1,5 @@
+{
+    "python.defaultInterpreterPath": "$HOME/agenticai/.venv/bin/python",
+    "python.terminal.activateEnvInSelectedTerminal": true,
+    "jupyter.notebookEditor.defaultKernel": "agenticai"
+}

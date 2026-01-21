@@ -12,19 +12,19 @@ load_dotenv(os.path.join(ROOT_DIR, ".env"))
 # Shared Model Client
 # model_client = OpenAIChatCompletionClient(model="gpt-4")
 
-# Groq via OpenAI Compatibility
-api_key = os.getenv("GROQ_API_KEY")
-print(f"[DEBUG] Loading Groq Client. Key found: {'Yes' if api_key else 'No'}")
+# Local Model via OpenAI Compatibility
+api_key = "ollama" # Local models often don't require a key, but the client might expect one
+print(f"[DEBUG] Loading Local Client. Model: ai/llama3.2:latest")
 
 model_client = OpenAIChatCompletionClient(
-    model="llama-3.3-70b-versatile",
+    model="ai/llama3.2",
     api_key=api_key,
-    base_url="https://api.groq.com/openai/v1",
+    base_url="http://localhost:12434/engines/v1",
     model_info={
         "vision": False,
         "function_calling": True,
         "json_output": True,
-        "family": "unknown"
+        "family": "llama3"
     }
 )
 

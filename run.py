@@ -97,6 +97,11 @@ APP_REGISTRY: Dict[str, Dict[str, str]] = {
         "path": "src/interview-assistant",
         "entry": "app.py",
         "description": "Interview Assistant - Multi-agent interview tool"
+    },
+    "finadvisor": {
+        "path": "src/finadvisor",
+        "entry": "app.py",
+        "description": "Financial Advisor - Multi-agent financial advisor tool"
     }
 }
 

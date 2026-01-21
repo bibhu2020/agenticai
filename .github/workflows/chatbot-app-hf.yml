@@ -17,10 +17,30 @@ on:
   workflow_dispatch:
 
 jobs:
+  sast-scan:
+    name: SAST Security Scan
+    uses: ./.github/workflows/sast-codeql.yml
+    with:
+      language: 'python'
+    permissions:
+      security-events: write
+      actions: read
+      contents: read
+
   upload-to-hf:
+    needs: sast-scan
     runs-on: ubuntu-latest
 
     steps:
+    - name: Verify SAST Scan Results
+      run: |
+        ISSUE_COUNT="${{ needs.sast-scan.outputs.critical_high_issues }}"
+        echo "SAST Scan found $ISSUE_COUNT critical/high issues."
+        if [ "$ISSUE_COUNT" -gt 0 ]; then
+          echo "Stopping pipeline due to critical/high security issues."
+          exit 1
+        fi
+
     - name: Checkout repository
       uses: actions/checkout@v3
 
