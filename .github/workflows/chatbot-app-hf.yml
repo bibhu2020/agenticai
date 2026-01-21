@@ -27,17 +27,33 @@ jobs:
       actions: read
       contents: read
 
+  dependabot-check:
+    name: SCA Dependabot Check
+    uses: ./.github/workflows/sca-dependabot.yml
+    permissions:
+      dependabot-alerts: read
+      contents: read
+
   upload-to-hf:
-    needs: sast-scan
+    needs: [sast-scan, dependabot-check]
     runs-on: ubuntu-latest
 
     steps:
-    - name: Verify SAST Scan Results
+    - name: Verify Security Scan Results
       run: |
-        ISSUE_COUNT="${{ needs.sast-scan.outputs.critical_high_issues }}"
-        echo "SAST Scan found $ISSUE_COUNT critical/high issues."
-        if [ "$ISSUE_COUNT" -gt 0 ]; then
-          echo "Stopping pipeline due to critical/high security issues."
+        SAST_COUNT="${{ needs.sast-scan.outputs.critical_high_issues }}"
+        SCA_COUNT="${{ needs.dependabot-check.outputs.critical_issues }}"
+        
+        echo "SAST Scan found $SAST_COUNT critical/high issues."
+        echo "SCA Dependabot Check found $SCA_COUNT critical issues."
+        
+        if [ "$SAST_COUNT" -gt 0 ]; then
+          echo "Stopping pipeline due to SAST security issues."
+          exit 1
+        fi
+        
+        if [ "$SCA_COUNT" -gt 0 ]; then
+          echo "Stopping pipeline due to SCA Dependabot security issues."
           exit 1
         fi
 

@@ -1,0 +1,34 @@
+name: SCA Dependabot Check
+
+on:
+  workflow_call:
+    outputs:
+      critical_issues:
+        description: "Count of Critical issues"
+        value: ${{ jobs.check-dependabot.outputs.issue_count }}
+
+jobs:
+  check-dependabot:
+    runs-on: ubuntu-latest
+    permissions:
+      dependabot-alerts: read
+      contents: read
+    outputs:
+      issue_count: ${{ steps.count_issues.outputs.count }}
+
+    steps:
+      - name: Check Dependabot Alerts
+        id: count_issues
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "Checking for Critical Dependabot alerts..."
+          
+          # specific endpoint for dependabot alerts
+          # filtering by state=open and severity=critical
+          # Note: This requires 'dependabot-alerts: read' permission
+          
+          COUNT=$(gh api "/repos/${{ github.repository }}/dependabot/alerts?state=open&severity=critical" --jq 'length')
+          
+          echo "Found $COUNT critical alerts."
+          echo "count=$COUNT" >> $GITHUB_OUTPUT

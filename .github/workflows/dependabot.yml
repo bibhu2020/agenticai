@@ -1,0 +1,6 @@
+version: 2
+updates:
+  - package-ecosystem: "pip" # Change to "npm", "docker", "gomod", etc.
+    directory: "/"
+    schedule:
+      interval: "weekly" # Options: daily, weekly, monthly

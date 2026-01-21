@@ -38,11 +38,19 @@ jobs:
           output: results
           upload: false
 
+      - name: Debug - List Results
+        run: |
+          echo "Listing current directory:"
+          ls -la
+          echo "Listing results directory:"
+          ls -R results || echo "Results directory not found"
+
       - name: Upload CodeQL Results
         uses: actions/upload-artifact@v4
         with:
           name: codeql-results-${{ inputs.language }}
           path: results
+          retention-days: 5
 
       - name: Count Critical and High Issues
         id: count_issues
