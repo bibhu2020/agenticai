@@ -35,9 +35,13 @@ jobs:
 
   upload-to-hf:
     needs: [sast-scan, dependabot-check]
-    runs-on: ubuntu-latest
+    outputs:
+      app_url: ${{ steps.set_url.outputs.url }}
 
     steps:
+    - name: Set App URL
+      id: set_url
+      run: echo "url=https://${{ secrets.HF_USERNAME }}-chatbot-app.hf.space" >> $GITHUB_OUTPUT
     - name: Verify Security Scan Results
       run: |
         SAST_COUNT="${{ needs.sast-scan.outputs.critical_high_issues }}"
@@ -185,4 +189,5 @@ jobs:
     needs: upload-to-hf
     uses: ./.github/workflows/reusable-dast-zap.yml
     with:
-      target_url: "https://${{ secrets.HF_USERNAME }}-chatbot-app.hf.space"
+      target_url: ${{ needs.upload-to-hf.outputs.app_url }}
+

@@ -7,8 +7,12 @@ on:
         description: "Count of Critical issues"
         value: ${{ jobs.check-dependabot.outputs.issue_count }}
 
+jobs:
   check-dependabot:
     runs-on: ubuntu-latest
+    permissions:
+      dependabot-alerts: read
+      contents: read
     outputs:
       issue_count: ${{ steps.count_issues.outputs.count }}
 
