@@ -16,23 +16,22 @@ on:
       - 'src/chatbot_v2/**'
   workflow_dispatch:
 
+permissions:
+  security-events: write
+  actions: read
+  contents: read
+  dependabot-alerts: read
+
 jobs:
   sast-scan:
     name: SAST Security Scan
-    uses: ./.github/workflows/sast-codeql.yml
+    uses: ./.github/workflows/reusable-sast-codeql.yml
     with:
       language: 'python'
-    permissions:
-      security-events: write
-      actions: read
-      contents: read
 
   dependabot-check:
     name: SCA Dependabot Check
-    uses: ./.github/workflows/sca-dependabot.yml
-    permissions:
-      dependabot-alerts: read
-      contents: read
+    uses: ./.github/workflows/reusable-sca-dependabot.yml
 
   upload-to-hf:
     needs: [sast-scan, dependabot-check]
