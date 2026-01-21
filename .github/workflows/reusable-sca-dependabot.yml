@@ -10,9 +10,6 @@ on:
 jobs:
   check-dependabot:
     runs-on: ubuntu-latest
-    permissions:
-      dependabot-alerts: read
-      contents: read
     outputs:
       issue_count: ${{ steps.count_issues.outputs.count }}
 
