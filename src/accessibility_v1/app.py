@@ -11,6 +11,9 @@ from agents.mcp import MCPServerStdio
 import aiohttp
 from xml.etree import ElementTree as ET
 from openai import AsyncOpenAI
+import urllib.parse
+import ipaddress
+import socket
 
 # Allow nested async in Jupyter/Streamlit
 nest_asyncio.apply()
@@ -19,7 +22,44 @@ nest_asyncio.apply()
 TEMPLATE_PATH = os.path.abspath("templates/dashboard_template.html")
 
 
+def is_safe_url(url: str) -> bool:
+    """
+    Basic SSRF protection: allow only http(s) URLs whose resolved IPs are not
+    private, loopback, link-local, or reserved.
+    """
+    try:
+        parsed = urllib.parse.urlparse(url)
+        if parsed.scheme not in ("http", "https"):
+            return False
+        if not parsed.hostname:
+            return False
+        # Resolve hostname to IPs
+        addrinfo_list = socket.getaddrinfo(parsed.hostname, None)
+        for family, _, _, _, sockaddr in addrinfo_list:
+            if family == socket.AF_INET:
+                ip_str = sockaddr[0]
+            elif family == socket.AF_INET6:
+                ip_str = sockaddr[0]
+            else:
+                continue
+            ip_obj = ipaddress.ip_address(ip_str)
+            if (
+                ip_obj.is_private
+                or ip_obj.is_loopback
+                or ip_obj.is_link_local
+                or ip_obj.is_reserved
+                or ip_obj.is_multicast
+            ):
+                return False
+        return True
+    except Exception:
+        # On any error parsing or resolving, consider the URL unsafe
+        return False
+
+
 async def fetch_sitemap_urls(base_url: str):
+    if not is_safe_url(base_url):
+        raise ValueError(f"Unsafe or invalid URL provided: {base_url}")
     sitemap_url = base_url.rstrip("/") + "/sitemap.xml"
     urls = []
     async with aiohttp.ClientSession() as session:
