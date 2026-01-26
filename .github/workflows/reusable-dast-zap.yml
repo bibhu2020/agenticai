@@ -1,4 +1,4 @@
-name: DAST OWASP ZAP Scan
+name: DAST OWASP ZAP Scan Template
 
 on:
   workflow_call:

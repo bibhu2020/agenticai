@@ -36,7 +36,7 @@ jobs:
 
   codeql-scan:
     name: SAST CodeQL Scan
-    uses: ./.github/workflows/templates/reusable-sast-codeql.yml
+    uses: ./.github/workflows/reusable-sast-codeql.yml
     with:
       language: python
     permissions:
@@ -47,7 +47,7 @@ jobs:
 
   dependabot-scan:
     name: SCA Dependabot Scan
-    uses: ./.github/workflows/templates/reusable-sca-dependabot.yml
+    uses: ./.github/workflows/reusable-sca-dependabot.yml
 
     secrets: inherit
 

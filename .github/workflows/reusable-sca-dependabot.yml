@@ -1,4 +1,4 @@
-name: SCA Dependabot Check
+name: SCA Dependabot Check Template
 
 on:
   workflow_call:
