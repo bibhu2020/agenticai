@@ -25,13 +25,13 @@ permissions:
 jobs:
   sast-scan:
     name: SAST Security Scan
-    uses: ./.github/workflows/reusable-sast-codeql.yml
+    uses: ./.github/workflows/templates/reusable-sast-codeql.yml
     with:
       language: 'python'
 
   dependabot-check:
     name: SCA Dependabot Check
-    uses: ./.github/workflows/reusable-sca-dependabot.yml
+    uses: ./.github/workflows/templates/reusable-sca-dependabot.yml
     secrets: inherit
 
   upload-to-hf:
@@ -189,7 +189,7 @@ jobs:
   dast-scan:
     name: DAST Security Scan
     needs: upload-to-hf
-    uses: ./.github/workflows/reusable-dast-zap.yml
+    uses: ./.github/workflows/templates/reusable-dast-zap.yml
     with:
       target_url: ${{ needs.upload-to-hf.outputs.app_url }}
 
