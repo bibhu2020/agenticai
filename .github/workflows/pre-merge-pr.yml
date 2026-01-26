@@ -1,0 +1,93 @@
+name: Pre-Merge PR Checks
+
+on:
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+  security-events: write
+  dependabot-alerts: read
+  actions: read
+  checks: write
+  pull-requests: write
+
+jobs:
+  unit-tests:
+    name: Unit Tests & Coverage
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install .
+          pip install pytest pytest-asyncio pytest-cov
+          
+      - name: Run Tests with Coverage
+        run: |
+          pytest --cov=src --cov=common --cov-report=term --cov-report=xml --cov-fail-under=80 tests/
+
+  codeql-scan:
+    name: SAST CodeQL Scan
+    uses: ./.github/workflows/reusable-sast-codeql.yml
+    with:
+      language: python
+    permissions:
+      security-events: write
+      actions: read
+      contents: read
+    secrets: inherit
+
+  dependabot-scan:
+    name: SCA Dependabot Scan
+    uses: ./.github/workflows/reusable-sca-dependabot.yml
+    permissions:
+      dependabot-alerts: read
+    secrets: inherit
+
+  security-gate:
+    name: Security Gate
+    needs: [codeql-scan, dependabot-scan, unit-tests]
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
+      - name: Evaluate Unit Tests
+        if: needs.unit-tests.result != 'success'
+        run: |
+          echo "::error::Unit tests failed."
+          exit 1
+
+      - name: Evaluate CodeQL Results
+        if: needs.codeql-scan.result == 'success'
+        run: |
+          count=${{ needs.codeql-scan.outputs.critical_high_issues }}
+          echo "CodeQL Critical/High Issues: $count"
+          if [ "$count" -gt 0 ]; then
+            echo "::error::CodeQL found $count critical/high issues."
+            exit 1
+          fi
+      
+      - name: Evaluate Dependabot Results
+        if: needs.dependabot-scan.result == 'success'
+        run: |
+          count=${{ needs.dependabot-scan.outputs.critical_issues }}
+          echo "Dependabot Critical Issues: $count"
+          if [ "$count" -gt 0 ]; then
+            echo "::error::Dependabot found $count critical issues."
+            exit 1
+          fi
+
+      - name: Check Workflow Status
+        if: |
+          needs.codeql-scan.result != 'success' || 
+          needs.dependabot-scan.result != 'success'
+        run: |
+          echo "::error::One or more security scans failed to complete successfully."
+          exit 1

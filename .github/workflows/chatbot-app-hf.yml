@@ -32,6 +32,7 @@ jobs:
   dependabot-check:
     name: SCA Dependabot Check
     uses: ./.github/workflows/reusable-sca-dependabot.yml
+    secrets: inherit
 
   upload-to-hf:
     needs: [sast-scan, dependabot-check]
