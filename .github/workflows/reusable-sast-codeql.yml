@@ -1,4 +1,4 @@
-name: SAST CodeQL Scanning Template
+name: SAST CodeQL Scanning (template)
 
 on:
   workflow_call:
