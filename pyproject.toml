@@ -47,7 +47,7 @@ dependencies = [
     # VECTOR DB / INDEXING
     # =======================
     "faiss-cpu>=1.13.0",
-    "chromadb==1.3.5",
+    "chromadb==1.4.1",
     "sentence-transformers>=5.1.2",
     "pymupdf",
     "pypdf>=6.3.0",
