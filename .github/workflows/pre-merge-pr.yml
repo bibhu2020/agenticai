@@ -7,7 +7,7 @@ on:
 permissions:
   contents: read
   security-events: write
-  dependabot-alerts: read
+
   actions: read
   checks: write
   pull-requests: write
@@ -48,8 +48,7 @@ jobs:
   dependabot-scan:
     name: SCA Dependabot Scan
     uses: ./.github/workflows/reusable-sca-dependabot.yml
-    permissions:
-      dependabot-alerts: read
+
     secrets: inherit
 
   security-gate:
