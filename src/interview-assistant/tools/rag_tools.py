@@ -4,7 +4,7 @@ async def search_candidate_knowledge_base(query: str, candidate_name: str) -> st
     """Searches RAG for candidate details."""
     print(f"[DEBUG] Tool 'search_candidate_knowledge_base' called with query='{query}', candidate='{candidate_name}'")
     db = get_db()
-    results = db.query(query, candidate_name=candidate_name, n_results=5)
+    results = db.query(query, candidate_name=candidate_name, n_results=3)
     
     if not results['documents'][0]:
         print(f"[DEBUG] Tool found NO results for {candidate_name}")

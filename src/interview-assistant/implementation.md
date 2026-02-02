@@ -32,7 +32,7 @@ We will use **`autogen-agentchat`** to orchestrate the multi-agent workflow for 
     *   **Vector DB**: ChromaDB (Local persistent).
     *   **Orchestration**: Agents will access ChromaDB via registered tools (`register_function`).
     *   **Embeddings**: OpenAI or compatible (SentenceTransformers).
-    *   **LLM**: Groq (Llama 3.3 70B).
+    *   **LLM**: Ollama (Gemma 3 4B) hosted on Ollama Cloud.
 
 ## 4. Directory Structure
 ```text

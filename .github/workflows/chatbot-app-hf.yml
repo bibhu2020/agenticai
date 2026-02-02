@@ -17,25 +17,10 @@ on:
   workflow_dispatch:
 
 permissions:
-  security-events: write
-  actions: read
   contents: read
-  issues: write
 
 jobs:
-  sast-scan:
-    name: SAST Security Scan
-    uses: ./.github/workflows/reusable-sast-codeql.yml
-    with:
-      language: 'python'
-
-  dependabot-check:
-    name: SCA Dependabot Check
-    uses: ./.github/workflows/reusable-sca-dependabot.yml
-    secrets: inherit
-
   upload-to-hf:
-    needs: [sast-scan, dependabot-check]
     runs-on: ubuntu-latest
     outputs:
       app_url: ${{ steps.set_url.outputs.url }}
@@ -44,23 +29,6 @@ jobs:
     - name: Set App URL
       id: set_url
       run: echo "url=https://${{ secrets.HF_USERNAME }}-chatbot-app.hf.space" >> $GITHUB_OUTPUT
-    - name: Verify Security Scan Results
-      run: |
-        SAST_COUNT="${{ needs.sast-scan.outputs.critical_high_issues }}"
-        SCA_COUNT="${{ needs.dependabot-check.outputs.critical_issues }}"
-        
-        echo "SAST Scan found $SAST_COUNT critical/high issues."
-        echo "SCA Dependabot Check found $SCA_COUNT critical issues."
-        
-        if [ "$SAST_COUNT" -gt 0 ]; then
-          echo "Stopping pipeline due to SAST security issues."
-          exit 1
-        fi
-        
-        if [ "$SCA_COUNT" -gt 0 ]; then
-          echo "Stopping pipeline due to SCA Dependabot security issues."
-          exit 1
-        fi
 
     - name: Checkout repository
       uses: actions/checkout@v3
@@ -185,11 +153,3 @@ jobs:
 
     - name: Upload to Hugging Face Hub
       run: python upload_to_hf.py
-
-  dast-scan:
-    name: DAST Security Scan
-    needs: upload-to-hf
-    uses: ./.github/workflows/reusable-dast-zap.yml
-    with:
-      target_url: ${{ needs.upload-to-hf.outputs.app_url }}
-

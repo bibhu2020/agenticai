@@ -39,12 +39,12 @@ async def run_interview_generation_team(candidate_name: str, job_description: st
     RESUME CONTEXT:
     {resume_context}
     
-    GOAL: Create a high-quality, detailed Interview Guide (20 Questions).
+    GOAL: Create a high-quality, detailed Interview Guide (10 Questions).
     
     PROCESS:
     1. Generator:
        - First, analyze Role/Seniority (e.g. Architect = System Design, Junior = Syntax) and determine Weights.
-       - Then, generate 20 Detailed Questions (100-200 words each) based on that strategy. Group by Category.
+       - Then, generate 10 Detailed Questions (50-100 words each) based on that strategy. Group by Category.
     2. Reviewer: Critically review against checklist.
     
     ITERATION RULES:
@@ -90,7 +90,7 @@ async def run_interview_revision(current_questions: str, feedback: str):
     User Feedback: {feedback}
     
     TASK: Revise the questions based on the feedback.
-    Output the FULL revised list of 20 questions in the same JSON list format.
+    Output the FULL revised list of 10 questions in the same JSON list format.
     """
     
     print(f"[DEBUG] Starting Revision", flush=True)

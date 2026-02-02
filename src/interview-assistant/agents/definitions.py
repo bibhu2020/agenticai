@@ -3,6 +3,7 @@ from autogen_ext.models.openai import OpenAIChatCompletionClient
 import os
 from rag.db import get_db
 from dotenv import load_dotenv
+from tools.rag_tools import search_candidate_knowledge_base
 
 # Assuming agents/definitions.py is in src/interview-assistant/agents/, root is 3 levels up
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
@@ -12,20 +13,21 @@ load_dotenv(os.path.join(ROOT_DIR, ".env"))
 # Shared Model Client
 # model_client = OpenAIChatCompletionClient(model="gpt-4")
 
-# Local Model via OpenAI Compatibility
-api_key = "ollama" # Local models often don't require a key, but the client might expect one
-print(f"[DEBUG] Loading Local Client. Model: ai/llama3.2:latest")
+# Ollama Cloud
+api_key = os.getenv("OLLAMA_API_KEY") 
+print(f"[DEBUG] Loading Ollama Client on Ollama Cloud. Model: gemma3:4b")
 
 model_client = OpenAIChatCompletionClient(
-    model="ai/llama3.2",
+    model="gemma3:4b",
     api_key=api_key,
-    base_url="http://localhost:12434/engines/v1",
+    base_url="https://ollama.com/v1",
     model_info={
         "vision": False,
         "function_calling": True,
         "json_output": True,
-        "family": "llama3"
-    }
+        "family": "gemma"
+    },
+    extra_parameters={"max_tokens": 4096}
 )
 
 # --- Tools ---
@@ -121,11 +123,11 @@ def get_question_generator():
            * Manager: Focus on Leadership/Behavioral.
         
         PHASE 2: GENERATION
-        - Generate exactly 20 Interview Questions based on the strategy.
+        - Generate exactly 10 Interview Questions based on the strategy.
         
         CRITICAL INSTRUCTION:
-        - Each Question MUST be detailed and descriptive (approx. 100-200 words). 
-        - DO NOT ask simple one-liners. Use scenario-based questions, case studies, or multi-part situational problems to provide deep context.
+        - Each Question MUST be clear and descriptive (approx. 50-100 words). 
+        - DO NOT ask simple one-liners. Use scenario-based questions or multi-part situational problems.
         
         ORGANIZATION:
         - Group the questions by Category: Present all Technical questions first, then Leadership, then Behavioral.
@@ -134,8 +136,8 @@ def get_question_generator():
         Output the questions as a JSON List of Objects. Each object must have:
         {
           "category": "Technical|Leadership|Behavioral",
-          "u_id": int (1-20),
-          "question": "The detailed scenario-based question text (100-200 words)",
+          "u_id": int (1-10),
+          "question": "The detailed scenario-based question text (50-100 words)",
           "complexity": "Low|Medium|High",
           "likely_answer": "Key points expected in a good answer"
         }
@@ -149,9 +151,9 @@ def get_question_reviewer():
         system_message="""You are the Interview Board Chair. Review the generated questions.
         
         CHECKLIST:
-        1. Are there exactly 20 questions?
+        1. Are there exactly 10 questions?
         2. Do they cover the specific topics identified by the Strategist?
-        3. Are the questions SUFFICIENTLY DETAILED (100-200 words each)?
+        3. Are the questions SUFFICIENTLY DETAILED (50-100 words each)?
         4. Are the 'likely_answer' keys provided and accurate?
         5. Is the format valid JSON?
         
