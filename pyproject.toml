@@ -47,7 +47,7 @@ dependencies = [
     # VECTOR DB / INDEXING
     # =======================
     "faiss-cpu>=1.13.0",
-    "chromadb==1.4.1",
+    "chromadb>=0.4.0",
     "sentence-transformers>=5.1.2",
     "pymupdf",
     "pypdf>=6.3.0",
@@ -114,7 +114,9 @@ dependencies = [
     # AUDIO / VIDEO
     # =======================
     "yt_dlp>=2025.11.12",
-    "openai-whisper>=1.0.0",
+    "openai-whisper==20240930",
+    "numba==0.59.0",
+    "llvmlite==0.42.0",
 
     # =======================
     # MACHINE LEARNING
