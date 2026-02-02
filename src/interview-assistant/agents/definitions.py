@@ -14,18 +14,18 @@ load_dotenv(os.path.join(ROOT_DIR, ".env"))
 # model_client = OpenAIChatCompletionClient(model="gpt-4")
 
 # Ollama Cloud
-api_key = os.getenv("OLLAMA_API_KEY") 
+api_key = os.getenv("OLLAMA_API_KEY", "dummy_key") 
 print(f"[DEBUG] Loading Ollama Client on Ollama Cloud. Model: gemma3:4b")
 
 model_client = OpenAIChatCompletionClient(
-    model="gemma3:4b",
+    model="llama3.2:3b",
     api_key=api_key,
-    base_url="https://ollama.com/v1",
+    base_url="https://mishrabp-ollama.hf.space/v1",
     model_info={
         "vision": False,
         "function_calling": True,
         "json_output": True,
-        "family": "gemma"
+        "family": "llama"
     },
     extra_parameters={"max_tokens": 4096}
 )
