@@ -30,6 +30,7 @@ jobs:
           "https://mishrabp-market-analyst.hf.space"
           "https://mishrabp-twitter-sentiment-analysis.hf.space"
           "https://mishrabp-ollama.hf.space"
+          "https://mishrabp-mlstocks.hf.space"
         )
 
         # Loop through URLs and send HEAD requests
