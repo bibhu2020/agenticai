@@ -533,35 +533,35 @@ onMounted(() => {
                     <tr>
                         <th>Date</th>
                         <th>Ticker</th>
-                        <th>Model</th>
+                        <th class="mobile-hide">Model</th>
                         <th>Decision</th>
-                        <th>Confidence</th>
-                        <th>Strategy</th>
-                        <th>Max Profit</th>
-                        <th style="width: 50px"></th>
+                        <th class="mobile-hide">Confidence</th>
+                        <th class="mobile-hide">Strategy</th>
+                        <th class="mobile-hide">Max Profit</th>
+                        <th class="mobile-hide" style="width: 50px"></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr v-for="item in history" :key="item.id" @click="openReport(item)">
                         <td class="col-date">{{ item.timestamp }}</td>
                         <td class="col-ticker"><span class="ticker-pill">{{ item.ticker }}</span></td>
-                        <td class="col-model"><span class="model-badge">{{ item.model || 'Unknown' }}</span></td>
+                        <td class="col-model mobile-hide"><span class="model-badge">{{ item.model || 'Unknown' }}</span></td>
                         <td>
                             <span class="decision-pill" :style="{ color: getDecisionColor(item.final_decision), borderColor: getDecisionColor(item.final_decision) }">
                                 {{ item.final_decision }}
                             </span>
                         </td>
-                        <td>
+                        <td class="mobile-hide">
                             <div class="confidence-bar-wrapper">
                                 <div class="confidence-bar" :style="{ width: item.confidence + '%', backgroundColor: getDecisionColor(item.final_decision) }"></div>
                                 <span>{{ item.confidence }}%</span>
                             </div>
                         </td>
-                        <td>{{ item.strategy_type }}</td>
-                        <td class="col-profit" :class="{ 'has-profit': item.max_profit > 0 }">
+                        <td class="mobile-hide">{{ item.strategy_type }}</td>
+                        <td class="col-profit mobile-hide" :class="{ 'has-profit': item.max_profit > 0 }">
                             {{ item.max_profit ? '$' + item.max_profit : '-' }}
                         </td>
-                        <td class="col-action"><ChevronRight :size="16" /></td>
+                        <td class="col-action mobile-hide"><ChevronRight :size="16" /></td>
                     </tr>
                 </tbody>
             </table>
@@ -1591,6 +1591,10 @@ onMounted(() => {
   
   .item-label {
     display: none; /* Hide text on mobile as requested */
+  }
+  
+  .mobile-hide {
+    display: none;
   }
 }
 </style>
