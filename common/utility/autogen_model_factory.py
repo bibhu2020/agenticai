@@ -51,23 +51,45 @@ class AutoGenModelFactory:
         # GOOGLE (GEMINI) via OpenAI Compat
         # ----------------------------------------------------------------------
         elif provider.lower() == "google" or provider.lower() == "gemini":
+            if model_info is None:
+                model_info = {
+                    "family": "gpt",
+                    "vision": False,
+                    "function_calling": True,
+                    "json_output": True,
+                    "structured_output": False
+                }
+            
             return OpenAIChatCompletionClient(
                 model=model_name,
                 base_url="https://generativelanguage.googleapis.com/v1beta/openai/",
                 api_key=os.environ["GOOGLE_API_KEY"],
-                model_info=model_info, # Pass full model_info for capabilities
+                model_info=model_info,
                 temperature=temperature,
+                max_tokens=2048,
+                extra_headers={"x-goog-api-key": os.environ["GOOGLE_API_KEY"]}
             )
 
         # ----------------------------------------------------------------------
         # GROQ
         # ----------------------------------------------------------------------
         elif provider.lower() == "groq":
+            if model_info is None:
+                model_info = {
+                    "family": "llama", # Use llama family for Groq
+                    "vision": False,
+                    "function_calling": True,
+                    "json_output": True,
+                    "structured_output": False
+                }
+            
             return OpenAIChatCompletionClient(
                 model=model_name,
                 base_url="https://api.groq.com/openai/v1",
                 api_key=os.environ["GROQ_API_KEY"],
+                model_info=model_info,
                 temperature=temperature,
+                max_tokens=2048
             )
         
         # ----------------------------------------------------------------------

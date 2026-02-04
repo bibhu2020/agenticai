@@ -18,7 +18,7 @@ import subprocess
 import argparse
 from pathlib import Path
 from typing import Dict, Optional
-from agents import Runner, SQLiteSession
+# from agents import Runner, SQLiteSession
 # from agents import set_trace_processors
 # from langsmith.wrappers import OpenAIAgentsTracingProcessor
 
@@ -56,6 +56,7 @@ APP_REGISTRY: Dict[str, Dict[str, str]] = {
     "trip-planner": {
         "path": "src/trip-planner",
         "entry": "main.py",
+        "type": "fastapi",
         "description": "Trip Planner - Detailed trip itinerary planning"
     },
     "chatbot_v1": {
@@ -85,8 +86,9 @@ APP_REGISTRY: Dict[str, Dict[str, str]] = {
     },
     "market-analyst": {
         "path": "src/market-analyst",
-        "entry": "app.py",
-        "description": "Market Analyst - Multi-agent market analysis tool"
+        "entry": "backend/main.py",
+        "type": "fastapi",
+        "description": "Market Analyst - Decoupled Multi-agent market analysis (Vue.js + FastAPI)"
     },
     "image": {
         "path": "src/image-generator",
@@ -177,15 +179,52 @@ def launch_app(app_name: str, port: Optional[int] = None):
     print(f"📂 Location: {config['path']}")
     print(f"🌐 Entry Point: {app_file}")
     
-    # Build streamlit command
-    cmd = ["streamlit", "run", app_file]
+    app_type = config.get("type", "streamlit")
+    
+    # Decoupled App Logic: Build frontend if needed
+    if app_name == "market-analyst":
+        frontend_dir = project_root / "src/market-analyst/frontend"
+        dist_dir = frontend_dir / "dist"
+        if not dist_dir.exists():
+            print("\n🛠️ Frontend build missing. Building now...")
+            subprocess.run(["npm", "run", "build"], cwd=frontend_dir, shell=True)
+            print("✅ Frontend built.\n")
+    
+    python_exe = sys.executable
+    
+    # Build command based on app type
+    if app_type == "fastapi":
+        # Extract module name from entry point (e.g. backend/main.py -> backend.main)
+        module_path = app_file.replace(".py", "").replace("/", ".").replace("\\", ".")
+        cmd = [python_exe, "-m", "uvicorn", f"{module_path}:app", "--host", "0.0.0.0"]
+        default_port = 8000
+    else:
+        cmd = [python_exe, "-m", "streamlit", "run", app_file]
+        default_port = 8501
     
     # Add port if specified
     if port:
-        cmd.extend(["--server.port", str(port)])
+        if app_type == "fastapi":
+            cmd.extend(["--port", str(port)])
+        else:
+            cmd.extend(["--server.port", str(port)])
         print(f"🔌 Port: {port}")
     else:
-        print(f"🔌 Port: 8501 (default)")
+        print(f"🔌 Port: {default_port} (default)")
+    
+    # Determine the actual port to use
+    actual_port = port if port else default_port
+    
+    # Kill any process using the target port
+    try:
+        import platform
+        if platform.system() != "Windows":
+            # Use fuser on Linux/Mac to kill processes on the port
+            kill_cmd = ["fuser", "-k", f"{actual_port}/tcp"]
+            subprocess.run(kill_cmd, stderr=subprocess.DEVNULL, stdout=subprocess.DEVNULL)
+            print(f"🧹 Cleaned up port {actual_port}")
+    except Exception:
+        pass  # Silently continue if cleanup fails
     
     print("\n" + "=" * 70)
     print("\n🎯 Starting application...\n")
@@ -202,8 +241,9 @@ def launch_app(app_name: str, port: Optional[int] = None):
     except KeyboardInterrupt:
         print("\n\n👋 Application stopped by user")
     except FileNotFoundError:
-        print("\n❌ Error: Streamlit not found. Please install it:")
-        print("   pip install streamlit")
+        binary = "uvicorn" if app_type == "fastapi" else "streamlit"
+        print(f"\n❌ Error: {binary} not found in the current environment.")
+        print(f"   Please install it: pip install {binary}")
         sys.exit(1)
     except Exception as e:
         print(f"\n❌ Error launching app: {e}")

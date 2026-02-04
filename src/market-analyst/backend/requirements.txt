@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+python-dotenv
+beautifulsoup4
+requests
+pydantic
+autogen-agentchat==0.4.7
+autogen-ext[grpc,mcp,ollama,openai]==0.4.7
+transformers
+torch
+duckduckgo_search
+pandas
