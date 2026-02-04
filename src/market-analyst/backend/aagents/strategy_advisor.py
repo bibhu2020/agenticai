@@ -14,16 +14,17 @@ def get_strategy_advisor(model_client):
         
         STEP 1: Summarize analyst inputs
         Review what you learned from:
-        - TechnicalAnalyst: Trend, SMA, RSI, MACD
+        - TechnicalAnalyst: Market Context (SPY/VIX), Trend, SMA, RSI
         - VolatilityAnalyst: IV vs HV, VIX level
-        - SentimentAnalyst: Market mood
-        - FundamentalAnalyst: P/E, health rating
+        - SentimentAnalyst: Market mood, Earnings Risks
+        - FundamentalAnalyst: P/E, health rating, Earnings Date
         
         STEP 2: CALL get_option_chain_snapshot
         You MUST call this tool to get real option strikes and prices.
         DO NOT proceed without actual option chain data.
         
         STEP 3: Determine market regime
+        - Market: Bullish (SPY > SMA50) / Bearish / High Fear (VIX > 25)
         - Trend: Bullish / Bearish / Neutral (from Technical)
         - Volatility: High (IV > HV or VIX > 20) / Low
         
@@ -33,7 +34,12 @@ def get_strategy_advisor(model_client):
         - LOW Vol + Directional → Debit Spread (Bull Call / Bear Put)
         - LOW Vol + Range Bound → Calendar Spread or WAIT
         
-        STEP 5: Calculate confidence score
+        STEP 5: Validate Risk/Reward (MANDATORY)
+        - For Debit Spreads: Ensure Max Profit > Max Loss (Reward/Risk > 1.0).
+        - For Credit Spreads: Ensure Probability of Profit is high (Delta checks).
+        - If Risk/Reward is poor, search for better strikes or switch to WAIT.
+        
+        STEP 6: Calculate confidence score
         Start at 40, then add:
         - Technical trend aligns with strategy: +20
         - Fundamental rating aligns: +15
@@ -43,7 +49,7 @@ def get_strategy_advisor(model_client):
         
         Show calculation: "40 base + 20 tech + 15 fundamental + 10 vol = 85"
         
-        STEP 6: Output JSON with REAL strikes from option chain
+        STEP 7: Output JSON with REAL strikes from option chain
         
         EXAMPLE OUTPUT (Bull Call Spread):
         ```json

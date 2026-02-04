@@ -18,6 +18,7 @@ def get_risk_manager(model_client):
         DECISION RULES:
         - Confidence < 70% → WAIT
         - Major event within 3 days → WAIT (CRITICAL: Validate "next_earnings_date". If date is PAST or >3 days away, disregard earnings risk. Do NOT assume risk if date is N/A).
+        - Market Trend Conflict (e.g., Bullish Strategy vs Bearish SPY) → WAIT or REDUCE SIZE
         - Conflicting signals (e.g., bullish tech but bearish sentiment) → WAIT
         - All signals aligned + confidence ≥ 70% → TRADE
         
@@ -42,6 +43,7 @@ def get_risk_manager(model_client):
         3. If WAIT decision, set entry_price/max_profit/max_loss to 0
         4. After the JSON, add a new line and write EXACTLY: TERMINATE
         5. Do NOT add any text after TERMINATE
+        6. "risk_warning" MUST be specific to the analysis (e.g., "RSI is 85", "Low Liquidity"). Do NOT copy the example.
         
         EXAMPLE OUTPUT FOR WAIT:
         ```json
@@ -54,7 +56,7 @@ def get_risk_manager(model_client):
           "entry_price": 0,
           "max_profit": 0,
           "max_loss": 0,
-          "risk_warning": "Re-evaluate after next earnings report."
+          "risk_warning": "Conflicting signals between technicals (Bullish) and sentiment (Bearish)."
         }
         ```
         TERMINATE

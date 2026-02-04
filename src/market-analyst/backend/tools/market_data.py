@@ -150,6 +150,37 @@ def get_option_chain_snapshot(symbol: str) -> str:
     except Exception as e:
         return f"Error fetching option chain: {str(e)}"
 
+def get_market_indices() -> str:
+    """
+    Fetches current market context using SPY (S&P 500) and ^VIX.
+    Returns trend (Price vs SMA50) and Volatility regime.
+    """
+    try:
+        tickers = yf.Tickers("SPY ^VIX")
+        spy = tickers.tickers['SPY']
+        vix = tickers.tickers['^VIX']
+        
+        # SPY Data
+        spy_hist = spy.history(period="3mo")
+        if spy_hist.empty: return "Market data unavailable."
+        
+        current_spy = spy_hist['Close'].iloc[-1]
+        spy_sma50 = spy_hist['Close'].rolling(window=50).mean().iloc[-1]
+        spy_trend = "BULLISH" if current_spy > spy_sma50 else "BEARISH"
+        
+        # VIX Data
+        vix_hist = vix.history(period="1d")
+        current_vix = vix_hist['Close'].iloc[-1] if not vix_hist.empty else 0
+        
+        vix_regime = "LOW"
+        if current_vix > 20: vix_regime = "ELEVATED"
+        if current_vix > 30: vix_regime = "HIGH/FEAR"
+        
+        return f"MARKET CONTEXT:\n- SPY Trend: {spy_trend} (Price: {round(current_spy, 2)} vs SMA50: {round(spy_sma50, 2)})\n- VIX Level: {round(current_vix, 2)} ({vix_regime})"
+        
+    except Exception as e:
+        return f"Error fetching market indices: {str(e)}"
+
 def get_technical_indicators(symbol: str) -> dict:
     """
     Calculates key technical indicators: SMA (20, 50, 200) and RSI (14).
