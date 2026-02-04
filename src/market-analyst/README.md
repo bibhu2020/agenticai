@@ -6,7 +6,7 @@ emoji: 📈
 license: mit
 pinned: false
 sdk: docker
-short_description: Multi-agent AI that recommends stock option spreads with Vue.js/FastAPI
+short_description: Multi-agent AI Market Analyst
 title: AI Market Analyst v2
 ---
 
