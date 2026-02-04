@@ -124,6 +124,9 @@ const startAnalysis = () => {
     return
   }
 
+  // Save last ticker
+  setCookie('last_ticker', tickers[0])
+
   analyzeTicker(tickers[0])
 }
 
@@ -172,6 +175,7 @@ const analyzeTicker = (symbol) => {
         activeAgent.value = null
         if (pendingResult.value) {
           results.value.push(pendingResult.value)
+          saveToHistory(pendingResult.value) // Save to history
           pendingResult.value = null
         }
         eventSource.close()
@@ -217,6 +221,7 @@ const analyzeTicker = (symbol) => {
             
             pendingResult.value = {
                 ticker: symbol,
+                model: providers.find(p => p.id === provider.value)?.name || provider.value,
                 ...parsed
             }
           } catch (e) {
@@ -273,15 +278,70 @@ const getDecisionColor = (decision) => {
   return 'var(--danger)'
 }
 
+// History Management
+const history = ref([])
+const selectedReport = ref(null)
+
+const openReport = (item) => {
+    selectedReport.value = item
+}
+
+const closeReport = () => {
+    selectedReport.value = null
+}
+
+const loadHistory = () => {
+  try {
+    const saved = localStorage.getItem('analysis_history')
+    if (saved) {
+      history.value = JSON.parse(saved)
+    }
+  } catch (e) {
+    console.error("Failed to load history", e)
+  }
+}
+
+const saveToHistory = (result) => {
+  const item = {
+    id: Date.now(),
+    timestamp: new Date().toLocaleString(),
+    ...result
+  }
+  // Add to beginning
+  history.value.unshift(item)
+  // Keep max 20 items
+  if (history.value.length > 20) {
+    history.value = history.value.slice(0, 20)
+  }
+  
+  try {
+    localStorage.setItem('analysis_history', JSON.stringify(history.value))
+  } catch (e) {
+    console.error("Failed to save history", e)
+  }
+}
+
+const clearHistory = () => {
+    history.value = []
+    localStorage.removeItem('analysis_history')
+}
+
 // Persistence Watcher
 watch(provider, (newVal) => {
   setCookie('selected_provider', newVal);
 })
 
 onMounted(() => {
+  loadHistory() // Load history on startup
+  
   const savedProvider = getCookie('selected_provider');
   if (savedProvider && providers.some(p => p.id === savedProvider)) {
     provider.value = savedProvider;
+  }
+
+  const savedTicker = getCookie('last_ticker');
+  if (savedTicker) {
+    ticker.value = savedTicker;
   }
 })
 </script>
@@ -459,7 +519,111 @@ onMounted(() => {
           </div>
         </section>
       </div>
+
+      <!-- History Section -->
+      <section v-if="history.length > 0" class="history-section glass">
+        <div class="panel-header">
+          <h3><Clock :size="20" /> Analysis History</h3>
+          <button @click="clearHistory" class="btn-clear">Clear History</button>
+        </div>
+        
+        <div class="history-table-container glass-inset">
+            <table class="history-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Ticker</th>
+                        <th>Model</th>
+                        <th>Decision</th>
+                        <th>Confidence</th>
+                        <th>Strategy</th>
+                        <th>Max Profit</th>
+                        <th style="width: 50px"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="item in history" :key="item.id" @click="openReport(item)">
+                        <td class="col-date">{{ item.timestamp }}</td>
+                        <td class="col-ticker"><span class="ticker-pill">{{ item.ticker }}</span></td>
+                        <td class="col-model"><span class="model-badge">{{ item.model || 'Unknown' }}</span></td>
+                        <td>
+                            <span class="decision-pill" :style="{ color: getDecisionColor(item.final_decision), borderColor: getDecisionColor(item.final_decision) }">
+                                {{ item.final_decision }}
+                            </span>
+                        </td>
+                        <td>
+                            <div class="confidence-bar-wrapper">
+                                <div class="confidence-bar" :style="{ width: item.confidence + '%', backgroundColor: getDecisionColor(item.final_decision) }"></div>
+                                <span>{{ item.confidence }}%</span>
+                            </div>
+                        </td>
+                        <td>{{ item.strategy_type }}</td>
+                        <td class="col-profit" :class="{ 'has-profit': item.max_profit > 0 }">
+                            {{ item.max_profit ? '$' + item.max_profit : '-' }}
+                        </td>
+                        <td class="col-action"><ChevronRight :size="16" /></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+      </section>
     </main>
+
+    <!-- Detailed Report Modal -->
+    <div v-if="selectedReport" class="modal-overlay" @click.self="closeReport">
+        <div class="modal-content glass" :style="{ borderTopColor: getDecisionColor(selectedReport.final_decision) }">
+            <button class="modal-close" @click="closeReport"><XCircle :size="24" /></button>
+            
+            <div class="modal-header">
+                <h2>{{ selectedReport.ticker }} Analysis Report</h2>
+                <span class="timestamp">{{ selectedReport.timestamp }}</span>
+            </div>
+
+            <div class="modal-badges">
+                <div class="decision-badge large" :style="{ backgroundColor: getDecisionColor(selectedReport.final_decision) }">
+                    {{ selectedReport.final_decision }}
+                </div>
+                <div class="confidence-badge large">
+                    {{ selectedReport.confidence }}% Confidence
+                </div>
+                <div class="model-badge large">
+                    <Zap :size="14" /> {{ selectedReport.model || 'AI Model' }}
+                </div>
+                <div v-if="selectedReport.rating" class="rating-badge">
+                   <Heart :size="16" /> {{ selectedReport.rating }}
+                </div>
+            </div>
+
+            <div class="report-section">
+                <h3><BrainCircuit :size="18" /> Recommendation</h3>
+                <p class="highlight-text">{{ selectedReport.actionable_recommendation }}</p>
+            </div>
+
+            <div class="metrics-grid">
+                 <div class="metric-box">
+                    <label>Strategy</label>
+                    <span>{{ selectedReport.strategy_type }}</span>
+                 </div>
+                 <div class="metric-box">
+                    <label>Entry</label>
+                    <span>{{ selectedReport.entry_signal }} @ ${{ selectedReport.entry_price || 'N/A' }}</span>
+                 </div>
+                 <div class="metric-box">
+                    <label>Max Profit</label>
+                    <span class="profit">${{ selectedReport.max_profit || 0 }}</span>
+                 </div>
+                 <div class="metric-box">
+                    <label>Max Loss</label>
+                    <span class="loss">${{ selectedReport.max_loss || 0 }}</span>
+                 </div>
+            </div>
+
+            <div class="report-section risk-section">
+                <h3><ShieldCheck :size="18" /> Risk Analysis</h3>
+                <p>{{ selectedReport.risk_warning }}</p>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer Disclaimer -->
     <footer class="main-footer glass">
@@ -1180,7 +1344,212 @@ onMounted(() => {
   }
 }
 
-@media (max-width: 768px) {
+  .btn-clear {
+      background: transparent;
+      border: 1px solid var(--text-secondary);
+      color: var(--text-secondary);
+      padding: 0.25rem 0.75rem;
+      border-radius: 0.5rem;
+      font-size: 0.75rem;
+      cursor: pointer;
+      transition: all 0.2s;
+  }
+
+  .btn-clear:hover {
+      background: rgba(255,255,255,0.1);
+      color: white;
+  }
+
+  .history-section {
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .history-table-container {
+      margin: 1.25rem;
+      overflow-x: auto;
+      border-radius: 0.5rem;
+  }
+  
+  .glass-inset {
+      background: rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255,255,255,0.05);
+      box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+  }
+
+  .history-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      color: var(--text-primary);
+  }
+
+  .history-table th {
+      text-align: left;
+      padding: 1rem;
+      color: var(--text-secondary);
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      white-space: nowrap;
+  }
+
+  .history-table td {
+      padding: 1rem;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .history-table tbody tr {
+      cursor: pointer;
+      transition: background 0.2s;
+  }
+
+  .history-table tbody tr:hover {
+      background: rgba(255,255,255,0.05);
+  }
+
+  .ticker-pill {
+      font-weight: 700;
+      background: rgba(255,255,255,0.1);
+      padding: 0.2rem 0.5rem;
+      border-radius: 0.25rem;
+  }
+  
+  .decision-pill {
+      font-weight: 700;
+      padding: 0.2rem 0.6rem;
+      border-radius: 1rem;
+      border: 1px solid transparent;
+      font-size: 0.8rem;
+  }
+
+  .col-date { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--text-secondary); white-space: nowrap; }
+  .col-profit { font-weight: 700; color: var(--text-secondary); }
+  .col-profit.has-profit { color: var(--success); }
+  
+  .model-badge {
+      font-size: 0.7rem;
+      background: rgba(255,255,255,0.05);
+      padding: 0.15rem 0.4rem;
+      border-radius: 0.25rem;
+      color: var(--text-secondary);
+      white-space: nowrap;
+  }
+  
+  .confidence-bar-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+  }
+  
+  .confidence-bar {
+      height: 4px;
+      border-radius: 2px;
+      width: 60px;
+  }
+  
+  .col-action { color: var(--text-muted); text-align: right; }
+  .history-table tbody tr:hover .col-action { color: white; }
+
+  /* Modal Styles */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+  }
+
+  .modal-content {
+    background: #0f172a; /* Fallback */
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top-width: 4px;
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    animation: modalPop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  @keyframes modalPop {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  
+  .modal-close:hover { color: white; }
+
+  .modal-header { margin-bottom: 1.5rem; }
+  .modal-header h2 { font-size: 1.5rem; margin: 0; }
+  .modal-header .timestamp { font-size: 0.8rem; color: var(--text-secondary); }
+
+  .modal-badges {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+  }
+
+  .decision-badge.large { font-size: 1rem; padding: 0.4rem 1rem; }
+  .confidence-badge.large { font-size: 1rem; padding: 0.4rem 1rem; background: rgba(255,255,255,0.1); border-radius: 0.5rem; font-weight: 600; }
+  .rating-badge { display: flex; align-items: center; gap: 0.5rem; background: rgba(236, 72, 153, 0.2); color: #f472b6; padding: 0.4rem 1rem; border-radius: 0.5rem; font-weight: 700; }
+  .model-badge.large { display: flex; align-items: center; gap: 0.5rem; background: rgba(59, 130, 246, 0.1); color: #60a5fa; padding: 0.4rem 1rem; border-radius: 0.5rem; font-weight: 600; font-size: 0.9rem; border: 1px solid rgba(59, 130, 246, 0.2); }
+
+  .report-section { margin-bottom: 1.5rem; }
+  .report-section h3 { display: flex; align-items: center; gap: 0.5rem; font-size: 1rem; color: var(--text-secondary); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  .highlight-text { font-size: 1.1rem; line-height: 1.5; color: white; }
+
+  .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+  }
+
+  .metric-box {
+      background: rgba(255,255,255,0.03);
+      padding: 0.75rem;
+      border-radius: 0.5rem;
+      border: 1px solid rgba(255,255,255,0.05);
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+  }
+
+  .metric-box label { font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; }
+  .metric-box span { font-size: 1rem; font-weight: 600; color: white; }
+  .metric-box .profit { color: var(--success); }
+  .metric-box .loss { color: var(--danger); }
+
+  .risk-section p { color: var(--danger); background: rgba(239, 68, 68, 0.1); padding: 1rem; border-radius: 0.5rem; border: 1px solid rgba(239, 68, 68, 0.2); }
+
+  @media (max-width: 768px) {
   .container {
     padding: 0.5rem;
   }

@@ -17,7 +17,7 @@ def get_risk_manager(model_client):
         
         DECISION RULES:
         - Confidence < 70% → WAIT
-        - Major event within 3 days → WAIT
+        - Major event within 3 days → WAIT (CRITICAL: Validate "next_earnings_date". If date is PAST or >3 days away, disregard earnings risk. Do NOT assume risk if date is N/A).
         - Conflicting signals (e.g., bullish tech but bearish sentiment) → WAIT
         - All signals aligned + confidence ≥ 70% → TRADE
         

@@ -125,13 +125,25 @@ def get_option_chain_snapshot(symbol: str) -> str:
         summary = f"Option Chain Snapshot for {symbol} (Expiry: {target_date})\n"
         summary += f"Current Spot Price: {round(current_price, 2)}\n\n"
         
-        summary += "--- CALLS (Ask | Strike | IV) ---\n"
+        summary += "--- CALLS (Strike | Last | Ask | IV | Vol) ---\n"
         for _, row in ntm_calls.iterrows():
-            summary += f"Strike: {row['strike']} | Ask: {row['ask']} | IV: {round(row['impliedVolatility']*100, 1)}%\n"
+            last = row.get('lastPrice', 0.0)
+            ask = row.get('ask', 0.0)
+            vol = row.get('volume', 0)
+            iv = round(row['impliedVolatility']*100, 1)
+            # Fallback logic for display clarity
+            price_display = f"{ask}" if ask > 0 else f"{last} (Last)"
+            summary += f"Strike: {row['strike']} | Price: {price_display} | IV: {iv}% | Vol: {vol}\n"
             
-        summary += "\n--- PUTS (Ask | Strike | IV) ---\n"
+        summary += "\n--- PUTS (Strike | Last | Ask | IV | Vol) ---\n"
         for _, row in ntm_puts.iterrows():
-            summary += f"Strike: {row['strike']} | Ask: {row['ask']} | IV: {round(row['impliedVolatility']*100, 1)}%\n"
+            last = row.get('lastPrice', 0.0)
+            ask = row.get('ask', 0.0)
+            vol = row.get('volume', 0)
+            iv = round(row['impliedVolatility']*100, 1)
+            # Fallback logic for display clarity
+            price_display = f"{ask}" if ask > 0 else f"{last} (Last)"
+            summary += f"Strike: {row['strike']} | Price: {price_display} | IV: {iv}% | Vol: {vol}\n"
             
         return summary
         
@@ -240,6 +252,17 @@ def get_fundamental_data(symbol: str) -> dict:
         debt_to_equity = info.get('debtToEquity')
         profit_margin = info.get('profitMargins')
         
+        # Ticker Calendar (Earnings)
+        next_earnings = "N/A"
+        try:
+            cal = ticker.calendar
+            if cal and 'Earnings Date' in cal:
+                dates = cal['Earnings Date']
+                if dates:
+                    next_earnings = dates[0].strftime("%Y-%m-%d")
+        except Exception:
+            pass
+
         return {
             "ticker": symbol,
             "pe_ratio": round(pe_ratio, 2) if pe_ratio else "N/A",
@@ -247,7 +270,8 @@ def get_fundamental_data(symbol: str) -> dict:
             "debt_to_equity": round(debt_to_equity, 2) if debt_to_equity else "N/A",
             "net_profit_margin": f"{round(profit_margin * 100, 2)}%" if profit_margin else "N/A",
             "market_cap": info.get('marketCap', "N/A"),
-            "sector": info.get('sector', "N/A")
+            "sector": info.get('sector', "N/A"),
+            "next_earnings_date": next_earnings
         }
     except Exception as e:
         return {"error": str(e)}

@@ -57,6 +57,7 @@ def get_fundamental_analyst(model_client):
         - Debt and profitability assessment
         - Sector context
         - Value conclusion (Undervalued/Fair/Overvalued)
+        - Earnings Status: Report next earnings date. If within 7 days, warn about Volatility Risk.
         - Recommendation for next analyst (e.g., "Strategy should favor conservative trades given weak fundamentals")
         """
     )

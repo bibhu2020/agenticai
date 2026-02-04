@@ -32,7 +32,7 @@ def get_sentiment_analyst(model_client):
         - If >70% articles are negative with avg confidence >0.80: "Strongly Bearish"
         
         STEP 4: Identify Key Events and Risk Factors
-        - Earnings announcements
+        - Earnings announcements (CRITICAL: Check article date. IGNORE "Earnings Preview" if article is >2 days old).
         - Product launches
         - Regulatory issues
         - Management changes
