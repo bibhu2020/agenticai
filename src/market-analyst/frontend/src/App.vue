@@ -33,12 +33,12 @@ const error = ref(null)
 const logContainer = ref(null)
 
 const workflowAgents = [
-  { id: 'TechnicalAnalyst', name: 'Technical', role: 'Analyzes chart patterns, SMAs, EMAs, RSI, and MACD for trend identification' },
-  { id: 'VolatilityAnalyst', name: 'Volatility', role: 'Studies IV vs HV, VIX context, and option chain liquidity' },
-  { id: 'SentimentAnalyst', name: 'Sentiment', role: 'Evaluates market sentiment from news and social media' },
-  { id: 'FundamentalAnalyst', name: 'Fundamental', role: 'Reviews P/E ratio, PEG, and balance sheet health' },
-  { id: 'StrategyAdvisor', name: 'Strategy', role: 'Recommends optimal option strategies with specific strikes from option chain' },
-  { id: 'RiskManager', name: 'Risk', role: 'Final validation and risk assessment before trade execution' }
+  { id: 'TechnicalAnalyst', name: 'Technical', role: 'Analyzes Market Trend (SPY), SMAs, EMAs, RSI, and MACD for directional bias.' },
+  { id: 'VolatilityAnalyst', name: 'Volatility', role: 'Analyzes VIX Fear Gauge, IV vs HV, and Option Liquidity.' },
+  { id: 'SentimentAnalyst', name: 'Sentiment', role: 'Evaluates market sentiment from news and monitors earnings risks.' },
+  { id: 'FundamentalAnalyst', name: 'Fundamental', role: 'Evaluates Valuation (P/E, PEG), EPS Growth, and Financial Health vs Market Risk.' },
+  { id: 'StrategyAdvisor', name: 'Strategy', role: 'Formulates multi-leg option strategies with risk/reward calculation.' },
+  { id: 'RiskManager', name: 'Risk', role: 'Critiques strategy in 2-round debate and issues final governance approval.' }
 ]
 
 const providers = [
@@ -331,6 +331,8 @@ watch(provider, (newVal) => {
   setCookie('selected_provider', newVal);
 })
 
+// Computed Progress
+
 onMounted(() => {
   loadHistory() // Load history on startup
   
@@ -406,7 +408,7 @@ onMounted(() => {
           v-for="agent in workflowAgents" 
           :key="agent.id" 
           :class="['breadcrumb-item', { active: activeAgent === agent.id }]"
-          :title="agent.role"
+          :data-tooltip="agent.role"
         >
           <div class="item-icon-wrapper" :style="{ color: getAgentColor(agent.id) }">
             <component :is="getAgentIcon(agent.id)" :size="14" />
@@ -416,6 +418,8 @@ onMounted(() => {
           <ChevronRight v-if="agent.id !== 'RiskManager'" :size="14" class="separator" />
         </div>
       </div>
+
+      <!-- Progress Bar Removed -->
 
       <!-- Error Alert -->
       <div v-if="error" class="error-alert glass">
@@ -1260,6 +1264,8 @@ onMounted(() => {
   padding: 0.75rem 2rem;
   gap: 1.5rem;
   margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 50; /* Ensure tooltips appear above content below */
 }
 
 .breadcrumb-item {
@@ -1269,7 +1275,60 @@ onMounted(() => {
   opacity: 0.4;
   transition: all 0.4s ease;
   cursor: help;
+  position: relative;
 }
+
+/* Fancy Tooltip */
+.breadcrumb-item::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 140%; /* Move below */
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    background: rgba(15, 23, 42, 0.95);
+    color: #f1f5f9;
+    padding: 0.6rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    width: max-content;
+    max-width: 220px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1000; /* Ensure high z-index regardless */
+    backdrop-filter: blur(4px);
+    font-weight: 500;
+    pointer-events: none;
+}
+
+/* Tooltip Arrow */
+.breadcrumb-item::before {
+    content: '';
+    position: absolute;
+    top: 140%; /* Move below */
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    border: 6px solid transparent;
+    border-bottom-color: rgba(15, 23, 42, 0.95); /* Point Up */
+    margin-top: -11px; /* Overlap slightly */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.breadcrumb-item:hover::after,
+.breadcrumb-item:hover::before {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
 
 .breadcrumb-item:hover {
   opacity: 0.8;

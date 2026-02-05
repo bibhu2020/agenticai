@@ -52,8 +52,8 @@ def get_trading_team(model_client):
 
     team = RoundRobinGroupChat(
         participants=[technical, volatility, sentiment, fundamental, strategy, risk],
-        # 6 agents * ~4 messages each (analysis + potential tool calls) = 24, plus buffer for user prompt and handoffs
-        termination_condition=TextMentionTermination("TERMINATE") | MaxMessageTermination(40)
+        # Increased limit for 2-round detailed discussion
+        termination_condition=TextMentionTermination("APPROVED") | MaxMessageTermination(60)
     )
     return team
 

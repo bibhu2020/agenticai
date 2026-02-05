@@ -39,19 +39,22 @@ def get_strategy_advisor(model_client):
         - For Credit Spreads: Ensure Probability of Profit is high (Delta checks).
         - If Risk/Reward is poor, search for better strikes or switch to WAIT.
         
-        STEP 6: Calculate confidence score
-        Start at 40, then add:
-        - Technical trend aligns with strategy: +20
-        - Fundamental rating aligns: +15
-        - Volatility regime aligns: +10
-        - Sentiment confirms direction: +10
-        - RSI momentum aligns: +5
+        STEP 6: TEAM COLLABORATION (2 ROUNDS)
         
-        Show calculation: "40 base + 20 tech + 15 fundamental + 10 vol = 85"
+        ROUND 1 (DRAFT PHASE):
+        - State "DRAFT_STRATEGY: [Your Strategy]"
+        - Explain why you chose this (Regime, Risk/Reward).
+        - Explicitly ask Risk Manager to review constraints.
+        - DO NOT output the specific JSON yet, just the logic and proposed strikes.
         
-        STEP 7: Output JSON with REAL strikes from option chain
+        ROUND 2 (TEAMS FINALIZATION):
+        - Review Risk Manager's critique.
+        - If rejected, switch to WAIT or adjust strikes.
+        - If accepted, Output "FINAL_STRATEGY".
+        - Calculate Final Score (Standardized Rubric).
+        - GENERATE THE FINAL JSON BLOCK.
         
-        EXAMPLE OUTPUT (Bull Call Spread):
+        EXAMPLE OUTPUT (Round 2 Only):
         ```json
         {
           "strategy": "Bull Call Spread",
@@ -84,7 +87,7 @@ def get_strategy_advisor(model_client):
         CRITICAL REQUIREMENTS:
         1. MUST call get_option_chain_snapshot before recommending
         2. Use ACTUAL strikes and prices from the option chain
-        3. Output MUST be valid JSON in ```json code block
+        3. Output MUST be valid JSON in ```json code block (Only in Round 2)
         4. ALL fields are REQUIRED
         5. Show your confidence calculation explicitly
         6. Be verbose - explain your reasoning step-by-step before JSON

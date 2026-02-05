@@ -61,33 +61,34 @@ async def analyze(ticker: str, provider: str = "openai"):
     
     async def event_generator() -> AsyncGenerator[str, None]:
         # Guardrail: Check Trading Hours (9:30 AM - 4:00 PM ET, Mon-Fri)
-        try:
-            from datetime import datetime, time
-            import pytz
-            
-            et_tz = pytz.timezone('US/Eastern')
-            now_et = datetime.now(et_tz)
-            
-            # Check if weekend (Saturday=5, Sunday=6)
-            is_weekend = now_et.weekday() >= 5
-            
-            # Check market hours (09:30 - 16:00)
-            market_open = time(9, 30)
-            market_close = time(16, 0)
-            is_market_hours = market_open <= now_et.time() <= market_close
-            
-            # FOR TESTING/DEV: You might want to comment this block out to run anytime
-            if is_weekend or not is_market_hours:
-                msg = f"MARKET CLOSED ({now_et.strftime('%I:%M %p')} ET). Analysis requires live data. Please return Mon-Fri, 9:30 AM - 4:00 PM ET."
-                yield f"data: {json.dumps({'source': 'System', 'content': msg, 'error': msg})}\n\n"
-                yield "data: [DONE]\n\n"
-                return
-        except ImportError:
-            # Fallback if pytz not found (shouldn't happen with yfinance installed)
-            print("Warning: pytz not found, skipping market hours check.")
-            pass
-        except Exception as e:
-            print(f"Time check error: {e}")
+        guardrail_enabled = os.getenv("MARKET_GUARDRAIL_ON", "true").lower() == "true"
+        
+        if guardrail_enabled:
+            try:
+                from datetime import datetime, time
+                import pytz
+                
+                et_tz = pytz.timezone('US/Eastern')
+                now_et = datetime.now(et_tz)
+                
+                # Check if weekend (Saturday=5, Sunday=6)
+                is_weekend = now_et.weekday() >= 5
+                
+                # Check market hours (09:30 - 16:00)
+                market_open = time(9, 30)
+                market_close = time(16, 0)
+                is_market_hours = market_open <= now_et.time() <= market_close
+                
+                if is_weekend or not is_market_hours:
+                    msg = f"MARKET CLOSED ({now_et.strftime('%I:%M %p')} ET). Analysis requires live data. Please return Mon-Fri, 9:30 AM - 4:00 PM ET.\nSet MARKET_GUARDRAIL_ON=false to bypass."
+                    yield f"data: {json.dumps({'source': 'System', 'content': msg, 'error': msg})}\n\n"
+                    yield "data: [DONE]\n\n"
+                    return
+            except ImportError:
+                print("Warning: pytz not found, skipping market hours check.")
+                pass
+            except Exception as e:
+                print(f"Time check error: {e}")
             
         # Setup Model
         if provider == "openai":

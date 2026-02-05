@@ -283,6 +283,10 @@ def get_fundamental_data(symbol: str) -> dict:
         debt_to_equity = info.get('debtToEquity')
         profit_margin = info.get('profitMargins')
         
+        eps_trailing = info.get('trailingEps')
+        eps_forward = info.get('forwardEps')
+        dividend_yield = info.get('dividendYield')
+
         # Ticker Calendar (Earnings)
         next_earnings = "N/A"
         try:
@@ -298,8 +302,11 @@ def get_fundamental_data(symbol: str) -> dict:
             "ticker": symbol,
             "pe_ratio": round(pe_ratio, 2) if pe_ratio else "N/A",
             "peg_ratio": round(peg_ratio, 2) if peg_ratio else "N/A",
+            "eps_trailing": round(eps_trailing, 2) if eps_trailing else "N/A",
+            "eps_forward": round(eps_forward, 2) if eps_forward else "N/A",
             "debt_to_equity": round(debt_to_equity, 2) if debt_to_equity else "N/A",
             "net_profit_margin": f"{round(profit_margin * 100, 2)}%" if profit_margin else "N/A",
+            "dividend_yield": f"{round(dividend_yield * 100, 2)}%" if dividend_yield else "N/A",
             "market_cap": info.get('marketCap', "N/A"),
             "sector": info.get('sector', "N/A"),
             "next_earnings_date": next_earnings
