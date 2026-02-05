@@ -31,12 +31,10 @@ def get_volatility_analyst(model_client):
         - VIX 20-30: Elevated fear, caution advised
         - VIX > 30: High fear, extreme volatility
         
-        STEP 5: Determine Volatility Regime
-        Classify as:
-        - "Extremely Low Vol" (IV < 20%, VIX < 15): Buy debit spreads or long options
-        - "Low Vol" (IV 20-30%, VIX 15-20): Neutral, directional trades
-        - "Elevated Vol" (IV 30-50%, VIX 20-30): Sell credit spreads
-        - "High Vol" (IV > 50%, VIX > 30): Sell iron condors or wait
+        STEP 5: Determine Volatility Regime (USE 'volatility_regime' from tool)
+        - If LOW_VOL: Buy debit spreads or long options.
+        - If ELEVATED_VOL: Sell credit spreads.
+        - If HIGH_RISK_VOL: Sell Iron Condors or WAIT.
         
         STEP 6: Assess Option Liquidity
         - Check bid-ask spreads from option chain

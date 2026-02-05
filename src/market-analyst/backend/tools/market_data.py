@@ -78,7 +78,8 @@ def get_historical_volatility(symbol: str, period: str = "1mo") -> dict:
             "ticker_used": symbol,
             "annualized_volatility": round(volatility * 100, 2),
             "period": period,
-            "vix_reference": round(vix_price, 2) if vix_price else "N/A"
+            "vix_reference": round(vix_price, 2) if vix_price else "N/A",
+            "volatility_regime": "HIGH_RISK_VOL" if (vix_price and vix_price > 30) else "ELEVATED_VOL" if (vix_price and vix_price > 20) else "LOW_VOL" if (vix_price and vix_price < 15) else "NORMAL_VOL"
         }
     except Exception as e:
         return {"error": str(e)}
@@ -225,43 +226,48 @@ def get_technical_indicators(symbol: str) -> dict:
             hist['RSI_14'] = pd.Series([None] * len(hist), index=hist.index)
         
         current_data = hist.iloc[-1]
-        
-        # Interpretation RSI
+        price = current_data['Close']
         rsi_val = current_data.get('RSI_14')
-        rsi_signal = "Neutral"
-        if rsi_val is not None and not pd.isna(rsi_val):
-            rsi_val = round(rsi_val, 2)
-            if rsi_val > 70: rsi_signal = "Overbought"
-            elif rsi_val < 30: rsi_signal = "Oversold"
-        
-        # Interpretation MACD
         macd_val = current_data.get('MACD')
         signal_val = current_data.get('Signal_Line')
-        macd_signal = "Neutral"
-        if macd_val is not None and signal_val is not None:
-            if macd_val > signal_val: macd_signal = "Bullish Crossover"
-            else: macd_signal = "Bearish Crossover"
-
-        price = current_data['Close']
-        trend = "Neutral"
         sma200 = current_data.get('SMA_200')
+        if pd.isna(sma200): sma200 = None
+
+        # Interpretation RSI
+        # Deterministic Signals
+        rsi_signal = "NEUTRAL"
+        if rsi_val is not None and not pd.isna(rsi_val):
+             if rsi_val > 70: rsi_signal = "OVERBOUGHT"
+             elif rsi_val < 30: rsi_signal = "OVERSOLD"
         
-        if sma200 is not None and not pd.isna(sma200):
-            if price > sma200: trend = "Bullish Long-term"
-            else: trend = "Bearish Long-term"
-            
+        macd_signal = "NEUTRAL"
+        if macd_val is not None and signal_val is not None and not pd.isna(macd_val) and not pd.isna(signal_val):
+             if macd_val > signal_val: macd_signal = "BULLISH_CROSS"
+             elif macd_val < signal_val: macd_signal = "BEARISH_CROSS"
+             
+        trend_signal = "NEUTRAL"
+        sma50 = current_data.get('SMA_50')
+        sma20 = current_data.get('SMA_20')
+        
+        # Check all components for trend signal
+        if sma200 is not None and sma50 is not None and sma20 is not None and not pd.isna(sma50) and not pd.isna(sma20):
+             if price > sma20 > sma50 > sma200: trend_signal = "STRONG_BULLISH"
+             elif price < sma20 < sma50 < sma200: trend_signal = "STRONG_BEARISH"
+             elif price > sma200: trend_signal = "BULLISH"
+             elif price < sma200: trend_signal = "BEARISH"
+
         return {
             "ticker": symbol,
             "current_price": round(price, 2),
             "sma_20": round(current_data['SMA_20'], 2) if not pd.isna(current_data.get('SMA_20')) else "N/A",
             "ema_20": round(current_data['EMA_20'], 2) if not pd.isna(current_data.get('EMA_20')) else "N/A",
             "sma_50": round(current_data['SMA_50'], 2) if not pd.isna(current_data.get('SMA_50')) else "N/A",
-            "sma_200": round(sma200, 2) if sma200 is not None and not pd.isna(sma200) else "N/A",
-            "rsi_14": rsi_val or "N/A",
-            "macd": round(macd_val, 2) if macd_val is not None else "N/A",
+            "sma_200": round(sma200, 2) if (sma200 is not None and not pd.isna(sma200)) else "N/A",
+            "rsi_14": round(rsi_val, 2) if (rsi_val is not None and not pd.isna(rsi_val)) else "N/A",
+            "macd": round(macd_val, 2) if (macd_val is not None and not pd.isna(macd_val)) else "N/A",
             "macd_signal": macd_signal,
             "rsi_signal": rsi_signal,
-            "trend_signal": trend
+            "trend_signal": trend_signal
         }
         
     except Exception as e:
@@ -309,7 +315,9 @@ def get_fundamental_data(symbol: str) -> dict:
             "dividend_yield": f"{round(dividend_yield * 100, 2)}%" if dividend_yield else "N/A",
             "market_cap": info.get('marketCap', "N/A"),
             "sector": info.get('sector', "N/A"),
-            "next_earnings_date": next_earnings
+            "next_earnings_date": next_earnings,
+            "valuation_score": "UNDERVALUED" if (pe_ratio and pe_ratio < 15) else "PREMIUM" if (pe_ratio and pe_ratio > 30) else "FAIR_VALUE",
+            "quality_score": "HIGH_QUALITY" if (profit_margin and profit_margin > 0.20) else "LOW_MARGIN" if (profit_margin and profit_margin < 0.10) else "AVERAGE"
         }
     except Exception as e:
         return {"error": str(e)}

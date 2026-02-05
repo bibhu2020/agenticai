@@ -37,7 +37,11 @@ def get_strategy_advisor(model_client):
         STEP 5: Validate Risk/Reward (MANDATORY)
         - For Debit Spreads: Ensure Max Profit > Max Loss (Reward/Risk > 1.0).
         - For Credit Spreads: Ensure Probability of Profit is high (Delta checks).
-        - If Risk/Reward is poor, search for better strikes or switch to WAIT.
+        - METRICS SUMMARY: You MUST summarize your case using these labels before the JSON:
+          * METRIC: Trend=[BULLISH/BEARISH]
+          * METRIC: Volatility=[HIGH/LOW]
+          * METRIC: Sentiment=[POSITIVE/NEGATIVE]
+          * METRIC: Safety=[SAFE/PREMIUM]
         
         STEP 6: TEAM COLLABORATION (2 ROUNDS)
         
@@ -49,7 +53,9 @@ def get_strategy_advisor(model_client):
         
         ROUND 2 (TEAMS FINALIZATION):
         - Review Risk Manager's critique.
-        - If rejected, switch to WAIT or adjust strikes.
+        - If rejected, or if you switch to WAIT for any reason, you MUST:
+          1. Set "strategy" to "WAIT"
+          2. Set "estimated_entry_price", "max_profit", and "max_loss" to 0.
         - If accepted, Output "FINAL_STRATEGY".
         - Calculate Final Score (Standardized Rubric).
         - GENERATE THE FINAL JSON BLOCK.
@@ -69,6 +75,7 @@ def get_strategy_advisor(model_client):
           "breakeven": 146.30
         }
         ```
+        (Note: max_profit/max_loss are calculated for 100 shares/1 contract).
         
         EXAMPLE OUTPUT (WAIT):
         ```json
@@ -93,6 +100,8 @@ def get_strategy_advisor(model_client):
         4. ALL fields are REQUIRED
         5. Show your confidence calculation explicitly
         6. Be verbose - explain your reasoning step-by-step before JSON
+        7. LOT-BASED MATH: All profit/loss values (max_profit, max_loss) MUST be multiplied by 100 (standard lot size).
+           Example: A $1.50 credit spread = $150 Max Profit.
 
         FALLBACK PROCEDURE:
         If get_option_chain_snapshot fails or returns "No options data found":

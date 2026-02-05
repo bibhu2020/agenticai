@@ -28,33 +28,24 @@ def get_technical_analyst(model_client):
         - If SPY is BEARISH, bias is SHORT/HEDGE.
         - If VIX is HIGH (>30), bias is CAUTION.
         
-        STEP 5: Analyze Stock Trend Structure
-        - Price vs SMA200: Above = Bullish bias, Below = Bearish bias
-        - SMA20 vs SMA50 vs SMA200: Check for golden/death crosses
-        - Price vs EMA20: Short-term trend strength
+        STEP 5: Analyze Trend & Structure (USE 'trend_signal' from tool)
+        - If 'trend_signal' is STRONG_BULLISH/BULLISH -> Bullish Bias
+        - If 'trend_signal' is STRONG_BEARISH/BEARISH -> Bearish Bias
+        - Reference SMA/EMA levels as support/resistance.
         
-        STEP 6: Momentum Analysis
-        - RSI: >70 = Overbought, <30 = Oversold, 40-60 = Neutral
-        - MACD: Signal line crossover (Bullish if MACD > Signal, Bearish if MACD < Signal)
-        - MACD Histogram: Increasing = Momentum building, Decreasing = Momentum fading
+        STEP 6: Momentum Analysis (USE 'rsi_signal' & 'macd_signal')
+        - Check RSI status (OVERSOLD/OVERBOUGHT/NEUTRAL).
+        - Check MACD Crossover status.
         
-        STEP 7: Support & Resistance
-        - Identify key levels from SMA interaction
-        - Note if price is at/near major support or resistance
+        STEP 7: Summarize Chart Health
+        - Use the specific signals found.
+        - Classify Trend based on 'trend_signal'.
         
-        STEP 8: Summarize Chart Health
-        Classify as one of:
-        - "Strong Bullish" (price > all SMAs, RSI 50-70, MACD bullish)
-        - "Weak Bullish" (price > SMA200 but mixed signals)
-        - "Consolidating" (price between SMAs, RSI neutral)
-        - "Weak Bearish" (price < SMA200 but mixed signals)
-        - "Strong Bearish" (price < all SMAs, RSI 30-50, MACD bearish)
-        
-        Output a clear, structured summary with:
+        STEP 8: Output Structured Summary
         - Current Price
-        - Trend Classification
+        - Trend Classification (e.g., STRONG_BULLISH)
+        - Momentum Assessment (RSI/MACD signals)
         - Key Technical Levels
-        - Momentum Assessment
-        - Recommendation for next analyst (e.g., "Volatility should check if IV is elevated given this strong trend")
+        - Recommendation for next analyst
         """
     )

@@ -211,22 +211,31 @@ const analyzeTicker = (symbol) => {
         scrollToBottom()
       }
 
-      // If RiskManager output, try to parse JSON for summary
+      // Use backend-provided structured result if available (highly recommended for Groq/Llama)
       if (data.source === 'RiskManager') {
-        const jsonMatch = data.content.match(/```json\s*([\s\S]*?)\s*```/) || data.content.match(/\{[\s\S]*"final_decision"[\s\S]*\}/)
-        if (jsonMatch) {
-          try {
-            const rawJson = jsonMatch[1] || jsonMatch[0]
-            const parsed = JSON.parse(rawJson)
-            
+        if (data.structured_result) {
+            console.log("Using backend-provided structured result");
             pendingResult.value = {
                 ticker: symbol,
                 model: providers.find(p => p.id === provider.value)?.name || provider.value,
-                ...parsed
+                ...data.structured_result
             }
-          } catch (e) {
-             console.log("Failed to parse result JSON", e)
-          }
+        } else {
+            // Fallback to local regex if structured_result is missing
+            const jsonMatch = data.content.match(/```json\s*([\s\S]*?)\s*```/) || data.content.match(/\{[\s\S]*"final_decision"[\s\S]*\}/)
+            if (jsonMatch) {
+                try {
+                    const rawJson = jsonMatch[1] || jsonMatch[0]
+                    const parsed = JSON.parse(rawJson)
+                    pendingResult.value = {
+                        ticker: symbol,
+                        model: providers.find(p => p.id === provider.value)?.name || provider.value,
+                        ...parsed
+                    }
+                } catch (e) {
+                    console.log("Failed to parse result JSON", e)
+                }
+            }
         }
       }
     } catch (e) {
@@ -783,6 +792,16 @@ onMounted(() => {
   gap: 0.75rem;
   font-size: 1.1rem;
   color: var(--text-primary);
+}
+
+.header-hint {
+  font-size: 11px;
+  color: var(--text-tertiary);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .log-viewport {

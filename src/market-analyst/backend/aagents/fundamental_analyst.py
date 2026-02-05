@@ -23,11 +23,10 @@ def get_fundamental_analyst(model_client):
         
         DO NOT proceed without calling ALL THREE tools.
         
-        STEP 4: Evaluate Valuation & Growth
-        - P/E Ratio: <15 (Undervalued), 15-25 (Fair), >25 (Premium).
-        - PEG Ratio: <1.0 (Cheap Growth), >2.0 (Expensive).
-        - EPS Trend: Forward > Trailing? (Growth).
-        - Dividend Yield: >4% (Income).
+        STEP 4: Evaluate Valuation & Growth (USE 'valuation_score' & 'quality_score')
+        - If UNDERVALUED: Bullish Factor.
+        - If PREMIUM: Bearish/Neutral Factor (unless High Growth).
+        - If HIGH_QUALITY: Bullish Factor.
         
         STEP 5: Assess Financial Health
         - Debt/Equity Ratio: <0.5 (Safe), >1.0 (Risky).

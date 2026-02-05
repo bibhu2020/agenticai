@@ -1,9 +1,14 @@
 from ddgs import DDGS
 from transformers import pipeline
 import torch
-import requests
+from curl_cffi import requests
 from bs4 import BeautifulSoup
+import yfinance as yf
+import datetime
+import time
 from typing import Optional
+from pydantic import BaseModel, Field
+import concurrent.futures
 
 # Global variable for lazy loading
 _sentiment_pipeline = None
@@ -24,42 +29,35 @@ def get_sentiment_pipeline():
             return None
     return _sentiment_pipeline
 
-def _fetch_page_content(url: str, timeout: int = 5) -> Optional[str]:
+def _fetch_page_content(url: str, timeout: int = 15) -> Optional[str]:
     """Fetch and extract text content from a web page."""
-    print(f"[DEBUG] fetch_page_content called with: {url} - timeout: {timeout}")
+    print(f"[DEBUG] Fetching: {url}")
+    start_time = time.time()
     try:
-        headers = {
-            'User-Agent': (
-                'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
-                'AppleWebKit/537.36 (KHTML, like Gecko) '
-                'Chrome/91.0.4472.124 Safari/537.36'
-            )
-        }
-        response = requests.get(url, headers=headers, timeout=timeout)
+        # Use curl_cffi to impersonate Chrome 110 (Bypasses TLS Fingerprinting)
+        # Headers are auto-managed by impersonate
+        response = requests.get(url, timeout=timeout, impersonate="chrome110")
         response.raise_for_status()
-
-        soup = BeautifulSoup(response.content, 'html.parser')
-
-        # Remove irrelevant elements
-        for tag in soup(["script", "style", "nav", "footer", "header", "aside"]):
-            tag.decompose()
-
-        # Extract text
-        text = soup.get_text(separator='\n', strip=True)
-
-        # Clean whitespace
-        lines = (line.strip() for line in text.splitlines())
-        chunks = (phrase.strip() for line in lines for phrase in line.split("  "))
-        text = '\n'.join(chunk for chunk in chunks if chunk)
         
+        soup = BeautifulSoup(response.content, 'html.parser')
+        
+        # Remove ads, popups, and non-content elements
+        # Targeted classes: .ad, .popup, .modal, .cookie-banner, etc.
+        for tag in soup.select("script, style, nav, footer, header, aside, form, iframe, .ad, .popup, .modal, .cookie-banner, [id*='popup'], [class*='popup'], [class*='ad-'], [class*='banner']"):
+            tag.decompose()
+            
+        # Extract text
+        text = soup.get_text(separator=' ', strip=True)
+        duration = round(time.time() - start_time, 2)
+        print(f"[DEBUG] Fetch success ({duration}s): {url}")
         return text
     except Exception as e:
-        print(f"[WARNING] Failed to fetch content from {url}: {str(e)}")
+        msg = str(e)
+        if "403" in msg:
+             print(f"[INFO] Access denied (403) for {url}. Falling back to snippet.")
+        else:
+             print(f"[WARNING] Failed to fetch content from {url}: {msg}")
         return None
-
-from pydantic import BaseModel, Field
-from typing import Optional
-import concurrent.futures
 
 # Validation Model
 class NewsArticle(BaseModel):
@@ -80,72 +78,94 @@ def search_news(ticker: str) -> str:
             return "No ticker provided for news search."
             
         ticker = ticker.upper().strip()
-        query = f"{ticker} stock news financial"
+        articles_pool = []
         
-        results = []
-        sentiment_pipe = get_sentiment_pipeline()
+        # 1. Fetch from Yahoo Finance API (Reliable)
+        try:
+             print("[DEBUG] Fetching YF API news...")
+             yf_ticker = yf.Ticker(ticker)
+             yf_raw = yf_ticker.news
+             if yf_raw:
+                 for item in yf_raw:
+                     ts = item.get('providerPublishTime')
+                     date_str = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d') if ts else 'Unknown'
+                     articles_pool.append(NewsArticle(
+                         title=item.get('title', 'No Title'),
+                         link=item.get('link', ''),
+                         snippet=f"Source: {item.get('publisher')} - {date_str}",
+                         datetime=date_str
+                     ))
+        except Exception as e:
+             print(f"[WARNING] YF API failed: {e}")
+             
+        # 2. Add DuckDuckGo Targeted Search (Secondary)
+        # Targeted sites: CNBC, Bloomberg, Investing.com, MarketWatch
+        query = f"{ticker} stock news (site:cnbc.com OR site:bloomberg.com OR site:investing.com OR site:marketwatch.com)"
         
         with DDGS() as ddgs:
-            # Use 'news' backend
-            raw_results = list(ddgs.news(query, max_results=5))
-            
-            if not raw_results:
-                 return f"No recent news found for {ticker}."
-            
-            # Helper to process one item (fetch + analyze)
-            def process_news_item(raw_item):
+            raw_results = list(ddgs.news(query, max_results=10))
+            for raw_item in raw_results:
                 try:
-                    # Validate / Map Raw Dict to Pydantic Model
-                    # DDGS returns: 'title', 'url', 'body', 'date', 'source'
-                    # We map them to our requested schema
-                    article = NewsArticle(
+                    articles_pool.append(NewsArticle(
                         title=raw_item.get('title', 'No Title'),
                         link=raw_item.get('url', ''),
                         snippet=raw_item.get('body', ''),
-                        datetime=raw_item.get('date', 'Unknown Date')
-                    )
-                except Exception as validation_err:
-                    print(f"[WARNING] Skipping invalid news item: {validation_err}")
-                    return None
+                        datetime=raw_item.get('date', 'Unknown')
+                    ))
+                except: continue
 
-                # Processing using Validated Object
-                source = raw_item.get('source', 'Unknown Source') # Keep source for display
-                
-                # FinBERT Analysis
-                sentiment_tag = ""
-                if sentiment_pipe:
-                    try:
-                        # 1. Try to fetch full content
-                        content_to_analyze = article.title
-                        analysis_type = "Headline"
-                        
-                        if article.link:
-                            full_text = _fetch_page_content(article.link)
-                            if full_text and len(full_text) > 100:
-                                content_to_analyze = full_text
-                                analysis_type = "Full Text"
-                        
-                        # 2. Truncate for FinBERT
-                        score = sentiment_pipe(content_to_analyze[:2000])[0]
-                        label = score['label']
-                        conf = round(score['score'], 2)
-                        
-                        sentiment_tag = f" [FinBERT ({analysis_type}): {label} ({conf})]"
-                        print(f"[DEBUG] FinBERT analysis for {article.title}: {sentiment_tag}")
-                    except Exception as e:
-                        sentiment_tag = f" [FinBERT: Error ({str(e)[:50]})]"
-
-                return f"- [{source} | {article.datetime}] {article.title}{sentiment_tag}"
-
-            # Run in parallel
-            with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
-                # filter out None results from validation failures
-                results = [r for r in executor.map(process_news_item, raw_results) if r is not None]
+        if not articles_pool:
+             return f"No recent news found for {ticker}."
+             
+        # Deduplicate by Title
+        seen_titles = set()
+        unique_articles = []
+        for a in articles_pool:
+            if a.title not in seen_titles:
+                seen_titles.add(a.title)
+                unique_articles.append(a)
         
-        if not results:
-            return f"No recent news found for {ticker}."
+        # Analyze Top 5
+        top_articles = unique_articles[:5]
+        sentiment_pipe = get_sentiment_pipeline()
+        
+        results = []
+        
+        # Helper to process
+        def process_article(article):
+            # FinBERT Analysis
+            sentiment_tag = ""
+            if sentiment_pipe:
+                try:
+                    # Prefer full text fetch, fallback to Snippet
+                    content = article.snippet if article.snippet else article.title
+                    analysis_type = "Snippet" if article.snippet else "Headline"
+                    
+                    
+                    # Try fetch full text with improved headers
+                    if article.link:
+                        full_text = _fetch_page_content(article.link)
+                        if full_text and len(full_text) > 100:
+                             content = full_text
+                             analysis_type = "Full Text"
+                        else:
+                             # Fallback log
+                             print(f"[DEBUG] Content too short/failed for {article.title[:30]}... using Snippet.")
+                    
+                    # Truncate for BERT
+                    score = sentiment_pipe(content[:2000])[0]
+                    label = score['label']
+                    conf = round(score['score'], 2)
+                    sentiment_tag = f" [FinBERT ({analysis_type}): {label} ({conf})]"
+                except Exception as e:
+                    sentiment_tag = f" [FinBERT: Error]"
             
-        return f"Recent News for {ticker} (with FinBERT Analysis):\n" + "\n".join(results)
+            return f"- [{article.datetime}] {article.title}{sentiment_tag}"
+
+        with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
+            results = list(executor.map(process_article, top_articles))
+            
+        return f"Recent News for {ticker} (Sources: YF, CNBC, Bloomberg, Investing):\n" + "\n".join(results)
         
     except Exception as e:
         return f"Error fetching news for {ticker}: {str(e)}"

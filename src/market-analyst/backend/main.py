@@ -149,6 +149,12 @@ async def analyze(ticker: str, provider: str = "openai"):
                 raw_source = getattr(message, 'source', 'System')
                 content = getattr(message, 'content', '')
                 
+                # Check for tool_calls if content is empty (Explains 0-len messages)
+                if not content:
+                    tool_calls = getattr(message, 'tool_calls', None)
+                    if tool_calls:
+                         content = f"[Tool Call] Executing {len(tool_calls)} function(s)."
+                
                 # Handle non-string content (e.g., ToolCalls/FunctionCalls)
                 if not isinstance(content, str):
                     try:
@@ -167,14 +173,21 @@ async def analyze(ticker: str, provider: str = "openai"):
                     "source": raw_source,
                     "content": content
                 }
-                print(f"[STREAM] Sent: {raw_source} (len: {len(content)})")
+                
+                # If RiskManager, try to extract structured JSON for the frontend
+                if raw_source == 'RiskManager':
+                    structured = extract_json(content)
+                    if structured:
+                        payload["structured_result"] = structured
+
+                print(f"[DEBUG] Sent: {raw_source} (len: {len(content)})")
                 yield f"data: {json.dumps(payload)}\n\n"
         except Exception as e:
             print(f"[STREAM ERROR] {str(e)}")
             error_msg = f"Analysis execution failed: {str(e)}"
             yield f"data: {json.dumps({'source': 'Error', 'content': error_msg})}\n\n"
             
-        print("[STREAM] Done.")
+        print("[DEBUG] Done.")
         # Cleanup
         if analysis_id in active_analyses:
             del active_analyses[analysis_id]
