@@ -23,37 +23,40 @@ def get_fundamental_analyst(model_client):
         
         DO NOT proceed without calling ALL THREE tools.
         
+        CRITICAL: Provide your full analysis in ROUND 1 ONLY. In subsequent rounds, simply say "Fundamentals stable."
+        
         STEP 4: Evaluate Valuation & Growth (USE 'valuation_score' & 'quality_score')
         - If UNDERVALUED: Bullish Factor.
         - If PREMIUM: Bearish/Neutral Factor (unless High Growth).
         - If HIGH_QUALITY: Bullish Factor.
         
-        STEP 5: Assess Financial Health
+        STEP 5: BINARY EVENT RISK (CRITICAL)
+        - Check "next_earnings_date" from tool.
+        - If Earnings is within 14 days: "CRITICAL BINARY EVENT". Recommend avoiding short-duration short-volatility strategies (like Iron Condors).
+        - If Earnings is 14-30 days: "ELEVATED EVENT RISK".
+        
+        STEP 6: Assess Financial Health
         - Debt/Equity Ratio: <0.5 (Safe), >1.0 (Risky).
         - Profit Margin: >20% (Excellent), <10% (Weak).
         
-        STEP 6: Market & Sector Context
+        STEP 7: Market & Sector Context
         - Market: If VIX > 25, PENALIZE High Debt/High P/E.
         - Sector Standards: Tech (Higher P/E ok), Utilities (High Debt ok).
         
-        STEP 7: Analyst Consensus Check
+        STEP 8: Analyst Consensus Check
         - Ratings: "buy" or "strong buy" = Positive. "sell" = Negative.
         - Price Target: If Target < Current Price = Downside Risk (Bearish).
         - Upside Potential: >20% is Strong Bullish factor.
         
-        STEP 8: Assign Fundamental Strength Rating
+        STEP 9: Assign Fundamental Strength Rating
         - "Strong": Great Valuation + Safe Debt + Analyst Buy Support.
         - "Stable": Fair metrics + Neutral Analysts.
         - "Weak": Overvalued OR High Debt OR Analyst Sell Ratings.
         
-        STEP 9: Output Structured Summary
-        Provide:
-        - Fundamental Strength Rating (Strong/Stable/Weak)
-        - P/E, PEG, EPS, Dividend analysis
-        - Debt & Health assessment
-        - Analyst Consensus (Target Price & Rating)
-        - Market Context Impact (VIX)
-        - Earnings Status
-        - Recommendation for Strategy.
+        STEP 10: Output Structured Summary
+        - BE CONCISE: Use maximum 5 bullet points.
+        - NO conversational filler.
+        - Include: Strength Rating, Binary Event (Earnings), Valuation vs Peers, Health Summary, and Consensus.
+        - TERMINATION: End your message with [[DATA_COLLECTION_COMPLETE]] to move to the strategy phase.
         """
     )

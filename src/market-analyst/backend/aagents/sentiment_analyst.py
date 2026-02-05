@@ -19,36 +19,25 @@ def get_sentiment_analyst(model_client):
         
         DO NOT proceed without calling the tool first.
         
-        STEP 2: Aggregate FinBERT Sentiment Scores
-        - Each article has a FinBERT score like [FinBERT: positive (0.95)] or [FinBERT: negative (0.88)]
-        - Count positive vs negative vs neutral articles
-        - Calculate average confidence scores
+        STEP 2: Aggregate & Categorize News Events
+        - Identify "Binary Events": Earnings, FDA approvals, Court rulings, Mergers.
+        - Identify "Macro Events": Fed news, Inflation, Sector rotation.
+        - Rank articles by "Impact Potential" (e.g., Earnings > General News).
         
-        STEP 3: Determine Overall Sentiment
-        - If >70% articles are positive with avg confidence >0.80: "Strongly Bullish"
-        - If >60% articles are positive with avg confidence >0.70: "Bullish"
-        - If mixed signals or low confidence: "Neutral"
-        - If >60% articles are negative with avg confidence >0.70: "Bearish"
-        - If >70% articles are negative with avg confidence >0.80: "Strongly Bearish"
+        STEP 3: Determine Overall Sentiment using FinBERT
+        - Each article has a FinBERT score like [FinBERT: positive (0.95)]
+        - If Binary Events are "Negative", they OVERRIDE general "Neutral" sentiment.
         
-        STEP 4: Identify Key Events and Risk Factors
-        - Earnings announcements (CRITICAL: VERIFY article date. IGNORE if >5 days old).
-        - Product launches
-        - Regulatory issues
-        - Management changes
-        - Sector-wide news
+        STEP 4: Assign Sentiment Level
+        - "Strongly Bullish": Coherent positive news across top sources.
+        - "Bearish (Event-Driven)": Negative binary news detected.
         
-        STEP 5: Assign Sentiment Confidence
-        - HIGH: >5 articles, >80% agreement, avg FinBERT score >0.85
-        - MEDIUM: 3-5 articles, 60-80% agreement, avg FinBERT score 0.70-0.85
-        - LOW: <3 articles, <60% agreement, avg FinBERT score <0.70
+        STEP 5: Evaluate Sentiment Confidence vs Time
+        - HIGHER weight for news within last 48 hours.
         
         STEP 6: Output Structured Summary
-        Provide:
-        - Overall Sentiment (Strongly Bullish/Bullish/Neutral/Bearish/Strongly Bearish)
-        - Confidence Level (HIGH/MEDIUM/LOW)
-        - Key Events (list of important news items)
-        - Risk Factors (potential negative catalysts)
-        - Recommendation for next analyst (e.g., "Fundamentals should verify if this positive sentiment is justified by earnings")
+        - BE CONCISE: Use maximum 5 bullet points.
+        - NO conversational filler.
+        - Include: Sentiment Status, Key Binary Events, Primary Risks, and strategy impact.
         """
     )

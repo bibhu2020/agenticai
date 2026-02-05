@@ -16,6 +16,7 @@ import {
   TrendingUp,
   XCircle,
   Clock,
+  Calendar,
   Heart,
   Zap,
   LineChart,
@@ -38,7 +39,8 @@ const workflowAgents = [
   { id: 'SentimentAnalyst', name: 'Sentiment', role: 'Evaluates market sentiment from news and monitors earnings risks.' },
   { id: 'FundamentalAnalyst', name: 'Fundamental', role: 'Evaluates Valuation (P/E, PEG), EPS Growth, and Financial Health vs Market Risk.' },
   { id: 'StrategyAdvisor', name: 'Strategy', role: 'Formulates multi-leg option strategies with risk/reward calculation.' },
-  { id: 'RiskManager', name: 'Risk', role: 'Critiques strategy in 2-round debate and issues final governance approval.' }
+  { id: 'RiskManager', name: 'Risk', role: 'Critiques strategy in 2-round debate and performs math verification.' },
+  { id: 'LeadOrchestrator', name: 'Orchestrator', role: 'Central Control. Performs gap analysis, cross-questions agents, and issues final approval.' }
 ]
 
 const providers = [
@@ -55,6 +57,7 @@ const agentIcons = {
   'FundamentalAnalyst': Landmark,
   'StrategyAdvisor': BrainCircuit,
   'RiskManager': ShieldCheck,
+  'LeadOrchestrator': Crown,
   'System': LayoutDashboard,
   'User': Search,
   // Backward compatibility
@@ -69,6 +72,7 @@ const agentColors = {
   'FundamentalAnalyst': '#f59e0b', // Amber
   'StrategyAdvisor': '#8b5cf6', // Purple
   'RiskManager': '#ef4444', // Red
+  'LeadOrchestrator': '#facc15', // Gold
   'System': '#94a3b8', // Slate
   'User': '#60a5fa',  // Light Blue
   'MarketAnalyst': '#3b82f6'
@@ -172,7 +176,11 @@ const analyzeTicker = (symbol) => {
 
   eventSource.onmessage = (event) => {
       if (event.data === '[DONE]') {
-        activeAgent.value = null
+        // Delay clearing active agent so user can see the final Orchestrator state
+        setTimeout(() => {
+            activeAgent.value = null
+        }, 3000)
+
         if (pendingResult.value) {
           results.value.push(pendingResult.value)
           saveToHistory(pendingResult.value) // Save to history
@@ -412,19 +420,26 @@ onMounted(() => {
     </header>
 
     <main class="dashboard-content">
-      <div class="workflow-breadcrumb glass">
-        <div 
-          v-for="agent in workflowAgents" 
-          :key="agent.id" 
-          :class="['breadcrumb-item', { active: activeAgent === agent.id }]"
-          :data-tooltip="agent.role"
-        >
-          <div class="item-icon-wrapper" :style="{ color: getAgentColor(agent.id) }">
-            <component :is="getAgentIcon(agent.id)" :size="14" />
-            <div v-if="activeAgent === agent.id" class="bulb" :style="{ backgroundColor: getAgentColor(agent.id) }"></div>
+      <div class="breadcrumb-container glass">
+        <div class="breadcrumb-label">
+          <Sparkles :size="12" /> 
+          Active Intelligence Pipeline 
+          <span class="legend-text">(Glowing icons indicate agents in action)</span>
+        </div>
+        <div class="workflow-breadcrumb">
+          <div 
+            v-for="(agent, index) in workflowAgents" 
+            :key="agent.id" 
+            :class="['breadcrumb-item', { active: activeAgent === agent.id }]"
+            :data-tooltip="agent.role"
+          >
+            <div class="item-icon-wrapper" :style="{ color: getAgentColor(agent.id) }">
+              <component :is="getAgentIcon(agent.id)" :size="14" />
+              <div v-if="activeAgent === agent.id" class="bulb" :style="{ backgroundColor: getAgentColor(agent.id) }"></div>
+            </div>
+            <span class="item-label">{{ agent.name }}</span>
+            <ChevronRight v-if="index < workflowAgents.length - 1" :size="14" class="separator" />
           </div>
-          <span class="item-label">{{ agent.name }}</span>
-          <ChevronRight v-if="agent.id !== 'RiskManager'" :size="14" class="separator" />
         </div>
       </div>
 
@@ -505,11 +520,52 @@ onMounted(() => {
                         </div>
                         
                         <div class="card-body">
-                            <h4>{{ res.actionable_recommendation }}</h4>
-                            <div v-if="res.entry_price && res.entry_price !== 'N/A'" class="entry-info">
-                                <Clock :size="14" />
-                                <span>Entry Signal: <strong>{{ res.entry_signal }}</strong> at <strong>${{ res.entry_price }}</strong></span>
+                            <h4 class="strat-title">{{ res.strategy_type }}</h4>
+                            
+                            <!-- Strategy Legs Table -->
+                            <div v-if="res.legs && res.legs.length" class="legs-container glass-inset">
+                                <div class="legs-header">Strategy Components</div>
+                                <table class="legs-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Leg</th>
+                                            <th>Type</th>
+                                            <th>Strike</th>
+                                            <th>Expiry</th>
+                                            <th>Price</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr v-for="(leg, idx) in res.legs" :key="idx">
+                                            <td>
+                                                <span class="action-badge" :class="leg.action.toLowerCase()">
+                                                    {{ leg.action }}
+                                                </span>
+                                            </td>
+                                            <td>{{ leg.type }}</td>
+                                            <td><span class="strike-pill">${{ leg.strike }}</span></td>
+                                            <td class="col-expiry">{{ leg.expiry }}</td>
+                                            <td class="col-price">${{ leg.price }}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
+
+                            <div class="risk-reward-grid">
+                                <div class="rr-item">
+                                    <span class="rr-label">Max Profit</span>
+                                    <span class="rr-val profit">${{ res.max_profit }}</span>
+                                </div>
+                                <div class="rr-item">
+                                    <span class="rr-label">Max Loss</span>
+                                    <span class="rr-val loss">${{ res.max_loss }}</span>
+                                </div>
+                                <div class="rr-item">
+                                    <span class="rr-label">Entry</span>
+                                    <span class="rr-val">${{ res.entry_price || res.estimated_entry_price }}</span>
+                                </div>
+                            </div>
+
                             <p class="risk-info">
                                 <AlertTriangle v-if="res.risk_warning" :size="14" />
                                 {{ res.risk_warning || 'No specific risk warnings identified.' }}
@@ -550,6 +606,7 @@ onMounted(() => {
                         <th>Decision</th>
                         <th class="mobile-hide">Confidence</th>
                         <th class="mobile-hide">Strategy</th>
+                        <th class="mobile-hide">Expiry</th>
                         <th class="mobile-hide">Max Profit</th>
                         <th class="mobile-hide" style="width: 50px"></th>
                     </tr>
@@ -571,6 +628,7 @@ onMounted(() => {
                             </div>
                         </td>
                         <td class="mobile-hide">{{ item.strategy_type }}</td>
+                        <td class="mobile-hide">{{ item.expiry_date || 'N/A' }}</td>
                         <td class="col-profit mobile-hide" :class="{ 'has-profit': item.max_profit > 0 }">
                             {{ item.max_profit ? '$' + item.max_profit : '-' }}
                         </td>
@@ -616,6 +674,10 @@ onMounted(() => {
                  <div class="metric-box">
                     <label>Strategy</label>
                     <span>{{ selectedReport.strategy_type }}</span>
+                 </div>
+                 <div class="metric-box">
+                    <label>Expiry</label>
+                    <span>{{ selectedReport.expiry_date || 'N/A' }}</span>
                  </div>
                  <div class="metric-box">
                     <label>Entry</label>
@@ -1210,6 +1272,19 @@ onMounted(() => {
     letter-spacing: 0.1em;
 }
 
+.expiry-badge {
+    padding: 0.25rem 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    font-weight: 700;
+    font-size: 0.75rem;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 .pulse-border {
     animation: pulse-border 2s infinite;
 }
@@ -1268,6 +1343,115 @@ onMounted(() => {
   white-space: nowrap;
 }
 
+/* Strategy Legs Table */
+.legs-container {
+    margin: 1.25rem 0;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.legs-header {
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.05em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.legs-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+.legs-table th {
+    text-align: left;
+    padding: 0.5rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.legs-table td {
+    padding: 0.6rem 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.action-badge {
+    padding: 0.15rem 0.4rem;
+    border-radius: 0.25rem;
+    font-size: 0.7rem;
+    font-weight: 800;
+}
+
+.action-badge.buy { background: rgba(16, 185, 129, 0.15); color: var(--success); }
+.action-badge.sell { background: rgba(239, 68, 68, 0.15); color: var(--danger); }
+
+.strike-pill {
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.col-expiry {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.col-price {
+    font-weight: 600;
+    color: var(--accent-primary);
+}
+
+.risk-reward-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin: 1rem 0;
+}
+
+.rr-item {
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.rr-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+.rr-val {
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+.rr-val.profit { color: var(--success); }
+.rr-val.loss { color: var(--danger); }
+
+.strat-title {
+    margin-bottom: 0.5rem;
+    color: var(--accent-primary);
+    font-weight: 800;
+}
+
+.strat-reasoning {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
 @media (max-width: 1024px) {
   .footer-content {
     flex-direction: column;
@@ -1285,6 +1469,32 @@ onMounted(() => {
   margin-bottom: 0.5rem;
   position: relative;
   z-index: 50; /* Ensure tooltips appear above content below */
+}
+
+.breadcrumb-label {
+    text-align: center;
+    font-size: 0.65rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    letter-spacing: 0.1em;
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    opacity: 0.7;
+}
+
+.legend-text {
+    font-size: 0.6rem;
+    color: var(--accent-primary);
+    text-transform: none;
+    letter-spacing: normal;
+    margin-left: 0.5rem;
+    font-weight: 500;
+    font-style: italic;
+    opacity: 0.9;
 }
 
 .breadcrumb-item {

@@ -53,7 +53,7 @@ class AutoGenModelFactory:
         elif provider.lower() == "google" or provider.lower() == "gemini":
             if model_info is None:
                 model_info = {
-                    "family": "gpt",
+                    "family": "gemini",
                     "vision": False,
                     "function_calling": True,
                     "json_output": True,
@@ -67,6 +67,7 @@ class AutoGenModelFactory:
                 model_info=model_info,
                 temperature=temperature,
                 max_tokens=2048,
+                structured_output=False, # Disable for Gemini compatibility
                 extra_headers={"x-goog-api-key": os.environ["GOOGLE_API_KEY"]}
             )
 
@@ -89,6 +90,7 @@ class AutoGenModelFactory:
                 api_key=os.environ["GROQ_API_KEY"],
                 model_info=model_info,
                 temperature=temperature,
+                structured_output=False, # Disable for Groq compatibility
                 max_tokens=2048
             )
         

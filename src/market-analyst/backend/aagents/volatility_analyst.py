@@ -1,52 +1,41 @@
 from autogen_agentchat.agents import AssistantAgent
 from autogen_core.tools import FunctionTool
-from tools.market_data import get_historical_volatility, get_option_chain_snapshot
+from tools.market_data import get_historical_volatility, get_option_chain_snapshot, get_volatility_term_structure
 
 def get_volatility_analyst(model_client):
     vol_tool = FunctionTool(get_historical_volatility, description="Get historical volatility and VIX context.")
     chain_tool = FunctionTool(get_option_chain_snapshot, description="Get option chain snapshot for near-term expiry.")
+    term_tool = FunctionTool(get_volatility_term_structure, description="Get IV across multiple expiries to identify Term Structure skew.")
 
     return AssistantAgent(
         name="VolatilityAnalyst",
         model_client=model_client,
-        tools=[vol_tool, chain_tool],
+        tools=[vol_tool, chain_tool, term_tool],
         system_message="""
-        You are an Expert Volatility & Derivatives Analyst.
+        You are an Expert Volatility & Derivatives Analyst specializing in Volatility Surface and Term Structure.
         
         MANDATORY WORKFLOW:
         
         STEP 1: CALL get_historical_volatility to get HV and VIX data
-        STEP 2: CALL get_option_chain_snapshot to get IV and option liquidity data
+        STEP 2: CALL get_volatility_term_structure to analyze IV across 4 months of expiries
+        STEP 3: CALL get_option_chain_snapshot to get near-term IV and liquidity
         
-        DO NOT proceed without calling BOTH tools first.
+        DO NOT proceed without calling ALL THREE tools first.
         
-        STEP 3: Analyze IV vs HV Relationship
-        - IV > HV: Options are expensive, good for selling (credit spreads, iron condors)
-        - IV < HV: Options are cheap, good for buying (debit spreads, long options)
-        - IV ≈ HV: Fair value, strategy depends on other factors
+        STEP 4: Analyze IV vs HV (Vertical Skew)
+        - IV > HV: Options are rich. Look for Credit Spreads, Iron Condors.
+        - IV < HV: Options are cheap. Look for Debit Spreads, Long Options.
         
-        STEP 4: Evaluate VIX Context
-        - VIX < 15: Low market fear, stable environment
-        - VIX 15-20: Normal volatility
-        - VIX 20-30: Elevated fear, caution advised
-        - VIX > 30: High fear, extreme volatility
+        STEP 5: Analyze Term Structure (Horizontal/Time Skew)
+        - FRONT IV > BACK IV (Inverted): Potential "Calendar Spread" (Sell Front, Buy Back) if you expect a mean reversion.
+        - BACK IV > FRONT IV (Contango): Standard. Long-dated options are more expensive.
         
-        STEP 5: Determine Volatility Regime (USE 'volatility_regime' from tool)
-        - If LOW_VOL: Buy debit spreads or long options.
-        - If ELEVATED_VOL: Sell credit spreads.
-        - If HIGH_RISK_VOL: Sell Iron Condors or WAIT.
+        STEP 6: Assess "Volatility Squeeze"
+        - If IV is at 52-week lows and HV is dropping: Potential for a volatility breakout. Recommend DEBIT strategies.
         
-        STEP 6: Assess Option Liquidity
-        - Check bid-ask spreads from option chain
-        - Wide spreads (>$0.50) = Poor liquidity, avoid
-        - Tight spreads (<$0.20) = Good liquidity, tradeable
-        
-        STEP 7: Summarize Findings
-        Output:
-        - Volatility Regime classification
-        - IV vs HV comparison
-        - VIX level and interpretation
-        - Liquidity assessment
-        - Recommendation: "Options are EXPENSIVE - favor selling" or "Options are CHEAP - favor buying"
+        STEP 7: Output Structured Summary
+        - BE CONCISE: Use maximum 5 bullet points.
+        - NO conversational filler.
+        - Include: Volatility Regime, IV vs HV status, Term Structure summary, and strategy bias.
         """
     )

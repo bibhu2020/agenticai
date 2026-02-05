@@ -37,15 +37,13 @@ def get_technical_analyst(model_client):
         - Check RSI status (OVERSOLD/OVERBOUGHT/NEUTRAL).
         - Check MACD Crossover status.
         
-        STEP 7: Summarize Chart Health
-        - Use the specific signals found.
-        - Classify Trend based on 'trend_signal'.
+        STEP 7: Identify Support/Resistance Zones
+        - Reference SMA 50/200 as Primary levels.
+        - Reference 52-week High/Low as Secondary levels.
         
         STEP 8: Output Structured Summary
-        - Current Price
-        - Trend Classification (e.g., STRONG_BULLISH)
-        - Momentum Assessment (RSI/MACD signals)
-        - Key Technical Levels
-        - Recommendation for next analyst
+        - BE CONCISE: Use maximum 5 bullet points.
+        - NO conversational filler.
+        - Include: Current Price, Trend Signal, RSI/MACD status, and Support/Resistance levels.
         """
     )

@@ -17,7 +17,7 @@ if current_dir not in sys.path:
     sys.path.append(current_dir)
 
 from common.utility.autogen_model_factory import AutoGenModelFactory
-from teams.team import get_trading_team, extract_json
+from teams.team import get_analyst_team, get_decision_team, extract_json
 from tools.news_data import get_sentiment_pipeline
 
 app = FastAPI(title="Market Analyst API")
@@ -35,8 +35,6 @@ active_analyses = {}
 
 @app.on_event("startup")
 async def startup_event():
-    # Warm up the model in a background thread if possible, 
-    # but for now let's just trigger the lazy load.
     print("Warming up FinBERT...")
     get_sentiment_pipeline()
 
@@ -44,12 +42,10 @@ async def startup_event():
 async def health():
     return {"status": "healthy"}
 
-
 @app.post("/cancel/{analysis_id}")
 async def cancel_analysis(analysis_id: str):
-    """Cancel a running analysis."""
     if analysis_id in active_analyses:
-        active_analyses[analysis_id] = True  # Mark as cancelled
+        active_analyses[analysis_id] = True
         return {"status": "cancelled", "analysis_id": analysis_id}
     return {"status": "not_found", "analysis_id": analysis_id}
 
@@ -57,40 +53,9 @@ async def cancel_analysis(analysis_id: str):
 async def analyze(ticker: str, provider: str = "openai"):
     import uuid
     analysis_id = str(uuid.uuid4())
-    active_analyses[analysis_id] = False  # False = not cancelled
+    active_analyses[analysis_id] = False
     
     async def event_generator() -> AsyncGenerator[str, None]:
-        # Guardrail: Check Trading Hours (9:30 AM - 4:00 PM ET, Mon-Fri)
-        guardrail_enabled = os.getenv("MARKET_GUARDRAIL_ON", "true").lower() == "true"
-        
-        if guardrail_enabled:
-            try:
-                from datetime import datetime, time
-                import pytz
-                
-                et_tz = pytz.timezone('US/Eastern')
-                now_et = datetime.now(et_tz)
-                
-                # Check if weekend (Saturday=5, Sunday=6)
-                is_weekend = now_et.weekday() >= 5
-                
-                # Check market hours (09:30 - 16:00)
-                market_open = time(9, 30)
-                market_close = time(16, 0)
-                is_market_hours = market_open <= now_et.time() <= market_close
-                
-                if is_weekend or not is_market_hours:
-                    msg = f"MARKET CLOSED ({now_et.strftime('%I:%M %p')} ET). Analysis requires live data. Please return Mon-Fri, 9:30 AM - 4:00 PM ET.\nSet MARKET_GUARDRAIL_ON=false to bypass."
-                    yield f"data: {json.dumps({'source': 'System', 'content': msg, 'error': msg})}\n\n"
-                    yield "data: [DONE]\n\n"
-                    return
-            except ImportError:
-                print("Warning: pytz not found, skipping market hours check.")
-                pass
-            except Exception as e:
-                print(f"Time check error: {e}")
-            
-        # Setup Model
         if provider == "openai":
             model_name = "gpt-4o"
             family = "gpt"
@@ -98,8 +63,6 @@ async def analyze(ticker: str, provider: str = "openai"):
             model_name = "llama-3.3-70b-versatile"
             family = "groq" 
         elif provider == "google":
-            # Using Gemini Pro for more robust reasoning and 
-            # higher quality decision making across multiple agents.
             model_name = "gemini-pro-latest"
             family = "gemini"
         else:
@@ -107,119 +70,79 @@ async def analyze(ticker: str, provider: str = "openai"):
             family = "gpt"
         
         try:
-            temp = 0
-            # For Non-OpenAI providers, let the factory handle default model_info metadata
-            if provider in ["google", "groq"]:
-                info = None
-            else:
-                info = {"family": family, "vision": False, "function_calling": True, "json_output": True, "structured_output": True}
-            
             model_client = AutoGenModelFactory.get_model(
                 provider=provider,
                 model_name=model_name,
-                temperature=temp,
-                model_info=info
+                temperature=0,
+                model_info={
+                    "family": family, 
+                    "vision": False, 
+                    "function_calling": True, 
+                    "json_output": True, 
+                    "structured_output": True if provider == "openai" else False
+                }
             )
         except Exception as e:
             yield f"data: {json.dumps({'error': f'Model initialization failed: {str(e)}'})}\n\n"
             return
 
-        team = get_trading_team(model_client)
-        task = f"""
-        Perform a professional multi-agent trade analysis for {ticker.upper()}.
-        1. TechnicalAnalyst: Deep chart study, SMA trends, and RSI momentum.
-        2. VolatilityAnalyst: Study IV vs HV, VIX context, and option chain liquidity.
-        3. SentimentAnalyst: News sentiment (Top 5 stories) and market mood.
-        4. FundamentalAnalyst: Check P/E, PEG, and balance sheet health.
-        5. StrategyAdvisor: MUST call get_option_chain_snapshot to get real strikes. Use findings from all analysts to recommend an optimal option spread with SPECIFIC STRIKES AND PRICES.
-        6. RiskManager: Final validation. Output JSON with "final_decision" (TRADE/WAIT), "confidence", and "actionable_recommendation".
-        """
-        
-        # Yield initial status
-        yield f"data: {json.dumps({'source': 'System', 'content': 'Starting sequential analysis for ' + ticker.upper() + '...', 'analysis_id': analysis_id})}\n\n"
+        # PHASE 1: Analysts
+        yield f"data: {json.dumps({'source': 'System', 'content': 'PHASE 1: Starting Data Collection for ' + ticker.upper(), 'analysis_id': analysis_id})}\n\n"
+        analyst_team = get_analyst_team(model_client)
+        phase1_task = f"Perform complete analyst data collection for {ticker.upper()}."
+        analyst_context = []
 
         try:
-            async for message in team.run_stream(task=task):
-                # Check if cancelled
-                if active_analyses.get(analysis_id, False):
-                    yield f"data: {json.dumps({'source': 'System', 'content': 'Analysis cancelled by user.'})}\n\n"
-                    yield "data: [DONE]\n\n"
-                    break
-                
+            async for message in analyst_team.run_stream(task=phase1_task):
+                if active_analyses.get(analysis_id, False): break
                 raw_source = getattr(message, 'source', 'System')
                 content = getattr(message, 'content', '')
-                
-                # Check for tool_calls if content is empty (Explains 0-len messages)
-                if not content:
-                    tool_calls = getattr(message, 'tool_calls', None)
-                    if tool_calls:
-                         content = f"[Tool Call] Executing {len(tool_calls)} function(s)."
-                
-                # Handle non-string content (e.g., ToolCalls/FunctionCalls)
-                if not isinstance(content, str):
-                    try:
-                        content = str(content)
-                    except:
-                        content = "[Complex Content]"
-                
-                if not content and not hasattr(message, 'models_usage'): 
-                    continue
+                if not content or raw_source == 'User': continue
+                analyst_context.append(f"[{raw_source}]: {content}")
+                yield f"data: {json.dumps({'source': raw_source, 'content': str(content)})}\n\n"
+        except Exception as e:
+            yield f"data: {json.dumps({'source': 'Error', 'content': f'Phase 1 bug: {str(e)}'})}\n\n"
 
-                # Skip echoing the huge prompt task
-                if raw_source.lower() == 'user' and "Perform a professional multi-agent" in content:
-                    continue
+        # PHASE 2: Decision
+        yield f"data: {json.dumps({'source': 'System', 'content': 'PHASE 2: Designing Strategy...'})}\n\n"
+        market_context_str = "\n\n".join(analyst_context)
+        decision_team = get_decision_team(model_client)
+        phase2_task = f"ANALYST CONTEXT:\n{market_context_str}\n\nGOAL: Design, critique, and finalize trade for {ticker}. Only the LeadOrchestrator can end the cycle."
 
-                payload = {
-                    "source": raw_source,
-                    "content": content
-                }
-                
-                # If RiskManager, try to extract structured JSON for the frontend
-                if raw_source == 'RiskManager':
-                    structured = extract_json(content)
-                    if structured:
-                        payload["structured_result"] = structured
-
-                print(f"[DEBUG] Sent: {raw_source} (len: {len(content)})")
+        try:
+            async for message in decision_team.run_stream(task=phase2_task):
+                if active_analyses.get(analysis_id, False): break
+                raw_source = getattr(message, 'source', 'System')
+                content = getattr(message, 'content', '')
+                if not content or (raw_source == 'User' and "ANALYST CONTEXT" in content): continue
+                payload = {"source": raw_source, "content": str(content)}
+                if raw_source in ['RiskManager', 'LeadOrchestrator']:
+                    structured = extract_json(str(content))
+                    if structured: payload["structured_result"] = structured
                 yield f"data: {json.dumps(payload)}\n\n"
         except Exception as e:
-            print(f"[STREAM ERROR] {str(e)}")
-            error_msg = f"Analysis execution failed: {str(e)}"
-            yield f"data: {json.dumps({'source': 'Error', 'content': error_msg})}\n\n"
-            
-        print("[DEBUG] Done.")
-        # Cleanup
-        if analysis_id in active_analyses:
-            del active_analyses[analysis_id]
+            yield f"data: {json.dumps({'source': 'Error', 'content': f'Phase 2 bug: {str(e)}'})}\n\n"
+
+        if analysis_id in active_analyses: del active_analyses[analysis_id]
         yield "data: [DONE]\n\n"
 
     return StreamingResponse(event_generator(), media_type="text/event-stream")
 
-# Serve Frontend Static Files
+# Static mounting logic...
 frontend_dist = os.path.abspath(os.path.join(current_dir, "../frontend/dist"))
-print(f"Checking for frontend at: {frontend_dist}")
-
 if os.path.exists(frontend_dist):
-    # Mount assets folder explicitly
     assets_dir = os.path.join(frontend_dist, "assets")
     if os.path.exists(assets_dir):
         app.mount("/assets", StaticFiles(directory=assets_dir), name="assets")
-    
-    # Serve index.html for the root and any other non-API routes
     from fastapi.responses import FileResponse
     @app.get("/{rest_of_path:path}")
     async def serve_frontend(rest_of_path: str):
-        # If it's a file that exists in dist, serve it
         file_path = os.path.join(frontend_dist, rest_of_path)
-        if os.path.isfile(file_path):
-            return FileResponse(file_path)
-        # Otherwise serve index.html (SPA routing)
+        if os.path.isfile(file_path): return FileResponse(file_path)
         return FileResponse(os.path.join(frontend_dist, "index.html"))
 else:
-    print("WARNING: Frontend dist folder not found!")
     @app.get("/")
-    async def root():
-        return {"message": "Market Analyst API is running. Frontend not built.", "path": frontend_dist}
+    async def root(): return {"message": "API running. Frontend missing."}
 
 if __name__ == "__main__":
     import uvicorn

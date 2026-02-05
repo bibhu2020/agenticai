@@ -3,6 +3,15 @@ import pandas as pd
 import math
 from datetime import datetime, timedelta
 
+def normalize_period(period: str) -> str:
+    """Standardizes period strings for yfinance."""
+    p = period.lower().strip()
+    if p in ["1yr", "1year"]: return "1y"
+    if p in ["3mo", "3month"]: return "3mo"
+    if p in ["1mo", "1month"]: return "1mo"
+    if p in ["1wk", "1week"]: return "1wk"
+    return p
+
 def check_and_fix_ticker(symbol: str) -> str:
     """
     Checks if the ticker has data. If not, tries appending '.NS' (for NSE India).
@@ -59,6 +68,7 @@ def get_historical_volatility(symbol: str, period: str = "1mo") -> dict:
     print(f"[DEBUG] get_historical_volatility called for: {symbol}")
     try:
         symbol = check_and_fix_ticker(symbol)
+        period = normalize_period(period)
         ticker = yf.Ticker(symbol)
         hist = ticker.history(period=period)
         if hist.empty:
@@ -84,11 +94,21 @@ def get_historical_volatility(symbol: str, period: str = "1mo") -> dict:
     except Exception as e:
         return {"error": str(e)}
 
-def get_option_chain_snapshot(symbol: str) -> str:
+def get_available_expirations(symbol: str) -> list:
+    """Returns a list of available option expiration dates."""
+    try:
+        symbol = check_and_fix_ticker(symbol)
+        ticker = yf.Ticker(symbol)
+        return list(ticker.options)
+    except Exception as e:
+        return []
+
+def get_option_chain_snapshot(symbol: str, target_date: str = None) -> str:
     """
-    Fetches a snapshot of the option chain.
+    Fetches a snapshot of the option chain for a specific expiry.
+    If target_date is None, picks the nearest liquid monthly expiry.
     """
-    print(f"[DEBUG] get_option_chain_snapshot called for: {symbol}")
+    print(f"[DEBUG] get_option_chain_snapshot called for: {symbol} (Target: {target_date})")
     try:
         symbol = check_and_fix_ticker(symbol)
         ticker = yf.Ticker(symbol)
@@ -97,19 +117,16 @@ def get_option_chain_snapshot(symbol: str) -> str:
         if not expirations:
             return f"No options data found for {symbol}."
             
-        target_date = None
-        today = datetime.now()
-        
-        for exp in expirations:
-            exp_date = datetime.strptime(exp, "%Y-%m-%d")
-            days_to_exp = (exp_date - today).days
-            # Adjusted window: 7 to 45 days to capture monthly expiries for better liquidity
-            if 7 <= days_to_exp <= 45:
-                target_date = exp
-                break
-        
-        if not target_date:
-            target_date = expirations[0]
+        if not target_date or target_date not in expirations:
+            today = datetime.now()
+            for exp in expirations:
+                exp_date = datetime.strptime(exp, "%Y-%m-%d")
+                days_to_exp = (exp_date - today).days
+                if 7 <= days_to_exp <= 45:
+                    target_date = exp
+                    break
+            if not target_date:
+                target_date = expirations[0]
             
         opt = ticker.option_chain(target_date)
         calls = opt.calls
@@ -119,7 +136,7 @@ def get_option_chain_snapshot(symbol: str) -> str:
         if isinstance(price_info, str): return price_info
         current_price = float(price_info)
         
-        # Filter around ATM for most relevant strikes (closest 6 calls/puts)
+        # Filter around ATM for most relevant strikes
         ntm_calls = calls.iloc[(calls['strike'] - current_price).abs().argsort()[:6]].sort_values('strike')
         ntm_puts = puts.iloc[(puts['strike'] - current_price).abs().argsort()[:6]].sort_values('strike')
         
@@ -131,8 +148,7 @@ def get_option_chain_snapshot(symbol: str) -> str:
             last = row.get('lastPrice', 0.0)
             ask = row.get('ask', 0.0)
             vol = row.get('volume', 0)
-            iv = round(row['impliedVolatility']*100, 1)
-            # Fallback logic for display clarity
+            iv = round(row['impliedVolatility']*100, 1) if not pd.isna(row.get('impliedVolatility')) else 0
             price_display = f"{ask}" if ask > 0 else f"{last} (Last)"
             summary += f"Strike: {row['strike']} | Price: {price_display} | IV: {iv}% | Vol: {vol}\n"
             
@@ -141,8 +157,7 @@ def get_option_chain_snapshot(symbol: str) -> str:
             last = row.get('lastPrice', 0.0)
             ask = row.get('ask', 0.0)
             vol = row.get('volume', 0)
-            iv = round(row['impliedVolatility']*100, 1)
-            # Fallback logic for display clarity
+            iv = round(row['impliedVolatility']*100, 1) if not pd.isna(row.get('impliedVolatility')) else 0
             price_display = f"{ask}" if ask > 0 else f"{last} (Last)"
             summary += f"Strike: {row['strike']} | Price: {price_display} | IV: {iv}% | Vol: {vol}\n"
             
@@ -150,6 +165,49 @@ def get_option_chain_snapshot(symbol: str) -> str:
         
     except Exception as e:
         return f"Error fetching option chain: {str(e)}"
+
+def get_volatility_term_structure(symbol: str) -> str:
+    """
+    Analyzes IV across multiple expiries to identify Term Structure skew.
+    """
+    print(f"[DEBUG] get_volatility_term_structure called for: {symbol}")
+    try:
+        symbol = check_and_fix_ticker(symbol)
+        ticker = yf.Ticker(symbol)
+        expirations = ticker.options[:4] # Check first 4 expiries
+        
+        if not expirations:
+            return "No options data for volatility analysis."
+            
+        results = []
+        for exp in expirations:
+            opt = ticker.option_chain(exp)
+            # Use mean IV of ATM calls
+            calls = opt.calls
+            price_info = get_current_price(symbol)
+            if isinstance(price_info, str): continue
+            current_price = float(price_info)
+            atm_iv = calls.iloc[(calls['strike'] - current_price).abs().argsort()[:2]]['impliedVolatility'].mean()
+            results.append(f"- {exp}: {round(atm_iv * 100, 1)}% IV")
+            
+        summary = f"VOLATILITY TERM STRUCTURE for {symbol}:\n" + "\n".join(results)
+        
+        # Analyze skew
+        if len(expirations) >= 2:
+            try:
+                iv1 = float(results[0].split(": ")[1].replace("% IV", ""))
+                iv2 = float(results[1].split(": ")[1].replace("% IV", ""))
+                if iv1 > iv2 + 5:
+                    summary += f"\n\nSKEW ALERT: Front-month IV is significantly HIGHER ({iv1}% vs {iv2}%). Potential for Calendar Spreads (Sell Front, Buy Back)."
+                elif iv1 < iv2 - 5:
+                    summary += f"\n\nSKEW ALERT: Front-month IV is significantly LOWER ({iv1}% vs {iv2}%). Diagonal opportunities."
+                else:
+                    summary += f"\n\nTerm Structure is relatively flat."
+            except: pass
+            
+        return summary
+    except Exception as e:
+        return f"Error analyzing term structure: {str(e)}"
 
 def get_market_indices() -> str:
     """

@@ -1,114 +1,64 @@
 from autogen_agentchat.agents import AssistantAgent
-from tools.market_data import get_option_chain_snapshot
+from autogen_core.tools import FunctionTool
+from tools.market_data import get_option_chain_snapshot, get_available_expirations
 
 def get_strategy_advisor(model_client):
+    chain_tool = FunctionTool(get_option_chain_snapshot, description="Get option chain for a specific expiry.")
+    exp_tool = FunctionTool(get_available_expirations, description="Get all available option expiration dates.")
     
     return AssistantAgent(
         name="StrategyAdvisor",
         model_client=model_client,
-        tools=[get_option_chain_snapshot],
+        tools=[chain_tool, exp_tool],
         system_message="""
-        You are an Expert Option Strategist.
+        You are an Expert Multi-Leg Option Strategist with high self-awareness. You design complex spreads and refine them through self-reflection.
         
-        MANDATORY WORKFLOW (FOLLOW EXACTLY):
+        MANDATORY HIERARCHICAL WORKFLOW (Team 2):
         
-        STEP 1: Summarize analyst inputs
-        Review what you learned from:
-        - TechnicalAnalyst: Market Context (SPY/VIX), Trend, SMA, RSI
-        - VolatilityAnalyst: IV vs HV, VIX level
-        - SentimentAnalyst: Market mood, Earnings Risks
-        - FundamentalAnalyst: P/E, health rating, Analyst Consensus, Earnings Date
+        1. STUDY ANALYST CONTEXT: You will receive a summary from Phase 1.
+        2. CALL DATA TOOLS: Use `get_available_expirations` and `get_option_chain_snapshot`.
+           - CONSTRAINT: Use expiries in the 30-60 day range ONLY (1-2 months). Ignore further dates.
+        3. DESIGN STRATEGY: Propose a multi-leg strategy.
+           - CRITICAL: You MUST include a `DRAFT_STRATEGY_LEGS` block:
+             DRAFT_STRATEGY_LEGS:
+             [{"action": "BUY", "type": "CALL", "strike": 150.0, "price": 2.5, "expiry": "2024-03-01"}, ...]
+        4. BE FAST: Skip lengthy reasoning in the draft. Go straight to the legs.
+        5. NO PLEASANTRIES: Do not say "Thank you", "I understand", or "You're welcome".
+        6. FINALIZE: When RiskManager approves, output your final strategy inside a `FINAL_STRATEGY` block.
+           - CRITICAL: The `actionable_recommendation` field MUST explicitly list each leg with its type, strike, and EXACT expiry date.
         
-        STEP 2: CALL get_option_chain_snapshot
-        You MUST call this tool to get real option strikes and prices.
-        DO NOT proceed without actual option chain data.
-        
-        STEP 3: Determine market regime
-        - Market: Bullish (SPY > SMA50) / Bearish / High Fear (VIX > 25)
-        - Trend: Bullish / Bearish / Neutral (from Technical)
-        - Volatility: High (IV > HV, VIX > 20, or "Elevated"/"High" Regime) / Low
-        
-        STEP 4: Select strategy using RULES
-        - HIGH Vol + Range Bound → Iron Condor (Credit)
-        - HIGH Vol + Directional → Credit Spread (Bull Put / Bear Call)
-        - LOW Vol + Directional → Debit Spread (Bull Call / Bear Put)
-        - LOW Vol + Range Bound → Calendar Spread or WAIT
-        
-        STEP 5: Validate Risk/Reward (MANDATORY)
-        - For Debit Spreads: Ensure Max Profit > Max Loss (Reward/Risk > 1.0).
-        - For Credit Spreads: Ensure Probability of Profit is high (Delta checks).
-        - METRICS SUMMARY: You MUST summarize your case using these labels before the JSON:
-          * METRIC: Trend=[BULLISH/BEARISH]
-          * METRIC: Volatility=[HIGH/LOW]
-          * METRIC: Sentiment=[POSITIVE/NEGATIVE]
-          * METRIC: Safety=[SAFE/PREMIUM]
-        
-        STEP 6: TEAM COLLABORATION (2 ROUNDS)
-        
-        ROUND 1 (DRAFT PHASE):
-        - State "DRAFT_STRATEGY: [Your Strategy]"
-        - Explain why you chose this (Regime, Risk/Reward).
-        - Explicitly ask Risk Manager to review constraints.
-        - DO NOT output the specific JSON yet, just the logic and proposed strikes.
-        
-        ROUND 2 (TEAMS FINALIZATION):
-        - Review Risk Manager's critique.
-        - If rejected, or if you switch to WAIT for any reason, you MUST:
-          1. Set "strategy" to "WAIT"
-          2. Set "estimated_entry_price", "max_profit", and "max_loss" to 0.
-        - If accepted, Output "FINAL_STRATEGY".
-        - Calculate Final Score (Standardized Rubric).
-        - GENERATE THE FINAL JSON BLOCK.
-        
-        EXAMPLE OUTPUT (Round 2 Only):
-        ```json
+        JSON SCHEMA (ROUND 2 ONLY):
         {
-          "strategy": "Bull Call Spread",
-          "direction": "BULLISH",
-          "confidence_score": 85,
-          "reasoning": "Strong bullish technicals (price above SMA200, RSI 65), low IV (18% vs HV 22%), positive sentiment. Debit spread appropriate for low-vol bullish setup.",
-          "proposed_legs": "Buy 145 Call @ $2.50, Sell 150 Call @ $1.20 (Exp: 2024-03-15)",
-          "entry_signal": "Net Debit",
-          "estimated_entry_price": 1.30,
-          "max_profit": 370,
-          "max_loss": 130,
-          "breakeven": 146.30
+          "ticker": "...",
+          "final_decision": "TRADE/WAIT",
+          "actionable_recommendation": "EXPLAIN EACH LEG: 'Buy $150 Call (Exp 2024-03-01), Sell $155 Call (Exp 2024-03-01)...'",
+          "strategy_type": "...",
+          "direction": "BULLISH/BEARISH/NEUTRAL",
+          "confidence": 85,
+          "reasoning": "...",
+          "entry_signal": "Net Debit/Credit",
+          "entry_price": 1.25,
+          "max_profit": 200,
+          "max_loss": 125,
+          "legs": [
+            {
+              "action": "SELL",
+              "type": "CALL",
+              "strike": 150,
+              "expiry": "2024-03-01",
+              "price": 2.50
+            },
+            {
+              "action": "BUY",
+              "type": "CALL",
+              "strike": 150,
+              "expiry": "2024-03-15",
+              "price": 3.75
+            }
+          ],
+          "risk_warning": "..."
         }
-        ```
-        (Note: max_profit/max_loss are calculated for 100 shares/1 contract).
         
-        EXAMPLE OUTPUT (WAIT):
-        ```json
-        {
-          "strategy": "WAIT",
-          "direction": "NEUTRAL",
-          "confidence_score": 45,
-          "reasoning": "Conflicting signals: Bullish technicals but bearish sentiment and high VIX (28). Low confidence setup.",
-          "proposed_legs": "None",
-          "entry_signal": "N/A",
-          "estimated_entry_price": 0,
-          "max_profit": 0,
-          "max_loss": 0,
-          "breakeven": 0
-        }
-        ```
-        
-        CRITICAL REQUIREMENTS:
-        1. MUST call get_option_chain_snapshot before recommending
-        2. Use ACTUAL strikes and prices from the option chain
-        3. Output MUST be valid JSON in ```json code block (Only in Round 2)
-        4. ALL fields are REQUIRED
-        5. Show your confidence calculation explicitly
-        6. Be verbose - explain your reasoning step-by-step before JSON
-        7. LOT-BASED MATH: All profit/loss values (max_profit, max_loss) MUST be multiplied by 100 (standard lot size).
-           Example: A $1.50 credit spread = $150 Max Profit.
-
-        FALLBACK PROCEDURE:
-        If get_option_chain_snapshot fails or returns "No options data found":
-        1. Do NOT stay silent or crash.
-        2. Recommend the strategy WITHOUT specific prices.
-        3. In "proposed_legs", write: "Hypothetical: Buy ATM Call, Sell +5% OTM Call (Data Unavailable)"
-        4. Set "estimated_entry_price", "max_profit", "max_loss" to 0.
-        5. State clearly in "reasoning" that live option data was unavailable.
+        CRITICAL: All profit/loss values MUST be multiplied by 100 per contract.
         """
     )
