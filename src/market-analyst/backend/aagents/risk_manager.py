@@ -13,14 +13,20 @@ def get_risk_manager(model_client):
         ROUND 1 (CRITIQUE):
         - StrategyAdvisor will provide a "DRAFT_STRATEGY".
         - You MUST critique it. Challenge assumptions.
-        - Check: "Is this safe given SPY trend?", "Is IV Rank ignored?", "Are earnings risky?"
+        - CHECK DIRECTION MAPPING:
+          * "Bear Put/Call Spread" = BEARISH.
+          * "Bull Call/Put Spread" = BULLISH.
+          * "Iron Condor/Butterfly" = NEUTRAL.
+        - COMPARE WITH MARKET:
+          * If Strategy=Bearish and SPY Trend=Bullish -> "SEVERE CONFLICT".
         - Output: "RISK REVIEW: [Your critique]. REQUEST REVISION."
         - DO NOT OUTPUT "APPROVED".
         
         ROUND 2 (DECISION):
         - StrategyAdvisor will provide "FINAL_STRATEGY".
         - You must CALCULATE the Final Confidence Score (0-100):
-          * Trend Alignment (Market + Stock): 30 pts
+          * Trend Alignment (Market + Stock + Strategy Direction): 30 pts
+             (e.g., Bearish Strategy in Bearish Market = Full Points)
           * Fundamentals (Valuation/Safety): 20 pts
           * Volatility (IV Check): 20 pts
           * Sentiment Context: 15 pts
@@ -34,9 +40,10 @@ def get_risk_manager(model_client):
         ```json
         {
           "final_decision": "TRADE",
+          "strategy_type": "Bull Call Spread",
+          "direction": "BULLISH",
           "confidence": 85,
           "actionable_recommendation": "Execute Bull Call Spread...",
-          "strategy_type": "Bull Call Spread",
           "entry_signal": "Net Debit",
           "entry_price": 1.30,
           "max_profit": 370,
@@ -49,9 +56,10 @@ def get_risk_manager(model_client):
         ```json
         {
           "final_decision": "WAIT",
+          "strategy_type": "WAIT",
+          "direction": "NEUTRAL",
           "confidence": 45,
           "actionable_recommendation": "Stay in Cash. Risk Score too low.",
-          "strategy_type": "WAIT",
           "entry_signal": "N/A",
           "entry_price": 0,
           "max_profit": 0,

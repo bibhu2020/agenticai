@@ -17,7 +17,7 @@ def get_strategy_advisor(model_client):
         - TechnicalAnalyst: Market Context (SPY/VIX), Trend, SMA, RSI
         - VolatilityAnalyst: IV vs HV, VIX level
         - SentimentAnalyst: Market mood, Earnings Risks
-        - FundamentalAnalyst: P/E, health rating, Earnings Date
+        - FundamentalAnalyst: P/E, health rating, Analyst Consensus, Earnings Date
         
         STEP 2: CALL get_option_chain_snapshot
         You MUST call this tool to get real option strikes and prices.
@@ -26,7 +26,7 @@ def get_strategy_advisor(model_client):
         STEP 3: Determine market regime
         - Market: Bullish (SPY > SMA50) / Bearish / High Fear (VIX > 25)
         - Trend: Bullish / Bearish / Neutral (from Technical)
-        - Volatility: High (IV > HV or VIX > 20) / Low
+        - Volatility: High (IV > HV, VIX > 20, or "Elevated"/"High" Regime) / Low
         
         STEP 4: Select strategy using RULES
         - HIGH Vol + Range Bound → Iron Condor (Credit)
@@ -58,6 +58,7 @@ def get_strategy_advisor(model_client):
         ```json
         {
           "strategy": "Bull Call Spread",
+          "direction": "BULLISH",
           "confidence_score": 85,
           "reasoning": "Strong bullish technicals (price above SMA200, RSI 65), low IV (18% vs HV 22%), positive sentiment. Debit spread appropriate for low-vol bullish setup.",
           "proposed_legs": "Buy 145 Call @ $2.50, Sell 150 Call @ $1.20 (Exp: 2024-03-15)",
@@ -73,6 +74,7 @@ def get_strategy_advisor(model_client):
         ```json
         {
           "strategy": "WAIT",
+          "direction": "NEUTRAL",
           "confidence_score": 45,
           "reasoning": "Conflicting signals: Bullish technicals but bearish sentiment and high VIX (28). Low confidence setup.",
           "proposed_legs": "None",

@@ -313,3 +313,35 @@ def get_fundamental_data(symbol: str) -> dict:
         }
     except Exception as e:
         return {"error": str(e)}
+
+def get_analyst_consensus(symbol: str) -> dict:
+    """
+    Fetches Wall St. analyst recommendations and price targets.
+    """
+    print(f"[DEBUG] get_analyst_consensus called for: {symbol}")
+    try:
+        symbol = check_and_fix_ticker(symbol)
+        ticker = yf.Ticker(symbol)
+        info = ticker.info
+        
+        consensus = info.get('recommendationKey', 'none')
+        target = info.get('targetMeanPrice')
+        num_analysts = info.get('numberOfAnalystOpinions')
+        
+        # Current price for comparison
+        current = info.get('currentPrice') or info.get('regularMarketPrice') or info.get('previousClose')
+        
+        upside = "N/A"
+        if target and current and current > 0:
+            upside_pct = ((target - current) / current) * 100
+            upside = f"{round(upside_pct, 1)}%"
+            
+        return {
+            "consensus": consensus.replace('_', ' ').title(),
+            "target_price": target or "N/A",
+            "current_price": current,
+            "upside_potential": upside,
+            "analyst_count": num_analysts or "N/A"
+        }
+    except Exception as e:
+        return {"error": f"Failed to fetch analyst data: {str(e)}"}
