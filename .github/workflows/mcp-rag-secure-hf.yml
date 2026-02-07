@@ -39,8 +39,8 @@ jobs:
 
     - name: Create deployment directory
       run: |
-        mkdir -p deploy_temp
-        cp -r src deploy_temp/
+        mkdir -p deploy_temp/src
+        cp -r src/mcp-rag-secure deploy_temp/src/
         cp pyproject.toml deploy_temp/
         cp src/mcp-rag-secure/Dockerfile deploy_temp/
         cp src/mcp-rag-secure/README.md deploy_temp/ || true
