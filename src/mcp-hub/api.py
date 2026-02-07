@@ -14,6 +14,9 @@ except ImportError:
     sys.path.append(str(Path(__file__).parent.parent.parent))
     from src.mcp_telemetry import get_metrics
 
+from fastapi.staticfiles import StaticFiles
+import uvicorn
+
 app = FastAPI()
 
 app.add_middleware(
@@ -66,18 +69,10 @@ async def list_servers():
     
     return sorted(servers, key=lambda x: x["name"])
 
-@app.get("/api/usage")
-async def get_usage_trends():
-    """Returns usage data for charts (mocked for now, but from real structure)."""
-    # In a real app, this would query a DB for time-series data
-    # For now, we return the structure needed by the frontend
-    return {
-        "labels": ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-        "datasets": [
-            {"name": "Total Activity", "data": [120, 150, 180, 160, 210, 140, 130]}
-        ]
-    }
+# Mount static files for production
+static_path = Path(__file__).parent / "dist"
+if static_path.exists():
+    app.mount("/", StaticFiles(directory=str(static_path), html=True), name="static")
 
 if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8001)
+    uvicorn.run(app, host="0.0.0.0", port=int(os.environ.get("PORT", 7860)))

@@ -64,10 +64,10 @@ const usageData = ref({ labels: [], datasets: [] })
 
 const fetchData = async () => {
   try {
-    const res = await fetch('http://localhost:8001/api/servers')
+    const res = await fetch('/api/servers')
     servers.value = await res.json()
     
-    const usageRes = await fetch('http://localhost:8001/api/usage')
+    const usageRes = await fetch('/api/usage')
     usageData.value = await usageRes.json()
     
     renderChart()

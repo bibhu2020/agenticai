@@ -41,6 +41,7 @@ jobs:
       run: |
         mkdir -p deploy_temp/src
         cp -r src/mcp-web deploy_temp/src/
+        cp src/mcp_telemetry.py deploy_temp/src/
         cp pyproject.toml deploy_temp/
         cp src/mcp-web/Dockerfile deploy_temp/
         cp src/mcp-web/README.md deploy_temp/ || true

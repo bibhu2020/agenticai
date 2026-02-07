@@ -21,6 +21,7 @@ RUN playwright install --with-deps chromium
 
 # Copy the specific server source code
 COPY src/mcp-web ./src/mcp-web
+COPY src/mcp_telemetry.py ./src/mcp_telemetry.py
 
 # Set PYTHONPATH to include src so imports work
 ENV PYTHONPATH=/app/src

@@ -11,6 +11,7 @@ COPY pyproject.toml .
 RUN pip install --no-cache-dir .
 
 COPY src/mcp-azure-sre ./src/mcp-azure-sre
+COPY src/mcp_telemetry.py ./src/mcp_telemetry.py
 
 ENV PYTHONPATH=/app/src
 

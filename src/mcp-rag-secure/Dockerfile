@@ -11,6 +11,7 @@ COPY pyproject.toml .
 RUN pip install --no-cache-dir .
 
 COPY src/mcp-rag-secure ./src/mcp-rag-secure
+COPY src/mcp_telemetry.py ./src/mcp_telemetry.py
 
 ENV PYTHONPATH=/app/src
 

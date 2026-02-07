@@ -41,6 +41,7 @@ jobs:
       run: |
         mkdir -p deploy_temp/src
         cp -r src/mcp-trader deploy_temp/src/
+        cp src/mcp_telemetry.py deploy_temp/src/
         cp pyproject.toml deploy_temp/
         # Move Dockerfile/README to root of deploy context for HF Space
         cp src/mcp-trader/Dockerfile deploy_temp/
