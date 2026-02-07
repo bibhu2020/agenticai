@@ -17,4 +17,4 @@ ENV PYTHONPATH=/app/src
 
 EXPOSE 7860
 
-CMD ["python", "src/mcp-azure-sre/server.py", "--transport", "sse", "--port", "7860", "--host", "0.0.0.0"]
+CMD ["mcp", "run", "src/mcp-azure-sre/server.py", "--transport", "sse"]

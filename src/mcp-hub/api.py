@@ -28,14 +28,41 @@ app.add_middleware(
 
 PROJECT_ROOT = Path(__file__).parent.parent.parent
 
+KNOWN_SERVERS = [
+    {"id": "mcp-trader", "name": "MCP Trader", "description": "Quantitative trading strategies and market data analysis."},
+    {"id": "mcp-web", "name": "MCP Web", "description": "Web search, content extraction, and research tools."},
+    {"id": "mcp-azure-sre", "name": "MCP Azure SRE", "description": "Infrastructure management and monitoring for Azure."},
+    {"id": "mcp-rag-secure", "name": "MCP Secure RAG", "description": "Multi-tenant knowledge base with strict isolation."},
+    {"id": "mcp-trading-research", "name": "MCP Trading Research", "description": "Qualitative financial research and sentiment analysis."},
+    {"id": "mcp-github", "name": "MCP GitHub", "description": "GitHub repository management and automation."},
+    {"id": "mcp-seo", "name": "MCP SEO", "description": "Website auditing for SEO and accessibility."}
+]
+
 @app.get("/api/servers")
 async def list_servers():
     """Dynamically discovers and returns MCP servers with real metrics."""
-    mcp_dirs = [d for d in (PROJECT_ROOT / "src").iterdir() if d.is_dir() and d.name.startswith("mcp-") and d.name != "mcp-hub"]
+    mcp_dirs = []
+    if (PROJECT_ROOT / "src").exists():
+        mcp_dirs = [d for d in (PROJECT_ROOT / "src").iterdir() if d.is_dir() and d.name.startswith("mcp-") and d.name != "mcp-hub"]
     
     metrics = get_metrics()
     servers = []
     
+    # Use known servers as the base if discovery yields nothing (common in Docker)
+    if not mcp_dirs:
+        for s in KNOWN_SERVERS:
+            server_metrics = metrics.get(s["id"], {"hourly": 0, "weekly": 0, "monthly": 0})
+            def fmt(n):
+                if n >= 1000: return f"{n/1000:.1f}k"
+                return str(n)
+            
+            servers.append({**s, "metrics": {
+                "hourly": fmt(server_metrics["hourly"]),
+                "weekly": fmt(server_metrics["weekly"]),
+                "monthly": fmt(server_metrics["monthly"])
+            }})
+        return servers
+
     for d in mcp_dirs:
         readme_path = d / "README.md"
         description = "MCP Server"

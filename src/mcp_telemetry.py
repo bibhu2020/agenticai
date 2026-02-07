@@ -6,7 +6,12 @@ from datetime import datetime
 from pathlib import Path
 
 # Use a central log file for usages
-LOG_FILE = Path(__file__).parent.parent.parent / "mcp_usage_log.json"
+# In Docker/HF, /tmp is writable. Locally, use the project root.
+import sys
+if os.path.exists("/app"):
+    LOG_FILE = Path("/tmp/mcp_usage_log.json")
+else:
+    LOG_FILE = Path(__file__).parent.parent / "mcp_usage_log.json"
 
 def log_usage(server_name: str, tool_name: str):
     """Logs a tool call with timestamp."""

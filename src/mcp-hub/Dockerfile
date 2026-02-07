@@ -1,9 +1,9 @@
 # Build stage
 FROM node:20-slim AS build-stage
-WORKDIR /app
-COPY package*.json ./
+WORKDIR /hub-build
+# Copy the hub sources specifically for building
+COPY src/mcp-hub ./
 RUN npm install
-COPY . .
 RUN npm run build
 
 # Production stage
@@ -18,8 +18,8 @@ COPY pyproject.toml .
 RUN pip install --no-cache-dir . fastapi uvicorn
 
 COPY src/mcp-hub ./src/mcp-hub
-COPY --from=build-stage /app/dist ./src/mcp-hub/dist
 COPY src/mcp_telemetry.py ./src/mcp_telemetry.py
+COPY --from=build-stage /hub-build/dist ./src/mcp-hub/dist
 
 ENV PYTHONPATH=/app/src
 ENV PORT=7860

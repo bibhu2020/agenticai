@@ -30,4 +30,4 @@ ENV PYTHONPATH=/app/src
 EXPOSE 7860
 
 # Run the server
-CMD ["python", "src/mcp-web/server.py", "--transport", "sse", "--port", "7860", "--host", "0.0.0.0"]
+CMD ["mcp", "run", "src/mcp-web/server.py", "--transport", "sse"]
