@@ -412,3 +412,33 @@ def get_recent_logs(server_id: str, limit: int = 50):
     except Exception as e:
         print(f"Log Fetch Error: {e}")
         return []
+
+def get_recent_traces(server_id: str, limit: int = 50):
+    """Fetches the most recent traces for a specific server."""
+    if not IS_HUB and not DB_FILE.exists():
+        return []
+        
+    try:
+        conn = _get_conn()
+        rows = []
+        
+        if PG_CONN_STR and IS_HUB:
+            from psycopg2.extras import RealDictCursor
+            with conn.cursor(cursor_factory=RealDictCursor) as cur:
+                 cur.execute(
+                    "SELECT trace_id, name, status, duration_ms, start_time FROM traces WHERE server = %s ORDER BY id DESC LIMIT %s", 
+                    (server_id, limit)
+                )
+                 rows = cur.fetchall()
+            conn.close()
+        else:
+            rows = conn.execute(
+                "SELECT trace_id, name, status, duration_ms, start_time FROM traces WHERE server = ? ORDER BY id DESC LIMIT ?", 
+                (server_id, limit)
+            ).fetchall()
+            conn.close()
+            
+        return [dict(r) for r in rows]
+    except Exception as e:
+        print(f"Trace Fetch Error: {e}")
+        return []
