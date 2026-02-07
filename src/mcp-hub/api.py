@@ -13,52 +13,82 @@ from datetime import datetime, timedelta
 # Add parent dir to path for imports
 sys.path.append(str(Path(__file__).parent.parent))
 
+# Core Telemetry Imports for Metrics/History
+from core.mcp_telemetry import get_metrics, get_usage_history, get_system_metrics, get_recent_logs
+
+
 # Telemetry Import
 try:
-    from core.mcp_telemetry import get_metrics, get_usage_history, get_system_metrics, log_usage, _get_conn, get_recent_logs
+    from core.mcp_telemetry import _write_db
 except ImportError:
     # If standard import fails, try absolute path fallback
     sys.path.append(str(Path(__file__).parent.parent.parent))
-    from src.core.mcp_telemetry import get_metrics, get_usage_history, get_system_metrics, log_usage, _get_conn, get_recent_logs
-
-# Optional: HF Hub for status checks
-try:
-    from huggingface_hub import HfApi
-    hf_api = HfApi()
-except ImportError:
-    hf_api = None
+    from src.core.mcp_telemetry import _write_db
 
 from pydantic import BaseModel
 
-class TelemetryEvent(BaseModel):
+class LogEvent(BaseModel):
     server: str
     tool: str
+    timestamp: Optional[str] = None
+
+class TraceEvent(BaseModel):
+    server: str
+    trace_id: str
+    span_id: str
+    name: str
+    duration_ms: float
+    status: Optional[str] = "ok"
+    parent_id: Optional[str] = None
+    start_time: Optional[str] = None
+    end_time: Optional[str] = None
+
+class MetricEvent(BaseModel):
+    server: str
+    name: str
+    value: float
+    tags: Optional[str] = "{}"
     timestamp: Optional[str] = None
 
 app = FastAPI()
 
 @app.post("/api/telemetry")
-async def ingest_telemetry(event: TelemetryEvent):
-    """Ingests telemetry from remote MCP agents."""
-    # We use the internal log_usage which handles DB writing
-    # We must ensure we are in Hub mode for this to work, which we are since this is api.py
-    # But wait, log_usage checks IS_HUB env var.
-    # To be safe, we will write directly or ensure env var is set in Dockerfile.
-    
-    # Actually, simpler: we can just call the DB insert directly here to retrieve avoiding circular logic
-    # or just use log_usage if configured correctly.
-    
-    # Let's import the specific DB function or use sqlite directly
-    from core.mcp_telemetry import _get_conn
-    
+@app.post("/api/telemetry/log")
+async def ingest_log(event: LogEvent):
+    """Ingests usage logs."""
     try:
         ts = event.timestamp or datetime.now().isoformat()
-        with _get_conn() as conn:
-             conn.execute("INSERT INTO logs (timestamp, server, tool) VALUES (?, ?, ?)", 
-                          (ts, event.server, event.tool))
+        _write_db("logs", {
+            "timestamp": ts,
+            "server": event.server,
+            "tool": event.tool
+        })
         return {"status": "ok"}
     except Exception as e:
-        print(f"Telemetry Ingest Failed: {e}")
+        print(f"Log Ingest Failed: {e}")
+        return {"status": "error", "message": str(e)}
+
+@app.post("/api/telemetry/trace")
+async def ingest_trace(event: TraceEvent):
+    """Ingests distributed traces."""
+    try:
+        _write_db("traces", event.dict())
+        return {"status": "ok"}
+    except Exception as e:
+        print(f"Trace Ingest Failed: {e}")
+        return {"status": "error", "message": str(e)}
+
+@app.post("/api/telemetry/metric")
+async def ingest_metric(event: MetricEvent):
+    """Ingests quantitative metrics."""
+    try:
+        ts = event.timestamp or datetime.now().isoformat()
+        data = event.dict()
+        data["timestamp"] = ts
+        _write_db("metrics", data)
+        return {"status": "ok"}
+    except Exception as e:
+        print(f"Metric Ingest Failed: {e}")
         return {"status": "error", "message": str(e)}
 
 app.add_middleware(
