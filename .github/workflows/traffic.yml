@@ -1,4 +1,4 @@
-name: Constant Traffic Flow
+name: Constant Traffic Flow into MCP Servers
 
 on:
   schedule:

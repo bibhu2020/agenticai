@@ -3,7 +3,7 @@ import sys
 import random
 import requests
 import uuid
-from datetime import datetime
+from datetime import datetime, timezone
 from mcp import ClientSession
 from mcp.client.sse import sse_client
 from typing import Dict, Any
@@ -83,8 +83,8 @@ async def emit_fake_telemetry(server: str, tool: str, duration: float):
             "name": f"tool_call:{tool}",
             "duration_ms": duration,
             "status": "ok",
-            "start_time": datetime.now().isoformat(),
-            "end_time": datetime.now().isoformat()
+            "start_time": datetime.now(timezone.utc).isoformat(),
+            "end_time": datetime.now(timezone.utc).isoformat()
         }
         requests.post(f"{hub_api}/trace", json=trace_payload, timeout=1)
     except: pass
@@ -96,7 +96,7 @@ async def emit_fake_telemetry(server: str, tool: str, duration: float):
             "name": "tool_latency",
             "value": duration,
             "tags": '{"env": "prod"}',
-            "timestamp": datetime.now().isoformat()
+            "timestamp": datetime.now(timezone.utc).isoformat()
         }
         requests.post(f"{hub_api}/metric", json=metric_payload, timeout=1)
     except: pass
@@ -106,28 +106,35 @@ async def emit_fake_telemetry(server: str, tool: str, duration: float):
         log_payload = {
             "server": server,
             "tool": tool,
-            "timestamp": datetime.now().isoformat()
+            "timestamp": datetime.now(timezone.utc).isoformat()
         }
         requests.post(f"{hub_api}/log", json=log_payload, timeout=1)
     except: pass
 
 async def run_batch(batch_id):
-    targets = get_targets()
+    all_targets = get_targets()
+    # Pick 1 or 2 random targets
+    count = min(len(all_targets), random.randint(1, 2))
+    targets = random.sample(all_targets, count)
+    
     for i, t in enumerate(targets):
         print(f"[{batch_id}] Processing target {i+1}/{len(targets)}: {t['name']}")
         await call_agent_and_emit_telemetry(t["name"], t["tool"], t["args"], batch_id)
         # Subtle delay between individual calls to prevent flooding
-        await asyncio.sleep(0.2)
+        await asyncio.sleep(0.5)
 
 async def main():
-    print(f" Starting Heavy Load Generator...")
-    print(f"Plan: {ITERATIONS} iterations of {len(get_targets())} requests each.")
+    print(f" Starting Randomized Traffic Generator...")
+    # Set to 1 iteration for "everytime I invoke" feel, or keep small loop
+    plan_iterations = 1 
+    print(f"Plan: {plan_iterations} iteration(s) (picking 1-2 random servers).")
     
-    for i in range(ITERATIONS):
-        print(f"\n--- Batch {i+1}/{ITERATIONS} ---")
+    for i in range(plan_iterations):
+        if plan_iterations > 1:
+            print(f"\n--- Batch {i+1}/{plan_iterations} ---")
         await run_batch(i+1)
-        # Random sleep to distribution load
-        await asyncio.sleep(random.uniform(0.5, 2.0))
+        if plan_iterations > 1:
+            await asyncio.sleep(random.uniform(0.5, 2.0))
     
     print("\n🎉 Heavy load generation complete!")
 
