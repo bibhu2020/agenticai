@@ -18,7 +18,7 @@ COPY pyproject.toml .
 RUN pip install --no-cache-dir . fastapi uvicorn
 
 COPY src/mcp-hub ./src/mcp-hub
-COPY src/mcp_telemetry.py ./src/mcp_telemetry.py
+COPY src/core ./src/core
 # Copy all other MCP servers for discovery
 COPY src/mcp-trader ./src/mcp-trader
 COPY src/mcp-web ./src/mcp-web
@@ -33,6 +33,7 @@ COPY --from=build-stage /hub-build/dist ./src/mcp-hub/dist
 
 ENV PYTHONPATH=/app/src
 ENV PORT=7860
+ENV MCP_IS_HUB=true
 
 EXPOSE 7860
 

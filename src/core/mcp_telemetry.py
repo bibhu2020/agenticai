@@ -8,9 +8,6 @@ from datetime import datetime, timedelta
 from pathlib import Path
 
 # Configuration
-# mcp_telemetry.py is being used by all MCP servers to log usage to the Hub.
-# MCP_HUB_URL is the URL of the Hub.
-# MCP_IS_HUB is a boolean indicating whether the current server is the Hub.
 HUB_URL = os.environ.get("MCP_HUB_URL", "http://localhost:7860")
 IS_HUB = os.environ.get("MCP_IS_HUB", "false").lower() == "true"
 
@@ -18,19 +15,29 @@ IS_HUB = os.environ.get("MCP_IS_HUB", "false").lower() == "true"
 if os.path.exists("/app"):
     DB_FILE = Path("/tmp/mcp_logs.db")
 else:
-    DB_FILE = Path(__file__).parent.parent / "mcp_logs.db"
+    # src/core/mcp_telemetry.py -> src/core -> src -> project root
+    DB_FILE = Path(__file__).parent.parent.parent / "mcp_logs.db"
 
 def _get_conn():
+    # Auto-init if missing (lazy creation)
+    if IS_HUB and not os.path.exists(DB_FILE):
+        _init_db()
+        
     conn = sqlite3.connect(DB_FILE)
     conn.row_factory = sqlite3.Row
     return conn
 
 def _init_db():
     """Initializes the SQLite database with required tables."""
-    if not IS_HUB: return 
-    
+    # Ensure parent dir exists
+    if not os.path.exists(DB_FILE.parent):
+        os.makedirs(DB_FILE.parent, exist_ok=True)
+            
     try:
-        with _get_conn() as conn:
+        # Connect directly to create file
+        conn = sqlite3.connect(DB_FILE)
+        conn.row_factory = sqlite3.Row
+        with conn:
             conn.execute("""
                 CREATE TABLE IF NOT EXISTS logs (
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -40,12 +47,11 @@ def _init_db():
                 )
             """)
             conn.execute("CREATE INDEX IF NOT EXISTS idx_ts ON logs(timestamp)")
+        conn.close()
     except Exception as e:
         print(f"DB Init Failed: {e}")
 
-# Initialize on import if Hub
-if IS_HUB:
-    _init_db()
+# Init handled lazily in _get_conn
 
 def log_usage(server_name: str, tool_name: str):
     """Logs a usage event. Writes to DB if Hub, else POSTs to Hub API."""
@@ -166,18 +172,16 @@ def _generate_mock_history(range_hours, intervals):
         else:
              labels.append(bucket_time.strftime("%m/%d"))
              
-    datasets = []
+    datasets = {}
     # simulate 3 active servers
-    for name, base_load in [("MCP Hub", 50), ("MCP Weather", 20), ("MCP Azure SRE", 35)]:
+    for name, base_load in [("mcp-hub", 50), ("mcp-weather", 20), ("mcp-azure-sre", 35)]:
         data_points = []
         for _ in range(intervals):
+            # Random walk
             val = max(0, int(base_load + random.randint(-10, 15)))
             data_points.append(val)
         
-        datasets.append({
-            "name": name,
-            "data": data_points
-        })
+        datasets[name] = data_points
         
     return {"labels": labels, "datasets": datasets}
 
@@ -203,3 +207,21 @@ def get_system_metrics():
         "throughput": throughput,
         "latency": latency
     }
+
+def get_recent_logs(server_id: str, limit: int = 50):
+    """Fetches the most recent logs for a specific server."""
+    if not DB_FILE.exists():
+        return []
+        
+    try:
+        with _get_conn() as conn:
+            # Simple match. For 'mcp-hub', we might want all, but usually filtered by server_id
+            rows = conn.execute(
+                "SELECT timestamp, tool FROM logs WHERE server = ? ORDER BY id DESC LIMIT ?", 
+                (server_id, limit)
+            ).fetchall()
+            
+        return [dict(r) for r in rows]
+    except Exception as e:
+        print(f"Log Fetch Error: {e}")
+        return []
