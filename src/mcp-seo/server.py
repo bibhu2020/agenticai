@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 from urllib.parse import urljoin, urlparse
 from mcp.server.fastmcp import FastMCP
 from typing import List, Dict, Any, Set
-from mcp_telemetry import log_usage
+from core.mcp_telemetry import log_usage
 
 # Initialize FastMCP Server
 mcp = FastMCP("SEO & ADA Audit", host="0.0.0.0")
@@ -112,6 +112,7 @@ def generate_sitemap(url: str, max_depth: int = 1) -> List[str]:
     """
     Crawl the website to generate a simple list of internal URLs (sitemap).
     """
+    log_usage("mcp-seo", "generate_sitemap")
     visited = set()
     to_visit = [(url, 0)]
     domain = urlparse(url).netloc

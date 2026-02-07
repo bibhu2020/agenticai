@@ -6,7 +6,7 @@ import sys
 import os
 from mcp.server.fastmcp import FastMCP
 from typing import List, Dict, Any, Optional
-from mcp_telemetry import log_usage
+from core.mcp_telemetry import log_usage
 
 # Add src to pythonpath
 current_dir = os.path.dirname(os.path.abspath(__file__))

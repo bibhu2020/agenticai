@@ -13,7 +13,7 @@ RUN pip install --no-cache-dir .
 RUN python -m textblob.download_corpora
 
 COPY src/mcp-trading-research ./src/mcp-trading-research
-COPY src/mcp_telemetry.py ./src/mcp_telemetry.py
+COPY src/core ./src/core
 
 ENV PYTHONPATH=/app/src
 

@@ -19,7 +19,7 @@ RUN pip install --no-cache-dir .
 
 # Copy the specific server source code
 COPY src/mcp-trader ./src/mcp-trader
-COPY src/mcp_telemetry.py ./src/mcp_telemetry.py
+COPY src/core ./src/core
 
 # Set PYTHONPATH to include src so imports work
 ENV PYTHONPATH=/app/src

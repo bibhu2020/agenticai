@@ -10,7 +10,7 @@ from chromadb.config import Settings
 from chromadb.utils import embedding_functions
 from mcp.server.fastmcp import FastMCP
 from typing import List, Dict, Any, Optional
-from mcp_telemetry import log_usage
+from core.mcp_telemetry import log_usage
 
 # Initialize FastMCP Server
 mcp = FastMCP("Secure RAG", host="0.0.0.0")

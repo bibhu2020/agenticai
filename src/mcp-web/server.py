@@ -13,7 +13,7 @@ if src_dir not in sys.path:
 
 from mcp.server.fastmcp import FastMCP
 from typing import List, Dict, Any, Union
-from mcp_telemetry import log_usage
+from core.mcp_telemetry import log_usage
 
 # Local imports
 try:
@@ -75,6 +75,7 @@ def wikipedia_search(query: str, max_results: int = 5) -> List[str]:
     Search Wikipedia for the given query.
     Returns a list of page titles.
     """
+    log_usage("mcp-web", "wikipedia_search")
     return search_wikipedia(query, max_results)
 
 @mcp.tool()
@@ -83,6 +84,7 @@ def wikipedia_page(title: str) -> Dict[str, Any]:
     Get the content of a Wikipedia page.
     Returns title, content, summary, url.
     """
+    log_usage("mcp-web", "wikipedia_page")
     return get_wikipedia_page(title)
 
 @mcp.tool()
@@ -91,6 +93,7 @@ def arxiv_search(query: str, max_results: int = 5) -> List[Dict[str, Any]]:
     Search Arxiv for papers.
     Returns metadata including title, summary, authors, pdf_url.
     """
+    log_usage("mcp-web", "arxiv_search")
     return search_arxiv(query, max_results)
 
 if __name__ == "__main__":

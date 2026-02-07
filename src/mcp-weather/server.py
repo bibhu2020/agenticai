@@ -11,7 +11,7 @@ if src_dir not in sys.path:
     sys.path.append(src_dir)
 
 from mcp.server.fastmcp import FastMCP
-from mcp_telemetry import log_usage
+from core.mcp_telemetry import log_usage
 
 # Initialize FastMCP Server
 mcp = FastMCP("Weather MCP", host="0.0.0.0")

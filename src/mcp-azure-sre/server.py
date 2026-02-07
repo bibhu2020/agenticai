@@ -14,7 +14,7 @@ if src_dir not in sys.path:
     sys.path.append(src_dir)
 
 from mcp.server.fastmcp import FastMCP
-from mcp_telemetry import log_usage
+from core.mcp_telemetry import log_usage
 
 # Azure Imports
 try:
@@ -112,6 +112,7 @@ def analyze_logs(workspace_id: str, query: str) -> List[Dict[str, Any]]:
     """
     Execute KQL query on Log Analytics Workspace.
     """
+    log_usage("mcp-azure-sre", "analyze_logs")
     try:
         cred = get_credential()
         client = LogsQueryClient(cred)
@@ -138,6 +139,7 @@ def check_health(subscription_id: str, resource_group: str) -> Dict[str, str]:
     Perform a health check on key resources in a resource group.
     Checks status of VMs.
     """
+    log_usage("mcp-azure-sre", "check_health")
     try:
         cred = get_credential()
         compute_client = ComputeManagementClient(cred, subscription_id)

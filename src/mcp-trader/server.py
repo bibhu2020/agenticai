@@ -13,7 +13,7 @@ if src_dir not in sys.path:
 
 from mcp.server.fastmcp import FastMCP
 from typing import List, Dict, Any
-from mcp_telemetry import log_usage
+from core.mcp_telemetry import log_usage
 
 # Local imports (assuming src/mcp-trader is a package or run from src)
 try:
