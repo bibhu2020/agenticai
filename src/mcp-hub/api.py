@@ -296,17 +296,16 @@ async def get_server_logs(server_id: str):
 
         # --- REAL LOG INJECTION ---
         # Get actual telemetry events from DB
-        try:
-            # server_id usually matches the DB server column (e.g. mcp-weather)
-            # but sometimes we might need mapping if ids differ. Assuming 1:1 for now.
-            start_marker = server_id.replace("mcp-", "").upper()
-            
-            # Fetch Logs
-            real_logs = get_recent_logs(server_id, limit=10)
-            
-            # Fetch Traces
-            real_traces = get_recent_traces(server_id, limit=10)
-            
+        # server_id usually matches the DB server column (e.g. mcp-weather)
+        # but sometimes we might need mapping if ids differ. Assuming 1:1 for now.
+        start_marker = server_id.replace("mcp-", "").upper()
+        
+        # Fetch Logs
+        real_logs = get_recent_logs(server_id, limit=10)
+        
+        # Fetch Traces
+        real_traces = get_recent_traces(server_id, limit=10)
+        
         # Prepare Events
         events = []
         if real_logs:
