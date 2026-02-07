@@ -99,4 +99,10 @@ def delete_tenant_data(tenant_id: str) -> str:
     return f"All data for tenant {tenant_id} has been deleted."
 
 if __name__ == "__main__":
-    mcp.run()
+    import os
+    if os.environ.get("MCP_TRANSPORT") == "sse":
+        import uvicorn
+        port = int(os.environ.get("PORT", 7860))
+        uvicorn.run(mcp.sse_app(), host="0.0.0.0", port=port)
+    else:
+        mcp.run()

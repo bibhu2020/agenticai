@@ -126,4 +126,10 @@ def get_technical_summary(symbol: str) -> Dict[str, Any]:
 
 if __name__ == "__main__":
     # Run the MCP server
-    mcp.run()
+    import os
+    if os.environ.get("MCP_TRANSPORT") == "sse":
+        import uvicorn
+        port = int(os.environ.get("PORT", 7860))
+        uvicorn.run(mcp.sse_app(), host="0.0.0.0", port=port)
+    else:
+        mcp.run()

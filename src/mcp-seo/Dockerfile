@@ -17,4 +17,6 @@ ENV PYTHONPATH=/app/src
 
 EXPOSE 7860
 
-CMD ["python", "src/mcp-seo/server.py", "--transport", "sse", "--port", "7860", "--host", "0.0.0.0"]
+ENV MCP_TRANSPORT=sse
+
+CMD ["python", "src/mcp-seo/server.py"]

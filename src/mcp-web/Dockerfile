@@ -29,6 +29,7 @@ ENV PYTHONPATH=/app/src
 # Expose the port that Hugging Face Spaces expects (7860)
 EXPOSE 7860
 
+ENV MCP_TRANSPORT=sse
+
 # Run the server
-# Run the server
-CMD ["python", "src/mcp-web/server.py", "--transport", "sse", "--port", "7860", "--host", "0.0.0.0"]
+CMD ["python", "src/mcp-web/server.py"]

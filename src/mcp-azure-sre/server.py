@@ -156,4 +156,10 @@ def check_health(subscription_id: str, resource_group: str) -> Dict[str, str]:
         return {"error": str(e)}
 
 if __name__ == "__main__":
-    mcp.run()
+    import os
+    if os.environ.get("MCP_TRANSPORT") == "sse":
+        import uvicorn
+        port = int(os.environ.get("PORT", 7860))
+        uvicorn.run(mcp.sse_app(), host="0.0.0.0", port=port)
+    else:
+        mcp.run()

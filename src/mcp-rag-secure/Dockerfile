@@ -20,4 +20,6 @@ RUN mkdir -p src/mcp-rag-secure/chroma_db && chmod 777 src/mcp-rag-secure/chroma
 
 EXPOSE 7860
 
-CMD ["python", "src/mcp-rag-secure/server.py", "--transport", "sse", "--port", "7860", "--host", "0.0.0.0"]
+ENV MCP_TRANSPORT=sse
+
+CMD ["python", "src/mcp-rag-secure/server.py"]
