@@ -5,7 +5,7 @@ import json
 import sqlite3
 import requests
 import time
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timedelta
 from pathlib import Path
 
 # Configuration
@@ -151,7 +151,7 @@ def _init_db():
 
 def log_usage(server_name: str, tool_name: str):
     """Logs a usage event. Writes to DB if Hub, else POSTs to Hub API."""
-    timestamp = datetime.now(timezone.utc).isoformat()
+    timestamp = datetime.now().isoformat()
     if IS_HUB:
         _write_db("logs", {"timestamp": timestamp, "server": server_name, "tool": tool_name})
     else:
@@ -160,7 +160,7 @@ def log_usage(server_name: str, tool_name: str):
 def log_trace(server_name: str, trace_id: str, span_id: str, name: str, duration_ms: float, 
               status: str = "ok", parent_id: str = None):
     """Logs a trace span."""
-    now = datetime.now(timezone.utc)
+    now = datetime.now()
     end_time = now.isoformat()
     start_time = (now - timedelta(milliseconds=duration_ms)).isoformat()
     
@@ -183,7 +183,7 @@ def log_trace(server_name: str, trace_id: str, span_id: str, name: str, duration
 
 def log_metric(server_name: str, name: str, value: float, tags: dict = None):
     """Logs a metric point."""
-    timestamp = datetime.now(timezone.utc).isoformat()
+    timestamp = datetime.now().isoformat()
     tags_str = json.dumps(tags) if tags else "{}"
     
     data = {
@@ -249,7 +249,7 @@ def get_metrics():
             rows = conn.execute("SELECT server, timestamp FROM logs").fetchall()
             conn.close()
             
-        now = datetime.now(timezone.utc)
+        now = datetime.now()
         
         for row in rows:
             server = row["server"]
@@ -280,7 +280,7 @@ def get_usage_history(range_hours: int = 24, intervals: int = 12):
         return _generate_mock_history(range_hours, intervals)
         
     try:
-        now = datetime.now(timezone.utc)
+        now = datetime.now()
         start_time = now - timedelta(hours=range_hours)
         bucket_size = (range_hours * 3600) / intervals
         
