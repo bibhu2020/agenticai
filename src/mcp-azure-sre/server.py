@@ -32,7 +32,7 @@ except ImportError:
     LogsQueryClient = None
 
 # Initialize Server
-mcp = FastMCP("Azure SRE")
+mcp = FastMCP("Azure SRE", host="0.0.0.0")
 
 # Helper to get credential
 def get_credential():

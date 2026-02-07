@@ -23,7 +23,7 @@ except ImportError:
     GithubException = Exception
 
 # Initialize FastMCP Server
-mcp = FastMCP("GitHub Operations")
+mcp = FastMCP("GitHub Operations", host="0.0.0.0")
 
 def get_client():
     token = os.environ.get("GITHUB_TOKEN")
@@ -172,6 +172,57 @@ def get_pull_request(owner: str, repo_name: str, pr_number: int) -> Dict[str, An
         }
     except Exception as e:
          return {"error": str(e)}
+
+@mcp.tool()
+def list_workflow_runs(owner: str, repo_name: str) -> List[Dict[str, Any]]:
+    """
+    List recent workflow runs for a repository.
+    """
+    log_usage("mcp-github", "list_workflow_runs")
+    try:
+        g = get_client()
+        repo = g.get_repo(f"{owner}/{repo_name}")
+        runs = repo.get_workflow_runs()
+        
+        results = []
+        for run in runs[:10]:
+            results.append({
+                "id": run.id,
+                "name": run.name,
+                "status": run.status,
+                "conclusion": run.conclusion,
+                "event": run.event,
+                "created_at": str(run.created_at),
+                "url": run.html_url
+            })
+        return results
+    except Exception as e:
+        return [{"error": str(e)}]
+
+@mcp.tool()
+def get_workflow_run_details(owner: str, repo_name: str, run_id: int) -> Dict[str, Any]:
+    """
+    Get details of a specific workflow run.
+    """
+    log_usage("mcp-github", "get_workflow_run_details")
+    try:
+        g = get_client()
+        repo = g.get_repo(f"{owner}/{repo_name}")
+        run = repo.get_workflow_run(run_id)
+        
+        return {
+            "id": run.id,
+            "name": run.name,
+            "status": run.status,
+            "conclusion": run.conclusion,
+            "event": run.event,
+            "created_at": str(run.created_at),
+            "updated_at": str(run.updated_at),
+            "url": run.html_url,
+            "run_number": run.run_number
+        }
+    except Exception as e:
+        return {"error": str(e)}
 
 if __name__ == "__main__":
     import os

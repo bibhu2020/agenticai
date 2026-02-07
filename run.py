@@ -165,6 +165,12 @@ APP_REGISTRY: Dict[str, Dict[str, str]] = {
         "type": "script",
         "description": "SEO & ADA MCP Server - Website Audits"
     },
+    "github-portal": {
+        "path": "src/github-portal",
+        "entry": "app.py",
+        "type": "streamlit",
+        "description": "GitHub Portal - Repository health dashboard for issues, security, and pipelines"
+    },
     "mcp-hub": {
         "path": "src/mcp-hub",
         "entry": "package.json",

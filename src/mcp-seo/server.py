@@ -12,7 +12,7 @@ from typing import List, Dict, Any, Set
 from mcp_telemetry import log_usage
 
 # Initialize FastMCP Server
-mcp = FastMCP("SEO & ADA Audit")
+mcp = FastMCP("SEO & ADA Audit", host="0.0.0.0")
 
 @mcp.tool()
 def analyze_seo(url: str) -> Dict[str, Any]:

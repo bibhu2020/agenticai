@@ -13,7 +13,7 @@ from typing import List, Dict, Any, Optional
 from mcp_telemetry import log_usage
 
 # Initialize FastMCP Server
-mcp = FastMCP("Secure RAG")
+mcp = FastMCP("Secure RAG", host="0.0.0.0")
 
 # Initialize ChromaDB (Persistent)
 # Store in src/mcp-rag-secure/chroma_db

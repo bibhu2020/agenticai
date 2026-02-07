@@ -40,7 +40,7 @@ except ImportError:
 
 
 # Initialize FastMCP Server
-mcp = FastMCP("MCP Trader")
+mcp = FastMCP("MCP Trader", host="0.0.0.0")
 
 @mcp.tool()
 def get_stock_price(symbol: str) -> float:

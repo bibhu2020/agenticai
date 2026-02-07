@@ -11,7 +11,7 @@ from typing import List, Dict, Any
 from mcp_telemetry import log_usage
 
 # Initialize FastMCP Server
-mcp = FastMCP("Trading Research")
+mcp = FastMCP("Trading Research", host="0.0.0.0")
 
 @mcp.tool()
 def get_news_sentiment(symbol: str) -> List[Dict[str, Any]]:

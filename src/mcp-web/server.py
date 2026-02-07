@@ -40,7 +40,7 @@ except ImportError:
         from arxiv import search_arxiv
 
 # Initialize FastMCP Server
-mcp = FastMCP("MCP Web")
+mcp = FastMCP("MCP Web", host="0.0.0.0")
 
 @mcp.tool()
 def search(query: str, max_results: int = 5) -> List[Dict[str, Any]]:

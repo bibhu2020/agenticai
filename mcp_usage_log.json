@@ -1,0 +1,72 @@
+[
+  {
+    "timestamp": "2026-02-06T21:32:54.510566",
+    "server": "mcp-github",
+    "tool": "list_issues"
+  },
+  {
+    "timestamp": "2026-02-06T21:32:54.511795",
+    "server": "mcp-github",
+    "tool": "list_workflow_runs"
+  },
+  {
+    "timestamp": "2026-02-06T21:34:26.071612",
+    "server": "mcp-github",
+    "tool": "list_issues"
+  },
+  {
+    "timestamp": "2026-02-06T21:34:26.072461",
+    "server": "mcp-github",
+    "tool": "list_workflow_runs"
+  },
+  {
+    "timestamp": "2026-02-06T21:34:59.758616",
+    "server": "mcp-github",
+    "tool": "list_issues"
+  },
+  {
+    "timestamp": "2026-02-06T21:35:00.227191",
+    "server": "mcp-github",
+    "tool": "list_workflow_runs"
+  },
+  {
+    "timestamp": "2026-02-06T21:37:49.870589",
+    "server": "mcp-github",
+    "tool": "list_issues"
+  },
+  {
+    "timestamp": "2026-02-06T21:37:50.560101",
+    "server": "mcp-github",
+    "tool": "list_workflow_runs"
+  },
+  {
+    "timestamp": "2026-02-06T21:39:46.848611",
+    "server": "mcp-github",
+    "tool": "list_issues"
+  },
+  {
+    "timestamp": "2026-02-06T21:39:48.901479",
+    "server": "mcp-github",
+    "tool": "list_workflow_runs"
+  },
+  {
+    "timestamp": "2026-02-06T21:40:30.778527",
+    "server": "mcp-github",
+    "tool": "get_workflow_run_details"
+  },
+  {
+    "timestamp": "2026-02-06T21:45:53.746528",
+    "server": "mcp-github",
+    "tool": "list_issues"
+  },
+  {
+    "timestamp": "2026-02-06T21:45:55.753582",
+    "server": "mcp-github",
+    "tool": "list_workflow_runs"
+  },
+  {
+    "timestamp": "2026-02-06T21:46:17.868376",
+    "server": "mcp-github",
+    "tool": "get_issue"
+  }
+]
