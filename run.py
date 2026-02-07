@@ -165,6 +165,12 @@ APP_REGISTRY: Dict[str, Dict[str, str]] = {
         "type": "script",
         "description": "SEO & ADA MCP Server - Website Audits"
     },
+    "mcp-hub": {
+        "path": "src/mcp-hub",
+        "entry": "package.json",
+        "type": "npm",
+        "description": "MCP Hub - Discovery and monitoring portal (Vue.js)"
+    },
     "test": {
         "path": ".",
         "entry": "tests",
@@ -270,6 +276,9 @@ def launch_app(app_name: str, port: Optional[int] = None):
     elif app_type == "test":
         cmd = [python_exe, "-m", "pytest", app_file, "-v"]
         default_port = None
+    elif app_type == "npm":
+        cmd = ["npm", "run", "dev"]
+        default_port = 5173
     else:
         cmd = [python_exe, "-m", "streamlit", "run", app_file]
         default_port = 8501
@@ -277,10 +286,12 @@ def launch_app(app_name: str, port: Optional[int] = None):
     # Add port if specified
     actual_port = port if port else default_port
     
-    if app_type in ["streamlit", "fastapi"]:
+    if app_type in ["streamlit", "fastapi", "npm"]:
         if port:
             if app_type == "fastapi":
                 cmd.extend(["--port", str(port)])
+            elif app_type == "npm":
+                cmd.extend(["--", "--port", str(port)])
             else:
                 cmd.extend(["--server.port", str(port)])
             print(f"🔌 Port: {port}")
@@ -309,7 +320,15 @@ def launch_app(app_name: str, port: Optional[int] = None):
     try:
         # Change to app directory and run
         os.chdir(app_dir)
-        subprocess.run(cmd, env=env)
+        is_windows = sys.platform == "win32"
+        
+        # Special case for mcp-hub: launch backend API first
+        if app_name == "mcp-hub":
+            print("🚀 Starting MCP Hub Backend API on port 8001...")
+            api_cmd = [python_exe, "api.py"]
+            subprocess.Popen(api_cmd, env=env, shell=is_windows)
+            
+        subprocess.run(cmd, env=env, shell=is_windows)
     except KeyboardInterrupt:
         print("\n\n👋 Application stopped by user")
     except FileNotFoundError:

@@ -13,6 +13,7 @@ if src_dir not in sys.path:
 
 from mcp.server.fastmcp import FastMCP
 from typing import List, Dict, Any
+from mcp_telemetry import log_usage
 
 # Local imports (assuming src/mcp-trader is a package or run from src)
 try:
@@ -44,11 +45,13 @@ mcp = FastMCP("MCP Trader")
 @mcp.tool()
 def get_stock_price(symbol: str) -> float:
     """Get the current price for a stock symbol."""
+    log_usage("mcp-trader", "get_stock_price")
     return get_current_price(symbol)
 
 @mcp.tool()
 def get_stock_fundamentals(symbol: str) -> Dict[str, Any]:
     """Get fundamental data (PE, Market Cap, Sector) for a stock."""
+    log_usage("mcp-trader", "get_stock_fundamentals")
     return get_fundamental_data(symbol)
 
 @mcp.tool()
@@ -57,6 +60,7 @@ def get_momentum_strategy(symbol: str) -> Dict[str, Any]:
     Run Momentum Strategy analysis on a stock.
     Returns Buy/Sell/Hold recommendation based on RSI, MACD, and Price Trend.
     """
+    log_usage("mcp-trader", "get_momentum_strategy")
     return analyze_momentum(symbol)
 
 @mcp.tool()
