@@ -307,55 +307,61 @@ async def get_server_logs(server_id: str):
             # Fetch Traces
             real_traces = get_recent_traces(server_id, limit=10)
             
-            # Combine and Sort (simple merge for now)
-            events = []
-            if real_logs:
-                for l in real_logs:
-                    events.append({
-                        "ts": l["timestamp"], 
-                        "line": f"{start_marker}_TOOL: Executed '{l['tool']}'",
-                        "type": "log"
-                    })
+        # Prepare Events
+        events = []
+        if real_logs:
+            for l in real_logs:
+                events.append({
+                    "ts": l["timestamp"], 
+                    "line": f"{start_marker}_TOOL: Executed '{l['tool']}'",
+                    "type": "log"
+                })
+        
+        if real_traces:
+            for t in real_traces:
+                status_icon = "✅" if t['status'] == 'ok' else "❌"
+                events.append({
+                    "ts": t["start_time"],
+                    "line": f"TRACE_SPAN: {t['name']} ({t['duration_ms']}ms) {status_icon} [{t['status'].upper()}]",
+                    "type": "trace"
+                })
+        
+        # Sort events by timestamp descending (Newest First)
+        def parse_ts(x):
+            t = x["ts"]
+            if isinstance(t, str):
+                try:
+                    return datetime.fromisoformat(t)
+                except:
+                    return datetime.now()
+            return t
             
-            if real_traces:
-                for t in real_traces:
-                    status_icon = "✅" if t['status'] == 'ok' else "❌"
-                    events.append({
-                        "ts": t["start_time"],
-                        "line": f"TRACE_SPAN: {t['name']} ({t['duration_ms']}ms) {status_icon} [{t['status'].upper()}]",
-                        "type": "trace"
-                    })
+        events.sort(key=parse_ts, reverse=True)
+        
+        # Build Final Log Stream in Descending Order
+        final_stream = []
+        
+        # 1. Newest telemetry events first
+        if events:
+            for e in events[:20]: # Show top 20
+                e_ts = parse_ts(e).strftime("%Y-%m-%d %H:%M:%S")
+                final_stream.append(f"[{e_ts}] {e['line']}")
+            final_stream.append("-" * 40)
             
-            # Sort events by timestamp descending
-            # Note: timestamps might be strings or objects depending on DB backend
-            def parse_ts(x):
-                t = x["ts"]
-                if isinstance(t, str):
-                    try:
-                        return datetime.fromisoformat(t)
-                    except:
-                        return datetime.now()
-                return t
-                
-            events.sort(key=parse_ts, reverse=True)
-            
-            if events:
-                log_lines.append(f"[{ts}] --- RECENT TELEMETRY STREAM ---")
-                for e in events[:15]: # Show top 15 mixed events
-                    # Format TS
-                    parsed_ts = parse_ts(e).strftime("%H:%M:%S")
-                    log_lines.append(f"[{parsed_ts}] {e['line']}")
-            else:
-                 log_lines.append(f"[{ts}] STREAM: No recent activity recorded.")
-                 
-        except Exception as ex:
-            log_lines.append(f"[{ts}] LOG_FETCH_ERROR: {str(ex)}")
-            
-        return {"logs": "\n".join(log_lines)}
-
+        # 2. System status (newest status first)
+        final_stream.append(f"[{ts}] STATUS_CHECK: {runtime.stage.upper()}")
+        final_stream.append(f"[{ts}] STREAM_GATEWAY: ACTIVE")
+        final_stream.append(f"[{ts}] REPLICA_COUNT: {replica_count}")
+        final_stream.append(f"[{ts}] HARDWARE_SKU: {hardware_info}")
+        final_stream.append(f"[{ts}] RUNTIME_STAGE: {runtime.stage.upper()}")
+        final_stream.append(f"[{ts}] TARGET_REPO: {repo_id}")
+        final_stream.append(f"[{ts}] SYSTEM_BOOT: Connected to MCP Stream")
+        
+        return {"logs": "\n".join(final_stream)}
+        
     except Exception as e:
-        ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        return {"logs": f"[{ts}] CONNECTION_ERROR: Failed to retrieve runtime status.\n[{ts}] DEBUG_TRACE: {str(e)}"}
+        print(f"Log Streaming Error: {e}")
+        return {"logs": f"Neural link disrupted: {str(e)}"}
 
 @app.get("/api/servers")
 async def list_servers():
@@ -468,9 +474,9 @@ async def get_usage_trends(range: str = "24h"):
             "data": counts
         })
     
-    # If no data, return empty system load
+    # If no data, return empty
     if not datasets:
-        datasets.append({"name": "System", "data": [0] * intervals})
+        return {"labels": history.get("labels", []), "datasets": []}
         
     return {
         "labels": history["labels"],

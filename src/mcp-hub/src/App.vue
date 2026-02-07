@@ -43,6 +43,12 @@
         <section class="trend-section">
           <div class="trend-header">
              <div class="v-header">USAGE TRENDS</div>
+             <div class="chart-legend">
+                <div v-for="chart in getCharts" :key="chart.name" class="legend-item">
+                   <span class="dot" :style="{ background: chart.color }"></span>
+                   {{ chart.name }}
+                </div>
+             </div>
              <div class="range-selector">
                 <button v-for="r in ranges" :key="r" :class="{ active: selectedRange === r }" @click="setRange(r)">{{ r.toUpperCase() }}</button>
              </div>
@@ -228,16 +234,22 @@ const visibleXLabels = computed(() => {
   
   // Target max 6 labels to prevent overcrowding
   const len = labels.length
-  if (len <= 6) return labels
   
-  // Calculate a step that gives us roughly 6 ticks
-  // e.g. 24 items -> step 4 -> 6 items
+  // Format labels to local time
+  const formatTime = (ts) => {
+    const d = new Date(ts * 1000)
+    if (selectedRange.value === '1h') return d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+    if (selectedRange.value === '24h') return d.toLocaleTimeString([], { hour: '2-digit', minute: '00' })
+    return d.toLocaleDateString([], { month: '2-digit', day: '2-digit' })
+  }
+
+  if (len <= 6) return labels.map(formatTime)
+  
   const step = Math.ceil((len - 1) / 5)
   
   return labels.map((l, i) => {
-    // Audit: Always show first and last. Show others if they match step.
-    if (i === 0 || i === len - 1 || i % step === 0) return l
-    return '' // Empty filtered label preserves flex spacing
+    if (i === 0 || i === len - 1 || i % step === 0) return formatTime(l)
+    return ''
   })
 })
 
@@ -278,6 +290,11 @@ const handleHover = (event) => {
   const idx = Math.round(x / step)
   
   if (idx >= 0 && idx < labels.length) {
+    const date = new Date(labels[idx] * 1000)
+    const formattedLabel = selectedRange.value === '1h' 
+        ? date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' })
+        : date.toLocaleString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })
+
     const entries = usageData.value.datasets.map((ds, i) => ({
       name: ds.name,
       val: ds.data[idx],
@@ -286,7 +303,7 @@ const handleHover = (event) => {
     
     hoverInfo.value = {
       x: idx * step,
-      label: labels[idx],
+      label: formattedLabel,
       entries
     }
   }

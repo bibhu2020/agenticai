@@ -301,7 +301,7 @@ def get_usage_history(range_hours: int = 24, intervals: int = 12):
             conn.close()
 
         if not rows:
-            return _generate_mock_history(range_hours, intervals)
+            return {"labels": [], "datasets": {}}
 
         # Process buckets
         active_servers = set(r["server"] for r in rows)
@@ -317,20 +317,17 @@ def get_usage_history(range_hours: int = 24, intervals: int = 12):
             if 0 <= bucket_idx < intervals:
                 datasets[row["server"]][bucket_idx] += 1
                 
-        # Labels
+        # Labels (Unix timestamps as integers)
         labels = []
         for i in range(intervals):
             bucket_time = start_time + timedelta(seconds=i * bucket_size)
-            if range_hours <= 24:
-                 labels.append(bucket_time.strftime("%H:%M" if intervals > 48 else "%H:00"))
-            else:
-                 labels.append(bucket_time.strftime("%m/%d"))
+            labels.append(int(bucket_time.timestamp()))
                  
         return {"labels": labels, "datasets": datasets}
         
     except Exception as e:
         print(f"History Error: {e}")
-        return _generate_mock_history(range_hours, intervals)
+        return {"labels": [], "datasets": {}}
 
 def _generate_mock_history(range_hours, intervals):
     """Generates realistic-looking mock data for the dashboard."""
