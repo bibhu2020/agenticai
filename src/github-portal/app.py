@@ -198,10 +198,10 @@ st.markdown("""
 # Navigation Bar
 st.markdown("""
 <div class="top-bar">
-    <div class="brand">GITHUB<span>SENTINEL</span></div>
+    <div class="brand">GITHUB<span>PORTAL</span></div>
     <div class="system-status">
         <div class="pulse-dot"></div>
-        NEURAL LINK ACTIVE
+        SYSTEM ONLINE
     </div>
 </div>
 """, unsafe_allow_html=True)
@@ -216,7 +216,7 @@ if "ai_session" not in st.session_state:
 
 # Sidebar
 with st.sidebar:
-    st.markdown("### 🛠️ CORES")
+    st.markdown("### 🛠️ SERVERS")
     owner = st.text_input("ENTITY / OWNER", value=os.environ.get("GITHUB_OWNER", "bibhu2020")).strip()
     
     st.markdown("---")
@@ -238,7 +238,7 @@ with st.sidebar:
         st.rerun()
 
 # Layout
-tab_ov, tab_sentinel = st.tabs(["📊 ASSET OVERVIEW", "�️ SENTINEL COMMAND"])
+tab_ov, tab_portal = st.tabs(["📊 ASSET OVERVIEW", "💬 PORTAL COMMAND"])
 
 with tab_ov:
     st.markdown(f"#### Managed Assets: `{owner}`")
@@ -254,6 +254,7 @@ with tab_ov:
         with st.spinner("Decoding asset tree..."):
             repos_data = asyncio.run(fetch_repos())
             
+# ... (skipping styling part which is same except card title likely)
             if isinstance(repos_data, list):
                 cols = st.columns(3)
                 for idx, repo in enumerate(repos_data):
@@ -264,7 +265,7 @@ with tab_ov:
                             <div class="card-id">ID: {repo.get('name').upper()[:12]}</div>
                             <h4 style="margin:0;">{repo.get('name')}</h4>
                             <p style="font-size:0.8rem; color:var(--text-dim); margin:0.75rem 0; min-height: 2.5em;">
-                                {repo.get('description') or 'Data encryption standard. No description found.'}
+                                {repo.get('description') or 'No description found.'}
                             </p>
                             <div style="font-size: 0.75rem; border-top: 1px solid var(--border-color); padding-top: 1rem; display: flex; gap: 0.75rem;">
                                 <span style="color:var(--accent);">⭐ {repo.get('stars')}</span>
@@ -278,7 +279,7 @@ with tab_ov:
     except Exception as e:
         st.error(f"Link Desync: {str(e)}")
 
-with tab_sentinel:
+with tab_portal:
     # Chat display
     for msg in st.session_state.messages:
         if msg["role"] == "user":
@@ -291,20 +292,20 @@ with tab_sentinel:
         else:
             st.markdown(f"""
             <div class="ai-bubble">
-                <div class="bubble-meta">Sentinel Intelligence</div>
+                <div class="bubble-meta">Portal Intelligence</div>
                 <div>{msg["content"]}</div>
             </div>
             """, unsafe_allow_html=True)
 
     # Input
-    if prompt := st.chat_input("Input command for Sentinel..."):
+    if prompt := st.chat_input("Input command for Portal..."):
         st.session_state.messages.append({"role": "user", "content": prompt})
         st.rerun()
 
 # Handle new prompt
 if st.session_state.messages and st.session_state.messages[-1]["role"] == "user":
     last_prompt = st.session_state.messages[-1]["content"]
-    with st.spinner("Processing neural patterns..."):
+    with st.spinner("Processing query..."):
         try:
             full_prompt = f"Owner: {owner}. Query: {last_prompt}"
             async def run_agent():
@@ -316,4 +317,4 @@ if st.session_state.messages and st.session_state.messages[-1]["role"] == "user"
             st.session_state.messages.append({"role": "assistant", "content": response})
             st.rerun()
         except Exception as e:
-            st.error(f"Neural Error: {str(e)}")
+            st.error(f"Processing Error: {str(e)}")

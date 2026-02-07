@@ -1,4 +1,4 @@
-# Weather Sentinel MCP Server
+# Weather MCP Server
 
 A comprehensive weather and location intelligence server for the Model Context Protocol.
 

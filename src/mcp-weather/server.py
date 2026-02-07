@@ -14,7 +14,7 @@ from mcp.server.fastmcp import FastMCP
 from mcp_telemetry import log_usage
 
 # Initialize FastMCP Server
-mcp = FastMCP("Weather Sentinel", host="0.0.0.0")
+mcp = FastMCP("Weather MCP", host="0.0.0.0")
 
 OPENWEATHER_API_KEY = os.environ.get("OPENWEATHER_API_KEY")
 GPLACES_API_KEY = os.environ.get("GPLACES_API_KEY")

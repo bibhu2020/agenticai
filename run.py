@@ -175,7 +175,7 @@ APP_REGISTRY: Dict[str, Dict[str, str]] = {
         "path": "src/mcp-hub",
         "entry": "package.json",
         "type": "npm",
-        "description": "MCP Hub - Discovery and monitoring portal (Vue.js)"
+        "description": "MCP HUB - Discovery and monitoring portal (Vue.js)"
     },
     "test": {
         "path": ".",
