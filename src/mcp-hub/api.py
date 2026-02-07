@@ -27,6 +27,13 @@ except ImportError:
 
 from pydantic import BaseModel
 
+# Optional: HF Hub for status checks
+try:
+    from huggingface_hub import HfApi
+    hf_api = HfApi()
+except ImportError:
+    hf_api = None
+
 class LogEvent(BaseModel):
     server: str
     tool: str
@@ -305,78 +312,93 @@ async def get_server_logs(server_id: str):
 @app.get("/api/servers")
 async def list_servers():
     """Returns MCP servers with real metrics and HF status."""
-    metrics = get_metrics()
-    
-    # 1. Discover local servers in src/
-    discovered = {}
-    if (PROJECT_ROOT / "src").exists():
-        for d in (PROJECT_ROOT / "src").iterdir():
-            if d.is_dir() and d.name.startswith("mcp-") and d.name != "mcp-hub":
-                readme_path = d / "README.md"
-                description = "MCP HUB Node"
-                if readme_path.exists():
-                    lines = readme_path.read_text().split("\n")
-                    # Try to find the first non-header line
-                    for line in lines:
-                        clean = line.strip()
-                        if clean and not clean.startswith("#") and not clean.startswith("-"):
-                            description = clean
-                            break
-                
-                name = d.name.replace("-", " ").title()
-                # Apply strict capitalization
-                for word in ["Mcp", "Sre", "Rag", "Seo", "mcp", "sre", "rag", "seo"]:
-                    name = name.replace(word, word.upper())
-                
-                description = description.replace("mcp", "MCP").replace("Mcp", "MCP").replace("sre", "SRE").replace("Sre", "SRE").replace("rag", "RAG").replace("Rag", "RAG").replace("seo", "SEO").replace("Seo", "SEO")
-                
-                discovered[d.name] = {
-                    "id": d.name,
-                    "name": name,
-                    "description": description
+    try:
+        print("DEBUG: list_servers called")
+        metrics = get_metrics()
+        print(f"DEBUG: metrics retrieved (keys: {list(metrics.keys())})")
+        
+        # 1. Discover local servers in src/
+        discovered = {}
+        if (PROJECT_ROOT / "src").exists():
+            for d in (PROJECT_ROOT / "src").iterdir():
+                if d.is_dir() and d.name.startswith("mcp-") and d.name != "mcp-hub":
+                    readme_path = d / "README.md"
+                    description = "MCP HUB Node"
+                    if readme_path.exists():
+                        lines = readme_path.read_text().split("\n")
+                        # Try to find the first non-header line
+                        for line in lines:
+                            clean = line.strip()
+                            if clean and not clean.startswith("#") and not clean.startswith("-"):
+                                description = clean
+                                break
+                    
+                    name = d.name.replace("-", " ").title()
+                    # Apply strict capitalization
+                    for word in ["Mcp", "Sre", "Rag", "Seo", "mcp", "sre", "rag", "seo"]:
+                        name = name.replace(word, word.upper())
+                    
+                    description = description.replace("mcp", "MCP").replace("Mcp", "MCP").replace("sre", "SRE").replace("Sre", "SRE").replace("rag", "RAG").replace("Rag", "RAG").replace("seo", "SEO").replace("Seo", "SEO")
+                    
+                    discovered[d.name] = {
+                        "id": d.name,
+                        "name": name,
+                        "description": description
+                    }
+        print(f"DEBUG: Discovered {len(discovered)} local servers")
+        
+        # 2. Merge with Known Servers (ensures we don't miss anything in Docker)
+        all_servers_map = {s["id"]: s for s in KNOWN_SERVERS}
+        all_servers_map.update(discovered) # Discovered overrides known if collision
+        
+        servers_to_check = list(all_servers_map.values())
+        print(f"DEBUG: Checking status for {len(servers_to_check)} servers")
+        
+        # 3. Check status in parallel
+        # Wrap status check to ensure it doesn't fail
+        try:
+            status_tasks = [get_hf_status(s["id"]) for s in servers_to_check]
+            statuses = await asyncio.gather(*status_tasks)
+        except Exception as e:
+            print(f"DEBUG: Status check failed: {e}")
+            statuses = ["Unknown"] * len(servers_to_check)
+
+        results = []
+        for idx, s in enumerate(servers_to_check):
+            server_metrics = metrics.get(s["id"], {"hourly": 0, "weekly": 0, "monthly": 0})
+            
+            def fmt(n):
+                if n is None: return "0"
+                if n >= 1000: return f"{n/1000:.1f}k"
+                return str(n)
+            
+            name = s["name"]
+            for word in ["Mcp", "Sre", "Rag", "Seo", "mcp", "sre", "rag", "seo"]:
+                        name = name.replace(word, word.upper())
+
+            results.append({
+                **s,
+                "name": name,
+                "status": statuses[idx],
+                "metrics": {
+                    "hourly": fmt(server_metrics.get("hourly", 0)),
+                    "weekly": fmt(server_metrics.get("weekly", 0)),
+                    "monthly": fmt(server_metrics.get("monthly", 0)),
+                    "raw_hourly": server_metrics.get("hourly", 0),
+                    "raw_weekly": server_metrics.get("weekly", 0),
+                    "raw_monthly": server_metrics.get("monthly", 0)
                 }
-    
-    # 2. Merge with Known Servers (ensures we don't miss anything in Docker)
-    all_servers_map = {s["id"]: s for s in KNOWN_SERVERS}
-    all_servers_map.update(discovered) # Discovered overrides known if collision
-    
-    servers_to_check = list(all_servers_map.values())
-    
-    # 3. Check status in parallel
-    status_tasks = [get_hf_status(s["id"]) for s in servers_to_check]
-    statuses = await asyncio.gather(*status_tasks)
-
-    results = []
-    for idx, s in enumerate(servers_to_check):
-        server_metrics = metrics.get(s["id"], {"hourly": 0, "weekly": 0, "monthly": 0})
+            })
         
-        def fmt(n):
-            if n is None: return "0"
-            if n >= 1000: return f"{n/1000:.1f}k"
-            return str(n)
-        
-        name = s["name"]
-        for word in ["Mcp", "Sre", "Rag", "Seo", "mcp", "sre", "rag", "seo"]:
-                    name = name.replace(word, word.upper())
-
-        results.append({
-            **s,
-            "name": name,
-            "status": statuses[idx],
-            "metrics": {
-                "hourly": fmt(server_metrics.get("hourly", 0)),
-                "weekly": fmt(server_metrics.get("weekly", 0)),
-                "monthly": fmt(server_metrics.get("monthly", 0)),
-                "raw_hourly": server_metrics.get("hourly", 0),
-                "raw_weekly": server_metrics.get("weekly", 0),
-                "raw_monthly": server_metrics.get("monthly", 0)
-            }
-        })
-    
-    return {
-        "servers": sorted(results, key=lambda x: x["name"]),
-        "system": get_system_metrics()
-    }
+        print(f"DEBUG: Returning {len(results)} servers")
+        return {
+            "servers": sorted(results, key=lambda x: x["name"]),
+            "system": get_system_metrics()
+        }
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        return {"error": str(e), "servers": []}
 
 @app.get("/api/usage")
 async def get_usage_trends(range: str = "24h"):
