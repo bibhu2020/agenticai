@@ -92,6 +92,13 @@ async def get_server_detail(server_id: str):
                 if line.strip().startswith("-"):
                     tools.append(line.strip("- ").strip())
 
+    # Apply strict capitalization
+    name = server_id.replace("-", " ").title()
+    for word in ["Mcp", "Sre", "Rag", "Seo", "mcp", "sre", "rag", "seo"]:
+        name = name.replace(word, word.upper())
+        description = description.replace(word, word.upper())
+        tools = [t.replace(word, word.upper()) for t in tools]
+
     # Generate sample code
     sample_code = f"""from openai_agents import Agent, Runner
 from mcp_bridge import MCPBridge
@@ -99,10 +106,10 @@ from mcp_bridge import MCPBridge
 # 1. Initialize Bridge
 bridge = MCPBridge("https://{HF_USERNAME}-{server_id}.hf.space/sse")
 
-# 2. Setup Agent with {server_id.replace('mcp-', '').title()} Tools
+# 2. Setup Agent with {name} Tools
 agent = Agent(
-    name="{server_id.replace('mcp-', '').title()} Expert",
-    instructions="You are an expert in {server_id.replace('mcp-', ' ')}.",
+    name="{name} Expert",
+    instructions="You are an expert in {name}.",
     functions=bridge.get_tools()
 )
 
@@ -113,7 +120,7 @@ print(result.final_text)
 
     return {
         "id": server_id,
-        "name": server_id.replace("-", " ").title(),
+        "name": name,
         "description": description,
         "tools": tools,
         "sample_code": sample_code,

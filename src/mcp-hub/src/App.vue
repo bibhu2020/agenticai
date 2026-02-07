@@ -57,7 +57,7 @@
                </div>
                
                <div class="chart-labels">
-                  <span v-for="l in usageData.labels" :key="l">{{ l }}</span>
+                  <span v-for="(l, i) in visibleXLabels" :key="i">{{ l }}</span>
                </div>
             </div>
           </div>
@@ -206,6 +206,25 @@ const maxUsage = computed(() => {
 const yTicks = computed(() => {
   const max = maxUsage.value
   return [max, Math.floor(max * 0.66), Math.floor(max * 0.33), 0]
+})
+
+const visibleXLabels = computed(() => {
+  const labels = usageData.value.labels
+  if (!labels.length) return []
+  
+  // Target max 6 labels to prevent overcrowding
+  const len = labels.length
+  if (len <= 6) return labels
+  
+  // Calculate a step that gives us roughly 6 ticks
+  // e.g. 24 items -> step 4 -> 6 items
+  const step = Math.ceil((len - 1) / 5)
+  
+  return labels.map((l, i) => {
+    // Audit: Always show first and last. Show others if they match step.
+    if (i === 0 || i === len - 1 || i % step === 0) return l
+    return '' // Empty filtered label preserves flex spacing
+  })
 })
 
 const getCharts = computed(() => {

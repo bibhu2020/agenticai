@@ -1,3 +1,12 @@
+---
+title: MCP Weather
+emoji: 🌤️
+colorFrom: blue
+colorTo: yellow
+sdk: docker
+pinned: false
+---
+
 # Weather MCP Server
 
 A comprehensive weather and location intelligence server for the Model Context Protocol.
