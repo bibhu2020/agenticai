@@ -13,7 +13,7 @@ on:
     branches:
       - main
     paths:
-      - 'src/mcp-hub/**'
+      - 'src/mcp-*/**'
       - '.github/workflows/mcp-hub-hf.yml'
   workflow_dispatch:
 
@@ -35,7 +35,8 @@ jobs:
     - name: Create deployment directory
       run: |
         mkdir -p deploy_temp/src
-        cp -r src/mcp-hub deploy_temp/src/
+        # Copy all MCP servers (hub, weather, github, etc.)
+        cp -r src/mcp-* deploy_temp/src/
         cp src/mcp_telemetry.py deploy_temp/src/
         cp pyproject.toml deploy_temp/
         # Move Dockerfile/README to root of deploy context for HF Space
