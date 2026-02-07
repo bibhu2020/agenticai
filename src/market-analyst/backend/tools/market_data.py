@@ -99,14 +99,39 @@ def get_available_expirations(symbol: str) -> list:
     try:
         symbol = check_and_fix_ticker(symbol)
         ticker = yf.Ticker(symbol)
-        return list(ticker.options)
+        exps = list(ticker.options)
+        
+        # Add context about DTE (Days Till Expiration) to help agents choose
+        today = datetime.now()
+        annotated = []
+        best_expiry = "None"
+        min_diff = 999
+        
+        for e in exps:
+            try:
+                dt = datetime.strptime(e, "%Y-%m-%d")
+                days = (dt - today).days
+                
+                # Logic: Find valid targets between 15-45 days, prioritize earliest
+                if 15 <= days <= 45:
+                     note = f"({days} DTE) [VALID]"
+                     annotated.append(f"{e} {note}")
+                     
+                     if days < min_diff:
+                         min_diff = days
+                         best_expiry = e
+            except:
+                pass
+                
+        return [f"RECOMMENDED: {best_expiry} (Earliest in 15-45d window)"] + annotated
     except Exception as e:
         return []
 
 def get_option_chain_snapshot(symbol: str, target_date: str = None) -> str:
     """
-    Fetches a snapshot of the option chain for a specific expiry.
-    If target_date is None, picks the nearest liquid monthly expiry.
+    Fetches a comparative snapshot of option chains for up to 3 valid expiries (15-45 DTE).
+    If target_date is provided, fetches only that specific date.
+    If target_date is None, automatically selects Short (15-25d), Mid (25-35d), and Long (35-45d) targets.
     """
     print(f"[DEBUG] get_option_chain_snapshot called for: {symbol} (Target: {target_date})")
     try:
@@ -117,51 +142,67 @@ def get_option_chain_snapshot(symbol: str, target_date: str = None) -> str:
         if not expirations:
             return f"No options data found for {symbol}."
             
-        if not target_date or target_date not in expirations:
+        target_dates = []
+        if target_date:
+            if target_date in expirations:
+                target_dates = [target_date]
+            else:
+                return f"Target date {target_date} not found in expirations."
+        else:
+            # Auto-select up to 3 expiries in 15-45 day window
             today = datetime.now()
+            valid_exps = []
             for exp in expirations:
-                exp_date = datetime.strptime(exp, "%Y-%m-%d")
-                days_to_exp = (exp_date - today).days
-                if 7 <= days_to_exp <= 45:
-                    target_date = exp
-                    break
-            if not target_date:
-                target_date = expirations[0]
+                dt = datetime.strptime(exp, "%Y-%m-%d")
+                days = (dt - today).days
+                if 15 <= days <= 45:
+                    valid_exps.append(exp)
             
-        opt = ticker.option_chain(target_date)
-        calls = opt.calls
-        puts = opt.puts
-        
+            # Pick Short, Mid, Long from valid list
+            if not valid_exps:
+                # Fallback to nearest if no window match
+                target_dates = [expirations[0]]
+            else:
+                # Simple distribution: First, Middle, Last
+                target_dates = list(sorted(set([valid_exps[0], valid_exps[len(valid_exps)//2], valid_exps[-1]])))
+
         price_info = get_current_price(symbol)
         if isinstance(price_info, str): return price_info
         current_price = float(price_info)
         
-        # Filter around ATM for most relevant strikes
-        ntm_calls = calls.iloc[(calls['strike'] - current_price).abs().argsort()[:6]].sort_values('strike')
-        ntm_puts = puts.iloc[(puts['strike'] - current_price).abs().argsort()[:6]].sort_values('strike')
+        final_summary = f"COMPARATIVE OPTION ANALYSIS for {symbol} (Spot: {round(current_price, 2)})\n"
         
-        summary = f"Option Chain Snapshot for {symbol} (Expiry: {target_date})\n"
-        summary += f"Current Spot Price: {round(current_price, 2)}\n\n"
-        
-        summary += "--- CALLS (Strike | Last | Ask | IV | Vol) ---\n"
-        for _, row in ntm_calls.iterrows():
-            last = row.get('lastPrice', 0.0)
-            ask = row.get('ask', 0.0)
-            vol = row.get('volume', 0)
-            iv = round(row['impliedVolatility']*100, 1) if not pd.isna(row.get('impliedVolatility')) else 0
-            price_display = f"{ask}" if ask > 0 else f"{last} (Last)"
-            summary += f"Strike: {row['strike']} | Price: {price_display} | IV: {iv}% | Vol: {vol}\n"
+        for date in target_dates:
+            dt = datetime.strptime(date, "%Y-%m-%d")
+            days = (dt - datetime.now()).days
             
-        summary += "\n--- PUTS (Strike | Last | Ask | IV | Vol) ---\n"
-        for _, row in ntm_puts.iterrows():
-            last = row.get('lastPrice', 0.0)
-            ask = row.get('ask', 0.0)
-            vol = row.get('volume', 0)
-            iv = round(row['impliedVolatility']*100, 1) if not pd.isna(row.get('impliedVolatility')) else 0
-            price_display = f"{ask}" if ask > 0 else f"{last} (Last)"
-            summary += f"Strike: {row['strike']} | Price: {price_display} | IV: {iv}% | Vol: {vol}\n"
+            opt = ticker.option_chain(date)
+            calls = opt.calls
+            puts = opt.puts
             
-        return summary
+            # Filter around ATM (tight range for comparison)
+            ntm_calls = calls.iloc[(calls['strike'] - current_price).abs().argsort()[:4]].sort_values('strike')
+            ntm_puts = puts.iloc[(puts['strike'] - current_price).abs().argsort()[:4]].sort_values('strike')
+            
+            final_summary += f"\n>>> EXPIRY: {date} ({days} DTE) <<<\n"
+            
+            # Calls
+            for _, row in ntm_calls.iterrows():
+                ask = row.get('ask', 0.0)
+                last = row.get('lastPrice', 0.0)
+                price = ask if ask > 0 else last
+                iv = round(row['impliedVolatility']*100, 1) if not pd.isna(row.get('impliedVolatility')) else 0
+                final_summary += f"[CALL] Strike {row['strike']} | Price ${price} | IV {iv}%\n"
+                
+            # Puts
+            for _, row in ntm_puts.iterrows():
+                ask = row.get('ask', 0.0)
+                last = row.get('lastPrice', 0.0)
+                price = ask if ask > 0 else last
+                iv = round(row['impliedVolatility']*100, 1) if not pd.isna(row.get('impliedVolatility')) else 0
+                final_summary += f"[PUT ] Strike {row['strike']} | Price ${price} | IV {iv}%\n"
+
+        return final_summary
         
     except Exception as e:
         return f"Error fetching option chain: {str(e)}"

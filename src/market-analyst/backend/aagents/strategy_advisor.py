@@ -17,7 +17,10 @@ def get_strategy_advisor(model_client):
         
         1. STUDY ANALYST CONTEXT: You will receive a summary from Phase 1.
         2. CALL DATA TOOLS: Use `get_available_expirations` and `get_option_chain_snapshot`.
-           - CONSTRAINT: Use expiries in the 30-60 day range ONLY (1-2 months). Ignore further dates.
+        2. CALL DATA TOOLS: Use `get_available_expirations` and `get_option_chain_snapshot`.
+           - TOOL UPGRADE: `get_option_chain_snapshot(ticker)` now returns a COMPARATIVE VIEW of 3 expiries (15-45 days).
+           - TASK: Compare all 3 expiries. Analyze the Risk/Reward for a strategy on each date.
+           - SELECTION: Choose the single BEST expiry that offers the highest Probability of Profit (POP) and favorable Risk/Reward.
         3. DESIGN STRATEGY: Propose a multi-leg strategy.
            - CRITICAL: You MUST include a `DRAFT_STRATEGY_LEGS` block:
              DRAFT_STRATEGY_LEGS:

@@ -61,6 +61,7 @@ dependencies = [
     "autogen-agentchat==0.4.7",
     "autogen-ext[grpc,mcp,ollama,openai]==0.4.7",
     "asyncio",
+    "phidata>=2.0.0",
 
     # =======================
     # MCP
@@ -136,6 +137,11 @@ dependencies = [
     "ddgs>=9.9.2",
     "duckduckgo_search",
     "azure-identity>=1.25.1",
+    "azure-mgmt-resource>=23.0.1",
+    "azure-mgmt-compute>=30.3.0",
+    "azure-mgmt-monitor>=6.0.2",
+    "azure-monitor-query>=1.2.0",
+    "PyGithub>=2.1.1",
 
     # =======================
     # OBSERVABILITY

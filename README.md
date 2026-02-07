@@ -152,12 +152,16 @@ Intelligent travel agent for booking and travel assistance.
 - **Features**: Travel recommendations, booking assistance, itinerary management
 - **Status**: ✅ Deployed
 
-### 6. **Stock Advisor** 📈
-Stock market analysis and trading recommendations.
+### 6. **FinAdvisor** 📈
+Comprehensive financial advisor comparing multiple agentic frameworks.
 
-- **Tech Stack**: Yahoo Finance, LangChain, Streamlit
-- **Features**: Real-time stock data, sentiment analysis, trade recommendations
-- **Status**: 🔨 In Development
+- **Tech Stack**: OpenAI, LangGraph, AutoGen, Phidata, Alpha Vantage
+- **Variations**:
+    - **FinAdvisor (OpenAI)**: Pure OpenAI Assistants API (`app.py`)
+    - **FinAdvisor (LangGraph)**: StateGraph workflow with intent classification (`app-lg.py`)
+    - **FinAdvisor (AutoGen)**: Multi-agent chat with User/Assistant proxies (`app3.py` / `app-ag.py`)
+    - **FinAdvisor (Phidata)**: Agent + Storage + Tools pattern (`app-phi.py`)
+- **Status**: ✅ Active Implementation
 
 ### 7. **Accessibility Tools** ♿
 Accessibility enhancement tools.
@@ -247,7 +251,12 @@ Available projects:
 - `healthcare-assistant`
 - `trip-planner`
 - `travel-agent`
-- `stock-advisor`
+- `travel-agent`
+- `finadvisor` (OpenAI Assistants)
+- `finadvisor-lg` (LangGraph)
+- `finadvisor-ag` (AutoGen)
+- `finadvisor-phi` (Phidata)
+- `accessibility`
 - `accessibility`
 
 ### Running Directly
@@ -323,7 +332,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 | Healthcare Assistant | TBD | 🚀 Ready |
 | Trip Planner | [mishrabp-trip-advisor-app.hf.space](https://mishrabp-trip-advisor-app.hf.space) | ✅ Live |
 | Travel Agent | TBD | ✅ Deployed |
-| Stock Advisor | TBD | 🔨 In Dev |
+| Travel Agent | TBD | ✅ Deployed |
+| FinAdvisor | Local | ✅ Active |
 | Accessibility | TBD | 🔨 In Progress |
 
 ## 📧 Contact

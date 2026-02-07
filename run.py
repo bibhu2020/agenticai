@@ -100,10 +100,76 @@ APP_REGISTRY: Dict[str, Dict[str, str]] = {
         "entry": "app.py",
         "description": "Interview Assistant - Multi-agent interview tool"
     },
-    "finadvisor": {
+    "finadvisor-lg": {
         "path": "src/finadvisor",
-        "entry": "app.py",
-        "description": "Financial Advisor - Multi-agent financial advisor tool"
+        "entry": "app-lg.py",
+        "description": "Financial Advisor - Multi-agent financial advisor tool using LangGraph"
+    }
+    ,
+    "finadvisor-oai": {
+        "path": "src/finadvisor",
+        "entry": "app-oai.py",
+        "description": "Financial Advisor - Multi-agent financial advisor tool using OpenAI"
+    }
+    ,
+    "finadvisor-phi": {
+        "path": "src/finadvisor",
+        "entry": "app-phi.py",
+        "description": "Financial Advisor - Multi-agent financial advisor tool using Phidata"
+    }
+    ,
+    "finadvisor-ag": {
+        "path": "src/finadvisor",
+        "entry": "app-ag.py",
+        "description": "Financial Advisor - Multi-agent financial advisor tool using Autogen"
+    },
+    "mcp-trader": {
+        "path": "src/mcp-trader",
+        "entry": "server.py",
+        "type": "script",
+        "description": "Strategies MCP Server - FastMCP server for trading strategies"
+    },
+    "mcp-web": {
+        "path": "src/mcp-web",
+        "entry": "server.py",
+        "type": "script",
+        "description": "Web MCP Server - Search, Extract, Wikipedia, Arxiv"
+    },
+    "mcp-azure-sre": {
+        "path": "src/mcp-azure-sre",
+        "entry": "server.py",
+        "type": "script",
+        "description": "Azure SRE MCP Server - Manage Azure Resources & Monitoring"
+    },
+    "mcp-rag-secure": {
+        "path": "src/mcp-rag-secure",
+        "entry": "server.py",
+        "type": "script",
+        "description": "Secure RAG MCP Server - Multi-tenant knowledge base"
+    },
+    "mcp-trading-research": {
+        "path": "src/mcp-trading-research",
+        "entry": "server.py",
+        "type": "script",
+        "description": "Trading Research MCP Server - News, Insider, Analysts"
+    },
+    "mcp-github": {
+        "path": "src/mcp-github",
+        "entry": "server.py",
+        "type": "script",
+        "description": "GitHub MCP Server - Issues, PRs, Alerts"
+    },
+    "mcp-seo": {
+        "path": "src/mcp-seo",
+        "entry": "server.py",
+        "type": "script",
+        "description": "SEO & ADA MCP Server - Website Audits"
+    },
+    "test": {
+        "path": ".",
+        "entry": "tests",
+        "type": "test",
+        "description": "Run Project Tests - Executes pytest suite"
     }
 }
 
@@ -198,33 +264,39 @@ def launch_app(app_name: str, port: Optional[int] = None):
         module_path = app_file.replace(".py", "").replace("/", ".").replace("\\", ".")
         cmd = [python_exe, "-m", "uvicorn", f"{module_path}:app", "--host", "0.0.0.0"]
         default_port = 8000
+    elif app_type == "script":
+        cmd = [python_exe, app_file]
+        default_port = None
+    elif app_type == "test":
+        cmd = [python_exe, "-m", "pytest", app_file, "-v"]
+        default_port = None
     else:
         cmd = [python_exe, "-m", "streamlit", "run", app_file]
         default_port = 8501
     
     # Add port if specified
-    if port:
-        if app_type == "fastapi":
-            cmd.extend(["--port", str(port)])
-        else:
-            cmd.extend(["--server.port", str(port)])
-        print(f"🔌 Port: {port}")
-    else:
-        print(f"🔌 Port: {default_port} (default)")
-    
-    # Determine the actual port to use
     actual_port = port if port else default_port
     
-    # Kill any process using the target port
-    try:
-        import platform
-        if platform.system() != "Windows":
-            # Use fuser on Linux/Mac to kill processes on the port
-            kill_cmd = ["fuser", "-k", f"{actual_port}/tcp"]
-            subprocess.run(kill_cmd, stderr=subprocess.DEVNULL, stdout=subprocess.DEVNULL)
-            print(f"🧹 Cleaned up port {actual_port}")
-    except Exception:
-        pass  # Silently continue if cleanup fails
+    if app_type in ["streamlit", "fastapi"]:
+        if port:
+            if app_type == "fastapi":
+                cmd.extend(["--port", str(port)])
+            else:
+                cmd.extend(["--server.port", str(port)])
+            print(f"🔌 Port: {port}")
+        else:
+            print(f"🔌 Port: {default_port} (default)")
+            
+        # Kill any process using the target port (Port is only relevant for web apps)
+        try:
+            import platform
+            if platform.system() != "Windows":
+                # Use fuser on Linux/Mac to kill processes on the port
+                kill_cmd = ["fuser", "-k", f"{actual_port}/tcp"]
+                subprocess.run(kill_cmd, stderr=subprocess.DEVNULL, stdout=subprocess.DEVNULL)
+                print(f"🧹 Cleaned up port {actual_port}")
+        except Exception:
+            pass  # Silently continue if cleanup fails
     
     print("\n" + "=" * 70)
     print("\n🎯 Starting application...\n")
@@ -241,7 +313,11 @@ def launch_app(app_name: str, port: Optional[int] = None):
     except KeyboardInterrupt:
         print("\n\n👋 Application stopped by user")
     except FileNotFoundError:
-        binary = "uvicorn" if app_type == "fastapi" else "streamlit"
+        binary = "command"
+        if app_type == "fastapi": binary = "uvicorn"
+        elif app_type == "streamlit": binary = "streamlit"
+        elif app_type == "test": binary = "pytest"
+        
         print(f"\n❌ Error: {binary} not found in the current environment.")
         print(f"   Please install it: pip install {binary}")
         sys.exit(1)
