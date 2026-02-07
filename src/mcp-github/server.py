@@ -35,6 +35,32 @@ def get_client():
     return Github(auth=auth)
 
 @mcp.tool()
+def list_repositories() -> List[Dict[str, Any]]:
+    """
+    List all repositories for the authenticated user/owner.
+    """
+    log_usage("mcp-github", "list_repositories")
+    try:
+        g = get_client()
+        # Get repos for the owner/authenticated user
+        repos = g.get_user().get_repos(sort="updated", direction="desc")
+        
+        results = []
+        for repo in repos[:20]: # Limit to 20 most recent
+            results.append({
+                "name": repo.name,
+                "full_name": repo.full_name,
+                "description": repo.description,
+                "stars": repo.stargazers_count,
+                "forks": repo.forks_count,
+                "updated_at": str(repo.updated_at),
+                "language": repo.language
+            })
+        return results
+    except Exception as e:
+        return [{"error": str(e)}]
+
+@mcp.tool()
 def list_issues(owner: str, repo_name: str, state: str = "open") -> List[Dict[str, Any]]:
     """
     List issues for a repository.

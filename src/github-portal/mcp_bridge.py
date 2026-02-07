@@ -63,11 +63,23 @@ bridge = MCPGitHubBridge()
 # We wrap them to make them easy for the Agent to call
 
 @function_tool
+async def list_repositories() -> str:
+    """List all repositories for the authenticated owner."""
+    try:
+        if not bridge.session: await bridge.connect()
+        content = await bridge.call_tool("list_repositories", {})
+        if content and hasattr(content[0], 'text'): return content[0].text
+        return str(content)
+    except Exception as e:
+        return f"Error: {str(e)}"
+
+@function_tool
 async def list_issues(owner: str, repo_name: str, state: str = "open") -> str:
     """List issues for a repository."""
     try:
         if not bridge.session: await bridge.connect()
         content = await bridge.call_tool("list_issues", {"owner": owner, "repo_name": repo_name, "state": state})
+        if content and hasattr(content[0], 'text'): return content[0].text
         return str(content)
     except Exception as e:
         return f"Error: {str(e)}"
@@ -88,6 +100,7 @@ async def list_security_alerts(owner: str, repo_name: str) -> str:
     try:
         if not bridge.session: await bridge.connect()
         content = await bridge.call_tool("list_security_alerts", {"owner": owner, "repo_name": repo_name})
+        if content and hasattr(content[0], 'text'): return content[0].text
         return str(content)
     except Exception as e:
         return f"Error: {str(e)}"
@@ -98,6 +111,7 @@ async def list_workflow_runs(owner: str, repo_name: str) -> str:
     try:
         if not bridge.session: await bridge.connect()
         content = await bridge.call_tool("list_workflow_runs", {"owner": owner, "repo_name": repo_name})
+        if content and hasattr(content[0], 'text'): return content[0].text
         return str(content)
     except Exception as e:
         return f"Error: {str(e)}"
@@ -113,4 +127,4 @@ async def get_workflow_run_details(owner: str, repo_name: str, run_id: int) -> s
         return f"Error: {str(e)}"
 
 def get_github_tools():
-    return [list_issues, get_issue, list_security_alerts, list_workflow_runs, get_workflow_run_details]
+    return [list_repositories, list_issues, get_issue, list_security_alerts, list_workflow_runs, get_workflow_run_details]
