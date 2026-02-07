@@ -58,7 +58,7 @@ dependencies = [
     # =======================
     # AUTOGEN
     # =======================
-    "autogen-agentchat==0.4.7",
+    "autogen-agentchat==0.7.5",
     "autogen-ext[grpc,mcp,ollama,openai]==0.4.7",
     "asyncio",
     "phidata>=2.0.0",
