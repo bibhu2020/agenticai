@@ -161,7 +161,7 @@ const system = ref({ uptime: '99.9%', throughput: '0/hr', latency: '0ms' })
 const usageData = ref({ labels: [], datasets: [] })
 const selectedServer = ref(null)
 const currentLogs = ref('Initializing terminal...')
-const selectedRange = ref('24h')
+const selectedRange = ref('1h')
 const ranges = ['1h', '24h', '7d', '30d']
 const hoverInfo = ref(null)
 let logTimer = null
@@ -327,7 +327,7 @@ onMounted(() => {
   setInterval(() => {
     fetchData()
     fetchUsage()
-  }, 15000)
+  }, 300000)
 })
 </script>
 
