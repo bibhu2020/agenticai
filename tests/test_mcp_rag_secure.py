@@ -42,6 +42,7 @@ with patch.dict(sys.modules, {
     "chromadb.config": MagicMock(),
     "chromadb.utils": MagicMock(),
     "chromadb.utils.embedding_functions": MagicMock(),
+    "mcp_telemetry": MagicMock(),
 }):
     file_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../src/mcp-rag-secure/server.py"))
     spec = importlib.util.spec_from_file_location("mcp_rag_secure_server", file_path)

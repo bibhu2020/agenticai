@@ -9,6 +9,7 @@ from bs4 import BeautifulSoup
 from urllib.parse import urljoin, urlparse
 from mcp.server.fastmcp import FastMCP
 from typing import List, Dict, Any, Set
+from mcp_telemetry import log_usage
 
 # Initialize FastMCP Server
 mcp = FastMCP("SEO & ADA Audit")
@@ -19,6 +20,7 @@ def analyze_seo(url: str) -> Dict[str, Any]:
     Perform a basic SEO audit of a webpage.
     Checks title, meta description, H1 tags, image alt attributes, and internal/external links.
     """
+    log_usage("mcp-seo", "analyze_seo")
     try:
         response = requests.get(url, timeout=10)
         soup = BeautifulSoup(response.content, 'html.parser')
@@ -65,6 +67,7 @@ def analyze_ada(url: str) -> Dict[str, Any]:
     Perform a basic ADA/WCAG accessibility check.
     Checks for missing alt text, form labels, lang attribute, and ARIA usage.
     """
+    log_usage("mcp-seo", "analyze_ada")
     try:
         response = requests.get(url, timeout=10)
         soup = BeautifulSoup(response.content, 'html.parser')

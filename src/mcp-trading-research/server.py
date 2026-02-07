@@ -8,6 +8,7 @@ import yfinance as yf
 from textblob import TextBlob
 from mcp.server.fastmcp import FastMCP
 from typing import List, Dict, Any
+from mcp_telemetry import log_usage
 
 # Initialize FastMCP Server
 mcp = FastMCP("Trading Research")
@@ -17,6 +18,7 @@ def get_news_sentiment(symbol: str) -> List[Dict[str, Any]]:
     """
     Get recent news and analyze sentiment for a stock symbol.
     """
+    log_usage("mcp-trading-research", "get_news_sentiment")
     try:
         ticker = yf.Ticker(symbol)
         news = ticker.news
@@ -53,6 +55,7 @@ def get_insider_trades(symbol: str) -> List[Dict[str, Any]]:
     """
     Get recent insider trading activity.
     """
+    log_usage("mcp-trading-research", "get_insider_trades")
     try:
         ticker = yf.Ticker(symbol)
         insider = ticker.insider_transactions

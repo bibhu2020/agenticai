@@ -10,6 +10,7 @@ from chromadb.config import Settings
 from chromadb.utils import embedding_functions
 from mcp.server.fastmcp import FastMCP
 from typing import List, Dict, Any, Optional
+from mcp_telemetry import log_usage
 
 # Initialize FastMCP Server
 mcp = FastMCP("Secure RAG")
@@ -47,6 +48,7 @@ def ingest_document(tenant_id: str, content: str, metadata: Dict[str, Any] = Non
     """
     Ingest a document into the RAG system with strict tenant isolation.
     """
+    log_usage("mcp-rag-secure", "ingest_document")
     if not metadata:
         metadata = {}
     
@@ -67,6 +69,7 @@ def query_knowledge_base(tenant_id: str, query: str, k: int = 3) -> List[Dict[st
     """
     Query the knowledge base. Results are strictly filtered by tenant_id.
     """
+    log_usage("mcp-rag-secure", "query_knowledge_base")
     results = collection.query(
         query_texts=[query],
         n_results=k,

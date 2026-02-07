@@ -37,7 +37,10 @@ sys.modules["mcp.server"] = mock_server
 sys.modules["mcp.server.fastmcp"] = mock_fastmcp
 
 # Create mock requests *before* importing server
-with patch.dict(sys.modules, {"requests": MagicMock()}):
+with patch.dict(sys.modules, {
+    "requests": MagicMock(), 
+    "mcp_telemetry": MagicMock()
+}):
     file_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../src/mcp-seo/server.py"))
     spec = importlib.util.spec_from_file_location("mcp_seo_server", file_path)
     server = importlib.util.module_from_spec(spec)

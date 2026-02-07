@@ -13,6 +13,7 @@ if src_dir not in sys.path:
 
 from mcp.server.fastmcp import FastMCP
 from typing import List, Dict, Any, Union
+from mcp_telemetry import log_usage
 
 # Local imports
 try:
@@ -47,6 +48,7 @@ def search(query: str, max_results: int = 5) -> List[Dict[str, Any]]:
     Search the web for the given query using DuckDuckGo.
     Returns a list of results with title, url, snippet.
     """
+    log_usage("mcp-web", "search")
     return search_web(query, max_results)
 
 @mcp.tool()
@@ -55,6 +57,7 @@ def extract(url: str) -> str:
     Extracts text content from a given URL.
     Useful for reading articles or documentation.
     """
+    log_usage("mcp-web", "extract")
     return extract_content(url)
 
 @mcp.tool()
@@ -63,6 +66,7 @@ def research(query: str, max_results: int = 3) -> List[Dict[str, Any]]:
     Research a topic by searching and extracting content in parallel.
     Returns search results populated with full content.
     """
+    log_usage("mcp-web", "research")
     return research_topic(query, max_results)
 
 @mcp.tool()

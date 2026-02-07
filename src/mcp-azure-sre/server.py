@@ -14,6 +14,7 @@ if src_dir not in sys.path:
     sys.path.append(src_dir)
 
 from mcp.server.fastmcp import FastMCP
+from mcp_telemetry import log_usage
 
 # Azure Imports
 try:
@@ -44,6 +45,7 @@ def list_resources(subscription_id: str, resource_group: Optional[str] = None) -
     """
     List Azure resources in a subscription or resource group.
     """
+    log_usage("mcp-azure-sre", "list_resources")
     try:
         cred = get_credential()
         client = ResourceManagementClient(cred, subscription_id)
@@ -62,6 +64,7 @@ def restart_vm(subscription_id: str, resource_group: str, vm_name: str) -> str:
     """
     Restart a Virtual Machine.
     """
+    log_usage("mcp-azure-sre", "restart_vm")
     try:
         cred = get_credential()
         client = ComputeManagementClient(cred, subscription_id)
@@ -77,6 +80,7 @@ def get_metrics(subscription_id: str, resource_id: str, metric_names: List[str])
     """
     Get metrics for a resource.
     """
+    log_usage("mcp-azure-sre", "get_metrics")
     try:
         cred = get_credential()
         client = MonitorManagementClient(cred, subscription_id)

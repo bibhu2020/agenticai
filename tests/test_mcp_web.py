@@ -10,25 +10,27 @@ import sys
 import os
 
 # Add src and mcp-web to path
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../src")))
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../src/mcp-web")))
+current_dir = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(os.path.abspath(os.path.join(current_dir, "../src")))
+sys.path.append(os.path.abspath(os.path.join(current_dir, "../src/mcp-web")))
+
+# Mock mcp_telemetry to avoid import errors
+sys.modules["mcp_telemetry"] = MagicMock()
 
 try:
-    from mcp_web.tools.search import search_web
-    from mcp_web.tools.extract import extract_content
-    from mcp_web.tools.research import research_topic
-    from mcp_web.tools.wikipedia import search_wikipedia, get_wikipedia_page
-    from mcp_web.tools.arxiv import search_arxiv
+    from tools.search import search_web
+    from tools.extract import extract_content
+    from tools.research import research_topic
+    from tools.wikipedia import search_wikipedia, get_wikipedia_page
+    from tools.arxiv import search_arxiv
 except ImportError:
-    # If mcp_web not package, try relative
-    try:
-        from tools.search import search_web
-        from tools.extract import extract_content
-        from tools.research import research_topic
-        from tools.wikipedia import search_wikipedia, get_wikipedia_page
-        from tools.arxiv import search_arxiv
-    except ImportError:
-         pass
+    # Handle direct runs
+    sys.path.append(os.path.abspath(os.path.join(current_dir, "../src/mcp-web/tools")))
+    from search import search_web
+    from extract import extract_content
+    from research import research_topic
+    from wikipedia import search_wikipedia, get_wikipedia_page
+    from arxiv import search_arxiv
 
 def test_search_web():
     mock_results = [{"title": "Test", "href": "http://test.com", "body": "Snippet"}]

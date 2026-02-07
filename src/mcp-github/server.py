@@ -6,6 +6,7 @@ import sys
 import os
 from mcp.server.fastmcp import FastMCP
 from typing import List, Dict, Any, Optional
+from mcp_telemetry import log_usage
 
 # Add src to pythonpath
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -38,6 +39,7 @@ def list_issues(owner: str, repo_name: str, state: str = "open") -> List[Dict[st
     """
     List issues for a repository.
     """
+    log_usage("mcp-github", "list_issues")
     try:
         g = get_client()
         repo = g.get_repo(f"{owner}/{repo_name}")
@@ -61,6 +63,7 @@ def create_issue(owner: str, repo_name: str, title: str, body: str) -> Dict[str,
     """
     Create a new issue.
     """
+    log_usage("mcp-github", "create_issue")
     try:
         g = get_client()
         repo = g.get_repo(f"{owner}/{repo_name}")
@@ -78,6 +81,7 @@ def get_issue(owner: str, repo_name: str, issue_number: int) -> Dict[str, Any]:
     """
     Get detailed issue info including comments.
     """
+    log_usage("mcp-github", "get_issue")
     try:
         g = get_client()
         repo = g.get_repo(f"{owner}/{repo_name}")

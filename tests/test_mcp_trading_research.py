@@ -37,7 +37,10 @@ sys.modules["mcp.server"] = mock_server
 sys.modules["mcp.server.fastmcp"] = mock_fastmcp
 
 # Create mock yfinance *before* importing server
-with patch.dict(sys.modules, {"yfinance": MagicMock()}):
+with patch.dict(sys.modules, {
+    "yfinance": MagicMock(), 
+    "mcp_telemetry": MagicMock()
+}):
     file_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../src/mcp-trading-research/server.py"))
     spec = importlib.util.spec_from_file_location("mcp_trading_research_server", file_path)
     server = importlib.util.module_from_spec(spec)

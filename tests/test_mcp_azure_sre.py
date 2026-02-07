@@ -43,6 +43,7 @@ with patch.dict(sys.modules, {
     "azure.mgmt.monitor": MagicMock(),
     "azure.mgmt.compute": MagicMock(),
     "azure.monitor.query": MagicMock(),
+    "mcp_telemetry": MagicMock(),
 }):
     # Import the server module explicitly to avoid name collision
     file_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../src/mcp-azure-sre/server.py"))
