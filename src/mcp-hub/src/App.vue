@@ -43,20 +43,20 @@
         <section class="trend-section">
           <div class="trend-header">
              <div class="v-header">USAGE TRENDS</div>
-             <div class="chart-legend">
-                <div v-for="chart in getCharts" :key="chart.name" 
-                     :class="['legend-item', { muted: chart.hidden }]"
-                     @click="toggleDataset(chart.name)">
-                   <span class="dot" :style="{ background: chart.color }"></span>
-                   {{ chart.name }}
-                </div>
-             </div>
              <div class="range-selector">
                 <button v-for="r in ranges" :key="r" :class="{ active: selectedRange === r }" @click="setRange(r)">{{ r.toUpperCase() }}</button>
              </div>
           </div>
           
           <div class="trend-container">
+            <div class="chart-legend left-legend">
+                <div v-for="chart in getCharts" :key="chart.name" 
+                     :class="['legend-item', { muted: chart.hidden }]"
+                     @click="toggleDataset(chart.name)">
+                   <span class="dot" :style="{ background: chart.color }"></span>
+                   {{ chart.name }}
+                </div>
+            </div>
             <div class="y-axis">
                <span v-for="tick in yTicks" :key="tick">{{ tick }}</span>
             </div>
@@ -274,7 +274,7 @@ const visibleXLabels = computed(() => {
   const formatTime = (ts) => {
     const d = new Date(ts * 1000)
     if (selectedRange.value === '1h') return d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
-    if (selectedRange.value === '24h') return d.toLocaleTimeString([], { hour: '2-digit', minute: '00' })
+    if (selectedRange.value === '24h') return d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
     return d.toLocaleDateString([], { month: '2-digit', day: '2-digit' })
   }
 
@@ -419,27 +419,59 @@ onMounted(() => {
   color: var(--accent);
 }
 
+.chart-legend.left-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.5rem;
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+  justify-content: center;
+  min-width: 60px;
+  border-right: 1px solid var(--border);
+  padding-right: 10px;
+}
+
+.left-legend .legend-item .dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  box-shadow: 0 0 3px currentColor;
+}
+
+.y-axis {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: right;
+  width: 30px;
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+  padding: 5px 0 10px 0;
+}
+
+.trend-container {
+  display: flex;
+  height: 120px;
+  gap: 1rem;
+}
+
 .legend-item {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.35rem;
   cursor: pointer;
   transition: opacity 0.2s, transform 0.2s;
+  white-space: nowrap;
 }
 
 .legend-item:hover {
-  transform: translateY(-1px);
+  transform: translateX(2px);
 }
 
 .legend-item.muted {
   opacity: 0.3;
-}
-
-.legend-item .dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  box-shadow: 0 0 5px currentColor;
 }
 
 .trend-path {
