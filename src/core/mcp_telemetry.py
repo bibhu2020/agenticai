@@ -10,8 +10,9 @@ from pathlib import Path
 # Configuration
 HUB_URL = os.environ.get("MCP_HUB_URL", "http://localhost:7860")
 IS_HUB = os.environ.get("MCP_IS_HUB", "false").lower() == "true"
+PG_CONN_STR = os.environ.get("MCP_TRACES_DB")
 
-# Single SQLite DB for the Hub
+# Single SQLite DB for the Hub (fallback)
 if os.path.exists("/app"):
     DB_FILE = Path("/tmp/mcp_logs.db")
 else:
@@ -19,6 +20,22 @@ else:
     DB_FILE = Path(__file__).parent.parent.parent / "mcp_logs.db"
 
 def _get_conn():
+    # PostgreSQL Mode
+    if PG_CONN_STR and IS_HUB:
+        try:
+            import psycopg2
+            from psycopg2.extras import RealDictCursor
+            conn = psycopg2.connect(PG_CONN_STR)
+            # Init schema if needed (lazy check could be optimized)
+            _init_pg_db(conn)
+            return conn
+        except Exception as e:
+            print(f"Postgres Connection Failed: {e}")
+            # Fallback to SQLite not recommended if PG configured, but handling graceful failure might be needed.
+            # For now, we raise or assume SQLite fallback if PG fail? Let's error out to be safe.
+            raise e
+
+    # SQLite Mode (Default)
     # Auto-init if missing (lazy creation)
     if IS_HUB and not os.path.exists(DB_FILE):
         _init_db()
@@ -26,6 +43,24 @@ def _get_conn():
     conn = sqlite3.connect(DB_FILE)
     conn.row_factory = sqlite3.Row
     return conn
+
+def _init_pg_db(conn):
+    """Initializes the PostgreSQL database with required tables."""
+    try:
+        with conn.cursor() as cur:
+            cur.execute("""
+                CREATE TABLE IF NOT EXISTS logs (
+                    id SERIAL PRIMARY KEY,
+                    timestamp TIMESTAMP NOT NULL DEFAULT NOW(),
+                    server VARCHAR(255) NOT NULL,
+                    tool VARCHAR(255) NOT NULL
+                )
+            """)
+            cur.execute("CREATE INDEX IF NOT EXISTS idx_ts ON logs(timestamp)")
+        conn.commit()
+    except Exception as e:
+        print(f"Postgres DB Init Failed: {e}")
+        conn.rollback()
 
 def _init_db():
     """Initializes the SQLite database with required tables."""
@@ -60,9 +95,18 @@ def log_usage(server_name: str, tool_name: str):
     # 1. If we are the Hub, write directly to DB
     if IS_HUB:
         try:
-            with _get_conn() as conn:
-                conn.execute("INSERT INTO logs (timestamp, server, tool) VALUES (?, ?, ?)", 
-                             (timestamp, server_name, tool_name))
+            conn = _get_conn()
+            if PG_CONN_STR:
+                with conn.cursor() as cur:
+                    cur.execute("INSERT INTO logs (timestamp, server, tool) VALUES (%s, %s, %s)", 
+                                (timestamp, server_name, tool_name))
+                conn.commit()
+                conn.close()
+            else:
+                with conn:
+                    conn.execute("INSERT INTO logs (timestamp, server, tool) VALUES (?, ?, ?)", 
+                                 (timestamp, server_name, tool_name))
+                conn.close()
         except Exception as e:
             print(f"Local Log Failed: {e}")
             
@@ -81,20 +125,34 @@ def log_usage(server_name: str, tool_name: str):
             pass
 
 def get_metrics():
-    """Aggregates metrics from SQLite."""
-    if not DB_FILE.exists():
+    """Aggregates metrics from DB."""
+    if not IS_HUB and not DB_FILE.exists():
+         # If not Hub and no local sqlite, nothing to show
         return {}
     
     try:
-        with _get_conn() as conn:
+        conn = _get_conn()
+        metrics = {}
+        rows = []
+        
+        if PG_CONN_STR and IS_HUB:
+            from psycopg2.extras import RealDictCursor
+            with conn.cursor(cursor_factory=RealDictCursor) as cur:
+                cur.execute("SELECT server, timestamp FROM logs")
+                rows = cur.fetchall()
+            conn.close()
+        else:
             rows = conn.execute("SELECT server, timestamp FROM logs").fetchall()
+            conn.close()
             
         now = datetime.now()
-        metrics = {}
         
         for row in rows:
             server = row["server"]
-            ts = datetime.fromisoformat(row["timestamp"])
+            # Handle different timestamp formats (PG vs SQLite textual)
+            ts = row["timestamp"]
+            if isinstance(ts, str):
+                ts = datetime.fromisoformat(ts)
             
             if server not in metrics:
                 metrics[server] = {"hourly": 0, "weekly": 0, "monthly": 0}
@@ -104,6 +162,7 @@ def get_metrics():
                 metrics[server]["hourly"] += 1
             if delta.days < 7:
                 metrics[server]["weekly"] += 1
+            if delta.days < 30: # Assuming a month is roughly 30 days for simplicity
                 metrics[server]["monthly"] += 1
                 
         return metrics
@@ -113,7 +172,7 @@ def get_metrics():
 
 def get_usage_history(range_hours: int = 24, intervals: int = 12):
     """Returns time-series data for the chart."""
-    if not DB_FILE.exists():
+    if not IS_HUB and not DB_FILE.exists():
         return _generate_mock_history(range_hours, intervals)
         
     try:
@@ -121,11 +180,21 @@ def get_usage_history(range_hours: int = 24, intervals: int = 12):
         start_time = now - timedelta(hours=range_hours)
         bucket_size = (range_hours * 3600) / intervals
         
-        with _get_conn() as conn:
+        conn = _get_conn()
+        rows = []
+        
+        if PG_CONN_STR and IS_HUB:
+            from psycopg2.extras import RealDictCursor
+            with conn.cursor(cursor_factory=RealDictCursor) as cur:
+                cur.execute("SELECT server, timestamp FROM logs WHERE timestamp >= %s", (start_time,))
+                rows = cur.fetchall()
+            conn.close()
+        else:
             rows = conn.execute(
                 "SELECT server, timestamp FROM logs WHERE timestamp >= ?", 
                 (start_time.isoformat(),)
             ).fetchall()
+            conn.close()
 
         if not rows:
             return _generate_mock_history(range_hours, intervals)
@@ -135,7 +204,10 @@ def get_usage_history(range_hours: int = 24, intervals: int = 12):
         datasets = {s: [0] * intervals for s in active_servers}
         
         for row in rows:
-            ts = datetime.fromisoformat(row["timestamp"])
+            ts = row["timestamp"]
+            if isinstance(ts, str):
+                ts = datetime.fromisoformat(ts)
+                
             delta = (ts - start_time).total_seconds()
             bucket_idx = int(delta // bucket_size)
             if 0 <= bucket_idx < intervals:
@@ -210,16 +282,28 @@ def get_system_metrics():
 
 def get_recent_logs(server_id: str, limit: int = 50):
     """Fetches the most recent logs for a specific server."""
-    if not DB_FILE.exists():
+    if not IS_HUB and not DB_FILE.exists():
         return []
         
     try:
-        with _get_conn() as conn:
-            # Simple match. For 'mcp-hub', we might want all, but usually filtered by server_id
+        conn = _get_conn()
+        rows = []
+        
+        if PG_CONN_STR and IS_HUB:
+            from psycopg2.extras import RealDictCursor
+            with conn.cursor(cursor_factory=RealDictCursor) as cur:
+                 cur.execute(
+                    "SELECT timestamp, tool FROM logs WHERE server = %s ORDER BY id DESC LIMIT %s", 
+                    (server_id, limit)
+                )
+                 rows = cur.fetchall()
+            conn.close()
+        else:
             rows = conn.execute(
                 "SELECT timestamp, tool FROM logs WHERE server = ? ORDER BY id DESC LIMIT ?", 
                 (server_id, limit)
             ).fetchall()
+            conn.close()
             
         return [dict(r) for r in rows]
     except Exception as e:
