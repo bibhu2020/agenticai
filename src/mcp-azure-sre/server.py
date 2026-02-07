@@ -14,7 +14,9 @@ if src_dir not in sys.path:
     sys.path.append(src_dir)
 
 from mcp.server.fastmcp import FastMCP
-from core.mcp_telemetry import log_usage
+from core.mcp_telemetry import log_usage, log_trace, log_metric
+import uuid
+import time
 
 # Azure Imports
 try:
@@ -45,7 +47,11 @@ def list_resources(subscription_id: str, resource_group: Optional[str] = None) -
     """
     List Azure resources in a subscription or resource group.
     """
+    start_time = time.time()
+    trace_id = str(uuid.uuid4())
+    span_id = str(uuid.uuid4())
     log_usage("mcp-azure-sre", "list_resources")
+    
     try:
         cred = get_credential()
         client = ResourceManagementClient(cred, subscription_id)
@@ -55,8 +61,15 @@ def list_resources(subscription_id: str, resource_group: Optional[str] = None) -
         else:
             resources = client.resources.list()
             
-        return [{"name": r.name, "type": r.type, "location": r.location, "id": r.id} for r in resources]
+        results = [{"name": r.name, "type": r.type, "location": r.location, "id": r.id} for r in resources]
+        
+        duration = (time.time() - start_time) * 1000
+        log_trace("mcp-azure-sre", trace_id, span_id, "list_resources", duration, "ok")
+        log_metric("mcp-azure-sre", "resources_scanned", len(results), {"sub": subscription_id})
+        return results
     except Exception as e:
+        duration = (time.time() - start_time) * 1000
+        log_trace("mcp-azure-sre", trace_id, span_id, "list_resources", duration, "error")
         return [{"error": str(e)}]
 
 @mcp.tool()

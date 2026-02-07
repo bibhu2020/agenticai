@@ -9,7 +9,9 @@ from bs4 import BeautifulSoup
 from urllib.parse import urljoin, urlparse
 from mcp.server.fastmcp import FastMCP
 from typing import List, Dict, Any, Set
-from core.mcp_telemetry import log_usage
+from core.mcp_telemetry import log_usage, log_trace, log_metric
+import uuid
+import time
 
 # Initialize FastMCP Server
 mcp = FastMCP("SEO & ADA Audit", host="0.0.0.0")
@@ -20,7 +22,11 @@ def analyze_seo(url: str) -> Dict[str, Any]:
     Perform a basic SEO audit of a webpage.
     Checks title, meta description, H1 tags, image alt attributes, and internal/external links.
     """
+    start_time = time.time()
+    trace_id = str(uuid.uuid4())
+    span_id = str(uuid.uuid4())
     log_usage("mcp-seo", "analyze_seo")
+    
     try:
         response = requests.get(url, timeout=10)
         soup = BeautifulSoup(response.content, 'html.parser')
@@ -57,9 +63,15 @@ def analyze_seo(url: str) -> Dict[str, Any]:
             else:
                 result["external_links"] += 1
                 
+        duration = (time.time() - start_time) * 1000
+        log_trace("mcp-seo", trace_id, span_id, "analyze_seo", duration, "ok")
+        log_metric("mcp-seo", "seo_links_found", result["internal_links"] + result["external_links"], {"url": url})
+        
         return result
     except Exception as e:
-        return {"error": str(e)}
+        duration = (time.time() - start_time) * 1000
+        log_trace("mcp-seo", trace_id, span_id, "analyze_seo", duration, "error")
+        return [{"error": str(e)}]
 
 @mcp.tool()
 def analyze_ada(url: str) -> Dict[str, Any]:

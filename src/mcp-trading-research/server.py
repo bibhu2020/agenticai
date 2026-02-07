@@ -8,7 +8,9 @@ import yfinance as yf
 from textblob import TextBlob
 from mcp.server.fastmcp import FastMCP
 from typing import List, Dict, Any
-from core.mcp_telemetry import log_usage
+from core.mcp_telemetry import log_usage, log_trace, log_metric
+import uuid
+import time
 
 # Initialize FastMCP Server
 mcp = FastMCP("Trading Research", host="0.0.0.0")
@@ -18,7 +20,11 @@ def get_news_sentiment(symbol: str) -> List[Dict[str, Any]]:
     """
     Get recent news and analyze sentiment for a stock symbol.
     """
+    start_time = time.time()
+    trace_id = str(uuid.uuid4())
+    span_id = str(uuid.uuid4())
     log_usage("mcp-trading-research", "get_news_sentiment")
+    
     try:
         ticker = yf.Ticker(symbol)
         news = ticker.news
@@ -46,8 +52,13 @@ def get_news_sentiment(symbol: str) -> List[Dict[str, Any]]:
                 "sentiment_score": round(sentiment, 2),
                 "sentiment_label": sentiment_label
             })
+        
+        duration = (time.time() - start_time) * 1000
+        log_trace("mcp-trading-research", trace_id, span_id, "get_news_sentiment", duration, "ok")
         return results
     except Exception as e:
+        duration = (time.time() - start_time) * 1000
+        log_trace("mcp-trading-research", trace_id, span_id, "get_news_sentiment", duration, "error")
         return [{"error": str(e)}]
 
 @mcp.tool()

@@ -11,7 +11,10 @@ if src_dir not in sys.path:
     sys.path.append(src_dir)
 
 from mcp.server.fastmcp import FastMCP
-from core.mcp_telemetry import log_usage
+from core.mcp_telemetry import log_usage, log_trace, log_metric
+import uuid
+import time
+from datetime import datetime
 
 # Initialize FastMCP Server
 mcp = FastMCP("Weather MCP", host="0.0.0.0")
@@ -30,25 +33,47 @@ def get_current_weather(location: str, units: str = "metric") -> Dict[str, Any]:
     Get current weather for a specific city or location.
     Units can be 'metric' (Celsius) or 'imperial' (Fahrenheit).
     """
+    start_time = time.time()
+    trace_id = str(uuid.uuid4())
+    span_id = str(uuid.uuid4())
+    
     log_usage("mcp-weather", "get_current_weather")
     if not OPENWEATHER_API_KEY:
+        log_trace("mcp-weather", trace_id, span_id, "get_current_weather", 0, "error")
         return {"error": "OPENWEATHER_API_KEY not set"}
     
     url = f"https://api.openweathermap.org/data/2.5/weather?q={location}&appid={OPENWEATHER_API_KEY}&units={units}"
-    response = requests.get(url)
-    if response.status_code != 200:
-        return {"error": f"Failed to fetch weather: {response.text}"}
-    
-    data = response.json()
-    return {
-        "location": data.get("name"),
-        "condition": data["weather"][0]["description"],
-        "temperature": format_temp(data["main"]["temp"], units),
-        "feels_like": format_temp(data["main"]["feels_like"], units),
-        "humidity": f"{data['main']['humidity']}%",
-        "wind_speed": f"{data['wind']['speed']} m/s",
-        "timestamp": data.get("dt")
-    }
+    try:
+        response = requests.get(url, timeout=10)
+        duration = (time.time() - start_time) * 1000
+        
+        if response.status_code != 200:
+            log_trace("mcp-weather", trace_id, span_id, "get_current_weather", duration, "error")
+            return {"error": f"Failed to fetch weather: {response.text}"}
+        
+        data = response.json()
+        temp = data["main"]["temp"]
+        
+        # Log Metrics
+        log_metric("mcp-weather", "weather_temperature", temp, {"location": location, "unit": units})
+        log_metric("mcp-weather", "api_latency", duration, {"endpoint": "weather"})
+        
+        # Log Trace
+        log_trace("mcp-weather", trace_id, span_id, "get_current_weather", duration, "ok")
+        
+        return {
+            "location": data.get("name"),
+            "condition": data["weather"][0]["description"],
+            "temperature": format_temp(temp, units),
+            "feels_like": format_temp(data["main"]["feels_like"], units),
+            "humidity": f"{data['main']['humidity']}%",
+            "wind_speed": f"{data['wind']['speed']} m/s",
+            "timestamp": data.get("dt")
+        }
+    except Exception as e:
+        duration = (time.time() - start_time) * 1000
+        log_trace("mcp-weather", trace_id, span_id, "get_current_weather", duration, "error")
+        return {"error": str(e)}
 
 @mcp.tool()
 def get_forecast(location: str, units: str = "metric") -> List[Dict[str, Any]]:

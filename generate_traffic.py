@@ -1,6 +1,9 @@
 import asyncio
 import sys
 import random
+import requests
+import uuid
+from datetime import datetime
 from mcp import ClientSession
 from mcp.client.sse import sse_client
 from typing import Dict, Any
@@ -44,21 +47,65 @@ def get_targets():
         }
     ]
 
-async def call_agent(name: str, tool: str, args: Dict[str, Any], batch_id: int):
+
+async def call_agent_and_emit_telemetry(name: str, tool: str, args: Dict[str, Any], batch_id: int):
+    # 1. Real Tool Call (generates a Log event via Agent -> Hub)
     url = BASE_URL.format(name)
     try:
-        # Short timeout to fail fast if agent is down
+        # Check if agent is alive first (optimization)
         async with sse_client(url, timeout=5) as streams:
             async with ClientSession(streams[0], streams[1]) as session:
                 await session.initialize()
+                start = asyncio.get_event_loop().time()
                 await session.call_tool(tool, args)
-                print(f"[{batch_id}] ✅ {name}:{tool} success")
+                duration = (asyncio.get_event_loop().time() - start) * 1000
+                print(f"[{batch_id}] ✅ {name}:{tool} success ({int(duration)}ms)")
+                
+                # 2. Simulate Trace/Metric emission (since Agents might be stale)
+                # We send this directly to the Hub to test ingestion
+                await emit_fake_telemetry(name, tool, duration)
+                
     except Exception as e:
         print(f"[{batch_id}] ❌ {name} failed: {str(e)[:50]}...")
 
+async def emit_fake_telemetry(server: str, tool: str, duration: float):
+    # This simulates what the updated Agent WOULD send.
+    hub_api = "https://mishrabp-mcp-hub.hf.space/api/telemetry"
+    import uuid
+    trace_id = str(uuid.uuid4())
+    span_id = str(uuid.uuid4())
+    
+    # Send Trace
+    try:
+        trace_payload = {
+            "server": server,
+            "trace_id": trace_id,
+            "span_id": span_id,
+            "name": f"tool_call:{tool}",
+            "duration_ms": duration,
+            "status": "ok",
+            "start_time": datetime.now().isoformat(),
+            "end_time": datetime.now().isoformat()
+        }
+        requests.post(f"{hub_api}/trace", json=trace_payload, timeout=1)
+    except: pass
+    
+    # Send Metric
+    try:
+        metric_payload = {
+            "server": server,
+            "name": "tool_latency",
+            "value": duration,
+            "tags": '{"env": "prod"}',
+            "timestamp": datetime.now().isoformat()
+        }
+        requests.post(f"{hub_api}/metric", json=metric_payload, timeout=1)
+    except: pass
+
 async def run_batch(batch_id):
     targets = get_targets()
-    tasks = [call_agent(t["name"], t["tool"], t["args"], batch_id) for t in targets]
+    # Updated to use new function
+    tasks = [call_agent_and_emit_telemetry(t["name"], t["tool"], t["args"], batch_id) for t in targets]
     await asyncio.gather(*tasks)
 
 async def main():

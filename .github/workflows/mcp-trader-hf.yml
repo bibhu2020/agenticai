@@ -39,6 +39,7 @@ jobs:
 
     - name: Create deployment directory
       run: |
+        mkdir -p deploy_temp/src
         # Copy all MCP servers (hub, weather, github, etc.)
         cp -r src/mcp-* deploy_temp/src/
         # Copy core utilities (telemetry)

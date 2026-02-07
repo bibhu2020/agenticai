@@ -10,7 +10,8 @@ from chromadb.config import Settings
 from chromadb.utils import embedding_functions
 from mcp.server.fastmcp import FastMCP
 from typing import List, Dict, Any, Optional
-from core.mcp_telemetry import log_usage
+from core.mcp_telemetry import log_usage, log_trace, log_metric
+import time
 
 # Initialize FastMCP Server
 mcp = FastMCP("Secure RAG", host="0.0.0.0")
@@ -69,24 +70,35 @@ def query_knowledge_base(tenant_id: str, query: str, k: int = 3) -> List[Dict[st
     """
     Query the knowledge base. Results are strictly filtered by tenant_id.
     """
+    start_time = time.time()
+    trace_id = str(uuid.uuid4())
+    span_id = str(uuid.uuid4())
     log_usage("mcp-rag-secure", "query_knowledge_base")
-    results = collection.query(
-        query_texts=[query],
-        n_results=k,
-        where={"tenant_id": tenant_id} # Critical security filter
-    )
     
-    formatted_results = []
-    if results["documents"]:
-        for i, doc in enumerate(results["documents"][0]):
-            meta = results["metadatas"][0][i]
-            formatted_results.append({
-                "content": doc,
-                "metadata": meta,
-                "score": results["distances"][0][i] if results["distances"] else None
-            })
-            
-    return formatted_results
+    try:
+        results = collection.query(
+            query_texts=[query],
+            n_results=k,
+            where={"tenant_id": tenant_id} # Critical security filter
+        )
+        
+        formatted_results = []
+        if results["documents"]:
+            for i, doc in enumerate(results["documents"][0]):
+                meta = results["metadatas"][0][i]
+                formatted_results.append({
+                    "content": doc,
+                    "metadata": meta,
+                    "score": results["distances"][0][i] if results["distances"] else None
+                })
+        
+        duration = (time.time() - start_time) * 1000
+        log_trace("mcp-rag-secure", trace_id, span_id, "query_knowledge_base", duration, "ok")
+        return formatted_results
+    except Exception as e:
+        duration = (time.time() - start_time) * 1000
+        log_trace("mcp-rag-secure", trace_id, span_id, "query_knowledge_base", duration, "error")
+        raise e
 
 @mcp.tool()
 def delete_tenant_data(tenant_id: str) -> str:

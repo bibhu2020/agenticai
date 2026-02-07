@@ -13,7 +13,9 @@ if src_dir not in sys.path:
 
 from mcp.server.fastmcp import FastMCP
 from typing import List, Dict, Any
-from core.mcp_telemetry import log_usage
+from core.mcp_telemetry import log_usage, log_trace, log_metric
+import uuid
+import time
 
 # Local imports (assuming src/mcp-trader is a package or run from src)
 try:
@@ -45,8 +47,25 @@ mcp = FastMCP("MCP Trader", host="0.0.0.0")
 @mcp.tool()
 def get_stock_price(symbol: str) -> float:
     """Get the current price for a stock symbol."""
+    start_time = time.time()
+    trace_id = str(uuid.uuid4())
+    span_id = str(uuid.uuid4())
+    
     log_usage("mcp-trader", "get_stock_price")
-    return get_current_price(symbol)
+    
+    try:
+        price = get_current_price(symbol)
+        duration = (time.time() - start_time) * 1000
+        
+        # Metric
+        log_metric("mcp-trader", "stock_price", price, {"symbol": symbol})
+        log_trace("mcp-trader", trace_id, span_id, "get_stock_price", duration, "ok")
+        
+        return price
+    except Exception as e:
+        duration = (time.time() - start_time) * 1000
+        log_trace("mcp-trader", trace_id, span_id, "get_stock_price", duration, "error")
+        raise e
 
 @mcp.tool()
 def get_stock_fundamentals(symbol: str) -> Dict[str, Any]:

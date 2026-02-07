@@ -6,7 +6,10 @@ import sys
 import os
 from mcp.server.fastmcp import FastMCP
 from typing import List, Dict, Any, Optional
-from core.mcp_telemetry import log_usage
+from core.mcp_telemetry import log_usage, log_trace, log_metric
+import uuid
+import time
+import datetime
 
 # Add src to pythonpath
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -39,7 +42,11 @@ def list_repositories() -> List[Dict[str, Any]]:
     """
     List all repositories for the authenticated user/owner.
     """
+    start_time = time.time()
+    trace_id = str(uuid.uuid4())
+    span_id = str(uuid.uuid4())
     log_usage("mcp-github", "list_repositories")
+    
     try:
         g = get_client()
         # Get repos for the owner/authenticated user
@@ -56,8 +63,15 @@ def list_repositories() -> List[Dict[str, Any]]:
                 "updated_at": str(repo.updated_at),
                 "language": repo.language
             })
+        
+        duration = (time.time() - start_time) * 1000
+        log_trace("mcp-github", trace_id, span_id, "list_repositories", duration, "ok")
+        log_metric("mcp-github", "repos_fetched", len(results), {"status": "ok"})
         return results
+        
     except Exception as e:
+        duration = (time.time() - start_time) * 1000
+        log_trace("mcp-github", trace_id, span_id, "list_repositories", duration, "error")
         return [{"error": str(e)}]
 
 @mcp.tool()

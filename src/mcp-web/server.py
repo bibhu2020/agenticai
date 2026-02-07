@@ -13,7 +13,9 @@ if src_dir not in sys.path:
 
 from mcp.server.fastmcp import FastMCP
 from typing import List, Dict, Any, Union
-from core.mcp_telemetry import log_usage
+from core.mcp_telemetry import log_usage, log_trace, log_metric
+import uuid
+import time
 
 # Local imports
 try:
@@ -48,8 +50,21 @@ def search(query: str, max_results: int = 5) -> List[Dict[str, Any]]:
     Search the web for the given query using DuckDuckGo.
     Returns a list of results with title, url, snippet.
     """
+    start_time = time.time()
+    trace_id = str(uuid.uuid4())
+    span_id = str(uuid.uuid4())
     log_usage("mcp-web", "search")
-    return search_web(query, max_results)
+    
+    try:
+        results = search_web(query, max_results)
+        duration = (time.time() - start_time) * 1000
+        log_trace("mcp-web", trace_id, span_id, "search", duration, "ok")
+        log_metric("mcp-web", "search_results_count", len(results), {"query": query})
+        return results
+    except Exception as e:
+        duration = (time.time() - start_time) * 1000
+        log_trace("mcp-web", trace_id, span_id, "search", duration, "error")
+        raise e
 
 @mcp.tool()
 def extract(url: str) -> str:
