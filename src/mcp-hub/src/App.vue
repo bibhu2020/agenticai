@@ -44,7 +44,9 @@
           <div class="trend-header">
              <div class="v-header">USAGE TRENDS</div>
              <div class="chart-legend">
-                <div v-for="chart in getCharts" :key="chart.name" class="legend-item">
+                <div v-for="chart in getCharts" :key="chart.name" 
+                     :class="['legend-item', { muted: chart.hidden }]"
+                     @click="toggleDataset(chart.name)">
                    <span class="dot" :style="{ background: chart.color }"></span>
                    {{ chart.name }}
                 </div>
@@ -53,16 +55,36 @@
                 <button v-for="r in ranges" :key="r" :class="{ active: selectedRange === r }" @click="setRange(r)">{{ r.toUpperCase() }}</button>
              </div>
           </div>
-          <!-- ... (SVG remains same) ... -->
+          
           <div class="trend-container">
             <div class="y-axis">
                <span v-for="tick in yTicks" :key="tick">{{ tick }}</span>
             </div>
             <div class="trend-chart">
                <svg viewBox="0 0 1000 120" class="sparkline" @mousemove="handleHover" @mouseleave="hoverInfo = null">
-                  <line v-for="tick in [0, 33, 66, 100]" :key="tick" x1="0" :y1="110 - tick" x2="1000" :y2="110 - tick" stroke="var(--border)" stroke-width="1" stroke-dasharray="4,4" />
-                  <path v-for="chart in getCharts" :key="chart.name" :d="chart.path" fill="none" :stroke="chart.color" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="trend-path" />
-                  <line v-if="hoverInfo" :x1="hoverInfo.x" y1="0" :x2="hoverInfo.x" y2="120" stroke="var(--accent)" stroke-width="1" stroke-dasharray="2,2" />
+                  <!-- Grid -->
+                  <line v-for="tick in [0, 33, 66, 100]" :key="tick" x1="0" :y1="110 - tick" x2="1000" :y2="110 - tick" stroke="var(--border)" stroke-width="0.5" stroke-dasharray="4,4" />
+                  
+                  <!-- Area Fills -->
+                  <path v-for="chart in getCharts" :key="'area-'+chart.name" 
+                        v-if="!chart.hidden"
+                        :d="chart.areaPath" 
+                        :fill="chart.color" 
+                        style="opacity: 0.1; pointer-events: none;" />
+
+                  <!-- Paths -->
+                  <path v-for="chart in getCharts" :key="chart.name" 
+                        v-if="!chart.hidden"
+                        :d="chart.path" 
+                        fill="none" 
+                        :stroke="chart.color" 
+                        stroke-width="2.5" 
+                        stroke-linecap="round" 
+                        stroke-linejoin="round" 
+                        class="trend-path" />
+
+                  <!-- Hover Vertical -->
+                  <line v-if="hoverInfo" :x1="hoverInfo.x" y1="0" :x2="hoverInfo.x" y2="115" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="2,2" />
                </svg>
 
                <div v-if="hoverInfo" class="chart-tooltip" :style="{ left: (hoverInfo.x / 10) + '%' }">
@@ -167,6 +189,7 @@ import { onMounted, ref, computed } from 'vue'
 const servers = ref([])
 const system = ref({ uptime: '99.9%', throughput: '0/hr', latency: '0ms' })
 const usageData = ref({ labels: [], datasets: [] })
+const hiddenDatasets = ref(new Set())
 const selectedServer = ref(null)
 const currentLogs = ref('Initializing terminal...')
 const selectedRange = ref('1h')
@@ -175,6 +198,14 @@ const hoverInfo = ref(null)
 let logTimer = null
 
 const colors = ['#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6', '#ec4899', '#06b6d4', '#4ade80']
+
+const toggleDataset = (name) => {
+  if (hiddenDatasets.value.has(name)) {
+    hiddenDatasets.value.delete(name)
+  } else {
+    hiddenDatasets.value.add(name)
+  }
+}
 
 const viewServer = async (id) => {
   try {
@@ -269,12 +300,28 @@ const getCharts = computed(() => {
       label: labels[i]
     }))
     
-    const d = points.map((p, i) => `${i === 0 ? 'M' : 'L'} ${p.x} ${p.y}`).join(' ')
+    // Smoothing (Bezier curves)
+    let d = ""
+    if (points.length > 0) {
+      d = `M ${points[0].x} ${points[0].y}`
+      for (let i = 0; i < points.length - 1; i++) {
+        const p0 = points[i]
+        const p1 = points[i+1]
+        const cp1x = p0.x + (p1.x - p0.x) / 3
+        const cp2x = p0.x + 2 * (p1.x - p0.x) / 3
+        d += ` C ${cp1x} ${p0.y} ${cp2x} ${p1.y} ${p1.x} ${p1.y}`
+      }
+    }
+
+    const areaPath = d + ` L ${points[points.length-1].x} 110 L ${points[0].x} 110 Z`
+
     return {
       name: ds.name,
       color: colors[idx % colors.length],
       path: d,
-      points
+      areaPath,
+      points,
+      hidden: hiddenDatasets.value.has(ds.name)
     }
   })
 })
@@ -363,5 +410,36 @@ onMounted(() => {
   width: 28px;
   margin-right: 12px;
   color: var(--accent);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.legend-item:hover {
+  transform: translateY(-1px);
+}
+
+.legend-item.muted {
+  opacity: 0.3;
+}
+
+.legend-item .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 5px currentColor;
+}
+
+.trend-path {
+  transition: opacity 0.3s;
+}
+
+.sparkline {
+  overflow: visible;
 }
 </style>

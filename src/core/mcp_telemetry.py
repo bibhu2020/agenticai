@@ -363,12 +363,12 @@ def get_system_metrics():
     metrics = get_metrics()
     total_hourly = sum(s["hourly"] for s in metrics.values())
     
-    import random
-    uptime = "99.98%" if random.random() > 0.1 else "99.99%"
-    
-    base_latency = 42
-    load_factor = (total_hourly / 1000) * 15
-    latency = f"{int(base_latency + load_factor + random.randint(0, 5))}ms"
+    uptime = "99.9%"
+    latency = "42ms"
+    if total_hourly > 0:
+        base_latency = 42
+        load_factor = (total_hourly / 1000) * 15
+        latency = f"{int(base_latency + load_factor)}ms"
     
     if total_hourly >= 1000:
         throughput = f"{total_hourly/1000:.1f}k/hr"
