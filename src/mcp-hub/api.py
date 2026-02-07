@@ -1,3 +1,4 @@
+# FORCE REDEPLOY: Telemetry Sync v2
 import os
 import sys
 import json

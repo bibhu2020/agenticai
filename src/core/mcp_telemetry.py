@@ -1,4 +1,5 @@
 
+# FORCE REDEPLOY: Telemetry Sync v2
 import os
 import json
 import sqlite3
