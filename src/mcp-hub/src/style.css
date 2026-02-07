@@ -284,6 +284,15 @@ body {
   white-space: nowrap;
 }
 
+.legend-item .dot {
+  display: inline-block;
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  box-shadow: 0 0 3px currentColor;
+}
+
 .legend-item:hover {
   transform: translateY(-1px);
 }
