@@ -177,7 +177,7 @@ async def get_server_detail(server_id: str):
 
         # Apply strict capitalization
         name = server_id.replace("-", " ").title()
-        for word.upper() in ["MCP", "SRE", "RAG", "SEO", "mcp", "sre", "rag", "seo"]:
+        for word in ["Mcp", "Sre", "Rag", "Seo", "mcp", "sre", "rag", "seo"]:
             name = name.replace(word, word.upper())
             description = description.replace(word, word.upper())
             tools = [t.replace(word, word.upper()) for t in tools]
