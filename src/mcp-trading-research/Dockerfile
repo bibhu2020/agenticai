@@ -19,4 +19,4 @@ ENV PYTHONPATH=/app/src
 
 EXPOSE 7860
 
-CMD ["mcp", "run", "src/mcp-trading-research/server.py", "--transport", "sse"]
+CMD ["python", "src/mcp-trading-research/server.py", "--transport", "sse", "--port", "7860", "--host", "0.0.0.0"]
