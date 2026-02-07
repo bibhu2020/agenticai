@@ -40,8 +40,10 @@ jobs:
     - name: Create deployment directory
       run: |
         mkdir -p deploy_temp/src
-        cp -r src/mcp-trading-research deploy_temp/src/
-        cp src/mcp_telemetry.py deploy_temp/src/
+        # Copy all MCP servers (hub, weather, github, etc.)
+        cp -r src/mcp-* deploy_temp/src/
+        # Copy core utilities (telemetry)
+        cp -r src/core deploy_temp/src/
         cp pyproject.toml deploy_temp/
         cp src/mcp-trading-research/Dockerfile deploy_temp/
         cp src/mcp-trading-research/README.md deploy_temp/ || true
