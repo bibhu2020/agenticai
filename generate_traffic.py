@@ -10,8 +10,7 @@ from typing import Dict, Any
 
 # Configuration
 BASE_URL = "https://mishrabp-{}.hf.space/sse"
-CONCURRENCY = 5  # Number of concurrent batches
-ITERATIONS = 20  # Total batches (Total reqs = CONCURRENCY * ITERATIONS * 5 agents)
+ITERATIONS = random.randint(1, 5) # Total cycles of calling all agents sequentially
 
 STOCKS = ["AAPL", "MSFT", "GOOGL", "AMZN", "TSLA", "NVDA", "META", "NFLX"]
 CITIES = ["San Francisco", "New York", "London", "Tokyo", "Paris", "Berlin", "Mumbai"]
@@ -101,15 +100,27 @@ async def emit_fake_telemetry(server: str, tool: str, duration: float):
         }
         requests.post(f"{hub_api}/metric", json=metric_payload, timeout=1)
     except: pass
+    
+    # Send Log (Manually, in case Agent is silent)
+    try:
+        log_payload = {
+            "server": server,
+            "tool": tool,
+            "timestamp": datetime.now().isoformat()
+        }
+        requests.post(f"{hub_api}/log", json=log_payload, timeout=1)
+    except: pass
 
 async def run_batch(batch_id):
     targets = get_targets()
-    # Updated to use new function
-    tasks = [call_agent_and_emit_telemetry(t["name"], t["tool"], t["args"], batch_id) for t in targets]
-    await asyncio.gather(*tasks)
+    for i, t in enumerate(targets):
+        print(f"[{batch_id}] Processing target {i+1}/{len(targets)}: {t['name']}")
+        await call_agent_and_emit_telemetry(t["name"], t["tool"], t["args"], batch_id)
+        # Subtle delay between individual calls to prevent flooding
+        await asyncio.sleep(0.2)
 
 async def main():
-    print(f"� Starting Heavy Load Generator...")
+    print(f" Starting Heavy Load Generator...")
     print(f"Plan: {ITERATIONS} iterations of {len(get_targets())} requests each.")
     
     for i in range(ITERATIONS):
