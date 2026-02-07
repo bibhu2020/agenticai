@@ -20,9 +20,9 @@
          <span v-for="tick in yTicks" :key="tick">{{ tick }}</span>
       </div>
       <div class="trend-chart">
-         <svg viewBox="0 0 1000 120" class="sparkline" preserveAspectRatio="none" @mousemove="handleHover" @mouseleave="hoverInfo = null">
+         <svg viewBox="0 0 1000 200" class="sparkline" preserveAspectRatio="none" @mousemove="handleHover" @mouseleave="hoverInfo = null">
             <!-- Grid -->
-            <line v-for="tick in [0, 33, 66, 100]" :key="tick" x1="0" :y1="110 - tick" x2="1000" :y2="110 - tick" stroke="var(--border)" stroke-width="0.5" stroke-dasharray="4,4" />
+            <line v-for="tick in [0, 50, 100, 150]" :key="tick" x1="0" :y1="190 - tick" x2="1000" :y2="190 - tick" stroke="var(--border)" stroke-width="0.5" stroke-dasharray="4,4" />
             
             <!-- Area Fills -->
             <template v-for="chart in getCharts" :key="'area-'+chart.name">
@@ -47,7 +47,7 @@
             </template>
 
             <!-- Hover Vertical -->
-            <line v-if="hoverInfo" :x1="hoverInfo.x" y1="0" :x2="hoverInfo.x" y2="115" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="2,2" vector-effect="non-scaling-stroke" />
+            <line v-if="hoverInfo" :x1="hoverInfo.x" y1="0" :x2="hoverInfo.x" y2="200" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="2,2" vector-effect="non-scaling-stroke" />
          </svg>
 
          <div v-if="hoverInfo" class="chart-tooltip" :style="{ left: (hoverInfo.x / 10) + '%' }">
@@ -143,7 +143,7 @@ const getCharts = computed(() => {
   return datasets.map((ds, idx) => {
     const points = ds.data.map((v, i) => ({
       x: i * step,
-      y: 110 - (v / max) * 100,
+      y: 190 - (v / max) * 180,
       val: v,
       label: labels[i]
     }))
@@ -162,7 +162,7 @@ const getCharts = computed(() => {
           d += ` C ${cp1x} ${p0.y} ${cp2x} ${p1.y} ${p1.x} ${p1.y}`
         }
       }
-      areaPath = d + ` L ${points[points.length-1].x} 110 L ${points[0].x} 110 Z`
+      areaPath = d + ` L ${points[points.length-1].x} 190 L ${points[0].x} 190 Z`
     }
 
     return {
