@@ -14,7 +14,7 @@ from datetime import datetime, timedelta
 sys.path.append(str(Path(__file__).parent.parent))
 
 # Core Telemetry Imports for Metrics/History
-from core.mcp_telemetry import get_metrics, get_usage_history, get_system_metrics, get_recent_logs
+from core.mcp_telemetry import get_metrics, get_usage_history, get_system_metrics, get_recent_logs, get_recent_traces, log_usage
 
 
 # Telemetry Import
@@ -143,38 +143,46 @@ async def get_hf_status(space_id: str) -> str:
 @app.get("/api/servers/{server_id}")
 async def get_server_detail(server_id: str):
     """Returns detailed documentation and tools for a specific server."""
-    # Log usage for trends
-    asyncio.create_task(asyncio.to_thread(log_usage, "MCP Hub", f"view_{server_id}"))
+    try:
+        print(f"DEBUG: get_server_detail called for {server_id}")
+        # Log usage for trends
+        try:
+            asyncio.create_task(asyncio.to_thread(log_usage, "MCP Hub", f"view_{server_id}"))
+        except Exception as e:
+            print(f"DEBUG: Failed to log usage: {e}")
 
-    server_path = PROJECT_ROOT / "src" / server_id
-    readme_path = server_path / "README.md"
-    
-    description = "No documentation found."
-    tools = []
-    
-    if readme_path.exists():
-        content = readme_path.read_text()
-        # Parse description (text between # and ## Tools)
-        desc_match = content.split("## Tools")[0].split("#")
-        if len(desc_match) > 1:
-            description = desc_match[-1].split("---")[-1].strip()
-            
-        # Parse tools
-        if "## Tools" in content:
-            tools_section = content.split("## Tools")[1].split("##")[0]
-            for line in tools_section.strip().split("\n"):
-                if line.strip().startswith("-"):
-                    tools.append(line.strip("- ").strip())
+        server_path = PROJECT_ROOT / "src" / server_id
+        readme_path = server_path / "README.md"
+        print(f"DEBUG: Looking for README at {readme_path}")
+        
+        description = "No documentation found."
+        tools = []
+        
+        if readme_path.exists():
+            content = readme_path.read_text()
+            # Parse description (text between # and ## Tools)
+            desc_match = content.split("## Tools")[0].split("#")
+            if len(desc_match) > 1:
+                description = desc_match[-1].split("---")[-1].strip()
+                
+            # Parse tools
+            if "## Tools" in content:
+                tools_section = content.split("## Tools")[1].split("##")[0]
+                for line in tools_section.strip().split("\n"):
+                    if line.strip().startswith("-"):
+                        tools.append(line.strip("- ").strip())
+        else:
+            print(f"DEBUG: README not found at {readme_path}")
 
-    # Apply strict capitalization
-    name = server_id.replace("-", " ").title()
-    for word in ["Mcp", "Sre", "Rag", "Seo", "mcp", "sre", "rag", "seo"]:
-        name = name.replace(word, word.upper())
-        description = description.replace(word, word.upper())
-        tools = [t.replace(word, word.upper()) for t in tools]
+        # Apply strict capitalization
+        name = server_id.replace("-", " ").title()
+        for word in ["Mcp", "Sre", "Rag", "Seo", "mcp", "sre", "rag", "seo"]:
+            name = name.replace(word, word.upper())
+            description = description.replace(word, word.upper())
+            tools = [t.replace(word, word.upper()) for t in tools]
 
-    # Generate sample code
-    sample_code = f"""from openai_agents import Agent, Runner
+        # Generate sample code
+        sample_code = f"""from openai_agents import Agent, Runner
 from mcp_bridge import MCPBridge
 
 # 1. Initialize Bridge
@@ -192,14 +200,19 @@ result = Runner.run(agent, "How can I use your tools?")
 print(result.final_text)
 """
 
-    return {
-        "id": server_id,
-        "name": name,
-        "description": description,
-        "tools": tools,
-        "sample_code": sample_code,
-        "logs_url": f"https://huggingface.co/spaces/{HF_USERNAME}/{server_id}/logs"
-    }
+        return {
+            "id": server_id,
+            "name": name,
+            "description": description,
+            "tools": tools,
+            "sample_code": sample_code,
+            "logs_url": f"https://huggingface.co/spaces/{HF_USERNAME}/{server_id}/logs"
+        }
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        print(f"ERROR: get_server_detail failed: {e}")
+        return {"error": str(e), "id": server_id, "name": "Error Loading Server", "description": str(e), "tools": [], "sample_code": ""}
 
 @app.on_event("startup")
 async def startup_event():
@@ -286,17 +299,51 @@ async def get_server_logs(server_id: str):
             # server_id usually matches the DB server column (e.g. mcp-weather)
             # but sometimes we might need mapping if ids differ. Assuming 1:1 for now.
             start_marker = server_id.replace("mcp-", "").upper()
-            real_logs = get_recent_logs(server_id, limit=20)
             
+            # Fetch Logs
+            real_logs = get_recent_logs(server_id, limit=10)
+            
+            # Fetch Traces
+            real_traces = get_recent_traces(server_id, limit=10)
+            
+            # Combine and Sort (simple merge for now)
+            events = []
             if real_logs:
-                log_lines.append(f"[{ts}] --- RECENT ACTIVITY STREAM ---")
                 for l in real_logs:
-                    # Parse ISO timestamp to look like log timestamp
+                    events.append({
+                        "ts": l["timestamp"], 
+                        "line": f"{start_marker}_TOOL: Executed '{l['tool']}'",
+                        "type": "log"
+                    })
+            
+            if real_traces:
+                for t in real_traces:
+                    status_icon = "✅" if t['status'] == 'ok' else "❌"
+                    events.append({
+                        "ts": t["start_time"],
+                        "line": f"TRACE_SPAN: {t['name']} ({t['duration_ms']}ms) {status_icon} [{t['status'].upper()}]",
+                        "type": "trace"
+                    })
+            
+            # Sort events by timestamp descending
+            # Note: timestamps might be strings or objects depending on DB backend
+            def parse_ts(x):
+                t = x["ts"]
+                if isinstance(t, str):
                     try:
-                        log_ts = datetime.fromisoformat(l["timestamp"]).strftime("%Y-%m-%d %H:%M:%S")
+                        return datetime.fromisoformat(t)
                     except:
-                        log_ts = ts
-                    log_lines.append(f"[{log_ts}] {start_marker}_TOOL: Executed '{l['tool']}'")
+                        return datetime.now()
+                return t
+                
+            events.sort(key=parse_ts, reverse=True)
+            
+            if events:
+                log_lines.append(f"[{ts}] --- RECENT TELEMETRY STREAM ---")
+                for e in events[:15]: # Show top 15 mixed events
+                    # Format TS
+                    parsed_ts = parse_ts(e).strftime("%H:%M:%S")
+                    log_lines.append(f"[{parsed_ts}] {e['line']}")
             else:
                  log_lines.append(f"[{ts}] STREAM: No recent activity recorded.")
                  
