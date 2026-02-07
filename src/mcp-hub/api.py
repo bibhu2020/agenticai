@@ -65,7 +65,7 @@ app = FastAPI()
 async def ingest_log(event: LogEvent):
     """Ingests usage logs."""
     try:
-        ts = event.timestamp or datetime.now().isoformat()
+        ts = event.timestamp or datetime.utcnow().isoformat()
         _write_db("logs", {
             "timestamp": ts,
             "server": event.server,
@@ -90,7 +90,7 @@ async def ingest_trace(event: TraceEvent):
 async def ingest_metric(event: MetricEvent):
     """Ingests quantitative metrics."""
     try:
-        ts = event.timestamp or datetime.now().isoformat()
+        ts = event.timestamp or datetime.utcnow().isoformat()
         data = event.dict()
         data["timestamp"] = ts
         _write_db("metrics", data)
