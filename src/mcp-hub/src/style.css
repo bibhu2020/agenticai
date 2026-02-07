@@ -172,12 +172,26 @@ body {
 }
 
 .trend-container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 35px 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 0.5rem;
+}
+
+.chart-legend.left-legend {
+  grid-column: 1 / -1;
+  width: 100%;
 }
 
 .y-axis {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: right;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-dim);
+  padding: 10px 5px 25px 0;
 }
 
 /* Hide Y-axis on narrow screens to save space */
@@ -259,6 +273,27 @@ body {
   border-bottom: 1px solid var(--border);
   padding-bottom: 15px;
   width: 100%;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+  white-space: nowrap;
+}
+
+.legend-item:hover {
+  transform: translateY(-1px);
+}
+
+.legend-item.muted {
+  opacity: 0.3;
+}
+
+.trend-path {
+  transition: opacity 0.3s;
 }
 
 /* Server List - Mobile First Cards */
@@ -419,6 +454,7 @@ body {
   }
 
   .trend-container {
+    display: flex;
     flex-direction: row;
     height: 300px;
     /* Restored height for desktop */
