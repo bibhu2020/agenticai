@@ -66,22 +66,24 @@
                   <line v-for="tick in [0, 33, 66, 100]" :key="tick" x1="0" :y1="110 - tick" x2="1000" :y2="110 - tick" stroke="var(--border)" stroke-width="0.5" stroke-dasharray="4,4" />
                   
                   <!-- Area Fills -->
-                  <path v-for="chart in getCharts" :key="'area-'+chart.name" 
-                        v-if="!chart.hidden"
-                        :d="chart.areaPath" 
-                        :fill="chart.color" 
-                        style="opacity: 0.1; pointer-events: none;" />
+                  <template v-for="chart in getCharts" :key="'area-'+chart.name">
+                    <path v-if="!chart.hidden"
+                          :d="chart.areaPath" 
+                          :fill="chart.color" 
+                          style="opacity: 0.08; pointer-events: none;" />
+                  </template>
 
                   <!-- Paths -->
-                  <path v-for="chart in getCharts" :key="chart.name" 
-                        v-if="!chart.hidden"
-                        :d="chart.path" 
-                        fill="none" 
-                        :stroke="chart.color" 
-                        stroke-width="2.5" 
-                        stroke-linecap="round" 
-                        stroke-linejoin="round" 
-                        class="trend-path" />
+                  <template v-for="chart in getCharts" :key="'path-'+chart.name">
+                    <path v-if="!chart.hidden"
+                          :d="chart.path" 
+                          fill="none" 
+                          :stroke="chart.color" 
+                          stroke-width="2.5" 
+                          stroke-linecap="round" 
+                          stroke-linejoin="round" 
+                          class="trend-path" />
+                  </template>
 
                   <!-- Hover Vertical -->
                   <line v-if="hoverInfo" :x1="hoverInfo.x" y1="0" :x2="hoverInfo.x" y2="115" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="2,2" />
@@ -256,7 +258,9 @@ const maxUsage = computed(() => {
 
 const yTicks = computed(() => {
   const max = maxUsage.value
-  return [max, Math.floor(max * 0.66), Math.floor(max * 0.33), 0]
+  // Round to nearest nice number
+  const roundMax = Math.ceil(max / 5) * 5 || 5
+  return [roundMax, Math.floor(roundMax * 0.66), Math.floor(roundMax * 0.33), 0]
 })
 
 const visibleXLabels = computed(() => {
@@ -302,18 +306,21 @@ const getCharts = computed(() => {
     
     // Smoothing (Bezier curves)
     let d = ""
+    let areaPath = ""
+    
     if (points.length > 0) {
       d = `M ${points[0].x} ${points[0].y}`
-      for (let i = 0; i < points.length - 1; i++) {
-        const p0 = points[i]
-        const p1 = points[i+1]
-        const cp1x = p0.x + (p1.x - p0.x) / 3
-        const cp2x = p0.x + 2 * (p1.x - p0.x) / 3
-        d += ` C ${cp1x} ${p0.y} ${cp2x} ${p1.y} ${p1.x} ${p1.y}`
+      if (points.length > 1) {
+        for (let i = 0; i < points.length - 1; i++) {
+          const p0 = points[i]
+          const p1 = points[i+1]
+          const cp1x = p0.x + (p1.x - p0.x) / 3
+          const cp2x = p0.x + 2 * (p1.x - p0.x) / 3
+          d += ` C ${cp1x} ${p0.y} ${cp2x} ${p1.y} ${p1.x} ${p1.y}`
+        }
       }
+      areaPath = d + ` L ${points[points.length-1].x} 110 L ${points[0].x} 110 Z`
     }
-
-    const areaPath = d + ` L ${points[points.length-1].x} 110 L ${points[0].x} 110 Z`
 
     return {
       name: ds.name,
