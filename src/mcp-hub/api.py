@@ -144,19 +144,28 @@ async def get_server_logs(server_id: str):
         # Format runtime info as logs
         ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         
+        # Safely get hardware info
+        hardware_info = "UNKNOWN"
+        if hasattr(runtime, 'hardware') and runtime.hardware and hasattr(runtime.hardware, 'current'):
+            hardware_info = runtime.hardware.current
+
         log_lines = [
-            f"[{ts}] SYSTEM_BOOT: Connected to Sentinel Overlay",
+            f"[{ts}] SYSTEM_BOOT: Connected to MCP Stream",
             f"[{ts}] TARGET_REPO: {repo_id}",
             f"[{ts}] RUNTIME_STAGE: {runtime.stage.upper()}",
-            f"[{ts}] HARDWARE_SKU: {runtime.hardware.current if hasattr(runtime, 'hardware') else 'UNKNOWN'}",
+            f"[{ts}] HARDWARE_SKU: {hardware_info}",
         ]
         
         if hasattr(runtime, 'domains') and runtime.domains:
             for d in runtime.domains:
                 log_lines.append(f"[{ts}] DOMAIN_BINDING: {d.domain} [{d.stage}]")
                 
-        if hasattr(runtime, 'replicas'):
-             log_lines.append(f"[{ts}] REPLICA_COUNT: {runtime.replicas.current if hasattr(runtime.replicas, 'current') else 1}")
+        # Safely get replica info
+        replica_count = 1
+        if hasattr(runtime, 'replicas') and runtime.replicas and hasattr(runtime.replicas, 'current'):
+            replica_count = runtime.replicas.current
+             
+        log_lines.append(f"[{ts}] REPLICA_COUNT: {replica_count}")
 
         if runtime.stage == "RUNNING":
             log_lines.append(f"[{ts}] STATUS_CHECK: HEALTHY")
