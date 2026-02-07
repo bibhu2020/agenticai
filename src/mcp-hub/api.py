@@ -13,10 +13,10 @@ from datetime import datetime, timedelta
 # Add parent dir to path for imports
 sys.path.append(str(Path(__file__).parent.parent))
 try:
-    from mcp_telemetry import get_metrics, get_usage_history, get_system_metrics
+    from mcp_telemetry import get_metrics, get_usage_history, get_system_metrics, log_usage
 except ImportError:
     sys.path.append(str(Path(__file__).parent.parent.parent))
-    from src.mcp_telemetry import get_metrics, get_usage_history, get_system_metrics
+    from src.mcp_telemetry import get_metrics, get_usage_history, get_system_metrics, log_usage
 
 # Optional: HF Hub for status checks
 try:
@@ -72,6 +72,9 @@ async def get_hf_status(space_id: str) -> str:
 @app.get("/api/servers/{server_id}")
 async def get_server_detail(server_id: str):
     """Returns detailed documentation and tools for a specific server."""
+    # Log usage for trends
+    asyncio.create_task(asyncio.to_thread(log_usage, "MCP Hub", f"view_{server_id}"))
+
     server_path = PROJECT_ROOT / "src" / server_id
     readme_path = server_path / "README.md"
     
@@ -127,18 +130,30 @@ print(result.final_text)
         "logs_url": f"https://huggingface.co/spaces/{HF_USERNAME}/{server_id}/logs"
     }
 
+@app.on_event("startup")
+async def startup_event():
+    token = os.environ.get("HF_TOKEN")
+    if token:
+        print(f"HF_TOKEN found: {token[:4]}...{token[-4:]}")
+    else:
+        print("WARNING: HF_TOKEN not set! Live status checks will fail.")
+
 @app.get("/api/servers/{server_id}/logs")
 async def get_server_logs(server_id: str):
     """Fetches real-time runtime status and formats it as system logs."""
     if not hf_api:
-        return {"logs": "[ERROR] HF API not initialized."}
+        return {"logs": "[ERROR] HF API not initialized. Install huggingface_hub."}
+    
     try:
         repo_id = f"{HF_USERNAME}/{server_id}" if "/" not in server_id else server_id
+        
+        # Debug print
+        print(f"Fetching logs for {repo_id}...")
         
         loop = asyncio.get_event_loop()
         runtime = await asyncio.wait_for(
             loop.run_in_executor(None, lambda: hf_api.get_space_runtime(repo_id)),
-            timeout=5.0
+            timeout=10.0
         )
         
         # Format runtime info as logs
