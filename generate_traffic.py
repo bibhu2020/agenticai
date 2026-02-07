@@ -112,24 +112,27 @@ async def emit_fake_telemetry(server: str, tool: str, duration: float):
     except: pass
 
 async def run_batch(batch_id):
-    targets = get_targets()
+    all_targets = get_targets()
+    # Randomly pick 1 or 2 servers
+    count = min(len(all_targets), random.randint(1, 2))
+    targets = random.sample(all_targets, count)
+    
     for i, t in enumerate(targets):
         print(f"[{batch_id}] Processing target {i+1}/{len(targets)}: {t['name']}")
         await call_agent_and_emit_telemetry(t["name"], t["tool"], t["args"], batch_id)
         # Subtle delay between individual calls to prevent flooding
-        await asyncio.sleep(0.2)
+        await asyncio.sleep(0.5)
 
 async def main():
-    print(f" Starting Heavy Load Generator...")
-    print(f"Plan: {ITERATIONS} iterations of {len(get_targets())} requests each.")
+    print(f" Starting Randomized Traffic Simulator...")
+    # Set to 1 iteration per call as requested
+    plan_iterations = 1 
+    print(f"Plan: {plan_iterations} iteration(s) (picking 1-2 random servers).")
     
-    for i in range(ITERATIONS):
-        print(f"\n--- Batch {i+1}/{ITERATIONS} ---")
+    for i in range(plan_iterations):
         await run_batch(i+1)
-        # Random sleep to distribution load
-        await asyncio.sleep(random.uniform(0.5, 2.0))
     
-    print("\n🎉 Heavy load generation complete!")
+    print("\n🎉 Traffic simulation complete!")
 
 if __name__ == "__main__":
     try:
