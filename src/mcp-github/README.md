@@ -3,7 +3,7 @@
 title: MCP GitHub
 emoji: 🐙
 colorFrom: gray
-colorTo: black
+colorTo: yellow
 sdk: docker
 pinned: false
 ---
