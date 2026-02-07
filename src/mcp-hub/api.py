@@ -166,11 +166,32 @@ print(result.final_text)
 
 @app.on_event("startup")
 async def startup_event():
+    # 1. Environment Check
     token = os.environ.get("HF_TOKEN")
+    is_hub = os.environ.get("MCP_IS_HUB", "false")
+    pg_db = os.environ.get("MCP_TRACES_DB")
+    
+    print("--- MCP HUB BOOT SEQUENCE ---")
+    print(f"ENV MCP_IS_HUB: {is_hub}")
+    
     if token:
-        print(f"HF_TOKEN found: {token[:4]}...{token[-4:]}")
+        print(f"ENV HF_TOKEN: Configured ({len(token)} chars)")
     else:
         print("WARNING: HF_TOKEN not set! Live status checks will fail.")
+        
+    # 2. Database Check
+    if pg_db:
+        print(f"ENV MCP_TRACES_DB: Configured (Scheme: {pg_db.split(':')[0]})")
+        try:
+            import psycopg2
+            print("DEPENDENCY: psycopg2-binary installed.")
+            # We don't connect here to avoid blocking start, but telemetry module will try.
+        except ImportError:
+            print("CRITICAL ERROR: psycopg2-binary NOT installed. Postgres will fail!")
+    else:
+        print("ENV MCP_TRACES_DB: Not set. Using SQLite fallback.")
+        
+    print("--- SEQUENCE COMPLETE ---")
 
 @app.get("/api/servers/{server_id}/logs")
 async def get_server_logs(server_id: str):
