@@ -9,7 +9,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 import uvicorn
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 # Add parent dir to path for imports
 sys.path.append(str(Path(__file__).parent.parent))
@@ -65,7 +65,7 @@ app = FastAPI()
 async def ingest_log(event: LogEvent):
     """Ingests usage logs."""
     try:
-        ts = event.timestamp or datetime.utcnow().isoformat()
+        ts = event.timestamp or datetime.now(timezone.utc).isoformat()
         _write_db("logs", {
             "timestamp": ts,
             "server": event.server,
@@ -90,7 +90,7 @@ async def ingest_trace(event: TraceEvent):
 async def ingest_metric(event: MetricEvent):
     """Ingests quantitative metrics."""
     try:
-        ts = event.timestamp or datetime.utcnow().isoformat()
+        ts = event.timestamp or datetime.now(timezone.utc).isoformat()
         data = event.dict()
         data["timestamp"] = ts
         _write_db("metrics", data)
