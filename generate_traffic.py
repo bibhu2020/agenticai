@@ -126,7 +126,7 @@ async def run_batch(batch_id):
 async def main():
     print(f" Starting Randomized Traffic Simulator...")
     # Set to 1 iteration per call as requested
-    plan_iterations = 1 
+    plan_iterations = ITERATIONS
     print(f"Plan: {plan_iterations} iteration(s) (picking 1-2 random servers).")
     
     for i in range(plan_iterations):
