@@ -117,7 +117,7 @@ dependencies = [
     "yt_dlp>=2025.11.12",
     "openai-whisper==20240930",
     "numba==0.59.0",
-    "llvmlite==0.42.0",
+    "llvmlite==0.46.0",
 
     # =======================
     # MACHINE LEARNING
