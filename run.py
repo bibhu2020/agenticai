@@ -16,6 +16,7 @@ import sys
 import os
 import subprocess
 import argparse
+import time
 from pathlib import Path
 from typing import Dict, Optional
 # from agents import Runner, SQLiteSession
@@ -259,18 +260,23 @@ def launch_app(app_name: str, port: Optional[int] = None):
     
     app_type = config.get("type", "streamlit")
     
+    python_exe = sys.executable
+    is_windows = sys.platform == "win32"
+    
+    # Prepare environment with project root in PYTHONPATH to fix imports
+    env = os.environ.copy()
+    env["PYTHONPATH"] = str(project_root) + os.pathsep + env.get("PYTHONPATH", "")
+    
     # Decoupled App Logic: Build frontend if needed
     if app_name == "market-analyst":
         frontend_dir = project_root / "src/market-analyst/frontend"
         dist_dir = frontend_dir / "dist"
         if not dist_dir.exists():
             print("\n🛠️ Frontend build missing. Building now...")
-            subprocess.run(["npm", "run", "build"], cwd=frontend_dir, shell=True)
+            subprocess.run(["npm", "run", "build"], cwd=frontend_dir, shell=is_windows)
             print("✅ Frontend built.\n")
     
-    python_exe = sys.executable
-    
-    # Build command based on app type
+    # App Type specific logic
     if app_type == "fastapi":
         # Extract module name from entry point (e.g. backend/main.py -> backend.main)
         module_path = app_file.replace(".py", "").replace("/", ".").replace("\\", ".")
@@ -318,15 +324,11 @@ def launch_app(app_name: str, port: Optional[int] = None):
     print("\n" + "=" * 70)
     print("\n🎯 Starting application...\n")
     
-    # Prepare environment with project root in PYTHONPATH to fix imports
-    env = os.environ.copy()
-    env["PYTHONPATH"] = str(project_root) + os.pathsep + env.get("PYTHONPATH", "")
     print(f"\n\nPYTHONPATH: {env['PYTHONPATH']}")
 
     try:
         # Change to app directory and run
         os.chdir(app_dir)
-        is_windows = sys.platform == "win32"
         
         # Special case for mcp-hub: launch backend API first
         if app_name == "mcp-hub":
