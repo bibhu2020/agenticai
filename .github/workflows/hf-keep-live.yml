@@ -31,6 +31,7 @@ jobs:
           "https://mishrabp-twitter-sentiment-analysis.hf.space"
           "https://mishrabp-ollama.hf.space"
           "https://mishrabp-mlstocks.hf.space"
+          "https://mishrabp-edureka.hf.space"
         )
 
         # Loop through URLs and send HEAD requests
