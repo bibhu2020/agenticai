@@ -9,6 +9,7 @@ __pycache__/
 *.tar*
 *.zip
 *.whl
+mcp_logs.db
 # client_secret.json
 # notebooks/architecture_v2/client_secret.json
 
@@ -21,6 +22,8 @@ db/chroma_db/
 db/healthcare_db/
 src/image-generator/
 node_modules/
+index_storage/
+sql_index_storage/
 # db/sessions/
 downloads/
 eggs/

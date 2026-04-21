@@ -51,24 +51,23 @@ Uses dynamic indexing to improve the retriever
 ### 5. Hybrid Search: 
 Inetrgrates semantic search with lexical search for more accurate context matching.
 
-# Type of Agentic RAG
+# Type of Agentic RAG (BASED ON FUNCTION)
 
 ## 1. Routing Agent: 
-Routes the query intelligently to the appropriate agent based on the query type.
+Employs a lightweight LLM to classify the user's intent and route the query to the most appropriate specialized agent or tool.
 
-## 2. Quaery Planning Agent: 
-Plans the query and breaks it down into smaller queries.
+## 2. Query Planning Agent: 
+Breaks down complex queries into a sequence of smaller, manageable sub-queries. It distributes them to other agents for execution. 
+It acts like a task manager. It collects response from other agents and synthesizes them to generate the final response.
 
 ## 3. Tools Use Agent: 
-Uses tools to retrieve relevant information from multiple knowledge bases.
+It enriches user queries by fetching additional contexts from external tools like APIs and databases, before passing the enhanced query to the LLM within the RAG framework.
 
 ## 4. ReAct Agent: 
-Uses ReAct (Reasoning + Action) framework to retrieve relevant information from multiple knowledge bases.
+ReAct (Reasoning + Action) agent combines reasoning, tool use and planning in an iterative loop to solve complex queries.
 
 ## 5. Self-Reflective Agent: 
 Uses self-reflection to improve the retrieved information.
 
 ## 6. Dynamic Planning and Execution Agent: 
-Plans the query and breaks it down into smaller queries.
-
-## 7. 
+It separates high-level planning from execution by using a planner to map out steps and an executor to carry them out, enabling efficient, scalable handling of complex queries in production environments. 
