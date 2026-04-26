@@ -105,14 +105,12 @@ APP_REGISTRY: Dict[str, Dict[str, str]] = {
         "path": "src/finadvisor",
         "entry": "app-lg.py",
         "description": "Financial Advisor - Multi-agent financial advisor tool using LangGraph"
-    }
-    ,
+    },
     "finadvisor-oai": {
         "path": "src/finadvisor",
         "entry": "app-oai.py",
         "description": "Financial Advisor - Multi-agent financial advisor tool using OpenAI"
-    }
-    ,
+    },
     "finadvisor-phi": {
         "path": "src/finadvisor",
         "entry": "app-phi.py",
@@ -183,6 +181,12 @@ APP_REGISTRY: Dict[str, Dict[str, str]] = {
         "entry": "tests",
         "type": "test",
         "description": "Run Project Tests - Executes pytest suite"
+    },
+    "salesdata": {
+        "path": "src/salesdata",
+        "entry": "app.py",
+        "type": "salesdata",
+        "description": "Sales Data Agent - Agentic RAG over sales CSV (FastAPI + Streamlit)"
     }
 }
 
@@ -335,7 +339,67 @@ def launch_app(app_name: str, port: Optional[int] = None):
             print("🚀 Starting MCP Hub Backend API on port 8001...")
             api_cmd = [python_exe, "api.py"]
             subprocess.Popen(api_cmd, env=env, shell=is_windows)
-            
+
+        # Special case for salesdata: launch FastAPI backend + Streamlit frontend
+        if app_name == "salesdata":
+            api_port = 8080
+            ui_port = port if port else 8501
+
+            # Aggressively kill any stale processes on both ports
+            import platform
+            if platform.system() != "Windows":
+                for p in [api_port, ui_port]:
+                    # lsof is more reliable than fuser for finding PIDs by port
+                    result = subprocess.run(
+                        ["lsof", "-ti", f":{p}"],
+                        capture_output=True, text=True
+                    )
+                    pids = result.stdout.strip().split()
+                    for pid in pids:
+                        subprocess.run(["kill", "-9", pid],
+                                       stderr=subprocess.DEVNULL, stdout=subprocess.DEVNULL)
+                time.sleep(1)  # let OS release ports
+                print(f"🧹 Cleaned up ports {api_port} and {ui_port}")
+
+            print(f"🚀 Starting Sales Agent API on port {api_port}...")
+            api_cmd = [
+                python_exe, "-m", "uvicorn", "api:app",
+                "--host", "0.0.0.0", "--port", str(api_port)
+            ]
+            subprocess.Popen(api_cmd, env=env, shell=is_windows, cwd=app_dir)
+
+            # Poll /health until agent is ready (instead of a fixed sleep)
+            import urllib.request, urllib.error, json as _json
+            health_url = f"http://localhost:{api_port}/health"
+            print(f"⏳ Waiting for API + agent to be ready", end="", flush=True)
+            timeout = 90  # seconds
+            ready = False
+            for _ in range(timeout):
+                time.sleep(1)
+                print(".", end="", flush=True)
+                try:
+                    with urllib.request.urlopen(health_url, timeout=2) as r:
+                        data = _json.loads(r.read())
+                        if data.get("agent_ready"):
+                            ready = True
+                            break
+                except Exception:
+                    pass
+            print()
+            if not ready:
+                print("⚠️  API did not become ready within 90s — launching UI anyway")
+
+            print(f"🌐 Starting Streamlit UI on port {ui_port}...")
+            ui_cmd = [
+                python_exe, "-m", "streamlit", "run", "app.py",
+                "--server.port", str(ui_port)
+            ]
+            subprocess.run(ui_cmd, env=env, shell=is_windows)
+            return
+
+
+
+
         subprocess.run(cmd, env=env, shell=is_windows)
     except KeyboardInterrupt:
         print("\n\n👋 Application stopped by user")
