@@ -33,6 +33,12 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
+    - name: SonarQube Scanning
+      uses: sonarsource/sonarqube-scan-action@v3
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+
     - uses: dorny/paths-filter@v2
       id: changes
       with:
