@@ -74,7 +74,7 @@ dependencies = [
     # =======================
     "psutil>=7.0.0",
     "python-dotenv>=1.2.2",
-    "requests>=2.32.3",
+    "requests>=2.33.0",
     "aiohttp>=3.14.0",
     "httpx>=0.28.1",
     "speedtest-cli>=2.1.3",
