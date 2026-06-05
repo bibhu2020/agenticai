@@ -26,7 +26,7 @@ dependencies = [
     "langgraph>=1.0.3",
     "langgraph-checkpoint-sqlite>=3.0.0",
     "langsmith>=0.8.0",
-    "langchain-text-splitters>=1.0.0",
+    "langchain-text-splitters>=1.1.2",
     "langchain-chroma>=1.0.0",
     "html2text>=2025.4.15",
     "traceloop-sdk>=0.33.0",
@@ -60,7 +60,7 @@ dependencies = [
     # =======================
     # AUTOGEN
     # =======================
-    "autogen-agentchat==0.4.7",
+    "autogen-agentchat==0.7.5",
     "autogen-ext[grpc,mcp,ollama,openai]==0.7.5",
     "asyncio",
     "phidata>=2.0.0",
@@ -112,8 +112,8 @@ dependencies = [
     # =======================
     "yt_dlp>=2025.11.12",
     "openai-whisper==20250625",
-    "numba==0.59.0",
-    "llvmlite==0.42.0",
+    "numba==0.63.1",
+    "llvmlite==0.46.0",
     # =======================
     # MACHINE LEARNING
     # =======================
