@@ -1,6 +1,9 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import { getSchedule } from '../services/api.js'
+import { toLocalTime, localTZAbbr } from '../utils/time.js'
+
+const tz = localTZAbbr()
 
 const loading = ref(true)
 const error = ref(null)
@@ -46,7 +49,7 @@ onMounted(async () => {
 <template>
   <div class="schedule-view">
     <div class="view-header">
-      <h1 class="view-title">📅 Upcoming Schedule <span class="subtitle">(CDT)</span></h1>
+      <h1 class="view-title">📅 Upcoming Schedule <span class="subtitle">({{ tz }})</span></h1>
       <div class="date-filter" v-if="uniqueDates.length > 2">
         <select v-model="selectedDate" class="date-select">
           <option value="all">All Dates</option>
@@ -80,8 +83,8 @@ onMounted(async () => {
         <div class="day-matches">
           <div v-for="match in dayMatches" :key="match.match_id || match.home_team" class="schedule-row card">
             <div class="sched-time">
-              <span class="time-main">{{ match.time_cdt ? match.time_cdt.split(' ').slice(1, 3).join(' ') : 'TBD' }}</span>
-              <span class="time-tz">CDT</span>
+              <span class="time-main">{{ toLocalTime(match.time_cdt) || 'TBD' }}</span>
+              <span class="time-tz">{{ tz }}</span>
             </div>
 
             <div class="sched-teams">

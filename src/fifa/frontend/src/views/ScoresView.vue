@@ -1,11 +1,14 @@
 <script setup>
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { getScores } from '../services/api.js'
+import { toLocalDateTime, localTZAbbr } from '../utils/time.js'
 
 const loading = ref(true)
 const error = ref(null)
 const matches = ref([])
 const filter = ref('all')
+const tz = localTZAbbr()
+let pollTimer = null
 
 const filtered = computed(() => {
   if (filter.value === 'all') return matches.value
@@ -33,11 +36,34 @@ function badgeClass(m) {
   return 'badge-tbd'
 }
 
+function statusLabel(m) {
+  if (isLive(m)) return 'LIVE'
+  return m.status || 'TBD'
+}
+
 function scoreDisplay(m) {
   const hs = m.home_score
   const as = m.away_score
   if (hs === '' || hs === null || hs === undefined) return 'vs'
   return `${hs} – ${as}`
+}
+
+async function fetchData() {
+  try {
+    const data = await getScores()
+    matches.value = Array.isArray(data) ? data : []
+  } catch {}
+}
+
+function schedulePoll() {
+  clearInterval(pollTimer)
+  const hasLive = matches.value.some(isLive)
+  // 60 s when live, 5 min otherwise
+  const interval = hasLive ? 60_000 : 300_000
+  pollTimer = setInterval(async () => {
+    await fetchData()
+    schedulePoll() // re-evaluate interval after each fetch
+  }, interval)
 }
 
 onMounted(async () => {
@@ -49,7 +75,10 @@ onMounted(async () => {
   } finally {
     loading.value = false
   }
+  schedulePoll()
 })
+
+onUnmounted(() => clearInterval(pollTimer))
 </script>
 
 <template>
@@ -89,8 +118,8 @@ onMounted(async () => {
       <div v-for="match in filtered" :key="match.match_id || match.home_team" class="match-card card">
         <!-- Status bar -->
         <div class="match-status-bar">
-          <span class="badge" :class="badgeClass(match)">{{ match.status || 'TBD' }}</span>
-          <span class="match-time">{{ match.time_cdt }}</span>
+          <span class="badge" :class="badgeClass(match)">{{ statusLabel(match) }}</span>
+          <span class="match-time">{{ toLocalDateTime(match.time_cdt) }} {{ tz }}</span>
           <span class="match-round">{{ match.round }}</span>
         </div>
 

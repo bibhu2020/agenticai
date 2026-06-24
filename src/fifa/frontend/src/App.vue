@@ -10,9 +10,10 @@ const installPrompt = ref(null)
 const showInstall = ref(false)
 
 const tabs = [
-  { path: '/scores',   label: "Today's Scores",  icon: '⚽' },
-  { path: '/schedule', label: 'Schedule',          icon: '📅' },
-  { path: '/news',     label: 'News',              icon: '📰' },
+  { path: '/scores',    label: "Today's Scores", icon: '⚽' },
+  { path: '/schedule',  label: 'Schedule',        icon: '📅' },
+  { path: '/standings', label: 'Standings',       icon: '🏅' },
+  { path: '/news',      label: 'News',            icon: '📰' },
 ]
 
 async function loadSummary() {
@@ -31,8 +32,7 @@ async function doRefresh() {
 function formatLastUpdated(iso) {
   if (!iso) return 'Never'
   const d = new Date(iso)
-  return d.toLocaleString('en-US', { timeZone: 'America/Chicago', hour12: true,
-    month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' }) + ' CDT'
+  return d.toLocaleString(undefined, { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })
 }
 
 onMounted(() => {
