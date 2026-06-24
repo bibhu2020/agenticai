@@ -2,7 +2,7 @@ FROM python:3.12-slim
 
 ENV PYTHONUNBUFFERED=1 \
     DEBIAN_FRONTEND=noninteractive \
-    PYTHONPATH=/app:/app/common:$PYTHONPATH
+    PYTHONPATH=/app:/app/src/remedy:$PYTHONPATH
 
 WORKDIR /app
 
@@ -21,7 +21,6 @@ COPY uv.lock .
 COPY README.md .
 
 # Copy required folders
-COPY common/ ./common/
 COPY data/healthcare/ ./data/healthcare/
 COPY db/ ./db/
 COPY src/remedy/ ./src/remedy/

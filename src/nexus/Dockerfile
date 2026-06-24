@@ -2,7 +2,7 @@ FROM python:3.12-slim
 
 ENV PYTHONUNBUFFERED=1 \
     DEBIAN_FRONTEND=noninteractive \
-    PYTHONPATH=/app:/app/common:$PYTHONPATH
+    PYTHONPATH=/app:$PYTHONPATH
 
 WORKDIR /app
 
@@ -20,7 +20,6 @@ COPY pyproject.toml .
 COPY uv.lock .
 
 # Copy required folders
-COPY common/ ./common/
 COPY src/nexus/ ./src/nexus/
 
 # Install dependencies using uv

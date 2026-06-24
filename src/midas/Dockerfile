@@ -20,7 +20,6 @@ COPY pyproject.toml .
 COPY uv.lock .
 
 # Copy application code
-COPY common/ ./common/
 COPY src/midas/ ./src/midas/
 
 # Install dependencies using uv
