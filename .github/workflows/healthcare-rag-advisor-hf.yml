@@ -1,0 +1,44 @@
+name: Deploy Remedy to Hugging Face
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'src/healthcare-rag-advisor/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Stage deployment directory
+        run: |
+          mkdir -p deploy_temp/src
+          mkdir -p deploy_temp/data
+          cp -r data/healthcare                 deploy_temp/data/ 2>/dev/null || true
+          cp -r db                              deploy_temp/ 2>/dev/null || true
+          cp -r src/healthcare-rag-advisor      deploy_temp/src/
+          cp uv.lock                            deploy_temp/
+          cp pyproject.toml                     deploy_temp/
+          cp src/healthcare-rag-advisor/Dockerfile deploy_temp/
+          cp src/healthcare-rag-advisor/README.md  deploy_temp/ 2>/dev/null || true
+          cp run.py                             deploy_temp/
+          echo "Staged healthcare-rag-advisor"
+          ls -la deploy_temp/
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Upload to Hugging Face
+        uses: ./.github/actions/upload-to-hf
+        with:
+          hf_token: ${{ secrets.HF_TOKEN }}
+          repo_id: ${{ secrets.HF_USERNAME }}/healthcare-assistant

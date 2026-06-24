@@ -1,0 +1,10 @@
+phidata
+openai
+langchain-google-community
+langchain-google-community[places]
+langchain_tavily
+fastapi
+python-dotenv
+uvicorn
+httpx
+requests

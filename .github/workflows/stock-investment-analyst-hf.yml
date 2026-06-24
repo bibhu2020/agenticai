@@ -1,16 +1,16 @@
-name: Deploy Waypoint to Hugging Face
+name: Deploy Midas to Hugging Face
 
 on:
   push:
     branches: [ main ]
     paths:
-      - 'src/trip-planner-api/**'
+      - 'src/stock-investment-analyst/**'
   workflow_dispatch:
 
 jobs:
   deploy:
     uses: ./.github/workflows/reusable-deploy-hf.yml
     with:
-      app_path: src/trip-planner-api
-      hf_space_name: trip-planner-api
+      app_path: src/stock-investment-analyst
+      hf_space_name: stock-analyst
     secrets: inherit

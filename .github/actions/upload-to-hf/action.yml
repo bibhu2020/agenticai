@@ -1,0 +1,71 @@
+name: Upload to Hugging Face Hub
+description: Upload a staged directory to a Hugging Face Docker Space.
+
+inputs:
+  hf_token:
+    description: HuggingFace API token
+    required: true
+  repo_id:
+    description: Full repository ID (username/space-name)
+    required: true
+  deploy_path:
+    description: Local directory to upload
+    required: false
+    default: deploy_temp
+
+runs:
+  using: composite
+  steps:
+    - name: Install huggingface_hub
+      shell: bash
+      run: pip install huggingface_hub --quiet
+
+    - name: Upload to Hugging Face Hub
+      shell: bash
+      env:
+        HF_TOKEN: ${{ inputs.hf_token }}
+        REPO_ID: ${{ inputs.repo_id }}
+        DEPLOY_PATH: ${{ inputs.deploy_path }}
+      run: |
+        python - << 'PYEOF'
+        from huggingface_hub import HfApi, create_repo
+        import os, sys
+
+        api    = HfApi()
+        repo_id     = os.environ["REPO_ID"]
+        token       = os.environ["HF_TOKEN"]
+        deploy_path = os.environ["DEPLOY_PATH"]
+
+        ignore = [
+            ".env*", ".venv/**", "venv/**",
+            "__pycache__/**", "*.pyc",
+            ".git/**", ".github/**",
+            ".pytest_cache/**", ".coverage",
+            "node_modules/**", "dockers/**",
+        ]
+
+        try:
+            create_repo(
+                repo_id=repo_id, token=token,
+                repo_type="space", space_sdk="docker",
+                private=False, exist_ok=True,
+            )
+            print(f"Repository ready: {repo_id}")
+        except Exception as e:
+            print(f"Error creating repository: {e}")
+            sys.exit(1)
+
+        try:
+            print(f"Uploading {deploy_path} → {repo_id} ...")
+            api.upload_folder(
+                folder_path=deploy_path,
+                repo_id=repo_id,
+                repo_type="space",
+                token=token,
+                ignore_patterns=ignore,
+            )
+            print("Upload completed successfully!")
+        except Exception as e:
+            print(f"Error uploading: {e}")
+            sys.exit(1)
+        PYEOF

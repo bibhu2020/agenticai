@@ -1,0 +1,61 @@
+name: Unit Tests (reusable)
+
+on:
+  workflow_call:
+    inputs:
+      python_version:
+        description: Python version to use
+        type: string
+        default: "3.12"
+      coverage_threshold:
+        description: Minimum coverage percentage (set to 0 to report only)
+        type: string
+        default: "30"
+      test_path:
+        description: Path to the test directory or file
+        type: string
+        default: "tests/"
+    outputs:
+      result:
+        description: Test outcome — 'pass' or 'fail'
+        value: ${{ jobs.unit-tests.outputs.result }}
+
+jobs:
+  unit-tests:
+    name: Run Unit Tests & Coverage
+    runs-on: ubuntu-latest
+    outputs:
+      result: ${{ steps.run-tests.outputs.result }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ inputs.python_version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ inputs.python_version }}
+
+      - name: Install uv
+        run: pip install uv --quiet
+
+      - name: Install dependencies
+        run: uv sync --prerelease=allow
+
+      - name: Run Tests with Coverage
+        id: run-tests
+        run: |
+          uv run pytest \
+            --cov=src \
+            --cov-report=term \
+            --cov-report=xml \
+            --cov-fail-under=${{ inputs.coverage_threshold }} \
+            ${{ inputs.test_path }}
+          echo "result=pass" >> $GITHUB_OUTPUT
+
+      - name: Upload coverage report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: coverage.xml
+          retention-days: 7
