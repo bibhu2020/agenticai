@@ -10,7 +10,7 @@ import pytest
 # Path setup — chatbot root must be first so bare-module imports resolve
 # ---------------------------------------------------------------------------
 
-_chatbot_path = str(Path(__file__).parent.parent / "src" / "ai-research-assistant")
+_chatbot_path = str(Path(__file__).parent.parent / "src" / "nexus")
 _src_path = str(Path(__file__).parent.parent / "src")
 
 for _p in [_chatbot_path, _src_path]:

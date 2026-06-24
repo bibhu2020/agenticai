@@ -6,7 +6,7 @@ from unittest.mock import MagicMock, patch
 
 # ── path setup ────────────────────────────────────────────────────────────────
 _midas_path = os.path.abspath(
-    os.path.join(os.path.dirname(__file__), "../src/stock-investment-analyst")
+    os.path.join(os.path.dirname(__file__), "../src/midas")
 )
 if _midas_path not in sys.path:
     sys.path.insert(0, _midas_path)

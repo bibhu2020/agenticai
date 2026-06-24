@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main ]
     paths:
-      - 'src/deep-research-reporter/**'
+      - 'src/athena/**'
   workflow_dispatch:
 
 jobs:
@@ -20,12 +20,12 @@ jobs:
       - name: Stage deployment directory
         run: |
           mkdir -p deploy_temp/src
-          cp -r src/deep-research-reporter deploy_temp/src/
+          cp -r src/athena deploy_temp/src/
           cp pyproject.toml deploy_temp/
           cp uv.lock deploy_temp/
           cp -r src/_mcpservers deploy_temp/src/ 2>/dev/null || true
-          cp src/deep-research-reporter/Dockerfile deploy_temp/
-          cp src/deep-research-reporter/README.md deploy_temp/ 2>/dev/null || true
+          cp src/athena/Dockerfile deploy_temp/
+          cp src/athena/README.md deploy_temp/ 2>/dev/null || true
           cp run.py deploy_temp/ 2>/dev/null || true
           echo "Staged deployment:"
           ls -la deploy_temp/

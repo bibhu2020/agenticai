@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main ]
     paths:
-      - 'src/stock-investment-analyst/**'
+      - 'src/midas/**'
   workflow_dispatch:
 
 jobs:
@@ -20,11 +20,11 @@ jobs:
       - name: Stage deployment directory
         run: |
           mkdir -p deploy_temp/src
-          cp -r src/stock-investment-analyst deploy_temp/src/
+          cp -r src/midas deploy_temp/src/
           cp pyproject.toml deploy_temp/
           cp uv.lock deploy_temp/
-          cp src/stock-investment-analyst/Dockerfile deploy_temp/
-          cp src/stock-investment-analyst/README.md deploy_temp/ 2>/dev/null || true
+          cp src/midas/Dockerfile deploy_temp/
+          cp src/midas/README.md deploy_temp/ 2>/dev/null || true
           cp run.py deploy_temp/ 2>/dev/null || true
           echo "Staged deployment:"
           ls -la deploy_temp/

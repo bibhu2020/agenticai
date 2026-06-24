@@ -6,7 +6,7 @@ import pytest
 from unittest.mock import MagicMock, AsyncMock, patch
 
 # ── path setup ────────────────────────────────────────────────────────────────
-_hc_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../src/healthcare-rag-advisor"))
+_hc_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../src/remedy"))
 if _hc_path not in sys.path:
     sys.path.insert(0, _hc_path)
 
