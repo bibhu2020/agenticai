@@ -23,10 +23,10 @@ COPY uv.lock .
 COPY common/ ./common/
 COPY src/midas/ ./src/midas/
 
-# Install dependencies using uv, then export and install with pip to system
-# We use --no-dev to exclude dev dependencies if any
-RUN uv sync --frozen --no-dev --prerelease=allow && \
-    uv pip install -e . --system
+# Install dependencies using uv
+RUN uv sync --frozen --no-dev --prerelease=allow
+
+ENV PATH="/app/.venv/bin:$PATH"
 
 # Copy entry point
 COPY run.py .
