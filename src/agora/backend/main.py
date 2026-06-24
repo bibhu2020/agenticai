@@ -8,7 +8,7 @@ import os
 import sys
 from typing import AsyncGenerator
 
-from utility.autogen_model_factory import AutoGenModelFactory
+from llm import get_llm
 from teams.team import get_analyst_team, get_decision_team, extract_json
 from tools.news_data import get_sentiment_pipeline
 
@@ -48,32 +48,16 @@ async def analyze(ticker: str, provider: str = "openai"):
     active_analyses[analysis_id] = False
     
     async def event_generator() -> AsyncGenerator[str, None]:
-        if provider == "openai":
-            model_name = "gpt-4o"
-            family = "gpt"
-        elif provider == "groq":
-            model_name = "llama-3.3-70b-versatile"
-            family = "groq" 
-        elif provider == "google":
-            model_name = "gemini-pro-latest"
-            family = "gemini"
-        else:
-            model_name = "gpt-4o"
-            family = "gpt"
-        
+        _MODELS = {
+            "openai":  "gpt-4o",
+            "groq":    "llama-3.3-70b-versatile",
+            "google":  "gemini-2.0-flash",
+        }
+        resolved_provider = provider if provider in _MODELS else "openai"
+        model_name = _MODELS[resolved_provider]
+
         try:
-            model_client = AutoGenModelFactory.get_model(
-                provider=provider,
-                model_name=model_name,
-                temperature=0,
-                model_info={
-                    "family": family, 
-                    "vision": False, 
-                    "function_calling": True, 
-                    "json_output": True, 
-                    "structured_output": True if provider == "openai" else False
-                }
-            )
+            model_client = get_llm(provider=resolved_provider, model=model_name)
         except Exception as e:
             yield f"data: {json.dumps({'error': f'Model initialization failed: {str(e)}'})}\n\n"
             return
