@@ -1,20 +1,34 @@
-# Use a lightweight Python image
-FROM python:3.10-slim
+FROM python:3.12-slim
 
-# Set working directory inside the container
+ENV PYTHONUNBUFFERED=1 \
+    DEBIAN_FRONTEND=noninteractive \
+    PYTHONPATH=/app:/app/common:$PYTHONPATH
+
 WORKDIR /app
 
-# Copy only requirements first for better caching
-COPY requirements.txt .
+# System deps
+RUN apt-get update && apt-get install -y \
+    git build-essential curl \
+    && rm -rf /var/lib/apt/lists/*
 
-# Install dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+# Install uv
+RUN curl -LsSf https://astral.sh/uv/install.sh | sh
+ENV PATH="/root/.local/bin:$PATH"
 
-# Copy the rest of the application code
-COPY . .
+# Copy project metadata
+COPY pyproject.toml .
+COPY uv.lock .
 
-# Expose the HF Spaces default port
+# Copy required folders
+COPY src/waypoint/ ./src/waypoint/
+
+# Install dependencies using uv
+RUN uv sync --frozen --no-dev && \
+    uv pip install -e . --system
+
+# Copy entry point
+COPY run.py .
+
 EXPOSE 7860
 
-# Run Uvicorn on port 7860 (HF Spaces only exposes 7860)
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "7860"]
+CMD ["python", "run.py", "waypoint", "--port", "7860"]
