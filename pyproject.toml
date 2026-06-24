@@ -101,6 +101,11 @@ dependencies = [
     "streamlit>=1.54.0",
     "reportlab>=4.4.5",
     "fastapi",
+    "uvicorn",
+    "pandas",
+    # NOTE: langchain-google-community and langchain-tavily conflict with
+    # langchain-community>=0.4.1 in this monorepo. Waypoint installs them
+    # directly via pip in its Dockerfile.
     "Pillow",
     "python-docx",
     "matplotlib",

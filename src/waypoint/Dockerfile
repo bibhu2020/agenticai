@@ -22,9 +22,14 @@ COPY uv.lock .
 # Copy required folders
 COPY src/waypoint/ ./src/waypoint/
 
-# Install dependencies using uv
+# Install monorepo dependencies via uv
 RUN uv sync --frozen --no-dev && \
     uv pip install -e . --system
+
+# Install waypoint-specific packages that conflict with monorepo lockfile
+RUN pip install --no-cache-dir \
+    "langchain-google-community[places]" \
+    "langchain-tavily"
 
 # Copy entry point
 COPY run.py .
