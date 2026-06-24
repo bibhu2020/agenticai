@@ -7,8 +7,12 @@ const loading = ref(true)
 const error = ref(null)
 const matches = ref([])
 const filter = ref('all')
+const refreshing = ref(false)
+const lastRefreshed = ref(null)
 const tz = localTZAbbr()
 let pollTimer = null
+
+const POLL_MS = 5 * 60 * 1000  // 5 minutes
 
 const filtered = computed(() => {
   if (filter.value === 'all') return matches.value
@@ -49,33 +53,31 @@ function scoreDisplay(m) {
 }
 
 async function fetchData() {
+  refreshing.value = true
   try {
     const data = await getScores()
     matches.value = Array.isArray(data) ? data : []
+    lastRefreshed.value = new Date()
   } catch {}
+  refreshing.value = false
 }
 
-function schedulePoll() {
-  clearInterval(pollTimer)
-  const hasLive = matches.value.some(isLive)
-  // 60 s when live, 5 min otherwise
-  const interval = hasLive ? 60_000 : 300_000
-  pollTimer = setInterval(async () => {
-    await fetchData()
-    schedulePoll() // re-evaluate interval after each fetch
-  }, interval)
+function lastRefreshedLabel() {
+  if (!lastRefreshed.value) return ''
+  return lastRefreshed.value.toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit' })
 }
 
 onMounted(async () => {
   try {
     const data = await getScores()
     matches.value = Array.isArray(data) ? data : []
+    lastRefreshed.value = new Date()
   } catch (e) {
     error.value = 'Failed to load scores. The daily agent may not have run yet.'
   } finally {
     loading.value = false
   }
-  schedulePoll()
+  pollTimer = setInterval(fetchData, POLL_MS)
 })
 
 onUnmounted(() => clearInterval(pollTimer))
@@ -84,8 +86,18 @@ onUnmounted(() => clearInterval(pollTimer))
 <template>
   <div class="scores-view">
     <div class="view-header">
-      <h1 class="view-title">⚽ Today's Matches</h1>
+      <div class="title-row">
+        <h1 class="view-title">⚽ Today's Matches</h1>
+        <div class="refresh-status">
+          <span v-if="refreshing" class="refreshing-dot"></span>
+          <span class="refresh-label">
+            {{ refreshing ? 'Updating…' : lastRefreshed ? `Updated ${lastRefreshedLabel()}` : '' }}
+          </span>
+          <span class="refresh-cadence">· auto every 5 min</span>
+        </div>
+      </div>
       <div class="filter-pills">
+
         <button
           v-for="f in ['all','live','final','upcoming']"
           :key="f"
@@ -156,8 +168,19 @@ onUnmounted(() => clearInterval(pollTimer))
 <style scoped>
 .scores-view { display: flex; flex-direction: column; gap: 20px; }
 
-.view-header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+.view-header { display: flex; flex-direction: column; gap: 10px; }
+.title-row { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
 .view-title { font-size: 22px; font-weight: 700; }
+
+.refresh-status { display: flex; align-items: center; gap: 5px; }
+.refresh-label { font-size: 12px; color: var(--text-muted); }
+.refresh-cadence { font-size: 11px; color: var(--text-muted); opacity: 0.6; }
+.refreshing-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--accent-green);
+  animation: pulse 0.8s infinite;
+  flex-shrink: 0;
+}
 
 .filter-pills { display: flex; gap: 8px; flex-wrap: wrap; }
 .filter-pill {
