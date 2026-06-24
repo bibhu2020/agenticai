@@ -35,7 +35,7 @@ COPY src/agora/backend/ ./src/agora/backend/
 COPY --from=frontend-builder /app/frontend/dist ./src/agora/frontend/dist
 
 # Install dependencies
-RUN uv sync --frozen --no-dev && \
+RUN uv sync --frozen --no-dev --prerelease=allow && \
     uv pip install -e . --system
 
 # Create a non-root user for HF Spaces security compliance

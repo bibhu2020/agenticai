@@ -25,7 +25,7 @@ COPY src/midas/ ./src/midas/
 
 # Install dependencies using uv, then export and install with pip to system
 # We use --no-dev to exclude dev dependencies if any
-RUN uv sync --frozen --no-dev && \
+RUN uv sync --frozen --no-dev --prerelease=allow && \
     uv pip install -e . --system
 
 # Copy entry point
