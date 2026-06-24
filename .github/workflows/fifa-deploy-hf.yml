@@ -1,0 +1,42 @@
+name: Deploy FIFA to Hugging Face
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'src/fifa/**'
+      - 'pyproject.toml'
+      - 'uv.lock'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy to Hugging Face Space
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Stage deployment directory
+        run: |
+          mkdir -p deploy_temp/src
+          cp -r src/fifa deploy_temp/src/
+          cp pyproject.toml deploy_temp/
+          cp uv.lock deploy_temp/
+          cp src/fifa/Dockerfile deploy_temp/
+          cp src/fifa/README.md deploy_temp/
+          echo "Staged files:"
+          ls -la deploy_temp/
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Upload to Hugging Face
+        uses: ./.github/actions/upload-to-hf
+        with:
+          hf_token: ${{ secrets.HF_TOKEN }}
+          repo_id: ${{ secrets.HF_USERNAME }}/fifa
