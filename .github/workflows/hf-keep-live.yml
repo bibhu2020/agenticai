@@ -13,8 +13,8 @@ jobs:
       - name: Ping HF Spaces (HEAD requests)
         run: |
           URLS=(
-            "https://mishrabp-deep-research.hf.space"
-            "https://mishrabp-healthcare-assistant.hf.space"
+            "https://mishrabp-athena.hf.space"
+            "https://mishrabp-remedy.hf.space"
           )
           for url in "${URLS[@]}"; do
             echo "Pinging $url ..."

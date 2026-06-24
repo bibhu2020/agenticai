@@ -38,4 +38,4 @@ jobs:
         uses: ./.github/actions/upload-to-hf
         with:
           hf_token: ${{ secrets.HF_TOKEN }}
-          repo_id: ${{ secrets.HF_USERNAME }}/market-analyst
+          repo_id: ${{ secrets.HF_USERNAME }}/agora
