@@ -21,7 +21,7 @@ dependencies = [
     # =======================
     # LANGCHAIN / LANGGRAPH
     # =======================
-    "langchain>=1.0.7",
+    "langchain>=1.3.9",
     "langchain-community>=0.4.1",
     "langgraph>=1.0.10rc1",
     "langgraph-checkpoint-sqlite>=3.0.0",
