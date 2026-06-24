@@ -10,10 +10,11 @@ const installPrompt = ref(null)
 const showInstall = ref(false)
 
 const tabs = [
-  { path: '/scores',    label: "Today's Scores", icon: '⚽' },
-  { path: '/schedule',  label: 'Schedule',        icon: '📅' },
-  { path: '/standings', label: 'Standings',       icon: '🏅' },
-  { path: '/news',      label: 'News',            icon: '📰' },
+  { path: '/scores',     label: "Today's Scores", icon: '⚽' },
+  { path: '/schedule',   label: 'Schedule',        icon: '📅' },
+  { path: '/standings',  label: 'Standings',       icon: '🏅' },
+  { path: '/highlights', label: 'Highlights',      icon: '🎬' },
+  { path: '/news',       label: 'News',            icon: '📰' },
 ]
 
 async function loadSummary() {

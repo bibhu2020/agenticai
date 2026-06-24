@@ -159,6 +159,51 @@ def _fetch_knockout() -> dict:
     return buckets
 
 
+_ESPN_NEWS = "https://now.core.api.espn.com/v1/sports/news?sport=soccer&league=fifa.world&limit=50"
+
+
+def _fetch_highlights() -> list[dict]:
+    try:
+        resp = requests.get(_ESPN_NEWS, timeout=15)
+        resp.raise_for_status()
+        headlines = resp.json().get("headlines", [])
+    except Exception:
+        return []
+
+    seen: set = set()
+    clips: list[dict] = []
+    for article in headlines:
+        for v in article.get("video", []):
+            vid_id = v.get("id")
+            if not vid_id or vid_id in seen:
+                continue
+            seen.add(vid_id)
+            src = v.get("links", {}).get("source", {}).get("href", "")
+            web = v.get("links", {}).get("web", {}).get("href", "")
+            if not (src or web):
+                continue
+            thumb = v.get("thumbnail", "") or ""
+            if not thumb and v.get("images"):
+                thumb = v["images"][0].get("url", "")
+            clips.append({
+                "id": vid_id,
+                "headline": v.get("headline", ""),
+                "description": v.get("description", "") or v.get("caption", ""),
+                "thumbnail": thumb,
+                "video_url": src,
+                "espn_url": web,
+                "duration": v.get("duration", 0),
+            })
+            if len(clips) >= 4:
+                return clips
+    return clips
+
+
+@app.get("/api/highlights")
+async def get_highlights():
+    return JSONResponse(_fetch_highlights())
+
+
 @app.get("/api/standings")
 async def get_standings():
     groups = _fetch_standings()
