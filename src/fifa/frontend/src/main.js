@@ -4,6 +4,7 @@ import App from './App.vue'
 import ScoresView from './views/ScoresView.vue'
 import ScheduleView from './views/ScheduleView.vue'
 import NewsView from './views/NewsView.vue'
+import StandingsView from './views/StandingsView.vue'
 import './style.css'
 
 const router = createRouter({
@@ -13,6 +14,7 @@ const router = createRouter({
     { path: '/scores', component: ScoresView, meta: { title: 'Today\'s Scores' } },
     { path: '/schedule', component: ScheduleView, meta: { title: 'Upcoming Schedule' } },
     { path: '/news', component: NewsView, meta: { title: 'News' } },
+    { path: '/standings', component: StandingsView, meta: { title: 'Standings' } },
   ]
 })
 

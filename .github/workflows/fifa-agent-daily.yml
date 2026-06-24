@@ -2,8 +2,9 @@ name: FIFA Daily Agent Run
 
 on:
   schedule:
-    # 8 AM UTC = 3 AM CDT — data ready for morning viewing
-    - cron: '0 8 * * *'
+    - cron: '30 19 * * *'  # 2:30 PM CDT (UTC-5)
+    - cron: '30 21 * * *'  # 4:30 PM CDT (UTC-5)
+    - cron: '0 1 * * *'    # 8:00 PM CDT (UTC-5)
   workflow_dispatch:
     inputs:
       reason:

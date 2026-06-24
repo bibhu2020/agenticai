@@ -1,6 +1,7 @@
 """FastAPI backend for FIFA World Cup 2026 dashboard."""
 from __future__ import annotations
 import os
+import requests
 from datetime import datetime
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -82,6 +83,89 @@ async def get_summary():
     }
 
 
+_ESPN_BASE = "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world"
+_ESPN_STANDINGS = "https://site.api.espn.com/apis/v2/sports/soccer/fifa.world/standings"
+
+_KNOCKOUT_ROUNDS = {
+    "r32":   ["round of 32"],
+    "r16":   ["round of 16"],
+    "qf":    ["quarterfinal", "quarter-final", "quarter final"],
+    "sf":    ["semifinal", "semi-final", "semi final"],
+    "final": ["final"],
+    "third": ["third place", "3rd place"],
+}
+
+
+def _classify_round(round_name: str) -> str | None:
+    rn = round_name.lower()
+    for key, patterns in _KNOCKOUT_ROUNDS.items():
+        if any(p in rn for p in patterns):
+            return key
+    return None
+
+
+def _fetch_standings() -> list[dict]:
+    try:
+        resp = requests.get(_ESPN_STANDINGS, timeout=15)
+        resp.raise_for_status()
+        data = resp.json()
+    except Exception:
+        return []
+
+    groups = []
+    for group in data.get("children", []):
+        group_name = group.get("name", "")
+        entries = group.get("standings", {}).get("entries", [])
+        rows = []
+        for entry in entries:
+            team = entry.get("team", {})
+            logos = team.get("logos", [])
+            stats_raw = {s["abbreviation"]: s["displayValue"] for s in entry.get("stats", [])}
+            note = entry.get("note", {})
+            rows.append({
+                "pos":       int(stats_raw.get("R", 0) or 0),
+                "team":      team.get("displayName", ""),
+                "logo":      logos[0].get("href", "") if logos else "",
+                "gp":        stats_raw.get("GP", "0"),
+                "w":         stats_raw.get("W", "0"),
+                "d":         stats_raw.get("D", "0"),
+                "l":         stats_raw.get("L", "0"),
+                "gf":        stats_raw.get("F", "0"),
+                "ga":        stats_raw.get("A", "0"),
+                "gd":        stats_raw.get("GD", "0"),
+                "pts":       stats_raw.get("P", "0"),
+                "advanced":  int(stats_raw.get("ADV", 0) or 0),
+                "note":      note.get("description", ""),
+                "note_color": note.get("color", ""),
+            })
+        rows.sort(key=lambda r: r["pos"])
+        groups.append({"group": group_name, "rows": rows})
+    return groups
+
+
+def _fetch_knockout() -> dict:
+    data = _get_data()
+    all_matches = data.get("scores", []) + data.get("schedule", [])
+    buckets: dict[str, list] = {k: [] for k in _KNOCKOUT_ROUNDS}
+    seen: set = set()
+    for m in all_matches:
+        mid = m.get("match_id", "")
+        if mid in seen:
+            continue
+        seen.add(mid)
+        key = _classify_round(m.get("round", ""))
+        if key:
+            buckets[key].append(m)
+    return buckets
+
+
+@app.get("/api/standings")
+async def get_standings():
+    groups = _fetch_standings()
+    knockout = _fetch_knockout()
+    return JSONResponse({"groups": groups, "knockout": knockout})
+
+
 @app.post("/api/refresh")
 async def refresh_cache():
     global _cache_ts
@@ -98,6 +182,9 @@ if os.path.exists(frontend_dist):
     assets_dir = os.path.join(frontend_dist, "assets")
     if os.path.exists(assets_dir):
         app.mount("/assets", StaticFiles(directory=assets_dir), name="assets")
+    icons_dir = os.path.join(frontend_dist, "icons")
+    if os.path.exists(icons_dir):
+        app.mount("/icons", StaticFiles(directory=icons_dir), name="icons")
 
     @app.get("/{rest_of_path:path}")
     async def serve_spa(rest_of_path: str):
