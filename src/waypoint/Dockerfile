@@ -23,8 +23,9 @@ COPY uv.lock .
 COPY src/waypoint/ ./src/waypoint/
 
 # Install monorepo dependencies via uv
-RUN uv sync --frozen --no-dev --prerelease=allow && \
-    uv pip install -e . --system
+RUN uv sync --frozen --no-dev --prerelease=allow
+
+ENV PATH="/app/.venv/bin:$PATH"
 
 # Install waypoint-specific packages that conflict with monorepo lockfile
 RUN pip install --no-cache-dir \
