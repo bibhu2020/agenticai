@@ -24,7 +24,7 @@ COPY common/ ./common/
 COPY src/nexus/ ./src/nexus/
 
 # Install dependencies using uv, then export and install with pip to system
-RUN uv sync --frozen --no-dev && \
+RUN uv sync --frozen --no-dev --prerelease=allow && \
     uv pip install -e . --system
 
 # Copy entry point
