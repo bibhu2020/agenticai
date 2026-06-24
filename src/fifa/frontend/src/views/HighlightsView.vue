@@ -5,7 +5,7 @@ import { getHighlights } from '../services/api.js'
 const loading = ref(true)
 const error = ref(null)
 const clips = ref([])
-const playing = ref(null)   // id of the currently-expanded video
+const playing = ref(null)
 
 async function load() {
   try {
@@ -18,19 +18,15 @@ async function load() {
   }
 }
 
-function fmtDuration(secs) {
-  if (!secs) return ''
-  const m = Math.floor(secs / 60)
-  const s = String(secs % 60).padStart(2, '0')
-  return `${m}:${s}`
+function scoreLabel(clip) {
+  const hs = clip.home_score, as = clip.away_score
+  if (hs === '' || hs == null) return 'vs'
+  return `${hs} – ${as}`
 }
 
-function toggle(clip) {
-  if (playing.value === clip.id) {
-    playing.value = null
-  } else {
-    playing.value = clip.id
-  }
+function formatDate(d) {
+  if (!d) return ''
+  return new Date(d + 'T12:00:00').toLocaleDateString(undefined, { month: 'short', day: 'numeric' })
 }
 
 onMounted(load)
@@ -40,12 +36,12 @@ onMounted(load)
   <div class="highlights-view">
     <div class="view-header">
       <h1 class="view-title">🎬 Match Highlights</h1>
-      <span class="subtitle">Latest FIFA World Cup 2026 videos · via ESPN</span>
+      <span class="subtitle">Last {{ clips.length }} completed matches · YouTube</span>
     </div>
 
     <div v-if="loading" class="loading-spinner">
       <div class="spinner"></div>
-      <span>Loading highlights…</span>
+      <span>Finding highlight videos…</span>
     </div>
 
     <div v-else-if="error" class="empty-state">
@@ -55,61 +51,77 @@ onMounted(load)
 
     <div v-else-if="clips.length === 0" class="empty-state">
       <div class="empty-icon">🎬</div>
-      <p>No highlight videos available right now.</p>
+      <p>No completed matches yet — check back after games finish.</p>
     </div>
 
     <div v-else class="tiles-grid">
       <div
         v-for="clip in clips"
-        :key="clip.id"
+        :key="clip.home_team + clip.away_team"
         class="tile card"
-        :class="{ expanded: playing === clip.id }"
+        :class="{ expanded: playing === clip.home_team }"
       >
-        <!-- Video player (shown when expanded) -->
-        <div v-if="playing === clip.id" class="player-wrap">
-          <video
-            class="player"
-            :src="clip.video_url"
-            controls
-            autoplay
-            preload="metadata"
-            @error="playing = null"
-          ></video>
+        <!-- YouTube iframe (when playing) -->
+        <div v-if="playing === clip.home_team && clip.youtube_id" class="player-wrap">
+          <iframe
+            class="yt-player"
+            :src="`https://www.youtube-nocookie.com/embed/${clip.youtube_id}?autoplay=1&rel=0`"
+            frameborder="0"
+            allow="autoplay; encrypted-media; fullscreen"
+            allowfullscreen
+          ></iframe>
           <button class="close-btn" @click="playing = null">✕ Close</button>
         </div>
 
-        <!-- Thumbnail (shown when not playing) -->
-        <div v-else class="thumb-wrap" @click="toggle(clip)">
+        <!-- Thumbnail (when not playing) -->
+        <div v-else class="thumb-wrap" @click="clip.youtube_id && (playing = clip.home_team)">
+          <!-- YouTube-generated thumbnail -->
           <img
             v-if="clip.thumbnail"
             :src="clip.thumbnail"
-            :alt="clip.headline"
+            :alt="`${clip.home_team} vs ${clip.away_team}`"
             class="thumb"
+            @error="$event.target.src = `https://img.youtube.com/vi/${clip.youtube_id}/hqdefault.jpg`"
           />
-          <div v-else class="thumb-placeholder">🎬</div>
+          <div v-else class="thumb-placeholder">⚽</div>
 
-          <div class="play-overlay">
-            <div class="play-btn">▶</div>
-          </div>
-
-          <div class="duration-badge" v-if="clip.duration">
-            {{ fmtDuration(clip.duration) }}
+          <div class="play-overlay" :class="{ 'no-video': !clip.youtube_id }">
+            <div class="play-btn" v-if="clip.youtube_id">▶</div>
+            <div class="no-video-msg" v-else>Video not available</div>
           </div>
         </div>
 
-        <!-- Caption -->
-        <div class="caption">
-          <p class="caption-title">{{ clip.headline }}</p>
-          <p class="caption-desc" v-if="clip.description && clip.description !== clip.headline">
-            {{ clip.description }}
-          </p>
-          <div class="caption-actions">
-            <button v-if="playing !== clip.id && clip.video_url" class="btn-watch" @click="toggle(clip)">
-              ▶ Watch
-            </button>
-            <a v-if="clip.espn_url" :href="clip.espn_url" target="_blank" rel="noopener" class="btn-espn">
-              ESPN ↗
-            </a>
+        <!-- Match info bar -->
+        <div class="match-bar">
+          <div class="team-row">
+            <div class="team-info">
+              <img v-if="clip.home_logo" :src="clip.home_logo" :alt="clip.home_team" class="team-logo" />
+              <span class="team-name">{{ clip.home_team }}</span>
+            </div>
+            <span class="score-pill">{{ scoreLabel(clip) }}</span>
+            <div class="team-info team-info-right">
+              <span class="team-name">{{ clip.away_team }}</span>
+              <img v-if="clip.away_logo" :src="clip.away_logo" :alt="clip.away_team" class="team-logo" />
+            </div>
+          </div>
+          <div class="match-meta">
+            <span class="match-round">{{ clip.round }}</span>
+            <span class="match-date">{{ formatDate(clip.date) }}</span>
+          </div>
+          <div class="actions">
+            <button
+              v-if="clip.youtube_id"
+              class="btn-watch"
+              @click="playing = clip.home_team"
+            >▶ Watch Highlights</button>
+            <a
+              v-if="clip.youtube_url"
+              :href="clip.youtube_url"
+              target="_blank"
+              rel="noopener"
+              class="btn-yt"
+            >YouTube ↗</a>
+            <span v-if="!clip.youtube_id" class="no-vid-label">No highlight found</span>
           </div>
         </div>
       </div>
@@ -124,7 +136,6 @@ onMounted(load)
 .view-title { font-size: 22px; font-weight: 700; }
 .subtitle { font-size: 13px; color: var(--text-muted); }
 
-/* 2×2 grid */
 .tiles-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -136,23 +147,19 @@ onMounted(load)
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s, box-shadow 0.2s;
 }
-.tile.expanded {
-  grid-column: 1 / -1;  /* full-width when playing */
-}
+.tile.expanded { grid-column: 1 / -1; }
 
 /* Thumbnail */
 .thumb-wrap {
   position: relative;
-  cursor: pointer;
   aspect-ratio: 16 / 9;
   overflow: hidden;
   background: #000;
+  cursor: pointer;
 }
 .thumb {
-  width: 100%;
-  height: 100%;
+  width: 100%; height: 100%;
   object-fit: cover;
   transition: transform 0.3s, opacity 0.3s;
 }
@@ -160,119 +167,98 @@ onMounted(load)
 .thumb-placeholder {
   width: 100%; height: 100%;
   display: flex; align-items: center; justify-content: center;
-  font-size: 48px;
-  background: var(--bg-secondary);
+  font-size: 48px; background: var(--bg-secondary);
 }
 
 .play-overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0,0,0,0.25);
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(0,0,0,0.2);
   transition: background 0.2s;
 }
-.thumb-wrap:hover .play-overlay { background: rgba(0,0,0,0.45); }
+.thumb-wrap:hover .play-overlay { background: rgba(0,0,0,0.4); }
+.play-overlay.no-video { cursor: default; }
 
 .play-btn {
-  width: 56px; height: 56px;
+  width: 60px; height: 60px;
   border-radius: 50%;
-  background: rgba(255, 215, 0, 0.9);
-  color: #000;
-  font-size: 20px;
-  display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-  transition: transform 0.2s;
-  padding-left: 4px; /* optical center for ▶ */
-}
-.thumb-wrap:hover .play-btn { transform: scale(1.1); }
-
-.duration-badge {
-  position: absolute;
-  bottom: 8px; right: 8px;
-  background: rgba(0,0,0,0.75);
+  background: rgba(255,0,0,0.88);   /* YouTube red */
   color: #fff;
-  font-size: 11px;
-  font-weight: 600;
-  padding: 2px 7px;
-  border-radius: 4px;
+  font-size: 22px;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.6);
+  transition: transform 0.2s, background 0.2s;
+  padding-left: 4px;
+}
+.thumb-wrap:hover .play-btn { transform: scale(1.12); background: rgba(255,0,0,1); }
+.no-video-msg {
+  background: rgba(0,0,0,0.6); color: var(--text-muted);
+  padding: 6px 14px; border-radius: 6px; font-size: 13px;
 }
 
-/* Player */
+/* YouTube player */
 .player-wrap { position: relative; background: #000; }
-.player {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  display: block;
+.yt-player {
+  width: 100%; aspect-ratio: 16 / 9; display: block; border: none;
 }
 .close-btn {
-  position: absolute;
-  top: 10px; right: 10px;
-  background: rgba(0,0,0,0.7);
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  padding: 5px 12px;
-  font-size: 13px;
-  cursor: pointer;
+  position: absolute; top: 10px; right: 10px;
+  background: rgba(0,0,0,0.7); color: #fff;
+  border: none; border-radius: 6px;
+  padding: 5px 12px; font-size: 13px; cursor: pointer;
 }
-.close-btn:hover { background: rgba(255,0,0,0.7); }
+.close-btn:hover { background: rgba(200,0,0,0.8); }
 
-/* Caption */
-.caption {
+/* Match info bar */
+.match-bar {
   padding: 12px 14px 14px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  flex: 1;
+  display: flex; flex-direction: column; gap: 8px;
 }
-.caption-title {
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.4;
-  color: var(--text-primary);
+
+.team-row {
+  display: flex; align-items: center; gap: 8px;
 }
-.caption-desc {
-  font-size: 12px;
-  color: var(--text-muted);
-  line-height: 1.4;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+.team-info {
+  display: flex; align-items: center; gap: 6px; flex: 1;
 }
-.caption-actions {
-  display: flex;
-  gap: 8px;
-  margin-top: 4px;
+.team-info-right { justify-content: flex-end; }
+.team-logo { width: 24px; height: 24px; object-fit: contain; flex-shrink: 0; }
+.team-name { font-size: 13px; font-weight: 600; }
+.score-pill {
+  flex-shrink: 0;
+  padding: 3px 12px;
+  border-radius: 20px;
+  background: rgba(255,215,0,0.12);
+  border: 1px solid rgba(255,215,0,0.3);
+  font-size: 15px; font-weight: 800;
+  color: var(--accent-gold);
+  letter-spacing: 1px;
 }
+
+.match-meta {
+  display: flex; justify-content: space-between;
+  font-size: 11px; color: var(--text-muted);
+}
+.match-round { font-style: italic; }
+
+.actions { display: flex; gap: 8px; flex-wrap: wrap; }
 .btn-watch {
   display: inline-flex; align-items: center; gap: 5px;
-  padding: 5px 14px;
-  border-radius: 6px;
-  background: rgba(255,215,0,0.15);
-  border: 1px solid var(--accent-gold);
-  color: var(--accent-gold);
-  font-size: 13px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.2s;
+  padding: 6px 14px; border-radius: 6px;
+  background: rgba(255,0,0,0.15); border: 1px solid rgba(255,0,0,0.5);
+  color: #ff4444; font-size: 13px; font-weight: 600;
+  cursor: pointer; transition: background 0.2s;
 }
-.btn-watch:hover { background: rgba(255,215,0,0.28); }
-
-.btn-espn {
+.btn-watch:hover { background: rgba(255,0,0,0.28); }
+.btn-yt {
   display: inline-flex; align-items: center;
-  padding: 5px 12px;
-  border-radius: 6px;
-  background: transparent;
-  border: 1px solid var(--border);
-  color: var(--text-muted);
-  font-size: 12px;
-  text-decoration: none;
+  padding: 6px 12px; border-radius: 6px;
+  background: transparent; border: 1px solid var(--border);
+  color: var(--text-muted); font-size: 12px; text-decoration: none;
   transition: border-color 0.2s, color 0.2s;
 }
-.btn-espn:hover { border-color: var(--accent-gold); color: var(--accent-gold); }
+.btn-yt:hover { border-color: #ff4444; color: #ff4444; }
+.no-vid-label { font-size: 12px; color: var(--text-muted); align-self: center; }
 
 @media (max-width: 640px) {
   .tiles-grid { grid-template-columns: 1fr; }
