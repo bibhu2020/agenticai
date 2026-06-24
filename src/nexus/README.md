@@ -7,7 +7,7 @@ sdk: docker
 app_file: app.py
 pinned: false
 license: mit
-short_description: Multi-specialist AI orchestrator for finance, news & web research
+short_description: Multi-specialist AI orchestrator for web research
 ---
 
 # Nexus
