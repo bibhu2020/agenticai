@@ -1,10 +1,10 @@
-name: Deploy Agora to Hugging Face
+name: Deploy Midas to Hugging Face
 
 on:
   push:
     branches: [ main ]
     paths:
-      - 'src/agora/**'
+      - 'src/midas/**'
   workflow_dispatch:
 
 jobs:
@@ -20,11 +20,11 @@ jobs:
       - name: Stage deployment directory
         run: |
           mkdir -p deploy_temp/src
-          cp -r src/agora deploy_temp/src/
+          cp -r src/midas deploy_temp/src/
           cp pyproject.toml deploy_temp/
           cp uv.lock deploy_temp/
-          cp src/agora/Dockerfile deploy_temp/
-          cp src/agora/README.md deploy_temp/ 2>/dev/null || true
+          cp src/midas/Dockerfile deploy_temp/
+          cp src/midas/README.md deploy_temp/ 2>/dev/null || true
           cp run.py deploy_temp/ 2>/dev/null || true
           echo "Staged deployment:"
           ls -la deploy_temp/
@@ -38,4 +38,4 @@ jobs:
         uses: ./.github/actions/upload-to-hf
         with:
           hf_token: ${{ secrets.HF_TOKEN }}
-          repo_id: ${{ secrets.HF_USERNAME }}/agora
+          repo_id: ${{ secrets.HF_USERNAME }}/midas
