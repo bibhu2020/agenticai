@@ -6,9 +6,9 @@ Usage:
     python run.py <app_name> [--port PORT] [--help]
 
 Examples:
-    python run.py healthcare
-    python run.py deep-research --port 8502
-    python run.py stock-analyst
+    python run.py remedy
+    python run.py athena --port 8502
+    python run.py midas
     python run.py --list
 """
 
@@ -95,7 +95,7 @@ def list_apps():
     
     print("\n" + "=" * 70)
     print("\nUsage: python run.py <app_name> [--port PORT]")
-    print("Example: python run.py healthcare --port 8501\n")
+    print("Example: python run.py remedy --port 8501\n")
 
 
 def validate_app(app_name: str) -> Optional[Dict[str, str]]:
@@ -243,8 +243,8 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  python run.py healthcare              # Launch healthcare chatbot
-  python run.py deep-research --port 8502   # Launch on custom port
+  python run.py remedy                  # Launch Remedy healthcare chatbot
+  python run.py athena --port 8502      # Launch on custom port
   python run.py --list                  # List all available apps
 
 Available Apps:
