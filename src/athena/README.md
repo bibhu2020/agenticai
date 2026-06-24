@@ -7,7 +7,7 @@ sdk: docker
 app_file: app.py
 pinned: false
 license: mit
-short_description: Plans, searches, and synthesises deep research into polished reports
+short_description: Plans, searches, and synthesises deep research
 ---
 
 # Athena
