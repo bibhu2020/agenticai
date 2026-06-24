@@ -1,0 +1,46 @@
+name: FIFA Daily Agent Run
+
+on:
+  schedule:
+    # 8 AM UTC = 3 AM CDT — data ready for morning viewing
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: 'Reason for manual run'
+        required: false
+        default: 'Manual trigger'
+
+jobs:
+  run-agent:
+    name: Fetch FIFA World Cup 2026 Data
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install uv
+        run: curl -LsSf https://astral.sh/uv/install.sh | sh && echo "$HOME/.local/bin" >> $GITHUB_PATH
+
+      - name: Install dependencies
+        run: uv sync --frozen --no-dev --prerelease=allow
+
+      - name: Run FIFA data agent
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          SERPER_API_KEY: ${{ secrets.SERPER_API_KEY }}
+          GH_MEDIA_TOKEN: ${{ secrets.GH_MEDIA_TOKEN }}
+        run: |
+          source .venv/bin/activate
+          python src/fifa/scripts/run_agent.py
+
+      - name: Report status
+        if: always()
+        run: echo "FIFA agent run complete at $(date -u)"

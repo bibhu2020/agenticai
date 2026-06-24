@@ -103,6 +103,7 @@ dependencies = [
     "fastapi",
     "uvicorn",
     "pandas",
+    "openpyxl>=3.1.0",
     # NOTE: langchain-google-community and langchain-tavily conflict with
     # langchain-community>=0.4.1 in this monorepo. Waypoint installs them
     # directly via pip in its Dockerfile.

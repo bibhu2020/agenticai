@@ -66,6 +66,12 @@ APP_REGISTRY: Dict[str, Dict[str, str]] = {
         "type": "fastapi",
         "description": "Agora - AI Market Analyst - Real-time multi-agent market analysis with streaming (Vue.js + FastAPI)"
     },
+    "fifa": {
+        "path": "src/fifa",
+        "entry": "backend/main.py",
+        "type": "fastapi",
+        "description": "FIFA - World Cup 2026 Dashboard - Live scores, schedule & news powered by LangGraph + Gemini (Vue.js PWA + FastAPI)"
+    },
     "test": {
         "path": ".",
         "entry": "tests",
@@ -156,11 +162,12 @@ def launch_app(app_name: str, port: Optional[int] = None):
     env["PYTHONPATH"] = str(project_root) + os.pathsep + env.get("PYTHONPATH", "")
     
     # Decoupled App Logic: Build frontend if needed
-    if app_name == "agora":
-        frontend_dir = project_root / "src/agora/frontend"
+    if app_name in ("agora", "fifa"):
+        frontend_dir = project_root / f"src/{app_name}/frontend"
         dist_dir = frontend_dir / "dist"
         if not dist_dir.exists():
-            print("\n🛠️ Frontend build missing. Building now...")
+            print(f"\n🛠️  Frontend build missing for {app_name}. Building now...")
+            subprocess.run(["npm", "install"], cwd=frontend_dir, shell=is_windows)
             subprocess.run(["npm", "run", "build"], cwd=frontend_dir, shell=is_windows)
             print("✅ Frontend built.\n")
     
