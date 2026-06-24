@@ -19,16 +19,14 @@ ENV PATH="/root/.local/bin:$PATH"
 COPY pyproject.toml .
 COPY uv.lock .
 
-# Copy required folders
-COPY common/ ./common/
-COPY src/odyssey/ ./src/odyssey/
-
-# Install dependencies using uv
+# Install dependencies using uv (before copying app code to maximise layer caching)
 RUN uv sync --frozen --no-dev --prerelease=allow
 
 ENV PATH="/app/.venv/bin:$PATH"
 
-# Copy entry point
+# Copy application code
+COPY common/ ./common/
+COPY src/odyssey/ ./src/odyssey/
 COPY run.py .
 
 EXPOSE 7860

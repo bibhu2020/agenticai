@@ -12,7 +12,7 @@ WORKDIR /app
 
 ENV PYTHONUNBUFFERED=1 \
     DEBIAN_FRONTEND=noninteractive \
-    PYTHONPATH=/app:$PYTHONPATH
+    PYTHONPATH=/app:/app/common:$PYTHONPATH
 
 # System deps
 RUN apt-get update && apt-get install -y \
