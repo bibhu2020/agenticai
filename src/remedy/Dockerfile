@@ -24,7 +24,7 @@ COPY README.md .
 COPY common/ ./common/
 COPY data/healthcare/ ./data/healthcare/
 COPY db/ ./db/
-COPY src/healthcare-assistant/ ./src/healthcare-assistant/
+COPY src/remedy/ ./src/remedy/
 
 # Install dependencies using uv, then export and install with pip to system
 RUN uv sync --frozen --no-dev && \
@@ -35,4 +35,4 @@ COPY run.py .
 
 EXPOSE 7860
 
-CMD ["python", "run.py", "healthcare", "--port", "7860"]
+CMD ["python", "run.py", "remedy", "--port", "7860"]

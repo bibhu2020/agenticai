@@ -34,7 +34,7 @@ def test_health_check_status_is_healthy():
 
 def test_health_check_service_name():
     resp = client.get("/")
-    assert resp.json()["service"] == "ai-trip-planner-api"
+    assert resp.json()["service"] == "waypoint"
 
 
 def test_health_check_has_timestamp():
