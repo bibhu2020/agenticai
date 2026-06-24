@@ -13,6 +13,7 @@ jobs:
       - name: Ping HF Spaces (HEAD requests)
         run: |
           URLS=(
+            "https://mishrabp-fifa.hf.space"
             "https://mishrabp-athena.hf.space"
             "https://mishrabp-remedy.hf.space"
           )
