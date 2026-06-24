@@ -12,7 +12,7 @@ WORKDIR /app
 
 ENV PYTHONUNBUFFERED=1 \
     DEBIAN_FRONTEND=noninteractive \
-    PYTHONPATH=/app:/app/common:$PYTHONPATH
+    PYTHONPATH=/app:/app/src/agora/backend:$PYTHONPATH
 
 # System deps
 RUN apt-get update && apt-get install -y \
@@ -28,7 +28,6 @@ COPY pyproject.toml .
 COPY uv.lock .
 
 # Copy application code
-COPY common/ ./common/
 COPY src/agora/backend/ ./src/agora/backend/
 
 # Copy built frontend from Stage 1 to the location FastAPI expects

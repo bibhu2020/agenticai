@@ -20,7 +20,6 @@ jobs:
       - name: Stage deployment directory
         run: |
           mkdir -p deploy_temp/src
-          cp -r common/ deploy_temp/common/
           cp -r src/agora deploy_temp/src/
           cp pyproject.toml deploy_temp/
           cp uv.lock deploy_temp/

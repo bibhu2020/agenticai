@@ -23,7 +23,6 @@ jobs:
           mkdir -p deploy_temp/data
           cp -r data/healthcare                 deploy_temp/data/ 2>/dev/null || true
           cp -r db                              deploy_temp/ 2>/dev/null || true
-          cp -r common/                         deploy_temp/common/
           cp -r src/remedy                      deploy_temp/src/
           cp uv.lock                            deploy_temp/
           cp pyproject.toml                     deploy_temp/
