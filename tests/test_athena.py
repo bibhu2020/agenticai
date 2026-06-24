@@ -5,7 +5,7 @@ import pytest
 from unittest.mock import MagicMock, AsyncMock, patch
 
 # ── path setup ────────────────────────────────────────────────────────────────
-_athena_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../src/deep-research-reporter"))
+_athena_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../src/athena"))
 if _athena_path not in sys.path:
     sys.path.insert(0, _athena_path)
 

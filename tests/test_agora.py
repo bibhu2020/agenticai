@@ -6,7 +6,7 @@ from unittest.mock import MagicMock, patch
 
 # ── path setup ────────────────────────────────────────────────────────────────
 _agora_backend = os.path.abspath(
-    os.path.join(os.path.dirname(__file__), "../src/market-analyst/backend")
+    os.path.join(os.path.dirname(__file__), "../src/agora/backend")
 )
 if _agora_backend not in sys.path:
     sys.path.insert(0, _agora_backend)

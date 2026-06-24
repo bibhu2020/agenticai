@@ -5,7 +5,7 @@ import pytest
 from unittest.mock import MagicMock, patch
 
 # ── path setup ────────────────────────────────────────────────────────────────
-_tp_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../src/trip-planner-api"))
+_tp_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../src/waypoint"))
 if _tp_path not in sys.path:
     sys.path.insert(0, _tp_path)
 

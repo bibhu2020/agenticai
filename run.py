@@ -29,42 +29,42 @@ load_dotenv(override=True)
 
 # App registry - maps app names to their paths and entry points
 APP_REGISTRY: Dict[str, Dict[str, str]] = {
-    "research-assistant": {
-        "path": "src/ai-research-assistant",
+    "nexus": {
+        "path": "src/nexus",
         "entry": "app.py",
-        "description": "AI Research Assistant - Multi-specialist orchestrator for finance, news, and web research"
+        "description": "Nexus - AI Research Assistant - Multi-specialist orchestrator for finance, news, and web research"
     },
-    "deep-research": {
-        "path": "src/deep-research-reporter",
+    "athena": {
+        "path": "src/athena",
         "entry": "app.py",
-        "description": "Deep Research Reporter - Plans, searches, and synthesises comprehensive research reports"
+        "description": "Athena - Deep Research Reporter - Plans, searches, and synthesises comprehensive research reports"
     },
-    "healthcare": {
-        "path": "src/healthcare-rag-advisor",
+    "remedy": {
+        "path": "src/remedy",
         "entry": "app.py",
-        "description": "Healthcare RAG Advisor - Medical information retrieval using RAG and web search"
+        "description": "Remedy - Healthcare RAG Advisor - Medical information retrieval using RAG and web search"
     },
-    "stock-analyst": {
-        "path": "src/stock-investment-analyst",
+    "midas": {
+        "path": "src/midas",
         "entry": "app.py",
-        "description": "Stock Investment Analyst - Multi-agent investment team for technical and sentiment analysis"
+        "description": "Midas - Stock Investment Analyst - Multi-agent investment team for technical and sentiment analysis"
     },
-    "travel-planner": {
-        "path": "src/travel-planner",
+    "odyssey": {
+        "path": "src/odyssey",
         "entry": "app.py",
-        "description": "Travel Planner - AI-powered trip planning with flight, hotel, and itinerary recommendations"
+        "description": "Odyssey - Travel Planner - AI-powered trip planning with flight, hotel, and itinerary recommendations"
     },
-    "trip-planner-api": {
-        "path": "src/trip-planner-api",
+    "waypoint": {
+        "path": "src/waypoint",
         "entry": "main.py",
         "type": "fastapi",
-        "description": "Trip Planner API - Phidata-powered trip itinerary planning REST API"
+        "description": "Waypoint - Trip Planner API - Phidata-powered trip itinerary planning REST API"
     },
-    "market-analyst": {
-        "path": "src/market-analyst",
+    "agora": {
+        "path": "src/agora",
         "entry": "backend/main.py",
         "type": "fastapi",
-        "description": "AI Market Analyst - Real-time multi-agent market analysis with streaming (Vue.js + FastAPI)"
+        "description": "Agora - AI Market Analyst - Real-time multi-agent market analysis with streaming (Vue.js + FastAPI)"
     },
     "test": {
         "path": ".",
@@ -156,8 +156,8 @@ def launch_app(app_name: str, port: Optional[int] = None):
     env["PYTHONPATH"] = str(project_root) + os.pathsep + env.get("PYTHONPATH", "")
     
     # Decoupled App Logic: Build frontend if needed
-    if app_name == "market-analyst":
-        frontend_dir = project_root / "src/market-analyst/frontend"
+    if app_name == "agora":
+        frontend_dir = project_root / "src/agora/frontend"
         dist_dir = frontend_dir / "dist"
         if not dist_dir.exists():
             print("\n🛠️ Frontend build missing. Building now...")

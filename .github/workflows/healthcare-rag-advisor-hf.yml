@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main ]
     paths:
-      - 'src/healthcare-rag-advisor/**'
+      - 'src/remedy/**'
   workflow_dispatch:
 
 permissions:
@@ -23,13 +23,13 @@ jobs:
           mkdir -p deploy_temp/data
           cp -r data/healthcare                 deploy_temp/data/ 2>/dev/null || true
           cp -r db                              deploy_temp/ 2>/dev/null || true
-          cp -r src/healthcare-rag-advisor      deploy_temp/src/
+          cp -r src/remedy                      deploy_temp/src/
           cp uv.lock                            deploy_temp/
           cp pyproject.toml                     deploy_temp/
-          cp src/healthcare-rag-advisor/Dockerfile deploy_temp/
-          cp src/healthcare-rag-advisor/README.md  deploy_temp/ 2>/dev/null || true
+          cp src/remedy/Dockerfile deploy_temp/
+          cp src/remedy/README.md  deploy_temp/ 2>/dev/null || true
           cp run.py                             deploy_temp/
-          echo "Staged healthcare-rag-advisor"
+          echo "Staged remedy"
           ls -la deploy_temp/
 
       - name: Set up Python

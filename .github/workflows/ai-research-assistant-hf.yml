@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main ]
     paths:
-      - 'src/ai-research-assistant/**'
+      - 'src/nexus/**'
   workflow_dispatch:
 
 jobs:
@@ -20,12 +20,12 @@ jobs:
       - name: Stage deployment directory
         run: |
           mkdir -p deploy_temp/src
-          cp -r src/ai-research-assistant deploy_temp/src/
+          cp -r src/nexus deploy_temp/src/
           cp pyproject.toml deploy_temp/
           cp uv.lock deploy_temp/
           cp -r src/_mcpservers deploy_temp/src/ 2>/dev/null || true
-          cp src/ai-research-assistant/Dockerfile deploy_temp/
-          cp src/ai-research-assistant/README.md deploy_temp/ 2>/dev/null || true
+          cp src/nexus/Dockerfile deploy_temp/
+          cp src/nexus/README.md deploy_temp/ 2>/dev/null || true
           cp run.py deploy_temp/ 2>/dev/null || true
           echo "Staged deployment:"
           ls -la deploy_temp/

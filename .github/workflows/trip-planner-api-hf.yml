@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main ]
     paths:
-      - 'src/trip-planner-api/**'
+      - 'src/waypoint/**'
   workflow_dispatch:
 
 jobs:
@@ -20,11 +20,11 @@ jobs:
       - name: Stage deployment directory
         run: |
           mkdir -p deploy_temp/src
-          cp -r src/trip-planner-api deploy_temp/src/
+          cp -r src/waypoint deploy_temp/src/
           cp pyproject.toml deploy_temp/
           cp uv.lock deploy_temp/
-          cp src/trip-planner-api/Dockerfile deploy_temp/
-          cp src/trip-planner-api/README.md deploy_temp/ 2>/dev/null || true
+          cp src/waypoint/Dockerfile deploy_temp/
+          cp src/waypoint/README.md deploy_temp/ 2>/dev/null || true
           cp run.py deploy_temp/ 2>/dev/null || true
           echo "Staged deployment:"
           ls -la deploy_temp/

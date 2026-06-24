@@ -7,7 +7,7 @@ from unittest.mock import MagicMock, patch
 
 # ── path setup ────────────────────────────────────────────────────────────────
 _odyssey_path = os.path.abspath(
-    os.path.join(os.path.dirname(__file__), "../src/travel-planner")
+    os.path.join(os.path.dirname(__file__), "../src/odyssey")
 )
 if _odyssey_path not in sys.path:
     sys.path.insert(0, _odyssey_path)
