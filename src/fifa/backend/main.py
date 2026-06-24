@@ -159,44 +159,87 @@ def _fetch_knockout() -> dict:
     return buckets
 
 
-_ESPN_NEWS = "https://now.core.api.espn.com/v1/sports/news?sport=soccer&league=fifa.world&limit=50"
+_ESPN_BASE_URL = "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world"
+_HL_CACHE: list = []
+_HL_CACHE_TS: datetime | None = None
+_HL_TTL_SECS = 1800  # 30 min — YouTube search is slow, don't hammer it
+
+
+def _get_recent_completed(days_back: int = 7, limit: int = 4) -> list[dict]:
+    from datetime import timedelta, timezone
+    utc_now = datetime.now(timezone.utc)
+    matches: list[dict] = []
+    for delta in range(0, days_back + 1):
+        target = utc_now - timedelta(days=delta)
+        date_str = target.strftime("%Y%m%d")
+        try:
+            resp = requests.get(f"{_ESPN_BASE_URL}/scoreboard?dates={date_str}", timeout=15)
+            if resp.status_code != 200:
+                continue
+            for ev in resp.json().get("events", []):
+                comp = ev.get("competitions", [{}])[0]
+                status = comp.get("status", {}).get("type", {}).get("description", "").lower()
+                if not any(s in status for s in ["final", "ft", "ended", "full time"]):
+                    continue
+                competitors = comp.get("competitors", [{}, {}])
+                home = next((c for c in competitors if c.get("homeAway") == "home"), competitors[0])
+                away = next((c for c in competitors if c.get("homeAway") == "away"), competitors[-1])
+                home_team = home.get("team", {})
+                away_team = away.get("team", {})
+                matches.append({
+                    "home_team": home_team.get("displayName", ""),
+                    "home_logo": (home_team.get("logos") or [{}])[0].get("href", ""),
+                    "home_score": home.get("score", ""),
+                    "away_team": away_team.get("displayName", ""),
+                    "away_logo": (away_team.get("logos") or [{}])[0].get("href", ""),
+                    "away_score": away.get("score", ""),
+                    "date": ev.get("date", "")[:10],
+                    "round": ev.get("name", ""),
+                })
+                if len(matches) >= limit:
+                    return matches
+        except Exception:
+            continue
+    return matches
+
+
+def _yt_search(home: str, away: str) -> tuple[str | None, str | None]:
+    """Return (youtube_url, video_id) via DDGS, None if not found."""
+    import re
+    query = f"FIFA World Cup 2026 {home} vs {away} highlights"
+    try:
+        from ddgs import DDGS
+        with DDGS() as ddgs:
+            for r in ddgs.text(query, max_results=8):
+                url = r.get("href", "")
+                m = re.search(r"(?:v=|youtu\.be/)([a-zA-Z0-9_-]{11})", url)
+                if m:
+                    return url, m.group(1)
+    except Exception:
+        pass
+    return None, None
 
 
 def _fetch_highlights() -> list[dict]:
-    try:
-        resp = requests.get(_ESPN_NEWS, timeout=15)
-        resp.raise_for_status()
-        headlines = resp.json().get("headlines", [])
-    except Exception:
-        return []
+    global _HL_CACHE, _HL_CACHE_TS
+    now = datetime.now()
+    if _HL_CACHE and _HL_CACHE_TS and (now - _HL_CACHE_TS).total_seconds() < _HL_TTL_SECS:
+        return _HL_CACHE
 
-    seen: set = set()
-    clips: list[dict] = []
-    for article in headlines:
-        for v in article.get("video", []):
-            vid_id = v.get("id")
-            if not vid_id or vid_id in seen:
-                continue
-            seen.add(vid_id)
-            src = v.get("links", {}).get("source", {}).get("href", "")
-            web = v.get("links", {}).get("web", {}).get("href", "")
-            if not (src or web):
-                continue
-            thumb = v.get("thumbnail", "") or ""
-            if not thumb and v.get("images"):
-                thumb = v["images"][0].get("url", "")
-            clips.append({
-                "id": vid_id,
-                "headline": v.get("headline", ""),
-                "description": v.get("description", "") or v.get("caption", ""),
-                "thumbnail": thumb,
-                "video_url": src,
-                "espn_url": web,
-                "duration": v.get("duration", 0),
-            })
-            if len(clips) >= 4:
-                return clips
-    return clips
+    matches = _get_recent_completed(days_back=7, limit=4)
+    results = []
+    for m in matches:
+        _, vid_id = _yt_search(m["home_team"], m["away_team"])
+        results.append({
+            **m,
+            "youtube_id": vid_id,
+            "youtube_url": f"https://www.youtube.com/watch?v={vid_id}" if vid_id else None,
+            "thumbnail": f"https://img.youtube.com/vi/{vid_id}/maxresdefault.jpg" if vid_id else None,
+        })
+
+    _HL_CACHE = results
+    _HL_CACHE_TS = now
+    return results
 
 
 @app.get("/api/highlights")
