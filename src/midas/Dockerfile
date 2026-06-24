@@ -2,7 +2,7 @@ FROM python:3.12-slim
 
 ENV PYTHONUNBUFFERED=1 \
     DEBIAN_FRONTEND=noninteractive \
-    PYTHONPATH=/app/src/stock-analyst:$PYTHONPATH
+    PYTHONPATH=/app/src/midas:$PYTHONPATH
 
 WORKDIR /app
 
@@ -21,7 +21,7 @@ COPY uv.lock .
 
 # Copy application code
 COPY common/ ./common/
-COPY src/stock-analyst/ ./src/stock-analyst/
+COPY src/midas/ ./src/midas/
 
 # Install dependencies using uv, then export and install with pip to system
 # We use --no-dev to exclude dev dependencies if any
@@ -33,4 +33,4 @@ COPY run.py .
 
 EXPOSE 7860
 
-CMD ["python", "run.py", "stock-analyst", "--port", "7860"]
+CMD ["python", "run.py", "midas", "--port", "7860"]

@@ -1,9 +1,9 @@
 # Stage 1: Build Frontend
 FROM node:20-slim AS frontend-builder
 WORKDIR /app/frontend
-COPY src/market-analyst/frontend/package*.json ./
+COPY src/agora/frontend/package*.json ./
 RUN npm install
-COPY src/market-analyst/frontend/ ./
+COPY src/agora/frontend/ ./
 RUN npm run build
 
 # Stage 2: Backend & Runtime
@@ -29,10 +29,10 @@ COPY uv.lock .
 
 # Copy application code
 COPY common/ ./common/
-COPY src/market-analyst/backend/ ./src/market-analyst/backend/
+COPY src/agora/backend/ ./src/agora/backend/
 
 # Copy built frontend from Stage 1 to the location FastAPI expects
-COPY --from=frontend-builder /app/frontend/dist ./src/market-analyst/frontend/dist
+COPY --from=frontend-builder /app/frontend/dist ./src/agora/frontend/dist
 
 # Install dependencies
 RUN uv sync --frozen --no-dev && \
@@ -60,4 +60,4 @@ RUN python -c "from transformers import pipeline; pipeline('sentiment-analysis',
 EXPOSE 7860
 
 # Run uvicorn on port 7860
-CMD ["uvicorn", "src.market-analyst.backend.main:app", "--host", "0.0.0.0", "--port", "7860"]
+CMD ["uvicorn", "src.agora.backend.main:app", "--host", "0.0.0.0", "--port", "7860"]

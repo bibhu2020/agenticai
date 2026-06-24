@@ -21,7 +21,7 @@ COPY uv.lock .
 
 # Copy required folders
 COPY common/ ./common/
-COPY src/chatbot/ ./src/chatbot/
+COPY src/nexus/ ./src/nexus/
 
 # Install dependencies using uv, then export and install with pip to system
 RUN uv sync --frozen --no-dev && \
@@ -32,4 +32,4 @@ COPY run.py .
 
 EXPOSE 7860
 
-CMD ["python", "run.py", "chatbot", "--port", "7860"]
+CMD ["python", "run.py", "nexus", "--port", "7860"]
