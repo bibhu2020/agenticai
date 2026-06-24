@@ -25,7 +25,7 @@ setup_langfuse_tracing()
 # ---------------------------------------------------------------------------
 # Page config
 # ---------------------------------------------------------------------------
-st.set_page_config(page_title="Deep Research AI", layout="wide", page_icon="🧠")
+st.set_page_config(page_title="Athena", layout="wide", page_icon="🦉")
 
 st.markdown("""
 <style>
@@ -364,7 +364,7 @@ _provider_ok = st.session_state.get("_provider_ready", True)
 
 if not st.session_state.final_report and not st.session_state.is_researching:
 
-    st.markdown("### 🧠 What do you want to research?")
+    st.markdown("### 🦉 What do you want to research?")
     st.caption("Deep Research browses the web, analyses sources, and writes a comprehensive report.")
     query = st.text_area(
         "Research Topic", height=180,

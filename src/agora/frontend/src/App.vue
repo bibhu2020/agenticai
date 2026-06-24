@@ -374,7 +374,7 @@ onMounted(() => {
           <TrendingUp class="icon-primary" :size="32" />
         </div>
         <div class="logo-text">
-          <h1>MARKET<span>ANALYST</span></h1>
+          <h1>AGO<span>RA</span></h1>
           <p>Multi-Agent Trading Intelligence</p>
         </div>
       </div>
@@ -708,7 +708,7 @@ onMounted(() => {
           <span><strong>Trading Disclaimer:</strong> Educational and research purposes only. AI-generated insights may be subject to latency or error. Consult a professional advisor before trading.</span>
         </div>
         <div class="copyright">
-          &copy; 2024 Market Analyst AI
+          &copy; 2024 Agora AI
         </div>
       </div>
     </footer>
