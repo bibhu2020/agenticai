@@ -2,7 +2,7 @@ FROM python:3.12-slim
 
 ENV PYTHONUNBUFFERED=1 \
     DEBIAN_FRONTEND=noninteractive \
-    PYTHONPATH=/app:/app/common:$PYTHONPATH
+    PYTHONPATH=/app:$PYTHONPATH
 
 WORKDIR /app
 
@@ -25,7 +25,6 @@ RUN uv sync --frozen --no-dev --prerelease=allow
 ENV PATH="/app/.venv/bin:$PATH"
 
 # Copy application code
-COPY common/ ./common/
 COPY src/odyssey/ ./src/odyssey/
 COPY run.py .
 
