@@ -1,7 +1,7 @@
 """Healthcare RAG Agent — LangGraph graph combining FAISS RAG with DuckDuckGo web search."""
 from langchain_core.messages import SystemMessage
-from langchain_openai import ChatOpenAI
 from langchain_community.tools import DuckDuckGoSearchRun
+from llm import get_llm
 from langgraph.graph import StateGraph, MessagesState, START
 from langgraph.prebuilt import ToolNode, tools_condition
 
@@ -37,7 +37,7 @@ You are a healthcare information retrieval assistant. Use only the results retur
 
 _web_search = DuckDuckGoSearchRun(name="duckduckgo_search")
 _tools = [rag_search, _web_search]
-_llm = ChatOpenAI(model="gpt-4o-mini", temperature=0).bind_tools(_tools)
+_llm = get_llm(provider="openai", model="gpt-4o-mini").bind_tools(_tools)
 
 
 def _call_agent(state: MessagesState):

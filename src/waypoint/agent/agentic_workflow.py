@@ -1,7 +1,7 @@
 """Trip Planner Agent — Phidata Agent with weather, places, expense and currency tools."""
 import os
 from phi.agent import Agent
-from phi.model.openai import OpenAIChat
+from llm import get_llm
 
 from utils.weather_info import WeatherForecastTool
 from utils.place_info_search import GooglePlaceSearchTool, TavilyPlaceSearchTool
@@ -125,7 +125,7 @@ def convert_currency(amount: float, from_currency: str, to_currency: str) -> str
 def create_trip_agent(model_provider: str = "openai") -> Agent:
     return Agent(
         name="Waypoint",
-        model=OpenAIChat(id="gpt-4o-mini"),
+        model=get_llm(provider=model_provider, model="gpt-4o-mini"),
         tools=[
             get_current_weather,
             get_weather_forecast,
