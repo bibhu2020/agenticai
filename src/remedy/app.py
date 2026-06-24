@@ -11,8 +11,8 @@ from healthcare_agent import healthcare_graph
 # Page Configuration
 # --------------------
 st.set_page_config(
-    page_title="Healthcare Assistant",
-    page_icon="⚕️",
+    page_title="Remedy",
+    page_icon="💊",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -229,7 +229,7 @@ with st.sidebar:
 # --------------------
 # Main Chat Interface
 # --------------------
-st.title("🩺 Healthcare Assistant")
+st.title("💊 Remedy")
 st.markdown('<p class="subtitle">Ask me anything about healthcare topics</p>', unsafe_allow_html=True)
 
 # Display disclaimer at the top
@@ -384,7 +384,7 @@ st.markdown("---")
 st.markdown(
     """
     <div style="text-align: center; color: #999; font-size: 0.85rem;">
-        Powered by Healthcare RAG Agent | Using Gemini 2.0 Flash & DuckDuckGo Search
+        Remedy — Powered by Healthcare RAG Agent | Using Gemini 2.0 Flash & DuckDuckGo Search
     </div>
     """,
     unsafe_allow_html=True

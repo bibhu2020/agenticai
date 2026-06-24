@@ -12,7 +12,7 @@ from utility.autogen_model_factory import AutoGenModelFactory
 from teams.team import get_analyst_team, get_decision_team, extract_json
 from tools.news_data import get_sentiment_pipeline
 
-app = FastAPI(title="Market Analyst API")
+app = FastAPI(title="Agora API")
 
 app.add_middleware(
     CORSMiddleware,

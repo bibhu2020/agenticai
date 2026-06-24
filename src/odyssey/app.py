@@ -25,8 +25,8 @@ logfire.instrument_openai_agents()
 
 # Page configuration
 st.set_page_config(
-    page_title="Travel Planner Assistant",
-    page_icon="✈️",
+    page_title="Odyssey",
+    page_icon="🧭",
     layout="wide",
     initial_sidebar_state="collapsed"
 )
@@ -282,7 +282,7 @@ def format_agent_response(output):
 # Hero Section
 st.markdown("""
 <div class="hero-container">
-    <div class="hero-title">🌍 Travel Agent</div>
+    <div class="hero-title">🧭 Odyssey</div>
     <div class="hero-subtitle">Design your perfect journey with AI-powered personalized planning</div>
 </div>
 """, unsafe_allow_html=True)

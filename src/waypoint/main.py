@@ -6,7 +6,7 @@ from pydantic import BaseModel
 
 from agent.agentic_workflow import create_trip_agent
 
-app = FastAPI(title="Waypoint Trip Planner API")
+app = FastAPI(title="Waypoint")
 
 app.add_middleware(
     CORSMiddleware,
@@ -26,7 +26,7 @@ async def health_check():
     return {
         "status": "healthy",
         "timestamp": datetime.datetime.now().isoformat(),
-        "service": "ai-trip-planner-api",
+        "service": "waypoint",
     }
 
 

@@ -21,9 +21,9 @@ setup_langfuse_tracing()  # installs Langfuse processor or disables SDK tracing
 # Configuration & Utils
 # -----------------------------
 st.set_page_config(
-    page_title="AI Assistant",
+    page_title="Nexus",
     layout="wide",
-    page_icon="🤖"
+    page_icon="🔗"
 )
 
 def load_prompts(folder="prompts"):
@@ -320,8 +320,8 @@ with st.sidebar:
 # Hero Banner (Always visible & Sticky)
 st.markdown("""
     <div class="hero-container" role="banner">
-        <div class="hero-title">🤖 AI Companion</div>
-        <div class="hero-subtitle">Your intelligent partner for research, analysis, and more.</div>
+        <div class="hero-title">🔗 Nexus</div>
+        <div class="hero-subtitle">Your intelligent hub for research, analysis, and more.</div>
     </div>
 """, unsafe_allow_html=True)
 

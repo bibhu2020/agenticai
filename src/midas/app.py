@@ -7,7 +7,7 @@ import os
 
 from teams.investment_team import get_investment_team
 
-st.set_page_config(page_title="Stock Investment Analyst", layout="wide", page_icon="📈")
+st.set_page_config(page_title="Midas", layout="wide", page_icon="🪙")
 
 # ------------------------------------------------------------------------------
 # Custom CSS for layout improvements
@@ -24,7 +24,7 @@ st.markdown("""
 # ------------------------------------------------------------------------------
 # Main Content
 # ------------------------------------------------------------------------------
-st.title("📈 Stock Investment Analyst")
+st.title("🪙 Midas")
 
 # IMPORTANT DISCLAIMER
 st.warning(
