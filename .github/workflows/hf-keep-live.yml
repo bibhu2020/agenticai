@@ -1,43 +1,22 @@
-name: Keep My HF Sites Live
+name: Keep HF Spaces Live
 
-# Run every 24 hours
 on:
   schedule:
     - cron: '0 0 * * *'
-  workflow_dispatch: # optional manual trigger
+  workflow_dispatch:
 
 jobs:
-  curl_urls:
+  ping_spaces:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-
-    - name: Curl URLs (HEAD requests)
-      run: |
-        # Define URLs to be curled so that they remain alive
-          # "https://mishrabp-travel-agent.hf.space"
-          # "https://mishrabp-trip-advisor-api.hf.space/"
-          # "https://mishrabp-trip-advisor-app.hf.space/"
-          # "https://mishrabp-northwind.hf.space"
-          # "https://myotel.azurewebsites.net"
-          #"https://mishrabp-stock-analyst.hf.space"
-          #"https://mishrabp-chatbot-app.hf.space"
-        URLS=(
-          "https://mishrabp-deep-research.hf.space"
-          "https://mishrabp-healthcare-assistant.hf.space"
-          "https://mishrabp-market-analyst.hf.space"
-          "https://mishrabp-twitter-sentiment-analysis.hf.space"
-          "https://mishrabp-ollama.hf.space"
-          "https://mishrabp-mlstocks.hf.space"
-          "https://mishrabp-edureka.hf.space"
-        )
-
-        # Loop through URLs and send HEAD requests
-        for url in "${URLS[@]}"; do
-          echo "HEAD request to $url ..."
-          response=$(curl -s -I -w "\nHTTP_STATUS:%{http_code}" "$url")
-          echo "$response"
-          echo "----------------------------"
-        done
+      - name: Ping HF Spaces (HEAD requests)
+        run: |
+          URLS=(
+            "https://mishrabp-deep-research.hf.space"
+            "https://mishrabp-healthcare-assistant.hf.space"
+          )
+          for url in "${URLS[@]}"; do
+            echo "Pinging $url ..."
+            curl -s -o /dev/null -w "%{http_code} $url\n" "$url" || true
+          done

@@ -138,6 +138,7 @@ dependencies = [
     # =======================
     # OBSERVABILITY
     # =======================
+    "langfuse>=3.0.0",
     "openinference-instrumentation-autogen>=0.1.0",
     "openinference-instrumentation-openai>=0.1.15",
     "opentelemetry-sdk>=1.20.0",
@@ -160,6 +161,7 @@ dev = [
     "pytest>=9.0.3",
     "ipykernel>=7.1.0",
     "pytest-asyncio",
+    "pytest-cov>=7.1.0",
 ]
 
 # ============================================================
@@ -175,20 +177,16 @@ build-backend = "setuptools.build_meta"
 # PACKAGING & DISCOVERY
 # ============================================================
 # Tells setuptools where to find the source code.
-# This makes 'common' and 'src' importable when installed (pip install -e .).
 [tool.setuptools.packages.find]
-where = ["."]  # Look in the project root
-include = ["common*", "src*"]  # Treat 'common' and 'src' folders as packages
+where = ["."]
+include = ["src*"]
 
 
 # ============================================================
 # PYTEST SETTINGS
 # ============================================================
-# Configures the test runner to automatically find code.
 [tool.pytest.ini_options]
-# Adds 'src' and 'common' to the python path during tests.
-# This allows tests to import modules (e.g., 'import travel_agent')
-# just like the apps do locally, preventing ModuleNotFoundError.
-pythonpath = ["src", "common"]
+pythonpath = ["src"]
 testpaths = ["tests"]  # Only look for tests in the 'tests' directory
 addopts = "-q"  # Run in quiet mode (less verbose output)
+asyncio_mode = "auto"  # Auto-detect async tests (requires pytest-asyncio)

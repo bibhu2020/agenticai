@@ -8,15 +8,7 @@ import os
 import sys
 from typing import AsyncGenerator
 
-# Add path for common and local modules
-current_dir = os.path.dirname(os.path.abspath(__file__))
-repo_root = os.path.abspath(os.path.join(current_dir, "../../../"))
-if repo_root not in sys.path:
-    sys.path.append(repo_root)
-if current_dir not in sys.path:
-    sys.path.append(current_dir)
-
-from common.utility.autogen_model_factory import AutoGenModelFactory
+from utility.autogen_model_factory import AutoGenModelFactory
 from teams.team import get_analyst_team, get_decision_team, extract_json
 from tools.news_data import get_sentiment_pipeline
 

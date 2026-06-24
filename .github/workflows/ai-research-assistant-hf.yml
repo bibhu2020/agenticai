@@ -1,0 +1,17 @@
+name: Deploy Nexus to Hugging Face
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'src/ai-research-assistant/**'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    uses: ./.github/workflows/reusable-deploy-hf.yml
+    with:
+      app_path: src/ai-research-assistant
+      hf_space_name: chatbot-app
+      include_mcpservers: true
+    secrets: inherit

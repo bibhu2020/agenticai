@@ -1,0 +1,17 @@
+name: Deploy Athena to Hugging Face
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'src/deep-research-reporter/**'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    uses: ./.github/workflows/reusable-deploy-hf.yml
+    with:
+      app_path: src/deep-research-reporter
+      hf_space_name: deep-research-app
+      include_mcpservers: true
+    secrets: inherit
