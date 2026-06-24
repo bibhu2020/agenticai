@@ -105,6 +105,7 @@ async def analyze(ticker: str, provider: str = "openai"):
     return StreamingResponse(event_generator(), media_type="text/event-stream")
 
 # Static mounting logic...
+current_dir = os.path.dirname(os.path.abspath(__file__))
 frontend_dist = os.path.abspath(os.path.join(current_dir, "../frontend/dist"))
 if os.path.exists(frontend_dist):
     assets_dir = os.path.join(frontend_dist, "assets")
