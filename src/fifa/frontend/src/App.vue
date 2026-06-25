@@ -134,6 +134,14 @@ async function installPWA() {
   align-items: center;
   gap: 24px;
 }
+
+@media (max-width: 640px) {
+  .header { padding: 0 14px; }
+  .header-inner { height: 56px; gap: 10px; }
+  .brand-icon { font-size: 22px; }
+  .brand-title { font-size: 15px; }
+  .brand-sub { display: none; }
+}
 .brand { display: flex; align-items: center; gap: 12px; }
 .brand-icon { font-size: 28px; }
 .brand-title { display: block; font-size: 18px; font-weight: 700; color: #FFD700; line-height: 1; }
@@ -159,6 +167,7 @@ async function installPWA() {
 
 .spin { display: inline-block; animation: spin 0.8s linear infinite; }
 
+/* ── Desktop tab bar (top) ── */
 .tabs {
   display: flex;
   background: #0D1F3C;
@@ -167,7 +176,11 @@ async function installPWA() {
   position: sticky;
   top: 70px;
   z-index: 99;
+  overflow-x: auto;
+  scrollbar-width: none;
 }
+.tabs::-webkit-scrollbar { display: none; }
+
 .tab {
   display: flex;
   align-items: center;
@@ -178,6 +191,7 @@ async function installPWA() {
   font-size: 14px;
   font-weight: 500;
   border-bottom: 2px solid transparent;
+  white-space: nowrap;
   transition: all 0.2s;
 }
 .tab:hover { color: var(--text-secondary); }
@@ -189,12 +203,58 @@ async function installPWA() {
 .fade-enter-active, .fade-leave-active { transition: opacity 0.15s; }
 .fade-enter-from, .fade-leave-to { opacity: 0; }
 
-@media (max-width: 768px) {
+/* ── Mobile: bottom navigation bar ── */
+@media (max-width: 640px) {
   .header-stats { display: none; }
   .last-updated { display: none; }
   .header-inner { gap: 12px; }
-  .content { padding: 16px; }
+  .content { padding: 12px 12px 80px; } /* bottom padding clears the nav bar */
+
+  /* Hide top tab bar, show bottom nav instead */
+  .tabs {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+    border-bottom: none;
+    border-top: 1px solid var(--border);
+    background: rgba(13, 31, 60, 0.97);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.4);
+    z-index: 200;
+    overflow-x: visible;
+  }
+
+  .tab {
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    padding: 8px 4px 10px;
+    border-bottom: none;
+    border-top: 2px solid transparent;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+  }
+  .tab.active {
+    border-bottom-color: transparent;
+    border-top-color: var(--accent-gold);
+    color: var(--accent-gold);
+    background: rgba(255,215,0,0.06);
+  }
+  .tab-icon { font-size: 20px; line-height: 1; }
+  .tab-label { line-height: 1; }
+}
+
+@media (min-width: 641px) and (max-width: 900px) {
+  .header-stats { display: none; }
+  .last-updated { display: none; }
   .tabs { padding: 0 8px; }
-  .tab { padding: 12px 12px; font-size: 13px; }
+  .tab { padding: 12px 14px; font-size: 13px; }
 }
 </style>
