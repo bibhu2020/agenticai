@@ -217,7 +217,8 @@ async function installPWA() {
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 0;
+    padding: 0 8px;
+    padding-bottom: env(safe-area-inset-bottom, 0px); /* iOS home indicator */
     border-bottom: none;
     border-top: 1px solid var(--border);
     background: rgba(13, 31, 60, 0.97);
@@ -234,7 +235,8 @@ async function installPWA() {
     align-items: center;
     justify-content: center;
     gap: 3px;
-    padding: 8px 4px 10px;
+    padding: 8px 6px 10px;
+    min-width: 0; /* allow shrink so labels don't overflow */
     border-bottom: none;
     border-top: 2px solid transparent;
     font-size: 10px;
