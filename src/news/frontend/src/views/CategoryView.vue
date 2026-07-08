@@ -94,7 +94,12 @@ watch(() => props.categoryKey, load)
     </div>
 
     <div v-else class="news-grid">
-      <article v-for="(article, idx) in articles" :key="idx" class="news-card card">
+      <article
+        v-for="(article, idx) in articles"
+        :key="idx"
+        class="news-card card"
+        :class="{ 'now-playing-card': isCurrent(idx) }"
+      >
         <div class="thumbnail-wrap">
           <img
             v-if="article.image"
@@ -106,6 +111,9 @@ watch(() => props.categoryKey, load)
           />
           <div v-else class="thumbnail-placeholder">{{ tabMeta(categoryKey).icon }}</div>
           <span class="source-badge" v-if="article.source">{{ article.source }}</span>
+          <span class="now-playing-badge" v-if="isCurrent(idx)">
+            {{ player.state.isPlaying ? '🔊 Playing' : '⏸ Paused' }}
+          </span>
         </div>
 
         <div class="news-content">
@@ -146,7 +154,23 @@ watch(() => props.categoryKey, load)
   gap: 20px;
 }
 
-.news-card { display: flex; flex-direction: column; overflow: hidden; }
+.news-card { display: flex; flex-direction: column; overflow: hidden; transition: box-shadow 0.2s, border-color 0.2s; }
+.now-playing-card {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 1px var(--accent-primary), 0 8px 30px rgba(245,158,11,0.25);
+}
+
+.now-playing-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--accent-primary);
+  color: #1a1200;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 700;
+}
 
 .thumbnail-wrap { position: relative; height: 190px; overflow: hidden; background: var(--bg-secondary); flex-shrink: 0; }
 .thumbnail { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
