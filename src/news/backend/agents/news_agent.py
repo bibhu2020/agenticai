@@ -12,10 +12,14 @@ try:
     from .sources import CATEGORIES
     from .tools import fetch_rss_candidates, duckduckgo_news_search, extract_thumbnail
     from ..llm import get_llm
+    from ..tts import synthesize
+    from ..utils.media_client import push_audio_bytes
 except ImportError:
     from agents.sources import CATEGORIES
     from agents.tools import fetch_rss_candidates, duckduckgo_news_search, extract_thumbnail
     from llm import get_llm
+    from tts import synthesize
+    from utils.media_client import push_audio_bytes
 
 _DATA_PATH = Path(__file__).resolve().parents[2] / "data" / "news.json"
 _MAX_CANDIDATES_PER_CATEGORY = 30
@@ -135,6 +139,30 @@ def node_resolve_thumbnails(state: NewsState) -> dict:
     return {"categories": categories}
 
 
+def node_generate_audio(state: NewsState) -> dict:
+    import os
+    if not os.environ.get("GH_MEDIA_TOKEN"):
+        print("[agent] GH_MEDIA_TOKEN not set — skipping audio generation")
+        return {}
+
+    categories = state["categories"]
+    errors = dict(state.get("errors", {}))
+
+    for cat_key, picks in categories.items():
+        for idx, article in enumerate(picks):
+            try:
+                print(f"[agent] synthesizing audio for {cat_key}[{idx}] …")
+                text = f"{article['title']}. {article['summary']}"
+                mp3_bytes = synthesize(text)
+                url = push_audio_bytes(mp3_bytes, f"{cat_key}/{idx}.mp3")
+                article["audio"] = url
+            except Exception as exc:
+                errors[f"{cat_key}[{idx}]_audio"] = f"audio generation failed: {exc}"
+                article["audio"] = ""
+
+    return {"categories": categories, "errors": errors}
+
+
 def node_save(state: NewsState) -> dict:
     print("[agent] saving news.json …")
     payload = {
@@ -153,12 +181,14 @@ def build_graph():
     g.add_node("fetch_candidates", node_fetch_candidates)
     g.add_node("rank_and_summarize", node_rank_and_summarize)
     g.add_node("resolve_thumbnails", node_resolve_thumbnails)
+    g.add_node("generate_audio", node_generate_audio)
     g.add_node("save", node_save)
 
     g.set_entry_point("fetch_candidates")
     g.add_edge("fetch_candidates", "rank_and_summarize")
     g.add_edge("rank_and_summarize", "resolve_thumbnails")
-    g.add_edge("resolve_thumbnails", "save")
+    g.add_edge("resolve_thumbnails", "generate_audio")
+    g.add_edge("generate_audio", "save")
     g.add_edge("save", END)
 
     return g.compile()

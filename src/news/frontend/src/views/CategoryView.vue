@@ -1,14 +1,45 @@
 <script setup>
-import { ref, watch, onMounted } from 'vue'
+import { ref, computed, watch, onMounted } from 'vue'
 import { getCategoryNews } from '../services/api.js'
 import { tabMeta } from '../categories.js'
+import { usePlayer } from '../player.js'
 
 const props = defineProps({ categoryKey: { type: String, required: true } })
+const player = usePlayer()
 
 const loading = ref(true)
 const error = ref(null)
 const articles = ref([])
 const generatedAt = ref(null)
+
+const queueItems = computed(() => articles.value.map((a, i) => ({
+  category: props.categoryKey,
+  index: i,
+  title: a.title,
+  audioUrl: a.audio,
+})))
+
+const hasAnyAudio = computed(() => articles.value.some(a => a.audio))
+
+function isCurrent(idx) {
+  const t = player.currentTrack.value
+  return !!t && t.category === props.categoryKey && t.index === idx
+}
+
+function isTabQueuePlaying() {
+  const t = player.currentTrack.value
+  return !!t && t.category === props.categoryKey && player.state.isPlaying
+}
+
+function playAllInTab() {
+  if (isTabQueuePlaying()) { player.togglePlay(); return }
+  player.playQueue(queueItems.value, 0)
+}
+
+function playArticle(idx) {
+  if (isCurrent(idx)) { player.togglePlay(); return }
+  player.playQueue(queueItems.value, idx)
+}
 
 function formatDate(dateStr) {
   if (!dateStr) return ''
@@ -39,7 +70,12 @@ watch(() => props.categoryKey, load)
   <div class="category-view">
     <div class="view-header">
       <h1 class="view-title">{{ tabMeta(categoryKey).icon }} {{ tabMeta(categoryKey).label }}</h1>
-      <span class="article-count" v-if="articles.length">{{ articles.length }} stories</span>
+      <div class="view-header-actions">
+        <button v-if="hasAnyAudio" class="btn btn-outline play-all-btn" @click="playAllInTab">
+          {{ isTabQueuePlaying() ? '⏸ Pause' : '▶ Play all in this tab' }}
+        </button>
+        <span class="article-count" v-if="articles.length">{{ articles.length }} stories</span>
+      </div>
     </div>
 
     <div v-if="loading" class="loading-spinner">
@@ -77,6 +113,14 @@ watch(() => props.categoryKey, load)
           <h3 class="news-title">{{ article.title }}</h3>
           <p class="news-summary">{{ article.summary }}</p>
           <div class="news-actions">
+            <button
+              v-if="article.audio"
+              class="btn btn-outline listen-btn"
+              @click="playArticle(idx)"
+              :class="{ playing: isCurrent(idx) && player.state.isPlaying }"
+            >
+              {{ isCurrent(idx) && player.state.isPlaying ? '⏸ Pause' : '🔊 Listen' }}
+            </button>
             <a v-if="article.url" :href="article.url" target="_blank" rel="noopener" class="btn btn-outline read-more">
               Read source →
             </a>
@@ -90,9 +134,11 @@ watch(() => props.categoryKey, load)
 <style scoped>
 .category-view { display: flex; flex-direction: column; gap: 20px; }
 
-.view-header { display: flex; align-items: center; justify-content: space-between; }
+.view-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
 .view-title { font-size: 22px; font-weight: 700; }
-.article-count { font-size: 13px; color: var(--text-muted); }
+.view-header-actions { display: flex; align-items: center; gap: 12px; }
+.article-count { font-size: 13px; color: var(--text-muted); white-space: nowrap; }
+.play-all-btn { white-space: nowrap; }
 
 .news-grid {
   display: grid;
@@ -136,8 +182,10 @@ watch(() => props.categoryKey, load)
 
 .news-summary { font-size: 14px; color: var(--text-secondary); line-height: 1.6; flex: 1; }
 
-.news-actions { margin-top: auto; }
+.news-actions { margin-top: auto; display: flex; gap: 8px; flex-wrap: wrap; }
 .read-more { font-size: 13px; padding: 7px 14px; }
+.listen-btn { font-size: 13px; padding: 7px 14px; }
+.listen-btn.playing { border-color: var(--accent-primary); color: var(--accent-primary); }
 
 @media (max-width: 640px) {
   .news-grid { grid-template-columns: 1fr; }

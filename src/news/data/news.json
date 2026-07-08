@@ -1,282 +1,333 @@
 {
-  "generated_at": "2026-07-08T11:42:23.206064+00:00",
+  "generated_at": "2026-07-08T12:26:24.727440+00:00",
   "categories": {
     "world": [
       {
         "title": "Trump says ceasefire is 'over' after US and Iran trade strikes",
-        "summary": "President Trump declared the US-Iran ceasefire over following military exchanges in the region. The US launched strikes targeting Iranian military boats in response to attacks on three oil tankers in the Strait of Hormuz. Speaking ahead of a NATO summit, Trump indicated US negotiators could continue talks with Iran if they wish. The escalation marks a significant deterioration in US-Iran relations, with oil prices jumping over five percent following the military confrontation. The situation raises concerns about regional stability and potential further escalation in the strategically critical Persian Gulf region.",
+        "summary": "President Trump declared a ceasefire with Iran is over following military exchanges between the two nations. The US launched strikes targeting Iranian military boats in response to attacks on three oil tankers in the Strait of Hormuz. Speaking ahead of a NATO summit, Trump indicated that US negotiators could continue diplomatic talks with Iran if they wish. The escalation marks a significant deterioration in US-Iran relations, with the president's comments suggesting a hardened stance despite maintaining the possibility of future negotiations.",
         "url": "https://www.bbc.co.uk/news/articles/clyw8w1g409o?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
         "published_at": "Wed, 08 Jul 2026 11:18:28 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/303b/live/574a8a30-7ab8-11f1-b976-0b9c15b0ccfc.jpg"
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/303b/live/574a8a30-7ab8-11f1-b976-0b9c15b0ccfc.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/0.mp3"
       },
       {
         "title": "Nato allies announce £37bn for new missile project",
-        "summary": "NATO allies have announced a £37 billion investment in a new missile project during discussions at a summit. Prime Minister Sir Keir Starmer will convene approximately a dozen leaders in Ankara to discuss the ambitious programme. This significant military investment reflects NATO's commitment to strengthening collective defense capabilities amid ongoing geopolitical tensions. The project represents a major coordinated effort among allied nations to modernize defense infrastructure and enhance deterrence capabilities. The announcement underscores NATO's strategic focus on technological advancement and military readiness in response to evolving security challenges in Europe and beyond.",
+        "summary": "NATO allies have announced a £37 billion investment in a new missile project during discussions at a summit. Prime Minister Sir Keir Starmer will convene approximately a dozen leaders to discuss the programme in Ankara. This significant military investment reflects NATO's commitment to strengthening collective defense capabilities amid ongoing geopolitical tensions. The project represents a major coordinated effort among allied nations to modernize and enhance their defensive missile systems, underscoring the alliance's response to evolving security challenges in Europe and beyond.",
         "url": "https://www.bbc.co.uk/news/articles/ckg4e3lwzqzo?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
         "published_at": "Wed, 08 Jul 2026 05:57:53 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4b9c/live/d6af33b0-7a73-11f1-b49c-fd67f645cd09.jpg"
-      },
-      {
-        "title": "Will Le Pen rise again? French nationalist leader defiant after court's ruling",
-        "summary": "Marine Le Pen, France's nationalist leader, launched her presidential campaign within hours of a court of appeal confirming a guilty verdict against her. Despite the legal setback, Le Pen demonstrated defiance and determination to continue her political ambitions. The court's confirmation of the guilty verdict represents a significant legal challenge to her political career, yet she proceeded with campaign activities regardless. Her swift response suggests she intends to contest the ruling and maintain her position as a major political force in France. The situation highlights the intersection of legal proceedings and electoral politics in French democracy.",
-        "url": "https://www.bbc.co.uk/news/articles/cvgdlprp1r3o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC News",
-        "published_at": "Wed, 08 Jul 2026 03:22:46 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a1d7/live/39e985c0-7a6f-11f1-bee8-53ce494e1abc.jpg"
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4b9c/live/d6af33b0-7a73-11f1-b49c-fd67f645cd09.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/1.mp3"
       },
       {
         "title": "Russian fuel shortages bite – but will Putin change tack in Ukraine war?",
-        "summary": "Russia is experiencing significant fuel shortages that are affecting even Moscow, where authorities cannot guarantee adequate supplies. The economic pressure from fuel scarcity raises questions about whether Russia might pursue diplomatic negotiations or instead escalate military operations in Ukraine. The shortage reflects the impact of sanctions and wartime economic strain on Russian infrastructure and supply chains. Analysts are uncertain whether these economic difficulties will prompt policy changes or intensify existing conflicts. The situation underscores the broader economic consequences of prolonged military engagement and international sanctions on Russia's domestic stability and resource availability.",
+        "summary": "Russia is experiencing significant fuel shortages that are affecting even Moscow, where authorities cannot guarantee adequate supplies. The economic pressure from fuel scarcity raises questions about whether Russia will pursue diplomatic negotiations or escalate its military operations in Ukraine. The shortage reflects the impact of sanctions and wartime economic strain on Russian infrastructure and resources. Analysts are examining whether these domestic economic challenges will force a strategic reassessment of Putin's approach to the Ukraine conflict or whether the Kremlin will intensify military efforts despite resource constraints.",
         "url": "https://www.bbc.co.uk/news/articles/cr7xk8j0j2do?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
         "published_at": "Wed, 08 Jul 2026 05:05:31 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d9b7/live/3b3ee060-7a1e-11f1-8228-eda6b31aeccd.jpg"
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d9b7/live/3b3ee060-7a1e-11f1-8228-eda6b31aeccd.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/2.mp3"
+      },
+      {
+        "title": "Will Le Pen rise again? French nationalist leader defiant after court's ruling",
+        "summary": "Marine Le Pen, France's nationalist leader, has launched her presidential campaign within hours of a court of appeal confirming a guilty verdict against her. Despite the legal setback, Le Pen remains defiant and determined to pursue high political office. The timing of her campaign announcement demonstrates her resolve to continue her political ambitions regardless of the court's decision. Her actions signal that she intends to contest the verdict's implications and maintain her position as a significant force in French politics, potentially appealing to supporters who view the ruling as politically motivated.",
+        "url": "https://www.bbc.co.uk/news/articles/cvgdlprp1r3o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC News",
+        "published_at": "Wed, 08 Jul 2026 03:22:46 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a1d7/live/39e985c0-7a6f-11f1-bee8-53ce494e1abc.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/3.mp3"
       },
       {
         "title": "'The water just came so fast': Typhoon triggers floods and rare tornadoes in China",
-        "summary": "A typhoon struck China, triggering severe flooding and rare tornado activity that displaced families and created humanitarian challenges. Villagers reported that families became stranded in affected areas, struggling to access food and emergency assistance. The rapid onset of flooding caught residents off guard, with water arriving with dangerous speed and force. The disaster highlighted vulnerabilities in disaster response infrastructure and the challenges of reaching isolated communities during extreme weather events. The combination of flooding and tornadoes represents an unusual and particularly destructive weather pattern, underscoring the increasing severity of extreme weather phenomena in the region.",
+        "summary": "A typhoon has triggered severe flooding and rare tornadoes across China, causing significant disruption and hardship for affected communities. Villagers whose families have been stranded are struggling to access food and emergency assistance, according to reports from the BBC. The extreme weather event has created dangerous conditions with rapid water surges overwhelming local areas. The combination of flooding and tornadoes represents an unusual and particularly destructive weather pattern, compounding the humanitarian crisis as rescue and relief efforts work to reach isolated populations and provide essential supplies to those affected by the disaster.",
         "url": "https://www.bbc.co.uk/news/articles/c79ygnv9e93o?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
         "published_at": "Wed, 08 Jul 2026 00:49:07 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c16e/live/c1b8aea0-79ba-11f1-8257-1765759c449e.jpg"
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c16e/live/c1b8aea0-79ba-11f1-8257-1765759c449e.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/4.mp3"
       }
     ],
     "usa": [
       {
         "title": "Trump says ceasefire is 'over' after US and Iran trade strikes",
-        "summary": "President Trump declared a ceasefire with Iran is finished following military exchanges between the two nations. Speaking ahead of a NATO summit, Trump stated that US negotiators could continue talks with Iranian officials if they wish to engage. The announcement comes after the US launched strikes on Iranian military boats and coastal sites in response to attacks on three oil tankers in the Strait of Hormuz. The escalating tensions between the US and Iran represent a significant development in Middle Eastern geopolitics, with implications for regional stability and international diplomatic efforts.",
+        "summary": "President Trump declared the ceasefire with Iran \"over\" ahead of a NATO summit, stating that US negotiators can continue talks with Iranian officials if they wish. This statement follows recent military exchanges between the US and Iran, including American strikes on Iranian military boats and coastal sites in response to attacks on oil tankers in the Strait of Hormuz. The escalation marks a significant shift in US-Iran relations and comes as Trump prepares to address NATO allies about defense spending and international security concerns.",
         "url": "https://www.bbc.co.uk/news/articles/clyw8w1g409o?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
         "published_at": "Wed, 08 Jul 2026 11:18:28 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/303b/live/574a8a30-7ab8-11f1-b976-0b9c15b0ccfc.jpg"
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/303b/live/574a8a30-7ab8-11f1-b976-0b9c15b0ccfc.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/0.mp3"
+      },
+      {
+        "title": "Suspect ate Chick-fil-A and interacted with Charlie Kirk staff before shooting, court hears",
+        "summary": "Tyler Robinson, accused of killing conservative activist Charlie Kirk, appeared in preliminary hearing where prosecutors presented evidence including surveillance footage showing the suspect's movements before the shooting. Court documents revealed Robinson ate at Chick-fil-A and interacted with Kirk's staff prior to the incident. The preliminary hearing will determine whether Robinson will stand trial for the murder charge. Robinson has been accused of the high-profile killing of the prominent conservative political commentator and activist.",
+        "url": "https://www.bbc.co.uk/news/articles/cr5j983p046o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC News",
+        "published_at": "Wed, 08 Jul 2026 02:46:14 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9139/live/497a46a0-7a3d-11f1-ab76-d75965dea4d1.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/1.mp3"
       },
       {
         "title": "Questions swirl over top US Republican McConnell's hospital stay - here's what we know",
-        "summary": "Senate Republican leader Mitch McConnell, 84, has been hospitalized for more than four weeks with his staff declining to disclose the reason for his admission. The prolonged hospital stay of the prominent political figure has raised questions about his health and ability to continue his leadership role. McConnell's absence from public duties during this extended period has created uncertainty within Republican circles regarding legislative priorities and party direction. The lack of transparency surrounding his condition has fueled speculation among lawmakers and political observers about potential implications for Senate operations and Republican leadership continuity.",
+        "summary": "Senate Republican leader Mitch McConnell, 84, has been hospitalized for more than four weeks with his staff declining to disclose the reason for admission. The prolonged hospital stay has raised questions about his health and ability to continue his leadership role in the Senate. McConnell's absence from public duties has sparked speculation and concern among colleagues and political observers. His office has provided minimal information about his condition or expected timeline for discharge, leaving significant uncertainty about his political future.",
         "url": "https://www.bbc.co.uk/news/articles/c4gyjpkzew1o?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
         "published_at": "Wed, 08 Jul 2026 01:58:20 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/72fb/live/7069fd50-7a51-11f1-b726-3d305a892bc6.jpg"
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/72fb/live/7069fd50-7a51-11f1-b726-3d305a892bc6.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/2.mp3"
       },
       {
         "title": "US prosecutors arrest 24 in major probe into India-based organised crime",
-        "summary": "US prosecutors have arrested 24 individuals in a major investigation targeting India-based organized crime networks. In one significant indictment, prosecutors accuse Punjab-based Bishnoi gang leaders of ordering the 2023 shooting of Canadian Sikh leader Hardeep Singh Nijjar. The arrests represent a substantial law enforcement operation addressing transnational criminal activity. The investigation highlights connections between Indian organized crime syndicates and violent incidents affecting North American communities, demonstrating coordinated efforts between US and international authorities to combat cross-border criminal enterprises and hold gang leaders accountable for serious crimes.",
+        "summary": "US federal prosecutors arrested 24 individuals in a major investigation targeting India-based organized crime networks operating in the United States. In one significant indictment, prosecutors accused Punjab-based Bishnoi gang leaders of ordering the 2023 shooting of Canadian Sikh leader Hardeep Singh Nijjar. The coordinated arrests represent a substantial law enforcement operation against transnational criminal organizations. The investigation highlights growing concerns about international organized crime networks and their activities across North American borders, with implications for US-Canada-India security cooperation.",
         "url": "https://www.bbc.co.uk/news/articles/cx2xl9gyxqyo?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
         "published_at": "Tue, 07 Jul 2026 22:17:05 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a9f9/live/7022c150-7a34-11f1-bee8-53ce494e1abc.jpg"
-      },
-      {
-        "title": "Utah boarding school where Paris Hilton alleged abuse as a teen loses its licence",
-        "summary": "A Utah boarding school where Paris Hilton reported experiencing abuse during her teenage years has lost its operating license following regulatory action. Regulators cited the facility for neglect and unnecessary use of restraints on students. Hilton stated the school \"failed the children,\" supporting the regulatory findings. The license revocation represents a significant accountability measure for the institution and validates concerns raised by former students about conditions and treatment practices. The action reflects broader scrutiny of residential treatment facilities and boarding schools, particularly regarding student welfare, safety protocols, and appropriate use of restraint and isolation measures in educational settings.",
-        "url": "https://www.bbc.co.uk/news/articles/cjdg4r3k3emo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC News",
-        "published_at": "Wed, 08 Jul 2026 01:51:09 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9ab8/live/35f74120-7a68-11f1-b3a0-9d60633dee75.jpg"
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a9f9/live/7022c150-7a34-11f1-bee8-53ce494e1abc.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/3.mp3"
       },
       {
         "title": "Dallas Cowboys player who died by suicide diagnosed with brain disease",
-        "summary": "Marshawn Kneeland, a Dallas Cowboys player who died by suicide, was posthumously diagnosed with early chronic traumatic encephalopathy (CTE), a degenerative brain disease caused by repeated head impacts. CTE has been identified in hundreds of former NFL players and is associated with cognitive decline, behavioral changes, and depression. The diagnosis adds to growing evidence linking football-related head trauma to serious neurological consequences. Kneeland's case underscores ongoing concerns within professional sports about player safety, long-term health consequences of repeated concussions, and the need for improved prevention and treatment protocols to protect athletes from cumulative brain injury.",
+        "summary": "Marshawn Kneeland, a Dallas Cowboys player who died by suicide, was posthumously diagnosed with early chronic traumatic encephalopathy (CTE), a degenerative brain disease caused by repeated head impacts. CTE has been identified in hundreds of former NFL players and is associated with cognitive decline, behavioral changes, and depression. The diagnosis adds to growing concerns about long-term neurological consequences of professional football. Kneeland's case highlights the ongoing debate about player safety in the NFL and the potential link between football-related head trauma and mental health crises among athletes.",
         "url": "https://www.bbc.co.uk/news/articles/c5yz6kllg1jo?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
         "published_at": "Wed, 08 Jul 2026 06:59:03 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9802/live/49eb2cb0-7a44-11f1-bc29-738b6960c215.jpg"
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9802/live/49eb2cb0-7a44-11f1-bc29-738b6960c215.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/4.mp3"
       }
     ],
     "india": [
       {
         "title": "US prosecutors arrest 24 in major probe into India-based organised crime",
-        "summary": "US prosecutors have arrested 24 individuals in a major investigation targeting India-based organized crime networks. In one significant indictment, prosecutors accuse Punjab-based Bishnoi gang leaders of ordering the 2023 shooting of Canadian Sikh leader Hardeep Singh Nijjar. This transnational criminal probe represents a major law enforcement action against organized crime operations with international reach, highlighting cooperation between US and Indian authorities in combating cross-border criminal activities and gang violence.",
+        "summary": "US prosecutors have arrested 24 individuals in a major investigation targeting India-based organized crime networks. In one significant indictment, prosecutors accuse Punjab-based Bishnoi gang leaders of ordering the 2023 shooting of Canadian Sikh leader Hardeep Singh Nijjar. This transnational criminal probe represents a major law enforcement operation targeting organized crime syndicates operating across borders. The arrests and charges underscore growing international cooperation in combating organized crime activities linked to Indian criminal networks, with implications for cross-border security and diplomatic relations between the United States, Canada, and India.",
         "url": "https://www.bbc.co.uk/news/articles/cx2xl9gyxqyo?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
         "published_at": "Tue, 07 Jul 2026 22:17:05 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a9f9/live/7022c150-7a34-11f1-bee8-53ce494e1abc.jpg"
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a9f9/live/7022c150-7a34-11f1-bee8-53ce494e1abc.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/0.mp3"
       },
       {
         "title": "From faith to technology - more of India's wealthy are giving to science",
-        "summary": "India's wealthy philanthropists are increasingly directing their charitable contributions toward pure sciences, marking a significant shift in philanthropic priorities. This fresh wave of commitments to scientific research represents a turning point in how India's affluent classes are allocating their wealth, moving beyond traditional faith-based giving toward supporting scientific advancement and research initiatives. This trend reflects broader changes in India's development priorities and the growing recognition of science's role in national progress and innovation.",
+        "summary": "India's wealthy philanthropists are increasingly directing their charitable contributions toward pure sciences and technology, marking a significant shift in philanthropic priorities. This emerging trend represents a turning point in how India's affluent classes allocate their wealth, moving away from traditional faith-based giving toward scientific advancement and research initiatives. The development reflects broader changes in India's economic landscape and the growing recognition of science's role in national development. This philanthropic reorientation has implications for funding scientific research, technological innovation, and educational institutions across India, potentially accelerating the country's scientific progress and technological capabilities.",
         "url": "https://www.bbc.co.uk/news/articles/cvg5388xpv9o?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
         "published_at": "Tue, 07 Jul 2026 22:07:18 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c3d6/live/7e9acb80-7a8c-11f1-9510-1546718f668b.png"
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c3d6/live/7e9acb80-7a8c-11f1-9510-1546718f668b.png",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/1.mp3"
       },
       {
         "title": "Ayodhya Ram temple overhauls board after alleged theft of donations",
-        "summary": "The Ayodhya Ram temple has restructured its board following serious allegations of theft involving cash, valuable jewellery, gold, and silver donated by devotees. The controversy has raised significant questions about financial management and accountability at one of India's most prominent religious sites. The temple's decision to overhaul its governance structure reflects efforts to address concerns about the security and proper handling of donations made by pilgrims, highlighting broader issues of transparency and trust in religious institutions.",
+        "summary": "The Ayodhya Ram temple has undertaken significant administrative changes following serious allegations of theft involving donations made by devotees. Questions have been raised regarding the alleged theft of cash, valuable jewelry, gold, and silver offerings presented by pilgrims at the temple. The controversy has prompted the temple authorities to restructure its governing board in response to these financial irregularities. This incident raises concerns about the management and security of religious donations at one of India's most significant Hindu pilgrimage sites. The temple's response reflects efforts to restore public confidence and ensure proper stewardship of devotee contributions and temple resources.",
         "url": "https://www.bbc.co.uk/news/articles/c872ngz405xo?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
         "published_at": "Tue, 07 Jul 2026 06:23:04 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2a54/live/36a0d7c0-68c6-11f1-a3bc-8d97b01bf439.jpg"
-      },
-      {
-        "title": "Why a Diljit Dosanjh film vanished from streaming after two days",
-        "summary": "A Diljit Dosanjh film was removed from a streaming platform after just two days, concluding a troubled journey marked by years of censorship disputes, court battles, and regulatory challenges. The film's complicated path to release reflects ongoing tensions between creative expression and content regulation in India's entertainment industry. The rapid removal highlights the complex landscape filmmakers navigate regarding censorship, platform policies, and legal requirements, demonstrating the challenges faced by productions dealing with sensitive or controversial subject matter in India's media environment.",
-        "url": "https://www.bbc.co.uk/news/articles/cly99z1w4gdo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC News",
-        "published_at": "Mon, 06 Jul 2026 22:06:29 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5716/live/e8afe800-7921-11f1-ad80-cd26c37678cb.jpg"
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2a54/live/36a0d7c0-68c6-11f1-a3bc-8d97b01bf439.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/2.mp3"
       },
       {
         "title": "Why an anti-sacrilege law in Punjab has sparked controversy",
-        "summary": "Punjab's anti-sacrilege law has reignited one of the state's most sensitive political and religious issues, generating significant controversy ahead of state elections scheduled for next year. The dispute reflects deep divisions over religious protection, free speech, and communal harmony in the region. The law's implementation and interpretation have become flashpoints for broader debates about balancing religious sentiments with democratic freedoms, affecting political discourse and community relations in Punjab as the state prepares for upcoming electoral contests.",
+        "summary": "Punjab's anti-sacrilege law has reignited significant controversy, reviving one of the state's most sensitive political and religious issues ahead of state elections scheduled for next year. The dispute centers on legislation designed to protect religious sentiments and prevent desecration of sacred sites and objects. The law has become a focal point for broader debates about religious freedom, state authority, and communal harmony in Punjab. The timing of this controversy, coinciding with the electoral cycle, suggests it may become a significant political issue influencing voter sentiment and party positioning. The dispute reflects deep-rooted tensions between religious protection measures and concerns about their potential misuse or impact on civil liberties.",
         "url": "https://www.bbc.co.uk/news/articles/crlw1xrzd8yo?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
         "published_at": "Mon, 06 Jul 2026 08:35:56 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f617/live/13322fa0-75e6-11f1-b2ef-f150187f763a.jpg"
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f617/live/13322fa0-75e6-11f1-b2ef-f150187f763a.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/3.mp3"
+      },
+      {
+        "title": "NCERT textbook revision: Hitler references dropped, Congress' Partition stand tweaked",
+        "summary": "India's National Council of Educational Research and Training has released a revised Class 8 Social Science textbook following a Supreme Court directive. The new edition removes a controversial chapter on the judiciary and significantly alters historical narratives presented to students. Key revisions include the removal of Hitler references and modifications to how the Congress party's stance on the 1947 Partition is portrayed. The revised textbook now includes Vinayak Damodar Savarkar's demand for Swaraj and refocuses the judiciary chapter on constitutional roles and institutional structure. These changes reflect ongoing debates about historical interpretation and curriculum content in Indian education.",
+        "url": "https://timesofindia.indiatimes.com/india/ncert-textbook-revision-after-supreme-court-rap-over-judiciary-chapter-hitler-references-removed-congress-stance-on-partition-revised/articleshow/132260523.cms",
+        "source": "Times of India",
+        "published_at": "Wed, 08 Jul 2026 16:06:03 +0530",
+        "image": "https://static.toiimg.com/photo/msid-132260925,imgsize-128518.cms",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/4.mp3"
       }
     ],
     "odisha": [
       {
-        "title": "Foundation Stone Laid For Odisha's First NH-16 Skywalk Project In Bhubaneswar",
-        "summary": "Odisha has commenced construction of its inaugural skywalk project along National Highway-16 in Bhubaneswar, with the foundation stone ceremony marking a significant infrastructure milestone. This skywalk project represents an important development in enhancing pedestrian safety and traffic management in the state capital. The project aims to improve connectivity and reduce congestion on one of India's major national highways. The initiative reflects Odisha's commitment to modernizing urban infrastructure and implementing contemporary transportation solutions. This first-of-its-kind skywalk in the state is expected to facilitate smoother traffic flow and provide safer passage for pedestrians crossing the busy highway corridor.",
-        "url": "https://swarajyamag.com/news-brief/foundation-stone-laid-for-odishas-first-nh-16-skywalk-project-in-bhubaneswar",
-        "source": "Swarajya",
-        "published_at": "2026-05-14T11:40:20+00:00",
-        "image": "https://www.bing.com/th?id=ONUT.bKYQ68pteL4Bj-2zGnNOPg"
-      },
-      {
         "title": "Antyodaya Gruha Yojana: How Odisha's housing scheme offers cash incentives for timely house completion",
-        "summary": "Odisha's housing department has implemented the Antyodaya Gruha Yojana, a rural housing scheme that provides cash incentives to beneficiaries who complete house construction within specified timelines. This innovative approach encourages timely project completion and ensures efficient utilization of government resources. The scheme offers financial rewards to eligible beneficiaries meeting construction deadlines, thereby promoting accountability and accelerating rural housing development. The program represents a significant policy initiative aimed at improving living standards in rural Odisha by combining financial assistance with performance-based incentives. This approach has proven effective in motivating beneficiaries to complete their homes promptly while maintaining quality standards.",
-        "url": "https://www.msn.com/en-in/urban-infrastructure/housing-and-urban-development/antyodaya-gruha-yojana-how-odisha-s-housing-scheme-offers-cash-incentives-for-timely-house-completion/ar-AA27tFCt?ocid=BingNewsVerp",
+        "summary": "Odisha's housing department has implemented the Antyodaya Gruha Yojana, a rural housing scheme that provides cash incentives to beneficiaries who complete their homes within specified timeframes. This initiative aims to accelerate rural house construction and improve housing conditions in the state. The scheme offers financial rewards for timely completion, encouraging beneficiaries to finish construction projects promptly. By combining housing assistance with performance-based incentives, the program seeks to address rural housing shortages while promoting accountability and efficiency in construction completion.",
+        "url": "https://www.msn.com/en-in/money/topstories/antyodaya-gruha-yojana-how-odishas-housing-scheme-offers-cash-incentives-for-timely-house-completion/ar-AA27tFCt?ocid=BingNewsVerp",
         "source": "The Times of India on MSN",
-        "published_at": "2026-06-26T11:40:20+00:00",
-        "image": "https://www.bing.com/th?id=ONUT.Jak31dkLB8poU23RcHEG6Q"
+        "published_at": "2026-05-26T12:11:54+00:00",
+        "image": "https://www.bing.com/th?id=ONUT.2IaK32eTr9PJpziM504sBQ",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/0.mp3"
       },
       {
         "title": "Vice president to visit Odisha on Thursday; to launch deep sea fishing permit system",
-        "summary": "Vice President C P Radhakrishnan will visit Odisha to launch the Letter of Authorisation (LoA) system for sustainable deep sea fishing operations. This initiative represents a significant step toward regulating and promoting sustainable fishing practices in Indian waters. The LoA system aims to formalize permissions for deep sea fishing activities while ensuring environmental sustainability and resource management. The Vice President's visit underscores the national importance of this fisheries management initiative. The launch of this permit system is expected to enhance transparency in deep sea fishing operations, protect marine ecosystems, and support the livelihoods of fishing communities in Odisha, which has a substantial maritime economy.",
+        "summary": "Vice President C P Radhakrishnan visited Odisha to launch the Letter of Authorisation (LoA) system for sustainable deep-sea fishing. This initiative represents a significant step toward regulating and promoting sustainable fishing practices in Odisha's marine sector. The LoA system aims to provide a structured framework for deep-sea fishing operations while ensuring environmental sustainability and resource management. The vice president's visit underscores the central government's commitment to developing Odisha's fishing industry through modern regulatory mechanisms and sustainable practices.",
         "url": "https://www.msn.com/en-in/news/India/vice-president-to-visit-odisha-on-thursday-to-launch-deep-sea-fishing-permit-system/ar-AA27sRI9?ocid=BingNewsVerp",
         "source": "Press Trust of India on MSN",
-        "published_at": "2026-07-03T11:40:20+00:00",
-        "image": "https://www.bing.com/th?id=ONUT.xD2DYGmnsQe6Raf_hZf1yA"
+        "published_at": "2026-06-02T12:11:54+00:00",
+        "image": "https://www.bing.com/th?id=ONUT.xD2DYGmnsQe6Raf_hZf1yA",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/1.mp3"
+      },
+      {
+        "title": "The fascinating connection between Rath Yatra & Durga Puja you didn't know about. Watch the video",
+        "summary": "Odisha's Rath Yatra festival has a significant cultural connection to Bengal's Durga Puja celebrations. The saying \"Rath tanle, Durga ashe\" reflects how Rath Yatra signals the beginning of Durga Puja preparations in Bengal. This cultural linkage demonstrates the interconnected nature of major Hindu festivals across eastern India, with Odisha's Rath Yatra serving as a temporal marker for Bengali communities. Associated rituals like Kathamo Puja and Khuti Puja further illustrate the deep cultural ties between these two important festivals, showcasing the shared religious and cultural heritage of the eastern Indian region.",
+        "url": "https://www.indulgexpress.com/videos/2026/Jul/08/the-fascinating-connection-between-rath-yatra-durga-puja-you-didnt-know-about-watch-the-video",
+        "source": "Indulgexpress",
+        "published_at": "2026-06-25T12:11:54+00:00",
+        "image": "https://cf-images.assettype.com/indulgexpress%2F2026-07-08%2F1lvg7rkt%2F1687088023rath-yatra.jpg?w=1200&ar=40%3A21&auto=format%2Ccompress&ogImage=true&mode=crop&enlarge=true&overlay=false&overlay_position=bottom&overlay_width=100",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/2.mp3"
+      },
+      {
+        "title": "Kharif-sown area shrinks by over 20% after delayed and deficient monsoon rainfall",
+        "summary": "Kharif-sown agricultural area has contracted by over 20 percent due to delayed and deficient monsoon rainfall affecting farming regions including Odisha. The reduced rainfall has created challenging conditions for traditional monsoon-dependent crops, prompting agricultural authorities to advise farmers to shift toward alternative cultivation strategies. Farmers are being encouraged to adopt short-duration and low water-intensive crops such as maize, bajra, and moong to mitigate losses and maintain productivity. This adaptation strategy reflects the agricultural sector's response to climate variability and the need for crop diversification to ensure food security and farmer livelihoods during periods of inadequate rainfall.",
+        "url": "https://www.msn.com/en-in/news/India/kharif-sown-area-shrinks-by-over-20-after-delayed-and-deficient-monsoon-rainfall/ar-AA27tInn?ocid=BingNewsVerp",
+        "source": "Mint on MSN",
+        "published_at": "2026-06-23T12:11:54+00:00",
+        "image": "https://www.bing.com/th?id=ONUT.HmR8-RKvLWlXEwkItgkPlw",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/3.mp3"
+      },
+      {
+        "title": "Vedanta posts record pig iron output",
+        "summary": "Vedanta Iron and Steel has achieved its highest-ever pig iron production output, driven primarily by increased production capacity from its Goa facility. This record production milestone reflects the company's operational expansion and improved manufacturing efficiency in the iron and steel sector. The achievement demonstrates Vedanta's strengthened position in India's steel industry and its capacity to meet growing domestic and international demand. The production ramp-up at the Goa facility contributes significantly to India's overall steel output and represents important industrial growth in the eastern region's mining and metallurgical sector.",
+        "url": "https://www.constructionweekonline.in/news/vedanta-posts-record-pig-iron-output",
+        "source": "Construction Week Online India",
+        "published_at": "2026-06-17T12:11:54+00:00",
+        "image": "https://www.bing.com/th?id=ONUT.6p4VdZ8zb8hgadOKS00xMA",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/4.mp3"
       }
     ],
     "sports": [
       {
         "title": "Argentina make incredible late comeback to beat Egypt",
-        "summary": "Argentina staged a remarkable second-half comeback to defeat Egypt and advance to the 2026 World Cup quarter-finals, overcoming a two-goal deficit late in the match. The victory was particularly dramatic as Argentina secured progression without requiring extra time, delivering what has been described as a scarcely believable turnaround. Lionel Messi played a key role in the comeback, with his equalizer spearheading the historic revival. The result sent Egypt home and sparked controversy, with Egyptian officials claiming injustice and alleging favoritism toward Messi during the match.",
+        "summary": "Argentina staged a dramatic second-half comeback to defeat Egypt 3-2 in a World Cup round-of-16 match, advancing to the quarter-finals. Lionel Messi was instrumental in the remarkable turnaround, dragging his team back from a precarious position to secure victory. The match proved controversial, with Egypt's manager Hossam Hassan claiming the result represented an \"injustice\" and suggesting FIFA favored Messi's continued participation. The Egyptian FA subsequently lodged a formal complaint with FIFA demanding an investigation into officiating decisions, alleging \"double standards\" in the controversial defeat that ended their World Cup campaign.",
         "url": "https://www.bbc.co.uk/sport/football/videos/cd95wjv1nedo?at_medium=RSS&at_campaign=rss",
         "source": "BBC Sport",
         "published_at": "Tue, 07 Jul 2026 19:13:22 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d3d8/live/003fa630-7a36-11f1-bee8-53ce494e1abc.jpg"
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d3d8/live/003fa630-7a36-11f1-bee8-53ce494e1abc.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/0.mp3"
       },
       {
-        "title": "Switzerland beat Colombia on penalties to reach quarter-finals",
-        "summary": "Switzerland advanced to the 2026 World Cup quarter-finals by defeating Colombia 4-3 in a penalty shootout. Goalkeeper Gregor Kobel emerged as the hero of the match, making a stunning save from Colombia's Cucho Hernandez during the shootout to secure Switzerland's progression. The dramatic penalty victory sets up a quarter-final clash between Switzerland and Argentina, continuing the tournament's exciting knockout stage. The shootout was one of several thrilling penalty moments that defined the round of 16 matches.",
-        "url": "https://www.bbc.co.uk/sport/football/videos/c6219n0yezno?at_medium=RSS&at_campaign=rss",
-        "source": "BBC Sport",
-        "published_at": "Wed, 08 Jul 2026 00:08:31 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b096/live/69f6cda0-7a5f-11f1-9510-1546718f668b.jpg"
+        "title": "Royals' Tolbert (12 ABs, 12 hits) ties MLB record",
+        "summary": "Kansas City Royals player Tyler Tolbert tied a major league record by recording hits in twelve consecutive plate appearances during a 16-12 victory over the New York Mets on Tuesday night. Tolbert reached the historic milestone with an infield single, joining an exclusive group of MLB players to achieve this rare feat. The record-tying performance highlighted an offensive showcase in the high-scoring game, demonstrating exceptional batting consistency across multiple at-bats. This accomplishment places Tolbert among baseball's elite hitters in terms of consecutive-plate-appearance success rates.",
+        "url": "https://www.espn.com/mlb/story/_/id/49302660/tyler-tolbert-ties-mlb-mark-hits-12-straight-plate-appearances",
+        "source": "www.espn.com",
+        "published_at": "Wed, 8 Jul 2026 07:51:13 EST",
+        "image": "",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/1.mp3"
       },
       {
-        "title": "Djokovic beats Auger-Aliassime in five-set thriller to reach semi-finals",
-        "summary": "Novak Djokovic defeated Felix Auger-Aliassime in the longest Wimbledon quarter-final in history, a grueling five-hour and fifteen-minute marathon that tested both players' endurance and skill. The epic encounter showcased intense competition at the All England Club, with Djokovic ultimately prevailing to advance to the semi-finals. The victory sets up a meeting between Djokovic and Jannik Sinner in the final four at SW19, promising another compelling matchup. The match exemplified the high-quality tennis being displayed throughout the 2026 Wimbledon tournament.",
-        "url": "https://www.bbc.co.uk/sport/tennis/videos/cx2wkdn2390o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC Sport",
-        "published_at": "Tue, 07 Jul 2026 23:47:25 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/efe5/live/5a107be0-7a53-11f1-bee8-53ce494e1abc.jpg"
+        "title": "Irked Wheeler lets All-Star snub fuel Phils' win",
+        "summary": "Philadelphia Phillies pitcher Zack Wheeler, motivated by his exclusion from the MLB All-Star replacement roster, delivered an outstanding performance against the Cincinnati Reds on Tuesday. The 36-year-old right-hander tied a career-high with fourteen strikeouts, leading the Phillies to a 4-1 victory. Wheeler's dominant pitching display demonstrated how the disappointment of being overlooked for All-Star selection fueled his competitive intensity on the mound. His performance underscored his continued effectiveness and value to the Phillies' rotation despite being passed over for the mid-season showcase.",
+        "url": "https://www.espn.com/mlb/story/_/id/49303496/irked-all-star-snub-wheeler-fans-14-phillies-top-reds",
+        "source": "www.espn.com",
+        "published_at": "Wed, 8 Jul 2026 07:51:13 EST",
+        "image": "",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/2.mp3"
       },
       {
-        "title": "England enjoy stunning victory as India fall to record T20 defeat",
-        "summary": "England secured an unbeatable 2-0 lead in their five-match T20 series against India with a dominant performance at Trent Bridge. England's bowling attack proved devastating, restricting India to just 76 runs and securing a comprehensive 125-run victory. The performance represents a record T20 defeat for India, highlighting England's superior execution and control throughout the match. With the series already decided in England's favor, the remaining matches will determine the final margin of victory in what has been a one-sided contest.",
-        "url": "https://www.bbc.co.uk/sport/cricket/videos/cx235r031rko?at_medium=RSS&at_campaign=rss",
-        "source": "BBC Sport",
-        "published_at": "Tue, 07 Jul 2026 20:51:34 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4589/live/f30d95a0-7a42-11f1-b976-0b9c15b0ccfc.jpg"
+        "title": "Yankees make history, strike out 17 times again",
+        "summary": "The New York Yankees established an American League record by striking out seventeen times in a 6-4 loss to the Tampa Bay Rays on Tuesday night. This marked the second consecutive nine-inning game in which the Yankees reached the seventeen-strikeout threshold, making them the first AL team to accomplish this dubious feat in back-to-back games. The historic strikeout performances highlight concerning offensive struggles for the Yankees during this stretch, as excessive strikeouts have become a recurring problem affecting their ability to generate consistent offensive production and compete effectively.",
+        "url": "https://www.espn.com/mlb/story/_/id/49302915/yankees-strike-17-s-vs-rays-2nd-straight-game",
+        "source": "www.espn.com",
+        "published_at": "Wed, 8 Jul 2026 07:51:13 EST",
+        "image": "",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/3.mp3"
       },
       {
-        "title": "How British wildcard Fery can keep his Wimbledon run going",
-        "summary": "British wildcard Arthur Fery is attempting to become the fifth British man to reach the Wimbledon semi-finals in the Open era, facing Italian 10th seed Flavio Cobolli in the quarter-finals. Fery has grown up watching matches on Centre Court and draws inspiration from legendary player Andre Agassi in his playing style. The young British talent represents a significant opportunity for home success at the prestigious tournament. His journey from wildcard entry to quarter-finalist has captured attention, with his continued progression dependent on overcoming the seeded Italian opponent in what promises to be a competitive encounter.",
-        "url": "https://www.bbc.co.uk/sport/tennis/articles/c20y4x4y714o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC Sport",
-        "published_at": "Wed, 08 Jul 2026 05:41:31 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6e17/live/1877aca0-7a29-11f1-b450-9f402cd7a05e.jpg"
+        "title": "Wiz reunite with Mavs' Middleton in sign-and-trade",
+        "summary": "The Washington Wizards acquired veteran forward Khris Middleton through a sign-and-trade agreement, bringing him back for a second stint with the franchise. The three-year contract is valued at $17.6 million, according to ESPN's Shams Charania. Middleton's return to Washington represents a significant move during the NBA offseason, reuniting the experienced player with the Wizards organization. The deal demonstrates the team's commitment to adding veteran talent and experience to their roster as they look to strengthen their competitive position heading into the upcoming season.",
+        "url": "https://www.espn.com/nba/story/_/id/49301627/khris-middleton-back-wizards-2nd-stint-6-team-sign-trade-deal",
+        "source": "www.espn.com",
+        "published_at": "Wed, 8 Jul 2026 07:51:13 EST",
+        "image": "",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/4.mp3"
       }
     ],
     "cricket": [
       {
         "title": "Archer, Tongue hand India their biggest T20I defeat",
-        "summary": "England's bowlers Jofra Archer and Reece Tongue delivered a dominant performance, restricting India to just 76 runs in their second-lowest T20I total while chasing England's 202-run target. This massive 125-run defeat represents India's biggest loss in T20I cricket. The performance has left India on the brink of consecutive T20I series defeats for the first time since 2018-19, prompting significant concerns about the team's current form and raising questions about selection decisions and team management strategies moving forward.",
+        "summary": "England inflicted India's biggest T20I defeat, restricting them to just 76 runs in response to England's 202-run target. This represents India's second-lowest T20I total ever. The loss puts India on the brink of consecutive T20I series defeats for the first time since 2018-19, marking a significant downturn for the team. England's bowlers Archer and Tongue were instrumental in the dominant performance, with Phil Salt contributing a match-winning 44-ball 70 for England. The defeat highlights India's current struggles in the shortest format and raises questions about their team composition and strategy.",
         "url": "https://www.cricinfo.com/ci/content/story/1544796.html?ex_cid=OTC-RSS",
         "source": "Cricket news from Cricinfo.com",
         "published_at": "Wed, 08 Jul 2026 10:58:04 GMT",
-        "image": "http://p.imgci.com/db/PICTURES/CMS/419500/419539.jpg"
+        "image": "http://p.imgci.com/db/PICTURES/CMS/419500/419539.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/0.mp3"
       },
       {
         "title": "England vs India: All you need to know about the first ever Women's Test at Lord's",
-        "summary": "Lord's Cricket Ground will host its inaugural Women's Test match when England faces India starting July 10, 2026, marking a historic milestone for women's cricket. This groundbreaking event represents significant progress in gender equality within cricket, as Lord's has been a premier cricket venue for centuries but never previously hosted a Women's Test. The match carries considerable symbolic importance for the sport's development and provides a major platform for women's cricket at one of the world's most prestigious cricket grounds.",
+        "summary": "Lord's will host a Women's Test match for the first time in its history when England faces India starting July 10, 2026. This historic milestone represents a significant moment for women's cricket, as Lord's has been one of cricket's most iconic venues for over 150 years. The match between England and India, two of the world's leading women's cricket teams, will be a major fixture in the women's Test calendar. This inaugural Women's Test at Lord's underscores the growing prominence and investment in women's cricket at the highest levels of the sport.",
         "url": "https://www.cricinfo.com/ci/content/story/1544553.html?ex_cid=OTC-RSS",
         "source": "Cricket news from Cricinfo.com",
         "published_at": "Wed, 08 Jul 2026 07:07:23 GMT",
-        "image": "http://p.imgci.com/db/PICTURES/CMS/419300/419385.jpg"
+        "image": "http://p.imgci.com/db/PICTURES/CMS/419300/419385.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/1.mp3"
       },
       {
-        "title": "High-scoring draw gives West Indies rare series win",
-        "summary": "West Indies achieved a rare series victory over Sri Lanka, with the final Test ending in a high-scoring draw. Despite Sri Lanka setting a challenging 302-run target, West Indies batsmen John Campbell and Brandon King were unable to mount a successful chase within the minimum 61 overs required. This series win represents a significant achievement for West Indies cricket, marking an important milestone in their Test cricket resurgence and providing momentum as they continue their World Test Championship 2027 campaign.",
-        "url": "https://www.cricinfo.com/ci/content/story/1544757.html?ex_cid=OTC-RSS",
+        "title": "Chase hopes Sri Lanka series win is 'a stepping stone' for West Indies in Tests",
+        "summary": "West Indies captain Roston Chase led his team to a series victory over Sri Lanka, marking a significant achievement for the Caribbean side. Chase expressed pride in leading from the front after previous unsuccessful attempts, describing the win as a crucial stepping stone for West Indies' Test cricket ambitions. The series win demonstrates West Indies' growing competitiveness in the Test format and their aspirations for the World Test Championship cycle. Chase's leadership and performance were instrumental in the team's success, with the captain emphasizing the importance of this victory for building momentum and confidence in their Test program going forward.",
+        "url": "https://www.cricinfo.com/ci/content/story/1544834.html?ex_cid=OTC-RSS",
         "source": "Cricket news from Cricinfo.com",
-        "published_at": "Wed, 08 Jul 2026 05:42:51 GMT",
-        "image": "http://p.imgci.com/db/PICTURES/CMS/419500/419536.jpg"
+        "published_at": "Wed, 08 Jul 2026 06:49:39 GMT",
+        "image": "http://p.imgci.com/db/PICTURES/CMS/419300/419319.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/2.mp3"
       },
       {
         "title": "Johan Botha joins Netherlands men's team as consultant",
-        "summary": "Former South Africa captain Johan Botha has joined the Netherlands men's cricket team as a consultant for their upcoming Cricket World Cup League 2 matches against Namibia and Nepal scheduled for July 2026. Botha's appointment brings significant international experience and expertise to the Netherlands squad as they compete in the World Cup League, a crucial pathway for teams seeking qualification for future ICC Cricket World Cups. His involvement represents an important development for Netherlands cricket's competitive ambitions.",
+        "summary": "Former South Africa captain Johan Botha has joined the Netherlands men's cricket team as a consultant for their upcoming Cricket World Cup League 2 matches. Botha will work with the Netherlands during their fixtures against Namibia and Nepal scheduled for July 2026. The appointment brings significant international experience to the Dutch team, as Botha's career as a South African captain and experienced cricketer provides valuable expertise. This consultancy role reflects the Netherlands' commitment to strengthening their cricket program and improving their performance in World Cup League 2, which serves as a qualifying pathway for major international tournaments.",
         "url": "https://www.cricinfo.com/ci/content/story/1544895.html?ex_cid=OTC-RSS",
         "source": "Cricket news from Cricinfo.com",
         "published_at": "Wed, 08 Jul 2026 11:01:46 GMT",
-        "image": "http://p.imgci.com/db/PICTURES/CMS/417700/417776.jpg"
+        "image": "http://p.imgci.com/db/PICTURES/CMS/417700/417776.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/3.mp3"
       },
       {
         "title": "New Zealand confirm four players to hold casual contracts",
-        "summary": "New Zealand Cricket has confirmed that four players will hold casual contracts, positioning them as potential candidates for the 2027 Cricket World Cup squad. Although none of the quartet have featured recently in One Day International cricket, the casual contract arrangement provides them with opportunities to develop and push for selection as New Zealand prepares for the upcoming World Cup. This strategic move reflects the national cricket board's long-term planning and squad development approach for international competition.",
+        "summary": "New Zealand has confirmed that four players will hold casual contracts with the national cricket team. While none of these players have featured recently in One Day International cricket, they are being positioned as potential candidates for selection in the 2027 Cricket World Cup. The casual contract arrangement allows New Zealand to maintain a broader player pool and provide development opportunities for emerging talent. This strategic move reflects the team's long-term planning for the upcoming World Cup, ensuring they have adequate depth and options as they prepare for the tournament. The contracts provide flexibility for player development and squad rotation.",
         "url": "https://www.cricinfo.com/ci/content/story/1544812.html?ex_cid=OTC-RSS",
         "source": "Cricket news from Cricinfo.com",
         "published_at": "Wed, 08 Jul 2026 04:19:50 GMT",
-        "image": "http://p.imgci.com/db/PICTURES/CMS/414300/414363.jpg"
+        "image": "http://p.imgci.com/db/PICTURES/CMS/414300/414363.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/4.mp3"
       }
     ],
     "usa_stock": [
       {
         "title": "Oil prices jump by the most in two months after Trump suggests U.S.-Iran cease-fire is over",
-        "summary": "Oil prices surged by their largest amount in two months following President Donald Trump's statement that dealing with Iran is \"a waste of time,\" suggesting the U.S.-Iran ceasefire has ended. Brent crude and West Texas Intermediate contracts climbed significantly on the geopolitical tensions. This escalation in Middle East conflict concerns triggered broader market volatility, with crude oil prices jumping as the U.S. revoked Iran's license to sell oil. The announcement sparked immediate reactions across global financial markets, affecting investor sentiment and contributing to declines in equity indexes worldwide as traders reassessed risk exposure to energy and geopolitical factors.",
+        "summary": "Oil prices surged significantly following President Donald Trump's statement that dealing with Iran is \"a waste of time,\" signaling an end to the U.S.-Iran ceasefire. Brent crude and West Texas Intermediate contracts climbed substantially on the geopolitical tensions. This development marks a major shift in market sentiment regarding Middle East stability and energy security. The escalation in rhetoric raises concerns about potential supply disruptions and inflation pressures. Traders are reassessing risk premiums in energy markets amid renewed uncertainty about regional conflict dynamics and their broader economic implications.",
         "url": "https://www.marketwatch.com/story/oil-prices-jump-by-the-most-in-two-months-after-trump-suggests-u-s-iran-cease-fire-is-over-9fa7caee?mod=mw_rss_topstories",
         "source": "MarketWatch.com - Top Stories",
         "published_at": "Wed, 08 Jul 2026 09:21:00 GMT",
-        "image": "https://images.mktw.net/im-02006560"
-      },
-      {
-        "title": "It was the world's hottest stock market. Now South Korea has entered bear territory.",
-        "summary": "South Korea's stock market, previously the world's hottest, has entered bear market territory after reaching record highs in June. The decline reflects cumulative impacts of multiple negative narratives including intensifying competition, sustainability concerns, excessive leverage, and significant international capital outflows. The KOSPI index's sharp reversal highlights how rapidly market sentiment can shift despite strong corporate earnings. The downturn particularly affected semiconductor stocks, which had driven much of the earlier rally. This bear market entry represents a dramatic reversal for a market that had been leading global gains, signaling potential broader concerns about the sustainability of technology-driven rallies and AI-related valuations.",
-        "url": "https://www.marketwatch.com/story/it-was-the-worlds-hottest-stock-market-now-south-koreas-stock-market-index-has-entered-bear-market-territory-95d70e3d?mod=mw_rss_topstories",
-        "source": "MarketWatch.com - Top Stories",
-        "published_at": "Wed, 08 Jul 2026 10:57:00 GMT",
-        "image": "https://images.mktw.net/im-37057541"
-      },
-      {
-        "title": "Stock market today: Major indexes close lower as chip stocks drop; crude prices jump as US revokes Iran's license to sell oil following attacks",
-        "summary": "Major U.S. stock indexes closed lower on Tuesday as semiconductor stocks led declines amid growing doubts about the sustainability of the AI-driven rally. The tech-focused Nasdaq Composite, S&P 500, and Dow Jones Industrial Average all finished down as chip stocks sold off. Simultaneously, crude oil prices surged after the U.S. revoked Iran's license to sell its crude following escalating Middle East tensions. The dual pressures of semiconductor sector weakness and geopolitical concerns over Iran created a challenging environment for investors. The market decline reflected both sector-specific concerns about chip valuations and broader macroeconomic worries stemming from international conflict escalation.",
-        "url": "https://www.msn.com/en-us/money/top-stocks/stock-market-today-major-indexes-decline-as-chip-stocks-drop-dow-hits-fresh-record-before-turning-lower-oil-prices-jump/ar-AA27nMFm",
-        "source": "Investopedia",
-        "published_at": "2026-07-07T20:07:21+00:00",
-        "image": "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA27qk0L.img?w=4000&h=2668&m=4&q=33"
+        "image": "https://images.mktw.net/im-02006560",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/0.mp3"
       },
       {
         "title": "Kevin Warsh plans to stop scripting the Fed's next moves. It could trigger a wild ride for traders.",
-        "summary": "Federal Reserve Chair Kevin Warsh may shift policy approach by deciding on monetary policy changes without advance market signaling, according to James Bullard, former president of the St. Louis Federal Reserve. This potential change from the Fed's traditional practice of telegraphing policy moves could create significant volatility for traders and investors who have grown accustomed to predictable policy guidance. The shift toward less transparent policy communication represents a departure from recent Fed communication strategies and could increase market uncertainty. Such an approach might reduce the Fed's ability to manage market expectations smoothly and could lead to sharper price movements when policy decisions are announced, fundamentally altering how markets price in monetary policy expectations.",
+        "summary": "Federal Reserve Chair Kevin Warsh may shift policy by reducing advance signaling to markets, according to former St. Louis Federal Reserve President James Bullard. This approach would allow Warsh to make monetary policy decisions without pre-announcing moves, potentially creating significant market volatility. The change represents a departure from recent Fed communication practices that have emphasized forward guidance. Traders and investors rely heavily on Fed signals to position portfolios, so reduced predictability could trigger sharp market swings. This policy shift could fundamentally alter how financial markets price in interest rate expectations and economic outlooks.",
         "url": "https://www.marketwatch.com/story/kevin-warsh-plans-to-stop-scripting-the-feds-next-moves-it-could-trigger-a-wild-ride-for-traders-0bb39b9e?mod=mw_rss_topstories",
         "source": "MarketWatch.com - Top Stories",
         "published_at": "Wed, 08 Jul 2026 11:00:00 GMT",
-        "image": "https://images.mktw.net/im-75725106"
+        "image": "https://images.mktw.net/im-75725106",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/1.mp3"
+      },
+      {
+        "title": "It was the world's hottest stock market. Now South Korea has entered bear territory.",
+        "summary": "South Korea's stock market, previously the world's hottest, has entered bear market territory following a record high in June. Multiple factors have contributed to the decline, including increased competition, sustainability concerns, excessive leverage, and international capital outflows. The cumulative impact of these narratives has eliminated the market's upward momentum. South Korea's tech-heavy index had been a global outperformer but now faces headwinds from both domestic and international pressures. This reversal reflects broader concerns about valuation sustainability and geopolitical risks affecting Asian equity markets.",
+        "url": "https://www.marketwatch.com/story/it-was-the-worlds-hottest-stock-market-now-south-koreas-stock-market-index-has-entered-bear-market-territory-95d70e3d?mod=mw_rss_topstories",
+        "source": "MarketWatch.com - Top Stories",
+        "published_at": "Wed, 08 Jul 2026 10:57:00 GMT",
+        "image": "https://images.mktw.net/im-37057541",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/2.mp3"
+      },
+      {
+        "title": "As a red-hot global stock market stumbles into bear territory, this Wall Street bull spots a dip worth buying",
+        "summary": "Tom Lee of Fundstrat maintains a bullish stance despite global stock market weakness and Samsung's significant losses, arguing that current market conditions present a buying opportunity. Lee's contrarian view suggests that the recent market downturn may be overdone and represents an attractive entry point for investors. His perspective reflects confidence in the underlying strength of equity markets despite near-term volatility. This bullish call comes as major indices face headwinds from geopolitical tensions, monetary policy uncertainty, and sector-specific challenges. Lee's position highlights the ongoing debate between market pessimists and those viewing weakness as temporary.",
+        "url": "https://www.marketwatch.com/story/as-a-once-hot-stock-market-tumbles-into-bear-territory-this-wall-street-bull-says-its-time-to-buy-the-dip-c8c2c72f?mod=mw_rss_topstories",
+        "source": "MarketWatch.com - Top Stories",
+        "published_at": "Wed, 08 Jul 2026 11:02:00 GMT",
+        "image": "https://images.mktw.net/im-45778362",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/3.mp3"
       },
       {
         "title": "Alibaba just had its best day in 10 months. Is it time for China techs to catch up?",
-        "summary": "Alibaba experienced its best single-day share price gain in ten months, as the broader Chinese technology sector rallied higher after missing the gains that propelled U.S., Korean, and Taiwanese technology companies. The surge suggests potential momentum building in Chinese tech stocks following a period of underperformance relative to global peers. This recovery in Alibaba and other Chinese tech firms comes as investors reassess valuations and opportunities in the sector after extended weakness. The question of whether Chinese technology stocks can sustain this rally and catch up to their international counterparts remains open, particularly given ongoing regulatory scrutiny and macroeconomic headwinds. The move reflects shifting investor sentiment toward emerging opportunities in China's technology landscape.",
+        "summary": "Alibaba experienced its strongest single-day stock price gain in ten months, signaling potential momentum for the broader Chinese technology sector. The rally comes as Chinese tech stocks have lagged behind gains in U.S., Korean, and Taiwanese technology companies. Alibaba's surge suggests investor appetite may be returning to Chinese equities after a period of underperformance. The question of whether other Chinese tech firms will follow Alibaba's lead remains open, with implications for global technology sector valuations. This development reflects shifting market sentiment regarding China's tech industry and its competitive positioning internationally.",
         "url": "https://www.marketwatch.com/story/alibaba-just-had-its-best-day-in-10-months-is-it-time-for-china-techs-to-catch-up-8ccc3f7c?mod=mw_rss_topstories",
         "source": "MarketWatch.com - Top Stories",
         "published_at": "Wed, 08 Jul 2026 08:57:00 GMT",
-        "image": "https://images.mktw.net/im-81064968"
+        "image": "https://images.mktw.net/im-81064968",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/4.mp3"
       }
     ],
     "ai": [
@@ -286,39 +337,44 @@
         "url": "https://www.technologyreview.com/2026/07/06/1140176/your-familys-300-stake-in-openai/",
         "source": "MIT Technology Review",
         "published_at": "Mon, 06 Jul 2026 18:00:00 +0000",
-        "image": "https://wp.technologyreview.com/wp-content/uploads/2026/07/openai-money.jpg?resize=1200,600"
+        "image": "https://wp.technologyreview.com/wp-content/uploads/2026/07/openai-money.jpg?resize=1200,600",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/0.mp3"
       },
       {
         "title": "Hackers can use 9 of the most popular AI tools to assemble massive botnets",
-        "summary": "Security researchers have discovered that hackers can exploit nine of the most widely-used AI tools to construct large-scale botnets through a technique called \"HalluSquatting.\" This attack method weaponizes a fundamental limitation of large language models—their inability to reliably say \"I don't know\"—to manipulate them into assisting with malicious activities. The vulnerability represents a significant security concern as it demonstrates how AI systems' design flaws can be deliberately exploited by threat actors to coordinate distributed networks of compromised computers for cyberattacks and other harmful purposes.",
+        "summary": "Security researchers have discovered that hackers can exploit nine of the most widely-used AI tools to construct large-scale botnets through a technique called \"HalluSquatting.\" This attack method weaponizes a fundamental limitation of large language models—their inability to reliably say \"I don't know\"—to manipulate them into assisting with malicious activities. The vulnerability represents a significant security concern, as it demonstrates how AI systems' design flaws can be systematically exploited by threat actors to coordinate distributed networks of compromised computers for cyberattacks and other harmful purposes.",
         "url": "https://arstechnica.com/security/2026/07/hackers-can-use-9-of-the-most-popular-ai-tools-to-assemble-massive-botnets/",
         "source": "Ars Technica",
         "published_at": "Wed, 08 Jul 2026 07:00:51 +0000",
-        "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/07/rogue-ai-agent-1152x648.jpg"
+        "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/07/rogue-ai-agent-1152x648.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/1.mp3"
       },
       {
         "title": "Data centers' energy demand threatens Trump's \"Made in America\" plan",
-        "summary": "The rapid expansion of AI data centers is creating severe electricity demand pressures that threaten manufacturing competitiveness in the United States. Rising energy costs driven by AI infrastructure buildout are significantly increasing electricity bills for Rust Belt manufacturers, potentially undermining the Trump administration's \"Made in America\" manufacturing initiative. The surge in power consumption from AI data centers is creating an energy squeeze that could disadvantage domestic manufacturers competing globally, raising concerns about whether ambitious domestic production goals can be achieved amid competing demands for limited electrical capacity and resources.",
+        "summary": "The rapid expansion of AI data centers is creating severe electricity demand pressures that threaten manufacturing competitiveness in the United States. Rising energy costs driven by AI infrastructure buildout are significantly increasing electricity bills for Rust Belt manufacturers, potentially undermining the Trump administration's \"Made in America\" manufacturing initiative. The surge in power consumption from AI data centers is creating an energy squeeze that could disadvantage domestic industrial production, as manufacturers compete with data centers for limited electrical capacity and face escalating utility costs that impact their operational economics and competitiveness.",
         "url": "https://arstechnica.com/tech-policy/2026/07/us-manufacturers-energy-costs-soar-because-of-ai-data-center-demand/",
         "source": "Ars Technica",
         "published_at": "Tue, 07 Jul 2026 21:03:07 +0000",
-        "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/07/Electric-Arc-Furnace-1152x648.jpg"
+        "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/07/Electric-Arc-Furnace-1152x648.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/2.mp3"
       },
       {
         "title": "How AI could enable autonomous robot workers in workplaces—and maybe homes",
-        "summary": "Leading robotics researchers and founders are exploring how artificial intelligence can drive the development of general-purpose autonomous robots capable of performing diverse tasks in workplace and residential environments. These advances represent a significant evolution in robotics, moving beyond specialized, single-task machines toward flexible systems that can adapt to varied situations. The integration of AI with robotics could fundamentally transform labor markets and daily life, enabling robots to handle complex, unpredictable tasks alongside or instead of human workers, with implications spanning manufacturing, service industries, and household automation.",
+        "summary": "Leading robotics researchers and founders are exploring how artificial intelligence could drive the development of general-purpose autonomous robots capable of performing diverse tasks in workplace and residential environments. The convergence of advanced AI systems with robotics technology is enabling machines to operate with greater autonomy and adaptability across varied settings. Experts discuss how AI-powered robots could transform labor dynamics, workplace efficiency, and potentially household automation. The emerging field represents a significant technological frontier where AI's decision-making capabilities combine with robotic hardware to create machines capable of handling complex, varied tasks previously requiring human workers.",
         "url": "https://arstechnica.com/features/2026/07/robot-workers-rising-how-ai-may-drive-general-purpose-autonomy-in-robotics/",
         "source": "Ars Technica",
         "published_at": "Tue, 07 Jul 2026 11:00:18 +0000",
-        "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/07/Agility_Digit_06-1152x648.jpg"
+        "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/07/Agility_Digit_06-1152x648.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/3.mp3"
       },
       {
         "title": "Facing US export controls, China's DeepSeek plans to make its own chips",
-        "summary": "Chinese AI company DeepSeek is developing plans to manufacture its own semiconductor chips in response to U.S. export restrictions limiting access to advanced processors. The strategy aims to reduce DeepSeek's dependency on foreign chip suppliers, particularly Nvidia and Huawei, enabling continued AI development despite geopolitical constraints. This move reflects broader efforts by Chinese technology companies to achieve semiconductor self-sufficiency amid escalating trade tensions and export controls. The initiative underscores how international restrictions on AI-related technology are driving countries to pursue domestic alternatives and vertical integration strategies.",
+        "summary": "Chinese AI company DeepSeek is developing plans to manufacture its own semiconductor chips in response to U.S. export restrictions limiting access to advanced processors. The strategy aims to reduce DeepSeek's dependency on foreign chip suppliers, particularly Nvidia and Huawei, which have been subject to American export controls. This move reflects broader efforts by Chinese AI companies to achieve technological self-sufficiency amid escalating U.S.-China technology competition. By developing domestic chip production capabilities, DeepSeek seeks to maintain its AI development trajectory despite geopolitical constraints on semiconductor access.",
         "url": "https://arstechnica.com/ai/2026/07/facing-us-export-controls-chinas-deepseek-plans-to-make-its-own-chips/",
         "source": "Ars Technica",
         "published_at": "Tue, 07 Jul 2026 16:14:53 +0000",
-        "image": "https://cdn.arstechnica.net/wp-content/uploads/2025/01/GettyImages-2195894561-1152x648.jpg"
+        "image": "https://cdn.arstechnica.net/wp-content/uploads/2025/01/GettyImages-2195894561-1152x648.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/4.mp3"
       }
     ],
     "quantum": [
@@ -328,81 +384,91 @@
         "url": "https://www.quantamagazine.org/researchers-reveal-the-power-of-quantum-proofs-20260706/",
         "source": "Quanta Magazine",
         "published_at": "Mon, 06 Jul 2026 14:33:56 +0000",
-        "image": "https://www.quantamagazine.org/wp-content/uploads/2026/07/QuantumProof-cr-Ada-Zejun-Shen-Default.webp"
+        "image": "https://www.quantamagazine.org/wp-content/uploads/2026/07/QuantumProof-cr-Ada-Zejun-Shen-Default.webp",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/0.mp3"
       },
       {
-        "title": "Crypto firms prepare defenses as quantum threat to encryption draws nearer",
-        "summary": "The cryptocurrency industry is increasingly preparing defensive measures against the emerging threat posed by quantum computing to current encryption standards. Recent advances in quantum computing technology have intensified concerns that quantum systems could soon compromise existing cryptographic security protocols that protect digital assets and transactions. Cryptocurrency firms are developing strategies and technologies to safeguard their systems before quantum computers become powerful enough to break conventional encryption. This proactive approach reflects growing recognition within the industry that quantum computing represents a significant long-term security challenge requiring immediate attention and investment in quantum-resistant cryptographic solutions.",
-        "url": "https://www.aol.com/articles/crypto-firms-prepare-defenses-quantum-100220000.html",
-        "source": "AOL",
-        "published_at": "2026-05-21T11:40:23+00:00",
-        "image": "https://s.yimg.com/cv/apiv2/aolfp/images/og-image.png"
+        "title": "For the First Time, a Cell Built From Scratch Grows and Divides",
+        "summary": "Scientists have successfully created a synthetic cell from non-living materials that exhibits lifelike properties including growth and division capabilities. This breakthrough represents a significant proof-of-concept demonstrating that it is possible to engineer functional cellular systems in laboratory settings. The synthetic cell combines more sophisticated biological properties than previously achieved, moving closer to replicating natural cellular behavior. This achievement has profound implications for synthetic biology, potentially enabling the creation of artificial organisms for research, biotechnology applications, and understanding the fundamental principles of life itself.",
+        "url": "https://www.quantamagazine.org/for-the-first-time-a-cell-built-from-scratch-grows-and-divides-20260701/",
+        "source": "Quanta Magazine",
+        "published_at": "Wed, 01 Jul 2026 14:00:02 +0000",
+        "image": "https://www.quantamagazine.org/wp-content/uploads/2026/07/SyntheticLife-cr-Ada-Zejun-Shen-default-copy.webp",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/1.mp3"
       },
       {
-        "title": "AI changed our cloud strategy. Quantum changes the questions behind it",
-        "summary": "Quantum computing is fundamentally reshaping how organizations approach cloud infrastructure strategy and long-term risk planning. While artificial intelligence previously shifted cloud strategy focus from basic architecture to operational efficiency, quantum computing now demands deeper strategic reconsideration of underlying assumptions and future technological trajectories. Organizations must now address more fundamental questions about infrastructure resilience, security, and computational paradigms in light of quantum capabilities. This represents a significant evolution in enterprise technology planning, where quantum computing forces companies to think beyond immediate operational concerns toward long-term architectural and security implications that will define competitive advantage and organizational viability.",
-        "url": "https://www.cio.com/article/4193968/ai-changed-our-cloud-strategy-quantum-changes-the-questions-behind-it.html",
-        "source": "CIO",
-        "published_at": "2026-06-06T11:40:23+00:00",
-        "image": "https://www.bing.com/th?id=ONUT.2bF2qkjaSEEXnCmk5tQ25g"
+        "title": "After 80 Years, Mathematicians Give Famed 'Erdős Method' an Upgrade",
+        "summary": "Mathematicians have enhanced Paul Erdős's probabilistic method, a technique developed eight decades ago that uses randomness to study complex network structures. The upgraded approach makes this foundational mathematical tool even more powerful for analyzing the vast and intricate properties of networks. Erdős's original method revolutionized combinatorics by demonstrating how random constructions could prove the existence of mathematical objects with specific properties. This advancement extends the technique's applicability and effectiveness, enabling researchers to tackle increasingly complex problems in network theory and related mathematical fields with improved analytical capabilities.",
+        "url": "https://www.quantamagazine.org/after-80-years-mathematicians-give-famed-erdos-method-an-upgrade-20260626/",
+        "source": "Quanta Magazine",
+        "published_at": "Fri, 26 Jun 2026 15:26:29 +0000",
+        "image": "https://www.quantamagazine.org/wp-content/uploads/2026/06/Ramsey-Updates-cr-Robert-Neubecker-Default.webp",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/2.mp3"
       },
       {
-        "title": "Quantum dot electroluminescent display technology is finally becoming reality",
-        "summary": "Quantum dot electroluminescent display technology is transitioning from theoretical concept to practical commercial implementation. This advancement represents a significant milestone in display technology development, moving beyond laboratory research into real-world applications. Quantum dot technology offers potential improvements in display performance, including enhanced color accuracy, brightness, and energy efficiency compared to conventional display technologies. The progression from concept to reality demonstrates successful engineering solutions to manufacturing and integration challenges that previously hindered commercialization. This development has implications for consumer electronics, professional displays, and various industries relying on advanced visual technologies.",
-        "url": "https://www.msn.com/en-us/technology/quantum-computing/quantum-dot-electroluminescent-display-technology-is-finally-becoming-reality/vi-AA27tvFb?ocid=BingNewsVerp",
-        "source": "Amazon S3 on MSN",
-        "published_at": "2026-06-02T11:40:23+00:00",
-        "image": "https://www.bing.com/th?id=ONUT.DqnLlJ-TEpvO6ztHg9aPzQ"
+        "title": "The missing 500 million: Cosmic bombardment melted Earth's first crust",
+        "summary": "Scientists have proposed that cosmic bombardment during Earth's Hadean eon may have contributed significantly to melting the planet's primordial crust, potentially explaining a long-standing geological mystery. The intense heat from asteroid and meteorite impacts, combined with internal planetary heat, could account for the thermal conditions that shaped Earth's earliest crustal formation. This research addresses the question of why Earth's initial crust appears to have been substantially melted or reworked early in planetary history. The findings integrate impact dynamics with planetary evolution, providing new insights into how extraterrestrial bombardment influenced Earth's geological development during its formative period.",
+        "url": "https://arstechnica.com/science/2026/07/the-missing-500-million-cosmic-bombardment-melted-earths-first-crust/",
+        "source": "Science - Ars Technica",
+        "published_at": "Sun, 05 Jul 2026 10:55:02 +0000",
+        "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/07/image-1.jpeg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/3.mp3"
       },
       {
-        "title": "BTQ Technologies Completes Acquisition of QPerfect, Advancing Its Mission of Building Trusted Quantum Technologies",
-        "summary": "BTQ Technologies Corp. has successfully completed its acquisition of QPerfect, a strategic move advancing the company's mission to develop trusted quantum technologies. The acquisition enhances BTQ's capabilities in quantum emulation, digital twin technology, and quantum control systems. This consolidation strengthens BTQ's position in the quantum technology sector by combining complementary expertise and technological capabilities. The merged entity aims to deliver comprehensive quantum solutions with improved emulation and control capabilities. This acquisition reflects ongoing industry consolidation and investment in quantum technology development, positioning BTQ to better serve enterprise clients seeking reliable quantum computing solutions and infrastructure.",
-        "url": "https://www.newswire.ca/news-releases/btq-technologies-completes-acquisition-of-qperfect-advancing-its-mission-of-building-trusted-quantum-technologies-with-world-class-emulation-digital-twin-and-control-capabilities-862049423.html",
-        "source": "Newswire",
-        "published_at": "2026-06-28T11:40:23+00:00",
-        "image": "https://www.bing.com/th?id=ONUT.ln3pbvaG22mmbhU4_NqFzg"
+        "title": "Bengaluru's QpiAI Open-Sources Its Quantum SDK",
+        "summary": "QpiAI, a full-stack quantum computing company based in Bengaluru, India, has released its Quantum Software Development Kit as open-source software. This move democratizes access to quantum computing tools, enabling developers and researchers to build quantum applications without proprietary restrictions. Open-sourcing the SDK accelerates quantum software ecosystem development and fosters collaboration within the quantum computing community. The release represents a significant contribution to making quantum computing technology more accessible globally, supporting the growth of quantum application development and advancing the practical implementation of quantum computing across various industries and research domains.",
+        "url": "https://circuitdigest.com/news/bengalurus-qpiai-open-sources-its-quantum-sdk",
+        "source": "Circuit Digest",
+        "published_at": "2026-06-18T12:12:01+00:00",
+        "image": "https://www.bing.com/th?id=ONUT.4RlNeXWdEbhZA6hpxrC3uA",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/4.mp3"
       }
     ],
     "trump": [
       {
         "title": "Trump says ceasefire is 'over' after US and Iran trade strikes",
-        "summary": "President Trump declared the US-Iran ceasefire \"over\" while speaking at a NATO summit in Turkey, following overnight exchanges of military strikes between the two nations. Trump stated that US negotiators can continue talking with Iran \"if they want,\" though he expressed skepticism about negotiations. The declaration came after the US launched strikes on Iranian military boats and coastal sites in response to Iranian attacks on oil tankers in the Strait of Hormuz. Trump's comments reflect escalating tensions between Washington and Tehran, with implications for regional stability and global oil markets.",
+        "summary": "President Trump declared the ceasefire with Iran 'over' following recent military exchanges between the two nations. Speaking at a NATO summit in Ankara, Turkey, Trump stated he does not want to engage with Iran, calling them 'scum' and 'sick people.' However, he indicated that US negotiators could continue diplomatic talks with Iran if they choose to do so. The declaration came after the US launched strikes on Iranian military boats and coastal sites in response to Iranian attacks on oil tankers in the Strait of Hormuz, escalating tensions in the region.",
         "url": "https://www.bbc.co.uk/news/articles/clyw8w1g409o?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
         "published_at": "Wed, 08 Jul 2026 11:18:28 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/303b/live/574a8a30-7ab8-11f1-b976-0b9c15b0ccfc.jpg"
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/303b/live/574a8a30-7ab8-11f1-b976-0b9c15b0ccfc.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/0.mp3"
       },
       {
         "title": "'We don't need anybody's help': Trump renews Nato criticism",
-        "summary": "US President Donald Trump renewed his criticism of NATO during the alliance's summit, stating he was repeatedly disappointed by the organization. Trump's remarks came during the NATO summit and reflected his longstanding skepticism about the alliance's effectiveness and burden-sharing among member states. His comments underscore ongoing tensions between the Trump administration and traditional European allies over defense spending commitments and NATO's strategic direction. The criticism highlights divisions within the alliance regarding military expenditures and collective security responsibilities.",
+        "summary": "President Trump renewed his criticism of NATO during the alliance's summit, stating he was repeatedly disappointed by the organization. Trump declared that the US does not need anybody's help, continuing his long-standing skepticism of the NATO alliance and its member nations. His remarks came during the NATO summit proceedings, where he reiterated concerns about burden-sharing and the organization's effectiveness. Trump's criticism reflects his ongoing position that NATO members should increase defense spending and that the alliance may not adequately serve American interests.",
         "url": "https://www.bbc.co.uk/news/videos/czrxjvd2k3xo?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
         "published_at": "Tue, 07 Jul 2026 14:12:13 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6226/live/3f778630-7a0c-11f1-b976-0b9c15b0ccfc.jpg"
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6226/live/3f778630-7a0c-11f1-b976-0b9c15b0ccfc.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/1.mp3"
       },
       {
         "title": "Questions swirl over top US Republican McConnell's hospital stay - here's what we know",
-        "summary": "Senate Republican leader Mitch McConnell, 84, has been hospitalized for more than four weeks, with his staff declining to disclose the reason for his admission. The prolonged hospital stay has raised questions about his health and ability to continue leading Senate Republicans during a critical political period. McConnell's absence from public duties has created uncertainty within Republican leadership and speculation about potential succession. His hospitalization comes amid significant legislative and political developments, making his extended absence particularly notable for GOP leadership dynamics.",
+        "summary": "Senate Republican leader Mitch McConnell, 84, has been hospitalized for more than four weeks, but his staff has not disclosed the reason for his admission. The prolonged hospital stay has raised questions among lawmakers and the public about his health and ability to continue his leadership role. McConnell's absence from Senate activities has created uncertainty about Republican leadership during a critical political period. The lack of transparency regarding his condition has fueled speculation and concern about potential succession plans and the continuity of Republican Senate leadership.",
         "url": "https://www.bbc.co.uk/news/articles/c4gyjpkzew1o?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
         "published_at": "Wed, 08 Jul 2026 01:58:20 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/72fb/live/7069fd50-7a51-11f1-b726-3d305a892bc6.jpg"
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/72fb/live/7069fd50-7a51-11f1-b726-3d305a892bc6.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/2.mp3"
       },
       {
-        "title": "Trump's latest approval numbers reveal where voters think he's falling short",
-        "summary": "Recent polling data shows President Trump's approval ratings at 43 percent favorable and 56 percent unfavorable according to a Quantus Insights poll from June 18, 2026. The survey reveals specific areas where voters believe Trump is underperforming, providing insight into public perception of his administration's priorities and effectiveness. These approval metrics reflect voter sentiment across various policy domains and demographic groups. The data suggests challenges in maintaining broad public support, with unfavorable ratings exceeding favorable ones by a significant margin among the surveyed population.",
-        "url": "https://www.yahoo.com/news/politics/articles/trumps-latest-approval-numbers-reveal-092045650.html",
-        "source": "Lohud | The Journal News via Yahoo News",
-        "published_at": "2026-07-08T09:40:24+00:00",
-        "image": "https://media.zenfs.com/en/lohud-the-journal-news/fe4934ef234b305ac126431d149fc33f"
-      },
-      {
-        "title": "US strikes target Iranian military boats and coastal sites",
-        "summary": "The United States launched military strikes targeting Iranian military boats and coastal sites in response to Iranian attacks on three oil tankers in the Strait of Hormuz. The strikes represent a significant escalation in US-Iran military tensions and demonstrate the Trump administration's willingness to respond directly to Iranian aggression. The incident highlights ongoing regional instability and threats to international maritime commerce in critical shipping lanes. The strikes occurred amid broader geopolitical tensions and contributed to Trump's subsequent declaration that the ceasefire with Iran was over.",
-        "url": "https://www.bbc.co.uk/news/videos/cn94nqzwpxwo?at_medium=RSS&at_campaign=rss",
+        "title": "Top Democrats press Maine Senate candidate to drop out of race over sexual assault allegation",
+        "summary": "Democratic leaders have urged Maine Senate candidate Graham Platner to withdraw from his race following a sexual assault allegation against him. Platner has denied the allegation, calling it 'categorically false,' but stated he was 'taking the time to reflect on the best path forward.' The pressure from top Democrats reflects the party's efforts to distance itself from candidates facing serious misconduct allegations. Platner's potential withdrawal or continued candidacy could significantly impact the competitive Maine Senate race and Democratic efforts to maintain control of the chamber.",
+        "url": "https://www.bbc.co.uk/news/articles/cm2004nx8v9o?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
-        "published_at": "Wed, 08 Jul 2026 05:42:37 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0a58/live/59564310-7a94-11f1-932b-1f29e7985956.jpg"
+        "published_at": "Wed, 08 Jul 2026 01:05:26 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/dcad/live/ca023840-79e9-11f1-9510-1546718f668b.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/3.mp3"
+      },
+      {
+        "title": "US prosecutors arrest 24 in major probe into India-based organised crime",
+        "summary": "US prosecutors have arrested 24 individuals in a major investigation targeting India-based organized crime networks. In one significant indictment, prosecutors accuse Punjab-based Bishnoi gang leaders of ordering the 2023 shooting of Canadian Sikh leader Hardeep Singh Nijjar. The arrests represent a substantial law enforcement operation against transnational criminal organizations operating between the United States and India. The investigation highlights growing concerns about organized crime networks' international reach and their involvement in serious violent crimes, including targeted assassinations of political and community figures.",
+        "url": "https://www.bbc.co.uk/news/articles/cx2xl9gyxqyo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC News",
+        "published_at": "Tue, 07 Jul 2026 22:17:05 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a9f9/live/7022c150-7a34-11f1-bee8-53ce494e1abc.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/4.mp3"
       }
     ]
   }
