@@ -7,7 +7,7 @@ sdk: docker
 app_port: 7860
 pinned: false
 license: mit
-short_description: Daily news digest — top 5 stories across 10 categories, AI-summarized
+short_description: Daily News Digest — AI Summerized
 ---
 
 # Daily News Digest
