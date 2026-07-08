@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed, watch, onMounted } from 'vue'
+import { ref, computed, watch, onMounted, nextTick } from 'vue'
 import { getCategoryNews } from '../services/api.js'
 import { tabMeta } from '../categories.js'
 import { usePlayer } from '../player.js'
@@ -11,6 +11,22 @@ const loading = ref(true)
 const error = ref(null)
 const articles = ref([])
 const generatedAt = ref(null)
+const cardRefs = ref({})
+
+function setCardRef(idx, el) {
+  if (el) cardRefs.value[idx] = el
+}
+
+async function scrollToCurrentIfHere() {
+  const t = player.currentTrack.value
+  if (!t || t.category !== props.categoryKey) return
+  await nextTick()
+  const el = cardRefs.value[t.index]
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' })
+}
+
+watch(player.currentTrack, scrollToCurrentIfHere)
+watch(articles, scrollToCurrentIfHere)
 
 const queueItems = computed(() => articles.value.map((a, i) => ({
   category: props.categoryKey,
@@ -51,6 +67,7 @@ function formatDate(dateStr) {
 async function load() {
   loading.value = true
   error.value = null
+  cardRefs.value = {}
   try {
     const data = await getCategoryNews(props.categoryKey)
     articles.value = data.articles || []
@@ -99,6 +116,7 @@ watch(() => props.categoryKey, load)
         :key="idx"
         class="news-card card"
         :class="{ 'now-playing-card': isCurrent(idx) }"
+        :ref="el => setCardRef(idx, el)"
       >
         <div class="thumbnail-wrap">
           <img

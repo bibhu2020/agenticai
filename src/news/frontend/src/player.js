@@ -1,6 +1,7 @@
 import { reactive, computed } from 'vue'
 import { getAllNews } from './services/api.js'
 import { ALL_TABS } from './categories.js'
+import { router } from './router.js'
 
 const audioEl = new Audio()
 audioEl.preload = 'auto'
@@ -39,6 +40,11 @@ function _loadAndPlay(index) {
     state.isPlaying = false
     _flashError('Could not play this article — the audio file may be unavailable.')
   })
+
+  const targetPath = `/${track.category}`
+  if (router.currentRoute.value.path !== targetPath) {
+    router.replace(targetPath)
+  }
 }
 
 function playQueue(items, startIndex = 0) {
