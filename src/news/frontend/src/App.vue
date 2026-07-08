@@ -41,12 +41,19 @@ async function installPWA() {
     <!-- Header -->
     <header class="header">
       <div class="header-inner">
-        <div class="brand">
-          <span class="brand-icon">📰</span>
-          <div class="brand-text">
-            <span class="brand-title">Daily News Digest</span>
-            <span class="brand-sub" v-if="generatedAt">Updated {{ formatUpdated(generatedAt) }}</span>
-            <span class="brand-sub" v-else>Top stories, summarized daily</span>
+        <div class="header-top">
+          <div class="brand">
+            <span class="brand-icon">📰</span>
+            <div class="brand-text">
+              <span class="brand-title">Daily News Digest</span>
+              <span class="brand-sub" v-if="generatedAt">Updated {{ formatUpdated(generatedAt) }}</span>
+              <span class="brand-sub" v-else>Top stories, summarized daily</span>
+            </div>
+          </div>
+
+          <div class="header-actions">
+            <button v-if="showInstall" class="btn btn-primary" @click="installPWA">📲 Install</button>
+            <router-link to="/admin" class="admin-link" title="Admin">⚙️</router-link>
           </div>
         </div>
 
@@ -62,11 +69,6 @@ async function installPWA() {
             <span class="tab-label">{{ tab.label }}</span>
           </router-link>
         </nav>
-
-        <div class="header-actions">
-          <button v-if="showInstall" class="btn btn-primary" @click="installPWA">📲 Install</button>
-          <router-link to="/admin" class="admin-link" title="Admin">⚙️</router-link>
-        </div>
       </div>
     </header>
 
@@ -111,12 +113,16 @@ async function installPWA() {
 .header-inner {
   max-width: 1400px;
   margin: 0 auto;
-  min-height: 64px;
+  padding: 10px 0 6px;
+}
+
+.header-top {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
-  padding: 8px 0;
+  padding-bottom: 8px;
 }
 
 .brand { display: flex; align-items: center; gap: 10px; }
@@ -127,27 +133,34 @@ async function installPWA() {
 .header-tabs {
   display: flex;
   gap: 4px;
-  flex: 1;
   overflow-x: auto;
   scrollbar-width: none;
 }
 .header-tabs::-webkit-scrollbar { display: none; }
 
 .header-tab {
+  flex: 1;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 6px;
-  padding: 8px 12px;
+  justify-content: center;
+  gap: 3px;
+  padding: 8px 4px 10px;
+  min-width: 64px;
   border-radius: 8px;
+  border-bottom: 2px solid transparent;
   color: var(--text-muted);
   text-decoration: none;
-  font-size: 13px;
-  font-weight: 500;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
   white-space: nowrap;
   transition: all 0.2s;
 }
 .header-tab:hover { color: var(--text-secondary); background: rgba(255,255,255,0.04); }
-.header-tab.active { color: var(--accent-primary); background: rgba(245,158,11,0.1); }
+.header-tab.active { color: var(--accent-primary); border-bottom-color: var(--accent-primary); background: rgba(245,158,11,0.1); }
+.header-tab .tab-icon { font-size: 19px; line-height: 1; }
+.header-tab .tab-label { line-height: 1; }
 
 .header-actions { display: flex; align-items: center; gap: 10px; }
 .admin-link {
@@ -205,7 +218,5 @@ async function installPWA() {
 @media (max-width: 640px) {
   .brand-sub { display: none; }
   .content { padding: 12px 12px 96px; }
-  .header-tab .tab-label { display: none; }
-  .header-tab { padding: 8px; }
 }
 </style>
