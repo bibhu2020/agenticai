@@ -1,0 +1,47 @@
+name: Deploy News to Hugging Face
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'src/news/backend/**'
+      - 'src/news/frontend/**'
+      - 'src/news/Dockerfile'
+      - 'src/news/README.md'
+      - 'pyproject.toml'
+      - 'uv.lock'
+      # deliberately excludes src/news/data/** — daily data commits must not trigger a rebuild
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy to Hugging Face Space
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Stage deployment directory
+        run: |
+          mkdir -p deploy_temp/src
+          cp -r src/news deploy_temp/src/
+          rm -rf deploy_temp/src/news/data
+          cp pyproject.toml deploy_temp/
+          cp uv.lock deploy_temp/
+          cp src/news/Dockerfile deploy_temp/
+          cp src/news/README.md deploy_temp/
+          echo "Staged files:"
+          ls -la deploy_temp/
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Upload to Hugging Face
+        uses: ./.github/actions/upload-to-hf
+        with:
+          hf_token: ${{ secrets.HF_TOKEN }}
+          repo_id: ${{ secrets.HF_USERNAME }}/news

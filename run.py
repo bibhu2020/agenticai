@@ -72,6 +72,12 @@ APP_REGISTRY: Dict[str, Dict[str, str]] = {
         "type": "fastapi",
         "description": "FIFA - World Cup 2026 Dashboard - Live scores, schedule & news powered by LangGraph + Gemini (Vue.js PWA + FastAPI)"
     },
+    "news": {
+        "path": "src/news",
+        "entry": "backend/main.py",
+        "type": "fastapi",
+        "description": "News - Daily News Digest - Top 5 stories across 10 categories powered by LangGraph + Claude (OpenRouter) (Vue.js PWA + FastAPI)"
+    },
     "test": {
         "path": ".",
         "entry": "tests",
@@ -162,7 +168,7 @@ def launch_app(app_name: str, port: Optional[int] = None):
     env["PYTHONPATH"] = str(project_root) + os.pathsep + env.get("PYTHONPATH", "")
     
     # Decoupled App Logic: Build frontend if needed
-    if app_name in ("agora", "fifa"):
+    if app_name in ("agora", "fifa", "news"):
         frontend_dir = project_root / f"src/{app_name}/frontend"
         dist_dir = frontend_dir / "dist"
         if not dist_dir.exists():
