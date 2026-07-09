@@ -22,7 +22,47 @@ function _flashError(message) {
   _errorTimer = setTimeout(() => { state.error = '' }, 4000)
 }
 
+let _wakeLock = null
+async function _acquireWakeLock() {
+  if (!('wakeLock' in navigator) || _wakeLock) return
+  try {
+    _wakeLock = await navigator.wakeLock.request('screen')
+    _wakeLock.addEventListener('release', () => { _wakeLock = null })
+  } catch {
+    _wakeLock = null
+  }
+}
+async function _releaseWakeLock() {
+  if (!_wakeLock) return
+  const lock = _wakeLock
+  _wakeLock = null
+  try { await lock.release() } catch { /* already released */ }
+}
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'visible' && state.isPlaying) _acquireWakeLock()
+})
+
 const currentTrack = computed(() => state.queue[state.currentIndex] || null)
+
+// Reassigning audioEl.src to move to a new track aborts any in-flight play()
+// request on the previous one, and that rejection can arrive *after* the next
+// track has already started loading. _loadToken identifies which _loadAndPlay
+// call a given failure belongs to, so a stale rejection from an old, already-
+// superseded load never gets misattributed to the track that replaced it.
+let _loadToken = 0
+
+function _handleLoadFailure(token) {
+  if (token !== _loadToken) return
+  state.isPlaying = false
+  if (state.currentIndex < state.queue.length - 1) {
+    // _loadAndPlay clears state.error as it starts the next track, so flash after.
+    _loadAndPlay(state.currentIndex + 1)
+    _flashError('Skipped an article — its audio file is unavailable.')
+  } else {
+    _flashError('Could not play this article — the audio file may be unavailable.')
+    stop()
+  }
+}
 
 function _loadAndPlay(index) {
   const track = state.queue[index]
@@ -35,11 +75,9 @@ function _loadAndPlay(index) {
   }
   state.currentIndex = index
   state.error = ''
+  const token = ++_loadToken
   audioEl.src = track.audioUrl
-  audioEl.play().catch(() => {
-    state.isPlaying = false
-    _flashError('Could not play this article — the audio file may be unavailable.')
-  })
+  audioEl.play().catch(() => _handleLoadFailure(token))
 
   const targetPath = `/${track.category}`
   if (router.currentRoute.value.path !== targetPath) {
@@ -94,6 +132,7 @@ function seek(seconds) {
 }
 
 function stop() {
+  _loadToken++ // invalidate any in-flight load so its eventual failure is ignored
   audioEl.pause()
   audioEl.removeAttribute('src')
   state.queue = []
@@ -103,11 +142,12 @@ function stop() {
   state.duration = 0
 }
 
+audioEl.addEventListener('error', () => _handleLoadFailure(_loadToken))
 audioEl.addEventListener('ended', () => next())
 audioEl.addEventListener('timeupdate', () => { state.progress = audioEl.currentTime })
 audioEl.addEventListener('durationchange', () => { state.duration = audioEl.duration || 0 })
-audioEl.addEventListener('play', () => { state.isPlaying = true })
-audioEl.addEventListener('pause', () => { state.isPlaying = false })
+audioEl.addEventListener('play', () => { state.isPlaying = true; _acquireWakeLock() })
+audioEl.addEventListener('pause', () => { state.isPlaying = false; _releaseWakeLock() })
 
 export function usePlayer() {
   return { state, currentTrack, playQueue, playAllTabs, togglePlay, next, prev, seek, stop }
