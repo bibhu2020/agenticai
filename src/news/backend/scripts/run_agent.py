@@ -22,10 +22,11 @@ def main() -> int:
         log.error("Missing environment variables: %s", ", ".join(missing))
         return 1
 
-    log.info("Starting daily news digest agent …")
+    category_keys = [c.strip() for c in os.environ.get("NEWS_CATEGORIES", "").split(",") if c.strip()] or None
+    log.info("Starting daily news digest agent … (categories=%s)", category_keys or "all")
     try:
         from agents.news_agent import run_agent
-        result = run_agent()
+        result = run_agent(category_keys=category_keys)
         counts = {k: len(v) for k, v in result.get("categories", {}).items()}
         log.info("Agent completed: %s", counts)
         if result.get("errors"):

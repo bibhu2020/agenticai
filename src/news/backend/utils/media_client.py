@@ -6,12 +6,15 @@ binary data out of the main agenticai repo's git history.
 from __future__ import annotations
 import base64
 import os
+import random
+import time
 
 import requests
 
 MEDIA_REPO = "bibhu2020/media"
 BRANCH = "main"
 AUDIO_PREFIX = "news/audio"
+_MAX_PUSH_ATTEMPTS = 5
 
 
 def _get_headers(write: bool = False) -> dict:
@@ -28,6 +31,11 @@ def push_audio_bytes(audio_bytes: bytes, remote_path: str) -> str:
     """
     Push audio bytes to bibhu2020/media at news/audio/<remote_path>, creating or
     updating the file. Returns the raw.githubusercontent.com URL for the file.
+
+    Retries on 409/422: the Contents API creates a new commit per PUT, so
+    concurrent writers on the same branch (e.g. parallel matrix jobs each pushing
+    their own category's clips) can race on a stale base commit even when they
+    touch different paths. Each retry re-fetches the current sha before writing.
     """
     token = os.environ.get("GH_MEDIA_TOKEN", "")
     if not token:
@@ -37,18 +45,29 @@ def push_audio_bytes(audio_bytes: bytes, remote_path: str) -> str:
     api_url = f"https://api.github.com/repos/{MEDIA_REPO}/contents/{full_path}"
     headers = _get_headers(write=True)
 
-    get_resp = requests.get(api_url, headers=headers, timeout=10)
-    sha = get_resp.json().get("sha") if get_resp.status_code == 200 else None
+    last_exc: Exception | None = None
+    for attempt in range(_MAX_PUSH_ATTEMPTS):
+        if attempt > 0:
+            time.sleep((0.5 * 2 ** (attempt - 1)) + random.uniform(0, 0.5))
 
-    payload: dict = {
-        "message": f"chore: update {full_path}",
-        "content": base64.b64encode(audio_bytes).decode(),
-        "branch": BRANCH,
-    }
-    if sha:
-        payload["sha"] = sha
+        get_resp = requests.get(api_url, headers=headers, timeout=10)
+        sha = get_resp.json().get("sha") if get_resp.status_code == 200 else None
 
-    put_resp = requests.put(api_url, headers=headers, json=payload, timeout=30)
-    put_resp.raise_for_status()
+        payload: dict = {
+            "message": f"chore: update {full_path}",
+            "content": base64.b64encode(audio_bytes).decode(),
+            "branch": BRANCH,
+        }
+        if sha:
+            payload["sha"] = sha
 
-    return f"https://raw.githubusercontent.com/{MEDIA_REPO}/{BRANCH}/{full_path}"
+        put_resp = requests.put(api_url, headers=headers, json=payload, timeout=30)
+        if put_resp.status_code in (409, 422):
+            last_exc = requests.HTTPError(
+                f"{put_resp.status_code} pushing {full_path} (attempt {attempt + 1}/{_MAX_PUSH_ATTEMPTS}): {put_resp.text}"
+            )
+            continue
+        put_resp.raise_for_status()
+        return f"https://raw.githubusercontent.com/{MEDIA_REPO}/{BRANCH}/{full_path}"
+
+    raise last_exc or RuntimeError(f"failed to push {full_path}")

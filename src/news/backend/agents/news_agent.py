@@ -28,6 +28,7 @@ _PICKS_PER_CATEGORY = 5
 
 class NewsState(TypedDict):
     run_date: str
+    category_keys: list[str]
     candidates: dict[str, list[dict]]
     categories: dict[str, list[dict]]
     errors: dict[str, str]
@@ -72,12 +73,13 @@ def _fetch_one_category(cat_key: str, cfg) -> tuple[str, list[dict], str | None]
 def node_fetch_candidates(state: NewsState) -> dict:
     from concurrent.futures import ThreadPoolExecutor
 
+    categories = {k: CATEGORIES[k] for k in state["category_keys"]}
     candidates: dict[str, list[dict]] = {}
     errors: dict[str, str] = {}
 
-    # Pure network I/O (RSS + DuckDuckGo) — safe to run all 10 categories at once.
-    with ThreadPoolExecutor(max_workers=len(CATEGORIES)) as executor:
-        for cat_key, items, error in executor.map(lambda kv: _fetch_one_category(*kv), CATEGORIES.items()):
+    # Pure network I/O (RSS + DuckDuckGo) — safe to run every selected category at once.
+    with ThreadPoolExecutor(max_workers=len(categories)) as executor:
+        for cat_key, items, error in executor.map(lambda kv: _fetch_one_category(*kv), categories.items()):
             candidates[cat_key] = items
             if error:
                 errors[cat_key] = error
@@ -129,14 +131,15 @@ def node_rank_and_summarize(state: NewsState) -> dict:
     from concurrent.futures import ThreadPoolExecutor
 
     llm = get_llm().with_structured_output(CategoryPicks)
+    selected = {k: CATEGORIES[k] for k in state["category_keys"]}
     categories: dict[str, list[dict]] = {}
     errors = dict(state.get("errors", {}))
 
     # LLM calls (network + inference latency, not CPU-bound locally) — parallelize
-    # with a moderate cap rather than all 10 at once, to stay well under OpenRouter
+    # with a moderate cap rather than all at once, to stay well under OpenRouter
     # rate limits.
-    max_workers = min(int(os.environ.get("LLM_MAX_WORKERS", "5")), len(CATEGORIES))
-    jobs = [(cat_key, cfg, state["candidates"].get(cat_key, [])) for cat_key, cfg in CATEGORIES.items()]
+    max_workers = min(int(os.environ.get("LLM_MAX_WORKERS", "5")), len(selected))
+    jobs = [(cat_key, cfg, state["candidates"].get(cat_key, [])) for cat_key, cfg in selected.items()]
 
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
         for cat_key, picks, error in executor.map(lambda j: _summarize_one(llm, *j), jobs):
@@ -223,13 +226,11 @@ def node_generate_audio(state: NewsState) -> dict:
 
 
 def node_save(state: NewsState) -> dict:
-    print("[agent] saving news.json …")
-    payload = {
-        "generated_at": datetime.now(timezone.utc).isoformat(),
-        "categories": state["categories"],
-    }
-    _DATA_PATH.parent.mkdir(parents=True, exist_ok=True)
-    _DATA_PATH.write_text(json.dumps(payload, indent=2, ensure_ascii=False))
+    out_dir = _DATA_PATH.parent / "partial"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    for cat_key, picks in state["categories"].items():
+        print(f"[agent] saving partial/{cat_key}.json …")
+        (out_dir / f"{cat_key}.json").write_text(json.dumps(picks, indent=2, ensure_ascii=False))
     return {}
 
 
@@ -253,10 +254,11 @@ def build_graph():
     return g.compile()
 
 
-def run_agent() -> NewsState:
+def run_agent(category_keys: list[str] | None = None) -> NewsState:
     graph = build_graph()
     result = graph.invoke({
         "run_date": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
+        "category_keys": category_keys or list(CATEGORIES.keys()),
         "candidates": {},
         "categories": {},
         "errors": {},
