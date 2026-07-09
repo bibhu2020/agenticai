@@ -47,32 +47,40 @@ class CategoryPicks(BaseModel):
 
 # ── nodes ────────────────────────────────────────────────────────────────────
 
-def node_fetch_candidates(state: NewsState) -> dict:
-    candidates: dict[str, list[dict]] = {}
-    errors: dict[str, str] = {}
+def _fetch_one_category(cat_key: str, cfg) -> tuple[str, list[dict], str | None]:
+    print(f"[agent] fetching candidates for {cat_key} …")
+    seen_urls: set[str] = set()
+    items: list[dict] = []
 
-    for cat_key, cfg in CATEGORIES.items():
-        print(f"[agent] fetching candidates for {cat_key} …")
-        seen_urls: set[str] = set()
-        items: list[dict] = []
-
-        for feed_url in cfg.rss_feeds:
-            for article in fetch_rss_candidates.invoke({"feed_url": feed_url, "max_items": 15}):
-                link = article.get("link", "")
-                if link and link not in seen_urls:
-                    seen_urls.add(link)
-                    items.append(article)
-
-        for article in duckduckgo_news_search.invoke({"query": cfg.ddg_query, "max_results": 15, "timelimit": "d"}):
+    for feed_url in cfg.rss_feeds:
+        for article in fetch_rss_candidates.invoke({"feed_url": feed_url, "max_items": 15}):
             link = article.get("link", "")
             if link and link not in seen_urls:
                 seen_urls.add(link)
                 items.append(article)
 
-        if not items:
-            errors[cat_key] = "no candidates found from RSS or DuckDuckGo"
+    for article in duckduckgo_news_search.invoke({"query": cfg.ddg_query, "max_results": 15, "timelimit": "d"}):
+        link = article.get("link", "")
+        if link and link not in seen_urls:
+            seen_urls.add(link)
+            items.append(article)
 
-        candidates[cat_key] = items[:_MAX_CANDIDATES_PER_CATEGORY]
+    error = "no candidates found from RSS or DuckDuckGo" if not items else None
+    return cat_key, items[:_MAX_CANDIDATES_PER_CATEGORY], error
+
+
+def node_fetch_candidates(state: NewsState) -> dict:
+    from concurrent.futures import ThreadPoolExecutor
+
+    candidates: dict[str, list[dict]] = {}
+    errors: dict[str, str] = {}
+
+    # Pure network I/O (RSS + DuckDuckGo) — safe to run all 10 categories at once.
+    with ThreadPoolExecutor(max_workers=len(CATEGORIES)) as executor:
+        for cat_key, items, error in executor.map(lambda kv: _fetch_one_category(*kv), CATEGORIES.items()):
+            candidates[cat_key] = items
+            if error:
+                errors[cat_key] = error
 
     return {"candidates": candidates, "errors": errors}
 
@@ -90,52 +98,79 @@ def _format_candidates_for_prompt(items: list[dict]) -> str:
     return "\n".join(lines)
 
 
+def _summarize_one(llm, cat_key: str, cfg, items: list[dict]) -> tuple[str, list[dict], str | None]:
+    if not items:
+        return cat_key, [], None
+
+    print(f"[agent] ranking + summarizing {cat_key} …")
+    prompt = (
+        f"You are curating the '{cfg.label}' section of a news digest.\n"
+        f"Below are candidate articles gathered from RSS feeds and news search. "
+        f"Pick the {_PICKS_PER_CATEGORY} most significant, most-widely-covered, and mutually distinct "
+        f"stories (avoid near-duplicate stories about the same event from different outlets — prefer "
+        f"variety of stories over variety of sources for the same story).\n\n"
+        f"For each pick, write a neutral, factual summary that is CLOSE TO 100 WORDS (target 90-110 "
+        f"words — this is a firm length requirement, not a cap; expand with relevant context, "
+        f"background, and implications from the snippet if the core facts alone fall short) based "
+        f"ONLY on the information in the snippet below — do not invent facts. Copy the 'url' field "
+        f"exactly as given; do not alter or invent URLs.\n\n"
+        f"Candidates:\n{_format_candidates_for_prompt(items)}"
+    )
+    try:
+        result: CategoryPicks = llm.invoke(prompt)
+        picks = result.articles[:_PICKS_PER_CATEGORY]
+        return cat_key, [p.model_dump() for p in picks], None
+    except Exception as exc:
+        return cat_key, [], f"summarization failed: {exc}"
+
+
 def node_rank_and_summarize(state: NewsState) -> dict:
+    import os
+    from concurrent.futures import ThreadPoolExecutor
+
     llm = get_llm().with_structured_output(CategoryPicks)
     categories: dict[str, list[dict]] = {}
     errors = dict(state.get("errors", {}))
 
-    for cat_key, cfg in CATEGORIES.items():
-        items = state["candidates"].get(cat_key, [])
-        if not items:
-            categories[cat_key] = []
-            continue
+    # LLM calls (network + inference latency, not CPU-bound locally) — parallelize
+    # with a moderate cap rather than all 10 at once, to stay well under OpenRouter
+    # rate limits.
+    max_workers = min(int(os.environ.get("LLM_MAX_WORKERS", "5")), len(CATEGORIES))
+    jobs = [(cat_key, cfg, state["candidates"].get(cat_key, [])) for cat_key, cfg in CATEGORIES.items()]
 
-        print(f"[agent] ranking + summarizing {cat_key} …")
-        prompt = (
-            f"You are curating the '{cfg.label}' section of a news digest.\n"
-            f"Below are candidate articles gathered from RSS feeds and news search. "
-            f"Pick the {_PICKS_PER_CATEGORY} most significant, most-widely-covered, and mutually distinct "
-            f"stories (avoid near-duplicate stories about the same event from different outlets — prefer "
-            f"variety of stories over variety of sources for the same story).\n\n"
-            f"For each pick, write a neutral, factual summary that is CLOSE TO 100 WORDS (target 90-110 "
-            f"words — this is a firm length requirement, not a cap; expand with relevant context, "
-            f"background, and implications from the snippet if the core facts alone fall short) based "
-            f"ONLY on the information in the snippet below — do not invent facts. Copy the 'url' field "
-            f"exactly as given; do not alter or invent URLs.\n\n"
-            f"Candidates:\n{_format_candidates_for_prompt(items)}"
-        )
-        try:
-            result: CategoryPicks = llm.invoke(prompt)
-            picks = result.articles[:_PICKS_PER_CATEGORY]
-            categories[cat_key] = [p.model_dump() for p in picks]
-        except Exception as exc:
-            errors[cat_key] = f"summarization failed: {exc}"
-            categories[cat_key] = []
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        for cat_key, picks, error in executor.map(lambda j: _summarize_one(llm, *j), jobs):
+            categories[cat_key] = picks
+            if error:
+                errors[cat_key] = error
 
     return {"categories": categories, "errors": errors}
 
 
 def node_resolve_thumbnails(state: NewsState) -> dict:
+    from concurrent.futures import ThreadPoolExecutor
+
     categories = state["categories"]
+    needs_scrape: list[dict] = []
+
     for cat_key, picks in categories.items():
         candidate_images = {c.get("link", ""): c.get("image", "") for c in state["candidates"].get(cat_key, [])}
         for article in picks:
             image = candidate_images.get(article["url"], "")
-            if not image:
-                print(f"[agent] resolving thumbnail for {article['url']} …")
-                image = extract_thumbnail.invoke({"url": article["url"]})
-            article["image"] = image
+            if image:
+                article["image"] = image
+            else:
+                needs_scrape.append(article)
+
+    def _resolve(article: dict) -> None:
+        print(f"[agent] resolving thumbnail for {article['url']} …")
+        article["image"] = extract_thumbnail.invoke({"url": article["url"]})
+
+    if needs_scrape:
+        # Network-bound page scrapes — safe to run well beyond CPU core count.
+        with ThreadPoolExecutor(max_workers=min(8, len(needs_scrape))) as executor:
+            list(executor.map(_resolve, needs_scrape))
+
     return {"categories": categories}
 
 
