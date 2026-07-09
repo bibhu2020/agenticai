@@ -1,7 +1,13 @@
-"""Local text-to-speech via Kokoro-82M (ONNX, CPU). Lazily loads a singleton model."""
+"""Local text-to-speech via Kokoro-82M (ONNX, CPU). Lazily loads a singleton model.
+
+The underlying onnxruntime InferenceSession supports concurrent Run() calls from
+multiple threads, so `synthesize()` is safe to call from a thread pool once the
+model is loaded — only the lazy singleton construction itself needs a lock.
+"""
 from __future__ import annotations
 import io
 import os
+import threading
 from pathlib import Path
 
 import requests
@@ -16,6 +22,7 @@ MODEL_PATH = CACHE_DIR / "kokoro-v1.0.onnx"
 VOICES_PATH = CACHE_DIR / "voices-v1.0.bin"
 
 _kokoro = None
+_kokoro_lock = threading.Lock()
 
 
 def _download(url: str, dest: Path) -> None:
@@ -41,9 +48,11 @@ def _ensure_model_files() -> None:
 def _get_kokoro():
     global _kokoro
     if _kokoro is None:
-        from kokoro_onnx import Kokoro
-        _ensure_model_files()
-        _kokoro = Kokoro(str(MODEL_PATH), str(VOICES_PATH))
+        with _kokoro_lock:
+            if _kokoro is None:
+                from kokoro_onnx import Kokoro
+                _ensure_model_files()
+                _kokoro = Kokoro(str(MODEL_PATH), str(VOICES_PATH))
     return _kokoro
 
 

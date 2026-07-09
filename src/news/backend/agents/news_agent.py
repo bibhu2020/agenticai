@@ -141,6 +141,8 @@ def node_resolve_thumbnails(state: NewsState) -> dict:
 
 def node_generate_audio(state: NewsState) -> dict:
     import os
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+
     if not os.environ.get("GH_MEDIA_TOKEN"):
         print("[agent] GH_MEDIA_TOKEN not set — skipping audio generation")
         return {}
@@ -148,17 +150,39 @@ def node_generate_audio(state: NewsState) -> dict:
     categories = state["categories"]
     errors = dict(state.get("errors", {}))
 
-    for cat_key, picks in categories.items():
-        for idx, article in enumerate(picks):
+    def _synth_one(cat_key: str, idx: int, article: dict) -> bytes:
+        text = f"{article['title']}. {article['summary']}"
+        return synthesize(text)
+
+    jobs = [
+        (cat_key, idx, article)
+        for cat_key, picks in categories.items()
+        for idx, article in enumerate(picks)
+    ]
+    max_workers = int(os.environ.get("TTS_MAX_WORKERS", "4"))
+    print(f"[agent] synthesizing audio for {len(jobs)} articles ({max_workers} workers in parallel) …")
+
+    # Synthesis (CPU-bound) runs in parallel across worker threads. Pushes to the
+    # media repo happen one at a time here on the main thread as results arrive —
+    # GitHub's Contents API races concurrent commits to the same branch (409
+    # Conflict), so the network write side must stay serialized even though
+    # synthesis itself doesn't need to be.
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        future_to_job = {
+            executor.submit(_synth_one, cat_key, idx, article): (cat_key, idx, article)
+            for cat_key, idx, article in jobs
+        }
+        done = 0
+        for future in as_completed(future_to_job):
+            cat_key, idx, article = future_to_job[future]
+            done += 1
             try:
-                print(f"[agent] synthesizing audio for {cat_key}[{idx}] …")
-                text = f"{article['title']}. {article['summary']}"
-                mp3_bytes = synthesize(text)
-                url = push_audio_bytes(mp3_bytes, f"{cat_key}/{idx}.mp3")
-                article["audio"] = url
+                mp3_bytes = future.result()
+                article["audio"] = push_audio_bytes(mp3_bytes, f"{cat_key}/{idx}.mp3")
             except Exception as exc:
                 errors[f"{cat_key}[{idx}]_audio"] = f"audio generation failed: {exc}"
                 article["audio"] = ""
+            print(f"[agent] audio {done}/{len(jobs)} done ({cat_key}[{idx}])")
 
     return {"categories": categories, "errors": errors}
 
