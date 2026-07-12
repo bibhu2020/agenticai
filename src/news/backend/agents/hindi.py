@@ -41,6 +41,9 @@ def _format_articles_for_prompt(articles: list[dict]) -> str:
     return "\n".join(lines)
 
 
+_TRANSLATE_ATTEMPTS = 2
+
+
 def _translate_one_category(llm, cat_key: str, articles: list[dict]) -> tuple[str, bool]:
     """Translates articles for one category in place. Returns (cat_key, is_fatal)."""
     if not articles:
@@ -54,10 +57,14 @@ def _translate_one_category(llm, cat_key: str, articles: list[dict]) -> tuple[st
         f"a Hindi reader would expect. Copy the 'index' field for each article exactly as given.\n\n"
         f"Articles:\n{_format_articles_for_prompt(articles)}"
     )
-    try:
-        result: CategoryTranslations = llm.invoke(prompt)
-    except Exception as exc:
-        print(f"[hindi] translation failed for {cat_key}: {exc}")
+
+    for attempt in range(1, _TRANSLATE_ATTEMPTS + 1):
+        try:
+            result: CategoryTranslations = llm.invoke(prompt)
+            break
+        except Exception as exc:
+            print(f"[hindi] translation attempt {attempt}/{_TRANSLATE_ATTEMPTS} failed for {cat_key}: {exc}")
+    else:
         return cat_key, True
 
     for item in result.articles:
