@@ -1,6 +1,7 @@
 """LangGraph sequential workflow: fetch candidates -> rank+summarize -> resolve thumbnails -> save."""
 from __future__ import annotations
 import json
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import TypedDict
@@ -27,6 +28,13 @@ _DATA_PATH = Path(__file__).resolve().parents[2] / "data" / "news.json"
 _MAX_CANDIDATES_PER_CATEGORY = 30
 _PICKS_PER_CATEGORY = 5
 
+# 'local' gets its own, more generous limits: it draws from general web search
+# (noisier, needs a bigger candidate pool to filter down) and the user wants at
+# least 10 stories rather than the usual 5.
+_LOCAL_PICKS = 10
+_LOCAL_MAX_CANDIDATES = 60
+_LOCAL_MAX_AGE_DAYS = 2
+
 
 class NewsState(TypedDict):
     run_date: str
@@ -52,37 +60,89 @@ class CategoryPicks(BaseModel):
 
 def _resolve_local_query(cfg) -> tuple:
     """The 'local' category has no fixed ddg_query — build one from the admin-configured zip.
-    Returns (cfg, location) — location is None if geocoding failed."""
+    Returns (cfg, location, state) — location/state are None if geocoding failed."""
     try:
         place = geocode_zip(get_configured_zip())
-        location = f"{place['city']}, {place['state']}" if place.get("state") else place["city"]
-        return cfg._replace(ddg_query=f"{location} local news today"), location
+        state = place.get("state") or None
+        location = f"{place['city']}, {state}" if state else place["city"]
+        return cfg._replace(ddg_query=f"{location} local news today"), location, state
     except Exception as exc:
         print(f"[agent] could not resolve local zip to a query, falling back to default: {exc}")
-        return cfg, None
+        return cfg, None, None
 
 
-def _fetch_local_extra_candidates(location: str) -> list[dict]:
+_RELATIVE_AGE_RE = re.compile(r"(\d+)\s*(hour|day|week|month|year)s?\s*ago", re.IGNORECASE)
+_ABSOLUTE_DATE_RE = re.compile(r"([A-Z][a-z]{2}\s+\d{1,2},\s*\d{4})")
+_AGE_DAYS_PER_UNIT = {"hour": 1 / 24, "day": 1, "week": 7, "month": 30, "year": 365}
+
+
+def _snippet_age_days(text: str, now: datetime) -> float | None:
+    """Best-effort extraction of how many days old a DDG snippet's content is, from
+    either a relative ('3 days ago') or absolute ('Jun 22, 2026 · ...') date prefix
+    DDG commonly embeds in general web search results. Returns None if no date could
+    be found — general web search has no structured date field, unlike news search."""
+    if not text:
+        return None
+    m = _RELATIVE_AGE_RE.search(text)
+    if m:
+        n, unit = int(m.group(1)), m.group(2).lower()
+        return n * _AGE_DAYS_PER_UNIT[unit]
+    if re.search(r"\byesterday\b", text, re.IGNORECASE):
+        return 1.0
+    if re.search(r"\btoday\b", text, re.IGNORECASE):
+        return 0.0
+    m = _ABSOLUTE_DATE_RE.search(text)
+    if m:
+        try:
+            dt = datetime.strptime(m.group(1), "%b %d, %Y").replace(tzinfo=timezone.utc)
+            return (now - dt).total_seconds() / 86400
+        except ValueError:
+            return None
+    return None
+
+
+def _fetch_local_extra_candidates(location: str, state: str | None) -> list[dict]:
     """DDG's news-specific search has near-zero coverage of small towns — it returns
     unrelated national stories regardless of query wording (verified: 'Melissa, Texas
     local news today' returned California/New York stories, nothing about Melissa or
     nearby Dallas-Fort Worth-area coverage). General web search with a quoted location
     and spam exclusions (small towns are dominated by real-estate/relocation SEO
     content) finds real local news outlets — including nearby larger cities' stations
-    that specifically cover the area — much better."""
+    that specifically cover the area — much better, but has no structured date field
+    and returns results of any age, so results are filtered by _snippet_age_days
+    below rather than trusted as-is.
+
+    Includes a state-wide query (not just the exact town) so coverage can expand to
+    nearby cities when the town alone doesn't have enough recent stories — DDG's own
+    relevance ranking naturally surfaces nearby-city outlets for a location query
+    already; the state-wide query widens that net further."""
     queries = [
         f'"{location}" news -jobs -homes -"real estate" -realtor',
         f"{location} news today",
+        f"news near {location}",
     ]
+    if state:
+        queries.append(f"{state} local news near {location}")
+
     seen: set[str] = set()
     items: list[dict] = []
     for query in queries:
-        for article in duckduckgo_text_search.invoke({"query": query, "max_results": 12}):
+        for article in duckduckgo_text_search.invoke({"query": query, "max_results": 20}):
             link = article.get("link", "")
             if link and link not in seen:
                 seen.add(link)
                 items.append(article)
-    return items
+
+    now = datetime.now(timezone.utc)
+    fresh: list[dict] = []
+    for article in items:
+        age = _snippet_age_days(article.get("summary", ""), now)
+        if age is not None:
+            if age > _LOCAL_MAX_AGE_DAYS:
+                continue
+            article["published"] = f"{age:.1f} days ago" if age >= 1 else "today"
+        fresh.append(article)
+    return fresh
 
 
 def _detect_major_sports_events() -> str:
@@ -126,8 +186,9 @@ def _resolve_sports_query(cfg):
 
 def _fetch_one_category(cat_key: str, cfg) -> tuple[str, list[dict], str | None]:
     local_location = None
+    local_state = None
     if cat_key == "local":
-        cfg, local_location = _resolve_local_query(cfg)
+        cfg, local_location, local_state = _resolve_local_query(cfg)
     elif cat_key == "sports":
         cfg = _resolve_sports_query(cfg)
     print(f"[agent] fetching candidates for {cat_key} …")
@@ -141,21 +202,28 @@ def _fetch_one_category(cat_key: str, cfg) -> tuple[str, list[dict], str | None]
                 seen_urls.add(link)
                 items.append(article)
 
-    for article in duckduckgo_news_search.invoke({"query": cfg.ddg_query, "max_results": 15, "timelimit": "d"}):
-        link = article.get("link", "")
-        if link and link not in seen_urls:
-            seen_urls.add(link)
-            items.append(article)
-
-    if cat_key == "local" and local_location:
-        for article in _fetch_local_extra_candidates(local_location):
+    if cat_key != "local":
+        # DDG's news-vertical search has proven, every time it's been tested, to return
+        # zero results actually about a small town — it fills in with unrelated national
+        # stories that happen to have a valid recent date, which the ranking LLM was
+        # over-trusting once recency became a hard requirement. Skip it for 'local'
+        # entirely rather than let it pollute an otherwise well-filtered candidate pool.
+        for article in duckduckgo_news_search.invoke({"query": cfg.ddg_query, "max_results": 15, "timelimit": "d"}):
             link = article.get("link", "")
             if link and link not in seen_urls:
                 seen_urls.add(link)
                 items.append(article)
 
+    if cat_key == "local" and local_location:
+        for article in _fetch_local_extra_candidates(local_location, local_state):
+            link = article.get("link", "")
+            if link and link not in seen_urls:
+                seen_urls.add(link)
+                items.append(article)
+
+    max_candidates = _LOCAL_MAX_CANDIDATES if cat_key == "local" else _MAX_CANDIDATES_PER_CATEGORY
     error = "no candidates found from RSS or DuckDuckGo" if not items else None
-    return cat_key, items[:_MAX_CANDIDATES_PER_CATEGORY], error
+    return cat_key, items[:max_candidates], error
 
 
 def node_fetch_candidates(state: NewsState) -> dict:
@@ -193,23 +261,33 @@ def _summarize_one(llm, cat_key: str, cfg, items: list[dict]) -> tuple[str, list
         return cat_key, [], None
 
     print(f"[agent] ranking + summarizing {cat_key} …")
+    picks_target = _LOCAL_PICKS if cat_key == "local" else _PICKS_PER_CATEGORY
     extra_guidance = ""
     if cat_key == "local":
+        today = datetime.now(timezone.utc).strftime("%A, %B %d, %Y")
         extra_guidance = (
-            " Some candidates are homepages, category/tag listing pages, social media profiles, "
-            "or real-estate/relocation content rather than actual news stories (their snippet reads "
-            "like a generic description, not a specific dated event) — skip those entirely and only "
-            "pick genuine news articles with concrete facts. A story from a nearby larger city's news "
-            "outlet (e.g. a regional TV station or newspaper) is a valid pick if it is specifically "
-            "about, or clearly relevant to, this location — do not require the story to be about the "
-            f"exact town by name alone. If fewer than {_PICKS_PER_CATEGORY} candidates are genuine "
-            f"news stories, return only as many good ones as you can find — never include a "
-            f"homepage/portal/listing page just to reach {_PICKS_PER_CATEGORY}."
+            f" A pick must pass BOTH of these gates — neither one alone is enough:\n"
+            f"  (1) RELEVANCE: it must be specifically about, or clearly and directly relevant to, "
+            f"this exact location or a nearby city in the same state. A story with no connection to "
+            f"this location — even a major national headline with a perfectly valid recent date — is "
+            f"NOT a valid pick. Do not select a candidate just because it has a recent date if it "
+            f"isn't actually about this area.\n"
+            f"  (2) RECENCY: today is {today}; the story must be about something that happened within "
+            f"the last {_LOCAL_MAX_AGE_DAYS} days. Each candidate's 'published' field tells you its "
+            f"age (e.g. 'today', '1.0 days ago') — reject anything older. Reject anything with no "
+            f"'published' value UNLESS the snippet itself clearly states a recent date or describes "
+            f"the event as breaking/just happened — do not guess or assume recency.\n"
+            f"Some candidates are homepages, category/tag listing pages, social media profiles, or "
+            "real-estate/relocation content rather than actual news stories (their snippet reads like "
+            "a generic description, not a specific dated event) — these fail gate (2) and should be "
+            f"rejected regardless of relevance. If fewer than {picks_target} candidates pass BOTH "
+            f"gates, return only as many as truly qualify — never include a candidate that fails "
+            f"either gate just to reach {picks_target}."
         )
     prompt = (
         f"You are curating the '{cfg.label}' section of a news digest.\n"
         f"Below are candidate articles gathered from RSS feeds and news search. "
-        f"Pick the {_PICKS_PER_CATEGORY} most significant, most-widely-covered, and mutually distinct "
+        f"Pick the {picks_target} most significant, most-widely-covered, and mutually distinct "
         f"stories (avoid near-duplicate stories about the same event from different outlets — prefer "
         f"variety of stories over variety of sources for the same story).{extra_guidance}\n\n"
         f"For each pick, write a neutral, factual summary that is CLOSE TO 100 WORDS (target 90-110 "
@@ -221,7 +299,7 @@ def _summarize_one(llm, cat_key: str, cfg, items: list[dict]) -> tuple[str, list
     )
     try:
         result: CategoryPicks = llm.invoke(prompt)
-        picks = result.articles[:_PICKS_PER_CATEGORY]
+        picks = result.articles[:picks_target]
         return cat_key, [p.model_dump() for p in picks], None
     except Exception as exc:
         return cat_key, [], f"summarization failed: {exc}"
