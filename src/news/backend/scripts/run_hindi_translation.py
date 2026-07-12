@@ -1,17 +1,21 @@
 #!/usr/bin/env python3
-"""Entry point for the daily Hindi translation + narration pass (GitHub Actions).
+"""Entry point for the daily Hindi translation + narration pass for ONE category
+(GitHub Actions matrix job — mirrors run_agent.py's per-category matrix pattern,
+so all categories translate in parallel instead of one job doing all of them).
 
-Runs after the English digest has been merged into news.json — reads it, adds
-title_hi/summary_hi/audio_hi to as many articles as succeed, and only stamps the
-top-level hindi_generated_at completion marker if every category's translation
-call succeeded (individual per-article gaps don't block it, a whole category's
-LLM call failing does).
+Runs after the English digest has been merged into news.json — reads it, translates
++ narrates just NEWS_HINDI_CATEGORY's articles, and writes
+data/partial_hindi/<category>.json (that category's article list, augmented with
+title_hi/summary_hi/audio_hi) for merge_hindi_partials.py to fold back into
+news.json in a later job. Only writes the partial if the category's translation
+call succeeded — a missing partial file is exactly the signal
+merge_hindi_partials.py uses to withhold the hindi_generated_at completion marker
+for the whole day.
 """
 from __future__ import annotations
 import sys
 import os
 import json
-from datetime import datetime, timezone
 from pathlib import Path
 
 # Add backend/ (parent of this scripts/ dir) to path
@@ -25,6 +29,7 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(mess
 log = logging.getLogger(__name__)
 
 _NEWS_PATH = Path(__file__).resolve().parents[2] / "data" / "news.json"
+_OUT_DIR = Path(__file__).resolve().parents[2] / "data" / "partial_hindi"
 
 
 def main() -> int:
@@ -32,6 +37,11 @@ def main() -> int:
     missing = [k for k in required if not os.environ.get(k)]
     if missing:
         log.error("Missing environment variables: %s", ", ".join(missing))
+        return 1
+
+    cat_key = os.environ.get("NEWS_HINDI_CATEGORY", "").strip()
+    if not cat_key:
+        log.error("NEWS_HINDI_CATEGORY is not set")
         return 1
 
     if not _NEWS_PATH.exists():
@@ -44,26 +54,29 @@ def main() -> int:
         log.error("Could not parse %s: %s", _NEWS_PATH, exc)
         return 1
 
-    categories = data.get("categories", {})
-    log.info("Starting Hindi translation pass … (%d categories)", len(categories))
+    articles = data.get("categories", {}).get(cat_key)
+    if not articles:
+        log.warning("Category %s has no articles in news.json yet — nothing to translate", cat_key)
+        return 1
 
+    log.info("Translating %s (%d articles) …", cat_key, len(articles))
     try:
         from agents.hindi import translate_all, generate_audio_all
 
+        categories = {cat_key: articles}
         fatal = translate_all(categories)
         generate_audio_all(categories)
 
         if fatal:
-            log.warning("Hindi translation had fatal failures for categories: %s — hindi_generated_at NOT set", sorted(fatal))
-        else:
-            data["hindi_generated_at"] = datetime.now(timezone.utc).isoformat()
-            log.info("All categories translated successfully — hindi_generated_at set")
+            log.error("Translation failed for %s — not writing a partial", cat_key)
+            return 1
 
-        _NEWS_PATH.write_text(json.dumps(data, indent=2, ensure_ascii=False))
-        log.info("Wrote %s", _NEWS_PATH)
+        _OUT_DIR.mkdir(parents=True, exist_ok=True)
+        (_OUT_DIR / f"{cat_key}.json").write_text(json.dumps(articles, indent=2, ensure_ascii=False))
+        log.info("Wrote partial_hindi/%s.json", cat_key)
         return 0
     except Exception as exc:
-        log.exception("Hindi translation pass failed: %s", exc)
+        log.exception("Hindi translation failed for %s: %s", cat_key, exc)
         return 1
 
 
