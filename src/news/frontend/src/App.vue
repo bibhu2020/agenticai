@@ -1,7 +1,7 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
-import { HEADER_TABS, FOOTER_TABS, tabMeta } from './categories.js'
+import { TABS, tabMeta, sourceMeta } from './categories.js'
 import { getAllNews } from './services/api.js'
 import { usePlayer } from './player.js'
 
@@ -29,7 +29,8 @@ function formatUpdated(iso) {
 }
 
 function categoryArticles(key) {
-  return newsData.value?.categories?.[key] || []
+  const sources = tabMeta(key).sources
+  return sources.flatMap(src => newsData.value?.categories?.[src] || [])
 }
 
 function tabHasAudio(key) {
@@ -42,7 +43,10 @@ function isTabPlaying(key) {
 
 function quickPlayTab(key) {
   if (isTabPlaying(key)) { togglePlay(); return }
-  const items = categoryArticles(key).map((a, i) => ({ category: key, index: i, title: a.title, audioUrl: a.audio }))
+  let i = 0
+  const items = tabMeta(key).sources.flatMap(src =>
+    (newsData.value?.categories?.[src] || []).map(a => ({ category: key, origin: src, index: i++, title: a.title, audioUrl: a.audio }))
+  )
   playQueue(items, 0)
 }
 
@@ -92,28 +96,6 @@ async function installPWA() {
           </div>
         </div>
       </div>
-
-      <nav class="header-tabs">
-        <router-link
-          v-for="tab in HEADER_TABS"
-          :key="tab.key"
-          :to="`/${tab.key}`"
-          class="header-tab"
-          :class="{ active: route.path === `/${tab.key}` }"
-        >
-          <span class="tab-icon">{{ tab.icon }}</span>
-          <span class="tab-label">{{ tab.label }}</span>
-          <button
-            v-if="tabHasAudio(tab.key)"
-            class="tab-play-btn"
-            :class="{ playing: isTabPlaying(tab.key) }"
-            @click.stop.prevent="quickPlayTab(tab.key)"
-            :title="`Play ${tab.label}`"
-          >
-            {{ isTabPlaying(tab.key) ? '⏸' : '▶' }}
-          </button>
-        </router-link>
-      </nav>
     </header>
 
     <!-- Main Content -->
@@ -140,10 +122,10 @@ async function installPWA() {
         </div>
         <div class="now-playing-row">
           <div class="now-playing-info">
-            <span class="now-playing-icon">{{ tabMeta(currentTrack.category).icon }}</span>
+            <span class="now-playing-icon">{{ (currentTrack.origin ? sourceMeta(currentTrack.origin) : tabMeta(currentTrack.category)).icon }}</span>
             <div class="now-playing-text">
               <span class="now-playing-title">{{ currentTrack.title }}</span>
-              <span class="now-playing-cat">{{ tabMeta(currentTrack.category).label }}</span>
+              <span class="now-playing-cat">{{ (currentTrack.origin ? sourceMeta(currentTrack.origin) : tabMeta(currentTrack.category)).label }}</span>
             </div>
           </div>
           <div class="now-playing-controls">
@@ -159,7 +141,7 @@ async function installPWA() {
 
       <nav class="footer-tabs">
         <router-link
-          v-for="tab in FOOTER_TABS"
+          v-for="tab in TABS"
           :key="tab.key"
           :to="`/${tab.key}`"
           class="footer-tab"
@@ -211,41 +193,6 @@ async function installPWA() {
 .brand-icon { font-size: 26px; }
 .brand-title { display: block; font-size: 17px; font-weight: 700; color: var(--accent-primary); line-height: 1.3; }
 .brand-sub { display: block; font-size: 11px; color: var(--text-muted); }
-
-/* ── Header tab bar: same full-bleed banded treatment as the footer bar ── */
-.header-tabs {
-  display: flex;
-  background: rgba(19, 27, 46, 0.97);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-  padding: 0 8px;
-}
-
-.header-tab {
-  position: relative;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 3px;
-  padding: 8px 4px 10px;
-  min-width: 0;
-  border-bottom: 2px solid transparent;
-  color: var(--text-muted);
-  text-decoration: none;
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.2px;
-  transition: all 0.2s;
-}
-.header-tab:hover { color: var(--text-secondary); }
-.header-tab.active { color: var(--accent-primary); border-bottom-color: var(--accent-primary); background: rgba(245,158,11,0.06); }
-.header-tab .tab-icon { font-size: 19px; line-height: 1; }
-.header-tab .tab-label { line-height: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
 
 .header-actions { display: flex; align-items: center; gap: 10px; }
 .admin-link {

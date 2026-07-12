@@ -78,6 +78,28 @@ def duckduckgo_news_search(query: str, max_results: int = 15, timelimit: str = "
 
 
 @tool
+def duckduckgo_text_search(query: str, max_results: int = 10) -> list[dict]:
+    """
+    Search the general web (not news-specific) via DuckDuckGo for pages matching a query.
+    Returns candidates with title, link, summary — useful for content like local events
+    that wouldn't show up in a news search.
+    """
+    try:
+        with DDGS() as ddgs:
+            raw = ddgs.text(query, max_results=max_results, region="wt-wt")
+        return [
+            {
+                "title": r.get("title", ""),
+                "link": r.get("href", "") or r.get("link", ""),
+                "summary": r.get("body", ""),
+            }
+            for r in raw
+        ]
+    except Exception:
+        return []
+
+
+@tool
 def extract_thumbnail(url: str, timeout: int = 5) -> str:
     """
     Fetch a web page and return its Open Graph / Twitter Card thumbnail image URL, or "" if none found.

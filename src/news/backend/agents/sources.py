@@ -88,4 +88,11 @@ CATEGORIES: dict[str, CategorySource] = {
         ],
         ddg_query="Trump news today",
     ),
+    "local": CategorySource(
+        label="Local News",
+        rss_feeds=[],
+        # No fixed query — news_agent.py resolves this at fetch time from the
+        # admin-configured zip code (see agents/local.py).
+        ddg_query="local news today",
+    ),
 }
