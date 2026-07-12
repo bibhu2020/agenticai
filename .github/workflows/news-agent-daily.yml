@@ -34,6 +34,14 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          # actions/checkout defaults to github.sha, which is frozen at the
+          # moment the workflow was triggered — it does NOT track commits
+          # pushed by earlier jobs within this same run (e.g. `merge`'s push
+          # is invisible to `translate-hindi`/`merge-hindi` without this).
+          # Explicitly checking out the branch instead of the pinned sha
+          # gets each job the live tip of main.
+          ref: main
 
       - name: Set up Python 3.12
         uses: actions/setup-python@v5
@@ -78,6 +86,14 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          # actions/checkout defaults to github.sha, which is frozen at the
+          # moment the workflow was triggered — it does NOT track commits
+          # pushed by earlier jobs within this same run (e.g. `merge`'s push
+          # is invisible to `translate-hindi`/`merge-hindi` without this).
+          # Explicitly checking out the branch instead of the pinned sha
+          # gets each job the live tip of main.
+          ref: main
 
       - name: Set up Python 3.12
         uses: actions/setup-python@v5
@@ -131,6 +147,14 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          # actions/checkout defaults to github.sha, which is frozen at the
+          # moment the workflow was triggered — it does NOT track commits
+          # pushed by earlier jobs within this same run (e.g. `merge`'s push
+          # is invisible to `translate-hindi`/`merge-hindi` without this).
+          # Explicitly checking out the branch instead of the pinned sha
+          # gets each job the live tip of main.
+          ref: main
 
       - name: Set up Python 3.12
         uses: actions/setup-python@v5
@@ -180,6 +204,14 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          # actions/checkout defaults to github.sha, which is frozen at the
+          # moment the workflow was triggered — it does NOT track commits
+          # pushed by earlier jobs within this same run (e.g. `merge`'s push
+          # is invisible to `translate-hindi`/`merge-hindi` without this).
+          # Explicitly checking out the branch instead of the pinned sha
+          # gets each job the live tip of main.
+          ref: main
 
       - name: Set up Python 3.12
         uses: actions/setup-python@v5
@@ -225,6 +257,14 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          # actions/checkout defaults to github.sha, which is frozen at the
+          # moment the workflow was triggered — it does NOT track commits
+          # pushed by earlier jobs within this same run (e.g. `merge`'s push
+          # is invisible to `translate-hindi`/`merge-hindi` without this).
+          # Explicitly checking out the branch instead of the pinned sha
+          # gets each job the live tip of main.
+          ref: main
 
       - name: Set up Python 3.12
         uses: actions/setup-python@v5
