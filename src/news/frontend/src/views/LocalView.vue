@@ -3,10 +3,12 @@ import { ref, computed, watch, onMounted, nextTick } from 'vue'
 import { getAllNews } from '../services/api.js'
 import { tabMeta, sourceMeta } from '../categories.js'
 import { usePlayer } from '../player.js'
+import { useLang } from '../lang.js'
 import NewsCard from '../components/NewsCard.vue'
 
 const props = defineProps({ groupKey: { type: String, required: true } })
 const player = usePlayer()
+const lang = useLang()
 
 const loading = ref(true)
 const error = ref(null)
@@ -34,11 +36,11 @@ const queueItems = computed(() => articles.value.map((a, i) => ({
   category: props.groupKey,
   origin: a.origin,
   index: i,
-  title: a.title,
-  audioUrl: a.audio,
+  title: lang.articleTitle(a),
+  audioUrl: lang.articleAudio(a),
 })))
 
-const hasAnyAudio = computed(() => articles.value.some(a => a.audio))
+const hasAnyAudio = computed(() => articles.value.some(a => lang.articleAudio(a)))
 
 function isCurrent(idx) {
   const t = player.currentTrack.value

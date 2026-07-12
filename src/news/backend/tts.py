@@ -56,10 +56,10 @@ def _get_kokoro():
     return _kokoro
 
 
-def synthesize(text: str, voice: str = DEFAULT_VOICE, speed: float = 1.0) -> bytes:
+def synthesize(text: str, voice: str = DEFAULT_VOICE, speed: float = 1.0, lang: str = "en-us") -> bytes:
     """Synthesize text to speech, returning MP3 bytes."""
     kokoro = _get_kokoro()
-    samples, sample_rate = kokoro.create(text, voice=voice, speed=speed, lang="en-us")
+    samples, sample_rate = kokoro.create(text, voice=voice, speed=speed, lang=lang)
     buf = io.BytesIO()
     sf.write(buf, samples, sample_rate, format="MP3")
     return buf.getvalue()
