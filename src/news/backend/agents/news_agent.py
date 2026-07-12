@@ -11,12 +11,14 @@ from pydantic import BaseModel, Field
 try:
     from .sources import CATEGORIES
     from .tools import fetch_rss_candidates, duckduckgo_news_search, extract_thumbnail
+    from .local import get_configured_zip, geocode_zip
     from ..llm import get_llm
     from ..tts import synthesize
     from ..utils.media_client import push_audio_bytes
 except ImportError:
     from agents.sources import CATEGORIES
     from agents.tools import fetch_rss_candidates, duckduckgo_news_search, extract_thumbnail
+    from agents.local import get_configured_zip, geocode_zip
     from llm import get_llm
     from tts import synthesize
     from utils.media_client import push_audio_bytes
@@ -48,7 +50,61 @@ class CategoryPicks(BaseModel):
 
 # ── nodes ────────────────────────────────────────────────────────────────────
 
+def _resolve_local_query(cfg):
+    """The 'local' category has no fixed ddg_query — build one from the admin-configured zip."""
+    try:
+        place = geocode_zip(get_configured_zip())
+        location = f"{place['city']}, {place['state']}" if place.get("state") else place["city"]
+        return cfg._replace(ddg_query=f"{location} local news today")
+    except Exception as exc:
+        print(f"[agent] could not resolve local zip to a query, falling back to default: {exc}")
+        return cfg
+
+
+def _detect_major_sports_events() -> str:
+    """Pull today's actual sports headlines, then ask the LLM which major tournaments they
+    reveal are in progress. Headlines are a far more reliable live signal than a calendar/
+    portal search or the LLM's own parametric knowledge, which isn't trustworthy for "what's
+    live today" beyond its training cutoff."""
+    try:
+        candidates = duckduckgo_news_search.invoke(
+            {"query": "top sports news today", "max_results": 15, "timelimit": "d"}
+        )
+        if not candidates:
+            return ""
+        headlines_block = "\n".join(f"- {c.get('title', '')}" for c in candidates)
+        llm = get_llm()
+        today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+        prompt = (
+            f"Today is {today}. Below are today's actual sports headlines. Based ONLY on what they "
+            f"reveal, name the 1-3 biggest global sports events or tournaments that are clearly "
+            f"CURRENTLY IN PROGRESS (e.g. FIFA World Cup, Wimbledon, the Olympics, a major league's "
+            f"playoffs/finals, a Grand Slam) — not a one-off game or a small local event.\n"
+            f"Reply with ONLY a comma-separated list of event names, nothing else. If the headlines "
+            f"don't clearly indicate any major ongoing tournament, reply with exactly: none\n\n"
+            f"Headlines:\n{headlines_block}"
+        )
+        text = llm.invoke(prompt).content.strip()
+        return "" if not text or text.lower() == "none" else text
+    except Exception as exc:
+        print(f"[agent] could not detect major sports events, falling back to default query: {exc}")
+        return ""
+
+
+def _resolve_sports_query(cfg):
+    """Focus the 'sports' category's DDG query on whatever major tournaments are ongoing right now."""
+    events = _detect_major_sports_events()
+    if not events:
+        return cfg
+    print(f"[agent] sports: focusing on ongoing events — {events}")
+    return cfg._replace(ddg_query=f"{events} news today")
+
+
 def _fetch_one_category(cat_key: str, cfg) -> tuple[str, list[dict], str | None]:
+    if cat_key == "local":
+        cfg = _resolve_local_query(cfg)
+    elif cat_key == "sports":
+        cfg = _resolve_sports_query(cfg)
     print(f"[agent] fetching candidates for {cat_key} …")
     seen_urls: set[str] = set()
     items: list[dict] = []

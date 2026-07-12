@@ -1,12 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import CategoryView from './views/CategoryView.vue'
+import LocalView from './views/LocalView.vue'
 import AdminView from './views/AdminView.vue'
-import { ALL_TABS } from './categories.js'
+import { TABS } from './categories.js'
 
-const categoryRoutes = ALL_TABS.map(tab => ({
+const categoryRoutes = TABS.map(tab => ({
   path: `/${tab.key}`,
-  component: CategoryView,
-  props: { categoryKey: tab.key },
+  component: tab.key === 'local' ? LocalView : CategoryView,
+  props: { groupKey: tab.key },
   meta: { title: tab.label },
 }))
 

@@ -16,9 +16,11 @@ from pydantic import BaseModel
 try:
     from utils.data_store import get_news_data
     from utils.github_trigger import trigger_agent_run, get_last_run_status
+    from utils.repo_config import get_local_config, update_local_zip
 except ImportError:
     from .utils.data_store import get_news_data
     from .utils.github_trigger import trigger_agent_run, get_last_run_status
+    from .utils.repo_config import get_local_config, update_local_zip
 
 app = FastAPI(title="News PWA API", version="1.0.0")
 
@@ -33,6 +35,11 @@ app.add_middleware(
 
 class AdminRequest(BaseModel):
     passphrase: str
+
+
+class LocalZipRequest(BaseModel):
+    passphrase: str
+    zip: str
 
 
 def _check_passphrase(passphrase: str) -> None:
@@ -58,6 +65,23 @@ async def get_category_news(category: str):
     if articles is None:
         raise HTTPException(status_code=404, detail=f"Unknown category: {category}")
     return JSONResponse({"generated_at": data.get("generated_at"), "articles": articles})
+
+
+@app.get("/api/local/zip")
+async def get_local_zip():
+    return get_local_config()
+
+
+@app.post("/api/admin/local-zip")
+async def admin_update_local_zip(req: LocalZipRequest):
+    _check_passphrase(req.passphrase)
+    try:
+        update_local_zip(req.zip)
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail=str(exc))
+    except Exception as exc:
+        raise HTTPException(status_code=502, detail=f"Could not update local zip: {exc}")
+    return {"success": True, "zip": req.zip.strip()}
 
 
 @app.post("/api/admin/trigger")

@@ -21,7 +21,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        category: [world, usa, india, odisha, sports, cricket, usa_stock, ai, quantum, trump]
+        category: [world, usa, india, odisha, sports, cricket, usa_stock, ai, quantum, trump, local]
 
     steps:
       - name: Checkout repository
@@ -48,6 +48,7 @@ jobs:
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           GH_MEDIA_TOKEN: ${{ secrets.GH_MEDIA_TOKEN }}
+          OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
           NEWS_CATEGORIES: ${{ matrix.category }}
         run: |
           source .venv/bin/activate
@@ -61,9 +62,60 @@ jobs:
           if-no-files-found: warn
           retention-days: 1
 
+  run-local-extras:
+    name: Fetch Weather + Events (local)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install uv
+        run: curl -LsSf https://astral.sh/uv/install.sh | sh && echo "$HOME/.local/bin" >> $GITHUB_PATH
+
+      - name: Install dependencies
+        run: uv sync --frozen --no-dev --prerelease=allow
+
+      - name: Cache Kokoro TTS model files
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/kokoro
+          key: kokoro-v1.0-model-files
+
+      - name: Run local weather + events collector
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          GH_MEDIA_TOKEN: ${{ secrets.GH_MEDIA_TOKEN }}
+          OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
+        run: |
+          source .venv/bin/activate
+          python src/news/backend/scripts/run_local_extras.py
+
+      - name: Upload weather partial result
+        uses: actions/upload-artifact@v4
+        with:
+          name: news-partial-local_weather
+          path: src/news/data/partial/local_weather.json
+          if-no-files-found: warn
+          retention-days: 1
+
+      - name: Upload events partial result
+        uses: actions/upload-artifact@v4
+        with:
+          name: news-partial-local_events
+          path: src/news/data/partial/local_events.json
+          if-no-files-found: warn
+          retention-days: 1
+
   merge:
     name: Merge & Commit
-    needs: run-agent
+    needs: [run-agent, run-local-extras]
     if: always()
     runs-on: ubuntu-latest
     timeout-minutes: 10
