@@ -7,10 +7,13 @@ written by run_hindi_translation.py for a single category) and copies
 title_hi/summary_hi/audio_hi onto the matching article (by index) in news.json's
 existing categories — the English article data itself is untouched.
 
-Only stamps the top-level hindi_generated_at completion marker if EVERY category
-that has articles in news.json also produced a partial file that day — a missing
-category (its matrix job failed) means the whole day is English-only for the
-toggle, not just that category.
+Stamps the top-level hindi_generated_at completion marker as long as at least
+_MIN_SUCCESS_RATIO of the categories that have articles in news.json produced a
+partial file that day. A category that's missing (its matrix job failed — e.g. a
+transient LLM error) silently falls back to English per-article in the frontend
+already, so requiring literally every category to succeed just to show the toggle
+at all was too strict — one flaky category shouldn't take down Hindi for
+everything else that *did* translate successfully.
 """
 from __future__ import annotations
 import json
@@ -22,6 +25,7 @@ from pathlib import Path
 _DATA_DIR = Path(__file__).resolve().parents[2] / "data"
 _NEWS_PATH = _DATA_DIR / "news.json"
 _PARTIAL_DIR = _DATA_DIR / "partial_hindi"
+_MIN_SUCCESS_RATIO = 0.8
 
 
 def main() -> int:
@@ -64,12 +68,19 @@ def main() -> int:
         print(f"[merge-hindi] no partial_hindi directory at {_PARTIAL_DIR}")
 
     missing = expected - completed
+    success_ratio = len(completed) / len(expected) if expected else 0.0
     if missing:
-        print(f"[merge-hindi] categories missing Hindi translation: {sorted(missing)} — hindi_generated_at NOT set")
-        data.pop("hindi_generated_at", None)
-    else:
+        print(f"[merge-hindi] categories missing Hindi translation: {sorted(missing)} "
+              f"({len(completed)}/{len(expected)} succeeded, {success_ratio:.0%})")
+
+    if success_ratio >= _MIN_SUCCESS_RATIO:
         data["hindi_generated_at"] = datetime.now(timezone.utc).isoformat()
-        print("[merge-hindi] all categories translated successfully — hindi_generated_at set")
+        print(f"[merge-hindi] {success_ratio:.0%} of categories translated (>= {_MIN_SUCCESS_RATIO:.0%} threshold) "
+              f"— hindi_generated_at set; missing categories fall back to English per-article")
+    else:
+        data.pop("hindi_generated_at", None)
+        print(f"[merge-hindi] only {success_ratio:.0%} of categories translated "
+              f"(< {_MIN_SUCCESS_RATIO:.0%} threshold) — hindi_generated_at NOT set")
 
     _NEWS_PATH.write_text(json.dumps(data, indent=2, ensure_ascii=False))
     print(f"[merge-hindi] wrote {_NEWS_PATH}")
