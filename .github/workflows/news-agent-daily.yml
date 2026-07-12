@@ -152,10 +152,14 @@ jobs:
         run: echo "News digest agent run complete at $(date -u)"
 
   translate-hindi:
-    name: Translate & Narrate (Hindi)
+    name: Translate & Narrate (Hindi, ${{ matrix.category }})
     needs: merge
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        category: [world, usa, india, odisha, sports, cricket, usa_stock, ai, quantum, trump, local, local_weather, local_events]
 
     steps:
       - name: Checkout repository
@@ -178,13 +182,48 @@ jobs:
           path: ~/.cache/kokoro
           key: kokoro-v1.0-model-files
 
-      - name: Run Hindi translation + narration pass
+      - name: Translate + narrate this category into Hindi
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           GH_MEDIA_TOKEN: ${{ secrets.GH_MEDIA_TOKEN }}
+          NEWS_HINDI_CATEGORY: ${{ matrix.category }}
         run: |
           source .venv/bin/activate
           python src/news/backend/scripts/run_hindi_translation.py
+
+      - name: Upload Hindi partial result
+        uses: actions/upload-artifact@v4
+        with:
+          name: hindi-partial-${{ matrix.category }}
+          path: src/news/data/partial_hindi/${{ matrix.category }}.json
+          if-no-files-found: warn
+          retention-days: 1
+
+  merge-hindi:
+    name: Merge Hindi Translations & Commit
+    needs: translate-hindi
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Download all Hindi partial results
+        uses: actions/download-artifact@v4
+        with:
+          pattern: hindi-partial-*
+          path: src/news/data/partial_hindi
+          merge-multiple: true
+
+      - name: Merge Hindi partials into news.json
+        run: python src/news/backend/scripts/merge_hindi_partials.py
 
       - name: Commit and push Hindi translations
         run: |
