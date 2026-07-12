@@ -13,6 +13,14 @@ on:
 permissions:
   contents: write
 
+# Only one full run at a time — a scheduled run and a manual force-trigger
+# overlapping would otherwise race to push src/news/data/news.json. A second
+# trigger while one is in progress queues behind it rather than running
+# concurrently.
+concurrency:
+  group: news-agent-daily
+  cancel-in-progress: false
+
 jobs:
   run-agent:
     name: Fetch & Summarize (${{ matrix.category }})
@@ -145,7 +153,15 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add src/news/data/news.json
           git diff --cached --quiet && echo "No changes to commit" || git commit -m "chore(news): daily digest update"
-          git push
+          for i in 1 2 3; do
+            git push && exit 0
+            echo "Push rejected (attempt $i/3) — fetching + rebasing onto the latest main …"
+            git fetch origin main
+            git rebase origin/main || { echo "::error::Rebase conflict — aborting, manual intervention needed"; git rebase --abort; exit 1; }
+            sleep 3
+          done
+          echo "::error::Push failed after 3 attempts"
+          exit 1
 
       - name: Report status
         if: always()
@@ -231,7 +247,15 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add src/news/data/news.json
           git diff --cached --quiet && echo "No changes to commit" || git commit -m "chore(news): daily hindi translation update"
-          git push
+          for i in 1 2 3; do
+            git push && exit 0
+            echo "Push rejected (attempt $i/3) — fetching + rebasing onto the latest main …"
+            git fetch origin main
+            git rebase origin/main || { echo "::error::Rebase conflict — aborting, manual intervention needed"; git rebase --abort; exit 1; }
+            sleep 3
+          done
+          echo "::error::Push failed after 3 attempts"
+          exit 1
 
       - name: Report status
         if: always()
