@@ -54,10 +54,20 @@ def main() -> int:
         log.error("Could not parse %s: %s", _NEWS_PATH, exc)
         return 1
 
-    articles = data.get("categories", {}).get(cat_key)
-    if not articles:
-        log.warning("Category %s has no articles in news.json yet — nothing to translate", cat_key)
+    categories_in_news = data.get("categories", {})
+    if cat_key not in categories_in_news:
+        log.error("Unknown category %s — not present in news.json", cat_key)
         return 1
+
+    articles = categories_in_news[cat_key]
+    if not articles:
+        # A category can legitimately have zero articles that day (e.g. no local
+        # events found) — that's not an error, just nothing to translate. No
+        # partial is written, but merge_hindi_partials.py already excludes empty
+        # categories from what it expects a partial for, so this doesn't block
+        # the hindi_generated_at completion marker.
+        log.info("Category %s has no articles today — nothing to translate", cat_key)
+        return 0
 
     log.info("Translating %s (%d articles) …", cat_key, len(articles))
     try:
