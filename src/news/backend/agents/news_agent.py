@@ -10,14 +10,14 @@ from pydantic import BaseModel, Field
 
 try:
     from .sources import CATEGORIES
-    from .tools import fetch_rss_candidates, duckduckgo_news_search, extract_thumbnail
+    from .tools import fetch_rss_candidates, duckduckgo_news_search, duckduckgo_text_search, extract_thumbnail
     from .local import get_configured_zip, geocode_zip
     from ..llm import get_llm
     from ..tts import synthesize
     from ..utils.media_client import push_audio_bytes
 except ImportError:
     from agents.sources import CATEGORIES
-    from agents.tools import fetch_rss_candidates, duckduckgo_news_search, extract_thumbnail
+    from agents.tools import fetch_rss_candidates, duckduckgo_news_search, duckduckgo_text_search, extract_thumbnail
     from agents.local import get_configured_zip, geocode_zip
     from llm import get_llm
     from tts import synthesize
@@ -50,15 +50,39 @@ class CategoryPicks(BaseModel):
 
 # ── nodes ────────────────────────────────────────────────────────────────────
 
-def _resolve_local_query(cfg):
-    """The 'local' category has no fixed ddg_query — build one from the admin-configured zip."""
+def _resolve_local_query(cfg) -> tuple:
+    """The 'local' category has no fixed ddg_query — build one from the admin-configured zip.
+    Returns (cfg, location) — location is None if geocoding failed."""
     try:
         place = geocode_zip(get_configured_zip())
         location = f"{place['city']}, {place['state']}" if place.get("state") else place["city"]
-        return cfg._replace(ddg_query=f"{location} local news today")
+        return cfg._replace(ddg_query=f"{location} local news today"), location
     except Exception as exc:
         print(f"[agent] could not resolve local zip to a query, falling back to default: {exc}")
-        return cfg
+        return cfg, None
+
+
+def _fetch_local_extra_candidates(location: str) -> list[dict]:
+    """DDG's news-specific search has near-zero coverage of small towns — it returns
+    unrelated national stories regardless of query wording (verified: 'Melissa, Texas
+    local news today' returned California/New York stories, nothing about Melissa or
+    nearby Dallas-Fort Worth-area coverage). General web search with a quoted location
+    and spam exclusions (small towns are dominated by real-estate/relocation SEO
+    content) finds real local news outlets — including nearby larger cities' stations
+    that specifically cover the area — much better."""
+    queries = [
+        f'"{location}" news -jobs -homes -"real estate" -realtor',
+        f"{location} news today",
+    ]
+    seen: set[str] = set()
+    items: list[dict] = []
+    for query in queries:
+        for article in duckduckgo_text_search.invoke({"query": query, "max_results": 12}):
+            link = article.get("link", "")
+            if link and link not in seen:
+                seen.add(link)
+                items.append(article)
+    return items
 
 
 def _detect_major_sports_events() -> str:
@@ -101,8 +125,9 @@ def _resolve_sports_query(cfg):
 
 
 def _fetch_one_category(cat_key: str, cfg) -> tuple[str, list[dict], str | None]:
+    local_location = None
     if cat_key == "local":
-        cfg = _resolve_local_query(cfg)
+        cfg, local_location = _resolve_local_query(cfg)
     elif cat_key == "sports":
         cfg = _resolve_sports_query(cfg)
     print(f"[agent] fetching candidates for {cat_key} …")
@@ -121,6 +146,13 @@ def _fetch_one_category(cat_key: str, cfg) -> tuple[str, list[dict], str | None]
         if link and link not in seen_urls:
             seen_urls.add(link)
             items.append(article)
+
+    if cat_key == "local" and local_location:
+        for article in _fetch_local_extra_candidates(local_location):
+            link = article.get("link", "")
+            if link and link not in seen_urls:
+                seen_urls.add(link)
+                items.append(article)
 
     error = "no candidates found from RSS or DuckDuckGo" if not items else None
     return cat_key, items[:_MAX_CANDIDATES_PER_CATEGORY], error
@@ -161,12 +193,25 @@ def _summarize_one(llm, cat_key: str, cfg, items: list[dict]) -> tuple[str, list
         return cat_key, [], None
 
     print(f"[agent] ranking + summarizing {cat_key} …")
+    extra_guidance = ""
+    if cat_key == "local":
+        extra_guidance = (
+            " Some candidates are homepages, category/tag listing pages, social media profiles, "
+            "or real-estate/relocation content rather than actual news stories (their snippet reads "
+            "like a generic description, not a specific dated event) — skip those entirely and only "
+            "pick genuine news articles with concrete facts. A story from a nearby larger city's news "
+            "outlet (e.g. a regional TV station or newspaper) is a valid pick if it is specifically "
+            "about, or clearly relevant to, this location — do not require the story to be about the "
+            f"exact town by name alone. If fewer than {_PICKS_PER_CATEGORY} candidates are genuine "
+            f"news stories, return only as many good ones as you can find — never include a "
+            f"homepage/portal/listing page just to reach {_PICKS_PER_CATEGORY}."
+        )
     prompt = (
         f"You are curating the '{cfg.label}' section of a news digest.\n"
         f"Below are candidate articles gathered from RSS feeds and news search. "
         f"Pick the {_PICKS_PER_CATEGORY} most significant, most-widely-covered, and mutually distinct "
         f"stories (avoid near-duplicate stories about the same event from different outlets — prefer "
-        f"variety of stories over variety of sources for the same story).\n\n"
+        f"variety of stories over variety of sources for the same story).{extra_guidance}\n\n"
         f"For each pick, write a neutral, factual summary that is CLOSE TO 100 WORDS (target 90-110 "
         f"words — this is a firm length requirement, not a cap; expand with relevant context, "
         f"background, and implications from the snippet if the core facts alone fall short) based "
