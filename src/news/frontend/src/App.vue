@@ -4,6 +4,7 @@ import { useRoute } from 'vue-router'
 import { TABS, tabMeta, sourceMeta } from './categories.js'
 import { getAllNews } from './services/api.js'
 import { usePlayer } from './player.js'
+import { useLang } from './lang.js'
 
 const route = useRoute()
 const generatedAt = ref(null)
@@ -12,6 +13,7 @@ const installPrompt = ref(null)
 const showInstall = ref(false)
 
 const { state: playerState, currentTrack, playQueue, playAllTabs, togglePlay, next, prev, seek, stop } = usePlayer()
+const lang = useLang()
 
 const progressPct = computed(() => playerState.duration ? (playerState.progress / playerState.duration) * 100 : 0)
 
@@ -34,7 +36,7 @@ function categoryArticles(key) {
 }
 
 function tabHasAudio(key) {
-  return categoryArticles(key).some(a => a.audio)
+  return categoryArticles(key).some(a => lang.articleAudio(a))
 }
 
 function isTabPlaying(key) {
@@ -45,7 +47,7 @@ function quickPlayTab(key) {
   if (isTabPlaying(key)) { togglePlay(); return }
   let i = 0
   const items = tabMeta(key).sources.flatMap(src =>
-    (newsData.value?.categories?.[src] || []).map(a => ({ category: key, origin: src, index: i++, title: a.title, audioUrl: a.audio }))
+    (newsData.value?.categories?.[src] || []).map(a => ({ category: key, origin: src, index: i++, title: lang.articleTitle(a), audioUrl: lang.articleAudio(a) }))
   )
   playQueue(items, 0)
 }
@@ -90,6 +92,14 @@ async function installPWA() {
           <div class="header-actions">
             <button class="btn btn-outline" @click="playAllTabs" title="Play every story from every tab, in order">
               🎧 Play all tabs
+            </button>
+            <button
+              v-if="newsData?.hindi_generated_at"
+              class="btn btn-outline"
+              @click="lang.toggleLang"
+              :title="lang.isHindi.value ? 'Switch to English' : 'हिन्दी में स्विच करें'"
+            >
+              {{ lang.isHindi.value ? '🇮🇳 हिं' : '🇬🇧 EN' }}
             </button>
             <button v-if="showInstall" class="btn btn-primary" @click="installPWA">📲 Install</button>
             <router-link to="/admin" class="admin-link" title="Admin">⚙️</router-link>

@@ -2,6 +2,7 @@ import { reactive, computed } from 'vue'
 import { getAllNews } from './services/api.js'
 import { TABS } from './categories.js'
 import { router } from './router.js'
+import { useLang } from './lang.js'
 
 const audioEl = new Audio()
 audioEl.preload = 'auto'
@@ -98,13 +99,14 @@ function playQueue(items, startIndex = 0) {
 async function playAllTabs() {
   try {
     const data = await getAllNews()
+    const lang = useLang()
     const items = []
     for (const tab of TABS) {
       let i = 0
       for (const source of tab.sources) {
         const articles = data.categories?.[source] || []
         articles.forEach(a => {
-          items.push({ category: tab.key, origin: source, index: i++, title: a.title, audioUrl: a.audio })
+          items.push({ category: tab.key, origin: source, index: i++, title: lang.articleTitle(a), audioUrl: lang.articleAudio(a) })
         })
       }
     }

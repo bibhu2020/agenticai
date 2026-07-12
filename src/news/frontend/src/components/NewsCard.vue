@@ -1,4 +1,6 @@
 <script setup>
+import { useLang } from '../lang.js'
+
 defineProps({
   article: { type: Object, required: true },
   icon: { type: String, default: '📰' },
@@ -7,6 +9,8 @@ defineProps({
   isPlaying: { type: Boolean, default: false },
 })
 defineEmits(['listen'])
+
+const lang = useLang()
 
 function formatDate(dateStr) {
   if (!dateStr) return ''
@@ -41,11 +45,11 @@ function formatDate(dateStr) {
         <span class="origin-badge" v-if="originLabel">{{ icon }} {{ originLabel }}</span>
         <span class="news-date" v-if="article.published_at">{{ formatDate(article.published_at) }}</span>
       </div>
-      <h3 class="news-title">{{ article.title }}</h3>
-      <p class="news-summary">{{ article.summary }}</p>
+      <h3 class="news-title">{{ lang.articleTitle(article) }}</h3>
+      <p class="news-summary">{{ lang.articleSummary(article) }}</p>
       <div class="news-actions">
         <button
-          v-if="article.audio"
+          v-if="lang.articleAudio(article)"
           class="btn btn-outline listen-btn"
           @click="$emit('listen')"
           :class="{ playing: isCurrent && isPlaying }"

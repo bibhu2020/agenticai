@@ -26,6 +26,8 @@ _DATA_DIR = Path(__file__).resolve().parents[2] / "data"
 
 
 def _attach_audio(cat_key: str, items: list[dict]) -> None:
+    if not items:
+        return
     if not os.environ.get("GH_MEDIA_TOKEN"):
         log.info("GH_MEDIA_TOKEN not set — skipping audio generation for %s", cat_key)
         return
