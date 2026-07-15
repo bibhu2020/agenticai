@@ -1,643 +1,493 @@
 {
-  "generated_at": "2026-07-14T07:44:53.696093+00:00",
+  "generated_at": "2026-07-15T07:48:43.043692+00:00",
   "categories": {
     "world": [
       {
-        "title": "Death toll from Bangkok bar fire rises to 30 as police probe safety lapses",
-        "summary": "A devastating fire at a Bangkok bar in the Chatuchak district has killed at least 30 people, with firefighters discovering patrons running through flames to escape. Survivors and first responders reported locked doors and a lack of signage marking emergency exits, raising serious questions about safety compliance. Police are investigating potential safety violations at the establishment. The incident highlights critical fire safety concerns in entertainment venues and has prompted scrutiny of building regulations and emergency preparedness protocols in Thailand's hospitality sector.",
+        "title": "Trump threatens to bomb bridges and power plants unless Iran resumes talks",
+        "summary": "President Trump issued threats to bomb Iranian infrastructure including bridges and power plants as part of escalating tensions with Iran. The comments came as the two countries exchanged fire for the fourth consecutive day, with the US simultaneously resuming its blockade of Iranian ports. This represents a significant escalation in rhetoric during an ongoing conflict that has persisted for over four months, with Trump employing military threats as leverage to pressure Iran back to the negotiating table amid broader regional instability.",
+        "url": "https://www.bbc.co.uk/news/articles/cy0608wy8pro?at_medium=RSS&at_campaign=rss",
+        "source": "BBC News",
+        "published_at": "Wed, 15 Jul 2026 06:47:25 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d6c0/live/e8f90230-7fb4-11f1-926f-c90d1bcfbc84.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/0.mp3"
+      },
+      {
+        "title": "China economic growth falls sharply, missing target",
+        "summary": "China's economic growth declined significantly, falling short of government targets during a period marked by weak domestic demand and international disruptions. The slowdown was exacerbated by the impact of the Iran-US conflict on global oil prices, which affected China's economic performance despite the country maintaining strong export figures. This economic contraction reflects broader vulnerabilities in China's economy as external geopolitical tensions combine with internal demand challenges to constrain growth prospects.",
+        "url": "https://www.bbc.co.uk/news/articles/cd959x4edy8o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC News",
+        "published_at": "Wed, 15 Jul 2026 05:12:55 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c8de/live/7e6a3480-7f40-11f1-ba68-9b76167cb04b.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/1.mp3"
+      },
+      {
+        "title": "Bangkok fire investigation finds locked doors and flammable decor as deaths climb to 30",
+        "summary": "A devastating fire in Bangkok has claimed 30 lives, with investigations revealing critical safety violations including locked emergency exits and inadequate emergency signage. Survivors and first responders reported that locked doors prevented people from escaping the building, while flammable decorative materials contributed to the rapid spread of flames. The findings highlight serious lapses in fire safety protocols and building regulations, raising questions about enforcement and accountability in commercial establishments.",
         "url": "https://www.bbc.co.uk/news/articles/clyxyzlp9p2o?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
         "published_at": "Tue, 14 Jul 2026 03:47:41 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/73c6/live/00a8bbe0-7f52-11f1-b976-0b9c15b0ccfc.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/0.mp3",
-        "title_hi": "बैंकॉक बार में आग से मरने वालों की संख्या 30 तक पहुंची, पुलिस सुरक्षा में चूक की जांच कर रही है",
-        "summary_hi": "चटुचक जिले में बैंकॉक के एक बार में लगी विनाशकारी आग में कम से कम 30 लोगों की मौत हुई है, अग्निशमन कर्मियों ने आग से बचने के लिए लपटों के बीच से भागते हुए लोगों को देखा। बचे हुए लोगों और प्रथम प्रतिक्रिया कर्मियों ने बंद दरवाजों और आपातकालीन निकास के संकेत की कमी की सूचना दी, जिससे सुरक्षा अनुपालन के बारे में गंभीर सवाल उठे। पुलिस इस प्रतिष्ठान में संभावित सुरक्षा उल्लंघन की जांच कर रही है। यह घटना मनोरंजन स्थलों में महत्वपूर्ण अग्नि सुरक्षा संबंधी चिंताओं को उजागर करती है और थाईलैंड के आतिथ्य क्षेत्र में भवन नियमों और आपातकालीन तैयारी प्रोटोकॉल की जांच को प्रेरित किया है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/world/0.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/2.mp3"
       },
       {
-        "title": "Hungary parliament votes to remove president from office",
-        "summary": "Hungary's parliament has voted to remove President Tamás Sulyok from office in a significant political development. Sulyok was widely regarded as a loyalist of former Prime Minister Viktor Orbán, who lost power in April after 16 years of governance. The removal represents a major shift in Hungarian politics following Orbán's electoral defeat and reflects ongoing political tensions in the country. This action signals potential institutional changes and a recalibration of political power dynamics in Hungary's government structure following the recent change in leadership.",
-        "url": "https://www.bbc.co.uk/news/articles/cp8r002gdevo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC News",
-        "published_at": "Mon, 13 Jul 2026 20:39:14 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3314/live/d7e89fb0-7ef5-11f1-bee8-53ce494e1abc.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/1.mp3",
-        "title_hi": "हंगरी की संसद ने राष्ट्रपति को पद से हटाने के लिए मतदान किया",
-        "summary_hi": "हंगरी की संसद ने राष्ट्रपति तमास सुल्योक को पद से हटाने के लिए मतदान किया है, जो एक महत्वपूर्ण राजनीतिक विकास है। सुल्योक को व्यापक रूप से पूर्व प्रधानमंत्री विक्टर ऑर्बान के वफादार के रूप में माना जाता था, जिन्होंने अप्रैल में 16 साल की सत्ता के बाद अपनी शक्ति खो दी। यह हटाया जाना ऑर्बान की चुनावी हार के बाद हंगरी की राजनीति में एक बड़े बदलाव का प्रतिनिधित्व करता है और देश में चल रहे राजनीतिक तनाव को दर्शाता है। यह कार्रवाई संभावित संस्थागत परिवर्तनों और नेतृत्व में हाल के बदलाव के बाद हंगरी की सरकारी संरचना में राजनीतिक शक्ति गतिशीलता के पुनर्मूल्यांकन का संकेत देती है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/world/1.mp3"
+        "title": "Spain shuts down France and Kylian Mbappé, advances to the World Cup final with a 2-0 victory",
+        "summary": "Spain defeated France 2-0 in the FIFA World Cup semifinal, advancing to their first World Cup final since winning the tournament in 2010. Mikel Oyarzabal scored from a penalty kick following a play by teenager Lamine Yamal, while Pedro Porro added a second goal. Spain's dominant defensive performance neutralized France's previously formidable attack, with the victory marking Spain's sixth shutout of the tournament and setting them up to face either England or Argentina in Sunday's final.",
+        "url": "https://apnews.com/article/france-spain-world-cup-score-87fb7740fa552edf4bfd28d0e8727c23",
+        "source": "Associated Press News",
+        "published_at": "2026-07-15T06:54:00+00:00",
+        "image": "https://dims.apnews.com/dims4/default/b8e9fd5/2147483647/strip/true/crop/3509x2338+0+0/resize/980x653!/quality/90/?url=https://assets.apnews.com/97/c9/aa460130d1dcc3f6fe3693e0bd81/dbcec20ce7734c30bcf0f7a2b666012a",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/3.mp3"
       },
       {
-        "title": "Volkswagen planning to cut up to 100,000 jobs globally",
-        "summary": "Volkswagen Group, which includes luxury brands Porsche and Audi, is planning to eliminate up to 100,000 jobs worldwide as the automotive giant faces significant financial challenges. The company has experienced a steep decline in profits and confronts intense competition from Chinese manufacturers in the global market. This massive workforce reduction reflects broader challenges in the traditional automotive industry as it transitions toward electric vehicles and faces disruption from emerging competitors. The job cuts represent one of the largest restructuring efforts in the company's history and will have substantial economic implications across multiple countries.",
-        "url": "https://www.bbc.co.uk/news/articles/cx2wzpwn51lo?at_medium=RSS&at_campaign=rss",
+        "title": "Seven Britons among those killed in Spain wildfires",
+        "summary": "Wildfires in Spain have resulted in at least 13 deaths, with seven victims identified as British nationals. Spanish authorities confirmed that twelve of the thirteen victims were foreign nationals, indicating the fires' impact extended beyond Spain's borders. The incident highlights the severity of the wildfire crisis affecting the region and the international dimensions of the disaster, with multiple nationalities represented among the casualties during what appears to be a significant environmental emergency.",
+        "url": "https://www.bbc.co.uk/news/articles/cp8l87784ngo?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
-        "published_at": "Mon, 13 Jul 2026 16:19:15 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2e86/live/076e2020-7ec9-11f1-af40-3101fe5a127d.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/2.mp3",
-        "title_hi": "वोक्सवैगन विश्व स्तर पर 100,000 तक नौकरियां कम करने की योजना बना रहा है",
-        "summary_hi": "वोक्सवैगन ग्रुप, जिसमें लक्जरी ब्रांड पोर्शे और ऑडी शामिल हैं, विश्व स्तर पर 100,000 तक नौकरियों को समाप्त करने की योजना बना रहा है क्योंकि ऑटोमोटिव दिग्गज को महत्वपूर्ण वित्तीय चुनौतियों का सामना करना पड़ रहा है। कंपनी को मुनाफे में तेज गिरावट का अनुभव हुआ है और वैश्विक बाजार में चीनी निर्माताओं से तीव्र प्रतिस्पर्धा का सामना कर रहा है। यह विशाल कार्यबल में कमी पारंपरिक ऑटोमोटिव उद्योग में व्यापक चुनौतियों को दर्शाती है क्योंकि यह विद्युत वाहनों की ओर संक्रमण करता है और उभरते प्रतिद्वंद्वियों से व्यवधान का सामना करता है। नौकरी में कटौती कंपनी के इतिहास में सबसे बड़े पुनर्गठन प्रयासों में से एक का प्रतिनिधित्व करती है और कई देशों में पर्याप्त आर्थिक प्रभाव डालेगी।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/world/2.mp3"
-      },
-      {
-        "title": "US judge voids Donald Trump's $1.8bn settlement with IRS that gave him immunity from tax audits",
-        "summary": "A US judge has voided Donald Trump's $1.8 billion settlement with the Internal Revenue Service that had granted him immunity from future tax audits. The judge determined the lawsuit was brought for 'improper purposes' and referred a Trump attorney for possible disciplinary action. This decision reverses protections Trump had secured and reopens the possibility of IRS scrutiny of his tax filings. The ruling represents a significant legal setback for Trump and removes a major shield against federal tax investigations, potentially exposing him to renewed audit exposure and further legal complications.",
-        "url": "https://www.bbc.co.uk/news/articles/cn8q0e8d4ego?at_medium=RSS&at_campaign=rss",
-        "source": "BBC News",
-        "published_at": "Mon, 13 Jul 2026 18:52:46 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/468c/live/a01b76f0-7ede-11f1-84b4-d5196cc76857.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/3.mp3",
-        "title_hi": "अमेरिकी न्यायाधीश ने डोनाल्ड ट्रम्प के आईआरएस के साथ 1.8 अरब डॉलर के समझौते को रद्द किया जो उन्हें कर ऑडिट से छूट देता था",
-        "summary_hi": "एक अमेरिकी न्यायाधीश ने डोनाल्ड ट्रम्प के आंतरिक राजस्व सेवा के साथ 1.8 अरब डॉलर के समझौते को रद्द कर दिया है जो उन्हें भविष्य के कर ऑडिट से छूट प्रदान करता था। न्यायाधीश ने निर्धारित किया कि मुकदमा 'अनुचित उद्देश्यों' के लिए लाया गया था और ट्रम्प के एक वकील को संभावित अनुशासनात्मक कार्रवाई के लिए भेजा। यह निर्णय ट्रम्प द्वारा सुरक्षित सुरक्षा को उलट देता है और आईआरएस की जांच की संभावना को फिर से खोलता है। यह निर्णय ट्रम्प के लिए एक महत्वपूर्ण कानूनी झटका है और संघीय कर जांच के खिलाफ एक प्रमुख ढाल को हटाता है, संभवतः उन्हें नवीनीकृत ऑडिट जोखिम और आगे की कानूनी जटिलताओं के लिए उजागर करता है।",
-        "audio_hi": ""
-      },
-      {
-        "title": "Briton tells of surviving Spain wildfire in car as wife and friends died trying to run to safety",
-        "summary": "A British man, Malcolm Timbrell, has recounted his harrowing survival of a devastating wildfire that swept through a Spanish village, killing his wife and their friends. While Timbrell sheltered in his car, his wife and companions perished attempting to flee on foot from the rapidly advancing flames. The tragedy underscores the extreme dangers posed by wildfires and the split-second decisions that determine survival outcomes. The incident highlights the increasing threat of severe wildfires in Europe due to climate change and raises concerns about emergency preparedness and evacuation procedures in wildfire-prone regions.",
-        "url": "https://www.bbc.co.uk/news/articles/cp9ld3p324jo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC News",
-        "published_at": "Mon, 13 Jul 2026 17:31:54 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/814f/live/dbfc97c0-7ee9-11f1-926f-c90d1bcfbc84.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/4.mp3",
-        "title_hi": "ब्रिटन ने स्पेन की जंगल की आग में कार में बचने की कहानी सुनाई क्योंकि पत्नी और दोस्त दौड़कर सुरक्षा तक पहुंचने की कोशिश में मारे गए",
-        "summary_hi": "एक ब्रिटिश व्यक्ति, मैल्कम टिम्बरेल, ने एक विनाशकारी जंगल की आग से अपने भयानक बचाव की कहानी सुनाई है जो एक स्पेनिश गांव से गुजरी, जिसमें उनकी पत्नी और उनके दोस्त मारे गए। जबकि टिम्बरेल अपनी कार में शरण लेते हैं, उनकी पत्नी और साथी तेजी से बढ़ती लपटों से पैदल भागने का प्रयास करते हुए मारे गए। यह त्रासदी जंगल की आग से उत्पन्न चरम खतरों को रेखांकित करती है और जीवित रहने के परिणाम को निर्धारित करने वाले तत्काल निर्णयों को दर्शाती है। यह घटना जलवायु परिवर्तन के कारण यूरोप में गंभीर जंगल की आग के बढ़ते खतरे को उजागर करती है और जंगल की आग से प्रभावित क्षेत्रों में आपातकालीन तैयारी और निकासी प्रक्रियाओं के बारे में चिंताएं बढ़ाती है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/world/4.mp3"
+        "published_at": "Wed, 15 Jul 2026 01:03:07 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/dfc7/live/8d789890-8017-11f1-bee8-53ce494e1abc.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/4.mp3"
       }
     ],
     "usa": [
       {
-        "title": "UAE condemns Iran's 'brazen' attack on tankers as US launches fresh strikes",
-        "summary": "The United States conducted its third consecutive night of military strikes against Iran as tensions escalate in the Middle East. The strikes coincided with President Trump's announcement of a 20% charge as part of a new blockade on the Strait of Hormuz, a critical global shipping route. The UAE condemned Iran's attacks on tankers in the region. These escalating military actions represent a significant intensification of US-Iran hostilities, with implications for global oil markets and regional stability. The blockade announcement signals a major shift in US policy toward Iran and could have far-reaching economic consequences for international trade.",
-        "url": "https://www.bbc.co.uk/news/articles/c8d2vn38dy1o?at_medium=RSS&at_campaign=rss",
+        "title": "Trump threatens to bomb bridges and power plants unless Iran resumes talks",
+        "summary": "President Trump issued threats to bomb Iranian infrastructure as the United States and Iran exchanged fire for the fourth consecutive day. The escalation occurred amid ongoing US blockade of Iranian ports. Trump's inflammatory rhetoric came during a conflict that has persisted for over four months, marking a significant intensification in diplomatic tensions. The threats represent a hardline approach to negotiations, with the US maintaining military and economic pressure through port blockades while demanding Iran return to talks. The situation reflects the broader Middle East tensions affecting global markets and energy prices.",
+        "url": "https://www.bbc.co.uk/news/articles/cy0608wy8pro?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
-        "published_at": "Tue, 14 Jul 2026 04:50:48 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0962/live/b6b2aac0-7f36-11f1-b9f9-7523a937b0a2.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/0.mp3",
-        "title_hi": "संयुक्त अरब अमीरात ने ईरान के टैंकरों पर 'साहसिक' हमले की निंदा की, अमेरिका ने नई हड़तालें शुरू कीं",
-        "summary_hi": "संयुक्त राज्य अमेरिका ने मध्य पूर्व में तनाव बढ़ने के बीच ईरान के खिलाफ लगातार तीसरी रात सैन्य हमले किए। ये हमले राष्ट्रपति ट्रम्प की हार्मुज जलडमरूमध्य पर एक नई नाकेबंदी के हिस्से के रूप में 20% शुल्क की घोषणा के साथ मेल खाते हैं, जो एक महत्वपूर्ण वैश्विक शिपिंग मार्ग है। संयुक्त अरब अमीरात ने क्षेत्र में ईरान के टैंकरों पर हमलों की निंदा की। ये बढ़ती सैन्य कार्रवाइयां अमेरिका-ईरान शत्रुता में एक महत्वपूर्ण तीव्रता का प्रतिनिधित्व करती हैं, जिसका वैश्विक तेल बाजारों और क्षेत्रीय स्थिरता पर प्रभाव है। नाकेबंदी की घोषणा ईरान के प्रति अमेरिकी नीति में एक बड़े बदलाव का संकेत देती है और अंतर्राष्ट्रीय व्यापार के लिए दूरगामी आर्थिक परिणाम हो सकते हैं।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/usa/0.mp3"
+        "published_at": "Wed, 15 Jul 2026 06:47:25 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d6c0/live/e8f90230-7fb4-11f1-926f-c90d1bcfbc84.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/0.mp3"
       },
       {
-        "title": "Lindsey Graham's sister chosen as replacement after senator's death",
-        "summary": "Following Senator Lindsey Graham's death on Saturday, South Carolina's governor has appointed his sister to serve out the remainder of his term in the US Senate. This succession marks a significant moment in South Carolina politics and the broader Senate composition. Graham's sister will assume the responsibilities and duties of a sitting US senator, representing the state until the next election cycle. The appointment keeps the seat within the Graham family and reflects the governor's decision to maintain continuity in the state's Senate representation during this transition period following the prominent senator's passing.",
-        "url": "https://www.bbc.co.uk/news/articles/c05y3rlvp20o?at_medium=RSS&at_campaign=rss",
+        "title": "ICE told to halt most vehicle stops after pair of fatal shootings",
+        "summary": "Immigration and Customs Enforcement has been directed to halt most vehicle stops following two fatal shootings by immigration agents. The policy shift represents a major change for the agency, which has faced mounting criticism over excessive use of force allegations throughout the past year. The directive comes after a Colombian national was killed by an ICE agent in Maine and another undocumented migrant was fatally shot in Houston by an immigration officer within days of each other. These incidents sparked protests and vigils, prompting federal oversight and operational restrictions on enforcement activities to address concerns about officer conduct and public safety.",
+        "url": "https://www.bbc.co.uk/news/articles/cly8yrw597eo?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
-        "published_at": "Mon, 13 Jul 2026 21:37:02 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/59b7/live/5d89ba60-7f04-11f1-926f-c90d1bcfbc84.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/1.mp3",
-        "title_hi": "सीनेटर की मृत्यु के बाद लिंडसे ग्राहम की बहन को प्रतिस्थापन के लिए चुना गया",
-        "summary_hi": "शनिवार को सीनेटर लिंडसे ग्राहम की मृत्यु के बाद, दक्षिण कैरोलिना के राज्यपाल ने उनकी बहन को अपने कार्यकाल के शेष समय के लिए अमेरिकी सीनेट में सेवा करने के लिए नियुक्त किया है। यह उत्तराधिकार दक्षिण कैरोलिना की राजनीति और व्यापक सीनेट संरचना में एक महत्वपूर्ण क्षण है। ग्राहम की बहन एक बैठे हुए अमेरिकी सीनेटर की जिम्मेदारियों और कर्तव्यों को संभालेंगी, अगले चुनाव चक्र तक राज्य का प्रतिनिधित्व करेंगी। यह नियुक्ति सीट को ग्राहम परिवार के भीतर रखती है और प्रमुख सीनेटर की मृत्यु के बाद इस संक्रमण अवधि में राज्य के सीनेट प्रतिनिधित्व में निरंतरता बनाए रखने के राज्यपाल के निर्णय को दर्शाती है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/usa/1.mp3"
+        "published_at": "Wed, 15 Jul 2026 01:00:43 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4009/live/02268d30-7f9d-11f1-a5f4-433bb9aa2e5a.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/1.mp3"
       },
       {
-        "title": "US judge voids Donald Trump's $1.8bn settlement with IRS that gave him immunity from tax audits",
-        "summary": "A US federal judge has invalidated Donald Trump's $1.8 billion settlement agreement with the Internal Revenue Service that had provided him immunity from future tax audits. The judge ruled that the lawsuit was brought for 'improper purposes,' effectively voiding the protections the settlement had granted. Additionally, the judge referred a Trump attorney for possible disciplinary action, suggesting potential misconduct in the legal proceedings. This decision reopens Trump to potential IRS scrutiny and tax audits going forward. The ruling represents a significant legal setback for the former president and could have substantial financial and legal implications for his business interests and personal tax matters.",
-        "url": "https://www.bbc.co.uk/news/articles/cn8q0e8d4ego?at_medium=RSS&at_campaign=rss",
+        "title": "Supreme Court justice describes wearing bulletproof vest and 'swatting' hoax at home",
+        "summary": "Two Supreme Court justices appeared before Congress to request $228 million in security funding while describing alarming threats to their safety. Justice Elena Kagan and Justice Amy Coney Barrett detailed incidents including wearing bulletproof vests and experiencing 'swatting' hoaxes at their homes. The justices highlighted escalating threats both in person and online targeting members of the court. Their testimony underscored growing security concerns facing the judiciary and the need for enhanced protective measures. The funding request reflects broader concerns about political polarization and threats to government officials, particularly following controversial court decisions.",
+        "url": "https://www.bbc.co.uk/news/articles/crkvkjddjd7o?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
-        "published_at": "Mon, 13 Jul 2026 18:52:46 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/468c/live/a01b76f0-7ede-11f1-84b4-d5196cc76857.jpg",
-        "audio": "",
-        "title_hi": "अमेरिकी न्यायाधीश ने डोनाल्ड ट्रम्प के 1.8 अरब डॉलर के आईआरएस समझौते को रद्द किया जो उन्हें कर ऑडिट से छूट देता था",
-        "summary_hi": "एक अमेरिकी संघीय न्यायाधीश ने डोनाल्ड ट्रम्प के आंतरिक राजस्व सेवा के साथ 1.8 अरब डॉलर के समझौते को अमान्य कर दिया है, जिसने उन्हें भविष्य के कर ऑडिट से छूट प्रदान की थी। न्यायाधीश ने फैसला सुनाया कि मुकदमा 'अनुचित उद्देश्यों' के लिए लाया गया था, जिससे समझौते द्वारा दी गई सुरक्षा को प्रभावी रूप से रद्द कर दिया गया। इसके अतिरिक्त, न्यायाधीश ने एक ट्रम्प वकील को संभावित अनुशासनात्मक कार्रवाई के लिए भेजा है, जो कानूनी कार्यवाही में संभावित कदाचार का सुझाव देता है। यह निर्णय ट्रम्प को आईआरएस की जांच और कर ऑडिट के लिए फिर से खोलता है। यह फैसला पूर्व राष्ट्रपति के लिए एक महत्वपूर्ण कानूनी झटका है और उनके व्यावसायिक हितों और व्यक्तिगत कर मामलों के लिए पर्याप्त वित्तीय और कानूनी प्रभाव हो सकता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/usa/2.mp3"
+        "published_at": "Tue, 14 Jul 2026 20:36:23 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c805/live/66054e10-7fc3-11f1-b890-9bba15144891.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/2.mp3"
       },
       {
-        "title": "Colombian national killed by ICE agent during operation in Maine",
-        "summary": "A Colombian national was fatally shot by an Immigration and Customs Enforcement agent during an operation in Maine. This incident occurred less than a week after another undocumented migrant was fatally shot in Houston by an immigration agent, marking the second deadly shooting involving ICE agents in rapid succession. The deaths have raised concerns about the use of force by immigration enforcement officials and sparked broader questions about immigration enforcement practices. These consecutive fatal incidents have intensified scrutiny of ICE operations and their tactics during enforcement actions, drawing attention from immigrant advocacy groups and policymakers concerned about officer conduct and accountability.",
-        "url": "https://www.bbc.co.uk/news/articles/c2ly580kxnko?at_medium=RSS&at_campaign=rss",
+        "title": "Trump pays writer E Jean Carroll $5m in damages over sexual abuse and defamation",
+        "summary": "President Trump paid writer E. Jean Carroll $5 million in damages following a legal judgment finding him liable for sexual abuse and defamation. Trump had previously sought to delay the payment while attempting to persuade the Supreme Court to overturn the judgment. The settlement concludes a significant legal battle that began three years earlier when a jury initially found Trump liable. The payment represents a notable legal defeat for the president and resolves one of several ongoing legal challenges he faces. The case highlighted allegations of sexual misconduct and subsequent defamatory statements made by Trump against Carroll.",
+        "url": "https://www.bbc.co.uk/news/articles/c2dydj1wp93o?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
-        "published_at": "Tue, 14 Jul 2026 01:50:48 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/bd4c/live/ca487820-7f0f-11f1-9dcd-8b0134df079b.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/3.mp3",
-        "title_hi": "मेन में ऑपरेशन के दौरान आईसीई एजेंट द्वारा कोलंबियाई नागरिक की हत्या",
-        "summary_hi": "एक कोलंबियाई नागरिक को मेन में एक ऑपरेशन के दौरान आप्रवासन और सीमा शुल्क प्रवर्तन एजेंट द्वारा गोली मार दी गई। यह घटना ह्यूस्टन में एक अन्य अनिर्दिष्ट प्रवासी द्वारा एक आप्रवासन एजेंट द्वारा गोली मारे जाने के एक सप्ताह से भी कम समय बाद हुई, जो तेजी से उत्तराधिकार में आईसीई एजेंटों द्वारा दूसरी घातक शूटिंग है। इन मौतों ने आप्रवासन प्रवर्तन अधिकारियों द्वारा बल के उपयोग के बारे में चिंताएं बढ़ाई हैं और आप्रवासन प्रवर्तन प्रथाओं के बारे में व्यापक प्रश्न उठाए हैं। ये लगातार घातक घटनाएं आईसीई संचालन और प्रवर्तन कार्रवाई के दौरान उनकी रणनीति की जांच को तीव्र करती हैं, जिससे आप्रवासी वकालत समूहों और नीति निर्माताओं का ध्यान आकर्षित होता है जो अधिकारी आचरण और जवाबदेही के बारे में चिंतित हैं।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/usa/3.mp3"
+        "published_at": "Tue, 14 Jul 2026 17:07:42 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a14c/live/efc3d020-7f98-11f1-a5f4-433bb9aa2e5a.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/3.mp3"
       },
       {
-        "title": "Red Cross declares national blood emergency as supplies dwindle and demand surges",
-        "summary": "The American Red Cross has declared a national blood emergency due to critically low blood supplies and surging demand. Blood supplies fell 25% in June while demand for blood simultaneously increased, creating an acute shortage across the nation's healthcare system. This emergency declaration reflects a serious public health crisis that threatens the ability of hospitals to meet patient needs for transfusions and medical procedures. The combination of reduced donations and increased demand has created an urgent situation requiring immediate action. The Red Cross is appealing for blood donors to help address this critical shortage and prevent potential disruptions to medical care and emergency response capabilities nationwide.",
-        "url": "https://www.npr.org/2026/07/13/nx-s1-5888357/red-cross-declares-national-blood-emergency-as-supplies-dwindle-and-demand-surges",
-        "source": "NPR Topics: National",
-        "published_at": "Mon, 13 Jul 2026 04:46:37 -0400",
-        "image": "https://media.npr.org/include/images/facebook-default-wide-s1400-c85.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/4.mp3",
-        "title_hi": "रेड क्रॉस ने राष्ट्रीय रक्त आपातकाल की घोषणा की क्योंकि आपूर्ति कम हो रही है और मांग बढ़ रही है",
-        "summary_hi": "अमेरिकी रेड क्रॉस ने गंभीर रूप से कम रक्त आपूर्ति और बढ़ती मांग के कारण एक राष्ट्रीय रक्त आपातकाल की घोषणा की है। जून में रक्त आपूर्ति 25% गिरी जबकि रक्त की मांग एक साथ बढ़ी, जिससे राष्ट्र की स्वास्थ्यसेवा प्रणाली में एक तीव्र कमी पैदा हुई। यह आपातकाल घोषणा एक गंभीर सार्वजनिक स्वास्थ्य संकट को दर्शाती है जो अस्पतालों की रक्त आधान और चिकित्सा प्रक्रियाओं के लिए रोगी की जरूरतों को पूरा करने की क्षमता को खतरे में डालता है। कम दान और बढ़ती मांग के संयोजन ने तत्काल कार्रवाई की आवश्यकता वाली एक जरूरी स्थिति पैदा की है। रेड क्रॉस इस महत्वपूर्ण कमी को दूर करने और पूरे देश में चिकित्सा देखभाल और आपातकालीन प्रतिक्रिया क्षमताओं में संभावित व्यवधान को रोकने के लिए रक्त दाताओं से अपील कर रहा है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/usa/4.mp3"
+        "title": "Gas prices drive down US inflation - but will it last?",
+        "summary": "The US inflation rate declined in June, driven primarily by falling gas prices that provided relief to consumers. However, economists express concern that price increases may resume due to the renewed conflict in the Middle East, which threatens to disrupt oil supplies and elevate energy costs. The temporary inflation reduction masks underlying economic pressures and uncertainty about future price trajectories. Middle East tensions, particularly the ongoing US-Iran conflict, pose significant risks to energy markets and could reverse recent inflation gains. Analysts warn that geopolitical instability may undermine economic stability and consumer purchasing power in coming months.",
+        "url": "https://www.bbc.co.uk/news/articles/c98289j7lg7o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC News",
+        "published_at": "Tue, 14 Jul 2026 17:34:55 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9c00/live/75181c70-7f7d-11f1-b1fb-a927e22d7e8b.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/4.mp3"
       }
     ],
     "india": [
       {
-        "title": "Indian sailor killed in Iran missile strike on tankers",
-        "summary": "An Indian crew member was killed and six others injured when Iranian cruise missiles struck two UAE-flagged tankers in what appears to be a significant maritime incident. The attack represents an escalation in regional tensions, with Indian nationals directly affected by the military action. This incident highlights the vulnerability of commercial shipping in contested waters and the broader geopolitical tensions in the Middle East region, where Indian seafarers frequently work on international vessels. The incident underscores the risks faced by Indian maritime workers operating in volatile regions.",
-        "url": "https://www.bbc.co.uk/news/articles/c8d2vn38dy1o?at_medium=RSS&at_campaign=rss",
+        "title": "From Wimbledon towels to Scotch: What India-UK trade deal could mean for shoppers",
+        "summary": "The free trade agreement between India and the United Kingdom, the world's fifth and sixth largest economies respectively, has come into effect. The deal represents the sixth free trade agreement implemented during the Narendra Modi government's tenure, following similar agreements with Mauritius, the UAE, Australia, the European Free Trade Association, and Oman. The agreement is expected to benefit consumers through reduced tariffs on various goods including automobiles, whisky, and other products. The implementation marks a significant milestone in India-UK bilateral trade relations and aims to enhance economic cooperation between the two nations.",
+        "url": "https://www.bbc.co.uk/news/articles/c0kymrz0vkgo?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
-        "published_at": "Tue, 14 Jul 2026 04:50:48 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0962/live/b6b2aac0-7f36-11f1-b9f9-7523a937b0a2.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/0.mp3",
-        "title_hi": "ईरानी मिसाइल हमले में भारतीय नाविक की मौत, टैंकरों पर हमला",
-        "summary_hi": "ईरानी क्रूज मिसाइलों के हमले में दो यूएई झंडे वाले टैंकरों पर हमला हुआ, जिसमें एक भारतीय क्रू सदस्य की मौत हुई और छह अन्य घायल हुए। यह एक महत्वपूर्ण समुद्री घटना प्रतीत होती है। यह हमला क्षेत्रीय तनाव में वृद्धि का प्रतिनिधित्व करता है, जिसमें भारतीय नागरिक सीधे सैन्य कार्रवाई से प्रभावित हुए हैं। यह घटना विवादास्पद जल में वाणिज्यिक शिपिंग की कमजोरी और मध्य पूर्व क्षेत्र में व्यापक भू-राजनीतिक तनाव को उजागर करती है, जहां भारतीय नाविक अंतर्राष्ट्रीय जहाजों पर अक्सर काम करते हैं। यह घटना अस्थिर क्षेत्रों में काम करने वाले भारतीय समुद्री कर्मचारियों के सामने आने वाले जोखिमों को रेखांकित करती है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/india/0.mp3"
-      },
-      {
-        "title": "Muslim judge in India faces death threats after convicting 'cow vigilantes'",
-        "summary": "Judge Tabassum Khan has received death threats and online abuse following her conviction of fourteen Hindu men in a lynching case related to cow vigilantism. The case highlights ongoing tensions surrounding communal violence and the protection of religious minorities in India's judicial system. Khan's experience demonstrates the challenges faced by judges handling sensitive religious and communal cases, as well as the broader issue of online harassment targeting public officials. The incident raises concerns about judicial independence and the safety of those delivering justice in religiously sensitive matters.",
-        "url": "https://www.bbc.co.uk/news/articles/cd6e9zq87xvo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC News",
-        "published_at": "Sun, 12 Jul 2026 00:49:24 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9b9e/live/2a507da0-7bf8-11f1-b447-c332f78126d1.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/1.mp3",
-        "title_hi": "भारत में मुस्लिम न्यायाधीश को 'गौ सतर्कताकर्मियों' को दोषी ठहराने के बाद मौत की धमकियां मिलीं",
-        "summary_hi": "न्यायाधीश तबस्सुम खान को गौ सतर्कतावाद से संबंधित एक लिंचिंग मामले में चौदह हिंदू पुरुषों को दोषी ठहराने के बाद मौत की धमकियां और ऑनलाइन दुर्व्यवहार मिला है। यह मामला सांप्रदायिक हिंसा के आसपास चल रहे तनाव और भारत की न्यायिक प्रणाली में धार्मिक अल्पसंख्यकों की सुरक्षा को उजागर करता है। खान का अनुभव संवेदनशील धार्मिक और सांप्रदायिक मामलों को संभालने वाले न्यायाधीशों के सामने आने वाली चुनौतियों, साथ ही सार्वजनिक अधिकारियों को लक्षित करने वाले ऑनलाइन उत्पीड़न के व्यापक मुद्दे को प्रदर्शित करता है। यह घटना न्यायिक स्वतंत्रता और धार्मिक रूप से संवेदनशील मामलों में न्याय प्रदान करने वालों की सुरक्षा के बारे में चिंताएं उठाती है।",
-        "audio_hi": ""
-      },
-      {
-        "title": "How Indian scientists are mapping the brain's last frontier",
-        "summary": "Indian scientists have developed a comprehensive brainstem atlas, offering an unprecedented detailed map of one of the brain's least understood regions. This scientific advancement represents a significant contribution to neuroscience research and could have major implications for understanding neurological functions and developing treatments for brain-related disorders. The brainstem atlas provides researchers with detailed anatomical information previously unavailable, potentially accelerating discoveries in neurology and related medical fields. This achievement demonstrates India's growing capabilities in cutting-edge scientific research and positions Indian neuroscientists at the forefront of brain mapping initiatives.",
-        "url": "https://www.bbc.co.uk/news/articles/cg53l737v1qo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC News",
-        "published_at": "Mon, 13 Jul 2026 00:08:11 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/8230/live/dff3e310-79da-11f1-a400-b302bc872d47.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/2.mp3",
-        "title_hi": "भारतीय वैज्ञानिक मस्तिष्क की अंतिम सीमा को मैप कर रहे हैं",
-        "summary_hi": "भारतीय वैज्ञानिकों ने एक व्यापक ब्रेनस्टेम एटलस विकसित किया है, जो मस्तिष्क के सबसे कम समझे जाने वाले क्षेत्रों में से एक का अभूतपूर्व विस्तृत मानचित्र प्रदान करता है। यह वैज्ञानिक प्रगति तंत्रिका विज्ञान अनुसंधान में एक महत्वपूर्ण योगदान का प्रतिनिधित्व करती है और तंत्रिका संबंधी कार्यों को समझने और मस्तिष्क संबंधी विकारों के उपचार विकसित करने के लिए प्रमुख निहितार्थ हो सकते हैं। ब्रेनस्टेम एटलस शोधकर्ताओं को विस्तृत शारीरिक जानकारी प्रदान करता है जो पहले उपलब्ध नहीं थी, संभवतः तंत्रिका विज्ञान और संबंधित चिकित्सा क्षेत्रों में खोजों को तेज करता है। यह उपलब्धि अत्याधुनिक वैज्ञानिक अनुसंधान में भारत की बढ़ती क्षमताओं को प्रदर्शित करती है और भारतीय तंत्रिका वैज्ञानिकों को मस्तिष्क मानचित्रण पहल के अग्रभाग में स्थापित करती है।",
-        "audio_hi": ""
-      },
-      {
-        "title": "India is adding biofuels to petrol – but many drivers are unhappy",
-        "summary": "India has begun blending biofuels into petrol supplies, introducing the E20 fuel blend to reduce dependence on fossil fuels and promote renewable energy. However, motorists have expressed significant dissatisfaction, reporting reduced fuel efficiency in their vehicles and concerns about increased maintenance costs. The policy initiative aims to support environmental sustainability and energy independence but faces consumer resistance due to practical economic concerns. This tension between environmental policy objectives and consumer interests reflects broader challenges in implementing green energy transitions while managing public acceptance and economic impacts on ordinary citizens.",
-        "url": "https://www.bbc.co.uk/news/articles/crlw74gd6lro?at_medium=RSS&at_campaign=rss",
-        "source": "BBC News",
-        "published_at": "Wed, 08 Jul 2026 22:06:00 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/014b/live/63b81fd0-7a8b-11f1-a368-fda0a38e0ca0.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/3.mp3",
-        "title_hi": "भारत पेट्रोल में बायोफ्यूल जोड़ रहा है – लेकिन कई ड्राइवर नाखुश हैं",
-        "summary_hi": "भारत ने पेट्रोल आपूर्ति में बायोफ्यूल मिश्रण करना शुरू किया है, जीवाश्म ईंधन पर निर्भरता कम करने और नवीकरणीय ऊर्जा को बढ़ावा देने के लिए ई20 ईंधन मिश्रण पेश किया है। हालांकि, मोटरिस्टों ने महत्वपूर्ण असंतुष्टि व्यक्त की है, अपने वाहनों में ईंधन दक्षता में कमी और रखरखाव लागत में वृद्धि की चिंताओं की रिपोर्ट की है। नीति पहल पर्यावरणीय स्थिरता और ऊर्जा स्वतंत्रता का समर्थन करने का लक्ष्य रखती है लेकिन व्यावहारिक आर्थिक चिंताओं के कारण उपभोक्ता प्रतिरोध का सामना करती है। पर्यावरणीय नीति उद्देश्यों और उपभोक्ता हितों के बीच यह तनाव हरित ऊर्जा संक्रमण को लागू करते समय जनता की स्वीकृति और साधारण नागरिकों पर आर्थिक प्रभाव को प्रबंधित करने में व्यापक चुनौतियों को प्रतिबिंबित करता है।",
-        "audio_hi": ""
+        "published_at": "Tue, 14 Jul 2026 22:17:43 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b761/live/c7a2b980-7e80-11f1-926f-c90d1bcfbc84.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/0.mp3"
       },
       {
         "title": "Health fears as frail Indian activist on hunger strike loses 8.2kg",
-        "summary": "An environmental activist has been on a hunger strike for sixteen days and is experiencing visible physical deterioration, having lost 8.2 kilograms. The activist's declining health raises serious medical concerns as the protest continues. Hunger strikes represent a form of civil disobedience often employed to draw attention to environmental or social causes, but extended fasting poses significant health risks, particularly for individuals already in frail condition. The situation highlights the tension between activist commitment to causes and the physical toll of such protest methods, raising questions about the sustainability and safety of prolonged hunger strikes as advocacy tools.",
+        "summary": "Environmental activist Sonam Wangchuk's health has deteriorated significantly during his ongoing hunger strike, which has now entered its eighteenth day. He has lost approximately 8.5 kilograms and is visibly weakening, raising serious medical concerns. A petition has been filed in Delhi High Court seeking court intervention for forced medical feeding and his transfer to a government hospital. The plea argues that saving his life is of paramount national importance. Medical experts warn he could face life-threatening complications within days if the hunger strike continues, prompting urgent calls for intervention to preserve his health and wellbeing.",
         "url": "https://www.bbc.co.uk/news/articles/cvgm2rz5d7lo?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
         "published_at": "Mon, 13 Jul 2026 22:03:16 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4b08/live/36b8cf50-7f3d-11f1-926f-c90d1bcfbc84.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/4.mp3",
-        "title_hi": "भूख हड़ताल पर कमजोर भारतीय कार्यकर्ता के स्वास्थ्य को लेकर चिंताएं, 8.2 किग्रा वजन घटा",
-        "summary_hi": "एक पर्यावरणीय कार्यकर्ता सोलह दिनों से भूख हड़ताल पर है और 8.2 किलोग्राम वजन घटाने के साथ स्पष्ट शारीरिक गिरावट का अनुभव कर रहा है। कार्यकर्ता का बिगड़ता स्वास्थ्य गंभीर चिकित्सा चिंताएं उठाता है क्योंकि विरोध जारी है। भूख हड़तालें नागरिक अवज्ञा का एक रूप हैं जिन्हें अक्सर पर्यावरणीय या सामाजिक कारणों पर ध्यान आकर्षित करने के लिए नियोजित किया जाता है, लेकिन विस्तारित उपवास महत्वपूर्ण स्वास्थ्य जोखिम पैदा करता है, विशेष रूप से पहले से ही कमजोर स्थिति में व्यक्तियों के लिए। यह स्थिति कारणों के प्रति कार्यकर्ता प्रतिबद्धता और ऐसी विरोध विधियों के शारीरिक प्रभाव के बीच तनाव को उजागर करती है, वकालत उपकरणों के रूप में लंबे समय तक भूख हड़तालों की स्थिरता और सुरक्षा के बारे में सवाल उठाती है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/india/4.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/1.mp3"
+      },
+      {
+        "title": "Muslim judge in India faces death threats after convicting 'cow vigilantes'",
+        "summary": "Judge Tabassum Khan has faced intense online abuse and death threats following her conviction of fourteen Hindu men in a lynching case related to cow vigilantism. The case highlights the intersection of religious tensions and judicial independence in India, as the Muslim judge's decision to prosecute individuals accused of violence in the name of cow protection has sparked significant controversy. The threats and harassment directed at Khan underscore broader concerns about judicial safety and the politicization of communal issues. Her case raises important questions about the protection of judges who make decisions that challenge prevailing communal sentiments and the rule of law in India.",
+        "url": "https://www.bbc.co.uk/news/articles/cd6e9zq87xvo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC News",
+        "published_at": "Sun, 12 Jul 2026 00:49:24 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9b9e/live/2a507da0-7bf8-11f1-b447-c332f78126d1.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/2.mp3"
+      },
+      {
+        "title": "Indian sailor killed in Iran missile strike on tankers",
+        "summary": "An Indian crew member was killed and six others injured when Iranian cruise missiles struck two UAE-flagged tankers in what appears to be a significant maritime incident. The attack resulted in casualties among the international crew aboard the vessels, highlighting the dangers faced by maritime workers in geopolitically sensitive regions. The incident raises concerns about regional tensions and the safety of commercial shipping in contested waters. The death of the Indian sailor underscores the human cost of regional conflicts and the vulnerability of merchant marine personnel operating in volatile areas. The strike represents an escalation in maritime tensions affecting international trade routes.",
+        "url": "https://www.bbc.co.uk/news/articles/c8d2vn38dy1o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC News",
+        "published_at": "Tue, 14 Jul 2026 04:50:48 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0962/live/b6b2aac0-7f36-11f1-b9f9-7523a937b0a2.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/3.mp3"
+      },
+      {
+        "title": "How Indian scientists are mapping the brain's last frontier",
+        "summary": "Indian scientists have developed a groundbreaking brainstem atlas that provides an unprecedented map of one of the brain's least understood regions. This scientific achievement represents a significant advancement in neuroscience research and brain mapping technology. The brainstem, which controls vital functions including breathing, heart rate, and consciousness, has historically been difficult to study in detail. The new atlas offers researchers an invaluable tool for understanding this critical brain region's structure and function. This development positions India as a contributor to cutting-edge neuroscience research and could have implications for treating neurological disorders and understanding brain function at a fundamental level.",
+        "url": "https://www.bbc.co.uk/news/articles/cg53l737v1qo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC News",
+        "published_at": "Mon, 13 Jul 2026 00:08:11 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/8230/live/dff3e310-79da-11f1-a400-b302bc872d47.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/4.mp3"
       }
     ],
     "odisha": [
       {
-        "title": "Odisha Textbook Error Row: Crime Branch Forms Multiple Teams to Probe Classes 1-8 Books",
-        "summary": "The Odisha Crime Branch has initiated a comprehensive multi-team investigation into textbook errors discovered in Classes 1-8 following an FIR and government action. The probe examines the entire publication process for the affected textbooks. This investigation represents a significant administrative response to quality control failures in educational materials. The formation of multiple dedicated teams indicates the scope and seriousness with which authorities are treating the matter. The textbook error controversy has prompted systematic scrutiny of publishing procedures and accountability mechanisms within Odisha's education system.",
-        "url": "https://www.msn.com/en-in/news/India/odisha-textbook-error-row-crime-branch-forms-multiple-teams-to-probe-classes-1-8-books/ar-AA27S0WQ?ocid=BingNewsVerp",
-        "source": "Times Now on MSN",
-        "published_at": "2026-06-14T07:42:37+00:00",
-        "image": "",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/0.mp3",
-        "title_hi": "ओडिशा पाठ्यपुस्तक त्रुटि विवाद: कक्षा 1-8 की किताबों की जांच के लिए क्राइम ब्रांच ने कई टीमें गठित कीं",
-        "summary_hi": "ओडिशा क्राइम ब्रांच ने एफआईआर और सरकारी कार्रवाई के बाद कक्षा 1-8 में पाई गई पाठ्यपुस्तक त्रुटियों की व्यापक बहु-टीम जांच शुरू की है। यह जांच प्रभावित पाठ्यपुस्तकों की संपूर्ण प्रकाशन प्रक्रिया की जांच करती है। यह जांच शैक्षणिक सामग्री में गुणवत्ता नियंत्रण विफलताओं के प्रति एक महत्वपूर्ण प्रशासनिक प्रतिक्रिया का प्रतिनिधित्व करती है। कई समर्पित टीमों का गठन उस दायरे और गंभीरता को दर्शाता है जिसके साथ अधिकारी इस मामले को संभाल रहे हैं। पाठ्यपुस्तक त्रुटि विवाद ने ओडिशा की शिक्षा प्रणाली में प्रकाशन प्रक्रियाओं और जवाबदेही तंत्र की व्यवस्थित जांच को प्रेरित किया है।",
-        "audio_hi": ""
-      },
-      {
-        "title": "Malaria claims another student's life in Odisha's Rayagada; second death in a week",
-        "summary": "A 9-year-old Class IV student died from malaria while receiving treatment at MKCG Medical College and Hospital in Berhampur, marking the second malaria-related death in Rayagada district within a week. The incident highlights a serious public health crisis affecting the region's vulnerable population, particularly children. The recurring deaths underscore inadequate disease prevention measures and healthcare accessibility challenges in the area. Malaria continues to pose a significant threat to student health and attendance in Odisha. The consecutive deaths within such a short timeframe warrant urgent intervention from health authorities to implement disease control measures and improve medical facilities in affected regions.",
-        "url": "https://sambadenglish.com/latest-news/malaria-claims-another-students-life-in-odishas-rayagada-second-death-in-a-week-12162158",
-        "source": "Sambad English",
-        "published_at": "2026-06-20T07:42:37+00:00",
-        "image": "https://www.bing.com/th?id=ONUT.tcS3I_d-rlqDeRCOalUthQ",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/1.mp3",
-        "title_hi": "ओडिशा के रायगड़ा में मलेरिया से एक और छात्र की मौत; एक हफ्ते में दूसरी मृत्यु",
-        "summary_hi": "एक 9 वर्षीय कक्षा चतुर्थ छात्र की बेरहामपुर में एमकेसीजी मेडिकल कॉलेज और अस्पताल में इलाज के दौरान मलेरिया से मौत हो गई, जो रायगड़ा जिले में एक हफ्ते के भीतर मलेरिया से संबंधित दूसरी मृत्यु है। यह घटना क्षेत्र की कमजोर आबादी, विशेषकर बच्चों को प्रभावित करने वाले गंभीर जनस्वास्थ्य संकट को उजागर करती है। एक छोटी अवधि में लगातार मृत्यु अपर्याप्त रोग निवारण उपायों और क्षेत्र में स्वास्थ्यसेवा पहुंच की चुनौतियों को रेखांकित करती है। मलेरिया ओडिशा में छात्र स्वास्थ्य और उपस्थिति के लिए एक महत्वपूर्ण खतरा बना हुआ है। इस तरह की छोटी समय सीमा के भीतर लगातार मृत्यु के लिए स्वास्थ्य अधिकारियों से रोग नियंत्रण उपायों को लागू करने और प्रभावित क्षेत्रों में चिकित्सा सुविधाओं में सुधार के लिए तत्काल हस्तक्षेप की आवश्यकता है।",
-        "audio_hi": ""
-      },
-      {
-        "title": "ISKCON to celebrate 'Sri Jagannath Ratha Yatra' on July 16",
-        "summary": "ISKCON Visakhapatnam is preparing to celebrate the grand festival of chariots known as 'Sri Jagannath Ratha Yatra' on July 16. This significant religious festival commemorates Lord Jagannath's journey and holds deep cultural importance in the region. The celebration represents a major community event that brings together devotees and participants for religious observance and cultural festivities. ISKCON's organization of this traditional festival demonstrates the continuation of Hindu religious practices and cultural traditions in the area. The event is expected to attract substantial participation from the local community and visitors interested in experiencing this important religious and cultural celebration.",
-        "url": "https://www.thehansindia.com/andhra-pradesh/iskcon-to-celebrate-sri-jagannath-ratha-yatra-on-july-16-1097161",
-        "source": "The Hans India",
-        "published_at": "2026-06-09T07:42:37+00:00",
-        "image": "https://www.bing.com/th?id=ONUT.ERKusAv6ouZJBGjDIMb1vw",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/2.mp3",
-        "title_hi": "इस्कॉन 16 जुलाई को 'श्री जगन्नाथ रथ यात्रा' मनाएगा",
-        "summary_hi": "इस्कॉन विशाखापत्तनम रथों के भव्य त्योहार 'श्री जगन्नाथ रथ यात्रा' को 16 जुलाई को मनाने की तैयारी कर रहा है। यह महत्वपूर्ण धार्मिक त्योहार भगवान जगन्नाथ की यात्रा को स्मरणीय बनाता है और क्षेत्र में गहरा सांस्कृतिक महत्व रखता है। यह उत्सव एक प्रमुख सामुदायिक आयोजन है जो भक्तों और प्रतिभागियों को धार्मिक अनुष्ठान और सांस्कृतिक उत्सव के लिए एक साथ लाता है। इस्कॉन द्वारा इस पारंपरिक त्योहार का आयोजन क्षेत्र में हिंदू धार्मिक प्रथाओं और सांस्कृतिक परंपराओं की निरंतरता को प्रदर्शित करता है। इस आयोजन से स्थानीय समुदाय और इस महत्वपूर्ण धार्मिक और सांस्कृतिक उत्सव का अनुभव लेने में रुचि रखने वाले आगंतुकों की व्यापक भागीदारी की अपेक्षा की जाती है।",
-        "audio_hi": ""
+        "title": "Graham Staines Murder: Supreme Court Asks Odisha To Decide Dara Singh's Remission Plea",
+        "summary": "The Supreme Court has adjourned Dara Singh's remission plea to August 19, directing the Odisha government to make a decision on the matter. Dara Singh was convicted in connection with the murder of Australian missionary Graham Staines, a case that gained significant attention in India. The court's action requires Odisha authorities to review and determine whether to grant remission to Singh, whose plea has been pending. This development represents a significant procedural step in a high-profile criminal case that has remained in public discourse for years, with the Supreme Court now placing the onus on state authorities to reach a conclusive decision on Singh's request for sentence reduction or release.",
+        "url": "https://lawbeat.in/top-stories/graham-staines-murder-supreme-court-asks-odisha-to-decide-dara-singhs-remission-plea-1612464",
+        "source": "LawBeat",
+        "published_at": "2026-06-29T07:46:12+00:00",
+        "image": "https://www.bing.com/th?id=ONUT.tfIzAgx1cwqh4Aul9bMDmQ",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/0.mp3"
       }
     ],
     "sports": [
       {
-        "title": "Challenger v champion as Spain face France for place in final",
-        "summary": "France and Spain face off in a World Cup semi-final on Tuesday in Dallas, featuring a matchup between star players Kylian Mbappe and Lamine Yamal. France manager Didier Deschamps predicts a \"spectacular\" encounter between these two heavyweight sides. The winner will advance to the World Cup final, making this a crucial knockout stage match that determines which team gets another opportunity to claim the tournament trophy. This semi-final represents a significant clash between the defending champion and a strong challenger.",
-        "url": "https://www.bbc.co.uk/sport/football/articles/clywep30z7jo?at_medium=RSS&at_campaign=rss",
+        "title": "Spain into World Cup final with victory over France",
+        "summary": "Spain advanced to the 2026 World Cup final by defeating France 2-0 in their semi-final match held in Dallas. Goals from Mikel Oyarzabal and Pedro Porro secured a convincing victory for the Spanish side. Spain's performance throughout the tournament has been notable, with the team operating as a cohesive unit that has flown somewhat under the radar despite their impressive results. Their tactical discipline and team-oriented approach proved decisive against France's individual brilliance, positioning them as strong contenders for the World Cup title in the final match.",
+        "url": "https://www.bbc.co.uk/sport/football/videos/cq6160n8y71o?at_medium=RSS&at_campaign=rss",
         "source": "BBC Sport",
-        "published_at": "Tue, 14 Jul 2026 05:13:23 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9774/live/90e1a0c0-7ef1-11f1-926f-c90d1bcfbc84.png",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/0.mp3",
-        "title_hi": "चैलेंजर बनाम चैंपियन - स्पेन और फ्रांस फाइनल के लिए भिड़ेंगे",
-        "summary_hi": "फ्रांस और स्पेन मंगलवार को डलास में विश्व कप के सेमीफाइनल में आमने-सामने होंगे, जिसमें स्टार खिलाड़ी क्यलियान एमबाप्पे और लामिन यामल के बीच मुकाबला होगा। फ्रांस के प्रबंधक डिडिएर डेशां इन दोनों भारी-भरकम टीमों के बीच एक \"शानदार\" मुकाबले की भविष्यवाणी करते हैं। विजेता विश्व कप फाइनल में प्रवेश करेगा, जिससे यह एक महत्वपूर्ण नॉकआउट चरण का मैच बन जाता है जो यह निर्धारित करता है कि कौन सी टीम ट्रॉफी जीतने का एक और मौका पाएगी। यह सेमीफाइनल रक्षा करने वाले चैंपियन और एक मजबूत चैलेंजर के बीच एक महत्वपूर्ण टकराव का प्रतिनिधित्व करता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/sports/0.mp3"
+        "published_at": "Tue, 14 Jul 2026 21:32:59 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/e7da/live/18684770-7fc8-11f1-bee8-53ce494e1abc.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/0.mp3"
       },
       {
-        "title": "Increased security for England v Argentina tie in Atlanta",
-        "summary": "Authorities have announced increased security measures for Wednesday's World Cup semi-final between England and Argentina in Atlanta. The heightened security protocols reflect the high-profile nature of this knockout stage match and the significant attention surrounding the fixture. England and Argentina have a storied rivalry, and the semi-final setting adds considerable intensity to the encounter. The security arrangements aim to ensure the safety of players, officials, and spectators attending the match at the Atlanta venue.",
-        "url": "https://www.bbc.co.uk/sport/football/articles/clyey5glv4ko?at_medium=RSS&at_campaign=rss",
+        "title": "Time for England's nearly men to write themselves into legend",
+        "summary": "England face Argentina in the World Cup semi-finals, representing the Three Lions' biggest match since their 1966 World Cup victory. BBC Sport's Phil McNulty examines why this fixture carries such historical significance for the English national team. The match offers England an opportunity to overcome decades of near-misses and disappointments on the world stage. With a squad capable of competing at the highest level, this semi-final represents a genuine chance for the team to achieve legendary status by reaching the World Cup final and potentially winning the tournament.",
+        "url": "https://www.bbc.co.uk/sport/football/articles/c20y0zzdx9go?at_medium=RSS&at_campaign=rss",
         "source": "BBC Sport",
-        "published_at": "Tue, 14 Jul 2026 07:14:16 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5b03/live/85c525f0-7f4f-11f1-a97a-9b1029617ccb.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/1.mp3",
-        "title_hi": "अटलांटा में इंग्लैंड बनाम अर्जेंटीना मैच के लिए बढ़ी सुरक्षा",
-        "summary_hi": "अधिकारियों ने बुधवार को अटलांटा में इंग्लैंड और अर्जेंटीना के बीच विश्व कप सेमीफाइनल के लिए सुरक्षा उपायों में वृद्धि की घोषणा की है। बढ़ी हुई सुरक्षा प्रोटोकॉल इस उच्च-प्रोफाइल नॉकआउट चरण के मैच की प्रकृति और इस मुकाबले के चारों ओर महत्वपूर्ण ध्यान को दर्शाते हैं। इंग्लैंड और अर्जेंटीना का एक प्रसिद्ध प्रतिद्वंद्विता है, और सेमीफाइनल की स्थिति इस मुकाबले में काफी तीव्रता जोड़ती है। सुरक्षा व्यवस्था अटलांटा स्थल पर मैच में भाग लेने वाले खिलाड़ियों, अधिकारियों और दर्शकों की सुरक्षा सुनिश्चित करने का लक्ष्य रखती है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/sports/1.mp3"
+        "published_at": "Wed, 15 Jul 2026 05:02:16 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b08a/live/5f544fe0-7fc2-11f1-b890-9bba15144891.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/1.mp3"
       },
       {
-        "title": "England to make late call on Rice for World Cup semi-final",
-        "summary": "England will make a late decision on whether midfielder Declan Rice is fit to start Wednesday's World Cup semi-final against Argentina. Rice's fitness status remains uncertain heading into this crucial knockout match, forcing England manager Gareth Southgate to assess the player's condition before finalizing the team selection. The decision on Rice's availability could significantly impact England's midfield setup and tactical approach against Argentina. This late fitness call adds uncertainty to England's preparations for one of the tournament's most important matches.",
-        "url": "https://www.bbc.co.uk/sport/football/articles/ce8m996g9g1o?at_medium=RSS&at_campaign=rss",
+        "title": "Mates, mate and freedom - how Argentina got the best out of Messi",
+        "summary": "Guillem Balague examines how Argentina's squad is strategically built around Lionel Messi as they prepare for their World Cup semi-final against England. The analysis explores how the team structure, player relationships, and tactical approach have been designed to maximize Messi's effectiveness and influence on the pitch. Argentina's squad composition reflects a philosophy of supporting their star player while maintaining team cohesion. As reigning World Cup champions, Argentina brings experience and proven success to the semi-final matchup, with their system specifically tailored to leverage Messi's unique talents and leadership qualities.",
+        "url": "https://www.bbc.co.uk/sport/football/articles/cx2j24y9jzyo?at_medium=RSS&at_campaign=rss",
         "source": "BBC Sport",
-        "published_at": "Mon, 13 Jul 2026 21:30:05 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f306/live/3f85fdc0-7ef1-11f1-83a7-0959f8cc10cc.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/2.mp3",
-        "title_hi": "विश्व कप सेमीफाइनल के लिए राइस पर इंग्लैंड का देर से फैसला",
-        "summary_hi": "इंग्लैंड बुधवार को अर्जेंटीना के खिलाफ विश्व कप सेमीफाइनल में मिडफील्डर डेक्लन राइस के शुरुआत के लिए फिट होने के बारे में देर से निर्णय लेगा। इस महत्वपूर्ण नॉकआउट मैच की ओर जाते हुए राइस की फिटनेस स्थिति अनिश्चित बनी हुई है, जिससे इंग्लैंड के प्रबंधक गैरेथ साउथगेट को टीम चयन को अंतिम रूप देने से पहले खिलाड़ी की स्थिति का आकलन करने के लिए मजबूर किया जा रहा है। राइस की उपलब्धता पर निर्णय इंग्लैंड के मिडफील्ड सेटअप और अर्जेंटीना के खिलाफ रणनीतिक दृष्टिकोण को महत्वपूर्ण रूप से प्रभावित कर सकता है। यह देर से फिटनेस निर्णय टूर्नामेंट के सबसे महत्वपूर्ण मैचों में से एक के लिए इंग्लैंड की तैयारियों में अनिश्चितता जोड़ता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/sports/2.mp3"
+        "published_at": "Wed, 15 Jul 2026 05:02:40 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0ff8/live/4bab3450-7fb7-11f1-9c5f-190f51e64b46.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/2.mp3"
       },
       {
-        "title": "Cardinals news: Jordan Walker's father reacts to son's thrilling Home Run Derby win",
-        "summary": "St. Louis Cardinals star Jordan Walker won the 2026 MLB Home Run Derby on Monday night, completing a historic run in the competition. Walker defeated Philadelphia Phillies slugger Kyle Schwarber in the finals, claiming victory in this prestigious All-Star Game event. The Home Run Derby showcases baseball's most powerful hitters competing in a single-elimination format to determine the year's home run hitting champion. Walker's victory represents a significant achievement for the young Cardinals player and marks a notable moment during baseball's All-Star festivities.",
-        "url": "https://clutchpoints.com/mlb/st-louis-cardinals/cardinals-news-jordan-walker-father-son-thrilling-home-run-derby-win",
-        "source": "ClutchPoints",
-        "published_at": "2026-07-14T03:42:39+00:00",
-        "image": "https://s.yimg.com/am/60d/df0b7d59d5a8c1967d69e06d1613b168",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/3.mp3",
-        "title_hi": "कार्डिनल्स समाचार: जॉर्डन वॉकर के पिता ने बेटे की रोमांचक होम रन डर्बी जीत पर प्रतिक्रिया दी",
-        "summary_hi": "सेंट लुइस कार्डिनल्स के स्टार जॉर्डन वॉकर ने सोमवार रात को 2026 एमएलबी होम रन डर्बी जीती, प्रतियोगिता में एक ऐतिहासिक दौड़ को पूरा किया। वॉकर ने फिलाडेल्फिया फिलीज के स्लगर काइल श्वार्बर को फाइनल में हराया, इस प्रतिष्ठित ऑल-स्टार गेम इवेंट में जीत का दावा किया। होम रन डर्बी बेसबॉल के सबसे शक्तिशाली हिटर्स को एकल-उन्मूलन प्रारूप में प्रतिस्पर्धा करते हुए दिखाती है ताकि वर्ष के होम रन हिटिंग चैंपियन का निर्धारण किया जा सके। वॉकर की जीत युवा कार्डिनल्स खिलाड़ी के लिए एक महत्वपूर्ण उपलब्धि का प्रतिनिधित्व करती है और बेसबॉल के ऑल-स्टार समारोह के दौरान एक उल्लेखनीय क्षण को चिह्नित करती है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/sports/3.mp3"
+        "title": "Bellingham best player at World Cup - Rooney",
+        "summary": "Former England striker Wayne Rooney has named Jude Bellingham as the best player at the 2026 World Cup so far. Bellingham's performances throughout the tournament have been exceptional, demonstrating technical skill, tactical intelligence, and consistency at the highest level of international competition. The midfielder's emergence as a standout performer reflects England's strength in midfield and suggests positive prospects for the team's semi-final clash against Argentina. Rooney's assessment highlights Bellingham's importance to England's campaign and his potential to influence the outcome of crucial matches as the tournament progresses toward its conclusion.",
+        "url": "https://www.bbc.co.uk/sport/football/articles/c5yzy0kl2gzo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC Sport",
+        "published_at": "Wed, 15 Jul 2026 05:40:35 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9c79/live/56ccdda0-7fb9-11f1-9c5f-190f51e64b46.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/3.mp3"
       },
       {
-        "title": "Man Utd sign £48m Santos and close in on Tielemans",
-        "summary": "Manchester United have signed defender Andrey Santos from Chelsea for £48 million and are in advanced negotiations with Aston Villa to acquire midfielder Youri Tielemans. These transfer moves represent significant investment by Manchester United in strengthening their squad ahead of the upcoming season. Santos brings defensive reinforcement to Old Trafford, while Tielemans would add midfield depth and quality. The dual pursuit demonstrates Manchester United's ambition in the transfer market and their strategy to bolster key positions during the summer transfer window.",
-        "url": "https://www.bbc.co.uk/sport/football/articles/cn07dpgkj4eo?at_medium=RSS&at_campaign=rss",
+        "title": "'Extremely happy' Deschamps gets the farewell game no-one wants",
+        "summary": "Didier Deschamps' long and storied career with France will conclude not as he would have preferred, with the legendary manager facing the third-place play-off rather than competing for the World Cup title. After France's semi-final elimination, Deschamps will manage his final match in the consolation fixture on Saturday. Despite the disappointing outcome, Deschamps expressed satisfaction with his tenure leading the French national team. His departure marks the end of an era for French football, with the third-place play-off serving as an unexpected and bittersweet conclusion to his distinguished managerial career with the national side.",
+        "url": "https://www.bbc.co.uk/sport/football/articles/czx5x14v5w2o?at_medium=RSS&at_campaign=rss",
         "source": "BBC Sport",
-        "published_at": "Mon, 13 Jul 2026 14:09:00 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b9e8/live/afd8c210-7ed8-11f1-84b4-d5196cc76857.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/4.mp3",
-        "title_hi": "मैन यूटीडी ने £48 मिलियन में सैंटोस पर हस्ताक्षर किए और टीलेमान्स के करीब पहुंचे",
-        "summary_hi": "मैनचेस्टर यूनाइटेड ने चेल्सी से डिफेंडर एंड्रे सैंटोस को £48 मिलियन में हस्ताक्षरित किया है और एस्टन विला के साथ मिडफील्डर यूरी टीलेमान्स को हासिल करने के लिए उन्नत बातचीत में हैं। ये ट्रांसफर कदम आने वाले सीजन से पहले अपनी टीम को मजबूत करने के लिए मैनचेस्टर यूनाइटेड द्वारा महत्वपूर्ण निवेश का प्रतिनिधित्व करते हैं। सैंटोस ओल्ड ट्रैफोर्ड को डिफेंसिव सुदृढ़ीकरण लाते हैं, जबकि टीलेमान्स मिडफील्ड की गहराई और गुणवत्ता जोड़ेंगे। यह दोहरी खोज मैनचेस्टर यूनाइटेड की ट्रांसफर बाजार में महत्वाकांक्षा और गर्मियों की ट्रांसफर विंडो के दौरान मुख्य स्थानों को मजबूत करने की उनकी रणनीति को प्रदर्शित करती है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/sports/4.mp3"
+        "published_at": "Wed, 15 Jul 2026 05:32:11 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b4c8/live/a5485300-7fd8-11f1-ad55-ebd3bf8ee1a7.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/4.mp3"
       }
     ],
     "cricket": [
       {
-        "title": "India crush England to claim historic victory in the first women's Test at Lord's",
-        "summary": "India defeated England by 270 runs in the inaugural women's Test match at Lord's Cricket Ground, a historic milestone for women's cricket. Sneh Rana was instrumental in the victory, claiming four wickets to secure the win on the final day. England, chasing a target of 457, were bowled out for 186. This landmark Test represents a significant moment in cricket history, breaking 142 years of male exclusivity at the iconic venue and establishing women's Test cricket at one of the sport's most prestigious grounds.",
-        "url": "https://www.cricinfo.com/ci/content/story/1545436.html?ex_cid=OTC-RSS",
-        "source": "Cricket news from Cricinfo.com",
-        "published_at": "Mon, 13 Jul 2026 12:07:52 GMT",
-        "image": "http://p.imgci.com/db/PICTURES/CMS/419700/419750.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/0.mp3",
-        "title_hi": "भारत ने लॉर्ड्स में महिलाओं के पहले टेस्ट में ऐतिहासिक जीत दर्ज की",
-        "summary_hi": "भारत ने लॉर्ड्स क्रिकेट ग्राउंड में महिलाओं के पहले टेस्ट मैच में इंग्लैंड को 270 रनों से हराया, जो महिला क्रिकेट के लिए एक ऐतिहासिक मील का पत्थर है। स्नेह राणा इस जीत में महत्वपूर्ण साबित हुईं, जिन्होंने अंतिम दिन जीत को सुनिश्चित करने के लिए चार विकेट लिए। इंग्लैंड को 457 रनों का लक्ष्य का पीछा करते हुए 186 रनों पर समेट दिया गया। यह ऐतिहासिक टेस्ट क्रिकेट के इतिहास में एक महत्वपूर्ण क्षण है, जो इस प्रतिष्ठित स्थान पर 142 वर्षों की पुरुष एकाधिकार को तोड़ता है और खेल के सबसे प्रतिष्ठित मैदानों में से एक पर महिलाओं के टेस्ट क्रिकेट की स्थापना करता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/cricket/0.mp3"
+        "title": "India finally breaks through on tour after beating England in a one-day cricket international",
+        "summary": "India ended a prolonged winless streak on tour by defeating England by six wickets in the first ODI at Edgbaston. England recovered from 107-6 to post 258 all out, but failed to defend the total. Indian captain Shubman Gill scored 80 runs, laying the foundation for India's successful chase. This victory marks a significant turnaround for India's touring performance and comes after England had dominated the preceding T20 series, winning 4-0 to reach the top of the world rankings in that format. The match also occurred amid changes in England's coaching setup.",
+        "url": "https://www.msn.com/en-us/sports/cricket/india-finally-breaks-through-on-tour-after-beating-england-in-a-one-day-cricket-international/ar-AA27UR3t",
+        "source": "Associated Press News",
+        "published_at": "2026-07-15T00:20:35+00:00",
+        "image": "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA27TQwq.img?w=3427&h=2298&m=4&q=93",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/0.mp3"
       },
       {
-        "title": "Lennox stars with five wickets as New Zealand level ODI series",
-        "summary": "New Zealand leveled their ODI series against West Indies following a dominant performance on a challenging pitch. Lennox delivered an exceptional bowling display, taking five wickets as West Indies collapsed to just 75 runs, losing all ten wickets. Despite some wobbles during their chase, New Zealand successfully overcame the target to level the five-match series. The victory demonstrated New Zealand's ability to capitalize on favorable bowling conditions and maintain composure during their innings, highlighting the series' competitive nature.",
-        "url": "https://www.cricinfo.com/ci/content/story/1545496.html?ex_cid=OTC-RSS",
-        "source": "Cricket news from Cricinfo.com",
-        "published_at": "Tue, 14 Jul 2026 05:56:38 GMT",
-        "image": "http://p.imgci.com/db/PICTURES/CMS/419700/419773.jpg",
-        "audio": "",
-        "title_hi": "लेनॉक्स ने पाँच विकेट लेकर न्यूजीलैंड को वनडे सीरीज में बराबरी दिलाई",
-        "summary_hi": "न्यूजीलैंड ने एक चुनौतीपूर्ण पिच पर प्रभावशाली प्रदर्शन के बाद वेस्टइंडीज के खिलाफ वनडे सीरीज को बराबर किया। लेनॉक्स ने असाधारण गेंदबाजी प्रदर्शन किया, पाँच विकेट लेते हुए वेस्टइंडीज को महज 75 रनों पर समेट दिया, सभी दस विकेट गिरे। अपने पीछे का पीछा करते समय कुछ झिझक के बावजूद, न्यूजीलैंड ने सफलतापूर्वक लक्ष्य को पार किया और पाँच मैचों की सीरीज को बराबर किया। यह जीत अनुकूल गेंदबाजी परिस्थितियों का लाभ उठाने और अपनी पारी के दौरान संयम बनाए रखने की न्यूजीलैंड की क्षमता को प्रदर्शित करती है, जो सीरीज की प्रतिस्पर्धी प्रकृति को उजागर करती है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/cricket/1.mp3"
+        "title": "Alleged teammate affair at centre of women's cricket scandal",
+        "summary": "Australian women's cricket team faces a significant crisis following allegations that vice captain Ash Gardner's marriage ended due to an affair with national teammate Georgia Voll. The scandal has rocked the World Cup-winning team and raised questions about team dynamics and player conduct. Gardner reportedly admitted to the affair, leading to the couple's separation. This incident represents a major controversy within Australian women's cricket and has drawn widespread media attention, with implications for team morale and management of the national program during a critical period.",
+        "url": "https://www.dailytelegraph.com.au/sport/cricket/alleged-teammate-affair-at-centre-of-womens-cricket-scandal/news-story/dcb0da8ae2e8de11e8508cca40af1047",
+        "source": "Daily Telegraph",
+        "published_at": "2026-07-14T14:42:00+00:00",
+        "image": "https://content.api.news/v3/images/bin/96a45d53efe69f77b25b14cd34f2bd8a",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/1.mp3"
       },
       {
-        "title": "'We just weren't good enough' - McCullum apologises for failures in marquee series",
-        "summary": "Brendon McCullum, recently sacked as England's Test coach, publicly apologized for the team's poor performance during his tenure, acknowledging that results against India and Australia defined his time in the role. McCullum admitted the team failed to deliver the success expected, with losses in marquee series serving as defining moments of his coaching period. His departure marks the end of an era characterized by aggressive cricket philosophy, with the coach taking responsibility for the team's inability to achieve desired outcomes against top-ranked opponents during his tenure.",
-        "url": "https://www.cricinfo.com/ci/content/story/1545462.html?ex_cid=OTC-RSS",
-        "source": "Cricket news from Cricinfo.com",
-        "published_at": "Mon, 13 Jul 2026 16:36:54 GMT",
-        "image": "http://p.imgci.com/db/PICTURES/CMS/419400/419488.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/2.mp3",
-        "title_hi": "'हम काफी अच्छे नहीं थे' - मैकुलम ने प्रमुख सीरीज में विफलताओं के लिए माफी माँगी",
-        "summary_hi": "ब्रेंडन मैकुलम, जिन्हें हाल ही में इंग्लैंड के टेस्ट कोच के पद से हटाया गया था, ने अपने कार्यकाल के दौरान टीम के खराब प्रदर्शन के लिए सार्वजनिक रूप से माफी माँगी, यह स्वीकार करते हुए कि भारत और ऑस्ट्रेलिया के खिलाफ परिणाम उनके समय को परिभाषित करते हैं। मैकुलम ने स्वीकार किया कि टीम अपेक्षित सफलता प्रदान करने में विफल रही, प्रमुख सीरीज में हार उनके कोचिंग अवधि के परिभाषित क्षण साबित हुई। उनका प्रस्थान एक आक्रामक क्रिकेट दर्शन द्वारा विशेषता वाले एक युग के अंत को चिह्नित करता है, कोच ने अपने कार्यकाल के दौरान शीर्ष-रैंक वाली टीमों के खिलाफ वांछित परिणाम प्राप्त करने में टीम की असमर्थता के लिए जिम्मेदारी ली।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/cricket/2.mp3"
+        "title": "Cricket Returns to the Olympic Stage After 128 Years. Southern California Just Built the Venue.",
+        "summary": "Cricket is returning to the Olympic Games for the first time since 1900, with the Knight Riders Cricket Ground at Fairplex in Pomona, California serving as the venue for LA28. This purpose-built professional cricket stadium represents the first of its kind in the western United States and marks a historic milestone for the sport's Olympic presence. The facility's construction demonstrates significant investment in cricket infrastructure ahead of the Los Angeles Olympics, signaling growing recognition of cricket's global appeal and the sport's expansion into North American markets.",
+        "url": "https://www.aol.com/articles/cricket-returns-olympic-stage-128-140600000.html",
+        "source": "AOL",
+        "published_at": "2026-07-14T21:08:00+00:00",
+        "image": "https://s.yimg.com/cv/apiv2/aolfp/images/og-image.png",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/2.mp3"
+      },
+      {
+        "title": "ICC Plans Radical Changes In WTC, Cricket World Cup, T20 World Cup Format; Eye Club World Cup-Like Tournament",
+        "summary": "The ICC is planning significant structural reforms across cricket's marquee tournaments, including the World Test Championship, Cricket World Cup, and T20 World Cup. The 2027 Cricket World Cup could be the first event affected by these radical format changes. Additionally, the ICC is developing a new tournament modeled after FIFA's Club World Cup, representing a major shift in international cricket's competitive landscape. These changes aim to reshape how cricket's premier competitions are organized and contested, potentially affecting scheduling, qualification processes, and tournament structures across all three formats.",
+        "url": "https://www.msn.com/en-in/sports/cricket/icc-plans-radical-changes-in-wtc-cricket-world-cup-t20-world-cup-format-eye-club-world-cup-like-tournament/ar-AA27TZ2o",
+        "source": "Times Now",
+        "published_at": "2026-07-14T22:31:00+00:00",
+        "image": "https://images.timesnownews.com/thumb/msid-155098435,thumbsize-79986,width-1280,height-720,resizemode-75/155098435.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/3.mp3"
       },
       {
         "title": "Knight: 'Wanted to give my all this summer but right time to step away'",
-        "summary": "Former England captain Heather Knight announced her retirement from international cricket, stating it was the right time to step away despite her desire to contribute during the summer. Knight acknowledged emotional moments in the dressing room but expressed optimism about her future beyond international cricket. Her retirement came during a significant period for English women's cricket, marked by the historic Test match at Lord's. Knight's decision reflects a natural conclusion to her international career while she remains excited about opportunities ahead.",
+        "summary": "Former England women's cricket captain Heather Knight announced her retirement from international cricket, citing the right time to step away despite her desire to contribute during the summer. Knight's departure follows England's significant 270-run defeat to India in the inaugural women's Test at Lord's. She expressed emotional reactions within the dressing room but remains optimistic about her future. Knight has advocated for increased domestic red-ball cricket opportunities for English women players, highlighting the need for greater development pathways in longer-format cricket beyond international competition.",
         "url": "https://www.cricinfo.com/ci/content/story/1545472.html?ex_cid=OTC-RSS",
         "source": "Cricket news from Cricinfo.com",
-        "published_at": "Mon, 13 Jul 2026 22:47:27 GMT",
+        "published_at": "Tue, 14 Jul 2026 08:39:34 GMT",
         "image": "http://p.imgci.com/db/PICTURES/CMS/419700/419730.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/3.mp3",
-        "title_hi": "नाइट: 'इस गर्मी में अपना सब कुछ देना चाहती थी लेकिन अब सही समय है दूर होने का'",
-        "summary_hi": "पूर्व इंग्लैंड कप्तान हेदर नाइट ने अंतरराष्ट्रीय क्रिकेट से अपनी सेवानिवृत्ति की घोषणा की, यह कहते हुए कि गर्मी के दौरान योगदान देने की इच्छा के बावजूद यह दूर होने का सही समय था। नाइट ने ड्रेसिंग रूम में भावनात्मक क्षणों को स्वीकार किया लेकिन अंतरराष्ट्रीय क्रिकेट से परे अपने भविष्य के बारे में आशावाद व्यक्त किया। उनकी सेवानिवृत्ति लॉर्ड्स में ऐतिहासिक टेस्ट मैच द्वारा चिह्नित महिला क्रिकेट के लिए एक महत्वपूर्ण अवधि के दौरान हुई। नाइट का निर्णय अपने अंतरराष्ट्रीय करियर के एक प्राकृतिक निष्कर्ष को दर्शाता है जबकि वह आगे के अवसरों के बारे में उत्साहित हैं।",
-        "audio_hi": ""
-      },
-      {
-        "title": "BBL returns to Christmas Eve, Australia Day final",
-        "summary": "The Big Bash League schedule has been confirmed with matches returning to Christmas Eve, while the tournament final will be played on Australia Day, January 26. Christmas Day remains free of BBL action, allowing for alternative programming and family celebrations. This scheduling decision reflects the BBL's commitment to maintaining its presence during the Australian summer cricket season while respecting traditional holiday considerations. The Australia Day final placement positions the tournament's climax as a major national sporting event during the country's significant national holiday.",
-        "url": "https://www.cricinfo.com/ci/content/story/1545415.html?ex_cid=OTC-RSS",
-        "source": "Cricket news from Cricinfo.com",
-        "published_at": "Tue, 14 Jul 2026 02:15:22 GMT",
-        "image": "http://p.imgci.com/db/PICTURES/CMS/416600/416696.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/4.mp3",
-        "title_hi": "बीबीएल क्रिसमस ईव पर लौटता है, ऑस्ट्रेलिया डे फाइनल",
-        "summary_hi": "बिग बैश लीग का शेड्यूल पुष्टि किया गया है जिसमें क्रिसमस ईव पर मैच लौटते हैं, जबकि टूर्नामेंट फाइनल ऑस्ट्रेलिया डे, 26 जनवरी को खेला जाएगा। क्रिसमस दिवस बीबीएल कार्रवाई से मुक्त रहता है, जिससे वैकल्पिक प्रोग्रामिंग और पारिवारिक समारोहों की अनुमति मिलती है। यह शेड्यूलिंग निर्णय ऑस्ट्रेलियाई गर्मी के क्रिकेट सीजन के दौरान अपनी उपस्थिति बनाए रखने के लिए बीबीएल की प्रतिबद्धता को दर्शाता है जबकि पारंपरिक छुट्टी के विचारों का सम्मान करता है। ऑस्ट्रेलिया डे फाइनल प्लेसमेंट देश के महत्वपूर्ण राष्ट्रीय छुट्टी के दौरान टूर्नामेंट के समापन को एक प्रमुख राष्ट्रीय खेल आयोजन के रूप में स्थापित करता है।",
-        "audio_hi": ""
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/4.mp3"
       }
     ],
     "usa_stock": [
       {
-        "title": "Oil prices leap and stocks fall as Trump reinstates Hormuz blockade on Iranian shipping",
-        "summary": "Oil prices surged nearly 5% as President Trump announced reinstatement of a U.S. blockade on Iranian shipping in the Strait of Hormuz, triggering significant market volatility. Stock markets declined globally, with European markets dropping and airlines including Ryanair among the hardest hit sectors. Brent crude jumped substantially, reflecting geopolitical tensions and supply concerns. The escalation in U.S.-Iran tensions reverberated across markets, creating uncertainty for investors and affecting multiple asset classes simultaneously as markets priced in potential disruptions to global energy supplies and broader economic implications.",
-        "url": "https://www.theguardian.com/business/2026/jul/13/oil-prices-leap-stocks-fall-us-iran-strait-of-hormuz-brent-crude-markets",
-        "source": "The Guardian",
-        "published_at": "2026-07-13T20:48:00+00:00",
-        "image": "https://i.guim.co.uk/img/media/0b8cf49a0160ddf1f85e423260216a183df6a248/1040_0_5200_4160/master/5200.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=1417df40911a4dc80f512d3d2a0ff43c",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/0.mp3",
-        "title_hi": "ट्रम्प द्वारा ईरानी शिपिंग पर हॉर्मुज़ नाकाबंदी की पुनः स्थापना के साथ तेल की कीमतें बढ़ीं और स्टॉक गिरे",
-        "summary_hi": "राष्ट्रपति ट्रम्प द्वारा हॉर्मुज़ जलडमरूमध्य में ईरानी शिपिंग पर अमेरिकी नाकाबंदी की पुनः स्थापना की घोषणा के साथ तेल की कीमतें लगभग 5% बढ़ीं, जिससे बाजार में महत्वपूर्ण अस्थिरता आई। वैश्विक स्टॉक बाजार में गिरावट आई, यूरोपीय बाजार गिरे और रायनएयर सहित एयरलाइनें सबसे अधिक प्रभावित क्षेत्रों में रहीं। ब्रेंट क्रूड में भारी उछाल आया, जो भू-राजनीतिक तनाव और आपूर्ति संबंधी चिंताओं को दर्शाता है। अमेरिका-ईरान तनाव में वृद्धि बाजारों में गूंजी, निवेशकों के लिए अनिश्चितता पैदा की और वैश्विक ऊर्जा आपूर्ति में संभावित व्यवधान और व्यापक आर्थिक प्रभावों को मूल्य देते हुए एक साथ कई परिसंपत्ति वर्गों को प्रभावित किया।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/usa_stock/0.mp3"
+        "title": "What IBM's profit warning means: Hardware is 'eating everyone's lunch'",
+        "summary": "IBM issued a profit warning citing shortfalls in its software and infrastructure business, attributed to clients spending on memory ahead of anticipated price hikes. The announcement triggered significant market reaction, with IBM shares plunging approximately 26% as investors reassessed the company's earnings outlook. This development reflects broader shifts in enterprise technology spending patterns, particularly as companies prioritize hardware investments in response to expected cost increases. The warning signals potential headwinds for major technology and consulting firms navigating changing customer purchasing behaviors and market dynamics.",
+        "url": "https://www.marketwatch.com/story/what-ibms-profit-warning-means-hardware-is-eating-everyone-s-lunch-c6878824?mod=mw_rss_topstories",
+        "source": "MarketWatch.com - Top Stories",
+        "published_at": "Tue, 14 Jul 2026 21:10:00 GMT",
+        "image": "",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/0.mp3"
       },
       {
-        "title": "Why a borrowing binge by investors is a warning sign for the stock market",
-        "summary": "Investors are increasingly borrowing money to purchase stocks through margin debt, seeking to amplify returns during a period of market greed. This growing pile of borrowed money has raised concerns among Wall Street analysts, who view elevated margin debt levels as a potential warning sign for market stability. The trend reflects investor confidence but also heightened risk exposure, as leveraged positions can amplify losses during market downturns. Financial experts worry that aggressive use of margin debt could exacerbate volatility and create systemic risks if market conditions deteriorate, making this borrowing surge a notable indicator of market sentiment and potential vulnerability.",
-        "url": "https://www.marketwatch.com/story/why-a-borrowing-binge-by-investors-is-a-warning-sign-for-the-stock-market-996ee446?mod=mw_rss_topstories",
+        "title": "Brace for $4 gas again: How U.S.-Iran tensions are threatening to end the price break at the pump",
+        "summary": "Recent geopolitical tensions between the United States and Iran threaten to disrupt the recent relief Americans have experienced at the gas pump. The ongoing dispute over control of the Strait of Hormuz, a critical global oil shipping route, could reverse the inflation-moderating benefits of lower fuel prices. Analysts warn that escalating U.S.-Iran tensions could push gasoline prices back toward the $4 per gallon level, potentially reigniting inflationary pressures across the broader economy. This development poses risks to consumer spending and overall economic growth prospects.",
+        "url": "https://www.marketwatch.com/story/brace-for-4-gas-again-how-u-s-iran-tensions-are-threatening-to-end-the-price-break-at-the-pump-343a76e1?mod=mw_rss_topstories",
         "source": "MarketWatch.com - Top Stories",
-        "published_at": "Mon, 13 Jul 2026 22:19:00 GMT",
-        "image": "https://images.mktw.net/im-23957069",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/1.mp3",
-        "title_hi": "निवेशकों द्वारा उधार लेने की होड़ स्टॉक बाजार के लिए एक चेतावनी संकेत क्यों है",
-        "summary_hi": "निवेशक बाजार के लालच की अवधि के दौरान रिटर्न को बढ़ाने के लिए मार्जिन ऋण के माध्यम से स्टॉक खरीदने के लिए तेजी से पैसे उधार ले रहे हैं। उधार लिए गए पैसे के इस बढ़ते ढेर ने वॉल स्ट्रीट विश्लेषकों में चिंता बढ़ाई है, जो ऊंचे मार्जिन ऋण स्तरों को बाजार स्थिरता के लिए एक संभावित चेतावनी संकेत मानते हैं। यह प्रवृत्ति निवेशक आत्मविश्वास को दर्शाती है लेकिन बढ़े हुए जोखिम जोखिम को भी दर्शाती है, क्योंकि लीवरेज्ड पोजीशन बाजार में गिरावट के दौरान नुकसान को बढ़ा सकती हैं। वित्तीय विशेषज्ञ चिंतित हैं कि मार्जिन ऋण का आक्रामक उपयोग अस्थिरता को बढ़ा सकता है और यदि बाजार की स्थितियां बिगड़ती हैं तो प्रणालीगत जोखिम पैदा कर सकता है, जिससे यह उधार वृद्धि बाजार भावना और संभावित कमजोरी का एक उल्लेखनीय संकेतक बन जाता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/usa_stock/1.mp3"
+        "published_at": "Wed, 15 Jul 2026 00:28:00 GMT",
+        "image": "https://images.mktw.net/im-94092618",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/1.mp3"
       },
       {
-        "title": "SpaceX's stock threatens to fall below the IPO price. Do investors face a 'crisis' if it does?",
-        "summary": "SpaceX shares have declined sharply, approaching their $135 initial public offering price after the company shed more than $800 billion in market value from its $2.67 trillion peak in less than a month. The stock touched an all-time intraday low of $137, down 4.1% on Monday morning, representing a dramatic reversal from its post-IPO highs. This significant decline raises questions about investor confidence in the aerospace company and whether falling below the IPO price would signal broader concerns about the company's valuation or market conditions. The sharp pullback reflects broader market pressures and investor reassessment of high-flying technology and space sector stocks.",
-        "url": "https://www.marketwatch.com/story/spacexs-stock-threatens-to-fall-below-the-ipo-price-do-investors-face-a-crisis-if-it-does-2f330b09?mod=mw_rss_topstories",
+        "title": "Wall Street has set a sky-high bar for companies to clear this earnings season. They just might pull it off.",
+        "summary": "Analysts have established elevated expectations for second-quarter corporate earnings, creating a challenging benchmark for companies to meet or exceed. Despite the high bar, investment firm Piper Sandler believes corporate America possesses the capacity to clear these ambitious targets. The earnings season represents a critical test of economic resilience and corporate profitability amid ongoing market uncertainties. Strong earnings performance could validate current stock valuations and support continued market momentum, while disappointing results could trigger significant portfolio adjustments and market volatility.",
+        "url": "https://www.marketwatch.com/story/wall-street-has-set-a-sky-high-bar-for-companies-to-clear-this-earnings-season-they-just-might-pull-it-off-45731862?mod=mw_rss_topstories",
         "source": "MarketWatch.com - Top Stories",
-        "published_at": "Mon, 13 Jul 2026 22:08:00 GMT",
-        "image": "https://images.mktw.net/im-22186155",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/2.mp3",
-        "title_hi": "स्पेसएक्स का स्टॉक आईपीओ मूल्य से नीचे गिरने का खतरा है। क्या निवेशकों को संकट का सामना करना पड़ेगा यदि ऐसा होता है?",
-        "summary_hi": "स्पेसएक्स के शेयर तेजी से गिरे हैं, एक महीने से भी कम समय में अपने $2.67 ट्रिलियन के शिखर से $800 बिलियन से अधिक बाजार मूल्य खोने के बाद $135 की प्रारंभिक सार्वजनिक पेशकश मूल्य के करीब पहुंच गए हैं। स्टॉक सोमवार की सुबह $137 के सर्वकालिक इंट्राडे निम्न स्तर पर पहुंचा, जो 4.1% नीचे है, जो आईपीओ के बाद के उच्च स्तर से एक नाटकीय उलटफेर का प्रतिनिधित्व करता है। यह महत्वपूर्ण गिरावट एयरोस्पेस कंपनी में निवेशक आत्मविश्वास के बारे में सवाल उठाती है और क्या आईपीओ मूल्य से नीचे गिरना कंपनी के मूल्यांकन या बाजार की स्थितियों के बारे में व्यापक चिंताओं का संकेत देगा। तीव्र पुलबैक व्यापक बाजार दबाव और उच्च-उड़ान वाली प्रौद्योगिकी और अंतरिक्ष क्षेत्र के स्टॉक के निवेशक पुनर्मूल्यांकन को दर्शाता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/usa_stock/2.mp3"
+        "published_at": "Tue, 14 Jul 2026 21:03:00 GMT",
+        "image": "https://images.mktw.net/im-14651819",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/2.mp3"
       },
       {
-        "title": "Sandisk's stock is plunging, but some analysts are getting even more bullish",
-        "summary": "SanDisk's stock has experienced a significant decline, yet some analysts are becoming increasingly bullish on the company's prospects. One analyst has issued a stock-price target implying nearly 85% upside potential from current levels, suggesting substantial recovery expectations. This divergence between the stock's recent performance and analyst optimism indicates differing views on the company's valuation and future prospects. The bullish outlook despite current weakness suggests analysts believe the stock decline presents a buying opportunity, reflecting confidence in the company's underlying business fundamentals or anticipated catalysts that could drive significant appreciation in the coming period.",
-        "url": "https://www.marketwatch.com/story/sandisks-stock-is-plunging-but-some-analysts-are-getting-even-more-bullish-cba3472f?mod=mw_rss_topstories",
+        "title": "Your stock portfolio is tied to the Japanese yen — and a looming intervention is flashing a major warning sign",
+        "summary": "U.S. stock portfolios face exposure to currency fluctuations tied to the Japanese yen, with potential government intervention creating significant warning signals for investors. The relationship between yen movements and American equity markets reflects broader global financial interconnections and currency market dynamics. Anticipated Japanese monetary policy interventions could trigger volatility affecting U.S. technology stocks and other sectors with substantial international exposure. Investors should monitor yen developments closely, as currency movements can materially impact portfolio returns and market performance independent of underlying corporate fundamentals.",
+        "url": "https://www.marketwatch.com/story/another-warning-sign-is-flashing-for-tech-stocks-and-this-one-comes-from-outside-the-u-s-d51d6bfd?mod=mw_rss_topstories",
         "source": "MarketWatch.com - Top Stories",
-        "published_at": "Tue, 14 Jul 2026 00:55:00 GMT",
-        "image": "https://images.mktw.net/im-37343249",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/3.mp3",
-        "title_hi": "सैंडिस्क का स्टॉक गिर रहा है, लेकिन कुछ विश्लेषक और भी अधिक तेजी से देख रहे हैं",
-        "summary_hi": "सैंडिस्क के स्टॉक में महत्वपूर्ण गिरावट आई है, फिर भी कुछ विश्लेषक कंपनी की संभावनाओं के प्रति तेजी से अधिक आशावादी हो रहे हैं। एक विश्लेषक ने वर्तमान स्तरों से लगभग 85% ऊपर की ओर संभावना का संकेत देते हुए एक स्टॉक-मूल्य लक्ष्य जारी किया है, जो पर्याप्त वसूली की अपेक्षाओं का सुझाव देता है। स्टॉक के हाल के प्रदर्शन और विश्लेषक आशावाद के बीच यह विचलन कंपनी के मूल्यांकन और भविष्य की संभावनाओं पर अलग-अलग विचारों को दर्शाता है। वर्तमान कमजोरी के बावजूद तेजी का दृष्टिकोण सुझाता है कि विश्लेषकों का मानना है कि स्टॉक में गिरावट एक खरीद का अवसर प्रस्तुत करती है, जो कंपनी के अंतर्निहित व्यावसायिक मूलभूत बातों या अपेक्षित उत्प्रेरकों में आत्मविश्वास को दर्शाता है जो आने वाली अवधि में महत्वपूर्ण प्रशंसा को चला सकते हैं।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/usa_stock/3.mp3"
+        "published_at": "Tue, 14 Jul 2026 20:56:00 GMT",
+        "image": "https://images.mktw.net/im-16160011",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/3.mp3"
       },
       {
-        "title": "The U.S. is maxing out its strategic oil reserves as Trump vows to control the Strait of Hormuz",
-        "summary": "The U.S. Strategic Petroleum Reserve stockpiles have reached critically low levels and have been compromised by major equipment failures, leaks, and spills, according to a government report. This vulnerability in America's energy security infrastructure comes as President Trump pledges to control the Strait of Hormuz, a critical global oil chokepoint. The combination of depleted reserves and infrastructure problems raises concerns about the nation's ability to respond to energy supply disruptions or geopolitical crises. The timing is significant given current U.S.-Iran tensions and efforts to influence Middle Eastern energy flows, highlighting the strategic importance of maintaining adequate petroleum reserves for national security and economic stability.",
-        "url": "https://www.marketwatch.com/story/the-u-s-is-maxing-out-its-strategic-oil-reserves-as-trump-vows-to-control-the-strait-of-hormuz-b71f88a9?mod=mw_rss_topstories",
+        "title": "Taco Bell reportedly being investigated by health officials, as cyclosporiasis outbreak spreads",
+        "summary": "Health officials are investigating Taco Bell as a potential source of an ongoing cyclosporiasis parasite outbreak. The investigation into the fast-food chain reflects growing public health concerns regarding foodborne illness transmission. Shares of Yum Brands, Taco Bell's parent company, declined nearly 4% following the outbreak reports, demonstrating how health and safety incidents can directly impact investor sentiment and stock valuations. The incident underscores the importance of food safety protocols and the potential financial consequences companies face when facing health-related investigations or contamination concerns.",
+        "url": "https://www.marketwatch.com/story/officials-are-reportedly-looking-into-taco-bell-as-source-of-parasite-outbreak-remains-elusive-3ead0a1f?mod=mw_rss_topstories",
         "source": "MarketWatch.com - Top Stories",
-        "published_at": "Tue, 14 Jul 2026 02:30:00 GMT",
-        "image": "https://images.mktw.net/im-44519931",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/4.mp3",
-        "title_hi": "अमेरिका अपने रणनीतिक तेल भंडार को अधिकतम कर रहा है क्योंकि ट्रम्प हॉर्मुज़ जलडमरूमध्य को नियंत्रित करने का वचन देते हैं",
-        "summary_hi": "एक सरकारी रिपोर्ट के अनुसार, अमेरिकी रणनीतिक पेट्रोलियम रिजर्व के स्टॉक गंभीर रूप से कम स्तर पर पहुंच गए हैं और प्रमुख उपकरण विफलताओं, रिसाव और फैलाव से समझौता किया गया है। अमेरिका की ऊर्जा सुरक्षा बुनियादी ढांचे में यह कमजोरी राष्ट्रपति ट्रम्प द्वारा एक महत्वपूर्ण वैश्विक तेल अड़चन हॉर्मुज़ जलडमरूमध्य को नियंत्रित करने के वचन के साथ आती है। कम किए गए भंडार और बुनियादी ढांचे की समस्याओं का संयोजन ऊर्जा आपूर्ति व्यवधान या भू-राजनीतिक संकटों का जवाब देने की राष्ट्र की क्षमता के बारे में चिंता बढ़ाता है। समय महत्वपूर्ण है वर्तमान अमेरिका-ईरान तनाव और मध्य पूर्वी ऊर्जा प्रवाह को प्रभावित करने के प्रयासों को देखते हुए, जो राष्ट्रीय सुरक्षा और आर्थिक स्थिरता के लिए पर्याप्त पेट्रोलियम भंडार बनाए रखने के रणनीतिक महत्व को उजागर करता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/usa_stock/4.mp3"
+        "published_at": "Tue, 14 Jul 2026 21:09:00 GMT",
+        "image": "https://images.mktw.net/im-57474980",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/4.mp3"
       }
     ],
     "ai": [
       {
         "title": "Anthropic found a hidden space where Claude puzzles over concepts",
-        "summary": "Anthropic has developed the Jacobian lens, a technique providing unprecedented insight into how large language models function internally. The tool reveals what occurs inside Claude as it answers questions and performs tasks, with findings ranging from mundane to unnerving. This breakthrough represents the clearest glimpse yet at the inner workings of large language models, offering researchers a window into the mechanisms underlying AI reasoning and decision-making processes. The discovery has significant implications for understanding and potentially improving AI transparency and interpretability.",
+        "summary": "Anthropic has developed a technique called the Jacobian lens that provides unprecedented insight into how large language models process information internally. The discovery reveals what happens inside Claude as it reasons through questions and tasks, with findings ranging from mundane to unnerving. This breakthrough offers researchers the clearest glimpse yet into the actual mechanisms of large language model reasoning, potentially advancing understanding of AI decision-making processes and model interpretability. The technique represents a significant step forward in demystifying how modern AI systems work at a fundamental level.",
         "url": "https://www.technologyreview.com/2026/07/09/1140293/anthropic-found-a-hidden-space-where-claude-puzzles-over-concepts/",
         "source": "MIT Technology Review",
         "published_at": "Thu, 09 Jul 2026 20:22:28 +0000",
         "image": "https://wp.technologyreview.com/wp-content/uploads/2026/07/llm-crystal-globe_1.jpg?resize=1200,600",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/0.mp3",
-        "title_hi": "Anthropic को Claude की अवधारणाओं पर विचार करने के लिए एक छिपी हुई जगह मिली",
-        "summary_hi": "Anthropic ने Jacobian lens विकसित किया है, एक तकनीक जो बड़े भाषा मॉडल कैसे आंतरिक रूप से काम करते हैं इसमें अभूतपूर्व अंतर्दृष्टि प्रदान करती है। यह उपकरण यह प्रकट करता है कि Claude प्रश्नों का उत्तर देते समय और कार्य करते समय क्या होता है, जिसमें सामान्य से लेकर चिंताजनक तक के निष्कर्ष हैं। यह सफलता बड़े भाषा मॉडल की आंतरिक कार्यप्रणाली का अब तक का सबसे स्पष्ट दृश्य प्रदान करती है, जो शोधकर्ताओं को AI तर्क और निर्णय लेने की प्रक्रियाओं के तंत्र में एक खिड़की देती है। इस खोज का AI पारदर्शिता और व्याख्यात्मकता को समझने और संभावित रूप से सुधारने के लिए महत्वपूर्ण निहितार्थ है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/ai/0.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/0.mp3"
       },
       {
-        "title": "Apple sues OpenAI after ex-engineer allegedly used bug to steal trade secrets",
-        "summary": "Apple has filed a lawsuit against OpenAI, alleging that a former Apple employee conspired with OpenAI to steal trade secrets using a software bug. The case centers on accusations that the ex-engineer exploited a vulnerability to access confidential Apple information. This legal action represents a significant escalation in disputes between major technology companies over intellectual property protection and employee conduct. The lawsuit highlights growing tensions in the AI industry regarding data security, employee mobility, and the protection of proprietary technologies amid rapid AI development and competition.",
-        "url": "https://arstechnica.com/tech-policy/2026/07/apple-sues-openai-after-ex-engineer-allegedly-used-bug-to-steal-trade-secrets/",
-        "source": "Ars Technica",
-        "published_at": "Mon, 13 Jul 2026 19:17:51 +0000",
-        "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/07/GettyImages-2255514431-1024x648.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/1.mp3",
-        "title_hi": "Apple ने OpenAI पर मुकदमा दायर किया क्योंकि पूर्व इंजीनियर ने कथित रूप से बग का उपयोग करके व्यापार रहस्य चोरी किए",
-        "summary_hi": "Apple ने OpenAI के खिलाफ एक मुकदमा दायर किया है, यह आरोप लगाते हुए कि एक पूर्व Apple कर्मचारी ने OpenAI के साथ मिलकर एक सॉफ्टवेयर बग का उपयोग करके व्यापार रहस्य चोरी किए। यह मामला इस आरोप पर केंद्रित है कि पूर्व इंजीनियर ने Apple की गोपनीय जानकारी तक पहुंचने के लिए एक कमजोरी का दुरुपयोग किया। यह कानूनी कार्रवाई बौद्धिक संपत्ति संरक्षण और कर्मचारी आचरण पर प्रमुख प्रौद्योगिकी कंपनियों के बीच विवादों में एक महत्वपूर्ण वृद्धि का प्रतिनिधित्व करती है। यह मुकदमा डेटा सुरक्षा, कर्मचारी गतिशीलता, और तेजी से AI विकास और प्रतिस्पर्धा के बीच मालिकाना प्रौद्योगिकियों की सुरक्षा के संबंध में AI उद्योग में बढ़ते तनाव को उजागर करता है।",
-        "audio_hi": ""
+        "title": "PsiQuantum has a plan to make a massive quantum computer out of light",
+        "summary": "PsiQuantum is developing a revolutionary quantum computer design using photonic technology housed in approximately 100 stainless-steel cabinets cooled to near absolute zero with liquid helium. This innovative approach represents a significant departure from traditional quantum computing architectures and could potentially transform the field. The machine's design resembles a data center crossed with specialized cooling infrastructure, suggesting a scalable approach to quantum computing. If successful, this photonic quantum computer could address major computational challenges currently intractable for classical systems, marking a potential breakthrough in quantum technology development.",
+        "url": "https://www.technologyreview.com/2026/07/14/1140356/psiquantum-plan-massive-quantum-computer-out-of-light/",
+        "source": "MIT Technology Review",
+        "published_at": "Tue, 14 Jul 2026 08:00:00 +0000",
+        "image": "https://wp.technologyreview.com/wp-content/uploads/2026/07/PsiQuantum-0459-Headquarters-social.jpg?resize=1200,600",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/1.mp3"
       },
       {
-        "title": "Simulating everything, sort of: The promise and limits of world models",
-        "summary": "World models represent an emerging AI capability that simulates environments and scenarios, offering significant potential for various applications. However, experts emphasize important limitations and unresolved questions about their effectiveness and reliability. The technology promises to enable AI systems to better understand and predict complex real-world dynamics, but challenges remain in achieving comprehensive accuracy and generalization. This article explores how world models function, their current capabilities, practical applications, and the technical hurdles researchers must overcome to realize their full potential in advancing AI systems.",
-        "url": "https://arstechnica.com/ai/2026/07/simulating-everything-sort-of-the-promise-and-limits-of-world-models/",
-        "source": "Ars Technica",
-        "published_at": "Mon, 13 Jul 2026 11:00:51 +0000",
-        "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/07/cracking-open-world-model-1152x648.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/2.mp3",
-        "title_hi": "सब कुछ का अनुकरण, कुछ हद तक: विश्व मॉडल का वादा और सीमाएं",
-        "summary_hi": "विश्व मॉडल एक उभरती हुई AI क्षमता का प्रतिनिधित्व करते हैं जो वातावरण और परिदृश्यों का अनुकरण करते हैं, विभिन्न अनुप्रयोगों के लिए महत्वपूर्ण संभावना प्रदान करते हैं। हालांकि, विशेषज्ञ उनकी प्रभावशीलता और विश्वसनीयता के बारे में महत्वपूर्ण सीमाओं और अनसुलझे प्रश्नों पर जोर देते हैं। यह तकनीक AI सिस्टम को जटिल वास्तविक दुनिया की गतिशीलता को बेहतर ढंग से समझने और भविष्यवाणी करने में सक्षम बनाने का वादा करती है, लेकिन व्यापक सटीकता और सामान्यीकरण प्राप्त करने में चुनौतियां बनी हुई हैं। यह लेख विश्व मॉडल कैसे काम करते हैं, उनकी वर्तमान क्षमताएं, व्यावहारिक अनुप्रयोग, और AI सिस्टम को आगे बढ़ाने में उनकी पूरी क्षमता को साकार करने के लिए शोधकर्ताओं को दूर करनी होगी ऐसी तकनीकी बाधाओं की खोज करता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/ai/2.mp3"
-      },
-      {
-        "title": "OpenAI may have made a fatal misstep in copyright fight with news orgs",
-        "summary": "OpenAI faces potential sanctions in its copyright dispute with news organizations, including The New York Times, after allegedly hiding and deleting ChatGPT logs. The company reportedly concealed billions of logs that could have been relevant to the litigation, raising serious legal consequences. This development represents a critical moment in the ongoing copyright battles between AI companies and media organizations over training data usage. The alleged destruction of evidence could significantly impact the outcome of copyright cases and set important precedents for how AI companies must handle data transparency and legal compliance in intellectual property disputes.",
-        "url": "https://arstechnica.com/tech-policy/2026/07/openai-faked-inability-to-search-training-data-hid-billions-of-logs-nyt-says/",
-        "source": "Ars Technica",
-        "published_at": "Thu, 09 Jul 2026 18:57:53 +0000",
-        "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/07/GettyImages-2270682238-1152x648.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/3.mp3",
-        "title_hi": "OpenAI ने समाचार संगठनों के साथ कॉपीराइट लड़ाई में एक घातक गलती की हो सकती है",
-        "summary_hi": "OpenAI को समाचार संगठनों के साथ अपने कॉपीराइट विवाद में संभावित प्रतिबंधों का सामना करना पड़ रहा है, जिसमें The New York Times भी शामिल है, कथित रूप से ChatGPT लॉग को छिपाने और हटाने के बाद। कंपनी ने कथित रूप से अरबों लॉग को छिपाया जो मुकदमे के लिए प्रासंगिक हो सकते थे, जिससे गंभीर कानूनी परिणाम उत्पन्न हुए। यह विकास प्रशिक्षण डेटा के उपयोग पर AI कंपनियों और मीडिया संगठनों के बीच चल रही कॉपीराइट लड़ाइयों में एक महत्वपूर्ण क्षण का प्रतिनिधित्व करता है। साक्ष्य के कथित विनाश से कॉपीराइट मामलों के परिणाम पर महत्वपूर्ण प्रभाव पड़ सकता है और यह निर्धारित कर सकता है कि AI कंपनियों को बौद्धिक संपत्ति विवादों में डेटा पारदर्शिता और कानूनी अनुपालन को कैसे संभालना चाहिए।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/ai/3.mp3"
+        "title": "New York bans data center construction for a year, rattling AI industry",
+        "summary": "New York has implemented a one-year moratorium on data center construction, becoming the first state to impose such restrictions. This policy decision has significant implications for the AI industry, which relies heavily on data center infrastructure for training and deploying large language models. The moratorium may serve as a blueprint for broader anti-AI movements across other jurisdictions concerned about energy consumption, environmental impact, and resource allocation. The restriction reflects growing tensions between AI development demands and state-level environmental and infrastructure concerns, potentially influencing how companies plan expansion strategies.",
+        "url": "https://arstechnica.com/tech-policy/2026/07/new-york-is-the-first-state-to-impose-a-data-center-moratorium/",
+        "source": "AI - Ars Technica",
+        "published_at": "Tue, 14 Jul 2026 15:06:28 +0000",
+        "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/07/GettyImages-2276391767-1024x648.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/2.mp3"
       },
       {
         "title": "Humanoid robots controlled by surgeons did world-first operation on live pigs",
-        "summary": "Surgeons successfully conducted a groundbreaking preclinical trial using humanoid robots to perform surgical operations on live pigs. The procedure represents a world-first achievement in robotic surgery, with surgeons remotely controlling the humanoid robots to execute complex medical tasks. This milestone demonstrates the feasibility and potential of humanoid robots in surgical applications, marking significant progress in medical robotics and AI-assisted healthcare. The successful trial suggests promising future applications for robotic surgery in human medicine, potentially improving surgical precision, reducing invasiveness, and expanding access to specialized surgical expertise in remote or underserved areas.",
+        "summary": "Surgeons have successfully conducted the world's first surgical operation using humanoid robots controlled remotely on live pigs in a preclinical trial. This groundbreaking experiment demonstrates the feasibility of deploying humanoid robots in surgical settings, combining advanced robotics with remote surgical expertise. The trial represents a critical step toward potential clinical applications of robotic surgery, potentially expanding surgical capabilities and precision. The successful operation on living subjects validates the technology's viability and opens pathways for future human surgical applications, marking significant progress in medical robotics and AI-assisted surgical intervention.",
         "url": "https://arstechnica.com/ai/2026/07/humanoid-robots-controlled-by-surgeons-did-world-first-operation-on-live-pigs/",
-        "source": "Ars Technica",
+        "source": "AI - Ars Technica",
         "published_at": "Thu, 09 Jul 2026 20:12:03 +0000",
         "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/07/humanoid-robot-surgeons-1152x648.png",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/4.mp3",
-        "title_hi": "सर्जनों द्वारा नियंत्रित मानवीय रोबोट ने जीवित सूअरों पर विश्व-प्रथम ऑपरेशन किया",
-        "summary_hi": "सर्जनों ने मानवीय रोबोट का उपयोग करके जीवित सूअरों पर सर्जिकल ऑपरेशन करने के लिए एक अभूतपूर्व प्रीक्लिनिकल परीक्षण सफलतापूर्वक संचालित किया। यह प्रक्रिया रोबोटिक सर्जरी में एक विश्व-प्रथम उपलब्धि का प्रतिनिधित्व करती है, जिसमें सर्जनों ने जटिल चिकित्सा कार्यों को निष्पादित करने के लिए मानवीय रोबोट को दूरवर्ती रूप से नियंत्रित किया। यह मील का पत्थर सर्जिकल अनुप्रयोगों में मानवीय रोबोट की व्यवहार्यता और संभावना को प्रदर्शित करता है, चिकित्सा रोबोटिक्स और AI-सहायता प्राप्त स्वास्थ्यसेवा में महत्वपूर्ण प्रगति को चिह्नित करता है। सफल परीक्षण मानव चिकित्सा में रोबोटिक सर्जरी के लिए आशाजनक भविष्य के अनुप्रयोगों का सुझाव देता है, संभावित रूप से सर्जिकल सटीकता में सुधार, आक्रामकता को कम करना, और दूरदराज या कम सेवा वाले क्षेत्रों में विशेष सर्जिकल विशेषज्ञता तक पहुंच का विस्तार करना।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/ai/4.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/3.mp3"
+      },
+      {
+        "title": "Simulating everything, sort of: The promise and limits of world models",
+        "summary": "World models represent an emerging AI paradigm that aims to simulate complex environments and scenarios, offering significant potential for various applications. However, experts highlight important limitations and unresolved questions about their capabilities and reliability. The technology promises to enable AI systems to better understand and predict real-world dynamics, but current implementations face challenges in accuracy, scalability, and generalization. This analysis explores how world models function, their practical applications, and the fundamental technical and conceptual barriers that researchers must overcome to realize their full potential in advancing AI systems.",
+        "url": "https://arstechnica.com/ai/2026/07/simulating-everything-sort-of-the-promise-and-limits-of-world-models/",
+        "source": "AI - Ars Technica",
+        "published_at": "Mon, 13 Jul 2026 11:00:51 +0000",
+        "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/07/cracking-open-world-model-1152x648.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/4.mp3"
       }
     ],
     "quantum": [
       {
         "title": "Researchers Reveal the Power of 'Quantum Proofs'",
-        "summary": "Researchers have demonstrated that verifying solutions to certain computational problems requires grappling with the inherent complexity of quantum mechanics. This finding reveals fundamental limitations in classical verification methods and highlights how quantum effects cannot be circumvented when checking problem solutions. The discovery has implications for understanding the boundaries between classical and quantum computation, suggesting that some verification tasks are irreducibly quantum in nature. This work advances theoretical computer science by establishing that quantum complexity is not merely a computational artifact but a fundamental feature of certain problem classes.",
+        "summary": "Researchers have demonstrated that quantum proofs represent a fundamental aspect of computational complexity that cannot be circumvented. When verifying solutions to certain computational problems, the inherent complexity of the quantum world becomes unavoidable. This finding has significant implications for understanding the limits of classical verification methods and highlights how quantum mechanics imposes constraints on what can be efficiently verified. The research suggests that quantum effects are not merely incidental but central to the nature of proof verification itself, with potential applications in cryptography, computational theory, and the development of quantum algorithms.",
         "url": "https://www.quantamagazine.org/researchers-reveal-the-power-of-quantum-proofs-20260706/",
         "source": "Quanta Magazine",
         "published_at": "Mon, 06 Jul 2026 14:33:56 +0000",
         "image": "https://www.quantamagazine.org/wp-content/uploads/2026/07/QuantumProof-cr-Ada-Zejun-Shen-Default.webp",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/0.mp3",
-        "title_hi": "शोधकर्ताओं ने 'क्वांटम प्रमाणों' की शक्ति का खुलासा किया",
-        "summary_hi": "शोधकर्ताओं ने प्रदर्शित किया है कि कुछ कम्प्यूटेशनल समस्याओं के समाधानों को सत्यापित करने के लिए क्वांटम यांत्रिकी की अंतर्निहित जटिलता से जूझना पड़ता है। यह खोज शास्त्रीय सत्यापन विधियों में मौलिक सीमाओं को प्रकट करती है और दिखाती है कि समस्या समाधानों की जांच करते समय क्वांटम प्रभावों को कैसे नहीं टाला जा सकता। इस खोज का शास्त्रीय और क्वांटम संगणना के बीच की सीमाओं को समझने के लिए निहितार्थ है, जो सुझाव देता है कि कुछ सत्यापन कार्य अपरिहार्य रूप से क्वांटम प्रकृति के हैं। यह कार्य सैद्धांतिक कंप्यूटर विज्ञान को आगे बढ़ाता है यह स्थापित करके कि क्वांटम जटिलता केवल एक कम्प्यूटेशनल कलाकृति नहीं है बल्कि कुछ समस्या वर्गों की एक मौलिक विशेषता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/quantum/0.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/0.mp3"
       },
       {
         "title": "Quantum error correction can constantly recalibrate a processor",
-        "summary": "Researchers have developed a method using reinforcement learning to continuously recalibrate quantum processors by leveraging error information. Rather than treating errors as mere obstacles, the approach uses error data to dynamically adjust control algorithms, improving processor performance over time. This technique represents a significant advance in quantum computing by transforming error correction from a passive error-suppression mechanism into an active optimization process. The method could enhance the reliability and efficiency of near-term quantum computers, addressing one of the major challenges in scaling quantum computing technology toward practical applications.",
+        "summary": "Researchers have developed a novel approach to quantum error correction that uses reinforcement learning to continuously recalibrate quantum processors. Rather than treating error correction as a static process, the new method leverages error information to dynamically adjust control algorithms in real time. This advancement addresses one of the major challenges in quantum computing: maintaining qubit stability and reducing computational errors. By enabling constant recalibration based on observed errors, this technique could significantly improve the reliability and performance of quantum processors, bringing practical quantum computing applications closer to reality and potentially accelerating progress toward fault-tolerant quantum systems.",
         "url": "https://arstechnica.com/science/2026/07/quantum-error-correction-can-constantly-recalibrate-a-processor/",
-        "source": "Science - Ars Technica",
+        "source": "Ars Technica",
         "published_at": "Fri, 10 Jul 2026 23:02:30 +0000",
         "image": "https://cdn.arstechnica.net/wp-content/uploads/2019/10/Sycamore-Rainbow-cropped-1152x648.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/1.mp3",
-        "title_hi": "क्वांटम त्रुटि सुधार एक प्रोसेसर को लगातार पुनः अंशांकित कर सकता है",
-        "summary_hi": "शोधकर्ताओं ने त्रुटि सूचना का लाभ उठाते हुए सुदृढ़न सीखने का उपयोग करके क्वांटम प्रोसेसर को लगातार पुनः अंशांकित करने की एक विधि विकसित की है। त्रुटियों को केवल बाधाओं के रूप में मानने के बजाय, यह दृष्टिकोण नियंत्रण एल्गोरिदम को गतिशील रूप से समायोजित करने के लिए त्रुटि डेटा का उपयोग करता है, समय के साथ प्रोसेसर प्रदर्शन में सुधार करता है। यह तकनीक त्रुटि सुधार को एक निष्क्रिय त्रुटि-दमन तंत्र से एक सक्रिय अनुकूलन प्रक्रिया में रूपांतरित करके क्वांटम कंप्यूटिंग में एक महत्वपूर्ण प्रगति का प्रतिनिधित्व करती है। यह विधि निकट-अवधि के क्वांटम कंप्यूटरों की विश्वसनीयता और दक्षता को बढ़ा सकती है, क्वांटम कंप्यूटिंग तकनीक को व्यावहारिक अनुप्रयोगों की ओर बढ़ाने में प्रमुख चुनौतियों में से एक को संबोधित करते हुए।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/quantum/1.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/1.mp3"
+      },
+      {
+        "title": "World's first superconducting quantum heat engine looks to transform quantum computing",
+        "summary": "Scientists have successfully created the world's first superconducting quantum heat engine, a breakthrough device small enough to fit inside a superconducting circuit that converts heat into useful work. This innovation represents a significant milestone in quantum thermodynamics and could have transformative implications for quantum computing technology. By demonstrating that heat can be effectively converted within quantum systems, this development opens new possibilities for powering and cooling quantum processors more efficiently. The superconducting quantum heat engine may enable more stable quantum operations, reduce energy consumption in quantum computers, and provide insights into the fundamental principles governing quantum systems at extremely low temperatures.",
+        "url": "https://www.yahoo.com/news/science/articles/world-first-superconducting-quantum-heat-140700986.html",
+        "source": "The Brighter Side of News via Yahoo News",
+        "published_at": "2026-07-14T13:46:28+00:00",
+        "image": "https://media.zenfs.com/en/the_brighter_side_of_news_articles_781/7758afe95e527a6469f40ade4551ec57",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/2.mp3"
       },
       {
         "title": "An orbiting disco ball gave Einstein's theory its most precise test yet",
-        "summary": "Scientists used an orbiting reflective sphere—colloquially termed a \"disco ball\"—to conduct the most precise test of Einstein's general relativity theory to date. Despite Earth's relatively modest mass, the planet still measurably distorts spacetime around it, a prediction Einstein made over a century ago. This experiment demonstrates the extraordinary precision of modern measurement techniques and validates Einstein's geometric description of gravity at unprecedented accuracy levels. The test confirms that spacetime curvature occurs even around relatively small celestial bodies, providing strong empirical support for general relativity's fundamental principles and advancing our understanding of gravity's nature.",
+        "summary": "Researchers used an orbiting reflective sphere, colloquially termed a \"disco ball,\" to conduct the most precise test of Einstein's theory of general relativity to date. Despite Earth's relatively modest mass compared to other celestial bodies, the experiment demonstrated that our planet still measurably distorts space-time in accordance with Einstein's predictions. This test employed satellite-based measurements to detect the subtle curvature of space-time caused by Earth's gravitational field with unprecedented accuracy. The findings provide strong confirmation of general relativity's predictions and showcase how modern satellite technology enables increasingly sensitive tests of fundamental physics, validating Einstein's century-old theory with remarkable precision.",
         "url": "https://arstechnica.com/science/2026/07/an-orbiting-disco-ball-gave-einsteins-theory-its-most-precise-test-yet/",
-        "source": "Science - Ars Technica",
+        "source": "Ars Technica",
         "published_at": "Fri, 10 Jul 2026 16:11:35 +0000",
         "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/07/image-1-1048x648.png",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/2.mp3",
-        "title_hi": "एक परिक्रमा करने वाली डिस्को बॉल ने आइंस्टीन के सिद्धांत को अब तक का सबसे सटीक परीक्षण दिया",
-        "summary_hi": "वैज्ञानिकों ने आइंस्टीन के सामान्य सापेक्षता सिद्धांत का अब तक का सबसे सटीक परीक्षण करने के लिए एक परिक्रमा करने वाली परावर्तक गोले का उपयोग किया—जिसे बोलचाल में 'डिस्को बॉल' कहा जाता है। पृथ्वी के अपेक्षाकृत मामूली द्रव्यमान के बावजूद, ग्रह अभी भी इसके चारों ओर स्पेसटाइम को मापने योग्य रूप से विकृत करता है, एक भविष्यवाणी जो आइंस्टीन ने एक सदी से अधिक पहले की थी। यह प्रयोग आधुनिक मापन तकनीकों की असाधारण सटीकता को प्रदर्शित करता है और अभूतपूर्व सटीकता स्तरों पर सामान्य सापेक्षता को मान्य करता है। यह परीक्षण पुष्टि करता है कि स्पेसटाइम वक्रता अपेक्षाकृत छोटे आकाशीय पिंडों के चारों ओर भी होती है, सामान्य सापेक्षता के मौलिक सिद्धांतों के लिए मजबूत अनुभवजन्य समर्थन प्रदान करते हुए और गुरुत्वाकर्षण की प्रकृति की हमारी समझ को आगे बढ़ाते हुए।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/quantum/2.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/3.mp3"
       },
       {
-        "title": "We Know Simple Fluids Can Flow. Turns Out, Some Can Fracture.",
-        "summary": "Researchers have discovered that certain simple, non-elastic fluids can fracture and break apart, challenging the long-held assumption that only complex elastic fluids possess this capability. Scientists previously believed elasticity was the essential property enabling fluid fracturing, but this finding contradicts that theory. The discovery of fracturing in nonelastic simple fluids suggests that the mechanisms underlying fluid failure are more nuanced than previously understood. This research has implications for materials science, fluid dynamics, and industrial applications involving fluid behavior, potentially requiring a fundamental reconceptualization of how scientists understand the physical properties governing fluid mechanics and material failure modes.",
-        "url": "https://www.quantamagazine.org/we-know-simple-fluids-can-flow-turns-out-some-can-fracture-20260710/",
-        "source": "Quanta Magazine",
-        "published_at": "Fri, 10 Jul 2026 14:51:48 +0000",
-        "image": "https://www.quantamagazine.org/wp-content/uploads/2026/07/CrackingLiquids-cr-Adapted-with-permission-from-Phys.-Rev.-Lett.-136-124002.-Copyrighted-by-the-American-Physical-Society.-Default.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/3.mp3",
-        "title_hi": "हम जानते हैं कि सरल तरल पदार्थ बह सकते हैं। यह पता चला कि कुछ टूट सकते हैं।",
-        "summary_hi": "शोधकर्ताओं ने खोज की है कि कुछ सरल, गैर-लोचदार तरल पदार्थ टूट सकते हैं और अलग हो सकते हैं, जो लंबे समय से चली आ रही धारणा को चुनौती देते हैं कि केवल जटिल लोचदार तरल पदार्थों में यह क्षमता होती है। वैज्ञानिकों ने पहले माना था कि लोच तरल पदार्थ के टूटने को सक्षम करने वाली आवश्यक संपत्ति थी, लेकिन यह खोज उस सिद्धांत का खंडन करती है। गैर-लोचदार सरल तरल पदार्थों में टूटने की खोज से पता चलता है कि तरल पदार्थ की विफलता के अंतर्निहित तंत्र पहले समझे जाने से अधिक सूक्ष्म हैं। इस शोध का सामग्री विज्ञान, द्रव गतिविज्ञान और तरल पदार्थ के व्यवहार से जुड़े औद्योगिक अनुप्रयोगों के लिए निहितार्थ है, संभवतः यह आवश्यक है कि वैज्ञानिक द्रव यांत्रिकी और सामग्री विफलता मोड को नियंत्रित करने वाली भौतिक संपत्तियों को कैसे समझते हैं इसका मौलिक पुनर्विचार करें।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/quantum/3.mp3"
-      },
-      {
-        "title": "Solution to Feynman's reverse sprinkler puzzle also applies to \"silly sprinklers\"",
-        "summary": "A new study has confirmed the 2024 \"momentum flux theory\" explaining how the angular momentum of water flows drives rotation in sprinklers, solving Richard Feynman's famous reverse sprinkler puzzle. The research demonstrates that the theory applies not only to conventional reverse sprinklers but also to unconventional \"silly sprinkler\" designs. This work resolves a decades-old physics puzzle that had intrigued Feynman himself, providing a comprehensive theoretical framework for understanding rotational dynamics in fluid systems. The confirmation of momentum flux theory across diverse sprinkler configurations strengthens the theoretical foundation and demonstrates the broad applicability of the principle to various fluid-mechanical systems.",
-        "url": "https://arstechnica.com/science/2026/07/solution-to-feynmans-reverse-sprinkler-puzzle-also-applies-to-silly-sprinklers/",
-        "source": "Science - Ars Technica",
-        "published_at": "Mon, 13 Jul 2026 19:00:47 +0000",
-        "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/07/sprinklerTOP-1152x648.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/4.mp3",
-        "title_hi": "फेनमैन की रिवर्स स्प्रिंकलर पहेली का समाधान 'मूर्ख स्प्रिंकलर' पर भी लागू होता है",
-        "summary_hi": "एक नए अध्ययन ने 2024 के 'गति प्रवाह सिद्धांत' की पुष्टि की है जो समझाता है कि जल प्रवाह का कोणीय गति स्प्रिंकलर में घूर्णन को कैसे चलाता है, रिचर्ड फेनमैन की प्रसिद्ध रिवर्स स्प्रिंकलर पहेली को हल करता है। शोध प्रदर्शित करता है कि सिद्धांत न केवल पारंपरिक रिवर्स स्प्रिंकलर पर बल्कि अपरंपरागत 'मूर्ख स्प्रिंकलर' डिजाइन पर भी लागू होता है। यह कार्य एक दशकों पुरानी भौतिकी पहेली को हल करता है जिसने फेनमैन को स्वयं को आकर्षित किया था, द्रव प्रणालियों में घूर्णन गतिविज्ञान को समझने के लिए एक व्यापक सैद्धांतिक ढांचा प्रदान करता है। विविध स्प्रिंकलर कॉन्फ़िगरेशन में गति प्रवाह सिद्धांत की पुष्टि सैद्धांतिक आधार को मजबूत करती है और विभिन्न द्रव-यांत्रिक प्रणालियों के लिए सिद्धांत की व्यापक प्रयोज्यता को प्रदर्शित करती है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/quantum/4.mp3"
+        "title": "CT quantum initiative wins NSF award, unlocking millions in funding",
+        "summary": "Connecticut's quantum computing sector received a significant boost after winning a National Science Foundation award that unlocks millions in funding. The initiative, involving collaboration between Yale University and the University of Connecticut, aims to spur economic development and accelerate quantum computing research and commercialization in the state. This NSF Regional Innovation Engine award recognizes Connecticut's potential as a hub for quantum technology advancement and provides substantial resources to support research, workforce development, and industry partnerships. The funding represents a major investment in quantum computing infrastructure and talent development, positioning Connecticut as a competitive player in the rapidly growing quantum technology sector and potentially attracting quantum computing companies and talent to the region.",
+        "url": "https://ctmirror.org/2026/07/14/nsf-regional-innovation-engine-yale-uconn-quantum-ct/",
+        "source": "CT Mirror",
+        "published_at": "2026-07-14T17:46:28+00:00",
+        "image": "https://s.yimg.com/am/60d/a73bc94597f9cadb0e504169e5690b84",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/4.mp3"
       }
     ],
     "trump": [
       {
-        "title": "UAE condemns Iran's 'brazen' attack on tankers as US launches fresh strikes",
-        "summary": "The United States conducted its third consecutive night of strikes on Iran as tensions escalate in the Middle East. President Trump announced a 20% charge as part of a new blockade on the Strait of Hormuz, asserting US control over this critical shipping route. The UAE condemned Iran's attacks on tankers, with reports indicating casualties among crew members. The escalating military operations represent a significant intensification of US-Iran hostilities, with Trump's announcement of economic measures through the Hormuz blockade adding a new dimension to the conflict beyond military strikes.",
-        "url": "https://www.bbc.co.uk/news/articles/c8d2vn38dy1o?at_medium=RSS&at_campaign=rss",
+        "title": "Trump threatens to bomb bridges and power plants unless Iran resumes talks",
+        "summary": "President Trump threatened to intensify military strikes against Iranian infrastructure, including bridges and power plants, unless Tehran returns to negotiations. The threats emerged as the US and Iran exchanged fire for the fourth consecutive day, with the US resuming its blockade of Iranian ports. This escalation represents a significant intensification of the conflict that has persisted for over four months, with Trump using military pressure as leverage to force Iran back to the negotiating table amid ongoing regional tensions.",
+        "url": "https://www.bbc.co.uk/news/articles/cy0608wy8pro?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
-        "published_at": "Tue, 14 Jul 2026 04:50:48 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0962/live/b6b2aac0-7f36-11f1-b9f9-7523a937b0a2.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/0.mp3",
-        "title_hi": "संयुक्त अरब अमीरात ने ईरान के टैंकरों पर 'साहसिक' हमले की निंदा की, अमेरिका ने नई हड़तालें शुरू कीं",
-        "summary_hi": "संयुक्त राज्य अमेरिका ने मध्य पूर्व में तनाव बढ़ने के बीच ईरान पर लगातार तीसरी रात हड़तालें कीं। राष्ट्रपति ट्रम्प ने हार्मुज जलडमरूमध्य पर एक नई नाकाबंदी के हिस्से के रूप में 20% शुल्क की घोषणा की, इस महत्वपूर्ण शिपिंग मार्ग पर अमेरिकी नियंत्रण का दावा किया। संयुक्त अरब अमीरात ने टैंकरों पर ईरान के हमलों की निंदा की, रिपोर्टों में चालक दल के सदस्यों में हताहत होने का संकेत दिया गया। बढ़ती सैन्य कार्रवाइयां अमेरिका-ईरान शत्रुता में महत्वपूर्ण तीव्रता का प्रतिनिधित्व करती हैं, ट्रम्प की हार्मुज नाकाबंदी के माध्यम से आर्थिक उपायों की घोषणा सैन्य हड़तालों से परे संघर्ष में एक नया आयाम जोड़ती है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/trump/0.mp3"
+        "published_at": "Wed, 15 Jul 2026 06:47:25 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d6c0/live/e8f90230-7fb4-11f1-926f-c90d1bcfbc84.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/0.mp3"
+      },
+      {
+        "title": "Trump retreat over Hormuz tolls suggests he is struggling to end Iran war",
+        "summary": "President Trump abruptly reversed his proposal to impose a 20 percent toll on cargo ships transiting the Strait of Hormuz, instead pivoting toward trade and investment deals with Gulf states. The sudden policy reversal marks another twist in the ongoing conflict with Iran that has lasted more than four months. The retreat suggests difficulties in Trump's efforts to resolve the conflict and raises questions about the sustainability of his administration's approach to managing the Middle East crisis.",
+        "url": "https://www.bbc.co.uk/news/articles/crele3r8j19o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC News",
+        "published_at": "Tue, 14 Jul 2026 23:17:27 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/87df/live/cb49bc70-7fc8-11f1-82bc-eb96a9eb8087.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/1.mp3"
+      },
+      {
+        "title": "ICE told to halt most vehicle stops after pair of fatal shootings",
+        "summary": "Immigration and Customs Enforcement has been directed to halt most vehicle stops following two fatal shootings by immigration agents. The policy shift represents a major change for the agency, which has faced mounting criticism over the past year regarding allegations of excessive use of force. The directive comes after recent incidents in Maine and Houston where undocumented migrants were fatally shot during immigration enforcement operations, prompting scrutiny of ICE's operational procedures and use-of-force protocols.",
+        "url": "https://www.bbc.co.uk/news/articles/cly8yrw597eo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC News",
+        "published_at": "Wed, 15 Jul 2026 01:00:43 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4009/live/02268d30-7f9d-11f1-a5f4-433bb9aa2e5a.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/2.mp3"
+      },
+      {
+        "title": "Trump pays writer E Jean Carroll $5m in damages over sexual abuse and defamation",
+        "summary": "President Trump paid writer E. Jean Carroll over $5 million in damages following a jury verdict finding him liable for sexual abuse and defamation. The payment represents the culmination of a protracted legal battle spanning three years since the initial jury finding. Trump had previously sought to delay the payment by attempting to persuade the Supreme Court to overturn the judgment, but ultimately transferred the funds to Carroll, marking a significant legal defeat for the president.",
+        "url": "https://www.bbc.co.uk/news/articles/c2dydj1wp93o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC News",
+        "published_at": "Tue, 14 Jul 2026 17:07:42 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a14c/live/efc3d020-7f98-11f1-a5f4-433bb9aa2e5a.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/3.mp3"
       },
       {
         "title": "US judge voids Donald Trump's $1.8bn settlement with IRS that gave him immunity from tax audits",
-        "summary": "A US federal judge has voided a $1.8 billion settlement between Donald Trump and the Internal Revenue Service that had previously granted him immunity from tax audits. The judge ruled that the lawsuit was brought for 'improper purposes,' significantly undermining Trump's legal protections regarding his tax affairs. Additionally, the judge referred a Trump attorney for possible disciplinary action, indicating serious concerns about the conduct surrounding the settlement. This decision reopens Trump to potential IRS scrutiny and represents a major legal setback for the president regarding his tax obligations and audit exposure.",
+        "summary": "A federal judge voided Trump's $1.8 billion settlement agreement with the IRS that had provided him immunity from future tax audits. The judge determined the settlement was brought for improper purposes and referred a Trump attorney for possible disciplinary action. The decision eliminates the legal protections Trump had secured through the settlement, potentially exposing him to renewed IRS scrutiny and tax audit proceedings, representing another significant legal setback for the president.",
         "url": "https://www.bbc.co.uk/news/articles/cn8q0e8d4ego?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
         "published_at": "Mon, 13 Jul 2026 18:52:46 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/468c/live/a01b76f0-7ede-11f1-84b4-d5196cc76857.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/1.mp3",
-        "title_hi": "अमेरिकी न्यायाधीश ने डोनाल्ड ट्रम्प के आईआरएस के साथ 1.8 अरब डॉलर के समझौते को रद्द किया जो उन्हें कर ऑडिट से छूट देता था",
-        "summary_hi": "एक अमेरिकी संघीय न्यायाधीश ने डोनाल्ड ट्रम्प और आंतरिक राजस्व सेवा के बीच 1.8 अरब डॉलर के समझौते को रद्द कर दिया है जो पहले उन्हें कर ऑडिट से छूट प्रदान करता था। न्यायाधीश ने फैसला सुनाया कि मुकदमा 'अनुचित उद्देश्यों' के लिए लाया गया था, जिससे ट्रम्प की कर मामलों से संबंधित कानूनी सुरक्षा में महत्वपूर्ण कमी आई। इसके अतिरिक्त, न्यायाधीश ने एक ट्रम्प वकील को संभावित अनुशासनात्मक कार्रवाई के लिए भेजा, जो समझौते के आसपास के आचरण के बारे में गंभीर चिंताओं का संकेत देता है। यह निर्णय ट्रम्प को संभावित आईआरएस जांच के लिए फिर से खोलता है और कर दायित्वों और ऑडिट जोखिम के संबंध में राष्ट्रपति के लिए एक बड़ी कानूनी असफलता का प्रतिनिधित्व करता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/trump/1.mp3"
-      },
-      {
-        "title": "Landmark US housing bill becomes law despite Trump protest",
-        "summary": "A significant housing bill has become law in the United States despite President Trump's opposition to the legislation. Trump had prioritized voter ID legislation and wanted it passed before the housing law, but Congress proceeded with the housing measure. The bill aims to reduce housing costs and increase housing supply, addressing critical affordability and availability issues across the nation. The passage of this legislation despite Trump's protest demonstrates congressional willingness to advance policy priorities independent of presidential objections, marking a notable legislative development in housing policy reform.",
-        "url": "https://www.bbc.co.uk/news/articles/cn8qwj611qxo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC News",
-        "published_at": "Sat, 11 Jul 2026 13:35:09 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2995/live/0335cba0-7c6e-11f1-98fd-6b03daaf8a77.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/2.mp3",
-        "title_hi": "ऐतिहासिक अमेरिकी आवास विधेयक ट्रम्प के विरोध के बावजूद कानून बन गया",
-        "summary_hi": "एक महत्वपूर्ण आवास विधेयक संयुक्त राज्य अमेरिका में राष्ट्रपति ट्रम्प के विरोध के बावजूद कानून बन गया है। ट्रम्प ने मतदाता पहचान विधेयक को प्राथमिकता दी थी और इसे आवास कानून से पहले पारित करना चाहते थे, लेकिन कांग्रेस ने आवास उपाय के साथ आगे बढ़ा। विधेयक का लक्ष्य आवास लागत को कम करना और आवास आपूर्ति बढ़ाना है, जो पूरे राष्ट्र में महत्वपूर्ण सामर्थ्य और उपलब्धता मुद्दों को संबोधित करता है। राष्ट्रपति के विरोध के बावजूद इस विधेयन का पारित होना कांग्रेस की राष्ट्रपति के आपत्तियों से स्वतंत्र नीति प्राथमिकताओं को आगे बढ़ाने की इच्छा को प्रदर्शित करता है, जो आवास नीति सुधार में एक उल्लेखनीय विधायी विकास को चिह्नित करता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/trump/2.mp3"
-      },
-      {
-        "title": "Lindsey Graham's sister chosen as replacement after senator's death",
-        "summary": "Following Senator Lindsey Graham's death on Saturday, the South Carolina governor has appointed Graham's sister to serve out the remainder of his Senate term. This succession decision keeps the seat within the Graham family and represents a significant political development in South Carolina. The appointment comes after Graham's long career as a prominent Republican senator who evolved significantly throughout the Trump era. His sister's appointment ensures continuity in the Senate seat while the state prepares for future electoral processes to permanently fill the position.",
-        "url": "https://www.bbc.co.uk/news/articles/c05y3rlvp20o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC News",
-        "published_at": "Mon, 13 Jul 2026 21:37:02 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/59b7/live/5d89ba60-7f04-11f1-926f-c90d1bcfbc84.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/3.mp3",
-        "title_hi": "लिंडसे ग्राहम की बहन सीनेटर की मृत्यु के बाद प्रतिस्थापन के रूप में चुनी गई",
-        "summary_hi": "शनिवार को सीनेटर लिंडसे ग्राहम की मृत्यु के बाद, दक्षिण कैरोलिना के राज्यपाल ने ग्राहम की बहन को उनके सीनेट कार्यकाल के शेष भाग को पूरा करने के लिए नियुक्त किया है। यह उत्तराधिकार निर्णय सीट को ग्राहम परिवार के भीतर रखता है और दक्षिण कैरोलिना में एक महत्वपूर्ण राजनीतिक विकास का प्रतिनिधित्व करता है। यह नियुक्ति ग्राहम के एक प्रमुख रिपब्लिकन सीनेटर के रूप में लंबे कैरियर के बाद आती है जो ट्रम्प युग के दौरान काफी विकसित हुए। उनकी बहन की नियुक्ति सीनेट सीट में निरंतरता सुनिश्चित करती है जबकि राज्य स्थायी रूप से पद भरने के लिए भविष्य की चुनावी प्रक्रियाओं की तैयारी करता है।",
-        "audio_hi": ""
-      },
-      {
-        "title": "Trump watches IndyCar pit stop outside White House",
-        "summary": "President Trump observed an IndyCar pit stop demonstration outside the White House, previewing an actual race that Trump commissioned through an executive order signed in January. The event showcased the high-speed precision of professional motorsport pit crews and represented Trump's initiative to bring IndyCar racing to Washington. This demonstration reflects Trump's interest in promoting major sporting events and entertainment at the nation's capital. The commissioned race represents a unique use of presidential authority to facilitate large-scale sporting events in the DC area.",
-        "url": "https://www.bbc.co.uk/news/videos/cgjx33y16ljo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC News",
-        "published_at": "Mon, 13 Jul 2026 19:25:17 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4f83/live/2035db40-7eef-11f1-bee8-53ce494e1abc.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/4.mp3",
-        "title_hi": "ट्रम्प ने व्हाइट हाउस के बाहर इंडीकार पिट स्टॉप देखा",
-        "summary_hi": "राष्ट्रपति ट्रम्प ने व्हाइट हाउस के बाहर एक इंडीकार पिट स्टॉप प्रदर्शन देखा, जनवरी में हस्ताक्षरित एक कार्यकारी आदेश के माध्यम से ट्रम्प द्वारा आयोजित एक वास्तविक दौड़ का पूर्वावलोकन किया। इस कार्यक्रम ने पेशेवर मोटरस्पोर्ट पिट क्रू की उच्च गति सटीकता को प्रदर्शित किया और वाशिंगटन में इंडीकार रेसिंग लाने के लिए ट्रम्प की पहल का प्रतिनिधित्व किया। यह प्रदर्शन राष्ट्र की राजधानी में प्रमुख खेल आयोजनों और मनोरंजन को बढ़ावा देने में ट्रम्प की रुचि को दर्शाता है। आयोजित दौड़ डीसी क्षेत्र में बड़े पैमाने पर खेल आयोजनों को सुविधाजनक बनाने के लिए राष्ट्रपति प्राधिकार का एक अनूठा उपयोग का प्रतिनिधित्व करता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/trump/4.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/4.mp3"
       }
     ],
     "local": [
       {
         "title": "Melissa ISD employee fired after 'inappropriate' communication with student",
-        "summary": "A Melissa Independent School District employee was terminated following an investigation by the district's police department that discovered inappropriate electronic communication between the employee and a student. The incident highlights ongoing concerns about professional conduct and student safety within the school system. Melissa ISD, located in Collin County, serves thousands of students across multiple campuses. The district has not disclosed additional details about the nature of the communication or the specific position held by the terminated employee, but the swift action demonstrates the district's commitment to maintaining appropriate boundaries and protecting students from potential misconduct.",
+        "summary": "A Melissa Independent School District employee was terminated following an investigation by the district's police department that discovered inappropriate electronic communications between the employee and a student. The incident highlights ongoing concerns about student safety within the school system. The specific nature of the communications and the employee's position were not detailed in the initial report. This case underscores the importance of institutional oversight and swift action in addressing potential misconduct involving students in educational settings.",
         "url": "https://www.fox4news.com/news/melissa-isd-employee-fired-high-school",
         "source": "FOX 4 News",
         "published_at": "",
         "image": "https://images.foxtv.com/static.fox4news.com/www.fox4news.com/content/uploads/2019/08/1200/630/8362b09b-Melissa20HS_1440458562544_121015_ver1.0.jpg?ve=1&tl=1",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local/0.mp3",
-        "title_hi": "मेलिसा आईएसडी कर्मचारी को छात्र के साथ 'अनुचित' संचार के बाद निकाला गया",
-        "summary_hi": "मेलिसा इंडिपेंडेंट स्कूल डिस्ट्रिक्ट के एक कर्मचारी को जिले की पुलिस विभाग की जांच के बाद समाप्त कर दिया गया, जिसमें कर्मचारी और एक छात्र के बीच अनुचित इलेक्ट्रॉनिक संचार की खोज की गई। यह घटना स्कूल प्रणाली के भीतर व्यावसायिक आचरण और छात्र सुरक्षा के बारे में चल रही चिंताओं को उजागर करती है। मेलिसा आईएसडी, कोलिन काउंटी में स्थित है, कई परिसरों में हजारों छात्रों को सेवा प्रदान करता है। जिले ने संचार की प्रकृति या समाप्त किए गए कर्मचारी द्वारा आयोजित विशिष्ट पद के बारे में अतिरिक्त विवरण का खुलासा नहीं किया है, लेकिन तेजी से कार्रवाई जिले की उचित सीमाएं बनाए रखने और संभावित कदाचार से छात्रों की रक्षा करने की प्रतिबद्धता को प्रदर्शित करती है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/local/0.mp3"
-      },
-      {
-        "title": "Melissa gas leak: Homes evacuated after gas main damaged",
-        "summary": "A six-inch gas main was damaged by construction crews working near Melissa Road and Fannin Street on Tuesday morning, prompting emergency evacuations in the area. Residents from the 2600 and 2700 blocks of McKinney Street and the Villages of Melissa were ordered to evacuate as a precautionary measure. Emergency crews responded to the scene and held position while managing the evacuation procedures. The incident underscores the risks associated with construction activities near critical infrastructure. Authorities worked to assess the damage and determine appropriate next steps to restore service safely to affected residents in this Collin County community.",
-        "url": "https://www.fox4news.com/news/melissa-gas-leak-evacuations",
-        "source": "FOX 4 News",
-        "published_at": "",
-        "image": "https://images.foxtv.com/static.fox4news.com/www.fox4news.com/content/uploads/2024/11/1200/630/112624-sky4-tuesday-1156am-kdfweme002_11_56_34_2_m_00.08.34.28.jpg?ve=1&tl=1",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local/1.mp3",
-        "title_hi": "मेलिसा गैस रिसाव: गैस मुख्य क्षतिग्रस्त होने के बाद घरों को खाली किया गया",
-        "summary_hi": "मंगलवार की सुबह मेलिसा रोड और फैनिन स्ट्रीट के पास काम कर रहे निर्माण दल द्वारा छह इंच की गैस मुख्य क्षतिग्रस्त की गई, जिससे इस क्षेत्र में आपातकालीन निकासी हुई। मैकिन्नी स्ट्रीट के 2600 और 2700 ब्लॉक और विलेजेस ऑफ मेलिसा के निवासियों को सावधानी के तौर पर खाली करने का आदेश दिया गया। आपातकालीन दल घटना स्थल पर पहुंचे और निकासी प्रक्रियाओं का प्रबंधन करते हुए स्थिति में रहे। यह घटना महत्वपूर्ण बुनियादी ढांचे के पास निर्माण गतिविधियों से जुड़े जोखिमों को रेखांकित करती है। अधिकारियों ने क्षति का आकलन करने और कोलिन काउंटी समुदाय में प्रभावित निवासियों को सुरक्षित रूप से सेवा बहाल करने के लिए उचित अगले कदमों को निर्धारित करने के लिए काम किया।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/local/1.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local/0.mp3"
       }
     ],
-    "local_events": [],
+    "local_events": [
+      {
+        "title": "Annual Snowball Fight at Melissa Public Library",
+        "summary": "Join the Melissa Public Library for their annual snowball fight featuring real snowballs provided by Bahama Buck's. All ages welcome for this fun summer event turning a hot Texas morning into a snowy showdown.",
+        "url": "https://www.cityofmelissa.com/Calendar.aspx",
+        "source": "City Hall back park, Melissa, TX",
+        "published_at": "Thursday, July 16, 10:30 a.m.",
+        "image": "",
+        "category": "community",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local_events/0.mp3"
+      },
+      {
+        "title": "Melissa Farmers Market",
+        "summary": "Weekly farmers market featuring local vendors and artisan products. Held on Saturdays with a vibrant community atmosphere. Check calendar for special market events and vendor information.",
+        "url": "https://melissafarmersmarket.com/",
+        "source": "Melissa City Hall, 3411 Barker Ave, Melissa, TX 75454",
+        "published_at": "Saturday (recurring)",
+        "image": "",
+        "category": "market",
+        "audio": ""
+      },
+      {
+        "title": "Melissa Farmer And Artisan Market",
+        "summary": "Local farmer and artisan market held year-round on the 2nd and 4th Saturdays of each month, featuring local vendors and artisan products in a community setting.",
+        "url": "https://www.tripadvisor.com/Attraction_Review-g56268-d23936720-Reviews-Melissa_Farmer_And_Artisan_Market-Melissa_Texas.html",
+        "source": "Melissa, TX",
+        "published_at": "2nd and 4th Saturdays of every month",
+        "image": "",
+        "category": "market",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local_events/2.mp3"
+      }
+    ],
     "local_weather": [
       {
         "title": "Weather in Melissa, Texas",
-        "summary": "Clear sky, 75°F (feels like 77°F). Today's range: 73°F to 77°F. Humidity 91%, wind 1 mph.",
+        "summary": "Broken clouds, 74°F (feels like 75°F). Today's range: 72°F to 76°F. Humidity 88%, wind 2 mph.",
         "url": "",
         "source": "OpenWeatherMap",
-        "published_at": "2026-07-14T07:42:41.515801+00:00",
+        "published_at": "2026-07-15T07:46:08.831642+00:00",
         "image": "",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local_weather/0.mp3",
-        "title_hi": "मेलिसा, टेक्सास में मौसम",
-        "summary_hi": "साफ आसमान, 75°F (महसूस होता है 77°F)। आज की रेंज: 73°F से 77°F। आर्द्रता 91%, हवा 1 mph।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/local_weather/0.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local_weather/0.mp3"
       }
     ]
-  },
-  "hindi_generated_at": "2026-07-14T07:48:51.134181+00:00"
+  }
 }
