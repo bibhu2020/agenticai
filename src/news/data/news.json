@@ -9,7 +9,10 @@
         "source": "BBC News",
         "published_at": "Sun, 19 Jul 2026 05:10:57 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/e354/live/adca3400-8323-11f1-926f-c90d1bcfbc84.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/0.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/0.mp3",
+        "title_hi": "जॉर्डन में दो अमेरिकी सैनिकों की मौत के बाद अमेरिका और ईरान ने एक-दूसरे पर हमले किए",
+        "summary_hi": "जॉर्डन में दो अमेरिकी सैनिकों की मौत के बाद अमेरिकी सेना ने आठवीं रात लगातार ईरानी ठिकानों पर हमले किए हैं, जबकि ईरान का दावा है कि उसने कुवैत में अमेरिकी सैन्य ठिकानों पर ड्रोन दागे हैं। यह बढ़ोतरी दोनों देशों के बीच सैन्य आदान-प्रदान के तीव्र चक्र का प्रतिनिधित्व करती है। हमले क्षेत्रीय तनाव में एक महत्वपूर्ण बढ़ोतरी का संकेत देते हैं, दोनों पक्ष प्रतिशोधी कार्रवाई कर रहे हैं। यह घटना मध्य पूर्व में चल रही शत्रुता को उजागर करती है, जहां अमेरिकी सैन्य कर्मी आतंकवाद विरोधी अभियानों में लगे हुए हैं। कई रातों में बार-बार हमले एक निरंतर संघर्ष की गतिशीलता का सुझाव देते हैं न कि अलग-थलग घटनाओं का, जो आगे क्षेत्रीय अस्थिरता और व्यापक सैन्य टकराव की संभावना के बारे में चिंताएं बढ़ाते हैं।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/world/0.mp3"
       },
       {
         "title": "Russians turn to cash, putting more strain on slowing wartime economy",
@@ -18,7 +21,10 @@
         "source": "BBC News",
         "published_at": "Sat, 18 Jul 2026 23:59:26 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c416/live/685838d0-81b2-11f1-bc34-d11e2a8fe857.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/1.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/1.mp3",
+        "title_hi": "रूसी नकद लेनदेन की ओर रुख कर रहे हैं, जिससे धीमी पड़ रही युद्धकालीन अर्थव्यवस्था पर और दबाव बढ़ रहा है",
+        "summary_hi": "मोबाइल इंटरनेट बंद होने के बाद नागरिकों द्वारा नकद लेनदेन की ओर बढ़ते रुझान के साथ रूस की अर्थव्यवस्था बढ़ते दबाव का सामना कर रही है, जबकि व्यवसाय यूक्रेन के साथ चार साल से अधिक के युद्ध के बीच कराधान से बचने की कोशिश कर रहे हैं। यह बदलाव रूसी राज्य पर गहराते आर्थिक दबाव को दर्शाता है क्योंकि प्रतिबंध और सैन्य व्यय जारी हैं। कर चोरी करने वाले व्यवसाय सरकार के राजस्व को और कम करते हैं जो युद्ध प्रयासों के लिए आवश्यक है। मोबाइल इंटरनेट व्यवधान सुझाते हैं कि अधिकारी सूचना प्रवाह और वित्तीय लेनदेन को नियंत्रित करने का प्रयास कर रहे हैं। ये आर्थिक संकेतक रूस की युद्धकालीन अर्थव्यवस्था के भीतर महत्वपूर्ण आंतरिक चुनौतियों की ओर इशारा करते हैं, जिनमें उपभोक्ता आत्मविश्वास में कमी, वित्तीय अस्थिरता, और सैन्य अभियानों को वित्त पोषित करने और लंबे संघर्ष के दौरान आर्थिक स्थिरता बनाए रखने की राज्य की क्षमता में गिरावट शामिल है।",
+        "audio_hi": ""
       },
       {
         "title": "Cuban dissident Luis Manuel Otero Alcántara goes into exile in US",
@@ -27,7 +33,10 @@
         "source": "BBC News",
         "published_at": "Sun, 19 Jul 2026 07:47:02 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/ffba/live/61f9f5c0-8336-11f1-ab22-e5791e60f909.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/2.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/2.mp3",
+        "title_hi": "क्यूबाई असंतुष्ट लुइस मैनुएल ओटेरो अलकांतारा अमेरिका में निर्वासन में चले गए",
+        "summary_hi": "क्यूबाई असंतुष्ट लुइस मैनुएल ओटेरो अलकांतारा क्यूबा में पांच साल की कैद के बाद संयुक्त राज्य अमेरिका में निर्वासन में चले गए हैं। उन्हें 2021 में क्यूबा के दशकों में सबसे बड़े सरकार विरोधी विरोध के दौरान गिरफ्तार किया गया था, जो द्वीप पर नागरिक अशांति का एक महत्वपूर्ण क्षण था। उनकी कैद और बाद में निर्वासन क्यूबाई सरकार द्वारा असंतोष और सक्रियता के दमन को दर्शाता है। ओटेरो अलकांतारा का प्रस्थान क्यूबा के आंतरिक विरोध आंदोलन के लिए एक उल्लेखनीय नुकसान का प्रतिनिधित्व करता है जबकि कास्त्रो शासन के तहत चल रही मानवाधिकार संबंधी चिंताओं को उजागर करता है। उनका मामला क्यूबाई कार्यकर्ताओं द्वारा सामना किए जाने वाले राजनीतिक उत्पीड़न के व्यापक पैटर्न का उदाहरण है और क्यूबा में अभिव्यक्ति और सभा की स्वतंत्रता पर जारी प्रतिबंधों को प्रदर्शित करता है, जिससे कई असंतुष्ट विदेश में शरण लेने के लिए प्रेरित होते हैं।",
+        "audio_hi": ""
       },
       {
         "title": "Hungarian president agrees to stand down after parliament backs removal",
@@ -36,7 +45,10 @@
         "source": "BBC News",
         "published_at": "Sat, 18 Jul 2026 19:34:16 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3323/live/67c3a600-82db-11f1-9a15-3bb955e2f294.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/3.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/3.mp3",
+        "title_hi": "हंगेरियन राष्ट्रपति संसद के समर्थन के बाद पद छोड़ने के लिए सहमत हुए",
+        "summary_hi": "हंगरी के राष्ट्रपति तामास सुल्योक, जिन्हें प्रधानमंत्री विक्टर ऑर्बान का सहयोगी माना जाता है, संसद द्वारा उनके हटाए जाने के समर्थन के बाद इस्तीफा देने के लिए सहमत हो गए हैं। सुल्योक को शनिवार की रात तक अपने कार्यकाल को समाप्त करने के निर्णय को स्वीकार करने की समय सीमा का सामना करना पड़ा। उनका प्रस्थान हंगरी की शासन संरचना में एक महत्वपूर्ण राजनीतिक विकास का संकेत देता है। हटाया जाना सुल्योक के ऑर्बान के प्रशासन के साथ माने जाने वाले संरेखण के बावजूद हंगरी के नेतृत्व के भीतर आंतरिक राजनीतिक तनाव का सुझाव देता है। यह संवैधानिक विकास हंगरी की सरकार के भीतर चल रही राजनीतिक गतिशीलता को दर्शाता है और हटाए जाने के कारणों और हंगरी के राजनीतिक परिदृश्य और लोकतांत्रिक संस्थानों के लिए इसके निहितार्थों के बारे में सवाल उठाता है।",
+        "audio_hi": ""
       },
       {
         "title": "Space start-up launches India's first commercial rocket designed for orbit",
@@ -45,7 +57,10 @@
         "source": "BBC News",
         "published_at": "Sat, 18 Jul 2026 07:05:19 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/56eb/live/beb0cb10-82a8-11f1-84ea-29e7008b1ad8.png",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/4.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/4.mp3",
+        "title_hi": "अंतरिक्ष स्टार्टअप ने भारत का पहला वाणिज्यिक रॉकेट कक्षा के लिए डिज़ाइन किया हुआ लॉन्च किया",
+        "summary_hi": "स्काईरूट एयरोस्पेस, भारत का पहला स्पेस-टेक यूनिकॉर्न, शनिवार को विक्रम-1 रॉकेट को सफलतापूर्वक लॉन्च किया, जो भारत के वाणिज्यिक अंतरिक्ष उद्योग के लिए एक मील का पत्थर है। यह उपलब्धि भारत के वाणिज्यिक कक्षीय प्रक्षेपण बाजार में प्रवेश का प्रतिनिधित्व करती है, जो राष्ट्र की अंतरिक्ष क्षमताओं में महत्वपूर्ण तकनीकी प्रगति का प्रदर्शन करती है। एक स्वदेशी रूप से डिज़ाइन किए गए कक्षीय रॉकेट का सफल प्रक्षेपण वैश्विक अंतरिक्ष अर्थव्यवस्था में भारत की स्थिति को बढ़ाता है और विदेशी प्रक्षेपण प्रदाताओं पर निर्भरता को कम करता है। स्काईरूट एयरोस्पेस की उपलब्धि एयरोस्पेस इंजीनियरिंग और नवाचार में भारत की बढ़ती विशेषज्ञता को दर्शाती है। यह विकास भारत के अंतरिक्ष क्षेत्र की वृद्धि, संभावित उपग्रह तैनाती क्षमताओं, और अंतर्राष्ट्रीय वाणिज्यिक अंतरिक्ष उद्योग में प्रतिस्पर्धी स्थिति के लिए निहितार्थ रखता है, जो घरेलू और अंतर्राष्ट्रीय ग्राहकों के लिए प्रक्षेपण सेवाओं की तलाश में नई संभावनाएं खोलता है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/world/4.mp3"
       }
     ],
     "usa": [
@@ -56,7 +71,10 @@
         "source": "BBC News",
         "published_at": "Sun, 19 Jul 2026 00:18:47 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/bb90/live/f934e660-82d3-11f1-a42c-29abcdb2a052.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/0.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/0.mp3",
+        "title_hi": "ईरान के हमले में जॉर्डन में दो अमेरिकी सैनिक मारे गए और एक लापता",
+        "summary_hi": "ईरान और संयुक्त राज्य अमेरिका ने इस सप्ताह सैन्य शत्रुता को बढ़ाया है, तेहरान ने खाड़ी क्षेत्र भर में अमेरिकी सैन्य सुविधाओं के खिलाफ हमले किए हैं। इस हमले के परिणामस्वरूप जॉर्डन में दो अमेरिकी सैनिक मारे गए और एक लापता बताया गया है। यह दोनों देशों के बीच चल रहे तनाव में एक महत्वपूर्ण वृद्धि का प्रतिनिधित्व करता है, दोनों देश हमलों का आदान-प्रदान कर रहे हैं क्योंकि क्षेत्रीय अस्थिरता तीव्र हो रही है। यह घटना मध्य पूर्व में अस्थिर सुरक्षा स्थिति और पूरे क्षेत्र में तैनात अमेरिकी सैन्य कर्मियों के सामने आने वाले जोखिमों को रेखांकित करती है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/usa/0.mp3"
       },
       {
         "title": "Andrew Tate and brother arrested in US after more charges laid against them in UK",
@@ -65,7 +83,10 @@
         "source": "BBC News",
         "published_at": "Sun, 19 Jul 2026 02:17:07 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f7d3/live/9a3779e0-8308-11f1-926f-c90d1bcfbc84.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/1.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/1.mp3",
+        "title_hi": "एंड्रयू टेट और उनके भाई को यूके में अतिरिक्त आरोपों के बाद अमेरिका में गिरफ्तार किया गया",
+        "summary_hi": "एंड्रयू टेट और उनके भाई को संयुक्त राज्य अमेरिका में गिरफ्तार किया गया है जिसके बाद यूनाइटेड किंगडम में उनके खिलाफ अतिरिक्त आरोप दायर किए गए हैं। क्राउन प्रॉसिक्यूशन सर्विस ने अमेरिका से नए आरोपों का सामना करने के लिए उनके प्रत्यर्पण का अनुरोध किया है। उनके कानूनी प्रतिनिधि बनाए रखते हैं कि भाई आरोपों से निर्दोष हैं। इस मामले में गंभीर आपराधिक आरोप शामिल हैं, और प्रत्यर्पण अनुरोध दोनों पुरुषों के खिलाफ चल रहे कानूनी कार्यवाही में एक महत्वपूर्ण विकास का प्रतिनिधित्व करता है, जिन्हें ब्रिटिश अदालतों में कई आरोपों का सामना करना पड़ा है।",
+        "audio_hi": ""
       },
       {
         "title": "At least two dead in Texas floods ravaging same area where campers died",
@@ -74,7 +95,10 @@
         "source": "BBC News",
         "published_at": "Fri, 17 Jul 2026 14:56:26 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9b7e/live/26ca8eb0-81ec-11f1-b7bc-5dd9ae7a9918.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/2.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/2.mp3",
+        "title_hi": "टेक्सास में बाढ़ से कम से कम दो लोग मारे गए, जहां कैंपर्स की मृत्यु हुई थी",
+        "summary_hi": "टेक्सास को गंभीर बाढ़ का सामना करना पड़ रहा है जो उसी क्षेत्र को प्रभावित कर रही है जो पिछले वर्ष की विनाशकारी बाढ़ से तबाह हुआ था, जिसमें 130 से अधिक लोगों की मृत्यु हुई थी। वर्तमान बाढ़ के कारण पहले से ही कम से कम दो लोगों की मृत्यु हुई है और यह उन क्षेत्रों को प्रभावित कर रही है जो पिछली आपदा से पूरी तरह ठीक नहीं हुए हैं। एक ही स्थान पर इन बाढ़ों की आवर्ती प्रकृति बुनियादी ढांचे की लचीलापन और क्षेत्र में आपदा तैयारी के बारे में चिंताएं बढ़ाती है। बचे हुए लोग और निवासी नवीनीकृत आघात का सामना कर रहे हैं क्योंकि क्षेत्र कम समय में एक और बड़ी बाढ़ की घटना का सामना कर रहा है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/usa/2.mp3"
       },
       {
         "title": "Trump threatens new Canada tariffs over fires sending 'filthy' air into US cities",
@@ -83,7 +107,10 @@
         "source": "BBC News",
         "published_at": "Sat, 18 Jul 2026 17:29:50 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0b00/live/0ecf40f0-81ea-11f1-b7bc-5dd9ae7a9918.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/3.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/3.mp3",
+        "title_hi": "ट्रम्प ने कनाडा पर नए टैरिफ की धमकी दी क्योंकि आग अमेरिकी शहरों में 'गंदी' हवा भेज रही है",
+        "summary_hi": "राष्ट्रपति ट्रम्प ने कनाडा पर नए टैरिफ लगाने की धमकी दी है जो जंगल की आग से धुआं और वायु प्रदूषण अमेरिकी शहरों में भेज रहा है। कनाडाई नेता मार्क कार्नी ने जवाब दिया है कि दोनों राष्ट्र जलवायु परिवर्तन को संबोधित करने के लिए समान जिम्मेदारी साझा करते हैं, जिसे विशेषज्ञ संकेत देते हैं कि जंगल की आग की स्थिति को बदतर बना रहा है। यह विवाद पर्यावरणीय प्रबंधन और व्यापार नीति पर दोनों देशों के बीच तनाव को उजागर करता है। जंगल की आग का धुआं अमेरिकी प्रमुख शहरों में वायु गुणवत्ता को महत्वपूर्ण रूप से प्रभावित कर रहा है, जिससे एक जनस्वास्थ्य चिंता पैदा हुई है जो पड़ोसी देशों के बीच राजनयिक घर्षण का बिंदु बन गई है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/usa/3.mp3"
       },
       {
         "title": "What this desert city can teach the world about tackling heat deaths",
@@ -92,7 +119,10 @@
         "source": "BBC News",
         "published_at": "Fri, 17 Jul 2026 23:56:08 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a3ec/live/524b9090-8140-11f1-9fa8-b3da54326712.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/4.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/4.mp3",
+        "title_hi": "यह रेगिस्तानी शहर दुनिया को गर्मी से होने वाली मृत्यु से निपटने के बारे में क्या सिखा सकता है",
+        "summary_hi": "एरिजोना में मारिकोपा काउंटी, राष्ट्र में सबसे अधिक तापमान का अनुभव करने के बावजूद, लक्षित हस्तक्षेप और जनस्वास्थ्य रणनीतियों के माध्यम से गर्मी से संबंधित मृत्यु की संख्या को सफलतापूर्वक कम किया है। काउंटी का दृष्टिकोण अन्य क्षेत्रों के लिए मूल्यवान सबक प्रदान करता है जो जलवायु परिवर्तन तीव्र होने के साथ चरम गर्मी की चुनौतियों का सामना कर रहे हैं। प्रभावी शीतलन केंद्र, आपातकालीन प्रतिक्रिया प्रणाली, और सामुदायिक आउटरीच कार्यक्रमों को लागू करके, मारिकोपा काउंटी ने प्रदर्शित किया है कि गर्मी से संबंधित मृत्यु दर को अत्यंत गर्म वातावरण में भी कम किया जा सकता है। काउंटी की सफलता एक मॉडल प्रदान करती है जो खतरनाक हीट वेव का सामना कर रहे अन्य शहर और क्षेत्र कमजोर आबादी की रक्षा के लिए संभवतः अपना सकते हैं।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/usa/4.mp3"
       }
     ],
     "india": [
@@ -103,7 +133,10 @@
         "source": "BBC News",
         "published_at": "Sun, 19 Jul 2026 00:37:33 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/8247/live/6b0bd1f0-8003-11f1-abea-7311bff0fafb.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/0.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/0.mp3",
+        "title_hi": "महाराष्ट्र की बाढ़ से गणेश मूर्ति निर्माताओं को भारी नुकसान",
+        "summary_hi": "महाराष्ट्र में आई विनाशकारी बाढ़ ने गणेश चतुर्थी त्योहार से कुछ हफ्ते पहले गणेश मूर्ति निर्माताओं के महीनों के काम को बर्बाद कर दिया है। इस प्राकृतिक आपदा ने उन कारीगरों पर महत्वपूर्ण आर्थिक और सांस्कृतिक प्रभाव डाला है जो इस वार्षिक उत्सव पर अपनी आजीविका के लिए निर्भर हैं। बाढ़ ने पूर्ण मूर्तियों और कच्चे माल को बहा दिया है, जिससे भारत के सबसे महत्वपूर्ण धार्मिक त्योहारों में से एक से पहले पारंपरिक शिल्प उद्योग को खतरा है। यह व्यवधान न केवल व्यक्तिगत कारीगरों को प्रभावित करता है बल्कि क्षेत्र में त्योहार समारोहों के आसपास के व्यापक सांस्कृतिक और आर्थिक पारिस्थितिकी तंत्र को भी प्रभावित करता है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/india/0.mp3"
       },
       {
         "title": "Diamonds and 'cab to orbit': Rocket aiming to transform India's space ambitions takes off",
@@ -112,7 +145,10 @@
         "source": "BBC News",
         "published_at": "Sat, 18 Jul 2026 07:05:19 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/56eb/live/beb0cb10-82a8-11f1-84ea-29e7008b1ad8.png",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/1.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/1.mp3",
+        "title_hi": "हीरे और 'कैब टू ऑर्बिट': भारत के अंतरिक्ष महत्वाकांक्षाओं को बदलने वाला रॉकेट लॉन्च हुआ",
+        "summary_hi": "भारत की पहली स्पेस-टेक यूनिकॉर्न स्काईरूट एयरोस्पेस ने शनिवार को अपने विक्रम-1 रॉकेट का सफल प्रक्षेपण किया, जो भारत के वाणिज्यिक अंतरिक्ष क्षेत्र के लिए एक महत्वपूर्ण मील का पत्थर है। यह प्रक्षेपण भारत की अंतरिक्ष महत्वाकांक्षाओं के लिए एक परिवर्तनकारी क्षण का प्रतिनिधित्व करता है, जो अंतरिक्ष प्रौद्योगिकी और वाणिज्यिक अंतरिक्ष उड़ान में देश की बढ़ती क्षमताओं को प्रदर्शित करता है। स्काईरूट एयरोस्पेस की उपलब्धि नवीन प्रौद्योगिकियों और महत्वाकांक्षी लक्ष्यों के साथ वैश्विक अंतरिक्ष उद्योग में भारत के उदय को रेखांकित करती है। विक्रम-1 का सफल प्रक्षेपण भारत की अंतरिक्ष अर्थव्यवस्था को तेज करने और क्षेत्र में आगे निवेश को आकर्षित करने की उम्मीद है, जिससे राष्ट्र को अंतर्राष्ट्रीय अंतरिक्ष बाजार में प्रतिस्पर्धी स्थिति में रखा जाएगा।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/india/1.mp3"
       },
       {
         "title": "Sonam Wangchuk forcibly taken to hospital after 20 days of hunger strike",
@@ -121,7 +157,10 @@
         "source": "BBC News",
         "published_at": "Sat, 18 Jul 2026 05:58:48 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3173/live/ad78f910-825a-11f1-9346-85db1a1d6a02.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/2.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/2.mp3",
+        "title_hi": "सोनम वांगचुक को 20 दिन की भूख हड़ताल के बाद जबरदस्ती अस्पताल ले जाया गया",
+        "summary_hi": "पर्यावरण कार्यकर्ता और शिक्षा सुधारक सोनम वांगचुक को 20 दिन की भूख हड़ताल के बाद जबरदस्ती अस्पताल में भर्ती किया गया, और उनके कारण को कॉकरोच जनता पार्टी के संस्थापक अभिजीत दिप्के ने अपने स्थान पर अनिश्चितकालीन उपवास शुरू करके आगे बढ़ाया। वांगचुक का विरोध और बाद में अस्पताल में भर्ती होना उनके कार्यकर्तावाद और उनके द्वारा समर्थित मुद्दों पर महत्वपूर्ण ध्यान आकर्षित करता है। दिप्के के माध्यम से विरोध की निरंतरता आंदोलन की दृढ़ता और अपने उद्देश्यों के प्रति प्रतिबद्धता को प्रदर्शित करती है। यह घटना भारत में भूख हड़ताल को एक राजनीतिक उपकरण के रूप में उपयोग की चल रही परंपरा को दर्शाती है, जो सक्रिय आंदोलनों और सरकारी अधिकारियों के बीच नागरिक अवज्ञा और विरोध के तरीकों के संबंध में तनाव को उजागर करती है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/india/2.mp3"
       },
       {
         "title": "Crackdown on 'objectionable' books in Indian-administered Kashmir sparks row",
@@ -130,7 +169,10 @@
         "source": "BBC News",
         "published_at": "Wed, 15 Jul 2026 22:05:16 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/46f4/live/d0c4a8d0-800f-11f1-855c-e18bf6105698.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/3.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/3.mp3",
+        "title_hi": "भारत-प्रशासित कश्मीर में 'आपत्तिजनक' किताबों पर कार्रवाई से विवाद",
+        "summary_hi": "भारत-प्रशासित कश्मीर के अधिकारियों ने शैक्षणिक संस्थानों को अपने परिसर की हर किताब की समीक्षा करने का निर्देश दिया है, जिससे सेंसरशिप और शैक्षणिक स्वतंत्रता के बारे में चिंताएं बढ़ी हैं। 'आपत्तिजनक' मानी जाने वाली किताबों पर कार्रवाई ने शिक्षकों, नागरिक समाज संगठनों और अभिव्यक्ति की स्वतंत्रता के समर्थकों में महत्वपूर्ण विवाद पैदा किया है। यह निर्देश शैक्षणिक सामग्री और पाठ्यक्रम निर्णयों में व्यापक हस्तक्षेप का प्रतिनिधित्व करता है, जो क्षेत्र भर के स्कूलों और पुस्तकालयों को प्रभावित करता है। आलोचकों का तर्क है कि यह उपाय बौद्धिक स्वतंत्रता और विविध दृष्टिकोणों तक पहुंच को खतरे में डालता है, जबकि अधिकारी दावा करते हैं कि यह अनुचित सामग्री के बारे में चिंताओं को संबोधित करता है। इस पहल ने कश्मीर की संस्थागत परिदृश्य में सामग्री विनियमन और शैक्षणिक स्वायत्तता के बीच संतुलन के बारे में बहस उत्पन्न की है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/india/3.mp3"
       },
       {
         "title": "Muslim judge in India faces death threats after convicting 'cow vigilantes'",
@@ -139,7 +181,10 @@
         "source": "BBC News",
         "published_at": "Sun, 12 Jul 2026 00:49:24 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9b9e/live/2a507da0-7bf8-11f1-b447-c332f78126d1.jpg",
-        "audio": ""
+        "audio": "",
+        "title_hi": "भारत में मुस्लिम न्यायाधीश को 'गौ सतर्कताकर्मियों' को दोषी ठहराने के बाद मौत की धमकियां",
+        "summary_hi": "न्यायाधीश तबस्सुम खान को गौ सतर्कतावाद से जुड़ी एक हत्या के मामले में चौदह हिंदू पुरुषों को दोषी ठहराने के बाद गंभीर ऑनलाइन दुर्व्यवहार और मौत की धमकियों का सामना करना पड़ा है। न्यायाधीश के आरोपियों को अभियोजित करने के निर्णय ने उन्हें सोशल मीडिया और अन्य प्लेटफार्मों पर उत्पीड़न का लक्ष्य बना दिया है। यह मामला भारत में धार्मिक तनाव, सतर्कतावाद और न्यायिक स्वतंत्रता के खतरनाक चौराहे को उजागर करता है। खान का अनुभव उन न्यायाधीशों द्वारा सामना किए जाने वाले जोखिमों को रेखांकित करता है जो संवेदनशील सांप्रदायिक मामलों में फैसले सुनाते हैं, विशेष रूप से जब वे फैसले शक्तिशाली समूहों को चुनौती देते हैं। यह घटना न्यायिक सुरक्षा, कानून के शासन और सांप्रदायिक ध्रुवीकरण और ऑनलाइन धमकी अभियानों के बीच स्वतंत्र रूप से कार्य करने की अदालतों की क्षमता के बारे में चिंताएं बढ़ाती है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/india/4.mp3"
       }
     ],
     "odisha": [
@@ -150,7 +195,10 @@
         "source": "The Hindu",
         "published_at": "2026-07-18T16:40:00+00:00",
         "image": "https://th-i.thgim.com/public/incoming/q8lnou/article71239253.ece/alternates/LANDSCAPE_1200/Rupee.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/0.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/0.mp3",
+        "title_hi": "ओडिशा में पेंशन रोके जाने से बुजुर्ग महिला की मृत्यु, लाखों लोग संकट में: कार्यकर्ता",
+        "summary_hi": "ओडिशा में एक बुजुर्ग महिला की मृत्यु ने भारी आक्रोश पैदा किया है क्योंकि तकनीकी खराबी के कारण लगभग 20 लाख पेंशनभोगी गंभीर कठिनाई का सामना कर रहे हैं। कार्यकर्ताओं ने प्रशासनिक विफलता के लिए अधिकारियों से जवाबदेही की मांग की है। यह घटना नियमित पेंशन वितरण पर निर्भर बुजुर्ग नागरिकों की कमजोरी को उजागर करती है और राज्य की पेंशन वितरण प्रणाली के बारे में चिंताएं बढ़ाती है। इतनी बड़ी संख्या में लाभार्थियों को प्रभावित करने वाली व्यापक व्यवधान महत्वपूर्ण सामाजिक कल्याण बुनियादी ढांचे के कार्यान्वयन और रखरखाव में प्रणालीगत समस्याओं को उजागर करता है, जिससे तत्काल सुधारात्मक कार्रवाई और प्रभावित पेंशनभोगियों को मुआवजे की मांग उठी है।",
+        "audio_hi": ""
       },
       {
         "title": "Over 750 hectares of forest land likely to be diverted for coal mining in Odisha's Angul district",
@@ -159,7 +207,10 @@
         "source": "The Pioneer",
         "published_at": "2026-07-18T10:21:00+00:00",
         "image": "https://etimg.etb2bimg.com/thumb/msid-132478056,imgsize-4029208,width-1200,height=627,overlay-etenergy,resizemode-75/coal/750-hectares-of-forest-land-likely-to-be-diverted-for-coal-mining-in-odishas-angul.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/1.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/1.mp3",
+        "title_hi": "ओडिशा के अंगुल जिले में कोयला खनन के लिए 750 हेक्टेयर से अधिक वनभूमि के हस्तांतरण की संभावना",
+        "summary_hi": "ओडिशा के अंगुल जिले में 750 हेक्टेयर से अधिक वनभूमि प्रस्तावित अलकनंदा कोयला खदान के लिए हस्तांतरण का सामना कर रही है, जिसे रुंगटा संस प्राइवेट लिमिटेड को आवंटित किया गया है। इस महत्वपूर्ण पर्यावरणीय प्रभाव से क्षेत्र में वनों की कटाई और पारिस्थितिक क्षरण के बारे में चिंताएं बढ़ी हैं। खनन कार्यों के लिए इतने व्यापक वन क्षेत्र के हस्तांतरण से ओडिशा में आर्थिक विकास और पर्यावरण संरक्षण के बीच चल रहे तनाव को दर्शाता है। परियोजना की मंजूरी प्रक्रिया और स्थानीय जैव विविधता, आदिवासी समुदायों और दीर्घकालीन पर्यावरणीय स्थिरता के लिए संभावित परिणाम राज्य की संसाधन प्रबंधन नीतियों में महत्वपूर्ण विचार बने हुए हैं।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/odisha/1.mp3"
       },
       {
         "title": "NGT orders sealing of chromium-tainted wells in Odisha's Sukinda",
@@ -168,7 +219,10 @@
         "source": "Hindustan Times",
         "published_at": "2026-07-18T15:03:53+00:00",
         "image": "https://www.hindustantimes.com/ht-img/img/2026/07/18/550x309/The-NGT-began-the-suo-motu-proceedings-following-a_1784387027559.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/2.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/2.mp3",
+        "title_hi": "राष्ट्रीय हरित प्राधिकरण ने ओडिशा के सुकिंदा में क्रोमियम प्रदूषित कुओं को सील करने का आदेश दिया",
+        "summary_hi": "राष्ट्रीय हरित प्राधिकरण ने जाजपुर जिले में स्थित सुकिंदा घाटी में क्रोमियम प्रदूषित कुओं को सील करने का आदेश दिया है। सुकिंदा घाटी में भारत के लगभग 97 प्रतिशत क्रोमाइट भंडार हैं और देश के 100 प्रतिशत घरेलू क्रोम अयस्क उत्पादन की आपूर्ति करते हैं। जल स्रोतों का प्रदूषण इन कुओं पर निर्भर स्थानीय समुदायों के लिए एक गंभीर जनस्वास्थ्य और पर्यावरणीय चिंता का प्रतिनिधित्व करता है। राष्ट्रीय हरित प्राधिकरण का हस्तक्षेप क्रोमाइट खनन कार्यों से उत्पन्न पर्यावरणीय प्रदूषण के महत्वपूर्ण मुद्दे को संबोधित करता है, राष्ट्र की खनिज उत्पादन आवश्यकताओं को भूजल संसाधनों की सुरक्षा और खनन क्षेत्र के निवासियों के लिए सुरक्षित पेयजल पहुंच सुनिश्चित करने की अनिवार्यता के साथ संतुलित करता है।",
+        "audio_hi": ""
       },
       {
         "title": "Work for welfare of last person, ensure tribal development reaches grassroots: Odisha CM to SDCs",
@@ -177,7 +231,10 @@
         "source": "The Print",
         "published_at": "2026-07-18T15:17:00+00:00",
         "image": "https://staticprintenglish.theprint.in/wp-content/uploads/2023/06/theprint_default_image_new.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/3.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/3.mp3",
+        "title_hi": "अंतिम व्यक्ति के कल्याण के लिए काम करें, आदिवासी विकास को जमीनी स्तर तक पहुंचाएं: ओडिशा के मुख्यमंत्री ने विशेष विकास परिषदों से कहा",
+        "summary_hi": "ओडिशा के मुख्यमंत्री मोहन चरण माझी ने नव नियुक्त विशेष विकास परिषद सदस्यों को संबोधित करते हुए समाज के सबसे हाशिए पर रहने वाले वर्गों तक पहुंचने वाले कल्याण उपायों को प्राथमिकता देने का निर्देश दिया। 23 विशेष विकास परिषदों के अध्यक्षों और उपाध्यक्षों से बात करते हुए, मुख्यमंत्री ने आदिवासी विकास पहल के जमीनी स्तर पर कार्यान्वयन के महत्व पर जोर दिया। उनका निर्देश राज्य सरकार की समावेशी विकास और आदिवासी समुदायों में संसाधनों के न्यायसंगत वितरण के प्रति प्रतिबद्धता को रेखांकित करता है। समाज के अंतिम व्यक्ति तक पहुंचने पर जोर क्षेत्रीय असमानताओं को दूर करने और सभी प्रशासनिक स्तरों पर कमजोर आबादी तक विकास लाभ पहुंचाने पर नीति ध्यान को दर्शाता है।",
+        "audio_hi": ""
       },
       {
         "title": "11-month-old baby declared dead found alive, dies later in Odisha's Kalahandi",
@@ -186,7 +243,10 @@
         "source": "Sambad English",
         "published_at": "2026-07-19T06:52:00+00:00",
         "image": "https://img-cdn.publive.online/fit-in/1200x675/sambad-english/media/media_files/2026/07/19/saheed-rendo-majhi-medical-college-and-hospital-2026-07-19-12-19-14.jpeg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/4.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/4.mp3",
+        "title_hi": "ओडिशा के कालाहांडी में 11 महीने का बच्चा मृत घोषित, जीवित मिला, बाद में मृत्यु हुई",
+        "summary_hi": "एक 11 महीने का शिशु जिसे चिकित्सा कर्मियों द्वारा कथित रूप से मृत घोषित किया गया था, कालाहांडी जिले में घर ले जाते समय जीवित पाया गया लेकिन बाद में उसकी मृत्यु हो गई। इस घटना ने स्वास्थ्य सेवा प्रदाताओं के खिलाफ चिकित्सा लापरवाही के गंभीर आरोप लगाए हैं और परिस्थितियों की आधिकारिक जांच शुरू की है। यह मामला निदान की सटीकता, चिकित्सा प्रोटोकॉल और स्वास्थ्य सेवा प्रणाली में जवाबदेही के बारे में महत्वपूर्ण प्रश्न उठाता है। दुःखद परिणाम और प्रारंभिक चिकित्सा मूल्यांकन में स्पष्ट विफलता ने जिले में चिकित्सा सेवाओं की गुणवत्ता और कमजोर आबादी की सेवा करने वाली स्वास्थ्य सुविधाओं में बेहतर प्रशिक्षण, निरीक्षण और गुणवत्ता आश्वासन तंत्र की आवश्यकता के बारे में निवासियों में चिंता पैदा की है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/odisha/4.mp3"
       }
     ],
     "sports": [
@@ -197,7 +257,10 @@
         "source": "BBC Sport",
         "published_at": "Sun, 19 Jul 2026 01:12:34 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a259/live/f5a9d0c0-8308-11f1-bee8-53ce494e1abc.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/0.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/0.mp3",
+        "title_hi": "इंग्लैंड ने फ्रांस को 10 गोल के रोमांचक मुकाबले में हराकर तीसरे स्थान का खिताब जीता",
+        "summary_hi": "इंग्लैंड ने फ्रांस को 6-4 से हराकर 1966 के बाद से अपना सर्वश्रेष्ठ पुरुष विश्व कप प्रदर्शन हासिल किया। बुकायो साका इस असाधारण तीसरे स्थान के प्लेऑफ मुकाबले में सबसे प्रभावशाली खिलाड़ी रहे और उन्होंने हैट्रिक दर्ज की। यह जीत इंग्लैंड की टीम के लिए एक महत्वपूर्ण उपलब्धि है, जो पूरे टूर्नामेंट में उनकी प्रतिस्पर्धी ताकत को प्रदर्शित करती है। यह परिणाम अंग्रेजी फुटबॉल के लिए एक बड़ा मील का पत्थर है, क्योंकि टीम ने छह दशक में ऐसा मजबूत विश्व कप प्रदर्शन नहीं किया है, जो वर्तमान टीम की क्षमता और गहराई को दर्शाता है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/sports/0.mp3"
       },
       {
         "title": "Bellingham breaks England World Cup goals record",
@@ -206,7 +269,10 @@
         "source": "BBC Sport",
         "published_at": "Sun, 19 Jul 2026 00:47:11 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f870/live/334171a0-8308-11f1-b9cd-c9e5bc6349ad.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/1.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/1.mp3",
+        "title_hi": "बेलिंघम ने इंग्लैंड के विश्व कप गोल का रिकॉर्ड तोड़ा",
+        "summary_hi": "ज्यूड बेलिंघम ने इतिहास रचा और एक ही विश्व कप टूर्नामेंट में सात गोल करने वाले पहले अंग्रेज बन गए। मिडफील्डर ने फ्रांस के खिलाफ तीसरे स्थान के प्लेऑफ मुकाबले में देर से एक स्ट्राइक के साथ यह रिकॉर्ड हासिल किया। बेलिंघम के सात गोल का रिकॉर्ड टूर्नामेंट में एक असाधारण व्यक्तिगत प्रदर्शन है और राष्ट्रीय टीम के लिए एक मुख्य खिलाड़ी के रूप में उनके उदय को रेखांकित करता है। यह उपलब्धि पूरी प्रतियोगिता में इंग्लैंड द्वारा प्रदर्शित आक्रमणकारी शक्ति और उत्तरी अमेरिका में टीम के मजबूत प्रदर्शन में बेलिंघम के महत्वपूर्ण योगदान को उजागर करती है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/sports/1.mp3"
       },
       {
         "title": "Britain's Kerr breaks 27-year mile world record in London",
@@ -215,7 +281,10 @@
         "source": "BBC Sport",
         "published_at": "Sat, 18 Jul 2026 14:48:16 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3a49/live/37aa2290-82be-11f1-87aa-2bcbbeff03e6.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/2.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/2.mp3",
+        "title_hi": "ब्रिटेन के केर ने लंदन में 27 साल पुरानी मील का विश्व रिकॉर्ड तोड़ा",
+        "summary_hi": "ग्रेट ब्रिटेन के जोश केर ने लंदन डायमंड लीग में एक शानदार प्रदर्शन किया और पुरुषों की मील का विश्व रिकॉर्ड तोड़ा जो 27 साल से कायम था। यह असाधारण उपलब्धि एथलेटिक्स में एक महत्वपूर्ण मील का पत्थर है, जो केर की असाधारण प्रतिभा और खेल के प्रति समर्पण को प्रदर्शित करती है। रिकॉर्ड तोड़ने वाली दौड़ लंदन में घरेलू भीड़ के सामने हुई, जिससे इस उपलब्धि का महत्व और भी बढ़ गया। केर का प्रदर्शन मध्य-दूरी की दौड़ में एक बड़ी सफलता है और उन्हें दुनिया के शीर्ष मील धावकों में से एक के रूप में स्थापित करता है, जिसका भविष्य की अंतर्राष्ट्रीय प्रतियोगिता पर प्रभाव पड़ेगा।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/sports/2.mp3"
       },
       {
         "title": "Chelsea agree record £117m deal for Villa's Rogers",
@@ -224,7 +293,10 @@
         "source": "BBC Sport",
         "published_at": "Sat, 18 Jul 2026 18:02:48 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d0a4/live/b45d38a0-82d1-11f1-adf9-c14531781464.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/3.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/3.mp3",
+        "title_hi": "चेल्सी ने विला के रॉजर्स के लिए रिकॉर्ड £117 मिलियन का सौदा किया",
+        "summary_hi": "चेल्सी ने एस्टन विला से इंग्लैंड के अंतर्राष्ट्रीय मिडफील्डर मॉर्गन रॉजर्स को साइन करने के लिए £117 मिलियन का सौदा पूरा किया है। यह चेल्सी के इतिहास में सबसे महंगा हस्तांतरण है और ट्रांसफर बाजार में क्लब की महत्वाकांक्षा को दर्शाता है। रॉजर्स एक प्रतिष्ठित इंग्लैंड अंतर्राष्ट्रीय खिलाड़ी हैं और चेल्सी के मिडफील्ड में महत्वपूर्ण गुणवत्ता और अनुभव लाते हैं। यह बड़ा निवेश आने वाले सीजन से पहले अपनी टीम को मजबूत करने के लिए चेल्सी की प्रतिबद्धता को प्रदर्शित करता है और रॉजर्स को उनकी भविष्य की योजनाओं में एक मुख्य खिलाड़ी के रूप में स्थापित करता है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/sports/3.mp3"
       },
       {
         "title": "Northants beat Hants to win T20 Blast",
@@ -233,7 +305,10 @@
         "source": "BBC Sport",
         "published_at": "Sat, 18 Jul 2026 21:41:54 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/13cd/live/6b0d8cf0-82f3-11f1-b2a8-97a80a3a9f99.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/4.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/4.mp3",
+        "title_hi": "नॉर्थैम्प्टन ने हैम्पशायर को हराकर T20 ब्लास्ट जीता",
+        "summary_hi": "नॉर्थैम्प्टनशायर स्टीलबैक्स ने एजबेस्टन में हैम्पशायर हॉक्स के खिलाफ एक करीबी फाइनल के बाद अपना तीसरा T20 ब्लास्ट खिताब जीता। यह मुकाबला दोनों प्रतिस्पर्धी टीमों के बीच एक रोमांचक मुकाबला साबित हुआ, और नॉर्थैम्प्टनशायर अंततः इस महाकाव्य संघर्ष में विजयी हुए। यह जीत स्टीलबैक्स के लिए एक महत्वपूर्ण उपलब्धि है, जो इंग्लैंड की प्रमुख घरेलू T20 प्रतियोगिता में उनके ट्रॉफी संग्रह में जुड़ गई है। यह सफलता सबसे छोटे क्रिकेट प्रारूप में नॉर्थैम्प्टनशायर की ताकत और प्रमुख फाइनल में दबाव में प्रदर्शन करने की उनकी क्षमता को प्रदर्शित करती है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/sports/4.mp3"
       }
     ],
     "cricket": [
@@ -244,7 +319,10 @@
         "source": "Jamaica Observer",
         "published_at": "2026-07-18T05:18:00+00:00",
         "image": "https://www.jamaicaobserver.com/jamaicaobserver/news/wp-content/uploads/sites/4/2026/07/d22f707f758c04f293438237f7b04e65-1024x669.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/0.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/0.mp3",
+        "title_hi": "वैश्विक क्रिकेट आइकन गैरी सोबर्स का 89 वर्ष की आयु में निधन — लोगों ने क्या कहा",
+        "summary_hi": "सर गारफील्ड सोबर्स, जिन्हें क्रिकेट के सबसे महान खिलाड़ियों में से एक माना जाता है, शुक्रवार को 89 वर्ष की आयु में चल बसे। यह किंवदंती वेस्टइंडीज ऑलराउंडर बल्लेबाजी और गेंदबाजी दोनों में अपनी असाधारण क्षमताओं के लिए प्रसिद्ध थे, जिन्होंने तकनीकी दक्षता को उल्लेखनीय बहुमुखी प्रतिभा के साथ जोड़ा। सोबर्स की मृत्यु ने क्रिकेट की दुनिया भर से श्रद्धांजलि को प्रेरित किया, जो खेल पर उनके गहरे प्रभाव को स्वीकार करते हैं। उनकी विरासत न केवल उनके असाधारण प्रदर्शन को शामिल करती है बल्कि उन पीढ़ियों के क्रिकेटरों पर उनके प्रभाव को भी शामिल करती है जो उनके बाद आए। क्रिकेट समुदाय ने एक परिवर्तनकारी व्यक्तित्व की हानि पर शोक व्यक्त किया जिनके योगदान ने आधुनिक क्रिकेट को आकार दिया।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/cricket/0.mp3"
       },
       {
         "title": "Los Angeles Knight Riders pull off last-ball win for first MLC title",
@@ -253,7 +331,10 @@
         "source": "Cricket news from Cricinfo.com",
         "published_at": "Sun, 19 Jul 2026 04:19:50 GMT",
         "image": "http://p.imgci.com/db/PICTURES/CMS/419900/419996.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/1.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/1.mp3",
+        "title_hi": "लॉस एंजिल्स नाइट राइडर्स ने अंतिम गेंद पर जीत दर्ज कर पहला एमएलसी खिताब जीता",
+        "summary_hi": "लॉस एंजिल्स नाइट राइडर्स ने वाशिंगटन फ्रीडम के खिलाफ एक रोमांचक एक रन की जीत के साथ अपना पहला मेजर लीग क्रिकेट खिताब हासिल किया। मैच पूरे समय प्रतिस्पर्धी रहा, और परिणाम अंतिम ओवर में शैडली वैन शाल्क द्वारा गेंदबाजी करते समय तय हुआ। निर्णायक क्षण अंतिम गेंद पर आया जब एक रन-आउट ने नाइट राइडर्स को संकीर्ण जीत दिलाई। यह चैंपियनशिप फ्रेंचाइजी के लिए एक महत्वपूर्ण मील का पत्थर है और मेजर लीग क्रिकेट के विकास में एक प्रमुख क्षण को चिह्नित करता है। यह जीत टीम के मालिक शाहरुख खान द्वारा मनाई गई, जो संयुक्त राज्य अमेरिका में क्रिकेट की बढ़ती प्रमुखता को उजागर करता है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/cricket/1.mp3"
       },
       {
         "title": "West Indies, New Zealand meet in Sobers' country to celebrate him",
@@ -262,7 +343,10 @@
         "source": "Cricket news from Cricinfo.com",
         "published_at": "Sun, 19 Jul 2026 05:43:11 GMT",
         "image": "http://p.imgci.com/db/PICTURES/CMS/419900/419905.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/2.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/2.mp3",
+        "title_hi": "वेस्टइंडीज और न्यूजीलैंड सोबर्स के देश में उनका जश्न मनाने के लिए मिले",
+        "summary_hi": "वेस्टइंडीज और न्यूजीलैंड क्रिकेट किंवदंती गैरी सोबर्स के सम्मान में एक भावुक अवसर के लिए बारबाडोस के केंसिंगटन ओवल में एकत्रित हुए। यह बैठक विशिष्ट प्रतिस्पर्धी क्रिकेट से परे थी, दोनों टीमें सोबर्स की असाधारण विरासत और खेल में उनके योगदान का जश्न मनाने के लिए एक साथ आईं। इस ऐतिहासिक स्थान पर आयोजित कार्यक्रम को विशेष महत्व मिला क्योंकि सोबर्स का बारबाडोस से गहरा संबंध था और वेस्टइंडीज क्रिकेट पर उनका असाधारण प्रभाव था। यह सभा क्रिकेट समुदाय के लिए सामूहिक रूप से खेल के सबसे महान व्यक्तित्वों में से एक को स्वीकार करने और सम्मान देने का एक मार्मिक क्षण था जो उनकी द्विपक्षीय श्रृंखला के दौरान हुआ।",
+        "audio_hi": ""
       },
       {
         "title": "Captain Willey takes Northants into final with scrappy defence",
@@ -271,7 +355,10 @@
         "source": "Cricket news from Cricinfo.com",
         "published_at": "Sat, 18 Jul 2026 23:27:40 GMT",
         "image": "http://p.imgci.com/db/PICTURES/CMS/419900/419956.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/3.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/3.mp3",
+        "title_hi": "कप्तान विली ने नॉर्थैम्प्टन को कठोर रक्षा के साथ फाइनल में पहुंचाया",
+        "summary_hi": "नॉर्थैम्पटनशायर ने कप्तान डेविड विली के नेतृत्व में एक साहसिक रक्षात्मक प्रदर्शन के साथ टी20 ब्लास्ट फाइनल में प्रवेश किया, जिन्होंने रक्षक चैंपियन समरसेट को हराया। 144 का पीछा करते हुए, समरसेट रक्षक चैंपियन होने के बावजूद पिछड़ गया, नॉर्थैम्प्स की दृढ़ गेंदबाजी और फील्डिंग प्रयासों को नहीं रोक सका। विली की प्रेरणादायक नेतृत्व टीम की कठोर लेकिन प्रभावी जीत में महत्वपूर्ण साबित हुई, दबाव में लचीलापन प्रदर्शित किया। यह जीत नॉर्थैम्प्स को फाइनल में जगह सुरक्षित करती है और टीम के लिए एक महत्वपूर्ण उपलब्धि को चिह्नित करती है। यह परिणाम एक रोमांचक फाइनल मैचअप स्थापित करता है और प्रतियोगिता में स्थापित शक्तियों के खिलाफ प्रतिस्पर्धा करने की नॉर्थैम्प्स की क्षमता को प्रदर्शित करता है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/cricket/3.mp3"
       },
       {
         "title": "Rohit in the spotlight with series on the line at Lord's",
@@ -280,7 +367,10 @@
         "source": "Cricket news from Cricinfo.com",
         "published_at": "Sat, 18 Jul 2026 13:03:00 GMT",
         "image": "http://p.imgci.com/db/PICTURES/CMS/419800/419873.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/4.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/4.mp3",
+        "title_hi": "लॉर्ड्स में श्रृंखला दांव पर लगी होने के साथ रोहित स्पॉटलाइट में",
+        "summary_hi": "भारत और इंग्लैंड लॉर्ड्स क्रिकेट ग्राउंड पर एक निर्णायक तीसरे वनडे की तैयारी कर रहे हैं जिसमें द्विपक्षीय श्रृंखला 1-1 से बराबर है। इंग्लैंड ने कार्डिफ में जीत हासिल की थी श्रृंखला को बराबर करने के लिए भारत की प्रारंभिक सफलता के बाद, क्रिकेट के सबसे प्रतिष्ठित स्थान पर एक विजेता-सब-कुछ मुकाबले को स्थापित किया। यह मैच महत्वपूर्ण महत्व रखता है क्योंकि इंग्लैंड 2018 के बाद से भारत के खिलाफ अपनी पहली द्विपक्षीय वनडे श्रृंखला जीत सुरक्षित करना चाहता है, जबकि भारत अपनी प्रतिस्पर्धी बढ़त बनाए रखना चाहता है। भारत के कप्तान रोहित शर्मा को महत्वपूर्ण फिक्सचर में विशेष जांच का सामना करना पड़ा। लॉर्ड्स मुकाबला दो प्रमुख क्रिकेट राष्ट्रों के बीच तीन मैचों की श्रृंखला का एक उच्च-दांव निष्कर्ष है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/cricket/4.mp3"
       }
     ],
     "usa_stock": [
@@ -291,7 +381,10 @@
         "source": "Sun Sentinel",
         "published_at": "2026-07-16T21:01:00+00:00",
         "image": "https://www.sun-sentinel.com/wp-content/uploads/2026/07/Financial_Markets_Wall_Street__264_6ecd8b.jpg?w=1024&h=683",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/0.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/0.mp3",
+        "title_hi": "मंदी में आ रहे एआई स्टॉक विश्वभर के बाजारों को नीचे खींच रहे हैं",
+        "summary_hi": "कंप्यूटर चिपमेकर और कृत्रिम बुद्धिमत्ता से संबंधित स्टॉक में महत्वपूर्ण गिरावट आई है, जिससे वैश्विक शेयर बाजार प्रभावित हुए हैं। एस एंड पी 500 में 0.5% की गिरावट आई है, हालांकि इंडेक्स के भीतर गिरने वाले स्टॉक की तुलना में अधिक स्टॉक बढ़े हैं। यह बिक्री एआई निवेश बूम की स्थिरता और क्षेत्र में विशाल खर्च से पर्याप्त रिटर्न मिलने की संभावना को लेकर बढ़ती चिंताओं को दर्शाती है। एशियाई बाजार भी तेजी से गिरे हैं, टोक्यो का निक्केई 225 5% नीचे आया है क्योंकि चिपमेकर और एआई से संबंधित शेयरों की भारी बिक्री अंतरराष्ट्रीय स्तर पर फैल गई है, जो एआई मूल्यांकन को लेकर व्यापक बाजार चिंता का संकेत देती है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/usa_stock/0.mp3"
       },
       {
         "title": "What to Know About the Chinese AI Models Rattling U.S. Stocks",
@@ -300,7 +393,10 @@
         "source": "The Wall Street Journal",
         "published_at": "2026-07-18T13:21:00+00:00",
         "image": "",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/1.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/1.mp3",
+        "title_hi": "चीनी एआई मॉडल के बारे में जानने योग्य बातें जो अमेरिकी स्टॉक को हिला रहे हैं",
+        "summary_hi": "चीनी कृत्रिम बुद्धिमत्ता मॉडल, जिनमें मूनशॉट की किमी के3 जैसे उत्पाद शामिल हैं, अमेरिकी प्रौद्योगिकी बूम की स्थिरता को लेकर चिंताएं बढ़ा रहे हैं। प्रतिस्पर्धी चीनी एआई समाधानों के उदय ने अमेरिकी शेयर बाजारों को हिलाया है, जिससे निवेशकों को कृत्रिम बुद्धिमत्ता निवेश थीसिस की स्थायित्व का पुनर्मूल्यांकन करने के लिए प्रेरित किया गया है। यह विकास प्रौद्योगिकी स्टॉक पर मौजूदा बाजार दबाव में जोड़ता है और सवाल उठाता है कि क्या अमेरिकी कंपनियां तेजी से विकसित हो रहे एआई परिदृश्य में अंतरराष्ट्रीय प्रतिस्पर्धा के बीच अपने प्रतिस्पर्धी लाभ को बनाए रख सकती हैं।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/usa_stock/1.mp3"
       },
       {
         "title": "Netflix is spending big money on sports. Is the company making the right bets?",
@@ -309,7 +405,10 @@
         "source": "MarketWatch.com - Top Stories",
         "published_at": "Sat, 18 Jul 2026 18:54:00 GMT",
         "image": "https://images.mktw.net/im-82988028",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/2.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/2.mp3",
+        "title_hi": "नेटफ्लिक्स खेल पर बड़ा पैसा खर्च कर रहा है। क्या कंपनी सही दांव लगा रही है?",
+        "summary_hi": "नेटफ्लिक्स लाइव प्रोग्रामिंग के माध्यम से नए ग्राहकों को आकर्षित करने के लिए खेल अधिकारों में भारी निवेश कर रहा है, लेकिन निवेशक इस रणनीति के बारे में तेजी से संदेहास्पद हो गए हैं। स्ट्रीमिंग सेवा के व्यापक एनगेजमेंट ट्रेंड ने बाजार को निराश किया है, जिससे सवाल उठता है कि क्या महंगी खेल सामग्री खरीद पर्याप्त रिटर्न देगी। यह निवेश बदलाव नेटफ्लिक्स के लिए एक महत्वपूर्ण रणनीतिक मोड़ का प्रतिनिधित्व करता है क्योंकि यह विकास के अवसर तलाश रहा है, हालांकि वॉल स्ट्रीट स्थापित प्रतिद्वंद्वियों के खिलाफ महंगे खेल प्रसारण बाजार में प्रतिस्पर्धा की वित्तीय व्यवहार्यता के बारे में अनिश्चित है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/usa_stock/2.mp3"
       },
       {
         "title": "Warren Buffett sends a strong reminder to stock market investors",
@@ -318,7 +417,10 @@
         "source": "TheStreet",
         "published_at": "2026-07-19T00:07:00+00:00",
         "image": "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA28dhUK.img?w=1200&h=675&m=4&q=62",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/3.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/3.mp3",
+        "title_hi": "वारेन बफेट ने शेयर बाजार निवेशकों को एक मजबूत संदेश दिया",
+        "summary_hi": "वारेन बफेट ने जोर दिया कि बुरी खबर निवेशकों के लिए एक अवसर का प्रतिनिधित्व करती है, वर्तमान बाजार दबाव के बीच मार्गदर्शन प्रदान करते हुए। बफेट इंडिकेटर 227% पर है, जो ऊंचे बाजार मूल्यांकन का संकेत देता है, बफेट की टिप्पणी अस्थिर बाजार स्थितियों को नेविगेट करने पर दृष्टिकोण प्रदान करती है। यह इंडिकेटर, जो कुल शेयर बाजार पूंजीकरण को जीडीपी के सापेक्ष मापता है, ऐतिहासिक रूप से बाजार तनाव की अवधि का संकेत देता है। बफेट का संदेश निवेशकों को बाजार में गिरावट को घबराहट के कारण के बजाय खरीद के अवसर के रूप में देखने के लिए प्रोत्साहित करता है, जो बाजार की अनिश्चितता और चिंता की अवधि के दौरान उनकी विपरीत निवेश दर्शन को दर्शाता है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/usa_stock/3.mp3"
       },
       {
         "title": "Americans say they need $1.2 million to retire. Most are too deep in debt to get there.",
@@ -327,7 +429,10 @@
         "source": "MarketWatch.com - Top Stories",
         "published_at": "Sat, 18 Jul 2026 18:15:00 GMT",
         "image": "https://images.mktw.net/im-00844552",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/4.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/4.mp3",
+        "title_hi": "अमेरिकी कहते हैं कि उन्हें सेवानिवृत्ति के लिए 1.2 मिलियन डॉलर की जरूरत है। अधिकांश इसे हासिल करने के लिए बहुत अधिक कर्ज में हैं।",
+        "summary_hi": "80% से अधिक अमेरिकी अपनी सेवानिवृत्ति बचत समाप्त होने की चिंता व्यक्त करते हैं, औसत सेवानिवृत्ति लक्ष्य 1.2 मिलियन डॉलर तक पहुंच गया है। हालांकि, अधिकांश अमेरिकी पर्याप्त कर्ज का बोझ उठाते हैं जो इन सेवानिवृत्ति लक्ष्यों को प्राप्त करने की उनकी क्षमता में बाधा डालता है। सेवानिवृत्ति सुरक्षा के बारे में व्यापक चिंता अपर्याप्त बचत संचय और जनसंख्या के बीच उच्च कर्ज स्तर दोनों को दर्शाती है। यह वित्तीय तनाव जीवन की गुणवत्ता को महत्वपूर्ण रूप से प्रभावित करता है, सेवानिवृत्ति की चिंताएं कई अमेरिकियों को रात भर जागती रहती हैं, जो सेवानिवृत्ति की आकांक्षाओं और अधिकांश घरों के सामने वित्तीय वास्तविकता के बीच एक महत्वपूर्ण अंतर को उजागर करती है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/usa_stock/4.mp3"
       }
     ],
     "ai": [
@@ -338,7 +443,10 @@
         "source": "MIT Technology Review",
         "published_at": "Wed, 15 Jul 2026 17:09:37 +0000",
         "image": "https://wp.technologyreview.com/wp-content/uploads/2026/07/spar-red.jpg?resize=1200,600",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/0.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/0.mp3",
+        "title_hi": "GPT-Red से मिलिए: OpenAI द्वारा निर्मित एक LLM सुपर-हैकर जो अपने मॉडल को सुरक्षित बनाता है",
+        "summary_hi": "OpenAI ने GPT-Red विकसित किया है, एक उन्नत भाषा मॉडल जिसे सुरक्षा परीक्षण उपकरण के रूप में कार्य करने के लिए डिज़ाइन किया गया है जो अन्य AI प्रणालियों में कमजोरियों की पहचान करता है। कंपनी GPT-Red का उपयोग साइबर हमलों और विरोधी शोषण के खिलाफ रक्षा को मजबूत करने में मदद के लिए एक स्पैरिंग पार्टनर के रूप में करती है। OpenAI ने GPT-Red को अपने नवीनतम फ्लैगशिप मॉडल GPT-5.6 के प्रशिक्षण प्रक्रिया में एकीकृत किया, जिसे कंपनी अब अपनी सबसे मजबूत रिलीज़ बताती है। यह दृष्टिकोण AI सुरक्षा पद्धति में एक महत्वपूर्ण प्रगति का प्रतिनिधित्व करता है, जहां विरोधी AI प्रणालियों को तनाव परीक्षण के लिए और तैनाती से पहले उत्पादन मॉडल की सुरक्षा स्थिति में सुधार के लिए जानबूझकर तैनात किया जाता है।",
+        "audio_hi": ""
       },
       {
         "title": "What Anthropic's latest AI discovery does—and doesn't—show",
@@ -347,7 +455,10 @@
         "source": "MIT Technology Review",
         "published_at": "Mon, 13 Jul 2026 18:00:00 +0000",
         "image": "https://wp.technologyreview.com/wp-content/uploads/2026/07/thinking2.jpg?resize=1200,600",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/1.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/1.mp3",
+        "title_hi": "Anthropic की नवीनतम AI खोज क्या दिखाती है और क्या नहीं दिखाती",
+        "summary_hi": "Anthropic, जिसका मूल्यांकन लगभग 1 ट्रिलियन डॉलर है और दुनिया की सबसे मूल्यवान AI कंपनी के रूप में मान्यता प्राप्त है, ने अनुसंधान प्रकाशित किया है जो AI मॉडल कैसे आंतरिक रूप से तर्क करते हैं इस बारे में नई अंतर्दृष्टि प्रदान करता है। कंपनी ने एक विधि की खोज की है जो यह जांचने के लिए है कि मॉडल समस्या-समाधान प्रक्रियाओं के माध्यम से काम करते समय क्या वर्णित करते हैं उनके \"आंतरिक विचार\"। यह अनुसंधान AI मॉडल के व्यवहार और निर्णय लेने की तंत्र को समझने की दिशा में एक महत्वपूर्ण कदम का प्रतिनिधित्व करता है। हालांकि, इस खोज की सीमाएं हैं और यह मॉडल तर्क के सभी पहलुओं को पूरी तरह से समझाती नहीं है। Anthropic अपरंपरागत AI अनुसंधान प्रकाशित करने के लिए जाना जाता है, जिसमें यह जांच भी शामिल है कि क्या AI प्रणालियां दर्द का अनुभव कर सकती हैं, AI व्याख्यात्मकता और सुरक्षा अनुसंधान में सीमाओं को आगे बढ़ाते हुए।",
+        "audio_hi": ""
       },
       {
         "title": "PsiQuantum has a plan to make a massive quantum computer out of light",
@@ -356,7 +467,10 @@
         "source": "MIT Technology Review",
         "published_at": "Tue, 14 Jul 2026 08:00:00 +0000",
         "image": "https://wp.technologyreview.com/wp-content/uploads/2026/07/PsiQuantum-0459-Headquarters-social.jpg?resize=1200,600",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/2.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/2.mp3",
+        "title_hi": "PsiQuantum के पास प्रकाश से एक विशाल क्वांटम कंप्यूटर बनाने की योजना है",
+        "summary_hi": "PsiQuantum ने डेटा सेंटर जैसी विशेष बुनियादी ढांचे में रखी गई फोटोनिक तकनीक का उपयोग करके एक बड़े पैमाने पर क्वांटम कंप्यूटर बनाने की एक महत्वाकांक्षी योजना का खुलासा किया है। सुविधा में लगभग 100 स्टेनलेस-स्टील कैबिनेट होंगे, प्रत्येक छह फीट लंबा और तरल हीलियम कूलिंग सिस्टम से जुड़ा हुआ जो तापमान को पूर्ण शून्य से केवल कुछ डिग्री ऊपर बनाए रखता है। यह फोटोनिक दृष्टिकोण क्वांटम कंप्यूटिंग विकास में एक नई दिशा का प्रतिनिधित्व करता है, संभवतः पारंपरिक क्यूबिट-आधारित प्रणालियों पर लाभ प्रदान करता है। यह परियोजना व्यावहारिक, बड़े पैमाने पर क्वांटम कंप्यूटर बनाने की दिशा में महत्वपूर्ण प्रगति का प्रतिनिधित्व करती है जो विभिन्न उद्योगों और वैज्ञानिक क्षेत्रों में पहले से असंभव माने जाने वाली कम्प्यूटेशनल समस्याओं को संबोधित कर सकते हैं।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/ai/2.mp3"
       },
       {
         "title": "The risk of weather data sabotage is rising",
@@ -365,7 +479,10 @@
         "source": "MIT Technology Review",
         "published_at": "Fri, 17 Jul 2026 08:57:32 +0000",
         "image": "https://wp.technologyreview.com/wp-content/uploads/2026/07/fantastical-tornado3a.jpg?resize=1200,600",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/3.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/3.mp3",
+        "title_hi": "मौसम डेटा तोड़फोड़ का जोखिम बढ़ रहा है",
+        "summary_hi": "मौसम पूर्वानुमान डेटा एक महत्वपूर्ण बुनियादी ढांचा संपत्ति बन गया है जिसके कई उद्योगों में महत्वपूर्ण आर्थिक और सुरक्षा निहितार्थ हैं। विश्वभर में एयरलाइन डिस्पैचर, ग्रिड ऑपरेटर और किसान मौसम की भविष्यवाणियों पर निर्भर करते हैं जो वास्तविक धन, आजीविका और जीवन को प्रभावित करने वाले प्रमुख रणनीतिक निर्णयों के लिए। मौसम डेटा पर बढ़ती निर्भरता संभावित तोड़फोड़ या हेराफेरी के लिए कमजोरी पैदा करती है, जिसके परस्पर जुड़ी प्रणालियों में व्यापक परिणाम हो सकते हैं। जैसे-जैसे मौसम पूर्वानुमान स्वचालित निर्णय लेने की प्रक्रियाओं और महत्वपूर्ण बुनियादी ढांचा प्रबंधन में अधिक एकीकृत होता जा रहा है, मौसम विज्ञान डेटा प्रणालियों की सुरक्षा सरकारों और संगठनों के लिए एक महत्वपूर्ण चिंता बन गई है जो आवश्यक सेवाओं को जानबूझकर हस्तक्षेप या साइबर हमलों से बचाना चाहते हैं।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/ai/3.mp3"
       },
       {
         "title": "Artificial Intelligence Is Changing The Economics Of Cybercrime",
@@ -374,7 +491,10 @@
         "source": "Forbes",
         "published_at": "2026-07-19T01:31:00+00:00",
         "image": "https://imageio.forbes.com/specials-images/imageserve/6a5c23b95945db78a654da4a/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/4.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/4.mp3",
+        "title_hi": "कृत्रिम बुद्धिमत्ता साइबर अपराध की अर्थव्यवस्था को बदल रही है",
+        "summary_hi": "कृत्रिम बुद्धिमत्ता साइबर अपराध के परिदृश्य को मौलिक रूप से बदल रही है जो परिष्कृत हमलों के लिए प्रवेश की बाधाओं को नाटकीय रूप से कम कर रही है। साइबर अपराधी अब जटिल, लक्षित हमलों को पहले की तुलना में काफी कम समय निवेश, तकनीकी विशेषज्ञता और वित्तीय संसाधनों के साथ निष्पादित कर सकते हैं। हमले की क्षमताओं का यह लोकतांत्रीकरण साइबर सुरक्षा में हमलावरों और रक्षकों के बीच मौलिक संतुलन को बदल गया है। AI-संचालित उपकरण खतरे के अभिनेताओं को टोही, शोषण विकास और हमले के निष्पादन को स्वचालित करने में सक्षम बनाते हैं, जिससे कम कुशल अपराधी भी पहले विशेष ज्ञान की आवश्यकता वाले संचालन को संचालित कर सकते हैं। यह प्रवृत्ति साइबर सुरक्षा पेशेवरों और संगठनों के लिए बढ़ती चुनौतियां पेश करती है, क्योंकि साइबर हमलों को लॉन्च करने के लिए लागत-लाभ गणना दुर्भावनापूर्ण अभिनेताओं के लिए तेजी से अनुकूल हो गई है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/ai/4.mp3"
       }
     ],
     "quantum": [
@@ -385,7 +505,10 @@
         "source": "Ars Technica",
         "published_at": "Fri, 10 Jul 2026 23:02:30 +0000",
         "image": "https://cdn.arstechnica.net/wp-content/uploads/2019/10/Sycamore-Rainbow-cropped-1152x648.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/0.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/0.mp3",
+        "title_hi": "क्वांटम त्रुटि सुधार एक प्रोसेसर को लगातार पुनः अंशांकित कर सकता है",
+        "summary_hi": "शोधकर्ताओं ने प्रदर्शित किया है कि क्वांटम त्रुटि सुधार सुदृढीकरण शिक्षण का उपयोग करके क्वांटम प्रोसेसर को लगातार पुनः अंशांकित कर सकता है। यह तकनीक त्रुटि की जानकारी का लाभ उठाकर नियंत्रण एल्गोरिदम को गतिशील रूप से समायोजित करती है, जिससे प्रोसेसर के प्रदर्शन में सुधार होता है। यह प्रगति क्वांटम कंप्यूटिंग में एक मौलिक चुनौती को संबोधित करती है: पर्यावरणीय हस्तक्षेप और डीकोहेरेंस के बावजूद क्यूबिट स्थिरता और सटीकता को बनाए रखना। मशीन लर्निंग के माध्यम से पुनः अंशांकन प्रक्रिया को स्वचालित करके, यह दृष्टिकोण निकट-अवधि के क्वांटम कंप्यूटर की विश्वसनीयता और व्यावहारिक उपयोगिता को महत्वपूर्ण रूप से बढ़ा सकता है, जिससे वे वास्तविक दुनिया की समस्याओं को हल करने में व्यावहारिक अनुप्रयोगों के करीब आ सकते हैं।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/quantum/0.mp3"
       },
       {
         "title": "Thermodynamic Computers Go With the (Energy) Flow",
@@ -394,7 +517,10 @@
         "source": "Quanta Magazine",
         "published_at": "Wed, 15 Jul 2026 15:24:33 +0000",
         "image": "https://www.quantamagazine.org/wp-content/uploads/2026/07/Thermodynamic-Computing-cr-Ada-Zejun-Shen-Default-copy.webp",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/1.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/1.mp3",
+        "title_hi": "थर्मोडायनामिक कंप्यूटर (ऊर्जा) प्रवाह के साथ चलते हैं",
+        "summary_hi": "शोधकर्ता थर्मोडायनामिक कंप्यूटर विकसित कर रहे हैं जो यादृच्छिक ऊर्जा उतार-चढ़ाव का उपयोग करते हैं बजाय उनसे सुरक्षा के। पारंपरिक कंप्यूटर के विपरीत जिन्हें तापीय शोर के विरुद्ध सुरक्षा की आवश्यकता होती है, थर्मोडायनामिक कंप्यूटर इन प्राकृतिक ऊर्जा उतार-चढ़ाव को एक कम्प्यूटेशनल संसाधन के रूप में उपयोग करेंगे। यह प्रतिमान परिवर्तन अधिक कुशल कंप्यूटिंग सिस्टम की ओर ले जा सकता है जो मौलिक भौतिक सिद्धांतों के साथ काम करते हैं न कि उनके विरुद्ध। यह दृष्टिकोण कंप्यूटर आर्किटेक्चर में एक नई दिशा का प्रतिनिधित्व करता है जो पारंपरिक सिलिकॉन-आधारित प्रणालियों की ऊर्जा दक्षता सीमाओं को दूर कर सकता है और नई कम्प्यूटेशनल क्षमताओं को सक्षम कर सकता है।",
+        "audio_hi": ""
       },
       {
         "title": "An orbiting disco ball gave Einstein's theory its most precise test yet",
@@ -403,7 +529,10 @@
         "source": "Ars Technica",
         "published_at": "Fri, 10 Jul 2026 16:11:35 +0000",
         "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/07/image-1-1048x648.png",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/2.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/2.mp3",
+        "title_hi": "एक कक्षीय डिस्को बॉल ने आइंस्टीन के सिद्धांत को अब तक का सबसे सटीक परीक्षण दिया",
+        "summary_hi": "वैज्ञानिकों ने एक कक्षीय परावर्तक गोले—जो एक डिस्को बॉल जैसा दिखता है—का उपयोग करके आइंस्टीन के सामान्य सापेक्षता सिद्धांत का अब तक का सबसे सटीक परीक्षण किया। प्रयोग ने मापा कि पृथ्वी का द्रव्यमान इसके चारों ओर स्पेसटाइम को कैसे विकृत करता है, जिससे आइंस्टीन की भविष्यवाणियों की अभूतपूर्व सटीकता की पुष्टि हुई। विशाल आकाशीय पिंडों की तुलना में पृथ्वी के अपेक्षाकृत मामूली द्रव्यमान के बावजूद, ग्रह अभी भी मापने योग्य स्पेसटाइम वक्रता उत्पन्न करता है जो परिष्कृत उपग्रह-आधारित मापों द्वारा पहचानी जा सकती है। यह उपलब्धि आधुनिक प्रायोगिक भौतिकी की उल्लेखनीय सटीकता को प्रदर्शित करती है और आइंस्टीन के सदी-पुरानी सिद्धांत को सटीकता के नए स्तरों पर मान्य करती है, जिसका गुरुत्वाकर्षण और मौलिक भौतिकी को समझने के लिए निहितार्थ है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/quantum/2.mp3"
       },
       {
         "title": "Dark matter may be naturally tuned to a hidden fifth dimension",
@@ -412,7 +541,10 @@
         "source": "The Brighter Side of News via Yahoo News",
         "published_at": "2026-07-18T15:54:16+00:00",
         "image": "https://media.zenfs.com/en/the_brighter_side_of_news_articles_781/8f4b134b8279ef655aaca6cddab90eda",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/3.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/3.mp3",
+        "title_hi": "डार्क मैटर स्वाभाविक रूप से एक छिपे हुए पांचवें आयाम के लिए ट्यून किया जा सकता है",
+        "summary_hi": "एक नई सैद्धांतिक रूपरेखा प्रस्तावित करती है कि डार्क मैटर स्वाभाविक रूप से स्पेसटाइम के ज्ञात चार आयामों से परे एक छिपे हुए पांचवें आयाम के साथ परस्पर क्रिया के लिए अंशांकित हो सकता है। डार्क मैटर, जो गुरुत्वाकर्षण प्रभावों के माध्यम से आकाशगंगाओं को एक साथ रखता प्रतीत होता है, सार्वभौमिक पदार्थ का अधिकांश हिस्सा होने के बावजूद कभी सीधे देखा नहीं गया है। यह नया सिद्धांत सुझाता है कि डार्क मैटर के गुण और व्यवहार को अतिरिक्त स्थानिक आयामों के साथ इसके संबंध के माध्यम से समझाया जा सकता है, जो भौतिकी के सबसे बड़े रहस्यों में से एक पर एक ताजा दृष्टिकोण प्रदान करता है। यह परिकल्पना क्वांटम यांत्रिकी और सामान्य सापेक्षता के बीच एक संभावित पुल प्रदान करती है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/quantum/3.mp3"
       },
       {
         "title": "Will We Ever Find Alien Civilizations?",
@@ -421,7 +553,10 @@
         "source": "Quanta Magazine",
         "published_at": "Thu, 09 Jul 2026 13:39:13 +0000",
         "image": "https://www.quantamagazine.org/wp-content/uploads/2026/07/JOW-S5E2-David-Kipping-cr-Chanelle-Nibbelink-Default-NO-LOGO.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/4.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/4.mp3",
+        "title_hi": "क्या हम कभी विदेशी सभ्यताओं को खोज पाएंगे?",
+        "summary_hi": "खगोलविद डेविड किपिंग जांचते हैं कि अलौकिक जीवन के दावे अक्सर जांच में क्यों विफल होते हैं और पृथ्वी से परे जीवन की खोज के लिए एक अधिक सांख्यिकीय रूप से कठोर दृष्टिकोण की वकालत करते हैं। वह विदेशी सभ्यताओं का पता लगाने में पद्धतिगत चुनौतियों पर चर्चा करते हैं और अलौकिक बुद्धिमत्ता की खोज के लिए कठोर सांख्यिकीय ढांचे को लागू करने की वकालत करते हैं। किपिंग यह पता लगाते हैं कि अंतरिक्ष की विशालता के बावजूद, मानवता अकेली हो सकती है इस संभावना पर विचार करना क्यों तर्कसंगत रहता है। उनका विश्लेषण खगोल जीव विज्ञान और अलौकिक सभ्यताओं की खोज में अनुमान और साक्ष्य-आधारित निष्कर्षों के बीच अंतर करने के महत्व पर जोर देता है।",
+        "audio_hi": ""
       }
     ],
     "trump": [
@@ -432,7 +567,10 @@
         "source": "BBC News",
         "published_at": "Sat, 18 Jul 2026 17:29:50 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0b00/live/0ecf40f0-81ea-11f1-b7bc-5dd9ae7a9918.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/0.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/0.mp3",
+        "title_hi": "ट्रम्प ने कनाडा पर नए टैरिफ का खतरा दिया, जिससे अमेरिकी शहरों में 'गंदी' हवा जा रही है",
+        "summary_hi": "राष्ट्रपति डोनाल्ड ट्रम्प ने कनाडा पर नए टैरिफ लगाने का खतरा दिया है, जो अमेरिकी वायु गुणवत्ता को प्रभावित करने वाले जंगल की आग के धुएं के जवाब में है। ट्रम्प ने कनाडा को कनाडाई जंगल की आग से फैलने वाले धुएं के कारण अस्वास्थ्यकर हवा की स्थिति से जुड़ी लागतों के लिए जिम्मेदार ठहराने का वचन दिया है। कनाडाई नेता मार्क कार्नी ने जवाब दिया कि अमेरिका और कनाडा दोनों जलवायु परिवर्तन से लड़ने में समान जिम्मेदारी साझा करते हैं, जिसे विशेषज्ञ कहते हैं कि जंगल की आग की स्थिति को बदतर बना रहा है। यह विवाद दोनों देशों के बीच पर्यावरणीय नीति और व्यापार संबंधों पर तनाव को उजागर करता है, ट्रम्प सीमा पार पर्यावरणीय मुद्दों पर लाभ के रूप में टैरिफ के खतरे का उपयोग कर रहे हैं।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/trump/0.mp3"
       },
       {
         "title": "Two US troops killed and one missing after Iranian attack in Jordan",
@@ -441,7 +579,10 @@
         "source": "BBC News",
         "published_at": "Sun, 19 Jul 2026 00:18:47 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/bb90/live/f934e660-82d3-11f1-a42c-29abcdb2a052.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/1.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/1.mp3",
+        "title_hi": "जॉर्डन में ईरानी हमले के बाद दो अमेरिकी सैनिक मारे गए और एक लापता है",
+        "summary_hi": "ईरानी हवाई हमले के बाद दो अमेरिकी सैन्य कर्मचारी मारे गए और एक जॉर्डन में अमेरिकी सैन्य सुविधा पर लापता है। यह हमला इस सप्ताह ईरान और संयुक्त राज्य अमेरिका के बीच शत्रुता में वृद्धि का प्रतिनिधित्व करता है, तेहरान खाड़ी क्षेत्र में कई अमेरिकी सैन्य प्रतिष्ठानों को लक्ष्य बना रहा है। इस घटना ने कुछ रूढ़िवादी टिप्पणीकारों, जिनमें फॉक्स न्यूज योगदानकर्ता और समुद्री लड़ाई के दिग्गज जोई जोन्स शामिल हैं, से आलोचना को प्रेरित किया है, जिन्होंने सैनिकों की मृत्यु के बाद राष्ट्रपति ट्रम्प की ईरान युद्ध रणनीति पर सवाल उठाया है। यह हमला मध्य पूर्व में चल रहे तनाव को रेखांकित करता है और क्षेत्र में अमेरिकी सैन्य उपस्थिति और रणनीति के बारे में सवाल उठाता है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/trump/1.mp3"
       },
       {
         "title": "Trump alleges China meddled in 2020 election and questions voting security ahead of midterms",
@@ -450,7 +591,10 @@
         "source": "BBC News",
         "published_at": "Fri, 17 Jul 2026 11:37:00 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d581/live/e4364610-818d-11f1-bee8-53ce494e1abc.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/2.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/2.mp3",
+        "title_hi": "ट्रम्प ने आरोप लगाया कि चीन ने 2020 के चुनाव में हस्तक्षेप किया और मध्यावधि चुनावों से पहले मतदान सुरक्षा पर सवाल उठाया",
+        "summary_hi": "राष्ट्रपति डोनाल्ड ट्रम्प ने आरोप लगाया है कि चीन ने 2020 के राष्ट्रपति चुनाव में हस्तक्षेप किया है और नवंबर के मध्यावधि चुनावों से पहले मतदान सुरक्षा के बारे में सवाल उठाए हैं। चीन ने ट्रम्प के दावों को गढ़ा हुआ बताया, जबकि अमेरिकी डेमोक्रेट्स ने उन पर आने वाले चुनावों को कमजोर करने की जमीन तैयार करने का आरोप लगाया है। ये आरोप चुनाव की अखंडता और विदेशी हस्तक्षेप पर चल रहे विवादों को दर्शाते हैं, ट्रम्प पिछली चुनावी प्रक्रियाओं की वैधता पर सवाल उठाना जारी रखते हैं। उनके बयान राष्ट्र के मध्यावधि मतदान की तैयारी के समय आते हैं, जो राजनीतिक विरोधियों के बीच चिंता बढ़ाते हैं कि वह भविष्य के चुनाव परिणामों को कमजोर करने का प्रयास कर सकते हैं यदि परिणाम प्रतिकूल साबित हों।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/trump/2.mp3"
       },
       {
         "title": "Trump Media to sell instant access to 'market-moving' social posts",
@@ -459,7 +603,10 @@
         "source": "BBC News",
         "published_at": "Fri, 17 Jul 2026 07:25:31 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3a36/live/a22ce670-817e-11f1-a087-3f9df20b4f8a.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/3.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/3.mp3",
+        "title_hi": "ट्रम्प मीडिया 'बाजार-गतिविधि' सोशल पोस्ट तक तत्काल पहुंच बेचेगा",
+        "summary_hi": "ट्रम्प मीडिया एक प्रीमियम सशुल्क सदस्यता सेवा शुरू कर रहा है जो वॉल स्ट्रीट व्यापारियों को प्लेटफॉर्म के सबसे प्रभावशाली और बाजार-गतिविधि वाली सोशल मीडिया पोस्ट तक तत्काल पहुंच प्रदान करती है। यह सेवा संभावित रूप से महत्वपूर्ण घोषणाओं और बयानों तक प्रारंभिक पहुंच चाहने वाले वित्तीय पेशेवरों को लक्ष्य करती है। यह व्यावसायिक मॉडल ट्रम्प मीडिया द्वारा अपने उपयोगकर्ता आधार को मुद्रीकृत करने और प्लेटफॉर्म के वित्तीय बाजारों पर प्रभाव से राजस्व उत्पन्न करने का एक प्रयास है। यह पहल सोशल मीडिया, वित्तीय बाजारों और ट्रम्प के व्यावसायिक हितों के प्रतिच्छेदन को उजागर करती है, क्योंकि कंपनी प्रभावशाली उपयोगकर्ताओं से पोस्ट के कथित बाजार प्रभाव को भुनाने का प्रयास कर रही है।",
+        "audio_hi": ""
       },
       {
         "title": "Stephen Miller says Trump administration is pursuing policy to debank illegal immigrants",
@@ -468,7 +615,10 @@
         "source": "Fox News",
         "published_at": "2026-07-18T18:23:50+00:00",
         "image": "https://static.foxnews.com/foxnews.com/content/uploads/2026/07/stephen-miller.png",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/4.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/4.mp3",
+        "title_hi": "स्टीफन मिलर ने कहा कि ट्रम्प प्रशासन अवैध आप्रवासियों को डीबैंक करने की नीति का पीछा कर रहा है",
+        "summary_hi": "स्टीफन मिलर ने घोषणा की कि ट्रम्प प्रशासन बैंकिंग प्रणालियों के माध्यम से उनकी वित्तीय पहुंच को प्रतिबंधित करके अवैध आप्रवासियों को डीबैंक करने की नीति को लागू कर रहा है। यह रणनीति अनिर्दिष्ट आप्रवासियों की वित्तीय सेवाओं तक पहुंच को काटकर स्व-निर्वासन को प्रोत्साहित करने का लक्ष्य रखती है। यह पारंपरिक निर्वासन प्रक्रियाओं से परे जाने वाली एक कठोर आप्रवासन प्रवर्तन दृष्टिकोण का प्रतिनिधित्व करता है। यह नीति प्रशासन के व्यापक आप्रवासन एजेंडा को दर्शाती है और अनिर्दिष्ट आबादी को लक्ष्य करने वाली प्रवर्तन रणनीति में एक महत्वपूर्ण वृद्धि का प्रतिनिधित्व करती है, वित्तीय बहिष्कार को संयुक्त राज्य अमेरिका से प्रस्थान को प्रोत्साहित करने के तंत्र के रूप में उपयोग करती है।",
+        "audio_hi": ""
       }
     ],
     "local": [
@@ -479,7 +629,10 @@
         "source": "Village of Skokie Official Website",
         "published_at": "today",
         "image": "",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local/0.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local/0.mp3",
+        "title_hi": "स्कोकी स्वास्थ्य विभाग ने खतरनाक वायु गुणवत्ता के कारण बाहरी संपर्क को सीमित करने की सलाह दी",
+        "summary_hi": "स्कोकी स्वास्थ्य और मानव सेवा विभाग ने कनाडाई जंगल की आग से उत्पन्न धुएं के कारण बहुत खतरनाक वायु गुणवत्ता के चलते बाहरी संपर्क और कठोर गतिविधियों को सीमित करने की सलाह दी है। यह सलाह आज, 19 जुलाई 2026 को जारी की गई थी, क्योंकि गांव में वायु गुणवत्ता खतरनाक स्तर तक पहुंच गई थी। निवासियों को खराब वायु गुणवत्ता की घटना के दौरान अपने स्वास्थ्य की रक्षा के लिए सावधानियां बरतने के लिए प्रोत्साहित किया जा रहा है। विभाग का मार्गदर्शन शिकागो क्षेत्र और आसपास के समुदायों पर जंगल की आग के धुएं के प्रभाव के बारे में चिंताओं को दर्शाता है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/local/0.mp3"
       },
       {
         "title": "Person Rescued After Near-Drowning at Skokie Water Playground",
@@ -488,7 +641,10 @@
         "source": "CBS Chicago",
         "published_at": "",
         "image": "",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local/1.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local/1.mp3",
+        "title_hi": "स्कोकी वाटर प्लेग्राउंड में डूबने के करीब व्यक्ति को बचाया गया",
+        "summary_hi": "आपातकालीन कर्मियों ने शनिवार को दोपहर लगभग 2 बजे ओकटन स्ट्रीट और स्कोकी बुलेवार्ड पर स्थित स्कोकी वाटर प्लेग्राउंड में डूबने की घटना के लिए प्रतिक्रिया दी। एक व्यक्ति को बचाया गया और वह घटना के बाद रविवार को ठीक हो रहा था। यह बचाव गर्मी के मौसम में सार्वजनिक मनोरंजन सुविधाओं पर जल सुरक्षा के महत्व को उजागर करता है। आपातकालीन प्रतिक्रियाकर्ताओं ने इस घटना में सफलतापूर्वक हस्तक्षेप किया, इस लोकप्रिय सामुदायिक जल सुविधा पर एक संभावित त्रासदी को रोका।",
+        "audio_hi": ""
       }
     ],
     "local_events": [
@@ -500,7 +656,10 @@
         "published_at": "Weekends (July 19-26, 2026)",
         "image": "",
         "category": "market",
-        "audio": ""
+        "audio": "",
+        "title_hi": "स्कोकी किसान बाजार",
+        "summary_hi": "एक निर्माता-केवल किसान बाजार जो इलिनॉय, इंडियाना, मिशिगन और विस्कॉन्सिन से विक्रेताओं को दिखाता है जो स्थानीय रूप से उगाए गए और बनाए गए उत्पाद बेचते हैं। प्रत्येक सप्ताहांत बाजार के साथ लाइव संगीत और मुफ्त बच्चों की गतिविधियां होती हैं।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/local_events/0.mp3"
       },
       {
         "title": "Let's Talk Veins Skokie | Free Vein Screening Event + Lunch",
@@ -510,7 +669,10 @@
         "published_at": "Not specified",
         "image": "",
         "category": "community",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local_events/1.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local_events/1.mp3",
+        "title_hi": "आइए स्कोकी में नसों के बारे में बात करें | मुफ्त नस स्क्रीनिंग इवेंट + दोपहर का भोजन",
+        "summary_hi": "एक मुफ्त सामुदायिक स्वास्थ्य कार्यक्रम जो नस स्क्रीनिंग सेवाएं और दोपहर का भोजन प्रदान करता है। उपलब्ध जानकारी में विशिष्ट तारीख और स्थान के बारे में विवरण सीमित हैं।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/local_events/1.mp3"
       },
       {
         "title": "Sound Bath Meditation",
@@ -520,7 +682,10 @@
         "published_at": "Not specified",
         "image": "",
         "category": "community",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local_events/2.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local_events/2.mp3",
+        "title_hi": "साउंड बाथ ध्यान",
+        "summary_hi": "स्कोकी में आयोजित एक साउंड बाथ ध्यान कार्यक्रम। उपलब्ध जानकारी में विशिष्ट तारीख और स्थान के विवरण प्रदान नहीं किए गए हैं।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/local_events/2.mp3"
       }
     ],
     "local_weather": [
@@ -531,8 +696,12 @@
         "source": "OpenWeatherMap",
         "published_at": "2026-07-19T07:54:38.571492+00:00",
         "image": "",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local_weather/0.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local_weather/0.mp3",
+        "title_hi": "स्कोकी, इलिनॉय में मौसम",
+        "summary_hi": "बादल छाए हुए, 70°F (महसूस होता है 70°F)। आज की सीमा: 67°F से 71°F। आर्द्रता 81%, हवा 6 mph।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/local_weather/0.mp3"
       }
     ]
-  }
+  },
+  "hindi_generated_at": "2026-07-19T08:00:34.684731+00:00"
 }
