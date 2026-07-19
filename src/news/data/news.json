@@ -1,660 +1,538 @@
 {
-  "generated_at": "2026-07-18T10:25:58.408646+00:00",
+  "generated_at": "2026-07-19T07:56:43.800955+00:00",
   "categories": {
     "world": [
       {
-        "title": "US strikes hit Iran for seventh consecutive night",
-        "summary": "The United States has conducted strikes against Iran for the seventh consecutive night, with Iran retaliating against US allies in the region. Kuwait reported that a power and water plant was hit in Iranian attacks. The escalating military operations represent a significant intensification of US-Iran tensions in the Middle East, with both sides conducting coordinated strikes. Iran has claimed that three people were killed in US strikes, while the US military states its operations aim to degrade Iran's military capabilities. The strikes have also triggered alarm in neighboring countries, with sirens reported in Bahrain as regional tensions continue to mount.",
-        "url": "https://www.bbc.co.uk/news/articles/cy748n8zx8ro?at_medium=RSS&at_campaign=rss",
+        "title": "US and Iran exchange strikes after two US soldiers killed in Jordan",
+        "summary": "US forces have targeted Iranian sites for the eighth consecutive night following the deaths of two American soldiers in Jordan, while Iran claims it fired drones at US military positions in Kuwait. This escalation represents an intensifying cycle of military exchanges between the two nations. The strikes mark a significant escalation in regional tensions, with both sides conducting retaliatory operations. The incident highlights ongoing hostilities in the Middle East, where US military personnel remain engaged in counter-terrorism operations. The repeated strikes over multiple nights suggest a sustained conflict dynamic rather than isolated incidents, raising concerns about further regional destabilization and potential for broader military confrontation.",
+        "url": "https://www.bbc.co.uk/news/articles/cgk417jp83po?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
-        "published_at": "Sat, 18 Jul 2026 07:33:40 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/bd47/live/65f79600-8282-11f1-b976-0b9c15b0ccfc.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/0.mp3",
-        "title_hi": "अमेरिका ने सातवीं रात लगातार ईरान पर हमले किए",
-        "summary_hi": "संयुक्त राज्य अमेरिका ने लगातार सातवीं रात ईरान पर हमले किए हैं, जिसके बाद ईरान ने क्षेत्र में अमेरिकी सहयोगियों के खिलाफ प्रतिशोध लिया है। कुवैत ने बताया कि ईरानी हमलों में एक बिजली और जल संयंत्र को नुकसान पहुंचा। बढ़ते सैन्य अभियान मध्य पूर्व में अमेरिका-ईरान तनाव में महत्वपूर्ण वृद्धि का प्रतिनिधित्व करते हैं, दोनों पक्ष समन्वित हमले कर रहे हैं। ईरान ने दावा किया है कि अमेरिकी हमलों में तीन लोग मारे गए हैं, जबकि अमेरिकी सेना का कहना है कि इसके अभियान का उद्देश्य ईरान की सैन्य क्षमताओं को कमजोर करना है। हमलों ने पड़ोसी देशों में भी चिंता पैदा की है, बहरीन में सायरन की सूचना दी गई है क्योंकि क्षेत्रीय तनाव बढ़ता जा रहा है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/world/0.mp3"
+        "published_at": "Sun, 19 Jul 2026 05:10:57 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/e354/live/adca3400-8323-11f1-926f-c90d1bcfbc84.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/0.mp3"
       },
       {
-        "title": "Trump threatens new Canada tariffs over fires sending 'filthy' air into US cities",
-        "summary": "US President Trump has threatened to impose new tariffs on Canada in response to wildfires sending smoke into American cities, characterizing the air quality as 'filthy.' Canadian leader Mark Carney countered that both nations share equal responsibility for addressing climate change, which experts say is worsening wildfire conditions. The dispute highlights tensions between the two countries over environmental management and trade policy. Trump's tariff threat represents an escalation of trade tensions between the US and Canada, while Canadian officials emphasize the shared nature of climate-related challenges affecting air quality across North America.",
-        "url": "https://www.bbc.co.uk/news/articles/cwyq93j34lgo?at_medium=RSS&at_campaign=rss",
+        "title": "Russians turn to cash, putting more strain on slowing wartime economy",
+        "summary": "Russia's economy faces mounting strain as citizens increasingly resort to cash transactions following mobile internet shutdowns, while businesses seek to evade taxation amid over four years of war with Ukraine. The shift reflects deepening economic pressures on the Russian state as sanctions and military expenditures continue. Businesses dodging taxes further reduces government revenue needed for war efforts. Mobile internet disruptions suggest authorities are attempting to control information flow and financial transactions. These economic indicators point to significant internal challenges within Russia's wartime economy, including reduced consumer confidence, financial instability, and declining state capacity to fund military operations and maintain economic stability during the prolonged conflict.",
+        "url": "https://www.bbc.co.uk/news/articles/cglj255jk8ko?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
-        "published_at": "Sat, 18 Jul 2026 01:29:47 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0b00/live/0ecf40f0-81ea-11f1-b7bc-5dd9ae7a9918.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/1.mp3",
-        "title_hi": "ट्रम्प ने कनाडा पर नए टैरिफ की धमकी दी क्योंकि आग से 'गंदी' हवा अमेरिकी शहरों में जा रही है",
-        "summary_hi": "अमेरिकी राष्ट्रपति ट्रम्प ने कनाडा पर नए टैरिफ लगाने की धमकी दी है, जिसका कारण जंगल की आग से अमेरिकी शहरों में धुआं जाना है, और उन्होंने वायु गुणवत्ता को 'गंदी' बताया है। कनाडाई नेता मार्क कार्नी ने जवाब दिया कि दोनों राष्ट्रों की जलवायु परिवर्तन से निपटने की समान जिम्मेदारी है, जिसे विशेषज्ञ कहते हैं कि जंगल की आग की स्थिति को बदतर बना रहा है। यह विवाद पर्यावरणीय प्रबंधन और व्यापार नीति पर दोनों देशों के बीच तनाव को उजागर करता है। ट्रम्प की टैरिफ धमकी अमेरिका और कनाडा के बीच व्यापार तनाव में वृद्धि का प्रतिनिधित्व करती है, जबकि कनाडाई अधिकारी उत्तरी अमेरिका में वायु गुणवत्ता को प्रभावित करने वाली जलवायु-संबंधित चुनौतियों की साझा प्रकृति पर जोर देते हैं।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/world/1.mp3"
+        "published_at": "Sat, 18 Jul 2026 23:59:26 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c416/live/685838d0-81b2-11f1-bc34-d11e2a8fe857.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/1.mp3"
       },
       {
-        "title": "Many Ukrainian soldiers outraged over removal of defence minister, troops tell BBC",
-        "summary": "Ukrainian soldiers have expressed outrage following the removal of Defence Minister Mykhailo Fedorov, with protests erupting across the country on Thursday. Military personnel have joined civilians in criticizing the government's decision to dismiss the defence minister. The controversy reflects internal tensions within Ukraine's military and political leadership during the ongoing conflict with Russia. Soldiers' dissatisfaction with the removal suggests concerns about military strategy and leadership decisions. The incident highlights divisions within Ukraine's defense establishment at a critical time, with troops questioning the wisdom of removing a key military figure during wartime operations.",
-        "url": "https://www.bbc.co.uk/news/articles/cvg8w4dpjkwo?at_medium=RSS&at_campaign=rss",
+        "title": "Cuban dissident Luis Manuel Otero Alcántara goes into exile in US",
+        "summary": "Cuban dissident Luis Manuel Otero Alcántara has gone into exile in the United States after spending five years imprisoned in Cuba. He was arrested in 2021 during Cuba's largest anti-government protests in decades, marking a significant moment of civil unrest on the island. His imprisonment and subsequent exile reflect the Cuban government's repression of dissent and activism. Otero Alcántara's departure represents a notable loss for Cuba's internal opposition movement while highlighting ongoing human rights concerns under the Castro regime. His case exemplifies the broader pattern of political persecution faced by Cuban activists and demonstrates the continued restrictions on freedom of expression and assembly in Cuba, prompting many dissidents to seek refuge abroad.",
+        "url": "https://www.bbc.co.uk/news/articles/cx2k77p2r1xo?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
-        "published_at": "Fri, 17 Jul 2026 19:04:09 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0d83/live/2d7f0f80-8212-11f1-bee8-53ce494e1abc.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/2.mp3",
-        "title_hi": "रक्षा मंत्री की हटाए जाने से कई यूक्रेनी सैनिक नाराज, सैनिकों ने बीबीसी को बताया",
-        "summary_hi": "यूक्रेनी सैनिकों ने रक्षा मंत्री मिखाइलो फेडोरोव की हटाए जाने के बाद नाराजगी व्यक्त की है, गुरुवार को पूरे देश में विरोध प्रदर्शन हुए हैं। सैन्य कर्मियों ने नागरिकों के साथ सरकार के रक्षा मंत्री को बर्खास्त करने के फैसले की आलोचना की है। यह विवाद रूस के साथ चल रहे संघर्ष के दौरान यूक्रेन की सैन्य और राजनीतिक नेतृत्व के भीतर आंतरिक तनाव को दर्शाता है। सैनिकों की नाराजगी सैन्य रणनीति और नेतृत्व के फैसलों के बारे में चिंताओं का संकेत देती है। यह घटना युद्धकाल के दौरान एक महत्वपूर्ण समय पर यूक्रेन की रक्षा प्रतिष्ठान के भीतर विभाजन को उजागर करती है, सैनिक युद्ध संचालन के दौरान एक प्रमुख सैन्य व्यक्ति को हटाए जाने की बुद्धिमत्ता पर सवाल उठा रहे हैं।",
-        "audio_hi": ""
+        "published_at": "Sun, 19 Jul 2026 07:47:02 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/ffba/live/61f9f5c0-8336-11f1-ab22-e5791e60f909.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/2.mp3"
+      },
+      {
+        "title": "Hungarian president agrees to stand down after parliament backs removal",
+        "summary": "Hungary's President Tamás Sulyok, widely regarded as an ally of Prime Minister Viktor Orbán, has agreed to resign following parliamentary backing for his removal. Sulyok faced a deadline of Saturday night to accept the decision to end his term. His departure marks a significant political development in Hungary's governance structure. The removal suggests internal political tensions within Hungary's leadership despite Sulyok's perceived alignment with Orbán's administration. This constitutional development reflects ongoing political dynamics within Hungary's government and raises questions about the reasons behind the removal and its implications for Hungary's political landscape and democratic institutions moving forward.",
+        "url": "https://www.bbc.co.uk/news/articles/cpd7q7eev7po?at_medium=RSS&at_campaign=rss",
+        "source": "BBC News",
+        "published_at": "Sat, 18 Jul 2026 19:34:16 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3323/live/67c3a600-82db-11f1-9a15-3bb955e2f294.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/3.mp3"
       },
       {
         "title": "Space start-up launches India's first commercial rocket designed for orbit",
-        "summary": "India's space-tech unicorn Skyroot Aerospace successfully launched Vikram-1, marking India's first commercial rocket designed for orbital missions. The launch represents a significant milestone for India's private space industry and demonstrates the country's growing capabilities in commercial spaceflight. Skyroot Aerospace's achievement reflects India's expanding role in the global commercial space sector, competing with established international players. The successful Vikram-1 launch opens new possibilities for India's satellite deployment and space commerce opportunities. This development positions India as an emerging player in the competitive commercial space market, potentially enabling domestic and international clients to access affordable launch services.",
+        "summary": "Skyroot Aerospace, India's first space-tech unicorn, successfully launched the Vikram-1 rocket on Saturday, marking a milestone for India's commercial space industry. This achievement represents India's entry into the commercial orbital launch market, demonstrating significant technological advancement in the nation's space capabilities. The successful launch of an indigenously-designed orbital rocket enhances India's position in the global space economy and reduces dependence on foreign launch providers. Skyroot Aerospace's accomplishment reflects India's growing expertise in aerospace engineering and innovation. This development has implications for India's space sector growth, potential satellite deployment capabilities, and competitive positioning in the international commercial space industry, opening new opportunities for domestic and international clients seeking launch services.",
         "url": "https://www.bbc.co.uk/news/articles/clyekv7rld3o?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
         "published_at": "Sat, 18 Jul 2026 07:05:19 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d67c/live/812402b0-81c4-11f1-926f-c90d1bcfbc84.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/3.mp3",
-        "title_hi": "अंतरिक्ष स्टार्टअप ने भारत का पहला वाणिज्यिक रॉकेट कक्षा के लिए डिज़ाइन किया हुआ लॉन्च किया",
-        "summary_hi": "भारत की स्पेस-टेक यूनिकॉर्न स्काईरूट एयरोस्पेस ने विक्रम-1 को सफलतापूर्वक लॉन्च किया, जो भारत का पहला वाणिज्यिक रॉकेट है जो कक्षीय मिशन के लिए डिज़ाइन किया गया है। यह लॉन्च भारत के निजी अंतरिक्ष उद्योग के लिए एक महत्वपूर्ण मील का पत्थर है और देश की वाणिज्यिक अंतरिक्ष उड़ान में बढ़ती क्षमताओं को प्रदर्शित करता है। स्काईरूट एयरोस्पेस की उपलब्धि वैश्विक वाणिज्यिक अंतरिक्ष क्षेत्र में भारत की विस्तारित भूमिका को दर्शाती है, जो स्थापित अंतर्राष्ट्रीय खिलाड़ियों के साथ प्रतिस्पर्धा कर रही है। विक्रम-1 का सफल लॉन्च भारत के उपग्रह तैनाती और अंतरिक्ष वाणिज्य के नए अवसर खोलता है। यह विकास भारत को प्रतिस्पर्धी वाणिज्यिक अंतरिक्ष बाजार में एक उभरते खिलाड़ी के रूप में स्थापित करता है, संभवतः घरेलू और अंतर्राष्ट्रीय ग्राहकों को सस्ती लॉन्च सेवाओं तक पहुंच प्रदान करता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/world/3.mp3"
-      },
-      {
-        "title": "Magnitude 7.3 earthquake quake strikes off Mexico coast",
-        "summary": "A magnitude 7.3 earthquake struck off the coast of Mexico, generating tsunami waves recorded by the US Tsunami Warning Center. Waves measuring 0.3 meters (1.1 feet) high were recorded in Puerto Madero and Chiapas regions following the seismic event. The earthquake represents a significant natural disaster affecting Mexico's Pacific coastal areas. The tsunami waves, while relatively modest in height, indicate the earthquake's substantial underwater displacement. Authorities monitored the situation closely to assess potential damage and ensure public safety in affected coastal communities along Mexico's Pacific seaboard.",
-        "url": "https://www.bbc.co.uk/news/articles/cwyjv3815yxo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC News",
-        "published_at": "Fri, 17 Jul 2026 18:12:54 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/7777/live/efb32c20-81fa-11f1-a927-670d17f8e943.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/4.mp3",
-        "title_hi": "मेक्सिको के तट से 7.3 तीव्रता का भूकंप आया",
-        "summary_hi": "मेक्सिको के तट से 7.3 तीव्रता का भूकंप आया, जिससे अमेरिकी सुनामी चेतावनी केंद्र द्वारा सुनामी की लहरें दर्ज की गईं। भूकंपीय घटना के बाद प्यूर्टो मैडेरो और चियापास क्षेत्रों में 0.3 मीटर (1.1 फीट) ऊंची लहरें दर्ज की गईं। भूकंप मेक्सिको के प्रशांत तटीय क्षेत्रों को प्रभावित करने वाली एक महत्वपूर्ण प्राकृतिक आपदा का प्रतिनिधित्व करता है। सुनामी की लहरें, हालांकि ऊंचाई में अपेक्षाकृत मामूली हैं, भूकंप के पर्याप्त पानी के नीचे विस्थापन को दर्शाती हैं। अधिकारियों ने संभावित नुकसान का आकलन करने और मेक्सिको के प्रशांत तटीय क्षेत्रों में प्रभावित तटीय समुदायों में जनता की सुरक्षा सुनिश्चित करने के लिए स्थिति की बारीकी से निगरानी की।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/world/4.mp3"
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/56eb/live/beb0cb10-82a8-11f1-84ea-29e7008b1ad8.png",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/4.mp3"
       }
     ],
     "usa": [
       {
-        "title": "What to know about the Canadian and US wildfires and their impact",
-        "summary": "Wildfires in Ontario have blanketed US and Canadian cities with dangerous smoke, creating hazardous air quality conditions across multiple regions. The smoke poses significant health risks to millions of people, with air pollution levels reaching record highs in dozens of US cities. Canadian leader Mark Carney emphasizes that both nations share equal responsibility for addressing climate change, which experts say is worsening wildfire conditions. President Trump has threatened new tariffs against Canada over the smoke affecting US cities. The situation highlights the transnational nature of environmental crises and the need for coordinated international response to both immediate air quality threats and underlying climate factors driving increased wildfire severity.",
-        "url": "https://www.bbc.co.uk/news/articles/c5ywdl9ne3yo?at_medium=RSS&at_campaign=rss",
+        "title": "Two US troops killed and one missing after Iranian attack in Jordan",
+        "summary": "Iran and the United States have escalated military hostilities this week, with Tehran launching strikes against US military facilities across the Gulf region. The attack resulted in two US troops being killed and one reported missing in Jordan. This represents a significant escalation in the ongoing tensions between the two nations, with both countries trading strikes as regional instability intensifies. The incident underscores the volatile security situation in the Middle East and the risks faced by American military personnel stationed throughout the region.",
+        "url": "https://www.bbc.co.uk/news/articles/cn8nynv8ze8o?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
-        "published_at": "Fri, 17 Jul 2026 23:50:29 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4c04/live/5b406ea0-811d-11f1-96bf-6155b9f8d82a.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/0.mp3",
-        "title_hi": "कनाडाई और अमेरिकी जंगल की आग और उनके प्रभाव के बारे में जानें",
-        "summary_hi": "ओंटारियो में जंगल की आग ने अमेरिकी और कनाडाई शहरों को खतरनाक धुएं से ढक दिया है, जिससे कई क्षेत्रों में हवा की गुणवत्ता खतरनाक हो गई है। यह धुआं लाखों लोगों के लिए महत्वपूर्ण स्वास्थ्य जोखिम पैदा करता है, और दर्जनों अमेरिकी शहरों में वायु प्रदूषण का स्तर रिकॉर्ड ऊंचाई पर पहुंच गया है। कनाडाई नेता मार्क कार्नी जोर देते हैं कि दोनों राष्ट्र जलवायु परिवर्तन को संबोधित करने की समान जिम्मेदारी साझा करते हैं, जिसे विशेषज्ञ कहते हैं कि जंगल की आग की स्थिति को बदतर बना रहा है। राष्ट्रपति ट्रम्प ने अमेरिकी शहरों को प्रभावित करने वाले धुएं के लिए कनाडा के खिलाफ नए टैरिफ की धमकी दी है। यह स्थिति पर्यावरणीय संकटों की सीमा पार प्रकृति और तत्काल वायु गुणवत्ता के खतरों और बढ़ती जंगल की आग की गंभीरता को चलाने वाले अंतर्निहित जलवायु कारकों दोनों के लिए समन्वित अंतर्राष्ट्रीय प्रतिक्रिया की आवश्यकता को उजागर करती है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/usa/0.mp3"
+        "published_at": "Sun, 19 Jul 2026 00:18:47 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/bb90/live/f934e660-82d3-11f1-a42c-29abcdb2a052.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/0.mp3"
+      },
+      {
+        "title": "Andrew Tate and brother arrested in US after more charges laid against them in UK",
+        "summary": "Andrew Tate and his brother have been arrested in the United States following additional charges filed against them in the United Kingdom. The Crown Prosecution Service has requested their extradition from the US to face the new charges. Their legal representatives maintain that the brothers are innocent of the allegations. The case involves serious criminal charges, and the extradition request represents a significant development in the ongoing legal proceedings against the two men, who have faced multiple accusations in British courts.",
+        "url": "https://www.bbc.co.uk/news/articles/cwymly9yd33o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC News",
+        "published_at": "Sun, 19 Jul 2026 02:17:07 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f7d3/live/9a3779e0-8308-11f1-926f-c90d1bcfbc84.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/1.mp3"
       },
       {
         "title": "At least two dead in Texas floods ravaging same area where campers died",
-        "summary": "Texas is experiencing devastating floods that are striking the same region devastated by floods last year, which caused more than 130 deaths. The recurring disaster in the same area raises concerns about infrastructure resilience and disaster preparedness in flood-prone regions. At least two deaths have been reported from the current flooding event, with officials warning of continued dangerous conditions. The repeated impact on the same community within a year highlights vulnerabilities in flood management and recovery efforts. This pattern of recurring natural disasters in identical locations underscores the need for improved infrastructure investments, early warning systems, and comprehensive disaster mitigation strategies to protect residents from repeated catastrophic events.",
+        "summary": "Texas is experiencing severe flooding that is affecting the same region devastated by catastrophic floods in the previous year, which claimed over 130 lives. The current flooding has already resulted in at least two deaths and is impacting areas that have not fully recovered from the previous disaster. The recurring nature of these floods in the same location raises concerns about infrastructure resilience and disaster preparedness in the region. Survivors and residents face renewed trauma as the area confronts another major flooding event within a short timeframe.",
         "url": "https://www.bbc.co.uk/news/articles/c3v0xe5elzyo?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
         "published_at": "Fri, 17 Jul 2026 14:56:26 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9b7e/live/26ca8eb0-81ec-11f1-b7bc-5dd9ae7a9918.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/1.mp3",
-        "title_hi": "टेक्सास में बाढ़ से कम से कम दो लोग मारे गए, जहां कैंपर्स की मृत्यु हुई थी",
-        "summary_hi": "टेक्सास भीषण बाढ़ का सामना कर रहा है जो उसी क्षेत्र को प्रभावित कर रही है जो पिछले साल की बाढ़ से तबाह हुआ था, जिसमें 130 से अधिक लोगों की मृत्यु हुई थी। एक साल के भीतर एक ही क्षेत्र में आने वाली यह दोहराई गई आपदा बाढ़ के लिए असुरक्षित क्षेत्रों में बुनियादी ढांचे की लचक और आपदा तैयारी के बारे में चिंताएं बढ़ाती है। वर्तमान बाढ़ की घटना से कम से कम दो मौतें सामने आई हैं, अधिकारियों ने निरंतर खतरनाक स्थितियों की चेतावनी दी है। एक साल के भीतर एक ही समुदाय पर दोहराया गया प्रभाव बाढ़ प्रबंधन और पुनर्प्राप्ति प्रयासों में कमजोरियों को उजागर करता है। समान स्थानों पर आने वाली प्राकृतिक आपदाओं का यह पैटर्न निवासियों को दोहराई गई विनाशकारी घटनाओं से बचाने के लिए बेहतर बुनियादी ढांचे में निवेश, प्रारंभिक चेतावनी प्रणाली और व्यापक आपदा शमन रणनीतियों की आवश्यकता को रेखांकित करता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/usa/1.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/2.mp3"
       },
       {
-        "title": "Taco Bell removes lettuce from menu in US after links to explosive diarrhoea parasite",
-        "summary": "Taco Bell has removed lettuce from its US menu following a parasite outbreak linked to the fast-food chain. Approximately 1,645 people across five states were infected by the parasite after consuming Taco Bell products, according to US health officials. The outbreak prompted the company to take immediate action to prevent further infections and restore consumer confidence in food safety. The incident highlights vulnerabilities in the fresh produce supply chain and the importance of rigorous food safety protocols. A Central Coast farm company has been linked to the national outbreak, raising questions about agricultural practices and quality control measures. The removal of lettuce represents a significant operational change for the restaurant chain and underscores ongoing challenges in ensuring the safety of fresh produce from farm to consumer.",
-        "url": "https://www.bbc.co.uk/news/articles/cm2gnglyv0jo?at_medium=RSS&at_campaign=rss",
+        "title": "Trump threatens new Canada tariffs over fires sending 'filthy' air into US cities",
+        "summary": "President Trump has threatened to impose new tariffs on Canada in response to wildfires sending smoke and air pollution into US cities. Canadian leader Mark Carney has responded by stating that both nations share equal responsibility for addressing climate change, which experts indicate is worsening wildfire conditions. The dispute highlights tensions between the two countries over environmental management and trade policy. The wildfire smoke has significantly impacted air quality in major US cities, creating a public health concern that has become a point of diplomatic friction between the neighboring nations.",
+        "url": "https://www.bbc.co.uk/news/articles/cwyq93j34lgo?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
-        "published_at": "Fri, 17 Jul 2026 21:29:22 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/397d/live/ce5f99f0-8173-11f1-a21c-d51a3aa9a2f7.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/2.mp3",
-        "title_hi": "विस्फोटक दस्त परजीवी से जुड़ाव के बाद टैको बेल ने अमेरिका में मेनू से सलाद हटाया",
-        "summary_hi": "टैको बेल ने एक परजीवी प्रकोप के बाद अपने अमेरिकी मेनू से सलाद हटा दिया है जो फास्ट-फूड चेन से जुड़ा है। अमेरिकी स्वास्थ्य अधिकारियों के अनुसार, टैको बेल उत्पादों का सेवन करने के बाद पांच राज्यों में लगभग 1,645 लोग परजीवी से संक्रमित हुए। प्रकोप ने कंपनी को आगे के संक्रमण को रोकने और उपभोक्ता विश्वास को बहाल करने के लिए तत्काल कार्रवाई करने के लिए प्रेरित किया। यह घटना ताजी उपज आपूर्ति श्रृंखला में कमजोरियों और कठोर खाद्य सुरक्षा प्रोटोकॉल के महत्व को उजागर करती है। एक सेंट्रल कोस्ट फार्म कंपनी को राष्ट्रीय प्रकोप से जोड़ा गया है, जो कृषि प्रथाओं और गुणवत्ता नियंत्रण उपायों के बारे में सवाल उठाता है। सलाद को हटाना रेस्तरां चेन के लिए एक महत्वपूर्ण परिचालन परिवर्तन का प्रतिनिधित्व करता है और खेत से उपभोक्ता तक ताजी उपज की सुरक्षा सुनिश्चित करने में चल रही चुनौतियों को रेखांकित करता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/usa/2.mp3"
+        "published_at": "Sat, 18 Jul 2026 17:29:50 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0b00/live/0ecf40f0-81ea-11f1-b7bc-5dd9ae7a9918.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/3.mp3"
       },
       {
-        "title": "Trump alleges China meddled in 2020 election and questions voting security ahead of midterms",
-        "summary": "President Trump has alleged that China interfered in the 2020 election and raised questions about voting security ahead of November's midterm elections. China has dismissed Trump's claims as fabricated, while US Democrats argue he is laying groundwork to undermine the legitimacy of the upcoming elections. Election experts have stated that Trump's speech and released unclassified documents provide no evidence supporting his allegations. The claims reflect ongoing partisan disputes over election integrity and voting security in the United States. Trump's statements come amid broader concerns about election security and foreign interference, though officials emphasize the robustness of US voting systems. The controversy highlights the contentious political environment surrounding elections and the challenge of distinguishing between legitimate security concerns and partisan rhetoric.",
-        "url": "https://www.bbc.co.uk/news/articles/cx2k9wvv5wyo?at_medium=RSS&at_campaign=rss",
+        "title": "What this desert city can teach the world about tackling heat deaths",
+        "summary": "Maricopa County in Arizona, despite experiencing some of the highest temperatures in the nation, has successfully reduced the number of heat-related deaths through targeted interventions and public health strategies. The county's approach offers valuable lessons for other regions facing extreme heat challenges as climate change intensifies. By implementing effective cooling centers, emergency response systems, and community outreach programs, Maricopa County has demonstrated that heat-related mortality can be mitigated even in extremely hot environments. The county's success provides a model that other cities and regions experiencing dangerous heat waves could potentially adopt to protect vulnerable populations.",
+        "url": "https://www.bbc.co.uk/news/articles/cgl3lnpxy6no?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
-        "published_at": "Fri, 17 Jul 2026 11:37:00 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d581/live/e4364610-818d-11f1-bee8-53ce494e1abc.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/3.mp3",
-        "title_hi": "ट्रम्प ने चीन के 2020 चुनाव में हस्तक्षेप का आरोप लगाया और मध्यावधि चुनावों से पहले मतदान सुरक्षा पर सवाल उठाए",
-        "summary_hi": "राष्ट्रपति ट्रम्प ने आरोप लगाया है कि चीन ने 2020 के चुनाव में हस्तक्षेप किया और नवंबर के मध्यावधि चुनावों से पहले मतदान सुरक्षा के बारे में सवाल उठाए हैं। चीन ने ट्रम्प के दावों को जाली बताया है, जबकि अमेरिकी डेमोक्रेट तर्क देते हैं कि वह आने वाले चुनावों की वैधता को कमजोर करने के लिए जमीन तैयार कर रहे हैं। चुनाव विशेषज्ञों ने कहा है कि ट्रम्प के भाषण और जारी किए गए अवर्गीकृत दस्तावेज उनके आरोपों का समर्थन करने के लिए कोई सबूत प्रदान नहीं करते हैं। दावे संयुक्त राज्य में चुनाव अखंडता और मतदान सुरक्षा पर चल रहे पक्षपातपूर्ण विवादों को प्रतिबिंबित करते हैं। ट्रम्प के बयान चुनाव सुरक्षा और विदेशी हस्तक्षेप के बारे में व्यापक चिंताओं के बीच आते हैं, हालांकि अधिकारी अमेरिकी मतदान प्रणालियों की मजबूती पर जोर देते हैं। विवाद चुनावों के आसपास विवादास्पद राजनीतिक वातावरण और वैध सुरक्षा चिंताओं और पक्षपातपूर्ण बयानबाजी के बीच अंतर करने की चुनौती को उजागर करता है।",
-        "audio_hi": ""
-      },
-      {
-        "title": "US data center protests go national as backlash grows",
-        "summary": "Opponents of rapid data center expansion are organizing coordinated protests across the United States, with demonstrations planned for Saturday in at least 125 locations. This marks the first national effort to channel growing anger at the accelerated buildout of artificial intelligence infrastructure over the past year. The expansion of data centers has roiled local politics and sparked significant community backlash in numerous regions. Protesters are concerned about various impacts including energy consumption, environmental effects, land use, and local community disruption. The nationwide coordination demonstrates the scale of opposition to AI infrastructure development and reflects broader public concerns about the pace and consequences of technological expansion. The protests represent a significant grassroots movement challenging corporate and government priorities regarding data center development and its effects on communities.",
-        "url": "https://www.msn.com/en-us/money/companies/us-data-center-protests-go-national-as-backlash-grows/ar-AA28b9rL",
-        "source": "Reuters",
-        "published_at": "2026-07-18T10:06:47+00:00",
-        "image": "",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/4.mp3",
-        "title_hi": "अमेरिकी डेटा सेंटर विरोध राष्ट्रीय स्तर पर जाते हैं क्योंकि प्रतिक्रिया बढ़ती है",
-        "summary_hi": "तीव्र डेटा सेंटर विस्तार के विरोधी संयुक्त राज्य भर में समन्वित विरोध का आयोजन कर रहे हैं, शनिवार को कम से कम 125 स्थानों पर प्रदर्शन की योजना है। यह कृत्रिम बुद्धिमत्ता बुनियादी ढांचे के त्वरित निर्माण के प्रति बढ़ते क्रोध को चैनल करने का पहला राष्ट्रीय प्रयास है। डेटा सेंटर के विस्तार ने स्थानीय राजनीति को प्रभावित किया है और कई क्षेत्रों में महत्वपूर्ण सामुदायिक प्रतिक्रिया को जन्म दिया है। विरोधकर्ता ऊर्जा खपत, पर्यावरणीय प्रभाव, भूमि उपयोग और स्थानीय सामुदायिक व्यवधान सहित विभिन्न प्रभावों के बारे में चिंतित हैं। राष्ट्रव्यापी समन्वय कृत्रिम बुद्धिमत्ता बुनियादी ढांचे के विकास के प्रति विरोध के पैमाने को प्रदर्शित करता है और तकनीकी विस्तार की गति और परिणामों के बारे में व्यापक जनता की चिंताओं को प्रतिबिंबित करता है। विरोध डेटा सेंटर विकास और समुदायों पर इसके प्रभावों के संबंध में कॉर्पोरेट और सरकारी प्राथमिकताओं को चुनौती देने वाले एक महत्वपूर्ण जमीनी आंदोलन का प्रतिनिधित्व करते हैं।",
-        "audio_hi": ""
+        "published_at": "Fri, 17 Jul 2026 23:56:08 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a3ec/live/524b9090-8140-11f1-9fa8-b3da54326712.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/4.mp3"
       }
     ],
     "india": [
       {
+        "title": "India's Ganesh idol makers count the cost of devastating floods",
+        "summary": "Devastating floods in Maharashtra have destroyed months of work by Ganesh idol makers just weeks before the Ganesh Chaturthi festival. The natural disaster has caused significant economic and cultural impact on artisans who depend on this annual celebration for their livelihoods. The flooding has washed away completed idols and raw materials, threatening the traditional craft industry ahead of one of India's most important religious festivals. This disruption affects not only individual craftspeople but also the broader cultural and economic ecosystem surrounding the festival celebrations in the region.",
+        "url": "https://www.bbc.co.uk/news/articles/cp8r850e7z1o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC News",
+        "published_at": "Sun, 19 Jul 2026 00:37:33 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/8247/live/6b0bd1f0-8003-11f1-abea-7311bff0fafb.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/0.mp3"
+      },
+      {
         "title": "Diamonds and 'cab to orbit': Rocket aiming to transform India's space ambitions takes off",
-        "summary": "India's first privately developed orbital rocket, Vikram-1, successfully launched by space-tech unicorn Skyroot Aerospace on Saturday, placing multiple payloads into low-Earth orbit. The vehicle utilized advanced carbon-composite structures and a restartable liquid-fuelled module, marking a significant milestone in opening India's space sector to private companies. This successful mission validates India's capabilities in private orbital launch vehicle development and demonstrates the country's growing commercial space industry, potentially transforming India's space ambitions through private sector participation.",
+        "summary": "India's first space-tech unicorn Skyroot Aerospace successfully launched its Vikram-1 rocket on Saturday, marking a significant milestone for India's commercial space sector. The launch represents a transformative moment for India's space ambitions, demonstrating the country's growing capabilities in space technology and commercial spaceflight. Skyroot Aerospace's achievement highlights India's emergence as a player in the global space industry, with innovative technologies and ambitious goals. The successful launch of Vikram-1 is expected to accelerate India's space economy and attract further investment in the sector, positioning the nation competitively in the international space market.",
         "url": "https://www.bbc.co.uk/news/articles/clyekv7rld3o?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
         "published_at": "Sat, 18 Jul 2026 07:05:19 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d67c/live/812402b0-81c4-11f1-926f-c90d1bcfbc84.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/0.mp3",
-        "title_hi": "हीरे और 'ऑर्बिट के लिए कैब': भारत की अंतरिक्ष महत्वाकांक्षाओं को बदलने वाला रॉकेट लॉन्च हुआ",
-        "summary_hi": "भारत का पहला निजी तौर पर विकसित ऑर्बिटल रॉकेट, विक्रम-1, अंतरिक्ष-तकनीक यूनिकॉर्न स्काईरूट एयरोस्पेस द्वारा शनिवार को सफलतापूर्वक लॉन्च किया गया, जिसने कई पेलोड को निम्न-पृथ्वी कक्षा में स्थापित किया। इस वाहन ने उन्नत कार्बन-कंपोजिट संरचनाओं और एक पुनः प्रारंभ योग्य तरल-ईंधन मॉड्यूल का उपयोग किया, जो भारत के अंतरिक्ष क्षेत्र को निजी कंपनियों के लिए खोलने में एक महत्वपूर्ण मील का पत्थर है। यह सफल मिशन भारत की निजी ऑर्बिटल लॉन्च वाहन विकास में क्षमताओं को मान्य करता है और देश के बढ़ते वाणिज्यिक अंतरिक्ष उद्योग को प्रदर्शित करता है, जो निजी क्षेत्र की भागीदारी के माध्यम से भारत की अंतरिक्ष महत्वाकांक्षाओं को बदल सकता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/india/0.mp3"
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/56eb/live/beb0cb10-82a8-11f1-84ea-29e7008b1ad8.png",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/1.mp3"
       },
       {
         "title": "Sonam Wangchuk forcibly taken to hospital after 20 days of hunger strike",
-        "summary": "Activist Sonam Wangchuk was forcibly hospitalized after conducting a 20-day hunger strike, continuing a tradition of protest through fasting in Indian politics. Following his hospitalization, Cockroach Janta Party founder Abhijeet Dipke began an indefinite fast in Wangchuk's place, demonstrating the ongoing significance of hunger strikes as political tools in India. This reflects a broader pattern where such protests have historically shaped Indian politics and policy outcomes, from Mahatma Gandhi's era to contemporary activism, highlighting how civil disobedience through fasting remains a powerful mechanism for political change and public attention.",
+        "summary": "Environmental activist and education reformer Sonam Wangchuk was forcibly hospitalized after conducting a 20-day hunger strike, with his cause subsequently taken up by Cockroach Janta Party founder Abhijeet Dipke, who began an indefinite fast in his place. Wangchuk's protest and subsequent hospitalization have drawn significant attention to his activism and the issues he champions. The continuation of the protest through Dipke demonstrates the movement's persistence and commitment to its objectives. This incident reflects the ongoing tradition of hunger strikes as a political tool in India, highlighting tensions between activist movements and government authorities regarding civil disobedience and protest methods.",
         "url": "https://www.bbc.co.uk/news/articles/cjej3dxxg2do?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
         "published_at": "Sat, 18 Jul 2026 05:58:48 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3173/live/ad78f910-825a-11f1-9346-85db1a1d6a02.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/1.mp3",
-        "title_hi": "सोनम वांगचुक को 20 दिन की भूख हड़ताल के बाद जबरदस्ती अस्पताल ले जाया गया",
-        "summary_hi": "कार्यकर्ता सोनम वांगचुक को 20 दिन की भूख हड़ताल के बाद जबरदस्ती अस्पताल में भर्ती किया गया, जो भारतीय राजनीति में उपवास के माध्यम से विरोध की परंपरा को जारी रखता है। अपने अस्पताल में भर्ती होने के बाद, कॉकरोच जनता पार्टी के संस्थापक अभिजीत दिप्के ने वांगचुक की जगह एक अनिश्चितकालीन उपवास शुरू किया, जो भारत में राजनीतिक उपकरण के रूप में भूख हड़तालों के चल रहे महत्व को प्रदर्शित करता है। यह एक व्यापक पैटर्न को दर्शाता है जहां ऐसे विरोध ने ऐतिहासिक रूप से महात्मा गांधी के युग से लेकर समकालीन सक्रियता तक भारतीय राजनीति और नीति परिणामों को आकार दिया है, जो दर्शाता है कि उपवास के माध्यम से सविनय अवज्ञा राजनीतिक परिवर्तन और जनता का ध्यान आकर्षित करने के लिए एक शक्तिशाली तंत्र बनी हुई है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/india/1.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/2.mp3"
       },
       {
         "title": "Crackdown on 'objectionable' books in Indian-administered Kashmir sparks row",
-        "summary": "Authorities in Indian-administered Kashmir have instructed educational institutions to review every book on their premises, raising concerns about censorship and freedom of expression. This crackdown on materials deemed 'objectionable' has sparked significant controversy among civil liberties advocates and educators. The directive represents a broader pattern of content regulation in the region and has generated debate about the balance between administrative authority and intellectual freedom in educational settings, with implications for students' access to diverse literary and academic materials.",
+        "summary": "Authorities in Indian-administered Kashmir have instructed educational institutions to review every book on their premises, raising concerns about censorship and academic freedom. The crackdown on books deemed 'objectionable' has sparked significant controversy among educators, civil society organizations, and free speech advocates. The directive represents a broad intervention in educational content and curriculum decisions, affecting schools and libraries across the region. Critics argue the measure threatens intellectual freedom and access to diverse perspectives, while authorities maintain it addresses concerns about inappropriate material. The initiative has generated debate about the balance between content regulation and educational autonomy in Kashmir's institutional landscape.",
         "url": "https://www.bbc.co.uk/news/articles/c0jyj292xdgo?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
         "published_at": "Wed, 15 Jul 2026 22:05:16 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/46f4/live/d0c4a8d0-800f-11f1-855c-e18bf6105698.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/2.mp3",
-        "title_hi": "भारत-प्रशासित कश्मीर में 'आपत्तिजनक' पुस्तकों पर कार्रवाई से विवाद",
-        "summary_hi": "भारत-प्रशासित कश्मीर के अधिकारियों ने शैक्षणिक संस्थानों को अपने परिसर में हर पुस्तक की समीक्षा करने का निर्देश दिया है, जिससे सेंसरशिप और अभिव्यक्ति की स्वतंत्रता के बारे में चिंताएं बढ़ी हैं। 'आपत्तिजनक' माने जाने वाली सामग्री पर इस कार्रवाई ने नागरिक स्वतंत्रता वकीलों और शिक्षकों के बीच महत्वपूर्ण विवाद पैदा किया है। यह निर्देश क्षेत्र में सामग्री विनियमन के एक व्यापक पैटर्न का प्रतिनिधित्व करता है और शैक्षणिक सेटिंग्स में प्रशासनिक प्राधिकार और बौद्धिक स्वतंत्रता के बीच संतुलन के बारे में बहस उत्पन्न की है, जिसका छात्रों की विविध साहित्यिक और शैक्षणिक सामग्री तक पहुंच पर प्रभाव है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/india/2.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/3.mp3"
       },
       {
         "title": "Muslim judge in India faces death threats after convicting 'cow vigilantes'",
-        "summary": "Judge Tabassum Khan has faced severe online abuse and death threats following her conviction of fourteen Hindu men in a lynching case related to cow vigilantism. The case highlights tensions surrounding communal violence and judicial independence in India, with the judge's religious identity becoming a focal point for harassment. This incident raises concerns about the safety of judicial officers who deliver verdicts in sensitive communal cases and reflects broader challenges regarding religious polarization, online harassment, and the protection of those administering justice in contentious matters.",
+        "summary": "Judge Tabassum Khan has faced severe online abuse and death threats following her conviction of fourteen Hindu men in a lynching case involving cow vigilantism. The judge's decision to prosecute the accused has made her a target for harassment on social media and other platforms. This case highlights the dangerous intersection of religious tensions, vigilantism, and judicial independence in India. Khan's experience underscores the risks faced by judges who deliver verdicts in sensitive communal cases, particularly when those verdicts challenge powerful groups. The incident raises concerns about judicial safety, the rule of law, and the ability of courts to function independently amid communal polarization and online intimidation campaigns.",
         "url": "https://www.bbc.co.uk/news/articles/cd6e9zq87xvo?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
         "published_at": "Sun, 12 Jul 2026 00:49:24 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9b9e/live/2a507da0-7bf8-11f1-b447-c332f78126d1.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/3.mp3",
-        "title_hi": "भारत में मुस्लिम न्यायाधीश को 'गौ सतर्कताकर्मियों' को दोषी ठहराने के बाद मौत की धमकियां मिलीं",
-        "summary_hi": "न्यायाधीश तबस्सुम खान को गौ सतर्कता से संबंधित एक लिंचिंग मामले में चौदह हिंदू पुरुषों को दोषी ठहराने के बाद गंभीर ऑनलाइन दुर्व्यवहार और मौत की धमकियां मिली हैं। यह मामला भारत में सांप्रदायिक हिंसा और न्यायिक स्वतंत्रता के आसपास तनाव को उजागर करता है, न्यायाधीश की धार्मिक पहचान उत्पीड़न का केंद्रबिंदु बन गई है। यह घटना संवेदनशील सांप्रदायिक मामलों में फैसले सुनाने वाले न्यायिक अधिकारियों की सुरक्षा के बारे में चिंताएं बढ़ाती है और धार्मिक ध्रुवीकरण, ऑनलाइन उत्पीड़न और न्याय प्रशासन करने वाले लोगों की सुरक्षा से संबंधित व्यापक चुनौतियों को दर्शाती है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/india/3.mp3"
-      },
-      {
-        "title": "India is adding biofuels to petrol – but many drivers are unhappy",
-        "summary": "India has begun adding biofuels to petrol through the E20 fuel blend, a policy aimed at promoting renewable energy and reducing petroleum dependence. However, motorists have expressed significant dissatisfaction, reporting reduced fuel efficiency in their vehicles and concerns about potential higher maintenance costs. The implementation has generated consumer backlash despite environmental benefits, highlighting the tension between government sustainability goals and practical consumer concerns, raising questions about the transition strategy's effectiveness and public acceptance of green fuel initiatives.",
-        "url": "https://www.bbc.co.uk/news/articles/crlw74gd6lro?at_medium=RSS&at_campaign=rss",
-        "source": "BBC News",
-        "published_at": "Wed, 08 Jul 2026 22:06:00 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/014b/live/63b81fd0-7a8b-11f1-a368-fda0a38e0ca0.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/4.mp3",
-        "title_hi": "भारत पेट्रोल में बायोफ्यूल जोड़ रहा है – लेकिन कई ड्राइवर नाखुश हैं",
-        "summary_hi": "भारत ने ई20 ईंधन मिश्रण के माध्यम से पेट्रोल में बायोफ्यूल जोड़ना शुरू किया है, यह एक नीति है जिसका उद्देश्य नवीकरणीय ऊर्जा को बढ़ावा देना और पेट्रोलियम पर निर्भरता को कम करना है। हालांकि, मोटरिस्टों ने महत्वपूर्ण असंतुष्टि व्यक्त की है, अपने वाहनों में ईंधन दक्षता में कमी और संभावित उच्च रखरखाव लागत के बारे में चिंताएं बताई हैं। कार्यान्वयन ने पर्यावरणीय लाभों के बावजूद उपभोक्ता प्रतिक्रिया उत्पन्न की है, जो सरकार की स्थिरता लक्ष्यों और व्यावहारिक उपभोक्ता चिंताओं के बीच तनाव को उजागर करता है, जो संक्रमण रणनीति की प्रभावशीलता और हरित ईंधन पहल की जनता स्वीकृति के बारे में सवाल उठाता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/india/4.mp3"
+        "audio": ""
       }
     ],
     "odisha": [
       {
-        "title": "Minor boy stripped, beaten in Cuttack. FIR filed after video goes viral",
-        "summary": "A disturbing viral video documented a minor boy being stripped and physically assaulted in Cuttack's Chauliaganj area, sparking significant public outrage and immediate police intervention. The incident prompted authorities to file a First Information Report (FIR) following widespread circulation of the footage on social media platforms. Police have issued warnings against further sharing of material that identifies the victim, emphasizing the need to protect the child's privacy and dignity during the investigation. The case highlights growing concerns about violence against minors and the role of social media in exposing such crimes, while also raising questions about responsible sharing of sensitive content involving children.",
-        "url": "https://www.msn.com/en-in/news/India/minor-boy-stripped-beaten-in-cuttack-fir-filed-after-video-goes-viral/ar-AA28b9te?ocid=BingNewsVerp",
-        "source": "India Today on MSN",
-        "published_at": "2026-06-27T10:23:26+00:00",
-        "image": "",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/0.mp3",
-        "title_hi": "कटक में नाबालिग लड़के को निर्वस्त्र कर पीटा गया, वीडियो वायरल होने के बाद दर्ज हुई एफआईआर",
-        "summary_hi": "कटक के चौलियागंज इलाके में एक नाबालिग लड़के को निर्वस्त्र कर शारीरिक रूप से प्रताड़ित किए जाने का एक परेशान करने वाला वीडियो वायरल हुआ, जिससे जनता में व्यापक आक्रोश और पुलिस के तत्काल हस्तक्षेप को बढ़ावा मिला। इस घटना के बाद सोशल मीडिया प्लेटफॉर्म पर फुटेज के व्यापक प्रसार के कारण अधिकारियों ने प्रथम सूचना रिपोर्ट (एफआईआर) दर्ज की। पुलिस ने पीड़ित को पहचानने वाली सामग्री को आगे साझा करने के खिलाफ चेतावनी जारी की है, जांच के दौरान बच्चे की गोपनीयता और गरिमा की रक्षा की आवश्यकता पर जोर दिया है। यह मामला नाबालिगों के खिलाफ हिंसा के बारे में बढ़ती चिंताओं और ऐसे अपराधों को उजागर करने में सोशल मीडिया की भूमिका को उजागर करता है, साथ ही बच्चों से संबंधित संवेदनशील सामग्री के जिम्मेदार साझाकरण के बारे में सवाल भी उठाता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/odisha/0.mp3"
+        "title": "Elderly woman dies, lakhs pushed to the brink due to stoppage of pensions in Odisha, say activists",
+        "summary": "An elderly woman's death has sparked outrage in Odisha as approximately 20 lakh pensioners face severe hardship due to pension payment stoppages caused by technical glitches. Activists have demanded accountability from authorities regarding the administrative failure. The incident highlights the vulnerability of elderly citizens dependent on regular pension disbursements and raises concerns about the state's pension distribution system. The widespread disruption affecting such a large number of beneficiaries underscores systemic issues in the implementation and maintenance of critical social welfare infrastructure, prompting calls for immediate remedial action and compensation for affected pensioners.",
+        "url": "https://www.thehindu.com/news/national/odisha/elderly-woman-dies-lakhs-pushed-to-the-brink-due-to-stoppage-of-pensions-in-odisha-say-activists/article71238038.ece",
+        "source": "The Hindu",
+        "published_at": "2026-07-18T16:40:00+00:00",
+        "image": "https://th-i.thgim.com/public/incoming/q8lnou/article71239253.ece/alternates/LANDSCAPE_1200/Rupee.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/0.mp3"
+      },
+      {
+        "title": "Over 750 hectares of forest land likely to be diverted for coal mining in Odisha's Angul district",
+        "summary": "More than 750 hectares of forest land in Odisha's Angul district faces diversion for the proposed Alakananda coal mine, which has been allotted to Rungta Sons Private Limited. This significant environmental impact raises concerns about deforestation and ecological degradation in the region. The diversion of such extensive forest cover for mining operations reflects the ongoing tension between economic development and environmental conservation in Odisha. The project's approval process and potential consequences for local biodiversity, tribal communities, and long-term environmental sustainability remain critical considerations in the state's resource management policies.",
+        "url": "https://www.msn.com/en-in/money/markets/over-750-hectares-of-forest-land-likely-to-be-diverted-for-coal-mining-in-odishas-angul-district/ar-AA289Cnn",
+        "source": "The Pioneer",
+        "published_at": "2026-07-18T10:21:00+00:00",
+        "image": "https://etimg.etb2bimg.com/thumb/msid-132478056,imgsize-4029208,width-1200,height=627,overlay-etenergy,resizemode-75/coal/750-hectares-of-forest-land-likely-to-be-diverted-for-coal-mining-in-odishas-angul.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/1.mp3"
+      },
+      {
+        "title": "NGT orders sealing of chromium-tainted wells in Odisha's Sukinda",
+        "summary": "The National Green Tribunal has ordered the sealing of chromium-contaminated wells in Sukinda valley, located in Jajpur district. Sukinda valley holds approximately 97 percent of India's chromite reserves and supplies 100 percent of the country's domestic chrome ore production. The contamination of water sources represents a serious public health and environmental concern for local communities dependent on these wells. The NGT's intervention addresses the critical issue of environmental pollution resulting from chromite mining operations, balancing the nation's mineral production needs with the imperative to protect groundwater resources and ensure safe drinking water access for residents in the mining region.",
+        "url": "https://www.msn.com/en-in/news/India/ngt-orders-sealing-of-chromium-tainted-wells-in-odisha-s-sukinda/ar-AA28bl1c",
+        "source": "Hindustan Times",
+        "published_at": "2026-07-18T15:03:53+00:00",
+        "image": "https://www.hindustantimes.com/ht-img/img/2026/07/18/550x309/The-NGT-began-the-suo-motu-proceedings-following-a_1784387027559.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/2.mp3"
+      },
+      {
+        "title": "Work for welfare of last person, ensure tribal development reaches grassroots: Odisha CM to SDCs",
+        "summary": "Odisha Chief Minister Mohan Charan Majhi addressed newly appointed members of the Special Development Councils, directing them to prioritize welfare measures that reach the most marginalized segments of society. Speaking to the chairpersons and vice-chairpersons of 23 SDCs, the Chief Minister emphasized the importance of grassroots-level implementation of tribal development initiatives. His directive underscores the state government's commitment to inclusive development and equitable distribution of resources across tribal communities. The emphasis on reaching the last person in society reflects a policy focus on addressing regional disparities and ensuring that development benefits permeate through all administrative levels to vulnerable populations.",
+        "url": "https://theprint.in/india/work-for-welfare-of-last-person-ensure-tribal-development-reaches-grassroots-odisha-cm-to-sdcs/2990177/",
+        "source": "The Print",
+        "published_at": "2026-07-18T15:17:00+00:00",
+        "image": "https://staticprintenglish.theprint.in/wp-content/uploads/2023/06/theprint_default_image_new.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/3.mp3"
+      },
+      {
+        "title": "11-month-old baby declared dead found alive, dies later in Odisha's Kalahandi",
+        "summary": "An 11-month-old infant allegedly declared dead by medical personnel was discovered alive while being transported home in Kalahandi district but subsequently died. The incident has triggered serious allegations of medical negligence against healthcare providers and prompted an official investigation into the circumstances. The case raises critical questions about diagnostic accuracy, medical protocols, and accountability within the healthcare system. The tragic outcome and the apparent failure in initial medical assessment have sparked concern among residents regarding the quality of medical services in the district and the need for improved training, oversight, and quality assurance mechanisms in healthcare facilities serving vulnerable populations.",
+        "url": "https://sambadenglish.com/latest-news/11-month-old-baby-declared-dead-found-alive-dies-later-in-odishas-kalahandi-12178151",
+        "source": "Sambad English",
+        "published_at": "2026-07-19T06:52:00+00:00",
+        "image": "https://img-cdn.publive.online/fit-in/1200x675/sambad-english/media/media_files/2026/07/19/saheed-rendo-majhi-medical-college-and-hospital-2026-07-19-12-19-14.jpeg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/4.mp3"
       }
     ],
     "sports": [
       {
-        "title": "All Blacks punish Ireland in dominant Eden Park win",
-        "summary": "New Zealand's rugby team delivered a dominant performance against Ireland in a Nations Championship match at Eden Park, scoring five tries to secure a convincing victory. The result extends the All Blacks' remarkable 32-year unbeaten record at their home ground, demonstrating their continued dominance in international rugby. The match was largely one-sided, with New Zealand's ruthless attacking play overwhelming Ireland's defense throughout the contest, showcasing the All Blacks' status as a premier rugby nation.",
-        "url": "https://www.bbc.co.uk/sport/rugby-union/articles/c4gk5exp8eko?at_medium=RSS&at_campaign=rss",
+        "title": "England beat France in 10-goal thriller to win third-place play-off",
+        "summary": "England secured their best men's World Cup finish since 1966 by defeating France 6-4 in an extraordinary third-place play-off match. Bukayo Saka was the standout performer, scoring a hat-trick in the high-scoring encounter. The victory marks a significant achievement for the England squad, demonstrating their competitive strength throughout the tournament. This result represents a major milestone for English football, as the team has not achieved such a strong World Cup performance in six decades, reflecting the quality and depth of the current squad's capabilities.",
+        "url": "https://www.bbc.co.uk/sport/football/videos/cm2gn7v4jljo?at_medium=RSS&at_campaign=rss",
         "source": "BBC Sport",
-        "published_at": "Sat, 18 Jul 2026 09:15:09 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2212/live/95bdb630-8287-11f1-a23b-f5a17a30f7d0.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/0.mp3",
-        "title_hi": "ऑल ब्लैक्स ने ईडन पार्क में आयरलैंड को प्रभावशाली जीत से दंडित किया",
-        "summary_hi": "न्यूजीलैंड की रग्बी टीम ने ईडन पार्क में नेशंस चैंपियनशिप मैच में आयरलैंड के खिलाफ एक प्रभावशाली प्रदर्शन किया, पांच ट्राई स्कोर करके एक शानदार जीत हासिल की। यह परिणाम ऑल ब्लैक्स के अपने घरेलू मैदान पर 32 साल के अविश्वसनीय अपराजेय रिकॉर्ड को बढ़ाता है, जो अंतर्राष्ट्रीय रग्बी में उनके निरंतर प्रभुत्व को प्रदर्शित करता है। मैच बड़े हिस्से में एकतरफा था, न्यूजीलैंड के निर्दय आक्रमणकारी खेल ने पूरे मैच में आयरलैंड की रक्षा को कुचल दिया, ऑल ब्लैक्स की प्रीमियर रग्बी राष्ट्र के रूप में स्थिति को प्रदर्शित किया।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/sports/0.mp3"
+        "published_at": "Sun, 19 Jul 2026 01:12:34 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a259/live/f5a9d0c0-8308-11f1-bee8-53ce494e1abc.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/0.mp3"
       },
       {
-        "title": "Clark makes history with 45 points and 10 assists",
-        "summary": "Caitlin Clark achieved a historic milestone in WNBA history by becoming the first player ever to record over 40 points and 10 assists in a single game. Playing for the Indiana Fever against the Seattle Storm, Clark's exceptional performance demonstrated her elite scoring and playmaking abilities at the professional level. This record-breaking achievement underscores Clark's emergence as one of the league's most dynamic and impactful players, capable of dominating games through both individual scoring and facilitating teammates' success.",
-        "url": "https://www.bbc.co.uk/sport/basketball/articles/c9d8y9dn51xo?at_medium=RSS&at_campaign=rss",
+        "title": "Bellingham breaks England World Cup goals record",
+        "summary": "Jude Bellingham made history by becoming the first Englishman to score seven goals at a single World Cup tournament. The midfielder achieved this record with a late strike during England's third-place play-off match against France. Bellingham's seven-goal haul represents an exceptional individual performance at the tournament and underscores his emergence as a key player for the national team. This achievement highlights the attacking prowess demonstrated by England throughout the competition and Bellingham's crucial contribution to the team's strong showing in North America.",
+        "url": "https://www.bbc.co.uk/sport/football/articles/c0qvzqlp4pdo?at_medium=RSS&at_campaign=rss",
         "source": "BBC Sport",
-        "published_at": "Sat, 18 Jul 2026 08:46:21 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4173/live/8d50c640-827d-11f1-9ffb-b1fdb5e008f5.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/1.mp3",
-        "title_hi": "क्लार्क ने 45 अंक और 10 असिस्ट के साथ इतिहास रचा",
-        "summary_hi": "केटलिन क्लार्क ने डब्ल्यूएनबीए के इतिहास में एक ऐतिहासिक मील का पत्थर हासिल किया, एक ही गेम में 40 से अधिक अंक और 10 असिस्ट दर्ज करने वाली पहली खिलाड़ी बन गईं। इंडियाना फीवर के लिए सिएटल स्टॉर्म के खिलाफ खेलते हुए, क्लार्क के असाधारण प्रदर्शन ने पेशेवर स्तर पर उनकी अभिजात स्कोरिंग और प्लेमेकिंग क्षमताओं को प्रदर्शित किया। यह रिकॉर्ड-तोड़ने वाली उपलब्धि क्लार्क के लीग के सबसे गतिशील और प्रभावशाली खिलाड़ियों में से एक के रूप में उभरने को रेखांकित करती है, जो व्यक्तिगत स्कोरिंग और साथियों की सफलता को सुविधाजनक बनाने दोनों के माध्यम से गेम पर हावी होने में सक्षम हैं।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/sports/1.mp3"
+        "published_at": "Sun, 19 Jul 2026 00:47:11 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f870/live/334171a0-8308-11f1-b9cd-c9e5bc6349ad.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/1.mp3"
       },
       {
-        "title": "Sam Burns ties Open Championship round record with 62",
-        "summary": "Sam Burns equaled the record for the lowest round at a men's major championship, shooting a 62 during the second round of the 2026 Open Championship at Royal Birkdale. Burns' exceptional performance included a fantastic finish, holing out from a bunker on the 18th hole to secure his place in golf history alongside Lucas Herbert, who previously matched this record. The achievement highlights Burns' exceptional skill and composure under pressure in one of golf's most prestigious tournaments.",
-        "url": "https://www.bbc.co.uk/sport/golf/videos/ckg3n8dzvyko?at_medium=RSS&at_campaign=rss",
+        "title": "Britain's Kerr breaks 27-year mile world record in London",
+        "summary": "Great Britain's Josh Kerr delivered a spectacular performance at the London Diamond League by breaking the men's mile world record that had stood for 27 years. This remarkable achievement represents a significant milestone in athletics, demonstrating Kerr's exceptional talent and dedication to the sport. The record-breaking run took place in front of a home crowd in London, adding to the significance of the accomplishment. Kerr's performance marks a major breakthrough in middle-distance running and establishes him as one of the world's elite milers, with implications for future international competition.",
+        "url": "https://www.bbc.co.uk/sport/athletics/articles/cx2jl1wge2po?at_medium=RSS&at_campaign=rss",
         "source": "BBC Sport",
-        "published_at": "Fri, 17 Jul 2026 14:34:05 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/cfc1/live/b2a213a0-81eb-11f1-b976-0b9c15b0ccfc.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/2.mp3",
-        "title_hi": "सैम बर्न्स ने 62 के साथ ओपन चैंपियनशिप राउंड रिकॉर्ड को बराबर किया",
-        "summary_hi": "सैम बर्न्स ने पुरुषों की प्रमुख चैंपियनशिप में सबसे कम राउंड के लिए रिकॉर्ड को बराबर किया, रॉयल बर्कडेल में 2026 ओपन चैंपियनशिप के दूसरे राउंड में 62 का स्कोर बनाया। बर्न्स के असाधारण प्रदर्शन में एक शानदार समापन शामिल था, 18वें होल पर एक बंकर से होल आउट करके गोल्फ के इतिहास में अपनी जगह सुरक्षित की, जो लुकास हर्बर्ट के साथ है, जिन्होंने पहले इस रिकॉर्ड को बराबर किया था। यह उपलब्धि गोल्फ की सबसे प्रतिष्ठित टूर्नामेंटों में से एक में दबाव में बर्न्स की असाधारण कौशल और संयम को उजागर करती है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/sports/2.mp3"
+        "published_at": "Sat, 18 Jul 2026 14:48:16 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3a49/live/37aa2290-82be-11f1-87aa-2bcbbeff03e6.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/2.mp3"
       },
       {
-        "title": "Messi and Brady in disbelief over 'prophetic' Lamine Yamal photo",
-        "summary": "Lionel Messi expressed amazement at the coincidence of facing Spain's Lamine Yamal in the 2026 World Cup final, recalling a photograph taken when Yamal was a baby. The iconic image, which captured Messi holding the infant Yamal years earlier, has taken on prophetic significance as both players now meet on football's biggest stage. Messi described the situation as \"crazy,\" highlighting the remarkable nature of their paths converging at this moment in their careers and the enduring legacy of that early encounter.",
-        "url": "https://www.bbc.co.uk/sport/football/articles/c5yejxqll3go?at_medium=RSS&at_campaign=rss",
+        "title": "Chelsea agree record £117m deal for Villa's Rogers",
+        "summary": "Chelsea have completed a club record transfer, agreeing a £117 million deal to sign England international midfielder Morgan Rogers from Aston Villa. This represents the most expensive signing in Chelsea's history and reflects the club's ambition in the transfer market. Rogers, an established England international, brings significant quality and experience to Chelsea's midfield. The substantial investment demonstrates Chelsea's commitment to strengthening their squad ahead of the upcoming season and positions Rogers as a key player in their future plans.",
+        "url": "https://www.bbc.co.uk/sport/football/articles/c0ej1jyy8yyo?at_medium=RSS&at_campaign=rss",
         "source": "BBC Sport",
-        "published_at": "Sat, 18 Jul 2026 08:59:23 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1a8e/live/0e128af0-828a-11f1-a23b-f5a17a30f7d0.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/3.mp3",
-        "title_hi": "मेस्सी और ब्रैडी 'भविष्यद्वाणीपूर्ण' लामिन यामल फोटो पर अविश्वास में हैं",
-        "summary_hi": "लियोनेल मेस्सी ने 2026 विश्व कप फाइनल में स्पेन के लामिन यामल का सामना करने के संयोग पर आश्चर्य व्यक्त किया, साल पहले यामल के बचपन में लिया गया एक फोटोग्राफ को याद किया। यह प्रतिष्ठित छवि, जिसने मेस्सी को बचपन में यामल को पकड़े हुए दिखाया था, अब भविष्यद्वाणीपूर्ण महत्व ले गई है क्योंकि दोनों खिलाड़ी अब फुटबॉल के सबसे बड़े मंच पर मिलते हैं। मेस्सी ने स्थिति को 'पागलपन' के रूप में वर्णित किया, उनके रास्तों के इस क्षण में अभिसरण की उल्लेखनीय प्रकृति और उस प्रारंभिक मुलाकात की स्थायी विरासत को उजागर किया।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/sports/3.mp3"
+        "published_at": "Sat, 18 Jul 2026 18:02:48 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d0a4/live/b45d38a0-82d1-11f1-adf9-c14531781464.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/3.mp3"
       },
       {
-        "title": "The harrowing dark side of England's World Cup exit",
-        "summary": "Research reveals a disturbing correlation between England's World Cup participation and increased domestic abuse incidents, with women and girls living in constant fear during major football tournaments. The study highlights how major sporting events can have serious negative social consequences, particularly for vulnerable populations. This finding underscores the complex relationship between sports, national passion, and societal issues, demonstrating that while football captivates millions, it can simultaneously create dangerous conditions for those experiencing domestic violence during periods of heightened emotional intensity.",
-        "url": "https://www.bbc.co.uk/sport/football/articles/cwymljn8y10o?at_medium=RSS&at_campaign=rss",
+        "title": "Northants beat Hants to win T20 Blast",
+        "summary": "Northamptonshire Steelbacks claimed their third T20 Blast title following a closely contested final against Hampshire Hawks at Edgbaston. The match proved to be an enthralling encounter between two competitive teams, with Northamptonshire ultimately prevailing in the titanic tussle. The victory represents a significant achievement for the Steelbacks, adding to their trophy collection in England's premier domestic T20 competition. This success demonstrates Northamptonshire's strength in the shortest format of cricket and their ability to perform under pressure in major finals.",
+        "url": "https://www.bbc.co.uk/sport/cricket/articles/c1m191jkkm3o?at_medium=RSS&at_campaign=rss",
         "source": "BBC Sport",
-        "published_at": "Sat, 18 Jul 2026 09:59:34 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a562/live/a1c11090-8213-11f1-be77-cd53d9589267.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/4.mp3",
-        "title_hi": "इंग्लैंड की विश्व कप से बाहरी का भयानक अंधकार पक्ष",
-        "summary_hi": "शोध इंग्लैंड की विश्व कप भागीदारी और घरेलू हिंसा की घटनाओं में वृद्धि के बीच एक परेशान करने वाला संबंध प्रकट करता है, महिलाएं और लड़कियां प्रमुख फुटबॉल टूर्नामेंट के दौरान निरंतर भय में रहती हैं। अध्ययन इस बात को उजागर करता है कि प्रमुख खेल आयोजन कैसे गंभीर नकारात्मक सामाजिक परिणाम हो सकते हैं, विशेष रूप से कमजोर आबादी के लिए। यह खोज खेल, राष्ट्रीय जुनून और सामाजिक मुद्दों के बीच जटिल संबंध को रेखांकित करती है, यह प्रदर्शित करते हुए कि जबकि फुटबॉल लाखों को मुग्ध करता है, यह एक ही समय में उन लोगों के लिए खतरनाक परिस्थितियां बना सकता है जो बढ़ी हुई भावनात्मक तीव्रता की अवधि के दौरान घरेलू हिंसा का अनुभव कर रहे हैं।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/sports/4.mp3"
+        "published_at": "Sat, 18 Jul 2026 21:41:54 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/13cd/live/6b0d8cf0-82f3-11f1-b2a8-97a80a3a9f99.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/4.mp3"
       }
     ],
     "cricket": [
       {
-        "title": "Garry Sobers dies, aged 89",
-        "summary": "Sir Garfield Sobers, the legendary West Indies allrounder, has passed away at his home in Barbados at age 89. Sobers is widely regarded as one of cricket's greatest players, having revolutionized the sport with his exceptional all-round abilities as a batsman, bowler, and fielder. His death has prompted tributes from cricket figures worldwide, including Sir Geoffrey Boycott, who described him as a 'once-in-a-lifetime' player. Sobers' legacy extends beyond his on-field achievements, as he became a global ambassador for cricket and inspired generations of players across the sport.",
-        "url": "https://www.cricinfo.com/ci/content/story/1546030.html?ex_cid=OTC-RSS",
-        "source": "Cricket news from Cricinfo.com",
-        "published_at": "Sat, 18 Jul 2026 09:48:03 GMT",
-        "image": "http://p.imgci.com/db/PICTURES/CMS/277900/277954.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/0.mp3",
-        "title_hi": "गैरी सोबर्स का निधन, 89 वर्ष की आयु में",
-        "summary_hi": "सर गारफील्ड सोबर्स, वेस्टइंडीज के महान ऑलराउंडर, का 89 वर्ष की आयु में बारबाडोस के अपने घर में निधन हो गया है। सोबर्स को क्रिकेट के सबसे महान खिलाड़ियों में से एक माना जाता है, जिन्होंने बल्लेबाजी, गेंदबाजी और फील्डिंग में अपनी असाधारण प्रतिभा से खेल में क्रांति ला दी। उनके निधन पर क्रिकेट जगत के प्रभावशाली व्यक्तियों ने श्रद्धांजलि दी है, जिनमें सर जेफ्री बॉयकॉट भी शामिल हैं, जिन्होंने उन्हें 'जीवनकाल में एक बार आने वाले' खिलाड़ी के रूप में वर्णित किया। सोबर्स की विरासत उनकी मैदानी उपलब्धियों से परे है, क्योंकि वे क्रिकेट के वैश्विक राजदूत बने और खेल के पार पीढ़ियों के खिलाड़ियों को प्रेरित किया।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/cricket/0.mp3"
+        "title": "Global cricket icon Garry Sobers dies aged 89 — who said what",
+        "summary": "Sir Garfield Sobers, widely regarded as one of cricket's greatest players, passed away on Friday at age 89. The legendary West Indies all-rounder was celebrated for his exceptional abilities as both a batsman and bowler, combining technical mastery with remarkable versatility. Sobers' death prompted tributes from across the cricket world, acknowledging his profound impact on the sport. His legacy encompasses not only his outstanding performances but also his influence on generations of cricketers who followed. The cricket community mourned the loss of a transformative figure whose contributions shaped modern cricket.",
+        "url": "https://www.jamaicaobserver.com/2026/07/18/global-cricket-icon-garry-sobers-dies-aged-89-said/",
+        "source": "Jamaica Observer",
+        "published_at": "2026-07-18T05:18:00+00:00",
+        "image": "https://www.jamaicaobserver.com/jamaicaobserver/news/wp-content/uploads/sites/4/2026/07/d22f707f758c04f293438237f7b04e65-1024x669.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/0.mp3"
       },
       {
-        "title": "Rohit Sharma's international future hangs in the balance",
-        "summary": "India's selectors have informed 39-year-old captain Rohit Sharma that he is not part of the country's 2027 World Cup plans, casting uncertainty over his international future. However, BCCI secretary Devajit Saikia subsequently dismissed speculation about Sharma's ODI future, stating that the Lord's ODI against England will not be his last match. The situation highlights the ongoing transition in Indian cricket leadership as the team prepares for future tournaments. Sharma's potential retirement has generated significant discussion among cricket commentators, with figures like Kapil Dev suggesting his retirement should be celebrated when it occurs.",
-        "url": "https://www.cricinfo.com/ci/content/story/1545925.html?ex_cid=OTC-RSS",
+        "title": "Los Angeles Knight Riders pull off last-ball win for first MLC title",
+        "summary": "Los Angeles Knight Riders secured their inaugural Major League Cricket title with a thrilling one-run victory over Washington Freedom in a dramatic final. The match remained competitive throughout, with the outcome decided in the final over bowled by Shadley van Schalkwyk. The decisive moment came on the last ball when a run-out gave Knight Riders the narrow victory. This championship represents a significant milestone for the franchise and marks a major moment in Major League Cricket's development. The victory was celebrated by team owner Shah Rukh Khan, highlighting the growing prominence of cricket in the United States.",
+        "url": "https://www.cricinfo.com/ci/content/story/1546178.html?ex_cid=OTC-RSS",
         "source": "Cricket news from Cricinfo.com",
-        "published_at": "Fri, 17 Jul 2026 16:42:28 GMT",
-        "image": "http://p.imgci.com/db/PICTURES/CMS/397900/397962.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/1.mp3",
-        "title_hi": "रोहित शर्मा का अंतरराष्ट्रीय भविष्य संदेह में है",
-        "summary_hi": "भारत के चयनकर्ताओं ने 39 वर्षीय कप्तान रोहित शर्मा को सूचित किया है कि वह देश की 2027 विश्व कप योजनाओं का हिस्सा नहीं हैं, जिससे उनके अंतरराष्ट्रीय भविष्य पर अनिश्चितता छा गई है। हालांकि, बीसीसीआई सचिव देवजीत साइकिया ने बाद में शर्मा के वनडे भविष्य के बारे में अटकलों को खारिज कर दिया, यह कहते हुए कि लॉर्ड्स में इंग्लैंड के खिलाफ वनडे उनका अंतिम मैच नहीं होगा। यह स्थिति भारतीय क्रिकेट नेतृत्व में चल रहे संक्रमण को उजागर करती है क्योंकि टीम भविष्य की प्रतियोगिताओं की तैयारी कर रही है। शर्मा की संभावित सेवानिवृत्ति ने क्रिकेट टिप्पणीकारों के बीच महत्वपूर्ण चर्चा उत्पन्न की है, कपिल देव जैसी हस्तियां सुझाव दे रही हैं कि उनकी सेवानिवृत्ति का जश्न मनाया जाना चाहिए।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/cricket/1.mp3"
+        "published_at": "Sun, 19 Jul 2026 04:19:50 GMT",
+        "image": "http://p.imgci.com/db/PICTURES/CMS/419900/419996.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/1.mp3"
       },
       {
-        "title": "Washington out of India's third ODI against England",
-        "summary": "India allrounder Washington Sundar has been ruled out of the third ODI against England due to a leg injury, creating an opportunity for Kuldeep Yadav to return to the squad. The injury to Washington leaves India needing to adjust their playing XI for the upcoming match, with Kuldeep positioned as the likely replacement. This development occurs during a significant ODI series between India and England, with both teams competing for series advantage. The injury situation highlights the ongoing challenges teams face in managing player fitness during intensive international cricket schedules.",
-        "url": "https://www.cricinfo.com/ci/content/story/1546007.html?ex_cid=OTC-RSS",
+        "title": "West Indies, New Zealand meet in Sobers' country to celebrate him",
+        "summary": "West Indies and New Zealand gathered at Kensington Oval in Barbados, Garry Sobers' homeland, for an emotional occasion honoring the cricket legend. The meeting transcended typical competitive cricket, with both teams coming together to celebrate Sobers' extraordinary legacy and contributions to the sport. The event at the historic venue took on special significance given Sobers' deep connection to Barbados and his monumental impact on West Indies cricket. This gathering represented a poignant moment for the cricket community to collectively acknowledge and pay respects to one of the game's greatest figures during their bilateral series.",
+        "url": "https://www.cricinfo.com/ci/content/story/1546114.html?ex_cid=OTC-RSS",
         "source": "Cricket news from Cricinfo.com",
-        "published_at": "Sat, 18 Jul 2026 08:55:17 GMT",
-        "image": "http://p.imgci.com/db/PICTURES/CMS/419800/419878.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/2.mp3",
-        "title_hi": "वाशिंगटन इंग्लैंड के खिलाफ भारत के तीसरे वनडे से बाहर",
-        "summary_hi": "भारत के ऑलराउंडर वाशिंगटन सुंदर को पैर की चोट के कारण इंग्लैंड के खिलाफ तीसरे वनडे से बाहर कर दिया गया है, जिससे कुलदीप यादव को स्क्वाड में वापसी का अवसर मिल गया है। वाशिंगटन की चोट भारत को आने वाले मैच के लिए अपनी प्लेइंग इलेवन को समायोजित करने के लिए मजबूर करती है, कुलदीप को संभावित प्रतिस्थापन के रूप में रखा गया है। यह विकास भारत और इंग्लैंड के बीच एक महत्वपूर्ण वनडे सीरीज के दौरान होता है, दोनों टीमें सीरीज का लाभ प्राप्त करने के लिए प्रतिस्पर्धा कर रही हैं। चोट की स्थिति गहन अंतरराष्ट्रीय क्रिकेट शेड्यूल के दौरान खिलाड़ियों की फिटनेस को प्रबंधित करने में टीमों के सामने आने वाली चल रही चुनौतियों को उजागर करती है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/cricket/2.mp3"
+        "published_at": "Sun, 19 Jul 2026 05:43:11 GMT",
+        "image": "http://p.imgci.com/db/PICTURES/CMS/419900/419905.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/2.mp3"
       },
       {
-        "title": "Refreshed Knight Riders face usual suspects Freedom in MLC final",
-        "summary": "The Knight Riders will face Freedom in the MLC final, with the Knight Riders seeking their first title in the competition. The Knight Riders benefit from a four-day gap before the final, which could prove pivotal in their preparation and recovery for the match. This break provides the team with valuable time to rest players, strategize, and address any fitness concerns ahead of the championship decider. The final represents a significant opportunity for the Knight Riders to claim their maiden MLC title, while Freedom will be looking to defend their status as established contenders in the tournament.",
-        "url": "https://www.cricinfo.com/ci/content/story/1546074.html?ex_cid=OTC-RSS",
+        "title": "Captain Willey takes Northants into final with scrappy defence",
+        "summary": "Northamptonshire advanced to the T20 Blast final with a gutsy defensive performance led by captain David Willey, defeating reigning champions Somerset. Chasing 144, Somerset fell short despite their status as defending champions, unable to overcome Northants' determined bowling and fielding efforts. Willey's inspirational leadership proved crucial in the team's scrappy but effective victory, demonstrating resilience under pressure. The win secured Northants' place in the final and marked a significant achievement for the team. This result sets up an exciting final matchup and showcases Northants' capability to compete against established powerhouses in the competition.",
+        "url": "https://www.cricinfo.com/ci/content/story/1546107.html?ex_cid=OTC-RSS",
         "source": "Cricket news from Cricinfo.com",
-        "published_at": "Sat, 18 Jul 2026 09:17:56 GMT",
-        "image": "http://p.imgci.com/db/PICTURES/CMS/419900/419935.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/3.mp3",
-        "title_hi": "तरोताजा नाइट राइडर्स एमएलसी फाइनल में सामान्य प्रतिद्वंद्वी फ्रीडम का सामना करेंगे",
-        "summary_hi": "नाइट राइडर्स एमएलसी फाइनल में फ्रीडम का सामना करेंगे, नाइट राइडर्स प्रतियोगिता में अपना पहला खिताब हासिल करने की कोशिश कर रहे हैं। नाइट राइडर्स को फाइनल से पहले चार दिन का अंतराल मिला है, जो मैच की तैयारी और रिकवरी में महत्वपूर्ण साबित हो सकता है। यह ब्रेक टीम को खिलाड़ियों को आराम देने, रणनीति बनाने और चैंपियनशिप निर्णायक से पहले किसी भी फिटनेस संबंधी चिंताओं को दूर करने के लिए मूल्यवान समय प्रदान करता है। फाइनल नाइट राइडर्स के लिए अपना पहला एमएलसी खिताब दावा करने का एक महत्वपूर्ण अवसर है, जबकि फ्रीडम प्रतियोगिता में स्थापित दावेदार के रूप में अपनी स्थिति बनाए रखने की कोशिश करेगा।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/cricket/3.mp3"
+        "published_at": "Sat, 18 Jul 2026 23:27:40 GMT",
+        "image": "http://p.imgci.com/db/PICTURES/CMS/419900/419956.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/3.mp3"
       },
       {
-        "title": "ODI World Cup Qualifier winner gains direct entry to 2027 main round",
-        "summary": "The winner of the ODI World Cup Qualifier will gain direct entry to the 2027 World Cup main round, avoiding the Super Series stage. This qualification pathway represents a significant advantage, as the Super Series is designed to eliminate two of the four teams competing in that stage before the main World Cup tournament. The direct entry provides the qualifier winner with a substantial competitive advantage and reduces the risk of early elimination. This format change underscores the evolving structure of World Cup qualification, offering clearer pathways for emerging cricket nations to reach the main tournament stage.",
-        "url": "https://www.cricinfo.com/ci/content/story/1546041.html?ex_cid=OTC-RSS",
+        "title": "Rohit in the spotlight with series on the line at Lord's",
+        "summary": "India and England prepared for a decisive third ODI at Lord's Cricket Ground with the bilateral series level at 1-1. England had claimed victory in Cardiff to level the series after India's initial success, setting up a winner-take-all encounter at cricket's most iconic venue. The match carries significant importance as England seeks to secure their first bilateral ODI series victory against India since 2018, while India aims to maintain their competitive edge. Rohit Sharma, India's captain, faced particular scrutiny heading into the crucial fixture. The Lord's encounter represents a high-stakes conclusion to the three-match series between two major cricket nations.",
+        "url": "https://www.cricinfo.com/ci/content/story/1546091.html?ex_cid=OTC-RSS",
         "source": "Cricket news from Cricinfo.com",
-        "published_at": "Fri, 17 Jul 2026 17:44:17 GMT",
-        "image": "http://p.imgci.com/db/PICTURES/CMS/363700/363722.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/4.mp3",
-        "title_hi": "वनडे विश्व कप क्वालिफायर विजेता 2027 मुख्य दौर में सीधी प्रविष्टि प्राप्त करता है",
-        "summary_hi": "वनडे विश्व कप क्वालिफायर का विजेता 2027 विश्व कप के मुख्य दौर में सीधी प्रविष्टि प्राप्त करेगा, सुपर सीरीज चरण से बचते हुए। यह योग्यता पथ एक महत्वपूर्ण लाभ का प्रतिनिधित्व करता है, क्योंकि सुपर सीरीज उस चरण में प्रतिस्पर्धा करने वाली चार टीमों में से दो को मुख्य विश्व कप टूर्नामेंट से पहले समाप्त करने के लिए डिज़ाइन किया गया है। सीधी प्रविष्टि क्वालिफायर विजेता को एक महत्वपूर्ण प्रतिस्पर्धात्मक लाभ प्रदान करती है और जल्दी समाप्ति के जोखिम को कम करती है। यह प्रारूप परिवर्तन विश्व कप योग्यता की विकसित संरचना को रेखांकित करता है, उभरती क्रिकेट राष्ट्रों के लिए मुख्य टूर्नामेंट चरण तक पहुंचने के लिए स्पष्ट मार्ग प्रदान करता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/cricket/4.mp3"
+        "published_at": "Sat, 18 Jul 2026 13:03:00 GMT",
+        "image": "http://p.imgci.com/db/PICTURES/CMS/419800/419873.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/4.mp3"
       }
     ],
     "usa_stock": [
       {
-        "title": "SpaceX postponed a crucial launch — and its stock went on to close below IPO price for second day",
-        "summary": "SpaceX shares declined approximately 4% in premarket trading following an aborted mission, marking the second consecutive day the stock closed below its initial public offering price of $135 per share. The postponement of the crucial launch has raised concerns among investors about the company's near-term operational capabilities and mission success rates. Despite the recent setback, analysts remain divided on the stock's long-term prospects, with some viewing the current valuation as presenting both risks and potential opportunities for investors willing to weather near-term volatility.",
-        "url": "https://www.marketwatch.com/story/spacex-postponed-a-crucial-launch-now-its-stock-is-set-to-slide-even-further-below-the-ipo-price-143adfe0?mod=mw_rss_topstories",
-        "source": "MarketWatch.com - Top Stories",
-        "published_at": "Fri, 17 Jul 2026 22:55:00 GMT",
-        "image": "https://images.mktw.net/im-19410954",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/0.mp3",
-        "title_hi": "स्पेसएक्स ने महत्वपूर्ण लॉन्च को स्थगित किया — और इसका स्टॉक दूसरे दिन आईपीओ मूल्य से नीचे बंद हुआ",
-        "summary_hi": "स्पेसएक्स के शेयर एक विफल मिशन के बाद प्रीमार्केट ट्रेडिंग में लगभग 4% गिरे, जो दूसरा लगातार दिन है कि स्टॉक अपने प्रारंभिक सार्वजनिक पेशकश मूल्य $135 प्रति शेयर से नीचे बंद हुआ। महत्वपूर्ण लॉन्च के स्थगन ने निवेशकों में कंपनी की निकट-अवधि की परिचालन क्षमताओं और मिशन सफलता दरों के बारे में चिंताएं बढ़ाई हैं। हाल की असफलता के बावजूद, विश्लेषक स्टॉक की दीर्घकालिक संभावनाओं पर विभाजित रहते हैं, कुछ वर्तमान मूल्यांकन को निकट-अवधि की अस्थिरता को सहने के इच्छुक निवेशकों के लिए जोखिम और संभावित अवसर दोनों के रूप में देख रहे हैं।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/usa_stock/0.mp3"
+        "title": "Slumping AI stocks drag down markets around the world",
+        "summary": "Computer chipmakers and artificial intelligence-related stocks experienced significant declines, dragging down global stock markets. The S&P 500 fell 0.5% despite more stocks rising than falling within the index. The selloff reflects growing concerns about the sustainability of the AI investment boom and whether massive spending in the sector will generate adequate returns. Asian markets also declined sharply, with Tokyo's Nikkei 225 down 5% as heavy selling of chipmakers and AI-related shares spread internationally, signaling broader market anxiety about AI valuations.",
+        "url": "https://www.sun-sentinel.com/2026/07/16/wall-street-markets/",
+        "source": "Sun Sentinel",
+        "published_at": "2026-07-16T21:01:00+00:00",
+        "image": "https://www.sun-sentinel.com/wp-content/uploads/2026/07/Financial_Markets_Wall_Street__264_6ecd8b.jpg?w=1024&h=683",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/0.mp3"
       },
       {
-        "title": "Chip stocks have entered a bear market. A BofA analyst says not to panic.",
-        "summary": "The semiconductor sector has entered bear market territory, declining more than 20% from recent highs, with Bank of America analysts advising investors not to panic. The sector is undergoing a reset and historically tends to underperform during the third quarter. Despite the significant downturn, analysts suggest this correction may represent a healthy market consolidation rather than a fundamental deterioration in the industry's long-term prospects. Several semiconductor stocks remain up triple digits for the year despite July declines exceeding 25-30%.",
-        "url": "https://www.marketwatch.com/story/chip-stocks-enter-bear-market-territory-a-bofa-analyst-says-not-to-panic-4d34df17?mod=mw_rss_topstories",
-        "source": "MarketWatch.com - Top Stories",
-        "published_at": "Fri, 17 Jul 2026 20:49:00 GMT",
-        "image": "https://images.mktw.net/im-15629837",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/1.mp3",
-        "title_hi": "चिप स्टॉक एक भालू बाजार में प्रवेश कर गए हैं। एक बीओएफए विश्लेषक घबराने के लिए नहीं कहते हैं।",
-        "summary_hi": "अर्धचालक क्षेत्र भालू बाजार के क्षेत्र में प्रवेश कर गया है, हाल के उच्च से 20% से अधिक गिरावट के साथ, बैंक ऑफ अमेरिका विश्लेषकों ने निवेशकों को घबराने के लिए सलाह दी है। यह क्षेत्र एक रीसेट से गुजर रहा है और ऐतिहासिक रूप से तीसरी तिमाही के दौरान कम प्रदर्शन करता है। महत्वपूर्ण गिरावट के बावजूद, विश्लेषक सुझाते हैं कि यह सुधार एक स्वस्थ बाजार समेकन का प्रतिनिधित्व कर सकता है न कि उद्योग की दीर्घकालिक संभावनाओं में मौलिक गिरावट। कई अर्धचालक स्टॉक जुलाई में 25-30% से अधिक गिरावट के बावजूद वर्ष के लिए तीन अंकों तक ऊपर रहते हैं।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/usa_stock/1.mp3"
+        "title": "What to Know About the Chinese AI Models Rattling U.S. Stocks",
+        "summary": "Chinese artificial intelligence models, including products such as Moonshot's Kimi K3, are raising concerns about the durability of the U.S. technology boom. The emergence of competitive Chinese AI solutions has rattled U.S. stock markets, prompting investors to reassess the staying power of the artificial intelligence investment thesis. This development adds to existing market pressures on technology stocks and raises questions about whether U.S. companies can maintain their competitive advantages in the rapidly evolving AI landscape amid international competition.",
+        "url": "https://www.msn.com/en-us/money/other/what-to-know-about-the-chinese-ai-models-rattling-u-s-stocks/ar-AA28bhrW",
+        "source": "The Wall Street Journal",
+        "published_at": "2026-07-18T13:21:00+00:00",
+        "image": "",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/1.mp3"
       },
       {
-        "title": "Meet Kimi K3, the newest Chinese AI model haunting Silicon Valley",
-        "summary": "Moonshot AI has unveiled Kimi K3, a new open-source artificial intelligence model that is rapidly catching up to leading American competitors Anthropic and OpenAI. The emergence of this advanced Chinese AI model is raising significant questions about the competitive dynamics and future trajectory of the global AI race. The development has sparked concerns among Silicon Valley investors and technology leaders about maintaining American technological leadership in artificial intelligence, a sector viewed as critical to long-term economic and strategic competitiveness.",
-        "url": "https://www.marketwatch.com/story/meet-kimi-k3-the-newest-chinese-ai-model-haunting-silicon-valley-755ed738?mod=mw_rss_topstories",
+        "title": "Netflix is spending big money on sports. Is the company making the right bets?",
+        "summary": "Netflix is investing heavily in sports rights to attract new subscribers through live programming, but investors have become increasingly skeptical about the strategy. The streaming service's broader engagement trends have disappointed the market, raising questions about whether expensive sports content acquisitions will deliver adequate returns. This investment shift represents a significant strategic pivot for Netflix as it seeks growth opportunities, though Wall Street remains unconvinced about the financial viability of competing in the costly sports broadcasting market against established competitors.",
+        "url": "https://www.marketwatch.com/story/netflix-is-paying-up-for-costly-sports-rights-is-the-company-making-the-right-bets-9ce54df7?mod=mw_rss_topstories",
         "source": "MarketWatch.com - Top Stories",
-        "published_at": "Sat, 18 Jul 2026 01:17:00 GMT",
-        "image": "https://images.mktw.net/im-71583098",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/2.mp3",
-        "title_hi": "किमी के3 से मिलें, सिलिकॉन वैली को परेशान करने वाला नवीनतम चीनी एआई मॉडल",
-        "summary_hi": "मूनशॉट एआई ने किमी के3 का अनावरण किया है, एक नया ओपन-सोर्स कृत्रिम बुद्धिमत्ता मॉडल जो तेजी से अग्रणी अमेरिकी प्रतिद्वंद्वी एंथ्रोपिक और ओपनएआई के साथ तालमेल बिठा रहा है। इस उन्नत चीनी एआई मॉडल का उदय वैश्विक एआई दौड़ की प्रतिस्पर्धी गतिशीलता और भविष्य के प्रक्षेपवक्र के बारे में महत्वपूर्ण प्रश्न उठा रहा है। इस विकास ने सिलिकॉन वैली के निवेशकों और प्रौद्योगिकी नेताओं में कृत्रिम बुद्धिमत्ता में अमेरिकी तकनीकी नेतृत्व बनाए रखने के बारे में चिंताएं जगाई हैं, एक क्षेत्र जिसे दीर्घकालिक आर्थिक और रणनीतिक प्रतिस्पर्धिता के लिए महत्वपूर्ण माना जाता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/usa_stock/2.mp3"
+        "published_at": "Sat, 18 Jul 2026 18:54:00 GMT",
+        "image": "https://images.mktw.net/im-82988028",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/2.mp3"
       },
       {
-        "title": "The average stock is having a moment as semiconductors struggle. It's a sign of a healthy market.",
-        "summary": "While semiconductor stocks have experienced significant declines, broader market dynamics show strength in average stocks across various sectors, suggesting a healthy market rotation. Energy companies have emerged as notable gainers, with the sector posting strong performance as investors reallocate capital away from struggling chip stocks. This divergence between semiconductor weakness and broader market strength indicates market participants are selectively rotating into different sectors, which analysts interpret as a sign of market health and normal portfolio rebalancing rather than systemic weakness.",
-        "url": "https://www.marketwatch.com/story/the-average-stock-is-having-a-moment-as-semiconductors-struggle-its-a-sign-of-a-healthy-market-0dc01e9a?mod=mw_rss_topstories",
-        "source": "MarketWatch.com - Top Stories",
-        "published_at": "Fri, 17 Jul 2026 21:55:00 GMT",
-        "image": "https://images.mktw.net/im-27703924",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/3.mp3",
-        "title_hi": "औसत स्टॉक एक पल का अनुभव कर रहा है क्योंकि अर्धचालक संघर्ष कर रहे हैं। यह एक स्वस्थ बाजार का संकेत है।",
-        "summary_hi": "जबकि अर्धचालक स्टॉक में महत्वपूर्ण गिरावट आई है, व्यापक बाजार गतिशीलता विभिन्न क्षेत्रों में औसत स्टॉक में शक्ति दिखाती है, जो एक स्वस्थ बाजार घूर्णन का सुझाव देती है। ऊर्जा कंपनियां उल्लेखनीय लाभकर्ता के रूप में उभरी हैं, क्षेत्र मजबूत प्रदर्शन के साथ निवेशकों को संघर्षरत चिप स्टॉक से दूर पूंजी पुनः आवंटित कर रहे हैं। अर्धचालक कमजोरी और व्यापक बाजार शक्ति के बीच यह विचलन इंगित करता है कि बाजार प्रतिभागी विभिन्न क्षेत्रों में चुनिंदा रूप से घूम रहे हैं, जिसे विश्लेषक बाजार स्वास्थ्य और सामान्य पोर्टफोलियो पुनः संतुलन के संकेत के रूप में व्याख्या करते हैं न कि प्रणालीगत कमजोरी।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/usa_stock/3.mp3"
+        "title": "Warren Buffett sends a strong reminder to stock market investors",
+        "summary": "Warren Buffett emphasized that bad news represents an opportunity for investors, offering guidance amid current market pressures. With the Buffett Indicator at 227%, suggesting elevated market valuations, Buffett's commentary provides perspective on navigating volatile market conditions. The indicator, which measures total stock market capitalization relative to GDP, has historically signaled periods of market stress. Buffett's message encourages investors to view market downturns as buying opportunities rather than reasons for panic, reflecting his contrarian investment philosophy during periods of market uncertainty and concern.",
+        "url": "https://www.msn.com/en-us/money/topstocks/warren-buffett-sends-a-strong-reminder-to-stock-market-investors/ar-AA28dat6",
+        "source": "TheStreet",
+        "published_at": "2026-07-19T00:07:00+00:00",
+        "image": "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA28dhUK.img?w=1200&h=675&m=4&q=62",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/3.mp3"
       },
       {
-        "title": "19 (mostly) tech stocks that have fallen at least 25% in July",
-        "summary": "Nineteen technology stocks have experienced declines of at least 25% during July 2026, reflecting significant sector-wide volatility and investor repositioning. Notably, seven of the worst-performing stocks for the month remain up by triple digits for the full year, indicating that despite sharp July pullbacks, many technology companies have maintained substantial year-to-date gains. This pattern suggests that recent declines represent profit-taking and sector rotation rather than fundamental deterioration in company valuations or long-term growth prospects.",
-        "url": "https://www.marketwatch.com/story/18-tech-stocks-that-have-fallen-at-least-30-during-july-4c373d5e?mod=mw_rss_topstories",
+        "title": "Americans say they need $1.2 million to retire. Most are too deep in debt to get there.",
+        "summary": "More than 80% of Americans express concern about depleting their retirement savings, with the average retirement goal reaching $1.2 million. However, most Americans carry substantial debt burdens that impede their ability to achieve these retirement targets. The widespread anxiety about retirement security reflects both inadequate savings accumulation and high debt levels among the population. This financial stress significantly impacts quality of life, with retirement concerns keeping many Americans awake at night, highlighting a critical gap between retirement aspirations and the financial reality facing most households.",
+        "url": "https://www.marketwatch.com/story/americans-say-they-need-1-2-million-to-retire-most-are-too-deep-in-debt-to-get-there-689c683b?mod=mw_rss_topstories",
         "source": "MarketWatch.com - Top Stories",
-        "published_at": "Fri, 17 Jul 2026 21:45:00 GMT",
-        "image": "https://images.mktw.net/im-12572551",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/4.mp3",
-        "title_hi": "19 (ज्यादातर) तकनीकी स्टॉक जो जुलाई में कम से कम 25% गिरे हैं",
-        "summary_hi": "उन्नीस प्रौद्योगिकी स्टॉक ने जुलाई 2026 के दौरान कम से कम 25% की गिरावट का अनुभव किया है, जो क्षेत्र-व्यापी अस्थिरता और निवेशक पुनः स्थिति को दर्शाता है। उल्लेखनीय रूप से, महीने के लिए सबसे खराब प्रदर्शन करने वाले सात स्टॉक पूरे वर्ष के लिए तीन अंकों तक ऊपर रहते हैं, यह दर्शाता है कि तीव्र जुलाई पुलबैक के बावजूद, कई प्रौद्योगिकी कंपनियों ने पूरे वर्ष के लिए पर्याप्त लाभ बनाए रखा है। यह पैटर्न सुझाता है कि हाल की गिरावट लाभ-लेने और क्षेत्र घूर्णन का प्रतिनिधित्व करती है न कि कंपनी मूल्यांकन या दीर्घकालिक विकास संभावनाओं में मौलिक गिरावट।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/usa_stock/4.mp3"
+        "published_at": "Sat, 18 Jul 2026 18:15:00 GMT",
+        "image": "https://images.mktw.net/im-00844552",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/4.mp3"
       }
     ],
     "ai": [
       {
         "title": "Meet GPT-Red: an LLM super-hacker OpenAI built to make its models safer",
-        "summary": "OpenAI has developed GPT-Red, an advanced language model designed to function as a security testing tool. The system acts as a sparring partner to help other OpenAI models strengthen their defenses against cyberattacks and vulnerabilities. OpenAI integrated GPT-Red into the training process for GPT-5.6, its latest flagship model, which the company claims is now its most robust release to date. GPT-Red automates the identification of potential security weaknesses, enabling more comprehensive adversarial testing than traditional methods. This approach represents a significant advancement in AI safety practices, demonstrating how AI systems can be leveraged to improve the security and resilience of other AI models against emerging threats.",
+        "summary": "OpenAI has developed GPT-Red, an advanced language model designed to function as a security testing tool that identifies vulnerabilities in other AI systems. The company uses GPT-Red as a sparring partner to help strengthen defenses against cyberattacks and adversarial exploits. OpenAI integrated GPT-Red into the training process for GPT-5.6, its latest flagship model, which the company claims is now its most robust release to date. This approach represents a significant advancement in AI safety methodology, where adversarial AI systems are deliberately deployed to stress-test and improve the security posture of production models before deployment.",
         "url": "https://www.technologyreview.com/2026/07/15/1140514/meet-gpt-red-an-llm-super-hacker-openai-built-to-make-its-models-safer/",
         "source": "MIT Technology Review",
         "published_at": "Wed, 15 Jul 2026 17:09:37 +0000",
         "image": "https://wp.technologyreview.com/wp-content/uploads/2026/07/spar-red.jpg?resize=1200,600",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/0.mp3",
-        "title_hi": "GPT-Red से मिलिए: OpenAI द्वारा निर्मित एक LLM सुपर-हैकर जो अपने मॉडल को सुरक्षित बनाता है",
-        "summary_hi": "OpenAI ने GPT-Red विकसित किया है, एक उन्नत भाषा मॉडल जो सुरक्षा परीक्षण उपकरण के रूप में कार्य करने के लिए डिज़ाइन किया गया है। यह सिस्टम अन्य OpenAI मॉडल को साइबर हमलों और कमजोरियों के खिलाफ अपनी रक्षा को मजबूत करने में मदद करने के लिए एक स्पैरिंग पार्टनर के रूप में कार्य करता है। OpenAI ने GPT-Red को अपने नवीनतम फ्लैगशिप मॉडल GPT-5.6 के प्रशिक्षण प्रक्रिया में एकीकृत किया है, जिसे कंपनी अपनी सबसे मजबूत रिलीज़ बताती है। GPT-Red संभावित सुरक्षा कमजोरियों की पहचान को स्वचालित करता है, जो पारंपरिक तरीकों की तुलना में अधिक व्यापक प्रतिकूल परीक्षण को सक्षम बनाता है। यह दृष्टिकोण AI सुरक्षा प्रथाओं में एक महत्वपूर्ण प्रगति का प्रतिनिधित्व करता है, जो दर्शाता है कि कैसे AI सिस्टम को उभरते खतरों के खिलाफ अन्य AI मॉडल की सुरक्षा और लचीलापन में सुधार के लिए लाभ उठाया जा सकता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/ai/0.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/0.mp3"
       },
       {
         "title": "What Anthropic's latest AI discovery does—and doesn't—show",
-        "summary": "Anthropic, valued at nearly $1 trillion and recognized as the world's most valuable AI company, has published research revealing new insights into how AI models process information internally. The company announced it had discovered a window into its models' \"internal thoughts\" as they reason through answers to queries. This research contributes to Anthropic's broader mission of understanding AI behavior and safety. The company has gained a reputation for publishing unconventional research, including investigations into whether AI models can experience pain. These discoveries have significant implications for AI interpretability and safety, helping researchers better understand how large language models make decisions and potentially improving oversight of AI systems.",
+        "summary": "Anthropic, valued at nearly $1 trillion and recognized as the world's most valuable AI company, has published research providing new insights into how AI models reason internally. The company discovered a method to examine what it describes as models' \"internal thoughts\" as they work through problem-solving processes. This research represents a significant step toward understanding AI model behavior and decision-making mechanisms. However, the discovery has limitations and doesn't fully explain all aspects of model reasoning. Anthropic is known for publishing unconventional AI research, including investigations into whether AI systems can experience pain, pushing boundaries in AI interpretability and safety research.",
         "url": "https://www.technologyreview.com/2026/07/13/1140343/what-anthropics-latest-ai-discovery-does-and-doesnt-show/",
         "source": "MIT Technology Review",
         "published_at": "Mon, 13 Jul 2026 18:00:00 +0000",
         "image": "https://wp.technologyreview.com/wp-content/uploads/2026/07/thinking2.jpg?resize=1200,600",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/1.mp3",
-        "title_hi": "Anthropic की नवीनतम AI खोज क्या दिखाती है और क्या नहीं",
-        "summary_hi": "Anthropic, जिसका मूल्यांकन लगभग 1 ट्रिलियन डॉलर है और जिसे दुनिया की सबसे मूल्यवान AI कंपनी के रूप में मान्यता दी गई है, ने अनुसंधान प्रकाशित किया है जो यह प्रकट करता है कि AI मॉडल आंतरिक रूप से जानकारी को कैसे संसाधित करते हैं। कंपनी ने घोषणा की कि उसने अपने मॉडल के \"आंतरिक विचारों\" की एक झलक खोजी है जब वे प्रश्नों के उत्तरों के माध्यम से तर्क करते हैं। यह अनुसंधान AI व्यवहार और सुरक्षा को समझने के Anthropic के व्यापक मिशन में योगदान देता है। कंपनी को अपरंपरागत अनुसंधान प्रकाशित करने के लिए एक प्रतिष्ठा मिली है, जिसमें यह जांच भी शामिल है कि क्या AI मॉडल दर्द का अनुभव कर सकते हैं। इन खोजों का AI व्याख्यात्मकता और सुरक्षा के लिए महत्वपूर्ण निहितार्थ है, जो शोधकर्ताओं को यह बेहतर ढंग से समझने में मदद करता है कि बड़े भाषा मॉडल निर्णय कैसे लेते हैं और संभवतः AI सिस्टम की निगरानी में सुधार करते हैं।",
-        "audio_hi": ""
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/1.mp3"
       },
       {
         "title": "PsiQuantum has a plan to make a massive quantum computer out of light",
-        "summary": "PsiQuantum has unveiled an ambitious plan to construct a large-scale quantum computer using photonic technology. The system will occupy a space resembling a hybrid between a data center and an ice cream factory, containing approximately 100 stainless-steel cabinets, each standing six feet tall. The cabinets will be connected to liquid helium cooling systems maintaining temperatures only a few degrees above absolute zero. This photonic approach represents a novel direction in quantum computing development, potentially offering advantages over traditional superconducting qubit systems. The project represents significant progress toward building practical, large-scale quantum computers that could revolutionize computational capabilities across multiple industries and scientific fields.",
+        "summary": "PsiQuantum has unveiled an ambitious plan to construct a large-scale quantum computer using photonic technology housed in specialized infrastructure resembling a data center. The facility will contain approximately 100 stainless-steel cabinets, each standing six feet tall and connected to liquid helium cooling systems that maintain temperatures only a few degrees above absolute zero. This photonic approach represents a novel direction in quantum computing development, potentially offering advantages over traditional qubit-based systems. The project represents significant progress toward building practical, large-scale quantum computers that could address previously intractable computational problems across various industries and scientific domains.",
         "url": "https://www.technologyreview.com/2026/07/14/1140356/psiquantum-plan-massive-quantum-computer-out-of-light/",
         "source": "MIT Technology Review",
         "published_at": "Tue, 14 Jul 2026 08:00:00 +0000",
         "image": "https://wp.technologyreview.com/wp-content/uploads/2026/07/PsiQuantum-0459-Headquarters-social.jpg?resize=1200,600",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/2.mp3",
-        "title_hi": "PsiQuantum के पास प्रकाश से एक विशाल क्वांटम कंप्यूटर बनाने की योजना है",
-        "summary_hi": "PsiQuantum ने फोटोनिक तकनीक का उपयोग करके एक बड़े पैमाने पर क्वांटम कंप्यूटर बनाने की एक महत्वाकांक्षी योजना का खुलासा किया है। यह सिस्टम एक डेटा सेंटर और आइसक्रीम फैक्ट्री के बीच एक हाइब्रिड जैसी जगह पर कब्जा करेगा, जिसमें लगभग 100 स्टेनलेस स्टील कैबिनेट होंगे, प्रत्येक छह फीट लंबा होगा। कैबिनेट तरल हीलियम कूलिंग सिस्टम से जुड़े होंगे जो तापमान को पूर्ण शून्य से केवल कुछ डिग्री ऊपर बनाए रखते हैं। यह फोटोनिक दृष्टिकोण क्वांटम कंप्यूटिंग विकास में एक नई दिशा का प्रतिनिधित्व करता है, जो पारंपरिक सुपरकंडक्टिंग क्यूबिट सिस्टम पर संभावित लाभ प्रदान कर सकता है। यह परियोजना व्यावहारिक, बड़े पैमाने पर क्वांटम कंप्यूटर बनाने की ओर महत्वपूर्ण प्रगति का प्रतिनिधित्व करती है जो कई उद्योगों और वैज्ञानिक क्षेत्रों में कम्प्यूटेशनल क्षमताओं में क्रांति ला सकते हैं।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/ai/2.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/2.mp3"
       },
       {
         "title": "The risk of weather data sabotage is rising",
-        "summary": "Weather forecasting data has become a critical infrastructure asset with significant economic and safety implications. Airline dispatchers, grid operators, and farmers worldwide rely on weather forecasts for major strategic decisions affecting real money, livelihoods, and lives. The increasing dependence on weather predictions for high-stakes operations creates vulnerability to potential data sabotage and manipulation. Compromised weather data could have cascading effects across multiple industries simultaneously. As weather forecasting systems become more integrated into critical infrastructure and decision-making processes, the security of these systems has become increasingly important. The article highlights emerging risks associated with the centralization and digitization of weather data, emphasizing the need for robust security measures to protect this essential information source.",
+        "summary": "Weather forecasting data has become a critical infrastructure asset with significant economic and safety implications across multiple industries. Airline dispatchers, grid operators, and farmers worldwide rely on weather predictions for major strategic decisions affecting real money, livelihoods, and lives. The increasing dependence on weather data creates vulnerability to potential sabotage or manipulation, which could have cascading consequences across interconnected systems. As weather forecasting becomes more integrated into automated decision-making processes and critical infrastructure management, the security of meteorological data systems has emerged as an important concern for governments and organizations seeking to protect essential services from deliberate interference or cyberattacks.",
         "url": "https://www.technologyreview.com/2026/07/17/1140622/weather-data-sabotage/",
         "source": "MIT Technology Review",
         "published_at": "Fri, 17 Jul 2026 08:57:32 +0000",
         "image": "https://wp.technologyreview.com/wp-content/uploads/2026/07/fantastical-tornado3a.jpg?resize=1200,600",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/3.mp3",
-        "title_hi": "मौसम डेटा तोड़फोड़ का जोखिम बढ़ रहा है",
-        "summary_hi": "मौसम पूर्वानुमान डेटा महत्वपूर्ण बुनियादी ढांचे की संपत्ति बन गया है जिसके महत्वपूर्ण आर्थिक और सुरक्षा निहितार्थ हैं। विश्वभर में एयरलाइन डिस्पैचर, ग्रिड ऑपरेटर और किसान मौसम पूर्वानुमान पर निर्भर करते हैं जो वास्तविक धन, आजीविका और जीवन को प्रभावित करने वाले प्रमुख रणनीतिक निर्णयों के लिए। उच्च-दांव संचालन के लिए मौसम भविष्यवाणियों पर बढ़ती निर्भरता संभावित डेटा तोड़फोड़ और हेराफेरी के लिए कमजोरी पैदा करती है। समझौता किए गए मौसम डेटा के एक साथ कई उद्योगों में व्यापक प्रभाव हो सकते हैं। जैसे-जैसे मौसम पूर्वानुमान प्रणालियां महत्वपूर्ण बुनियादी ढांचे और निर्णय लेने की प्रक्रियाओं में अधिक एकीकृत होती हैं, इन प्रणालियों की सुरक्षा तेजी से महत्वपूर्ण हो गई है। लेख मौसम डेटा के केंद्रीकरण और डिजिटलीकरण से जुड़े उभरते जोखिमों को उजागर करता है, इस आवश्यक सूचना स्रोत की सुरक्षा के लिए मजबूत सुरक्षा उपायों की आवश्यकता पर जोर देता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/ai/3.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/3.mp3"
       },
       {
-        "title": "EU will force Google to share search data and open up AI on Android",
-        "summary": "European Union regulators have officially mandated that Google share search data and open its AI capabilities on the Android platform. This regulatory action represents a significant intervention in tech industry practices, requiring Google to provide greater access to its proprietary systems and data. Google has expressed concerns that these changes could compromise user privacy and security. The directive reflects broader EU efforts to promote competition and reduce the dominance of major technology companies in digital markets. These requirements will likely reshape how Google operates in Europe and may establish precedents for AI regulation globally. The mandate addresses concerns about market concentration and fair competition in search and mobile operating systems.",
-        "url": "https://arstechnica.com/gadgets/2026/07/its-official-eu-will-force-google-to-share-search-data-and-open-up-ai-on-android/",
-        "source": "AI - Ars Technica",
-        "published_at": "Thu, 16 Jul 2026 20:41:45 +0000",
-        "image": "https://cdn.arstechnica.net/wp-content/uploads/2024/03/europe-flag-digital-1152x648-1742412347.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/4.mp3",
-        "title_hi": "EU Google को खोज डेटा साझा करने और Android पर AI को खोलने के लिए बाध्य करेगा",
-        "summary_hi": "यूरोपीय संघ के नियामकों ने आधिकारिक रूप से Google को खोज डेटा साझा करने और Android प्लेटफॉर्म पर अपनी AI क्षमताओं को खोलने का आदेश दिया है। यह नियामक कार्रवाई तकनीकी उद्योग प्रथाओं में एक महत्वपूर्ण हस्तक्षेप का प्रतिनिधित्व करती है, जिसके लिए Google को अपनी मालिकाना प्रणालियों और डेटा तक अधिक पहुंच प्रदान करने की आवश्यकता है। Google ने चिंता व्यक्त की है कि ये परिवर्तन उपयोगकर्ता गोपनीयता और सुरक्षा को खतरे में डाल सकते हैं। यह निर्देश प्रतिस्पर्धा को बढ़ावा देने और डिजिटल बाजारों में प्रमुख प्रौद्योगिकी कंपनियों के प्रभुत्व को कम करने के लिए EU के व्यापक प्रयासों को प्रतिबिंबित करता है। ये आवश्यकताएं संभवतः यूरोप में Google के संचालन को पुनर्गठित करेंगी और विश्व स्तर पर AI विनियमन के लिए मिसालें स्थापित कर सकती हैं। यह आदेश खोज और मोबाइल ऑपरेटिंग सिस्टम में बाजार एकाग्रता और निष्पक्ष प्रतिस्पर्धा के बारे में चिंताओं को संबोधित करता है।",
-        "audio_hi": ""
+        "title": "Artificial Intelligence Is Changing The Economics Of Cybercrime",
+        "summary": "Artificial intelligence is fundamentally transforming the cybercrime landscape by dramatically reducing the barriers to entry for sophisticated attacks. Cybercriminals can now execute complex, targeted attacks with significantly less time investment, technical expertise, and financial resources than previously required. This democratization of attack capabilities has shifted the fundamental balance between attackers and defenders in cybersecurity. AI-powered tools enable threat actors to automate reconnaissance, exploit development, and attack execution, allowing even less-skilled criminals to conduct operations previously requiring specialized knowledge. This trend poses escalating challenges for cybersecurity professionals and organizations, as the cost-benefit calculation for launching cyberattacks has become increasingly favorable for malicious actors.",
+        "url": "https://www.forbes.com/sites/jonathanreichental/2026/07/18/artificial-intelligence-is-changing-the-economics-of-cybercrime/",
+        "source": "Forbes",
+        "published_at": "2026-07-19T01:31:00+00:00",
+        "image": "https://imageio.forbes.com/specials-images/imageserve/6a5c23b95945db78a654da4a/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/4.mp3"
       }
     ],
     "quantum": [
       {
         "title": "Quantum error correction can constantly recalibrate a processor",
-        "summary": "Researchers have demonstrated that quantum error correction can continuously recalibrate quantum processors using reinforcement learning. The technique leverages error information to dynamically adjust control algorithms, improving processor performance. This advancement addresses a fundamental challenge in quantum computing: maintaining qubit stability and accuracy despite environmental interference and decoherence. By automating the recalibration process through machine learning, the approach could enhance the reliability and scalability of near-term quantum devices, bringing practical quantum computing applications closer to reality.",
+        "summary": "Researchers have demonstrated that quantum error correction can continuously recalibrate quantum processors using reinforcement learning. The technique leverages error information to dynamically adjust control algorithms, improving processor performance. This advancement addresses a fundamental challenge in quantum computing: maintaining qubit stability and accuracy despite environmental interference and decoherence. By automating the recalibration process through machine learning, the approach could significantly enhance the reliability and practical utility of near-term quantum computers, bringing them closer to practical applications in solving real-world problems.",
         "url": "https://arstechnica.com/science/2026/07/quantum-error-correction-can-constantly-recalibrate-a-processor/",
         "source": "Ars Technica",
         "published_at": "Fri, 10 Jul 2026 23:02:30 +0000",
         "image": "https://cdn.arstechnica.net/wp-content/uploads/2019/10/Sycamore-Rainbow-cropped-1152x648.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/0.mp3",
-        "title_hi": "क्वांटम त्रुटि सुधार एक प्रोसेसर को लगातार पुनः अंशांकित कर सकता है",
-        "summary_hi": "शोधकर्ताओं ने प्रदर्शित किया है कि क्वांटम त्रुटि सुधार सुदृढीकरण शिक्षा का उपयोग करके क्वांटम प्रोसेसर को लगातार पुनः अंशांकित कर सकता है। यह तकनीक नियंत्रण एल्गोरिदम को गतिशील रूप से समायोजित करने के लिए त्रुटि जानकारी का लाभ उठाती है, जिससे प्रोसेसर का प्रदर्शन बेहतर होता है। यह प्रगति क्वांटम कंप्यूटिंग में एक मौलिक चुनौती को संबोधित करती है: पर्यावरणीय हस्तक्षेप और डीकोहेरेंस के बावजूद क्यूबिट स्थिरता और सटीकता बनाए रखना। मशीन लर्निंग के माध्यम से पुनः अंशांकन प्रक्रिया को स्वचालित करके, यह दृष्टिकोण निकट-अवधि के क्वांटम उपकरणों की विश्वसनीयता और स्केलेबिलिटी को बढ़ा सकता है, जिससे व्यावहारिक क्वांटम कंप्यूटिंग अनुप्रयोग वास्तविकता के करीब आ सकते हैं।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/quantum/0.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/0.mp3"
       },
       {
         "title": "Thermodynamic Computers Go With the (Energy) Flow",
-        "summary": "Researchers are exploring thermodynamic computers that harness random energy fluctuations rather than protecting against them as conventional computers do. Today's digital systems require safeguards to shield against thermal noise and energy variations that degrade performance. Thermodynamic computing inverts this paradigm, leveraging natural energy fluctuations as computational resources. This approach could fundamentally reduce power consumption and heat dissipation in computing systems. By working with thermodynamic principles instead of against them, these computers promise more efficient information processing aligned with physical laws governing energy and entropy.",
+        "summary": "Researchers are developing thermodynamic computers that harness random energy fluctuations rather than protecting against them. Unlike conventional computers that require safeguards against thermal noise, thermodynamic computers would exploit these natural energy fluctuations as a computational resource. This paradigm shift could lead to more efficient computing systems that work with fundamental physical principles rather than against them. The approach represents a novel direction in computer architecture that may overcome energy efficiency limitations of traditional silicon-based systems and enable new computational capabilities.",
         "url": "https://www.quantamagazine.org/thermodynamic-computers-go-with-the-energy-flow-20260715/",
         "source": "Quanta Magazine",
         "published_at": "Wed, 15 Jul 2026 15:24:33 +0000",
         "image": "https://www.quantamagazine.org/wp-content/uploads/2026/07/Thermodynamic-Computing-cr-Ada-Zejun-Shen-Default-copy.webp",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/1.mp3",
-        "title_hi": "थर्मोडायनामिक कंप्यूटर (ऊर्जा) प्रवाह के साथ चलते हैं",
-        "summary_hi": "शोधकर्ता थर्मोडायनामिक कंप्यूटर की खोज कर रहे हैं जो यादृच्छिक ऊर्जा उतार-चढ़ाव का उपयोग करते हैं, जबकि पारंपरिक कंप्यूटर उनके विरुद्ध सुरक्षा प्रदान करते हैं। आज की डिजिटल प्रणालियों को थर्मल शोर और ऊर्जा भिन्नताओं से बचाव की आवश्यकता है जो प्रदर्शन को कम करते हैं। थर्मोडायनामिक कंप्यूटिंग इस प्रतिमान को उलट देता है, प्राकृतिक ऊर्जा उतार-चढ़ाव को कम्प्यूटेशनल संसाधनों के रूप में लाभ उठाता है। यह दृष्टिकोण कंप्यूटिंग प्रणालियों में बिजली की खपत और ऊष्मा विसर्जन को मौलिक रूप से कम कर सकता है। थर्मोडायनामिक सिद्धांतों के विरुद्ध काम करने के बजाय उनके साथ काम करके, ये कंप्यूटर ऊर्जा और एंट्रॉपी को नियंत्रित करने वाले भौतिक नियमों के अनुरूप अधिक कुशल सूचना प्रसंस्करण का वादा करते हैं।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/quantum/1.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/1.mp3"
       },
       {
         "title": "An orbiting disco ball gave Einstein's theory its most precise test yet",
-        "summary": "Scientists used an orbiting reflective sphere—resembling a disco ball—to conduct the most precise test of Einstein's general relativity theory to date. The experiment measured how Earth's mass distorts spacetime around the planet, confirming Einstein's predictions with unprecedented accuracy. Despite Earth's relatively modest mass compared to stellar objects, the planet still measurably warps the fabric of spacetime. This test validates fundamental aspects of general relativity using satellite-based laser ranging technology, demonstrating that even subtle gravitational effects predicted by Einstein's theory can be experimentally verified with modern precision instruments.",
+        "summary": "Scientists used an orbiting reflective sphere—resembling a disco ball—to conduct the most precise test of Einstein's general relativity theory to date. The experiment measured how Earth's mass distorts spacetime around it, confirming Einstein's predictions with unprecedented accuracy. Despite Earth's relatively modest mass compared to massive celestial objects, the planet still produces measurable spacetime curvature detectable by sophisticated satellite-based measurements. This achievement demonstrates the remarkable precision of modern experimental physics and validates Einstein's century-old theory at new levels of accuracy, with implications for understanding gravity and fundamental physics.",
         "url": "https://arstechnica.com/science/2026/07/an-orbiting-disco-ball-gave-einsteins-theory-its-most-precise-test-yet/",
         "source": "Ars Technica",
         "published_at": "Fri, 10 Jul 2026 16:11:35 +0000",
         "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/07/image-1-1048x648.png",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/2.mp3",
-        "title_hi": "एक कक्षीय डिस्को बॉल ने आइंस्टीन के सिद्धांत को अब तक का सबसे सटीक परीक्षण दिया",
-        "summary_hi": "वैज्ञानिकों ने एक कक्षीय परावर्तक गोले का उपयोग किया—जो एक डिस्को बॉल जैसा दिखता है—आइंस्टीन के सामान्य सापेक्षता सिद्धांत का अब तक का सबसे सटीक परीक्षण करने के लिए। प्रयोग ने मापा कि पृथ्वी का द्रव्यमान ग्रह के चारों ओर स्पेसटाइम को कैसे विकृत करता है, आइंस्टीन की भविष्यवाणियों की अभूतपूर्व सटीकता के साथ पुष्टि की। तारकीय वस्तुओं की तुलना में पृथ्वी के अपेक्षाकृत मामूली द्रव्यमान के बावजूद, ग्रह अभी भी स्पेसटाइम के ताने-बाने को मापने योग्य रूप से विकृत करता है। यह परीक्षण उपग्रह-आधारित लेजर रेंजिंग तकनीक का उपयोग करके सामान्य सापेक्षता के मौलिक पहलुओं को मान्य करता है, जो प्रदर्शित करता है कि आइंस्टीन के सिद्धांत द्वारा भविष्यवाणी की गई सूक्ष्म गुरुत्वाकर्षण प्रभावों को भी आधुनिक सटीक उपकरणों के साथ प्रायोगिक रूप से सत्यापित किया जा सकता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/quantum/2.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/2.mp3"
       },
       {
-        "title": "We Know Simple Fluids Can Flow. Turns Out, Some Can Fracture.",
-        "summary": "Researchers have discovered that certain simple, nonelastic fluids can fracture and break apart, challenging long-held assumptions about fluid mechanics. Scientists previously believed that elasticity was the key property enabling complex fluids to fracture. However, observations of cracks forming in nonelastic simple fluids suggest a more nuanced understanding of fluid behavior. This finding prompts reconsideration of fundamental fluid dynamics principles and may have implications for materials science, industrial processes, and understanding natural phenomena. The discovery highlights gaps in current theoretical frameworks governing how fluids respond to stress and deformation.",
-        "url": "https://www.quantamagazine.org/we-know-simple-fluids-can-flow-turns-out-some-can-fracture-20260710/",
-        "source": "Quanta Magazine",
-        "published_at": "Fri, 10 Jul 2026 14:51:48 +0000",
-        "image": "https://www.quantamagazine.org/wp-content/uploads/2026/07/CrackingLiquids-cr-Adapted-with-permission-from-Phys.-Rev.-Lett.-136-124002.-Copyrighted-by-the-American-Physical-Society.-Default.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/3.mp3",
-        "title_hi": "हम जानते हैं कि सरल तरल पदार्थ बह सकते हैं। यह पता चला कि कुछ टूट सकते हैं।",
-        "summary_hi": "शोधकर्ताओं ने खोज की है कि कुछ सरल, गैर-लोचदार तरल पदार्थ टूट सकते हैं और अलग हो सकते हैं, जो तरल यांत्रिकी के बारे में लंबे समय से चली आ रही धारणाओं को चुनौती देते हैं। वैज्ञानिकों का पहले मानना था कि लोच जटिल तरल पदार्थों को टूटने में सक्षम बनाने वाली मुख्य संपत्ति थी। हालांकि, गैर-लोचदार सरल तरल पदार्थों में दरारें बनती हुई देखी गई हैं, जो तरल पदार्थ के व्यवहार की अधिक सूक्ष्म समझ का सुझाव देती हैं। यह खोज तरल गतिविज्ञान के मौलिक सिद्धांतों पर पुनर्विचार करने के लिए प्रेरित करती है और सामग्री विज्ञान, औद्योगिक प्रक्रियाओं और प्राकृतिक घटनाओं को समझने के लिए निहितार्थ हो सकते हैं। यह खोज तरल पदार्थ तनाव और विरूपण के प्रति कैसे प्रतिक्रिया करते हैं, इस पर शासन करने वाली वर्तमान सैद्धांतिक रूपरेखाओं में अंतराल को उजागर करती है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/quantum/3.mp3"
+        "title": "Dark matter may be naturally tuned to a hidden fifth dimension",
+        "summary": "A new theoretical framework proposes that dark matter may be naturally calibrated to interact with a hidden fifth dimension beyond the four known dimensions of spacetime. Dark matter, which appears to hold galaxies together through gravitational effects, has never been directly observed despite comprising most of the universe's matter. This novel theory suggests that dark matter's properties and behavior could be explained through its connection to extra spatial dimensions, offering a fresh perspective on one of physics' greatest mysteries. The hypothesis provides a potential bridge between quantum mechanics and general relativity.",
+        "url": "https://www.yahoo.com/news/science/articles/dark-matter-may-naturally-tuned-160000100.html",
+        "source": "The Brighter Side of News via Yahoo News",
+        "published_at": "2026-07-18T15:54:16+00:00",
+        "image": "https://media.zenfs.com/en/the_brighter_side_of_news_articles_781/8f4b134b8279ef655aaca6cddab90eda",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/3.mp3"
       },
       {
         "title": "Will We Ever Find Alien Civilizations?",
-        "summary": "Astronomer David Kipping discusses the challenges in searching for extraterrestrial life and civilizations beyond Earth. He examines why many claims of alien life have dissolved under scientific scrutiny and advocates for more statistically rigorous approaches to the search for life beyond Earth. Kipping argues that current methodologies often lack sufficient grounding in probability and statistics, leading to overconfident conclusions. He presents a rational case for considering the possibility that humanity may be alone in the universe, emphasizing the importance of applying rigorous scientific standards to astrobiology research and reconsidering assumptions underlying the search for extraterrestrial intelligence.",
+        "summary": "Astronomer David Kipping examines why claims of extraterrestrial life frequently fail scrutiny and advocates for a more statistically rigorous approach to searching for life beyond Earth. He discusses the methodological challenges in detecting alien civilizations and argues for applying rigorous statistical frameworks to the search for extraterrestrial intelligence. Kipping explores why it remains rational to consider the possibility that humanity may be alone in the universe, despite the vastness of space. His analysis emphasizes the importance of distinguishing between speculation and evidence-based conclusions in astrobiology and the search for extraterrestrial civilizations.",
         "url": "https://www.quantamagazine.org/will-we-ever-find-alien-civilizations-20260709/",
         "source": "Quanta Magazine",
         "published_at": "Thu, 09 Jul 2026 13:39:13 +0000",
         "image": "https://www.quantamagazine.org/wp-content/uploads/2026/07/JOW-S5E2-David-Kipping-cr-Chanelle-Nibbelink-Default-NO-LOGO.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/4.mp3",
-        "title_hi": "क्या हम कभी विदेशी सभ्यताओं को खोज पाएंगे?",
-        "summary_hi": "खगोलविद डेविड किपिंग पृथ्वी से परे अलौकिक जीवन और सभ्यताओं की खोज में आने वाली चुनौतियों पर चर्चा करते हैं। वह जांचते हैं कि अलौकिक जीवन के कई दावे वैज्ञानिक जांच के तहत क्यों विलीन हो गए हैं और पृथ्वी से परे जीवन की खोज के लिए अधिक सांख्यिकीय रूप से कठोर दृष्टिकोण की वकालत करते हैं। किपिंग तर्क देते हैं कि वर्तमान पद्धतियों में अक्सर संभाव्यता और सांख्यिकी में पर्याप्त आधार का अभाव होता है, जिससे अत्यधिक आत्मविश्वास वाले निष्कर्ष निकलते हैं। वह इस संभावना पर विचार करने के लिए एक तर्कसंगत मामला प्रस्तुत करते हैं कि मानवता ब्रह्मांड में अकेला हो सकता है, खगोल जीव विज्ञान अनुसंधान के लिए कठोर वैज्ञानिक मानकों को लागू करने और अलौकिक बुद्धिमत्ता की खोज के अंतर्निहित मान्यताओं पर पुनर्विचार करने के महत्व पर जोर देते हैं।",
-        "audio_hi": ""
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/4.mp3"
       }
     ],
     "trump": [
       {
+        "title": "Trump threatens new Canada tariffs over fires sending 'filthy' air into US cities",
+        "summary": "President Donald Trump has threatened to impose new tariffs on Canada in response to wildfire smoke affecting US air quality. Trump pledged to hold Canada responsible for costs associated with unhealthy air conditions caused by spreading smoke from Canadian wildfires. Canadian leader Mark Carney responded by stating that both the US and Canada share equal responsibility for fighting climate change, which experts say is worsening wildfire conditions. The dispute highlights tensions between the two nations over environmental policy and trade relations, with Trump using tariff threats as leverage on cross-border environmental issues.",
+        "url": "https://www.bbc.co.uk/news/articles/cwyq93j34lgo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC News",
+        "published_at": "Sat, 18 Jul 2026 17:29:50 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0b00/live/0ecf40f0-81ea-11f1-b7bc-5dd9ae7a9918.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/0.mp3"
+      },
+      {
+        "title": "Two US troops killed and one missing after Iranian attack in Jordan",
+        "summary": "Two US military personnel were killed and one remains missing following an Iranian air strike on a US military facility in Jordan. The attack represents an escalation in hostilities between Iran and the United States this week, with Tehran targeting multiple US military installations across the Gulf region. The incident has prompted criticism from some conservative commentators, including Fox News contributor and Marine combat veteran Joey Jones, who questioned President Trump's Iran war strategy following the troop deaths. The attack underscores ongoing tensions in the Middle East and raises questions about US military presence and strategy in the region.",
+        "url": "https://www.bbc.co.uk/news/articles/cn8nynv8ze8o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC News",
+        "published_at": "Sun, 19 Jul 2026 00:18:47 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/bb90/live/f934e660-82d3-11f1-a42c-29abcdb2a052.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/1.mp3"
+      },
+      {
         "title": "Trump alleges China meddled in 2020 election and questions voting security ahead of midterms",
-        "summary": "President Trump alleged that China interfered in the 2020 election and raised questions about voting security in advance of the upcoming midterm elections. China denied the allegations as fabricated, while US Democrats criticized Trump's claims, arguing he was laying groundwork to undermine the November elections. The statements reflect Trump's continued focus on election integrity concerns and represent a significant political development as the midterm campaign intensifies.",
+        "summary": "President Donald Trump has alleged that China interfered in the 2020 presidential election and raised questions about voting security ahead of November's midterm elections. China dismissed Trump's claims as fabricated, while US Democrats accused him of laying groundwork to undermine the upcoming elections. The allegations reflect ongoing disputes over election integrity and foreign interference, with Trump continuing to question the legitimacy of past electoral processes. His statements come as the nation prepares for midterm voting, raising concerns among political opponents that he may attempt to delegitimize future election results if outcomes prove unfavorable.",
         "url": "https://www.bbc.co.uk/news/articles/cx2k9wvv5wyo?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
         "published_at": "Fri, 17 Jul 2026 11:37:00 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d581/live/e4364610-818d-11f1-bee8-53ce494e1abc.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/0.mp3",
-        "title_hi": "ट्रम्प ने चीन पर 2020 के चुनाव में हस्तक्षेप का आरोप लगाया और मध्यावधि चुनावों से पहले मतदान सुरक्षा पर सवाल उठाए",
-        "summary_hi": "राष्ट्रपति ट्रम्प ने आरोप लगाया कि चीन ने 2020 के चुनाव में हस्तक्षेप किया और आने वाले मध्यावधि चुनावों से पहले मतदान सुरक्षा के बारे में सवाल उठाए। चीन ने इन आरोपों को गढ़ा हुआ बताकर खारिज किया, जबकि अमेरिकी डेमोक्रेट्स ने ट्रम्प के दावों की आलोचना की और तर्क दिया कि वह नवंबर के चुनावों को कमजोर करने की जमीन तैयार कर रहे हैं। ये बयान ट्रम्प के चुनाव अखंडता संबंधी चिंताओं पर निरंतर ध्यान केंद्रित करने को दर्शाते हैं और मध्यावधि अभियान तीव्र होने के साथ एक महत्वपूर्ण राजनीतिक विकास का प्रतिनिधित्व करते हैं।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/trump/0.mp3"
-      },
-      {
-        "title": "Trump threatens new Canada tariffs over fires sending 'filthy' air into US cities",
-        "summary": "President Trump threatened to impose new tariffs on Canada in response to wildfires sending smoke into US cities, which he characterized as 'filthy' air. Canadian leader Mark Carney responded by stating that both nations share equal responsibility for combating climate change, which experts indicate is worsening wildfire conditions. The dispute highlights tensions between the two countries over environmental issues and trade policy, with Trump using tariff threats as leverage in the ongoing disagreement.",
-        "url": "https://www.bbc.co.uk/news/articles/cwyq93j34lgo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC News",
-        "published_at": "Sat, 18 Jul 2026 01:29:47 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0b00/live/0ecf40f0-81ea-11f1-b7bc-5dd9ae7a9918.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/1.mp3",
-        "title_hi": "ट्रम्प ने कनाडा पर नए टैरिफ का खतरा दिया क्योंकि आग से 'गंदी' हवा अमेरिकी शहरों में जा रही है",
-        "summary_hi": "राष्ट्रपति ट्रम्प ने कनाडा पर नए टैरिफ लगाने का खतरा दिया क्योंकि जंगल की आग से निकला धुआं अमेरिकी शहरों में जा रहा है, जिसे उन्होंने 'गंदी' हवा के रूप में वर्णित किया। कनाडाई नेता मार्क कार्नी ने जवाब दिया कि दोनों राष्ट्र जलवायु परिवर्तन से लड़ने के लिए समान रूप से जिम्मेदार हैं, जिसे विशेषज्ञ जंगल की आग की स्थिति को बदतर बना रहे हैं। यह विवाद पर्यावरणीय मुद्दों और व्यापार नीति पर दोनों देशों के बीच तनाव को उजागर करता है, ट्रम्प चल रहे असहमति में लाभ के रूप में टैरिफ के खतरे का उपयोग कर रहे हैं।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/trump/1.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/2.mp3"
       },
       {
         "title": "Trump Media to sell instant access to 'market-moving' social posts",
-        "summary": "Trump Media is launching a premium paid feed providing Wall Street traders with instant access to the company's most influential social media posts, positioning them as 'market-moving' content. The service targets financial professionals seeking early access to potentially impactful announcements. This business development represents a new revenue stream for Trump Media and reflects the company's efforts to monetize its social platform by offering premium services to institutional investors and traders interested in real-time market-sensitive information.",
+        "summary": "Trump Media is launching a premium paid subscription service that provides Wall Street traders with instant access to the platform's most influential and market-moving social media posts. The service targets financial professionals seeking early access to potentially significant announcements and statements. This business model represents an attempt by Trump Media to monetize its user base and generate revenue from the platform's influence on financial markets. The initiative highlights the intersection of social media, financial markets, and Trump's business interests, as the company seeks to capitalize on the perceived market impact of posts from influential users.",
         "url": "https://www.bbc.co.uk/news/articles/c79gw4lj89eo?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
         "published_at": "Fri, 17 Jul 2026 07:25:31 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3a36/live/a22ce670-817e-11f1-a087-3f9df20b4f8a.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/2.mp3",
-        "title_hi": "ट्रम्प मीडिया 'बाजार-गतिविधि' सोशल पोस्ट्स तक तत्काल पहुंच बेचने जा रहा है",
-        "summary_hi": "ट्रम्प मीडिया वॉल स्ट्रीट व्यापारियों को कंपनी की सबसे प्रभावशाली सोशल मीडिया पोस्ट्स तक तत्काल पहुंच प्रदान करने वाली एक प्रीमियम भुगतान फीड लॉन्च कर रहा है, जिन्हें 'बाजार-गतिविधि' सामग्री के रूप में स्थापित किया जा रहा है। यह सेवा संभावित रूप से प्रभावशाली घोषणाओं तक प्रारंभिक पहुंच चाहने वाले वित्तीय पेशेवरों को लक्षित करती है। यह व्यावसायिक विकास ट्रम्प मीडिया के लिए एक नया राजस्व स्रोत है और संस्थागत निवेशकों और व्यापारियों को प्रीमियम सेवाएं प्रदान करके अपने सोशल प्लेटफॉर्म को मुद्रीकृत करने के कंपनी के प्रयासों को दर्शाता है जो वास्तविक समय बाजार-संवेदनशील जानकारी में रुचि रखते हैं।",
-        "audio_hi": ""
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/3.mp3"
       },
       {
-        "title": "White House teleprompter operator accused of making $100k from Trump speech bets",
-        "summary": "A White House staffer has been accused of using inside knowledge of presidential speeches to generate nearly $100,000 in profits through betting on the Kalshi platform. The allegation raises serious concerns about potential insider trading and misuse of confidential government information for personal financial gain. The incident highlights security vulnerabilities within the White House and questions about oversight of staff access to sensitive information regarding the president's public statements and their potential market impact.",
-        "url": "https://www.bbc.co.uk/news/articles/cjrvdqyr5d5o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC News",
-        "published_at": "Thu, 16 Jul 2026 18:52:35 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4840/live/ba1cb390-8161-11f1-bee8-53ce494e1abc.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/3.mp3",
-        "title_hi": "व्हाइट हाउस टेलीप्रॉम्प्टर ऑपरेटर पर ट्रम्प भाषण सट्टेबाजी से 100,000 डॉलर कमाने का आरोप",
-        "summary_hi": "एक व्हाइट हाउस कर्मचारी पर राष्ट्रपति भाषणों के आंतरिक ज्ञान का उपयोग करके कलशी प्लेटफॉर्म पर सट्टेबाजी के माध्यम से लगभग 100,000 डॉलर का लाभ कमाने का आरोप लगाया गया है। यह आरोप अंदरूनी व्यापार और व्यक्तिगत वित्तीय लाभ के लिए गोपनीय सरकारी जानकारी के दुरुपयोग की संभावना के बारे में गंभीर चिंताएं उठाता है। यह घटना व्हाइट हाउस के भीतर सुरक्षा कमजोरियों और राष्ट्रपति के सार्वजनिक बयानों और उनके संभावित बाजार प्रभाव के बारे में संवेदनशील जानकारी तक कर्मचारी पहुंच की निगरानी के बारे में सवाल उठाती है।",
-        "audio_hi": ""
-      },
-      {
-        "title": "Trump DHS using unverified figures to attack election officials on non-citizen voting",
-        "summary": "The Trump administration's Department of Homeland Security is escalating attacks on election officials in key battleground states, with Secretary Markwayne Mullin making claims that hundreds of thousands of non-citizens are illegally registered to vote. However, the agency has privately acknowledged these figures have not been fully vetted or verified. The controversy reflects ongoing partisan disputes over election integrity, with critics arguing the administration is using unsubstantiated claims to undermine confidence in election officials ahead of midterm elections.",
-        "url": "https://www.msn.com/en-us/news/politics/trump-dhs-using-unverified-figures-to-attack-election-officials-on-non-citizen-voting/ar-AA288R24",
-        "source": "CNN",
-        "published_at": "2026-07-17T20:35:28+00:00",
-        "image": "https://media.cnn.com/api/v1/images/stellar/prod/mullin-20260717183700543.png?c=16x9&q=w_800,c_fill",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/4.mp3",
-        "title_hi": "ट्रम्प डीएचएस गैर-नागरिक मतदान पर चुनाव अधिकारियों पर हमला करने के लिए अपरिवर्तित आंकड़ों का उपयोग कर रहा है",
-        "summary_hi": "ट्रम्प प्रशासन का होमलैंड सिक्योरिटी विभाग मुख्य चुनावी राज्यों में चुनाव अधिकारियों पर हमले को तेज कर रहा है, सचिव मार्कवेन मुलिन का दावा है कि सैकड़ों हजार गैर-नागरिक मतदान के लिए अवैध रूप से पंजीकृत हैं। हालांकि, एजेंसी ने निजी तौर पर स्वीकार किया है कि ये आंकड़े पूरी तरह से जांचे या सत्यापित नहीं किए गए हैं। यह विवाद चुनाव अखंडता पर चल रहे पक्षपातपूर्ण विवादों को दर्शाता है, आलोचकों का तर्क है कि प्रशासन मध्यावधि चुनावों से पहले चुनाव अधिकारियों में विश्वास को कमजोर करने के लिए अपरिवर्तित दावों का उपयोग कर रहा है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/trump/4.mp3"
+        "title": "Stephen Miller says Trump administration is pursuing policy to debank illegal immigrants",
+        "summary": "Stephen Miller announced that the Trump administration is implementing a policy to debank illegal immigrants by restricting their financial access through banking systems. The strategy aims to encourage self-deportation by cutting off undocumented immigrants' ability to access financial services. This represents a hardline immigration enforcement approach that goes beyond traditional deportation procedures. The policy reflects the administration's broader immigration agenda and represents a significant escalation in enforcement tactics targeting undocumented populations, using financial exclusion as a mechanism to incentivize departure from the United States.",
+        "url": "https://www.msn.com/en-us/news/politics/stephen-miller-says-trump-administration-is-pursuing-policy-to-debank-illegal-immigrants/ar-AA28bIgt",
+        "source": "Fox News",
+        "published_at": "2026-07-18T18:23:50+00:00",
+        "image": "https://static.foxnews.com/foxnews.com/content/uploads/2026/07/stephen-miller.png",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/4.mp3"
       }
     ],
     "local": [
       {
-        "title": "Skokie, Illinois residents give village an earful in wake of water main flooding",
-        "summary": "The Village of Skokie issued a declaration of emergency following significant water main flooding that affected residents. The emergency declaration is the first step in applying for state and county disaster funds. However, residents expressed concerns to CBS News Chicago about whether they would actually receive financial assistance from those funds. The water main incident prompted the village to take formal action to seek external aid for affected residents and infrastructure damage.",
-        "url": "https://www.cbsnews.com/chicago/news/skokie-illinois-village-earful-water-main-flooding/",
-        "source": "CBS News Chicago",
+        "title": "Skokie Health Department Advises Residents to Limit Outdoor Exposure Due to Unhealthy Air Quality",
+        "summary": "The Skokie Health and Human Services Department issued an advisory to residents to limit outdoor exposure and strenuous activities due to very unhealthy air quality caused by smoke from Canadian wildfires. The advisory was issued today, July 19, 2026, as air quality in the village reached dangerous levels. Residents are being urged to take precautions to protect their health during the poor air quality event. The department's guidance reflects concerns about the impact of wildfire smoke on the Chicago area and surrounding communities.",
+        "url": "https://www.skokie.org/",
+        "source": "Village of Skokie Official Website",
+        "published_at": "today",
+        "image": "",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local/0.mp3"
+      },
+      {
+        "title": "Person Rescued After Near-Drowning at Skokie Water Playground",
+        "summary": "Emergency personnel responded to a near-drowning incident at the Skokie Water Playground, located at Oakton Street and Skokie Boulevard, on Saturday around 2 p.m. A person was rescued and was recovering on Sunday following the incident. The rescue highlights the importance of water safety at public recreational facilities during the summer season. Emergency responders successfully intervened in the incident, preventing a potential tragedy at the popular community water facility.",
+        "url": "https://www.cbsnews.com/chicago/news/person-rescued-after-near-drowning-pool-skokie-illinois/",
+        "source": "CBS Chicago",
         "published_at": "",
         "image": "",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local/0.mp3",
-        "title_hi": "स्कोकी, इलिनॉय के निवासियों ने जल मुख्य पाइप बाढ़ के बाद गांव को खूब सुनाया",
-        "summary_hi": "स्कोकी गांव ने महत्वपूर्ण जल मुख्य पाइप बाढ़ के बाद आपातकालीन घोषणा जारी की जिससे निवासी प्रभावित हुए। यह आपातकालीन घोषणा राज्य और काउंटी आपदा निधि के लिए आवेदन करने का पहला कदम है। हालांकि, निवासियों ने सीबीएस न्यूज शिकागो को अपनी चिंता व्यक्त की कि क्या वे वास्तव में उन निधियों से वित्तीय सहायता प्राप्त करेंगे। जल मुख्य पाइप की घटना ने गांव को प्रभावित निवासियों और बुनियादी ढांचे की क्षति के लिए बाहरी सहायता लेने के लिए औपचारिक कार्रवाई करने के लिए प्रेरित किया।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/local/0.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local/1.mp3"
       }
     ],
     "local_events": [
       {
-        "title": "Wednesdays on the Green",
-        "summary": "Weekly concert series presented by the Skokie Chamber of Commerce in cooperation with the Village of Skokie, Skokie Park District, and Skokie Public Library. Bring a folding chair.",
-        "url": "https://members.skokiechamber.org/events",
-        "source": "The Village Green, Skokie (between Skokie Public Library and Skokie Village Hall)",
-        "published_at": "Wednesday, Jul 22, 2026, 7:00 PM",
-        "image": "",
-        "category": "music",
-        "audio": "",
-        "title_hi": "बुधवार को ग्रीन पर",
-        "summary_hi": "स्कोकी चैंबर ऑफ कॉमर्स द्वारा स्कोकी गांव, स्कोकी पार्क जिले और स्कोकी पब्लिक लाइब्रेरी के सहयोग से प्रस्तुत साप्ताहिक संगीत समारोह श्रृंखला। अपनी फोल्डिंग कुर्सी लाएं।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/local_events/0.mp3"
-      },
-      {
         "title": "Skokie Farmers Market",
-        "summary": "Producers-only farmers market featuring vendors from Illinois, Indiana, Michigan, and Wisconsin selling locally grown and made products. Live music and free kids' activities accompany the market each weekend.",
+        "summary": "A producers-only farmers market featuring vendors from Illinois, Indiana, Michigan, and Wisconsin selling locally grown and made products. Live music and free kids' activities accompany the market each weekend.",
         "url": "https://www.therecordnorthshore.org/2026/06/12/record-roundup-splash-into-summer-with-live-music-good-food-carnivals-and-more/",
         "source": "5127 Oakton Street, Skokie, IL 60077",
-        "published_at": "Weekend (July 18-19, 2026)",
+        "published_at": "Weekends (July 19-26, 2026)",
         "image": "",
         "category": "market",
-        "audio": "",
-        "title_hi": "स्कोकी किसान बाजार",
-        "summary_hi": "केवल उत्पादकों के लिए किसान बाजार जहां इलिनॉय, इंडियाना, मिशिगन और विस्कॉन्सिन के विक्रेता स्थानीय रूप से उगाए गए और बनाए गए उत्पाद बेचते हैं। प्रत्येक सप्ताहांत बाजार के साथ लाइव संगीत और बच्चों के लिए मुफ्त गतिविधियां होती हैं।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/local_events/1.mp3"
+        "audio": ""
       },
       {
         "title": "Let's Talk Veins Skokie | Free Vein Screening Event + Lunch",
-        "summary": "Free vein screening event with lunch provided. Community health event offering vascular health screenings and information for Skokie residents.",
+        "summary": "A free community health event offering vein screening services and lunch. Details about the specific date and venue are limited in the available information.",
         "url": "https://www.eventbrite.com/d/il--skokie/events/",
         "source": "Skokie, IL",
         "published_at": "Not specified",
         "image": "",
         "category": "community",
-        "audio": "",
-        "title_hi": "आइए स्कोकी में शिराओं के बारे में बात करें | मुफ्त शिरा स्क्रीनिंग इवेंट + दोपहर का भोजन",
-        "summary_hi": "मुफ्त शिरा स्क्रीनिंग इवेंट जिसमें दोपहर का भोजन प्रदान किया जाता है। स्कोकी निवासियों के लिए संवहनी स्वास्थ्य जांच और जानकारी प्रदान करने वाला सामुदायिक स्वास्थ्य कार्यक्रम।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/local_events/2.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local_events/1.mp3"
       },
       {
         "title": "Sound Bath Meditation",
-        "summary": "Sound bath meditation event in Skokie offering relaxation and wellness through immersive sound therapy experience.",
+        "summary": "A sound bath meditation event held in Skokie. Specific date and venue details are not provided in the available information.",
         "url": "https://www.eventbrite.com/d/il--skokie/events/",
         "source": "Skokie, IL",
         "published_at": "Not specified",
         "image": "",
         "category": "community",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local_events/3.mp3",
-        "title_hi": "साउंड बाथ ध्यान",
-        "summary_hi": "स्कोकी में साउंड बाथ ध्यान कार्यक्रम जो विसर्जनकारी ध्वनि चिकित्सा अनुभव के माध्यम से विश्राम और कल्याण प्रदान करता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/local_events/3.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local_events/2.mp3"
       }
     ],
     "local_weather": [
       {
         "title": "Weather in Skokie, Illinois",
-        "summary": "Clear sky, 80°F (feels like 84°F). Today's range: 78°F to 81°F. Humidity 79%, wind 3 mph.",
+        "summary": "Overcast clouds, 70°F (feels like 70°F). Today's range: 67°F to 71°F. Humidity 81%, wind 6 mph.",
         "url": "",
         "source": "OpenWeatherMap",
-        "published_at": "2026-07-18T10:23:22.301904+00:00",
+        "published_at": "2026-07-19T07:54:38.571492+00:00",
         "image": "",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local_weather/0.mp3",
-        "title_hi": "स्कोकी, इलिनॉय में मौसम",
-        "summary_hi": "साफ आसमान, 80°F (महसूस होता है 84°F)। आज की रेंज: 78°F से 81°F। नमी 79%, हवा 3 mph।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/local_weather/0.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local_weather/0.mp3"
       }
     ]
-  },
-  "hindi_generated_at": "2026-07-18T10:29:35.411019+00:00"
+  }
 }
