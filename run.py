@@ -78,6 +78,12 @@ APP_REGISTRY: Dict[str, Dict[str, str]] = {
         "type": "fastapi",
         "description": "News - Daily News Digest - Top 5 stories across 10 categories powered by LangGraph + Claude (OpenRouter) (Vue.js PWA + FastAPI)"
     },
+    "options": {
+        "path": "src/options",
+        "entry": "main.py",
+        "type": "script",
+        "description": "Options - Options Paper Trader - Automated options-selling paper trading dashboard with self-tuning strategy (Flask + SocketIO)"
+    },
     "test": {
         "path": ".",
         "entry": "tests",
