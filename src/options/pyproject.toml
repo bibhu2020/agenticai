@@ -15,7 +15,7 @@ dependencies = [
     "vaderSentiment==3.3.2",
     "scikit-learn==1.5.0",
     "python-dateutil==2.9.0",
-    "lxml==5.2.2",
+    "lxml==6.1.0",
     "pytz==2024.1",
     "simple-websocket==1.0.0",
     "psycopg[binary]==3.2.3",
