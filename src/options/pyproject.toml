@@ -1,0 +1,26 @@
+[project]
+name = "options-paper-trader"
+version = "0.1.0"
+description = "Options Paper Trader"
+requires-python = ">=3.10"
+dependencies = [
+    "Flask==3.0.3",
+    "Flask-SocketIO==5.3.6",
+    "APScheduler==3.10.4",
+    "yfinance==0.2.54",
+    "pandas==2.2.2",
+    "numpy==1.26.4",
+    "requests==2.32.3",
+    "beautifulsoup4==4.12.3",
+    "vaderSentiment==3.3.2",
+    "scikit-learn==1.5.0",
+    "python-dateutil==2.9.0",
+    "lxml==5.2.2",
+    "pytz==2024.1",
+    "simple-websocket==1.0.0",
+    "psycopg[binary]==3.2.3",
+    "python-dotenv==1.0.1",
+]
+
+[tool.uv]
+package = false

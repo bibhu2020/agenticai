@@ -17,6 +17,7 @@ jobs:
             "https://mishrabp-athena.hf.space"
             "https://mishrabp-remedy.hf.space"
             "https://mishrabp-news.hf.space"
+            "https://mishrabp-options.hf.space"
           )
           for url in "${URLS[@]}"; do
             echo "Pinging $url ..."
