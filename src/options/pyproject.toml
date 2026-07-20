@@ -19,7 +19,7 @@ dependencies = [
     "pytz==2024.1",
     "simple-websocket==1.0.0",
     "psycopg[binary]==3.2.3",
-    "python-dotenv==1.0.1",
+    "python-dotenv==1.2.2",
 ]
 
 [tool.uv]
