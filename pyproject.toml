@@ -53,7 +53,7 @@ dependencies = [
     "chromadb>=0.4.0",
     "sentence-transformers>=5.1.2",
     "pymupdf",
-    "pypdf>=6.13.3",
+    "pypdf>=6.15.0",
     "pypdf2>=3.0.1",
     "arxiv>=2.3.1",
     "wikipedia>=1.4.0",
