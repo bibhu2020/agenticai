@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-26T06:25:17.056888+00:00",
+  "generated_at": "2026-08-27T16:56:04.802649+00:00",
   "categories": {
     "world": [],
     "usa": [],
@@ -16,10 +16,10 @@
     "local_weather": [
       {
         "title": "Weather in Melissa, Texas",
-        "summary": "Broken clouds, 85°F (feels like 89°F). Today's range: 84°F to 90°F. Humidity 57%, wind 5 mph.",
+        "summary": "Few clouds, 91°F (feels like 100°F). Today's range: 89°F to 94°F. Humidity 56%, wind 9 mph.",
         "url": "",
         "source": "OpenWeatherMap",
-        "published_at": "2026-08-26T06:24:48.308536+00:00",
+        "published_at": "2026-08-27T16:55:28.091624+00:00",
         "image": "",
         "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local_weather/0.mp3"
       }
