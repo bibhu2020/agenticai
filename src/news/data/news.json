@@ -21,8 +21,12 @@
         "source": "OpenWeatherMap",
         "published_at": "2026-09-30T11:26:42.575300+00:00",
         "image": "",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local_weather/0.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local_weather/0.mp3",
+        "title_hi": "मेलिसा, टेक्सास में मौसम",
+        "summary_hi": "बादल छाए हुए, 78°F (महसूस होता है 79°F)। आज की रेंज: 76°F से 80°F। आर्द्रता 82%, हवा 8 mph।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/local_weather/0.mp3"
       }
     ]
-  }
+  },
+  "hindi_generated_at": "2026-09-30T12:24:39.819487+00:00"
 }
