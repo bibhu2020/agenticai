@@ -7,7 +7,7 @@
 
   <!-- PWA -->
   <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}"/>
-  <meta name="theme-color" content="#0d1117"/>
+  <meta name="theme-color" content="#071f22"/>
   <meta name="mobile-web-app-capable" content="yes"/>
   <meta name="apple-mobile-web-app-capable" content="yes"/>
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
@@ -21,17 +21,17 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.6.1/socket.io.min.js"></script>
   <style>
     :root {
-      --bg-primary: #0d1117;
-      --bg-card: #161b22;
-      --bg-card2: #1c2128;
+      --bg-primary: #071f22;
+      --bg-card: #0d2f32;
+      --bg-card2: #123e41;
       --accent-green: #2ea043;
       --accent-red: #f85149;
-      --accent-blue: #388bfd;
+      --accent-blue: #20c9b3;
       --accent-yellow: #d29922;
-      --text-muted: #8b949e;
-      --border: #30363d;
+      --text-muted: #86a8a5;
+      --border: #1d4d50;
     }
-    body { background: var(--bg-primary); font-family: 'Segoe UI', sans-serif; color: #e6edf3; }
+    body { background: var(--bg-primary); font-family: 'Segoe UI', sans-serif; color: #e6f5f3; }
     .navbar { background: var(--bg-card) !important; border-bottom: 1px solid var(--border); }
     .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
     .card-header { background: var(--bg-card2); border-bottom: 1px solid var(--border); font-weight: 600; }
@@ -41,7 +41,7 @@
     .positive { color: var(--accent-green) !important; }
     .negative { color: var(--accent-red) !important; }
     .neutral  { color: var(--text-muted); }
-    .badge-put  { background: #1a3a5c; color: #79c0ff; border: 1px solid #388bfd; }
+    .badge-put  { background: #0f3a3d; color: #5eead4; border: 1px solid #20c9b3; }
     .badge-call { background: #1a3a1c; color: #7ee787; border: 1px solid #2ea043; }
     .badge-stock{ background: #3d2c1e; color: #ffa657; border: 1px solid #d29922; }
     .score-bar { height: 6px; border-radius: 3px; background: var(--border); }
@@ -60,13 +60,19 @@
     .nav-tabs .nav-link.active { color: var(--accent-blue); border-bottom: 2px solid var(--accent-blue); background: none; }
     .btn-action { font-size: 0.82rem; padding: 5px 14px; }
     #toast-container { position: fixed; bottom: 20px; right: 20px; z-index: 9999; }
-    .toast-msg { background: var(--bg-card2); border: 1px solid var(--border); color: #e6edf3; border-radius: 8px; padding: 12px 18px; margin-top: 8px; font-size: 0.85rem; }
+    .toast-msg { background: var(--bg-card2); border: 1px solid var(--border); color: #e6f5f3; border-radius: 8px; padding: 12px 18px; margin-top: 8px; font-size: 0.85rem; }
     .signal-score { font-size: 1.1rem; font-weight: 700; }
     .param-row { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--border); }
     .param-name { flex: 1; font-size: 0.85rem; color: var(--text-muted); }
     .param-val  { font-weight: 600; width: 60px; text-align: right; }
     .param-range { flex: 1; }
     .spinner-border-sm { width: 1rem; height: 1rem; }
+    .btn-outline-primary { --bs-btn-color: var(--accent-blue); --bs-btn-border-color: var(--accent-blue);
+      --bs-btn-hover-bg: var(--accent-blue); --bs-btn-hover-border-color: var(--accent-blue);
+      --bs-btn-active-bg: var(--accent-blue); --bs-btn-active-border-color: var(--accent-blue); }
+    .form-range { accent-color: var(--accent-blue); }
+    .form-range::-webkit-slider-thumb { background-color: var(--accent-blue); }
+    .form-range::-moz-range-thumb { background-color: var(--accent-blue); }
   </style>
 </head>
 <body>
@@ -335,8 +341,8 @@ function renderChart() {
       responsive: true, maintainAspectRatio: false,
       plugins: { legend: { display: false } },
       scales: {
-        x: { grid: { color: '#21262d' }, ticks: { color: '#8b949e', maxTicksLimit: 8, font:{size:11} } },
-        y: { grid: { color: '#21262d' }, ticks: { color: '#8b949e', font:{size:11},
+        x: { grid: { color: '#1a3f42' }, ticks: { color: '#86a8a5', maxTicksLimit: 8, font:{size:11} } },
+        y: { grid: { color: '#1a3f42' }, ticks: { color: '#86a8a5', font:{size:11},
                callback: v => '$' + v.toFixed(0) } }
       }
     }
