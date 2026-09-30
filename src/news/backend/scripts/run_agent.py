@@ -29,8 +29,15 @@ def main() -> int:
         result = run_agent(category_keys=category_keys)
         counts = {k: len(v) for k, v in result.get("categories", {}).items()}
         log.info("Agent completed: %s", counts)
-        if result.get("errors"):
-            log.warning("Completed with warnings: %s", result["errors"])
+        errors = result.get("errors", {})
+        if errors:
+            log.warning("Completed with warnings: %s", errors)
+        # Fail the job (red X in Actions) when a category produced nothing due to
+        # an error, rather than reporting success on an empty result.
+        failed = [k for k, v in result.get("categories", {}).items() if not v and k in errors]
+        if failed:
+            log.error("Categories failed with no articles: %s", ", ".join(failed))
+            return 1
         return 0
     except Exception as exc:
         log.exception("Agent run failed: %s", exc)

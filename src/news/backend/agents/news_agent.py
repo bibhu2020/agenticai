@@ -407,7 +407,15 @@ def node_generate_audio(state: NewsState) -> dict:
 def node_save(state: NewsState) -> dict:
     out_dir = _DATA_PATH.parent / "partial"
     out_dir.mkdir(parents=True, exist_ok=True)
+    errors = state.get("errors", {})
     for cat_key, picks in state["categories"].items():
+        # A category that came back empty *because of an error* (e.g. OpenRouter
+        # 402 out-of-credits) gets no partial, so merge_partials.py keeps its
+        # previous articles instead of wiping it to [] — which silently blanked
+        # the whole app for weeks while every job still showed green.
+        if not picks and cat_key in errors:
+            print(f"[agent] NOT saving partial/{cat_key}.json — failed: {errors[cat_key]}")
+            continue
         print(f"[agent] saving partial/{cat_key}.json …")
         (out_dir / f"{cat_key}.json").write_text(json.dumps(picks, indent=2, ensure_ascii=False))
     return {}
