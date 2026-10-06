@@ -1,656 +1,507 @@
 {
-  "generated_at": "2026-10-05T12:49:52.939794+00:00",
+  "generated_at": "2026-10-06T12:22:39.723164+00:00",
   "categories": {
     "world": [
       {
-        "title": "Spanish PM Sánchez calls early election after housing protests",
-        "summary": "Spanish Prime Minister Pedro Sánchez has announced early elections scheduled for November 29, 2026, following recent political defeats on measures aimed at addressing Spain's housing crisis. The decision comes after the government faced setbacks in implementing policies designed to tackle the country's severe housing shortage and affordability challenges. This electoral announcement reflects growing public pressure and political opposition to the government's handling of the housing issue, which has become a significant concern for Spanish voters and a focal point of recent protests.",
-        "url": "https://www.bbc.co.uk/news/articles/cmdx39k49xw0o?at_medium=RSS&at_campaign=rss",
+        "title": "Ship sinks and crew missing after Black Sea drone attack",
+        "summary": "A ship has sunk and its crew remains missing following a drone attack in the Black Sea. The incident occurs amid Russia's intensified military strikes in the region as part of its ongoing war against Ukraine. While the exact perpetrator of the attack remains unclear, the incident represents an escalation in maritime violence in contested waters. The Black Sea has become an increasingly dangerous zone for commercial and military vessels, with multiple attacks reported in recent months. The sinking adds to growing concerns about freedom of navigation and the safety of shipping routes in the conflict zone.",
+        "url": "https://www.bbc.co.uk/news/articles/c8ly0v5r602eo?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
-        "published_at": "Mon, 05 Oct 2026 10:18:47 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/bee9/live/eb472d40-c0b5-11f1-a64c-550be9e3c66b.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/0.mp3",
-        "title_hi": "स्पेनिश प्रधानमंत्री सांचेज़ ने आवास विरोध के बाद जल्दी चुनाव की घोषणा की",
-        "summary_hi": "स्पेनिश प्रधानमंत्री पेड्रो सांचेज़ ने स्पेन के आवास संकट से निपटने के लिए डिज़ाइन किए गए उपायों पर हाल की राजनीतिक हार के बाद 29 नवंबर, 2026 को जल्दी चुनाव की घोषणा की है। यह निर्णय सरकार के आवास नीतियों को लागू करने में असफलताओं के बाद आया है, जो देश की गंभीर आवास कमी और सामर्थ्य की चुनौतियों से निपटने के लिए थीं। यह चुनावी घोषणा जनता के बढ़ते दबाव और सरकार के आवास मुद्दे को संभालने के तरीके के प्रति राजनीतिक विरोध को दर्शाती है, जो स्पेनिश मतदाताओं के लिए एक महत्वपूर्ण चिंता और हाल के विरोध का केंद्रबिंदु बन गया है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/world/0.mp3"
+        "published_at": "Tue, 06 Oct 2026 11:53:21 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/8c81/live/db0ca850-c16a-11f1-a003-8be783290413.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/0.mp3"
       },
       {
-        "title": "Right-wing Flávio Bolsonaro wins first round of Brazil election",
-        "summary": "Right-wing candidate Flávio Bolsonaro has won the first round of Brazil's presidential election, though he failed to secure the required 50 percent of votes needed for outright victory. The election will proceed to a runoff scheduled for October 25, 2026, where Bolsonaro will face his opponent in a decisive second round. This result marks a significant moment in Brazilian politics, with the right-wing candidate advancing to determine the country's next president. The runoff will determine whether Bolsonaro can consolidate his first-round support into an electoral victory.",
-        "url": "https://www.bbc.co.uk/news/articles/ck1l34ed592no?at_medium=RSS&at_campaign=rss",
+        "title": "Kenya confirms its first Ebola death as outbreak spreads",
+        "summary": "Kenya has confirmed its first death from Ebola as the disease outbreak continues to spread across the region. The deceased patient had been residing in the Democratic Republic of Congo, where the outbreak has proven particularly severe, claiming more than 4,000 lives this year. The confirmation of Kenya's first fatality marks a significant expansion of the outbreak beyond its primary epicenter and raises concerns about cross-border transmission. Health authorities are monitoring the situation closely as the virus spreads to neighboring countries, potentially threatening public health across East Africa and requiring coordinated regional response efforts.",
+        "url": "https://www.bbc.co.uk/news/articles/cqzrd7v1j163o?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
-        "published_at": "Mon, 05 Oct 2026 03:16:16 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/e4ea/live/56a0e6c0-c053-11f1-babe-4199b0e7ccea.png",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/1.mp3",
-        "title_hi": "दक्षिणपंथी फ्लेवियो बोलसोनारो ने ब्राज़ील के चुनाव के पहले दौर में जीत हासिल की",
-        "summary_hi": "दक्षिणपंथी उम्मीदवार फ्लेवियो बोलसोनारो ने ब्राज़ील के राष्ट्रपति चुनाव के पहले दौर में जीत हासिल की है, हालांकि वह सीधी जीत के लिए आवश्यक 50 प्रतिशत वोट हासिल करने में विफल रहे। चुनाव 25 अक्टूबर, 2026 को निर्धारित दूसरे दौर में आगे बढ़ेगा, जहां बोलसोनारो अपने प्रतिद्वंद्वी का सामना करेंगे। यह परिणाम ब्राज़ीलियाई राजनीति में एक महत्वपूर्ण क्षण है, दक्षिणपंथी उम्मीदवार देश के अगले राष्ट्रपति को निर्धारित करने के लिए दूसरे दौर तक पहुंच गए हैं। रनऑफ यह निर्धारित करेगा कि क्या बोलसोनारो अपने पहले दौर के समर्थन को चुनावी जीत में बदल सकते हैं।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/world/1.mp3"
+        "published_at": "Tue, 06 Oct 2026 11:51:26 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/535c/live/9ad923b0-c167-11f1-bc2e-018d645d8d21.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/1.mp3"
       },
       {
-        "title": "Supporters of jailed ex-PM Imran Khan begin march in Pakistan",
-        "summary": "Thousands of supporters of Pakistan's jailed former Prime Minister Imran Khan have taken to the streets in a major march following the breakdown of negotiations between authorities and Khan's political party. The demonstration reflects escalating tensions in Pakistan's political landscape, with talks between the government and Khan's party ending in deadlock. The mass mobilization represents significant public backing for Khan and his political movement, highlighting deep divisions within Pakistani politics. The march underscores ongoing frustration among Khan's supporters regarding his imprisonment and the political situation in the country.",
-        "url": "https://www.bbc.co.uk/news/articles/cmkg79z04w4zo?at_medium=RSS&at_campaign=rss",
+        "title": "Former German spy chief arrested for espionage and treason",
+        "summary": "August Hanning, a former chief of German intelligence, has been arrested on charges of espionage and treason. He is accused of obtaining classified information on behalf of a foreign power, representing a serious breach of national security. The arrest of such a high-ranking intelligence official raises significant concerns about the integrity of Germany's security apparatus and the potential scope of intelligence compromise. The case highlights vulnerabilities within intelligence agencies and the risks posed by insider threats. Details regarding which foreign power allegedly received the classified information and the extent of the security breach remain under investigation.",
+        "url": "https://www.bbc.co.uk/news/articles/c58jzyer1kr0o?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
-        "published_at": "Mon, 05 Oct 2026 10:23:26 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3eaa/live/091199c0-c06e-11f1-9135-d3a6369912e1.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/2.mp3",
-        "title_hi": "पाकिस्तान में कैद पूर्व प्रधानमंत्री इमरान खान के समर्थक मार्च शुरू करते हैं",
-        "summary_hi": "पाकिस्तान के कैद पूर्व प्रधानमंत्री इमरान खान के हज़ारों समर्थक अधिकारियों और खान की राजनीतिक पार्टी के बीच वार्ता के टूटने के बाद एक बड़े मार्च में सड़कों पर उतरे हैं। यह प्रदर्शन पाकिस्तान की राजनीतिक परिस्थिति में बढ़ते तनाव को दर्शाता है, सरकार और खान की पार्टी के बीच बातचीत गतिरोध में समाप्त हुई है। यह जन गतिविधि खान और उनके राजनीतिक आंदोलन के लिए महत्वपूर्ण जनता समर्थन का प्रतिनिधित्व करती है, पाकिस्तानी राजनीति में गहरे विभाजन को उजागर करती है। यह मार्च खान की कैद और देश की राजनीतिक स्थिति के संबंध में खान के समर्थकों के बीच चल रही निराशा को रेखांकित करता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/world/2.mp3"
+        "published_at": "Tue, 06 Oct 2026 10:05:42 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9ff2/live/9164de70-c174-11f1-babe-4199b0e7ccea.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/2.mp3"
       },
       {
-        "title": "'Not again': Arrest of US marine for murder reignites protests in Japan's Okinawa",
-        "summary": "The arrest of a US marine on suspicion of murder has reignited long-standing tensions and protests in Japan's Okinawa prefecture, bringing decades of local frustration to the surface. For many Okinawan residents, the incident represents another chapter in a troubled history of crimes involving American military personnel stationed on the island. The arrest has sparked renewed calls for addressing the broader issues surrounding the US military presence in Okinawa, including concerns about jurisdiction, accountability, and the impact on local communities. The incident reflects persistent tensions between the local population and the American military establishment in the region.",
-        "url": "https://www.bbc.co.uk/news/articles/cwgkv70gg1j3o?at_medium=RSS&at_campaign=rss",
+        "title": "Indian opposition MPs detained in protest against election chief",
+        "summary": "Opposition Members of Parliament in India have been detained while protesting against Chief Election Commissioner Gyanesh Kumar. Opposition leaders have alleged that Kumar manipulated voter rolls to favor Prime Minister Narendra Modi's party during recent elections. The detention of opposition MPs represents an escalation in political tensions surrounding electoral integrity concerns. The allegations of voter roll manipulation raise questions about the fairness and transparency of India's electoral process. The incident reflects broader concerns about institutional independence and democratic governance in India, with opposition parties challenging the impartiality of election administration.",
+        "url": "https://www.bbc.co.uk/news/articles/crpdgvx82831o?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
-        "published_at": "Mon, 05 Oct 2026 08:22:41 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f69b/live/e2156f10-c09d-11f1-a64c-550be9e3c66b.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/3.mp3",
-        "title_hi": "'फिर से नहीं': जापान के ओकिनावा में हत्या के आरोप में अमेरिकी समुद्री सैनिक की गिरफ्तारी ने विरोध को फिर से जगाया",
-        "summary_hi": "हत्या के संदेह में एक अमेरिकी समुद्री सैनिक की गिरफ्तारी ने जापान के ओकिनावा प्रान्त में दशकों पुरानी तनाव और विरोध को फिर से जगाया है, स्थानीय निराशा को सतह पर ला दिया है। कई ओकिनावन निवासियों के लिए, यह घटना द्वीप पर तैनात अमेरिकी सैन्य कर्मियों से जुड़े अपराधों के एक परेशान इतिहास का एक और अध्याय है। गिरफ्तारी ने ओकिनावा में अमेरिकी सैन्य उपस्थिति के आसपास व्यापक मुद्दों को संबोधित करने के लिए नई मांगें उत्पन्न की हैं, जिसमें क्षेत्राधिकार, जवाबदेही और स्थानीय समुदायों पर प्रभाव के बारे में चिंताएं शामिल हैं। यह घटना क्षेत्र में स्थानीय आबादी और अमेरिकी सैन्य प्रतिष्ठान के बीच लगातार तनाव को दर्शाती है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/world/3.mp3"
+        "published_at": "Tue, 06 Oct 2026 10:05:22 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5e0e/live/d31f47a0-c16b-11f1-a003-8be783290413.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/3.mp3"
       },
       {
-        "title": "Ethiopian rebel forces withdraw from Tigray regional capital",
-        "summary": "Ethiopian rebel forces have withdrawn from Mekelle, the capital of the Tigray region, with pro-government forces taking control of the city according to residents. This development marks a significant shift in the ongoing conflict in Ethiopia's Tigray region, which has been marked by intense fighting and humanitarian concerns. The withdrawal of rebel forces and the establishment of government control represents a major military development in the conflict. The change in territorial control has important implications for the region's stability and the humanitarian situation affecting the Tigray population.",
-        "url": "https://www.bbc.co.uk/news/articles/cqm249v07j4xo?at_medium=RSS&at_campaign=rss",
+        "title": "Separatist party projected to win Quebec election, adding new test to Canada's unity",
+        "summary": "The Parti Québécois, a separatist party, is projected to win Quebec's election with a minority government, presenting a new challenge to Canadian unity. The party has pledged to hold an independence referendum in the coming years, potentially reigniting debates about Quebec's separation from Canada. This electoral outcome represents a significant political shift in the province and raises questions about the future of Canadian federalism. The prospect of another independence referendum threatens to deepen divisions within Canada and create political uncertainty. The election result underscores ongoing tensions between Quebec's distinct identity and its place within the Canadian federation.",
+        "url": "https://www.bbc.co.uk/news/articles/crly09gz7ew4o?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
-        "published_at": "Mon, 05 Oct 2026 08:29:12 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/965b/live/ca8ca230-bfeb-11f1-8c3e-3b2eab095459.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/4.mp3",
-        "title_hi": "इथियोपियाई विद्रोही बल टिग्रे क्षेत्रीय राजधानी से हटते हैं",
-        "summary_hi": "इथियोपियाई विद्रोही बल मेकेले, टिग्रे क्षेत्र की राजधानी से हट गए हैं, निवासियों के अनुसार सरकार समर्थक बल शहर पर नियंत्रण ले रहे हैं। यह विकास इथियोपिया के टिग्रे क्षेत्र में चल रहे संघर्ष में एक महत्वपूर्ण बदलाव है, जो तीव्र लड़ाई और मानवीय चिंताओं से चिह्नित है। विद्रोही बल की वापसी और सरकारी नियंत्रण की स्थापना संघर्ष में एक प्रमुख सैन्य विकास है। क्षेत्रीय नियंत्रण में यह परिवर्तन क्षेत्र की स्थिरता और टिग्रे आबादी को प्रभावित करने वाली मानवीय स्थिति के लिए महत्वपूर्ण निहितार्थ रखता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/world/4.mp3"
+        "published_at": "Tue, 06 Oct 2026 11:42:52 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1ab3/live/4a336890-c17a-11f1-bed0-05ebd781c53c.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/4.mp3"
       }
     ],
     "usa": [
       {
-        "title": "Trump chooses top spy boss to run new AI taskforce",
-        "summary": "US President Donald Trump has appointed national intelligence chief Jay Clayton to lead a new White House task force on artificial intelligence, officially titled the \"Super Intelligence Force.\" This move comes amid growing concerns about AI's rapid development and its implications for national security and the economy. The appointment reflects the Trump administration's prioritization of coordinating government engagement with artificial intelligence technology. Clayton's background in intelligence suggests the administration views AI governance as a matter of national security significance alongside technological innovation.",
-        "url": "https://www.bbc.co.uk/news/articles/cqj6jenp26zyo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC News",
-        "published_at": "Mon, 05 Oct 2026 10:03:38 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9a97/live/e8568220-c056-11f1-ba75-170165fdb734.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/0.mp3",
-        "title_hi": "ट्रम्प ने नई एआई टास्कफोर्स चलाने के लिए शीर्ष जासूस प्रमुख को चुना",
-        "summary_hi": "अमेरिकी राष्ट्रपति डोनाल्ड ट्रम्प ने राष्ट्रीय खुफिया प्रमुख जे क्लेटन को कृत्रिम बुद्धिमत्ता पर एक नई व्हाइट हाउस टास्क फोर्स का नेतृत्व करने के लिए नियुक्त किया है, जिसे आधिकारिक रूप से \"सुपर इंटेलिजेंस फोर्स\" कहा जाता है। यह कदम एआई के तेजी से विकास और राष्ट्रीय सुरक्षा तथा अर्थव्यवस्था के लिए इसके निहितार्थों के बारे में बढ़ती चिंताओं के बीच आया है। यह नियुक्ति ट्रम्प प्रशासन की कृत्रिम बुद्धिमत्ता प्रौद्योगिकी के साथ सरकारी जुड़ाव को समन्वित करने की प्राथमिकता को दर्शाती है। क्लेटन की खुफिया पृष्ठभूमि से संकेत मिलता है कि प्रशासन एआई शासन को तकनीकी नवाचार के साथ-साथ राष्ट्रीय सुरक्षा के मामले के रूप में देखता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/usa/0.mp3"
-      },
-      {
-        "title": "Georgia officials hunt for suspect in shooting that killed two and injured 35",
-        "summary": "A mass shooting occurred during a homecoming celebration in Georgia, resulting in two deaths and 35 injuries after dozens of shots were fired into a crowd. The incident represents a significant act of violence during what should have been a festive community event. Law enforcement officials are actively searching for the suspect responsible for the attack. The shooting highlights ongoing concerns about gun violence in the United States and the unpredictable nature of mass casualty events that can occur at public gatherings and celebrations.",
-        "url": "https://www.bbc.co.uk/news/articles/c6e9lj5r3ej7o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC News",
-        "published_at": "Mon, 05 Oct 2026 12:08:21 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1c2d/live/ee570880-c0b9-11f1-a64c-550be9e3c66b.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/1.mp3",
-        "title_hi": "जॉर्जिया अधिकारी गोलीबारी के संदिग्ध की तलाश कर रहे हैं जिसमें दो की मौत और 35 घायल हुए",
-        "summary_hi": "जॉर्जिया में एक होमकमिंग समारोह के दौरान सामूहिक गोलीबारी हुई, जिसमें भीड़ पर दर्जनों गोलियां चलाई गईं, जिससे दो लोग मारे गए और 35 घायल हुए। यह घटना एक ऐसे समारोह के दौरान हिंसा का एक महत्वपूर्ण कार्य है जो एक उत्सवपूर्ण सामुदायिक कार्यक्रम होना चाहिए था। कानून प्रवर्तन अधिकारी सक्रिय रूप से इस हमले के लिए जिम्मेदार संदिग्ध की तलाश कर रहे हैं। यह गोलीबारी संयुक्त राज्य अमेरिका में बंदूक हिंसा के बारे में चल रही चिंताओं और सार्वजनिक समारोहों और समारोहों में होने वाली सामूहिक हताहत घटनाओं की अप्रत्याशित प्रकृति को उजागर करती है।",
-        "audio_hi": ""
-      },
-      {
-        "title": "'Not again': Arrest of US marine for murder reignites protests in Japan's Okinawa",
-        "summary": "The arrest of a US marine for murder has reignited long-standing tensions in Okinawa, Japan, where the local population has expressed decades of frustration over the US military presence. The incident brings back memories of previous crimes committed by American service members stationed on the island. For many Okinawan residents, the arrest symbolizes broader concerns about the impact of the US military base on their community and raises questions about jurisdiction and accountability. The case reflects ongoing diplomatic sensitivities between the United States and Japan regarding military personnel stationed abroad.",
-        "url": "https://www.bbc.co.uk/news/articles/cwgkv70gg1j3o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC News",
-        "published_at": "Mon, 05 Oct 2026 08:22:41 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f69b/live/e2156f10-c09d-11f1-a64c-550be9e3c66b.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/2.mp3",
-        "title_hi": "\"फिर से नहीं\": हत्या के लिए अमेरिकी समुद्री सैनिक की गिरफ्तारी ने ओकिनावा, जापान में विरोध को फिर से जगाया",
-        "summary_hi": "हत्या के आरोप में एक अमेरिकी समुद्री सैनिक की गिरफ्तारी ने ओकिनावा, जापान में दीर्घकालीन तनाव को फिर से जगाया है, जहां स्थानीय आबादी ने अमेरिकी सैन्य उपस्थिति पर दशकों की निराशा व्यक्त की है। यह घटना द्वीप पर तैनात अमेरिकी सैन्य कर्मियों द्वारा किए गए पिछले अपराधों की यादें लाती है। कई ओकिनावन निवासियों के लिए, यह गिरफ्तारी अमेरिकी सैन्य अड्डे के उनके समुदाय पर प्रभाव के बारे में व्यापक चिंताओं का प्रतीक है और क्षेत्राधिकार और जवाबदेही के बारे में सवाल उठाती है। यह मामला विदेश में तैनात सैन्य कर्मियों के संबंध में संयुक्त राज्य अमेरिका और जापान के बीच चल रही राजनयिक संवेदनशीलता को दर्शाता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/usa/2.mp3"
-      },
-      {
-        "title": "All six passengers presumed dead after plane went missing off US coast",
-        "summary": "An aircraft carrying six passengers lost communication with flight controllers after experiencing a significant drop in altitude off the US coast. All passengers are now presumed dead based on available flight data and circumstances surrounding the disappearance. The incident represents a tragic aviation accident and raises questions about aircraft safety and emergency procedures. Investigators will likely examine the flight data and circumstances to determine the cause of the altitude loss and communication failure that led to the aircraft's disappearance.",
-        "url": "https://www.bbc.co.uk/news/articles/cmze4g8r6nr9o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC News",
-        "published_at": "Mon, 05 Oct 2026 04:00:35 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2e35/live/041415f0-c083-11f1-babe-4199b0e7ccea.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/3.mp3",
-        "title_hi": "अमेरिकी तट के पास विमान लापता होने के बाद सभी छह यात्रियों को मृत माना जा रहा है",
-        "summary_hi": "एक विमान जिसमें छह यात्री थे, अमेरिकी तट के पास ऊंचाई में महत्वपूर्ण गिरावट का अनुभव करने के बाद उड़ान नियंत्रकों के साथ संचार खो गया। उपलब्ध उड़ान डेटा और लापता होने की परिस्थितियों के आधार पर सभी यात्रियों को अब मृत माना जा रहा है। यह घटना एक दुखद विमानन दुर्घटना का प्रतिनिधित्व करती है और विमान की सुरक्षा और आपातकालीन प्रक्रियाओं के बारे में सवाल उठाती है। जांचकर्ता संभवतः ऊंचाई में गिरावट और संचार विफलता के कारण का निर्धारण करने के लिए उड़ान डेटा और परिस्थितियों की जांच करेंगे जो विमान के लापता होने का कारण बनी।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/usa/3.mp3"
-      },
-      {
-        "title": "FBI arrests a woman accused of spying on Taiwan leader's family for China",
-        "summary": "The FBI has arrested Wanying Zhang, also known as Heather, on espionage charges related to alleged surveillance of the Taiwanese president's son and his family conducted on behalf of China. The arrest represents a significant counterintelligence operation highlighting concerns about foreign intelligence activities within the United States. The case underscores ongoing tensions between the US and China regarding Taiwan and demonstrates the FBI's commitment to identifying and prosecuting individuals engaged in espionage. The incident raises broader questions about national security vulnerabilities and foreign intelligence operations targeting US-based individuals with connections to Taiwan.",
-        "url": "https://www.npr.org/2026/10/05/g-s1-146410/fbi-arrests-a-woman-accused-of-spying-on-taiwan-leaders-family-for-china",
+        "title": "US midterms: What voters in 6 key states reveal about 2026 election",
+        "summary": "As the November 3 midterm elections approach, NPR is visiting six pivotal states—Maine, Texas, North Carolina, Georgia, Ohio, and Michigan—to understand voter priorities shaping their electoral choices. These swing states are critical indicators for assessing the political landscape and potential impact on President Trump's presidency. The midterms represent a significant ballot that could substantially influence the direction of the administration and congressional balance of power. Voter sentiment in these key regions will provide crucial insights into broader national trends and the electorate's priorities heading into the election.",
+        "url": "https://www.npr.org/2026/10/06/g-s1-146559/morning-edition-2026-midterms-election-voters-states",
         "source": "NPR Topics: National",
-        "published_at": "Mon, 05 Oct 2026 07:47:36 -0400",
-        "image": "https://media.npr.org/include/images/facebook-default-wide-s1400-c85.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/4.mp3",
-        "title_hi": "एफबीआई ने ताइवान के नेता के परिवार पर चीन की ओर से जासूसी करने के आरोप में एक महिला को गिरफ्तार किया",
-        "summary_hi": "एफबीआई ने वान्यिंग झांग, जिन्हें हेदर के नाम से भी जाना जाता है, को जासूसी के आरोपों पर गिरफ्तार किया है जो चीन की ओर से ताइवानी राष्ट्रपति के बेटे और उनके परिवार की निगरानी से संबंधित हैं। यह गिरफ्तारी एक महत्वपूर्ण प्रतिबुद्धिमत्ता ऑपरेशन का प्रतिनिधित्व करती है जो संयुक्त राज्य अमेरिका के भीतर विदेशी खुफिया गतिविधियों के बारे में चिंताओं को उजागर करती है। यह मामला ताइवान के संबंध में अमेरिका और चीन के बीच चल रहे तनाव को रेखांकित करता है और जासूसी में लगे व्यक्तियों की पहचान करने और उन पर मुकदमा चलाने के लिए एफबीआई की प्रतिबद्धता को प्रदर्शित करता है। यह घटना राष्ट्रीय सुरक्षा की कमजोरियों और ताइवान से जुड़े अमेरिका स्थित व्यक्तियों को लक्षित करने वाली विदेशी खुफिया गतिविधियों के बारे में व्यापक सवाल उठाती है।",
-        "audio_hi": ""
+        "published_at": "Tue, 06 Oct 2026 07:00:00 -0400",
+        "image": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/3946x2220+0+206/resize/1400/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F1b%2Fb8%2F8aac5cfa498ebb756d5324429c2c%2Fgettyimages-2295283121.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/0.mp3"
+      },
+      {
+        "title": "Fort Hood shooter Nidal Malik Hasan to be executed by firing squad, first US military execution since WWII",
+        "summary": "Nidal Malik Hasan, responsible for the deadliest non-combat attack on an American military base, will be executed by firing squad—marking the first military execution by this method since World War Two. In 2009, Hasan killed thirteen unarmed soldiers and wounded thirty-two others at Fort Hood, Texas. This execution represents a significant milestone in US military justice history and reflects the severity of the crime. The case has remained prominent in discussions about military security and the prosecution of mass casualty incidents on military installations.",
+        "url": "https://www.bbc.co.uk/news/articles/cq8ezkkkrpy1o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC News",
+        "published_at": "Tue, 06 Oct 2026 02:22:24 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/ae19/live/2431ba60-c171-11f1-a64c-550be9e3c66b.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/1.mp3"
+      },
+      {
+        "title": "Disney and ABC challenge Trump's FCC in court over free speech protections",
+        "summary": "Disney and ABC are engaged in a legal battle with President Trump's Federal Communications Commission regarding free speech protections. The dispute stems from Trump's repeated calls for ABC to terminate late-night host Jimmy Kimmel for mocking him, and his ongoing criticism of the network's talk show 'The View,' which he has accused of unfair coverage. The case raises fundamental questions about government pressure on media outlets and constitutional free speech protections. This legal confrontation highlights tensions between executive authority and press freedom in the current political environment.",
+        "url": "https://www.npr.org/2026/10/06/nx-s1-5991831/disney-battles-fcc",
+        "source": "NPR Topics: National",
+        "published_at": "Tue, 06 Oct 2026 05:17:00 -0400",
+        "image": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/1024x576+0+30/resize/1400/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F87%2F23%2Fb6ecac4a467eb09602807df149fc%2Fgettyimages-2236799142.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/2.mp3"
+      },
+      {
+        "title": "Elon Musk and Palmer Luckey's Pentagon roles raise ethics concerns over potential conflicts of interest",
+        "summary": "Elon Musk and Palmer Luckey have assumed new roles advising the Pentagon on autonomous weapon systems and future military technology, raising significant ethics concerns. Musk's SpaceX and Luckey's Anduril Industries could potentially benefit from recommendations made in their advisory capacity regarding autonomous weapons development. The arrangement presents potential conflicts of interest, as both companies may gain competitive advantages or lucrative contracts based on policy recommendations their executives help formulate. These appointments highlight ongoing debates about the revolving door between private defense contractors and government decision-making.",
+        "url": "https://www.npr.org/2026/10/06/nx-s1-5991899/elon-musk-palmer-luckey-pentagon-drones-ai",
+        "source": "NPR Topics: National",
+        "published_at": "Tue, 06 Oct 2026 05:00:00 -0400",
+        "image": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/5232x2943+0+0/resize/1400/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F77%2F19%2F0fa089eb40768ba50e735c6a5a1e%2Fap26152829867592.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/3.mp3"
+      },
+      {
+        "title": "Supreme Court's new term begins with major climate change case on corporate accountability",
+        "summary": "The Supreme Court's new term opens with a significant climate change case examining whether local governments can hold major energy companies legally accountable for climate change harms in their communities. The case, centered on Boulder County, has implications extending far beyond climate policy, potentially affecting corporate liability frameworks and environmental regulation broadly. The decision could establish important precedent regarding local authority to pursue climate-related damages against fossil fuel companies. This blockbuster case represents a pivotal moment in climate litigation and corporate accountability, with far-reaching consequences for environmental law and energy industry regulation.",
+        "url": "https://www.npr.org/2026/10/05/nx-s1-5970070/supreme-court-climate-change-boulder-county",
+        "source": "NPR Topics: National",
+        "published_at": "Mon, 05 Oct 2026 05:00:00 -0400",
+        "image": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/4500x2531+0+235/resize/1400/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F7a%2Fe1%2Fda37862044928eb2578776ed65da%2F09-29-2026-jimena-peck-denver-editorial-photographer-1531.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/4.mp3"
       }
     ],
     "india": [
       {
+        "title": "Indian opposition MPs detained in protest against election chief",
+        "summary": "Opposition leaders have been detained while protesting against Chief Election Commissioner Gyanesh Kumar, alleging he manipulated voter rolls to favor Prime Minister Narendra Modi's party during elections. The protests have drawn significant attention to concerns about electoral integrity and the independence of India's election commission. These detentions represent a major political confrontation between the ruling government and opposition parties over allegations of electoral misconduct. The incident highlights ongoing tensions regarding the credibility of India's electoral processes and the role of the election commission in ensuring fair and transparent elections.",
+        "url": "https://www.bbc.co.uk/news/articles/crpdgvx82831o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC News",
+        "published_at": "Tue, 06 Oct 2026 10:05:22 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5e0e/live/d31f47a0-c16b-11f1-a003-8be783290413.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/0.mp3"
+      },
+      {
+        "title": "Five reasons India's stock market is sinking even when its economy is growing",
+        "summary": "Despite being the world's fastest-growing major economy, India's stock market is experiencing one of its worst performances in 2026, presenting a significant paradox in the nation's economic landscape. This disconnect between strong economic growth and poor equity market performance raises questions about investor confidence, market dynamics, and underlying economic concerns. The article explores multiple factors contributing to this divergence, including potential issues with corporate earnings, valuations, foreign investment flows, and broader market sentiment. This phenomenon reflects complex economic dynamics that extend beyond headline growth figures and suggests deeper structural challenges affecting investor perception of Indian equities.",
+        "url": "https://www.bbc.co.uk/news/articles/cwp9g5p1gy7yo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC News",
+        "published_at": "Mon, 05 Oct 2026 23:13:11 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3270/live/5e1025a0-c135-11f1-a88e-ffa9b333d51f.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/1.mp3"
+      },
+      {
         "title": "How India became dangerously addicted to Chinese imports",
-        "summary": "India's economic relationship with China has created a concerning dependency on Chinese imports, as illustrated through the lens of toy shops and broader trade patterns. The article examines how Indian retailers and consumers have become reliant on Chinese goods, raising questions about economic vulnerability and trade imbalances. This dependency reflects deeper structural issues in India's manufacturing sector and supply chain management. The piece explores the implications of this reliance on India's economic sovereignty and domestic industries, highlighting the risks of over-dependence on a single trading partner amid geopolitical tensions and trade uncertainties.",
+        "summary": "India has developed a significant dependency on Chinese imports, with the nation's toy shops serving as an indicator of the broader economic relationship between the two countries. This reliance on Chinese goods reflects deeper trade imbalances and supply chain vulnerabilities that could pose risks to India's economic independence and domestic industries. The article examines how Indian retailers and consumers have become accustomed to affordable Chinese products, potentially undermining local manufacturing and entrepreneurship. This dependency raises concerns about India's ability to develop self-reliant industries and the long-term implications of such trade patterns on the nation's economic sovereignty and industrial development.",
         "url": "https://www.bbc.co.uk/news/articles/c5pve834grpno?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
         "published_at": "Mon, 05 Oct 2026 01:42:11 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/570e/live/a11df9f0-bc83-11f1-8bd0-b38b5eda40be.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/0.mp3",
-        "title_hi": "भारत कैसे चीनी आयात के लिए खतरनाक रूप से आदी हो गया",
-        "summary_hi": "भारत का चीन के साथ आर्थिक संबंध चीनी आयात पर एक चिंताजनक निर्भरता पैदा कर गया है, जैसा कि खिलौने की दुकानों और व्यापक व्यापार पैटर्न के माध्यम से दिखाया गया है। यह लेख जांच करता है कि कैसे भारतीय खुदरा विक्रेता और उपभोक्ता चीनी वस्तुओं पर निर्भर हो गए हैं, जो आर्थिक कमजोरी और व्यापार असंतुलन के बारे में सवाल उठाता है। यह निर्भरता भारत के विनिर्माण क्षेत्र और आपूर्ति श्रृंखला प्रबंधन में गहरी संरचनात्मक समस्याओं को दर्शाती है। यह टुकड़ा भारत की आर्थिक संप्रभुता और घरेलू उद्योगों पर इस निर्भरता के निहितार्थों की खोज करता है, भू-राजनीतिक तनाव और व्यापार अनिश्चितताओं के बीच एक एकल व्यापार भागीदार पर अत्यधिक निर्भरता के जोखिमों को उजागर करता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/india/0.mp3"
-      },
-      {
-        "title": "Indian police accused of sexually harassing journalists at protest",
-        "summary": "Police have faced allegations of sexually harassing journalists during a protest in India where demonstrators demanded the resignation of the election chief over controversial changes to voter rolls. Dozens of protesters were detained during the demonstration, with journalists covering the event reporting inappropriate conduct by law enforcement. The incident raises serious concerns about press freedom and police conduct during public assemblies. The allegations highlight tensions between authorities and media personnel exercising their professional duties, occurring amid broader controversy surrounding electoral procedures and voter registration modifications that have sparked public discontent and legal challenges.",
-        "url": "https://www.bbc.co.uk/news/articles/c9e8lvm6nrr3o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC News",
-        "published_at": "Sun, 04 Oct 2026 17:01:19 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d2fb/live/20fd0ca0-bffa-11f1-a64c-550be9e3c66b.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/1.mp3",
-        "title_hi": "भारतीय पुलिस पर विरोध प्रदर्शन में पत्रकारों का यौन उत्पीड़न करने का आरोप",
-        "summary_hi": "पुलिस को भारत में एक विरोध प्रदर्शन के दौरान पत्रकारों का यौन उत्पीड़न करने के आरोपों का सामना करना पड़ा है, जहां प्रदर्शनकारियों ने मतदाता सूचियों में विवादास्पद परिवर्तनों के कारण चुनाव प्रमुख के इस्तीफे की मांग की थी। प्रदर्शन के दौरान दर्जनों प्रदर्शनकारियों को हिरासत में लिया गया, घटना को कवर करने वाले पत्रकारों ने कानून प्रवर्तन द्वारा अनुचित आचरण की सूचना दी। यह घटना प्रेस स्वतंत्रता और सार्वजनिक सभाओं के दौरान पुलिस आचरण के बारे में गंभीर चिंताएं उठाती है। ये आरोप अधिकारियों और अपने व्यावसायिक कर्तव्यों का पालन करने वाले मीडिया कर्मियों के बीच तनाव को उजागर करते हैं, जो चुनावी प्रक्रियाओं और मतदाता पंजीकरण संशोधनों के आसपास व्यापक विवाद के बीच होता है जिसने सार्वजनिक असंतोष और कानूनी चुनौतियों को जन्म दिया है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/india/1.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/2.mp3"
       },
       {
         "title": "Inside India's forest villages, where a dangerous mix of crises led to 32 child deaths",
-        "summary": "At least 32 children have died in India's Balaghat district since May amid concurrent outbreaks of measles and malaria, revealing a dangerous convergence of health crises in forest villages. The deaths underscore the vulnerability of remote communities facing multiple infectious disease threats simultaneously, compounded by limited healthcare access and infrastructure challenges. The situation highlights systemic gaps in disease surveillance, vaccination coverage, and medical facilities in rural areas. These preventable deaths raise urgent questions about public health preparedness, resource allocation, and the government's capacity to respond to health emergencies in marginalized regions, particularly where poverty and geographic isolation exacerbate disease transmission and mortality risks.",
+        "summary": "At least 32 children have died in India's Balaghat district since May due to a dangerous combination of health crises, including outbreaks of measles and malaria. These deaths highlight severe public health challenges in India's remote forest villages, where inadequate healthcare infrastructure, poor sanitation, and limited access to medical facilities create life-threatening conditions for vulnerable populations. The tragedy underscores systemic failures in disease prevention and healthcare delivery in marginalized communities. These preventable deaths raise urgent questions about government health initiatives, resource allocation to rural areas, and the effectiveness of disease surveillance and vaccination programs in reaching India's most isolated populations.",
         "url": "https://www.bbc.co.uk/news/articles/cmn9wr84v1qno?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
         "published_at": "Wed, 30 Sep 2026 23:41:34 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2f3e/live/4557eaa0-bd7c-11f1-add9-b18e6ea43b60.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/2.mp3",
-        "title_hi": "भारत के वन गांवों में, जहां संकटों के खतरनाक मिश्रण से 32 बच्चों की मृत्यु हुई",
-        "summary_hi": "भारत के बालाघाट जिले में मई के बाद से कम से कम 32 बच्चों की मृत्यु हुई है, जो खसरा और मलेरिया के समवर्ती प्रकोप के बीच स्वास्थ्य संकटों के एक खतरनाक अभिसरण को प्रकट करता है। ये मृत्यु दूरस्थ समुदायों की कमजोरी को रेखांकित करती हैं जो एक साथ कई संक्रामक रोग खतरों का सामना कर रहे हैं, जो सीमित स्वास्थ्यसेवा पहुंच और बुनियादी ढांचे की चुनौतियों से बढ़ जाते हैं। यह स्थिति ग्रामीण क्षेत्रों में रोग निगरानी, टीकाकरण कवरेज और चिकित्सा सुविधाओं में प्रणालीगत अंतराल को उजागर करती है। ये रोकथाम योग्य मृत्यु सार्वजनिक स्वास्थ्य तैयारी, संसाधन आवंटन और सीमांत क्षेत्रों में स्वास्थ्य आपातकालीन स्थितियों का जवाब देने की सरकार की क्षमता के बारे में तत्काल सवाल उठाती हैं, विशेष रूप से जहां गरीबी और भौगोलिक अलगाववाद रोग संचरण और मृत्यु दर के जोखिमों को बढ़ाते हैं।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/india/2.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/3.mp3"
       },
       {
         "title": "India beat Pakistan to take Asian Games gold",
-        "summary": "India defeated Pakistan to win gold in cricket at the Asian Games, with strong performances from batsmen Abhishek Sharma and Tilak Varma setting the foundation for victory. The triumph represents a significant achievement in regional sporting competition, showcasing India's cricket prowess on the continental stage. The match carried considerable sporting and cultural significance given the historical rivalry between the two nations. India's victory demonstrates the team's competitive strength and ability to perform under pressure in high-stakes matches, contributing to India's overall medal tally at the Asian Games and reinforcing the country's position as a cricket powerhouse in Asia.",
+        "summary": "India defeated Pakistan to win gold in cricket at the Asian Games, with key contributions from batsmen Abhishek Sharma and Tilak Varma who set the foundation for India's victory. This triumph represents a significant achievement in regional sports competition and demonstrates India's cricket prowess on the continental stage. The victory carries considerable sporting and cultural significance given the historical rivalry between the two nations in cricket. The performance of Indian players in this high-pressure match showcases the depth of talent in Indian cricket and reinforces the country's position as a dominant force in Asian cricket competitions.",
         "url": "https://www.bbc.co.uk/sport/cricket/articles/c64g1dpgg247o?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
         "published_at": "Sat, 03 Oct 2026 09:22:43 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c6b7/live/1139c890-bf04-11f1-babe-4199b0e7ccea.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/3.mp3",
-        "title_hi": "भारत ने एशियाई खेलों में सोना जीतने के लिए पाकिस्तान को हराया",
-        "summary_hi": "भारत ने एशियाई खेलों में क्रिकेट में सोना जीतने के लिए पाकिस्तान को हराया, बल्लेबाजों अभिषेक शर्मा और तिलक वर्मा के मजबूत प्रदर्शन ने जीत की नींव तैयार की। यह जीत क्षेत्रीय खेल प्रतियोगिता में एक महत्वपूर्ण उपलब्धि का प्रतिनिधित्व करती है, जो महाद्वीपीय मंच पर भारत की क्रिकेट कुशलता को प्रदर्शित करती है। यह मैच दोनों राष्ट्रों के बीच ऐतिहासिक प्रतिद्वंद्विता को देखते हुए काफी खेल और सांस्कृतिक महत्व रखता था। भारत की जीत टीम की प्रतिस्पर्धी शक्ति और उच्च दांव वाले मैचों में दबाव में प्रदर्शन करने की क्षमता को प्रदर्शित करती है, जो एशियाई खेलों में भारत के समग्र पदक तालिका में योगदान देती है और एशिया में क्रिकेट महाशक्ति के रूप में देश की स्थिति को मजबूत करती है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/india/3.mp3"
-      },
-      {
-        "title": "SC seeks EC response on changes during SIR: Why Form 6 has become a flashpoint",
-        "summary": "India's Supreme Court has sought responses from the Election Commission regarding controversial changes to voter registration procedures, specifically focusing on Form 6, which has become central to electoral disputes. A bench led by Chief Justice Surya Kant is examining whether the poll panel followed statutory procedures in implementing these modifications. The court refused to immediately suspend the Chief Election Commissioner while considering the controversy. The Form 6 issue has triggered significant public protests and legal challenges, with concerns about the integrity of voter rolls and electoral processes. The Supreme Court's intervention reflects serious questions about election administration and the need for procedural compliance in democratic institutions.",
-        "url": "https://timesofindia.indiatimes.com/india/sc-seeks-ec-response-on-changes-during-sir-why-has-form-6-become-a-flashpoint-explained/articleshow/134695012.cms",
-        "source": "Times of India",
-        "published_at": "Mon, 05 Oct 2026 15:04:32 +0530",
-        "image": "https://static.toiimg.com/photo/msid-134697165,imgsize-83590.cms",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/4.mp3",
-        "title_hi": "सर्वोच्च न्यायालय ने मतदाता पंजीकरण में परिवर्तनों पर चुनाव आयोग की प्रतिक्रिया मांगी: फॉर्म 6 क्यों विवाद का केंद्र बन गया",
-        "summary_hi": "भारत के सर्वोच्च न्यायालय ने मतदाता पंजीकरण प्रक्रियाओं में विवादास्पद परिवर्तनों के संबंध में चुनाव आयोग से प्रतिक्रिया मांगी है, विशेष रूप से फॉर्म 6 पर ध्यान केंद्रित करते हुए, जो चुनावी विवादों के केंद्र में बन गया है। मुख्य न्यायाधीश सूर्य कांत के नेतृत्व में एक पीठ यह जांच कर रही है कि क्या चुनाव पैनल ने इन संशोधनों को लागू करने में वैधानिक प्रक्रियाओं का पालन किया है। अदालत ने इस विवाद पर विचार करते हुए मुख्य चुनाव आयुक्त को तुरंत निलंबित करने से इनकार कर दिया। फॉर्म 6 मुद्दा महत्वपूर्ण सार्वजनिक विरोध प्रदर्शन और कानूनी चुनौतियों को ट्रिगर कर गया है, मतदाता सूचियों की अखंडता और चुनावी प्रक्रियाओं के बारे में चिंताओं के साथ। सर्वोच्च न्यायालय का हस्तक्षेप चुनाव प्रशासन के बारे में गंभीर सवाल और लोकतांत्रिक संस्थानों में प्रक्रियात्मक अनुपालन की आवश्यकता को दर्शाता है।",
-        "audio_hi": ""
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/4.mp3"
       }
     ],
     "odisha": [
       {
-        "title": "Odisha launches India's first MICE incentive portal to boost business tourism",
-        "summary": "The Odisha government has launched India's first dedicated incentive portal for Meetings, Incentives, Conferences and Exhibitions (MICE) to attract investment and promote business tourism in the state. This initiative aims to position Odisha as a premier destination for corporate events, conferences, and exhibitions. The portal is designed to streamline the process for organizers and businesses seeking to host or participate in MICE events, offering incentives to encourage such activities. This move is expected to boost the state's economy by attracting business travelers and generating employment opportunities in the hospitality and service sectors.",
-        "url": "https://www.msn.com/en-in/news/other/odisha-launches-indias-first-mice-incentive-portal-to-boost-business-tourism/ar-AA2dAu3D",
-        "source": "Press Trust of India",
-        "published_at": "2026-10-05T12:26:04+00:00",
+        "title": "Odisha Announces Student Union Elections for October 15",
+        "summary": "Odisha will conduct student union elections across all public universities and colleges on October 15, marking the first such elections after an eight-year gap. The state government has issued new rules and an election schedule for the democratic exercise. Simultaneously, the Odisha government has directed all educational institutes to ensure violence-free conduct during these elections, with state ministers urging students to participate in democratic processes while avoiding violence. This represents a significant return of student democracy to Odisha's campuses after a prolonged hiatus.",
+        "url": "https://www.jagranjosh.com/news/odisha-announces-student-union-election-on-october-15-after-8-years-188082",
+        "source": "Jagran Josh",
+        "published_at": "2026-10-06T01:49:00+00:00",
+        "image": "https://smart-cms-bkd-static-media.jnm.digital/images/user/image/sherin-tressa-n-1788510208127.webp",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/0.mp3"
+      },
+      {
+        "title": "RailTel Corporation of India wins ₹48.40 Crore contract to establish vocational labs in Odisha",
+        "summary": "RailTel Corporation of India has secured a ₹48.40 crore work order from the Odisha Primary Education Program Authority (OPEPA) to establish vocational laboratories and supply necessary equipment and tools. This significant contract involves the supply, installation, and commissioning of equipment for vocational training facilities across the state. The project aims to enhance skill development infrastructure in Odisha's educational system, supporting the government's initiative to strengthen vocational education and prepare students for employment in technical fields.",
+        "url": "https://tradebrains.in/indian-markets/railtel-corporation-of-india-wins-4840-crore-contract-to-establish-vocational-labs-in-odisha-12629029",
+        "source": "Trade Brains",
+        "published_at": "2026-10-06T09:48:00+00:00",
+        "image": "https://img-cdn.publive.online/fit-in/1200x675/trade-brains/media/media_files/wp-content/uploads/2026/04/Railtel-.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/1.mp3"
+      },
+      {
+        "title": "Rajnath to lay foundation stone for Rs 218-cr Shakti engine facility at HAL unit in Odisha",
+        "summary": "Defence Minister Rajnath Singh is scheduled to lay the foundation stone for a ₹218-crore new facility dedicated to Shakti engine production at Hindustan Aeronautics Limited's Koraput unit in Odisha. This major defence manufacturing project represents significant investment in the state's industrial infrastructure and aerospace sector. The Shakti engine facility will enhance India's indigenous defence capabilities and contribute to the government's Make in India initiative, positioning Odisha as a key hub for advanced aerospace and defence manufacturing.",
+        "url": "https://theprint.in/india/rajnath-to-lay-foundation-stone-for-rs-218-cr-shakti-engine-facility-at-hal-unit-in-odisha/3062650/",
+        "source": "The Print",
+        "published_at": "2026-10-05T16:16:00+00:00",
         "image": "",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/0.mp3",
-        "title_hi": "ओडिशा ने व्यावसायिक पर्यटन को बढ़ावा देने के लिए भारत का पहला MICE प्रोत्साहन पोर्टल लॉन्च किया",
-        "summary_hi": "ओडिशा सरकार ने राज्य में निवेश आकर्षित करने और व्यावसायिक पर्यटन को बढ़ावा देने के लिए मीटिंग्स, इनसेंटिव्स, कॉन्फ्रेंस और एक्सिबिशन्स (MICE) के लिए भारत का पहला समर्पित प्रोत्साहन पोर्टल लॉन्च किया है। यह पहल ओडिशा को कॉर्पोरेट इवेंट्स, सम्मेलनों और प्रदर्शनियों के लिए एक प्रमुख गंतव्य के रूप में स्थापित करने का लक्ष्य रखती है। पोर्टल को आयोजकों और व्यवसायों के लिए MICE इवेंट्स आयोजित करने या उनमें भाग लेने की प्रक्रिया को सुव्यवस्थित करने के लिए डिज़ाइन किया गया है, जो ऐसी गतिविधियों को प्रोत्साहित करने के लिए प्रोत्साहन प्रदान करता है। इस कदम से राज्य की अर्थव्यवस्था को व्यावसायिक यात्रियों को आकर्षित करके और आतिथ्य और सेवा क्षेत्रों में रोजगार के अवसर पैदा करके बढ़ावा मिलने की उम्मीद है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/odisha/0.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/2.mp3"
       },
       {
-        "title": "Odisha government announces to hold student union election after a gap of eight years",
-        "summary": "The Odisha government has announced the resumption of student union elections after an eight-year hiatus, with voting scheduled for October 15, 2026. The election process will be completed within ten days, with notification issued on October 7, nominations accepted on October 9, and campus voting on October 15. The elections will be conducted with tight security measures and in compliance with Supreme Court guidelines. Maximum election expenditure has been capped at Rs 5,000 per candidate, and political funding has been barred. This marks a significant development in student governance and democratic participation in Odisha's educational institutions.",
-        "url": "https://odishatv.in/odisha/big-announcement-by-odisha-govt-after-8-years-student-union-elections-to-be-held-on-oct-15-12624826",
-        "source": "Odisha TV",
-        "published_at": "2026-10-05T07:06:00+00:00",
-        "image": "https://img-cdn.publive.online/fit-in/1200x675/odishatv/media/media_files/2026/10/05/student-elections-2026-10-05-12-35-21.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/1.mp3",
-        "title_hi": "ओडिशा सरकार ने आठ साल के अंतराल के बाद छात्र संघ चुनाव आयोजित करने की घोषणा की",
-        "summary_hi": "ओडिशा सरकार ने आठ साल के अंतराल के बाद छात्र संघ चुनावों को फिर से शुरू करने की घोषणा की है, मतदान 15 अक्टूबर 2026 के लिए निर्धारित है। चुनाव प्रक्रिया दस दिनों के भीतर पूरी की जाएगी, 7 अक्टूबर को अधिसूचना जारी की जाएगी, 9 अक्टूबर को नामांकन स्वीकार किए जाएंगे, और 15 अक्टूबर को परिसर में मतदान होगा। चुनाव कड़ी सुरक्षा उपायों के साथ और सर्वोच्च न्यायालय के दिशानिर्देशों के अनुपालन में आयोजित किए जाएंगे। अधिकतम चुनाव व्यय को प्रति उम्मीदवार 5,000 रुपये पर सीमित किया गया है, और राजनीतिक वित्तपोषण पर प्रतिबंध लगाया गया है। यह ओडिशा के शैक्षणिक संस्थानों में छात्र शासन और लोकतांत्रिक भागीदारी में एक महत्वपूर्ण विकास है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/odisha/1.mp3"
+        "title": "Odisha Healthier Rice Summit connects research, farmers and markets to scale heritage rice",
+        "summary": "The Odisha Healthier Rice Business Summit 2026 brings together government agencies, research institutions, farmers, farmer producer organizations (FPOs), and market players to develop a comprehensive rice value chain strategy. The summit focuses on scaling heritage rice varieties and connecting research innovations with practical farming applications and market opportunities. This collaborative initiative aims to strengthen Odisha's rice sector by bridging the gap between agricultural research, farmer practices, and commercial markets, ultimately enhancing the competitiveness and sustainability of the state's rice production and trade.",
+        "url": "https://www.msn.com/en-in/money/other/odisha-healthier-rice-summit-connects-research-farmers-and-markets-to-scale-heritage-rice/ar-AA2dFp4q",
+        "source": "Agro Spectrum India",
+        "published_at": "2026-10-06T10:55:04+00:00",
+        "image": "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA2dFu2V.img?w=859&h=648&m=4&q=93",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/3.mp3"
       },
       {
-        "title": "Vedanta faces ₹5,600 crore demand from Odisha Mining after high court setback",
-        "summary": "Odisha Mining Corporation has issued a demand and intimation letter to Vedanta Aluminium for ₹5,600 crore following a high court setback. The amount is payable by October 31, 2026. This demand relates to bauxite pricing and mining operations in Odisha. The legal development represents a significant financial claim against the multinational company and reflects ongoing disputes between the state mining authority and private mining operators regarding resource extraction and pricing terms. The case highlights tensions between state mineral resource management and private sector mining interests in Odisha.",
-        "url": "https://www.livemint.com/companies/news/vedanta-aluminium-demand-odisha-mining-corp-orissa-high-court-bauxite-price-india-11791179324496.html",
-        "source": "Mint",
-        "published_at": "2026-10-05T06:50:00+00:00",
-        "image": "https://www.livemint.com/lm-img/img/2026/10/05/600x338/VEDANTA-FUNDRAISE--0_1714617864242_1791182704108_yqyJ_21c57fb9-6621-4458-9ccc-d416dcdb7a52_tJOZ.JPG",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/2.mp3",
-        "title_hi": "वेदांता को उच्च न्यायालय की हार के बाद ओडिशा माइनिंग से ₹5,600 करोड़ की मांग का सामना करना पड़ रहा है",
-        "summary_hi": "ओडिशा माइनिंग कॉर्पोरेशन ने उच्च न्यायालय की हार के बाद वेदांता एल्यूमिनियम को ₹5,600 करोड़ के लिए एक मांग और अंतरंग पत्र जारी किया है। यह राशि 31 अक्टूबर 2026 तक देय है। यह मांग ओडिशा में बॉक्साइट मूल्य निर्धारण और खनन संचालन से संबंधित है। यह कानूनी विकास बहुराष्ट्रीय कंपनी के खिलाफ एक महत्वपूर्ण वित्तीय दावे का प्रतिनिधित्व करता है और राज्य खनन प्राधिकरण और निजी खनन ऑपरेटरों के बीच संसाधन निष्कर्षण और मूल्य निर्धारण शर्तों के संबंध में चल रहे विवादों को दर्शाता है। यह मामला ओडिशा में राज्य खनिज संसाधन प्रबंधन और निजी क्षेत्र के खनन हितों के बीच तनाव को उजागर करता है।",
-        "audio_hi": ""
-      },
-      {
-        "title": "Centre of Excellence for Classical Pali Approved at Central University of Odisha",
-        "summary": "The Central University of Odisha has been selected to host the Centre of Excellence for Classical Pali, approved by the Ministry. The centre will provide institutional support for advanced research, scholarly work, and academic engagement in classical Pali language and studies. This establishment reflects India's commitment to preserving and promoting classical languages and their scholarly traditions. The centre will facilitate higher-level research and academic collaboration among scholars interested in Pali studies, contributing to the preservation of this ancient language's intellectual heritage and supporting academic excellence in linguistic and cultural studies.",
-        "url": "https://www.telegraphindia.com/edugraph/news/centre-of-excellence-for-classical-pali-approved-at-central-university-of-odisha/cid/2183209",
-        "source": "Telegraph India",
-        "published_at": "2026-10-05T08:44:00+00:00",
-        "image": "https://assets.telegraphindia.com/telegraph/2025/Sep/1757066789_odisha.jpg",
-        "audio": "",
-        "title_hi": "ओडिशा केंद्रीय विश्वविद्यालय में शास्त्रीय पाली के लिए उत्कृष्टता केंद्र को मंजूरी दी गई",
-        "summary_hi": "ओडिशा केंद्रीय विश्वविद्यालय को शास्त्रीय पाली के लिए उत्कृष्टता केंद्र की मेजबानी के लिए चुना गया है, जिसे मंत्रालय द्वारा मंजूरी दी गई है। केंद्र शास्त्रीय पाली भाषा और अध्ययन में उन्नत अनुसंधान, विद्वतापूर्ण कार्य और शैक्षणिक संलग्नता के लिए संस्थागत समर्थन प्रदान करेगा। यह स्थापना शास्त्रीय भाषाओं और उनकी विद्वतापूर्ण परंपराओं को संरक्षित और बढ़ावा देने के लिए भारत की प्रतिबद्धता को दर्शाती है। केंद्र पाली अध्ययन में रुचि रखने वाले विद्वानों के बीच उच्च-स्तरीय अनुसंधान और शैक्षणिक सहयोग को सुविधाजनक बनाएगा, इस प्राचीन भाषा की बौद्धिक विरासत के संरक्षण में योगदान देगा और भाषाई और सांस्कृतिक अध्ययन में शैक्षणिक उत्कृष्टता का समर्थन करेगा।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/odisha/3.mp3"
-      },
-      {
-        "title": "Monsoon Retreat Triggers 4-Day Thunderstorm Alert Across Odisha",
-        "summary": "The India Meteorological Department has issued a Yellow Alert for thunderstorms across Odisha as the monsoon retreats from the region. The alert covers 20 districts and warns of four days of thunderstorms, lightning, and gusty winds. This weather phenomenon is typical during the monsoon withdrawal period when atmospheric conditions become unstable. The alert advises residents and authorities to take precautions against lightning strikes and strong winds. Such weather alerts are important for public safety, agriculture, and infrastructure management, particularly affecting outdoor activities and transportation across the state.",
-        "url": "https://pragativadi.com/monsoon-retreat-triggers-4-day-thunderstorm-alert-across-odisha/",
-        "source": "Pragativadi",
-        "published_at": "2026-10-05T10:47:00+00:00",
-        "image": "https://pragativadi.com/wp-content/uploads/2026/09/Gemini_Generated_Image_vhrougvhrougvhro-1024x572.png",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/4.mp3",
-        "title_hi": "मानसून की वापसी ओडिशा भर में 4 दिन की गरज के साथ तूफान की चेतावनी को ट्रिगर करती है",
-        "summary_hi": "भारत मौसम विज्ञान विभाग ने ओडिशा से मानसून की वापसी के रूप में पूरे ओडिशा में गरज के साथ तूफान के लिए एक पीली चेतावनी जारी की है। चेतावनी 20 जिलों को कवर करती है और चार दिनों की गरज, बिजली और तेज हवाओं की चेतावनी देती है। यह मौसम घटना मानसून की वापसी की अवधि के दौरान विशिष्ट है जब वायुमंडलीय स्थितियां अस्थिर हो जाती हैं। चेतावनी निवासियों और अधिकारियों को बिजली के झटके और तेज हवाओं के खिलाफ सावधानी बरतने की सलाह देती है। ऐसी मौसम चेतावनियां जनता की सुरक्षा, कृषि और बुनियादी ढांचे के प्रबंधन के लिए महत्वपूर्ण हैं, विशेष रूप से राज्य भर में बाहरी गतिविधियों और परिवहन को प्रभावित करती हैं।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/odisha/4.mp3"
+        "title": "Odisha launches India's first MICE incentive portal to boost business tourism",
+        "summary": "Odisha has launched India's first dedicated MICE (Meetings, Incentives, Conferences, and Exhibitions) incentive portal designed to attract investment and promote business tourism across the state. The portal streamlines financial incentives and support mechanisms for event organizers and tourism operators, making it easier to plan and execute large-scale business events. This innovative initiative positions Odisha as a competitive destination for corporate events and conferences, leveraging technology to simplify the incentive application process and enhance the state's appeal to national and international business tourism markets.",
+        "url": "https://www.ibef.org/news/odisha-launches-india-s-first-mice-incentive-portal-to-boost-business-tourism",
+        "source": "India Brand Equity Foundation",
+        "published_at": "2026-10-06T00:00:00+00:00",
+        "image": "",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/4.mp3"
       }
     ],
     "sports": [
       {
-        "title": "£800m in, £800m out - Why Man City scandal shines light on Man Utd finances",
-        "summary": "Manchester City's owners have been found guilty of injecting substantial funds into the club, sparking broader discussions about financial practices in professional football. The case has drawn attention to contrasting situations at other major clubs, particularly Manchester United, where supporters express frustration over significant capital extraction from the organization. This scandal highlights ongoing debates about ownership models, financial fair play regulations, and the sustainability of club finances in the Premier League, raising questions about how different ownership structures impact long-term club stability and competitive balance.",
-        "url": "https://www.bbc.co.uk/sport/football/articles/ckg5j87jy3zmo?at_medium=RSS&at_campaign=rss",
+        "title": "Owner, businessman & player: Messi has big plans as a golden era ends",
+        "summary": "Lionel Messi's Argentina international career will conclude with a friendly match against Benin. At 39 years old, the legendary footballer is transitioning from his playing days while maintaining involvement in the sport through business and ownership ventures. BBC Sport examines what lies ahead for Messi following the end of his illustrious international career, which has spanned decades and included numerous achievements with the Argentine national team.",
+        "url": "https://www.bbc.co.uk/sport/football/articles/cwly3lpmyye9o?at_medium=RSS&at_campaign=rss",
         "source": "BBC Sport",
-        "published_at": "Mon, 05 Oct 2026 08:08:02 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/cb97/live/507e37e0-be7b-11f1-a64c-550be9e3c66b.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/0.mp3",
-        "title_hi": "£800 मिलियन अंदर, £800 मिलियन बाहर - मैन सिटी घोटाले से मैन यूनाइटेड की वित्तीय स्थिति पर प्रकाश क्यों पड़ता है",
-        "summary_hi": "मैनचेस्टर सिटी के मालिकों को क्लब में भारी धनराशि डालने का दोषी पाया गया है, जिससे पेशेवर फुटबॉल में वित्तीय प्रथाओं पर व्यापक चर्चा शुरू हुई है। इस मामले ने अन्य प्रमुख क्लबों, विशेषकर मैनचेस्टर यूनाइटेड में विपरीत परिस्थितियों की ओर ध्यान आकर्षित किया है, जहां समर्थक संगठन से महत्वपूर्ण पूंजी निष्कर्षण पर निराशा व्यक्त करते हैं। यह घोटाला स्वामित्व मॉडल, वित्तीय निष्पक्षता नियमों और प्रीमियर लीग में क्लब वित्त की स्थिरता के बारे में चल रही बहस को उजागर करता है, जो यह सवाल उठाता है कि विभिन्न स्वामित्व संरचनाएं दीर्घकालीन क्लब स्थिरता और प्रतिस्पर्धात्मक संतुलन को कैसे प्रभावित करती हैं।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/sports/0.mp3"
+        "published_at": "Tue, 06 Oct 2026 05:39:49 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/736a/live/3de6acd0-c0b4-11f1-837f-5ba27a94daa8.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/0.mp3"
       },
       {
-        "title": "How Evans defied history to become Britain's first world rally champion in 25 years",
-        "summary": "Elfyn Evans has achieved a historic milestone by becoming Britain's first world rally champion in 25 years, emulating the achievements of Colin McRae and Richard Burns. Evans overcame a reputation as the nearly-man of world rally competition to finally secure the prestigious title. This victory represents a significant breakthrough for British motorsport on the international stage, ending a quarter-century drought in the world rally championship. The achievement marks a career-defining moment for Evans and reignites British success in one of motorsport's most demanding disciplines.",
-        "url": "https://www.bbc.co.uk/sport/motorsport/articles/cqj9kj3wx1dzo",
+        "title": "LIV Golf secures potential $300m investment",
+        "summary": "LIV Golf has secured approximately $300 million in potential financing from BC Partners Credit to facilitate its emergence from restructuring ahead of the 2027 season. This significant investment represents a major development for the Saudi-backed golf league, which has faced financial challenges since its establishment. The funding will provide crucial capital to stabilize operations and support the league's continued development and competitive structure moving forward.",
+        "url": "https://www.bbc.co.uk/sport/golf/articles/ckjwe02v4xdlo?at_medium=RSS&at_campaign=rss",
         "source": "BBC Sport",
-        "published_at": "Mon, 05 Oct 2026 05:30:23 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/branded_sport/1200/cpsprodpb/0da2/live/8aad8fd0-c090-11f1-a4af-19dbf5352a59.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/1.mp3",
-        "title_hi": "इवांस ने इतिहास को चुनौती देते हुए 25 वर्षों में ब्रिटेन के पहले विश्व रैली चैंपियन बनने का कारनामा किया",
-        "summary_hi": "एल्फिन इवांस ने 25 वर्षों में ब्रिटेन के पहले विश्व रैली चैंपियन बनकर एक ऐतिहासिक मील का पत्थर हासिल किया है, जो कोलिन मैकरे और रिचर्ड बर्न्स की उपलब्धियों के समान है। इवांस ने विश्व रैली प्रतियोगिता में लगभग-पुरुष की प्रतिष्ठा को दूर करते हुए अंततः प्रतिष्ठित खिताब हासिल किया। यह जीत अंतर्राष्ट्रीय मंच पर ब्रिटिश मोटरस्पोर्ट्स के लिए एक महत्वपूर्ण सफलता का प्रतिनिधित्व करती है, जो विश्व रैली चैंपियनशिप में पच्चीस वर्षों के सूखे को समाप्त करती है। यह उपलब्धि इवांस के लिए एक कैरियर-परिभाषित क्षण है और मोटरस्पोर्ट्स के सबसे चुनौतीपूर्ण अनुशासनों में से एक में ब्रिटिश सफलता को पुनः जागृत करती है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/sports/1.mp3"
+        "published_at": "Tue, 06 Oct 2026 07:02:33 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f267/live/89038610-c150-11f1-a043-4511bb61bfac.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/1.mp3"
       },
       {
-        "title": "Chiefs and 49ers remain unbeaten - five things from NFL week four",
-        "summary": "Week four of the NFL season saw significant changes to the unbeaten records across the league. Five teams entered the week with perfect records, but only three remained undefeated following Sunday's action. The Kansas City Chiefs and San Francisco 49ers maintained their winning streaks, while other previously perfect teams suffered defeats. This week highlighted the competitive nature of the 2026 NFL season, with several teams establishing themselves as potential playoff contenders while others faced early-season setbacks that could impact their championship aspirations.",
-        "url": "https://www.bbc.co.uk/sport/american-football/articles/crd6dqwx9q6qo",
+        "title": "Sinner out for rest of season with knee injury",
+        "summary": "World number one Jannik Sinner will not compete for the remainder of 2026 due to an ongoing right knee injury. The Italian tennis star's absence from competition marks a significant setback for the sport's top-ranked player during the final months of the season. This injury forces Sinner to miss remaining tournaments and potentially impacts his preparation for the upcoming 2027 season, representing a notable development in professional tennis.",
+        "url": "https://www.bbc.co.uk/sport/tennis/articles/ck78p9jl2gl5o?at_medium=RSS&at_campaign=rss",
         "source": "BBC Sport",
-        "published_at": "Mon, 05 Oct 2026 07:36:56 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/branded_sport/1200/cpsprodpb/4839/live/2c94e730-c087-11f1-bc2e-018d645d8d21.png",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/2.mp3",
-        "title_hi": "चीफ्स और 49ers्स अपराजेय रहे - एनएफएल सप्ताह चार से पांच बातें",
-        "summary_hi": "एनएफएल सीजन के सप्ताह चार में लीग भर में अपराजेय रिकॉर्ड में महत्वपूर्ण परिवर्तन देखे गए। पांच टीमें सप्ताह में पूर्ण रिकॉर्ड के साथ प्रवेश करीं, लेकिन रविवार की कार्रवाई के बाद केवल तीन ही अपराजेय रहीं। कैनसस सिटी चीफ्स और सैन फ्रांसिस्को 49ers्स ने अपनी जीत की श्रृंखला बनाए रखी, जबकि अन्य पहले से पूर्ण टीमों को हार का सामना करना पड़ा। इस सप्ताह ने 2026 एनएफएल सीजन की प्रतिस्पर्धात्मक प्रकृति को उजागर किया, कई टीमें संभावित प्लेऑफ दावेदार के रूप में खुद को स्थापित करते हुए जबकि अन्य को शुरुआती सीजन की हार का सामना करना पड़ा जो उनकी चैंपियनशिप आकांक्षाओं को प्रभावित कर सकता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/sports/2.mp3"
+        "published_at": "Tue, 06 Oct 2026 09:06:44 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/e4dc/live/50b6f780-c162-11f1-a64c-550be9e3c66b.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/2.mp3"
       },
       {
-        "title": "A nation divided as Ronaldo left with big decision on Portugal future",
-        "summary": "Cristiano Ronaldo faces a significant crossroads regarding his international career with Portugal, with the nation divided over his future involvement with the team. The decision comes at a notable moment in football history, occurring just days before Lionel Messi's anticipated farewell with Argentina. Ronaldo's potential retirement from international football would mark the end of an era for Portuguese football and represents a major generational shift in world football. The timing and circumstances surrounding this decision have generated substantial debate among fans and analysts about legacy, timing, and the appropriate conclusion to legendary careers.",
-        "url": "https://www.bbc.co.uk/sport/football/articles/crwyd31nw2w4o",
+        "title": "Uefa investigating Republic of Ireland-Israel row after spitting accusation",
+        "summary": "UEFA has initiated an investigation into a half-time incident during Sunday's Nations League match between the Republic of Ireland and Israel following an accusation of spitting. The investigation addresses alleged misconduct that occurred during the competitive fixture, highlighting ongoing concerns about player conduct and sportsmanship in international football. UEFA's formal inquiry will examine the circumstances surrounding the accusation and determine appropriate disciplinary measures if warranted.",
+        "url": "https://www.bbc.co.uk/sport/football/articles/cm3wvqxjdxn5o?at_medium=RSS&at_campaign=rss",
         "source": "BBC Sport",
-        "published_at": "Mon, 05 Oct 2026 10:22:57 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/branded_sport/1200/cpsprodpb/6e29/live/f6a58a20-bff6-11f1-8c3e-3b2eab095459.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/3.mp3",
-        "title_hi": "एक विभाजित राष्ट्र क्योंकि रोनाल्डो को पुर्तगाल के भविष्य पर बड़ा निर्णय लेना बाकी है",
-        "summary_hi": "क्रिस्टियानो रोनाल्डो को पुर्तगाल के साथ अपने अंतर्राष्ट्रीय कैरियर के संबंध में एक महत्वपूर्ण मोड़ का सामना करना पड़ रहा है, राष्ट्र उनकी टीम में भविष्य की भागीदारी को लेकर विभाजित है। यह निर्णय फुटबॉल के इतिहास में एक उल्लेखनीय क्षण पर आता है, जो लियोनेल मेस्सी की अर्जेंटीना के साथ प्रत्याशित विदाई से कुछ दिन पहले होता है। अंतर्राष्ट्रीय फुटबॉल से रोनाल्डो की संभावित सेवानिवृत्ति पुर्तगाली फुटबॉल के लिए एक युग के अंत का प्रतीक होगी और विश्व फुटबॉल में एक प्रमुख पीढ़ीगत बदलाव का प्रतिनिधित्व करती है। इस निर्णय के समय और परिस्थितियों ने प्रशंसकों और विश्लेषकों के बीच विरासत, समय और महान कैरियर के उपयुक्त समापन के बारे में पर्याप्त बहस उत्पन्न की है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/sports/3.mp3"
+        "published_at": "Tue, 06 Oct 2026 09:42:17 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6a66/live/626b3a30-c168-11f1-a003-8be783290413.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/3.mp3"
       },
       {
-        "title": "F1 needs to have hard look at itself - Sainz",
-        "summary": "Formula One faces criticism following unprecedented software glitches that significantly impacted the Bahrain Grand Prix held in Malaysia. Driver Carlos Sainz has called for the sport to conduct serious self-examination regarding its technical infrastructure and reliability. The software failures affected multiple cars during the event, creating unusual racing conditions that compromised the integrity of competition. Sainz's comments reflect broader concerns within the F1 community about the sport's dependence on complex technology and the need for improved systems to prevent similar incidents. The incident raises questions about F1's preparedness for technical challenges and its commitment to maintaining competitive fairness.",
-        "url": "https://www.bbc.co.uk/sport/formula1/articles/cr62y51n1841o",
+        "title": "Gauff condemns racist abuse after China Open win",
+        "summary": "Tennis player Coco Gauff has spoken out against racial abuse she received on social media following an incident during her victory over Sun Xinran at the China Open. The incident highlights ongoing issues of online harassment and racism directed at athletes, particularly women of color in professional sports. Gauff's public condemnation of the abuse draws attention to the persistent problem of discriminatory behavior on social media platforms targeting professional athletes.",
+        "url": "https://www.bbc.co.uk/sport/tennis/articles/cqd09z0x9xd8o?at_medium=RSS&at_campaign=rss",
         "source": "BBC Sport",
-        "published_at": "Mon, 05 Oct 2026 11:52:01 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/branded_sport/1200/cpsprodpb/fb5c/live/48f2c490-c0b1-11f1-b026-53d1506ee826.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/4.mp3",
-        "title_hi": "एफ1 को अपने आप को गंभीरता से देखना चाहिए - सैंज़",
-        "summary_hi": "फॉर्मूला वन को मलेशिया में आयोजित बहरीन ग्रां प्रिक्स को महत्वपूर्ण रूप से प्रभावित करने वाली अभूतपूर्व सॉफ्टवेयर खराबियों के बाद आलोचना का सामना करना पड़ रहा है। ड्राइवर कार्लोस सैंज़ ने खेल को अपने तकनीकी बुनियादी ढांचे और विश्वसनीयता के संबंध में गंभीर आत्मचिंतन करने का आह्वान किया है। सॉफ्टवेयर विफलताओं ने इवेंट के दौरान कई कारों को प्रभावित किया, असामान्य दौड़ की स्थिति बनाई जिसने प्रतियोगिता की अखंडता को समझौता किया। सैंज़ की टिप्पणियां एफ1 समुदाय के भीतर जटिल प्रौद्योगिकी पर खेल की निर्भरता और समान घटनाओं को रोकने के लिए सुधारी गई प्रणालियों की आवश्यकता के बारे में व्यापक चिंताओं को प्रतिबिंबित करती हैं। यह घटना तकनीकी चुनौतियों के लिए एफ1 की तैयारी और प्रतिस्पर्धात्मक निष्पक्षता बनाए रखने के लिए इसकी प्रतिबद्धता के बारे में सवाल उठाती है।",
-        "audio_hi": ""
+        "published_at": "Mon, 05 Oct 2026 21:41:17 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/78da/live/132516e0-c0fe-11f1-966b-f7b264906ff6.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/4.mp3"
       }
     ],
     "cricket": [
       {
-        "title": "Baloda six-for bundles Australia Under-19 out cheaply on first day",
-        "summary": "India Under-19's bowler Baloda took six wickets as Australia Under-19 was dismissed for 174 runs on the opening day of the second Youth Test. Despite the strong bowling performance, India lost both of their opening batsmen in their response. This match represents a significant youth cricket encounter between two major cricket nations, with India's bowling attack proving dominant early in the contest. The performance highlights the development of young Indian talent in international youth cricket competition.",
-        "url": "https://www.cricinfo.com/ci/content/story/1557185.html?ex_cid=OTC-RSS",
+        "title": "Harmanpreet Kaur steps down as India captain",
+        "summary": "Harmanpreet Kaur, 37, has stepped down as captain of India's women's cricket team across all three formats—Test, ODI, and T20I. She led India to their maiden ODI World Cup title in 2025 on home soil, defeating South Africa in the final, and secured two Asian Games gold medals. During her captaincy tenure, Kaur captained India in five Tests, 51 ODIs, and 155 T20Is, making her the only man or woman to captain their side in international cricket in more than 150 T20I games. She will continue as a player for the national team.",
+        "url": "https://www.cricinfo.com/ci/content/story/1557275.html?ex_cid=OTC-RSS",
         "source": "Cricket news from Cricinfo.com",
-        "published_at": "Mon, 05 Oct 2026 12:29:59 GMT",
-        "image": "http://p.imgci.com/db/PICTURES/CMS/406600/406637.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/0.mp3",
-        "title_hi": "बलोदा के छह विकेट से ऑस्ट्रेलिया अंडर-19 पहले दिन सस्ते में बाहर",
-        "summary_hi": "भारत अंडर-19 के गेंदबाज बलोदा ने छह विकेट लेकर दूसरे यूथ टेस्ट के पहले दिन ऑस्ट्रेलिया अंडर-19 को 174 रन पर आउट कर दिया। शक्तिशाली गेंदबाजी प्रदर्शन के बावजूद, भारत ने अपनी पारी के जवाब में अपने दोनों ओपनिंग बल्लेबाजों को खो दिया। यह मैच दो प्रमुख क्रिकेट राष्ट्रों के बीच एक महत्वपूर्ण युवा क्रिकेट मुकाबला है, जिसमें भारत की गेंदबाजी आक्रमण प्रतियोगिता की शुरुआत में प्रभावशाली साबित हुई। यह प्रदर्शन अंतर्राष्ट्रीय युवा क्रिकेट प्रतियोगिता में भारतीय युवा प्रतिभा के विकास को उजागर करता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/cricket/0.mp3"
+        "published_at": "Tue, 06 Oct 2026 07:16:01 GMT",
+        "image": "http://p.imgci.com/db/PICTURES/CMS/422900/422936.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/0.mp3"
       },
       {
-        "title": "Cook leaves Kent after promotion season for coaching return",
-        "summary": "Simon Cook, Kent's director of cricket, has resigned from his position after three years in charge to pursue a more hands-on coaching role. The 49-year-old, who played for Kent between 2005 and 2012, has decided to step down from his administrative position. Kent expressed natural disappointment but stated they respect Cook's decision to leave. Lucy Arman, the head of women's cricket, also departed from her role at the same time. This represents a significant leadership change at the English county cricket club.",
-        "url": "https://www.cricinfo.com/ci/content/story/1557182.html?ex_cid=OTC-RSS",
+        "title": "Biswas, Chauhan, Baloda hand India Under-19 advantage on day two",
+        "summary": "India Under-19s secured a commanding 141-run first-innings lead in their match against Australia Under-19s, with batters Chauhan and Biswas each scoring fifties to establish a strong position. In response, Australia Under-19s struggled significantly, sliding to 86 for 4 as India's bowler Baloda claimed four wickets. This dominant performance on day two has given India a substantial advantage in the contest, positioning them favorably as the match progresses toward its conclusion.",
+        "url": "https://www.cricinfo.com/ci/content/story/1557303.html?ex_cid=OTC-RSS",
         "source": "Cricket news from Cricinfo.com",
-        "published_at": "Mon, 05 Oct 2026 11:11:47 GMT",
-        "image": "http://p.imgci.com/db/PICTURES/CMS/423400/423406.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/1.mp3",
-        "title_hi": "कुक ने प्रचार सीजन के बाद कोचिंग में लौटने के लिए केंट छोड़ा",
-        "summary_hi": "साइमन कुक, केंट के क्रिकेट निदेशक, ने तीन साल के कार्यकाल के बाद अपने पद से इस्तीफा दे दिया है ताकि वह अधिक व्यावहारिक कोचिंग भूमिका अपना सकें। 49 वर्षीय कुक, जिन्होंने 2005 और 2012 के बीच केंट के लिए खेला था, ने अपनी प्रशासनिक स्थिति से पद छोड़ने का फैसला किया है। केंट ने स्वाभाविक निराशा व्यक्त की लेकिन कुक के जाने के फैसले का सम्मान करने का बयान दिया। महिला क्रिकेट की प्रमुख लूसी आर्मन भी उसी समय अपनी भूमिका से चली गईं। यह अंग्रेजी काउंटी क्रिकेट क्लब में एक महत्वपूर्ण नेतृत्व परिवर्तन का प्रतिनिधित्व करता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/cricket/1.mp3"
+        "published_at": "Tue, 06 Oct 2026 12:10:26 GMT",
+        "image": "http://p.imgci.com/db/PICTURES/CMS/420000/420085.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/1.mp3"
       },
       {
-        "title": "India and West Indies fined for slow over-rates in third ODI",
-        "summary": "Both India and West Indies have been fined for maintaining slow over-rates during their third ODI match in New Chandigarh. India was found to be four overs short of the required rate, while West Indies fell two overs short. These fines represent disciplinary action taken by cricket authorities to maintain the pace of play in international matches. Slow over-rates have become an increasingly monitored aspect of professional cricket, with both teams facing consequences for not meeting the established standards during this bilateral ODI series.",
-        "url": "https://www.cricinfo.com/ci/content/story/1557159.html?ex_cid=OTC-RSS",
+        "title": "Ganguly takes charge as Delhi Capitals' head coach",
+        "summary": "Sourav Ganguly has assumed the role of head coach for Delhi Capitals in the Indian Premier League. The appointment comes as Rishabh Pant returns to Delhi Capitals from Lucknow Super Giants, reuniting the franchise with the dynamic wicketkeeper-batter. Additionally, Yuvraj Singh is expected to join the franchise as batting coach, bringing his extensive experience and expertise to the coaching staff. These moves represent significant changes in the franchise's coaching structure and player composition.",
+        "url": "https://www.cricinfo.com/ci/content/story/1557286.html?ex_cid=OTC-RSS",
         "source": "Cricket news from Cricinfo.com",
-        "published_at": "Mon, 05 Oct 2026 07:51:18 GMT",
-        "image": "http://p.imgci.com/db/PICTURES/CMS/423300/423354.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/2.mp3",
-        "title_hi": "तीसरे वनडे में धीमी ओवर-रेट के लिए भारत और वेस्टइंडीज को जुर्माना",
-        "summary_hi": "भारत और वेस्टइंडीज दोनों को नई चंडीगढ़ में अपने तीसरे वनडे मैच के दौरान धीमी ओवर-रेट बनाए रखने के लिए जुर्माना दिया गया है। भारत को आवश्यक दर से चार ओवर कम पाया गया, जबकि वेस्टइंडीज दो ओवर कम रहे। ये जुर्माने अंतर्राष्ट्रीय मैचों में खेल की गति बनाए रखने के लिए क्रिकेट अधिकारियों द्वारा लिए गए अनुशासनात्मक कदम का प्रतिनिधित्व करते हैं। धीमी ओवर-रेट पेशेवर क्रिकेट का एक तेजी से निगरानी किया जाने वाला पहलू बन गया है, दोनों टीमों को इस द्विपक्षीय वनडे सीरीज के दौरान स्थापित मानकों को पूरा न करने के लिए परिणाम का सामना करना पड़ा।",
-        "audio_hi": ""
+        "published_at": "Tue, 06 Oct 2026 09:40:12 GMT",
+        "image": "http://p.imgci.com/db/PICTURES/CMS/423400/423447.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/2.mp3"
       },
       {
-        "title": "West Indies add Amir Jangoo as cover for the injured Jewel Andrew for India T20Is",
-        "summary": "The West Indies cricket team has added Amir Jangoo to their squad as cover for injured batsman Jewel Andrew ahead of their T20 International series against India. Andrew sustained a finger injury during the third ODI against India, though a fracture has been ruled out. The West Indies medical team continues to monitor Andrew's condition closely. This squad adjustment reflects the team's contingency planning for their upcoming T20I matches, ensuring adequate batting depth while Andrew recovers from his injury sustained during the preceding ODI series.",
-        "url": "https://www.cricinfo.com/ci/content/story/1557148.html?ex_cid=OTC-RSS",
+        "title": "Sahibzada Farhan replaces Salman Ali Agha as Pakistan's T20I captain",
+        "summary": "Pakistan Cricket Board has appointed Sahibzada Farhan as the new T20I captain, replacing Salman Ali Agha who has been dropped from the squad. Agha has been excluded from Pakistan's squad for the upcoming T20I series against Sri Lanka. The PCB simultaneously announced squads for the T20I series against Sri Lanka and an ODI tri-series involving Sri Lanka and England. This captaincy change marks a significant shift in Pakistan's T20I leadership structure ahead of their upcoming international commitments.",
+        "url": "https://www.cricinfo.com/ci/content/story/1557209.html?ex_cid=OTC-RSS",
         "source": "Cricket news from Cricinfo.com",
-        "published_at": "Mon, 05 Oct 2026 06:37:33 GMT",
-        "image": "http://p.imgci.com/db/PICTURES/CMS/423100/423129.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/3.mp3",
-        "title_hi": "वेस्टइंडीज ने भारत टी20आई के लिए घायल ज्वेल एंड्रयू के लिए कवर के रूप में अमीर जांगू को जोड़ा",
-        "summary_hi": "वेस्टइंडीज क्रिकेट टीम ने भारत के खिलाफ टी20 अंतर्राष्ट्रीय सीरीज से पहले घायल बल्लेबाज ज्वेल एंड्रयू के लिए कवर के रूप में अमीर जांगू को अपने दल में जोड़ा है। एंड्रयू को भारत के खिलाफ तीसरे वनडे के दौरान उंगली की चोट लगी थी, हालांकि फ्रैक्चर को खारिज कर दिया गया है। वेस्टइंडीज की चिकित्सा टीम एंड्रयू की स्थिति की बारीकी से निगरानी जारी रखे हुए है। यह दल समायोजन आने वाले टी20आई मैचों के लिए टीम की आकस्मिक योजना को दर्शाता है, जो एंड्रयू की पूर्ववर्ती वनडे सीरीज के दौरान लगी चोट से ठीक होने के दौरान पर्याप्त बल्लेबाजी गहराई सुनिश्चित करता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/cricket/3.mp3"
+        "published_at": "Mon, 05 Oct 2026 15:29:32 GMT",
+        "image": "http://p.imgci.com/db/PICTURES/CMS/414200/414240.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/3.mp3"
       },
       {
-        "title": "Michael Bracewell shifts to casual contract with eye on BBL",
-        "summary": "New Zealand batsman Michael Bracewell has transitioned from a central contract to a casual contract arrangement, signaling his focus on participating in the Big Bash League. Nick Kelly has replaced Bracewell on New Zealand's central contracts list for the men's team. This move allows Bracewell greater flexibility to pursue opportunities in franchise cricket, particularly the Australian BBL competition. The shift reflects changing dynamics in international cricket where players balance central contracts with lucrative domestic T20 league opportunities, prioritizing franchise cricket participation.",
-        "url": "https://www.cricinfo.com/ci/content/story/1557141.html?ex_cid=OTC-RSS",
-        "source": "Cricket news from Cricinfo.com",
-        "published_at": "Mon, 05 Oct 2026 06:33:09 GMT",
-        "image": "http://p.imgci.com/db/PICTURES/CMS/398200/398263.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/4.mp3",
-        "title_hi": "माइकल ब्रेसवेल बीबीएल पर नजर रखते हुए आकस्मिक अनुबंध में स्थानांतरित",
-        "summary_hi": "न्यूजीलैंड के बल्लेबाज माइकल ब्रेसवेल एक केंद्रीय अनुबंध से आकस्मिक अनुबंध व्यवस्था में स्थानांतरित हो गए हैं, जो बिग बैश लीग में भाग लेने पर उनके ध्यान को दर्शाता है। निक केली ने पुरुषों की टीम के लिए न्यूजीलैंड की केंद्रीय अनुबंध सूची में ब्रेसवेल की जगह ली है। यह कदम ब्रेसवेल को फ्रेंचाइजी क्रिकेट में अवसरों का पीछा करने के लिए अधिक लचीलापन देता है, विशेष रूप से ऑस्ट्रेलियाई बीबीएल प्रतियोगिता। यह बदलाव अंतर्राष्ट्रीय क्रिकेट में बदलती गतिशीलता को दर्शाता है जहां खिलाड़ी केंद्रीय अनुबंधों को आकर्षक घरेलू टी20 लीग अवसरों के साथ संतुलित करते हैं, फ्रेंचाइजी क्रिकेट भागीदारी को प्राथमिकता देते हैं।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/cricket/4.mp3"
+        "title": "ICC Men's Cricket World Cup 2027 ticket applications surge past one million",
+        "summary": "Ticket applications for the ICC Men's Cricket World Cup 2027 have surpassed one million in just over 48 hours since the ballot opened, demonstrating unprecedented global demand for the tournament. ICC CEO Sanjog Gupta highlighted that this surge reflects the tournament's significant stature and widespread appeal across cultural and geographic boundaries. The massive response underscores cricket's growing popularity worldwide and the World Cup's status as a major sporting spectacle that transcends traditional boundaries, serving as a platform to expand and deepen fan engagement with the sport globally.",
+        "url": "https://www.icc-cricket.com/media-releases/icc-men-s-cricket-world-cup-2027-ticket-applications-surge-past-one-million",
+        "source": "International Cricket Council",
+        "published_at": "2026-10-06T11:30:00+00:00",
+        "image": "https://images.icc-cricket.com/image/upload/t_ratio16_9-size20-webp/v1791284815/prd/rnzzb9rl4o2xwjondarl",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/4.mp3"
       }
     ],
     "usa_stock": [
       {
-        "title": "Musk hints TSMC may join his mega chip venture, and Intel's stock is taking a hit",
-        "summary": "Intel shares declined Monday following reports that Taiwan Semiconductor Manufacturing Company (TSMC) may participate in Elon Musk's Terafab chip factory venture. This potential partnership represents a significant development in the semiconductor industry, with implications for Intel's competitive position. The news suggests major industry consolidation around advanced chip manufacturing capabilities. TSMC's potential involvement in Musk's mega chip project could reshape the landscape for semiconductor production and supply chains. Intel's stock reaction reflects investor concerns about the company's competitive standing amid these industry developments and the emergence of new manufacturing partnerships.",
-        "url": "https://www.marketwatch.com/story/musk-hints-tsmc-may-join-his-mega-chip-venture-and-intels-stock-is-taking-a-hit-61c67ef9?mod=mw_rss_topstories",
+        "title": "America's favorite index is misleading investors about the state of the stock market",
+        "summary": "The S&P 500, long considered the primary benchmark for U.S. stock market health, is increasingly behaving like a distorted reflection rather than an accurate barometer. The index, which has dominated market monitoring for decades, is no longer reliably representing broad market conditions. This shift raises concerns about investor reliance on the S&P 500 as the sole indicator of overall market performance, suggesting that investors may be receiving misleading signals about the true state of the stock market and should consider supplementary metrics for comprehensive market assessment.",
+        "url": "https://www.marketwatch.com/story/americas-favorite-index-is-misleading-investors-about-the-state-of-the-stock-market-2e91ca95?mod=mw_rss_topstories",
         "source": "MarketWatch.com - Top Stories",
-        "published_at": "Mon, 05 Oct 2026 11:27:00 GMT",
-        "image": "https://images.mktw.net/im-13099115",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/0.mp3",
-        "title_hi": "मस्क ने संकेत दिया कि TSMC उनके मेगा चिप उद्यम में शामिल हो सकता है, और इंटेल के स्टॉक को नुकसान हो रहा है",
-        "summary_hi": "सोमवार को इंटेल के शेयरों में गिरावट आई जब रिपोर्टों से पता चला कि ताइवान सेमीकंडक्टर मैन्युफैक्चरिंग कंपनी (TSMC) एलन मस्क के टेराफैब चिप फैक्ट्री उद्यम में भाग ले सकती है। यह संभावित साझेदारी सेमीकंडक्टर उद्योग में एक महत्वपूर्ण विकास का प्रतिनिधित्व करती है, जिसका इंटेल की प्रतिस्पर्धी स्थिति पर प्रभाव है। यह खबर उन्नत चिप विनिर्माण क्षमताओं के चारों ओर प्रमुख उद्योग समेकन का सुझाव देती है। TSMC की मस्क के मेगा चिप प्रोजेक्ट में संभावित भागीदारी सेमीकंडक्टर उत्पादन और आपूर्ति श्रृंखलाओं के परिदृश्य को पुनर्गठित कर सकती है। इंटेल के स्टॉक की प्रतिक्रिया इन उद्योग विकास और नई विनिर्माण साझेदारियों के बीच कंपनी की प्रतिस्पर्धी स्थिति के बारे में निवेशकों की चिंताओं को दर्शाती है।",
-        "audio_hi": ""
+        "published_at": "Tue, 06 Oct 2026 12:05:00 GMT",
+        "image": "https://images.mktw.net/im-81328994",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/0.mp3"
       },
       {
-        "title": "Micron's historic cash bonanza is set to rain down on investors",
-        "summary": "Micron Technology is generating cash flows exceeding those of major technology companies including Apple and Nvidia, positioning the company to distribute substantial returns to shareholders. The company plans to deploy this historic cash surplus through stock buyback programs, a significant capital allocation decision. This development reflects Micron's strong financial performance and operational efficiency in the competitive semiconductor sector. The planned shareholder distributions underscore investor confidence in the company's business model and future prospects. Micron's ability to generate cash at levels surpassing industry giants demonstrates its competitive strength and market position within the memory chip manufacturing industry.",
-        "url": "https://www.marketwatch.com/story/microns-historic-cash-bonanza-is-set-to-rain-down-on-investors-b61e6955?mod=mw_rss_topstories",
+        "title": "Wall Street is hyping AI. This fund manager is betting instead on fires, HVAC and Berkshire Hathaway.",
+        "summary": "A Heartland Advisors co-portfolio manager is advocating for a contrarian investment strategy, urging investors to ignore Wall Street's artificial intelligence hype and instead focus on established companies positioned to benefit from AI technology as costs decline. Rather than chasing trendy AI stocks, this fund manager recommends investing in practical sectors like fire safety and HVAC systems, alongside established players like Berkshire Hathaway. This approach reflects skepticism about current AI valuations and suggests that meaningful returns may come from companies that pragmatically adopt AI rather than those built primarily around AI concepts.",
+        "url": "https://www.marketwatch.com/story/wall-street-is-hyping-ai-this-fund-manager-is-betting-instead-on-fires-hvac-and-berkshire-hathaway-1b70fbea?mod=mw_rss_topstories",
         "source": "MarketWatch.com - Top Stories",
-        "published_at": "Mon, 05 Oct 2026 10:30:00 GMT",
-        "image": "https://images.mktw.net/im-60072594",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/1.mp3",
-        "title_hi": "माइक्रॉन का ऐतिहासिक नकद बोनान्जा निवेशकों पर बरसने वाला है",
-        "summary_hi": "माइक्रॉन टेक्नोलॉजी Apple और Nvidia सहित प्रमुख प्रौद्योगिकी कंपनियों से अधिक नकद प्रवाह उत्पन्न कर रही है, जिससे कंपनी शेयरधारकों को पर्याप्त रिटर्न वितरित करने की स्थिति में है। कंपनी इस ऐतिहासिक नकद अधिशेष को स्टॉक बायबैक कार्यक्रमों के माध्यम से तैनात करने की योजना बना रही है, जो एक महत्वपूर्ण पूंजी आवंटन निर्णय है। यह विकास प्रतिस्पर्धी सेमीकंडक्टर क्षेत्र में माइक्रॉन के मजबूत वित्तीय प्रदर्शन और परिचालन दक्षता को दर्शाता है। नियोजित शेयरधारक वितरण कंपनी के व्यावसायिक मॉडल और भविष्य की संभावनाओं में निवेशक आत्मविश्वास को रेखांकित करते हैं। माइक्रॉन की उद्योग के दिग्गजों से अधिक स्तर पर नकद उत्पन्न करने की क्षमता मेमोरी चिप विनिर्माण उद्योग के भीतर इसकी प्रतिस्पर्धी शक्ति और बाजार स्थिति को प्रदर्शित करती है।",
-        "audio_hi": ""
+        "published_at": "Tue, 06 Oct 2026 11:15:00 GMT",
+        "image": "https://images.mktw.net/im-63161541",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/1.mp3"
       },
       {
-        "title": "Bitcoin's big bounce has graduated to a longer-term uptrend. Is it too late to buy?",
-        "summary": "Bitcoin has formed a bullish \"golden cross\" technical pattern for the first time in over three years, signaling a potential longer-term uptrend in the cryptocurrency. This technical indicator, which occurs when a shorter-term moving average crosses above a longer-term moving average, historically has preceded sustained price appreciation. The previous golden cross pattern proved successful for bitcoin investors. The emergence of this pattern suggests renewed momentum in cryptocurrency markets and may influence investor sentiment toward digital assets. Analysts are examining whether current price levels still present buying opportunities or if the move has already priced in anticipated gains.",
-        "url": "https://www.marketwatch.com/story/bitcoins-big-bounce-has-graduated-to-a-longer-term-uptrend-is-it-too-late-to-buy-a9bc585c?mod=mw_rss_topstories",
+        "title": "The S&P 500 is facing rate chaos and narrow breadth. Why one Goldman Sachs insider is still bullish on stocks.",
+        "summary": "Despite current market challenges including interest rate volatility and narrow market breadth, a Goldman Sachs insider maintains a bullish outlook on stocks. The analyst argues that stocks are not overvalued from a historical perspective and points to supportive seasonal factors. Additionally, Goldman Sachs hedge fund research forecasts the S&P 500 will reach record highs before year-end. This contrarian bullish stance suggests that underlying market fundamentals remain sound despite near-term headwinds from rate uncertainty and concentrated gains among a limited number of stocks.",
+        "url": "https://www.marketwatch.com/story/the-s-p-500-is-facing-rate-chaos-and-narrow-breadth-why-one-goldman-sachs-insider-is-still-bullish-on-stocks-84a20206?mod=mw_rss_topstories",
         "source": "MarketWatch.com - Top Stories",
-        "published_at": "Mon, 05 Oct 2026 10:46:00 GMT",
-        "image": "https://images.mktw.net/im-31553366",
-        "audio": "",
-        "title_hi": "बिटकॉइन की बड़ी उछाल दीर्घकालीन अपट्रेंड में स्नातक हुई है। क्या खरीदने के लिए बहुत देर हो गई है?",
-        "summary_hi": "बिटकॉइन ने तीन साल से अधिक समय में पहली बार एक तेजी वाला \"गोल्डन क्रॉस\" तकनीकी पैटर्न बनाया है, जो क्रिप्टोकरेंसी में एक संभावित दीर्घकालीन अपट्रेंड का संकेत देता है। यह तकनीकी संकेतक, जो तब होता है जब एक अल्पकालीन चलती औसत एक दीर्घकालीन चलती औसत से ऊपर क्रॉस करती है, ऐतिहासिक रूप से निरंतर मूल्य प्रशंसा से पहले आई है। पिछला गोल्डन क्रॉस पैटर्न बिटकॉइन निवेशकों के लिए सफल साबित हुआ। इस पैटर्न का उदय क्रिप्टोकरेंसी बाजारों में नई गति का सुझाव देता है और डिजिटल संपत्ति के प्रति निवेशक भावना को प्रभावित कर सकता है। विश्लेषक यह जांच रहे हैं कि क्या वर्तमान मूल्य स्तर अभी भी खरीद के अवसर प्रस्तुत करते हैं या यदि यह कदम पहले से ही अपेक्षित लाभों को मूल्य में शामिल कर चुका है।",
-        "audio_hi": ""
+        "published_at": "Tue, 06 Oct 2026 09:20:00 GMT",
+        "image": "https://images.mktw.net/im-37750652",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/2.mp3"
       },
       {
-        "title": "The bond selloff is opening up rare opportunities for investors. Here is where to look, says one major bank",
-        "summary": "Standard Chartered's chief investment office identifies emerging investment opportunities in bond and money markets following recent selloff activity. The bank contends that market participants have adopted an excessively hawkish stance regarding Federal Reserve policy, creating potential mispricings in fixed-income securities. Rising bond yields have created attractive entry points for investors seeking income-generating assets. The analysis suggests that current market conditions may have overshot fundamental valuations, presenting tactical opportunities for disciplined investors. Standard Chartered's assessment indicates that bond and money market segments warrant closer examination as yields have risen to levels that may offer compelling risk-reward profiles for various investor categories.",
-        "url": "https://www.marketwatch.com/story/bond-selloff-is-opening-up-rare-opportunities-for-investors-here-is-where-to-look-says-major-bank-463447c7?mod=mw_rss_topstories",
+        "title": "Elon Musk's wealth surpasses $1 trillion — making it higher than these countries' GDPs",
+        "summary": "Elon Musk's personal wealth has exceeded $1 trillion, reaching a milestone that places his fortune above the gross domestic product of numerous countries. This extraordinary accumulation of wealth by a single individual surpasses the entire economic output of nations like Poland and Ireland. The achievement underscores the concentration of wealth among technology entrepreneurs and highlights the scale of personal fortunes in the modern economy. Musk's trillion-dollar net worth represents a significant milestone in individual wealth accumulation and raises questions about wealth concentration and economic inequality.",
+        "url": "https://www.marketwatch.com/story/elon-musk-is-a-trillionaire-again-heres-how-his-wealth-stacks-up-against-national-economies-e9788b29?mod=mw_rss_topstories",
         "source": "MarketWatch.com - Top Stories",
-        "published_at": "Mon, 05 Oct 2026 10:33:00 GMT",
-        "image": "https://images.mktw.net/im-78599104",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/3.mp3",
-        "title_hi": "बॉन्ड सेलऑफ निवेशकों के लिए दुर्लभ अवसर खोल रहा है। एक प्रमुख बैंक के अनुसार यहां देखना चाहिए",
-        "summary_hi": "Standard Chartered का मुख्य निवेश कार्यालय हाल की सेलऑफ गतिविधि के बाद बॉन्ड और मनी मार्केट में उभरते निवेश अवसरों की पहचान करता है। बैंक का तर्क है कि बाजार प्रतिभागियों ने फेडरल रिजर्व नीति के संबंध में अत्यधिक तेजी वाला रुख अपनाया है, जिससे निश्चित आय प्रतिभूतियों में संभावित गलत मूल्य निर्धारण हुआ है। बढ़ती बॉन्ड उपज ने आय उत्पन्न करने वाली संपत्ति की तलाश में निवेशकों के लिए आकर्षक प्रवेश बिंदु बनाए हैं। विश्लेषण से पता चलता है कि वर्तमान बाजार स्थितियां मौलिक मूल्यांकन से अधिक हो सकती हैं, जिससे अनुशासित निवेशकों के लिए सामरिक अवसर प्रस्तुत होते हैं। Standard Chartered का आकलन इंगित करता है कि बॉन्ड और मनी मार्केट सेगमेंट करीब से जांच के योग्य हैं क्योंकि उपज उन स्तरों तक बढ़ी है जो विभिन्न निवेशक श्रेणियों के लिए आकर्षक जोखिम-पुरस्कार प्रोफाइल प्रदान कर सकते हैं।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/usa_stock/3.mp3"
+        "published_at": "Tue, 06 Oct 2026 09:56:00 GMT",
+        "image": "https://images.mktw.net/im-07148922",
+        "audio": ""
       },
       {
-        "title": "An AI 'reality check' may take the S&P 500 to 5,000. Here are the trades to make, this strategist says",
-        "summary": "Panmure Liberum strategist Joachim Klement advises investors to monitor artificial intelligence spending patterns during the upcoming earnings season as a potential catalyst for S&P 500 movement toward the 5,000 level. The strategist suggests that a market \"reality check\" regarding AI investment returns and profitability could significantly impact equity valuations. Earnings season will provide critical data on whether companies' substantial AI expenditures are generating proportional returns, influencing investor sentiment and market direction. Klement's analysis implies that AI spending sustainability and return on investment represent key variables for determining near-term market trajectory. The assessment highlights the importance of distinguishing between speculative AI enthusiasm and actual business value creation in technology and other sectors.",
-        "url": "https://www.marketwatch.com/story/an-ai-reality-check-may-take-the-s-p-500-to-5-000-heres-the-trades-to-make-this-strategist-says-263cf0e9?mod=mw_rss_topstories",
-        "source": "MarketWatch.com - Top Stories",
-        "published_at": "Mon, 05 Oct 2026 11:19:00 GMT",
-        "image": "https://images.mktw.net/im-97632137",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/4.mp3",
-        "title_hi": "एक AI 'रियलिटी चेक' S&P 500 को 5,000 तक ले जा सकता है। यह रणनीतिकार कहते हैं कि ये ट्रेड करें",
-        "summary_hi": "Panmure Liberum के रणनीतिकार Joachim Klement निवेशकों को आने वाले अर्निंग सीजन के दौरान कृत्रिम बुद्धिमत्ता खर्च पैटर्न की निगरानी करने की सलाह देते हैं जो S&P 500 के 5,000 स्तर की ओर बढ़ने के लिए एक संभावित उत्प्रेरक के रूप में है। रणनीतिकार सुझाते हैं कि AI निवेश रिटर्न और लाभप्रदता के संबंध में एक बाजार \"रियलिटी चेक\" इक्विटी मूल्यांकन को महत्वपूर्ण रूप से प्रभावित कर सकता है। अर्निंग सीजन महत्वपूर्ण डेटा प्रदान करेगा कि क्या कंपनियों के पर्याप्त AI व्यय आनुपातिक रिटर्न उत्पन्न कर रहे हैं, जो निवेशक भावना और बाजार दिशा को प्रभावित करते हैं। Klement का विश्लेषण इंगित करता है कि AI खर्च की स्थिरता और निवेश पर रिटर्न निकट अवधि के बाजार प्रक्षेपवक्र को निर्धारित करने के लिए मुख्य चर का प्रतिनिधित्व करते हैं। यह आकलन प्रौद्योगिकी और अन्य क्षेत्रों में सट्टा AI उत्साह और वास्तविक व्यावसायिक मूल्य निर्माण के बीच अंतर करने के महत्व को रेखांकित करता है।",
-        "audio_hi": ""
+        "title": "US stocks face 20% valuation hit if Treasury yield reaches this key level: Fidelity",
+        "summary": "Fidelity warns that U.S. stocks could experience a significant 20% valuation decline if the 10-year Treasury yield reaches a critical threshold. The analysis highlights concerning trends in bond markets, particularly noting that the 30-year bond yield has risen substantially over the past month. Fidelity analysts view a 30-year Treasury yield crossing 6% as inevitable and likely to occur within October, driven by bond-market volatility creating cycles that push rates higher. This potential scenario represents a major risk to equity valuations and suggests investors should prepare for potential market corrections if Treasury yields continue their upward trajectory.",
+        "url": "https://www.financialexpress.com/market/global-markets/us-stocks-face-20-valuation-haircut-if-10-year-treasury-hits-6-fidelity/4354606/",
+        "source": "The Financial Express",
+        "published_at": "2026-10-06T07:41:00+00:00",
+        "image": "https://images.financialexpressdigital.com/2026/10/tyieldsr.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/4.mp3"
       }
     ],
     "ai": [
       {
-        "title": "People really hate AI, so why can't they get enough?",
-        "summary": "MIT Technology Review explores the paradox of public sentiment toward AI, examining why people express strong negative views about artificial intelligence while simultaneously increasing their usage and engagement with AI systems. The article features insights from the CEO of Springboards, a startup developing large language models designed to produce more diverse responses than mainstream competitors. The piece investigates the psychological and behavioral contradictions underlying this phenomenon, questioning why widespread skepticism and criticism of AI coexist with growing adoption rates across consumer and enterprise sectors.",
-        "url": "https://www.technologyreview.com/2026/10/05/1145682/people-really-hate-ai-so-why-cant-they-get-enough/",
-        "source": "MIT Technology Review",
-        "published_at": "Mon, 05 Oct 2026 08:00:00 +0000",
-        "image": "https://wp.technologyreview.com/wp-content/uploads/2026/10/ai-relationship3.jpg?resize=1200,600",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/0.mp3",
-        "title_hi": "लोग वास्तव में AI से नफरत करते हैं, तो फिर वे इससे पर्याप्त क्यों नहीं पा सकते?",
-        "summary_hi": "MIT Technology Review कृत्रिम बुद्धिमत्ता के प्रति जनता की भावनाओं के विरोधाभास की खोज करता है, यह जांचते हुए कि लोग कृत्रिम बुद्धिमत्ता के बारे में मजबूत नकारात्मक विचार व्यक्त करते हैं जबकि साथ ही AI प्रणालियों के साथ अपने उपयोग और जुड़ाव को बढ़ा रहे हैं। लेख Springboards के CEO से अंतर्दृष्टि प्रदान करता है, एक स्टार्टअप जो बड़े भाषा मॉडल विकसित कर रहा है जो मुख्यधारा के प्रतिद्वंद्वियों की तुलना में अधिक विविध प्रतिक्रियाएं उत्पन्न करते हैं। यह लेख इस घटना के अंतर्निहित मनोवैज्ञानिक और व्यवहारिक विरोधाभासों की जांच करता है, यह सवाल उठाते हुए कि AI के प्रति व्यापक संशय और आलोचना उपभोक्ता और उद्यम क्षेत्रों में बढ़ती अपनाई दर के साथ कैसे सह-अस्तित्व में हैं।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/ai/0.mp3"
+        "title": "MCP for agent-to-agent comms may be the riskiest protocol you've never heard of",
+        "summary": "A newly discovered vulnerability in the Model Context Protocol (MCP), used for communication between AI agents from Google and other companies, exposes a structural security flaw. The protocol contains trust gaps that allow malicious prompts to spread from one agent to another, creating potential security risks. This represents a significant concern as AI agent-to-agent communication becomes increasingly prevalent in enterprise and consumer applications. The vulnerability highlights the need for more robust security measures in emerging AI communication protocols before widespread adoption.",
+        "url": "https://arstechnica.com/security/2026/10/vulnerability-in-agents-from-google-and-others-exposes-structural-flaw-in-mcp/",
+        "source": "Ars Technica",
+        "published_at": "Mon, 05 Oct 2026 22:26:35 +0000",
+        "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/10/ai-agents-1152x648.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/0.mp3"
       },
       {
-        "title": "Redefining enterprise intelligence with autonomous AI",
-        "summary": "Enterprise AI deployment has reached operational maturity, with model capabilities advancing faster than most organizations can absorb while performance costs continue declining. Global AI investment is projected to reach $2.5 trillion in 2026, representing a 44% increase from the previous year. The article examines how enterprises are leveraging autonomous AI systems to redefine business intelligence and operational processes. It addresses the challenges organizations face in integrating rapidly advancing AI capabilities into existing infrastructure and strategies, highlighting the gap between technological progress and organizational capacity to implement these solutions effectively.",
-        "url": "https://www.technologyreview.com/2026/10/02/1143774/redefining-enterprise-intelligence-with-autonomous-ai/",
-        "source": "MIT Technology Review",
-        "published_at": "Fri, 02 Oct 2026 15:49:04 +0000",
-        "image": "https://wp.technologyreview.com/wp-content/uploads/2026/09/Uniphore-Social-Card-1.png?resize=1200,600",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/1.mp3",
-        "title_hi": "स्वायत्त AI के साथ उद्यम बुद्धिमत्ता को पुनर्परिभाषित करना",
-        "summary_hi": "उद्यम AI तैनाती परिचालन परिपक्वता तक पहुंच गई है, मॉडल क्षमताएं अधिकांश संगठनों द्वारा अवशोषित किए जा सकने की तुलना में तेजी से आगे बढ़ रही हैं जबकि प्रदर्शन लागत में गिरावट जारी है। वैश्विक AI निवेश 2026 में $2.5 ट्रिलियन तक पहुंचने का अनुमान है, जो पिछले वर्ष से 44% की वृद्धि का प्रतिनिधित्व करता है। लेख यह जांचता है कि उद्यम व्यावसायिक बुद्धिमत्ता और परिचालन प्रक्रियाओं को पुनर्परिभाषित करने के लिए स्वायत्त AI प्रणालियों का लाभ कैसे उठा रहे हैं। यह उन चुनौतियों को संबोधित करता है जिनका सामना संगठनों को मौजूदा बुनियादी ढांचे और रणनीतियों में तेजी से आगे बढ़ने वाली AI क्षमताओं को एकीकृत करने में करना पड़ता है, तकनीकी प्रगति और इन समाधानों को प्रभावी ढंग से लागू करने की संगठनात्मक क्षमता के बीच के अंतर को उजागर करता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/ai/1.mp3"
+        "title": "AI glasses face their first major government crackdown",
+        "summary": "Norway has initiated the first major government crackdown on AI-enabled glasses, seeking time to develop permanent regulatory rules for devices capable of recording bystanders. The move reflects growing privacy concerns as AI glasses technology becomes more sophisticated and widespread. Norwegian authorities are working to establish comprehensive regulations that balance innovation with citizen privacy rights. This regulatory action signals a broader trend of governments worldwide beginning to address the privacy implications of wearable AI technology before it becomes ubiquitous in public spaces.",
+        "url": "https://arstechnica.com/ai/2026/10/ai-glasses-face-their-first-major-government-crackdown/",
+        "source": "Ars Technica",
+        "published_at": "Mon, 05 Oct 2026 13:39:30 +0000",
+        "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/03/546417470_31238681149113739_395523165946500898_n.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/1.mp3"
       },
       {
-        "title": "An AI \"mind-reading\" tool can reconstruct what you're looking at from a brain scan",
-        "summary": "Researchers have developed an AI tool capable of reconstructing images of what a person is viewing based solely on analysis of their brain scans, achieving remarkable precision in visual reconstruction. The technology functions bidirectionally, enabling AI to both predict brain activity from visual stimuli and reverse the process to recreate images from neural data. This breakthrough represents significant advancement in brain-computer interface technology and neuroscience applications. The tool demonstrates the potential for AI to decode visual perception at the neural level, with implications for understanding consciousness, treating neurological conditions, and developing new forms of human-computer interaction.",
-        "url": "https://www.technologyreview.com/2026/10/01/1145588/ai-mind-reading-reconstructs-what-youre-looking-at/",
-        "source": "MIT Technology Review",
-        "published_at": "Thu, 01 Oct 2026 10:32:24 +0000",
-        "image": "https://wp.technologyreview.com/wp-content/uploads/2026/09/brain-image-output.jpg?resize=1200,600",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/2.mp3",
-        "title_hi": "एक AI \"मन-पढ़ने\" वाला उपकरण मस्तिष्क स्कैन से आप जो देख रहे हैं उसे पुनर्निर्माण कर सकता है",
-        "summary_hi": "शोधकर्ताओं ने एक AI उपकरण विकसित किया है जो केवल मस्तिष्क स्कैन के विश्लेषण के आधार पर किसी व्यक्ति द्वारा देखी जा रही छवियों को पुनर्निर्माण करने में सक्षम है, दृश्य पुनर्निर्माण में उल्लेखनीय सटीकता प्राप्त करता है। प्रौद्योगिकी द्विदिशात्मक रूप से कार्य करती है, AI को दृश्य उत्तेजना से मस्तिष्क गतिविधि की भविष्यवाणी करने और तंत्रिका डेटा से छवियों को पुनः बनाने के लिए प्रक्रिया को उलट करने में सक्षम बनाती है। यह सफलता मस्तिष्क-कंप्यूटर इंटरफेस प्रौद्योगिकी और तंत्रिका विज्ञान अनुप्रयोगों में महत्वपूर्ण प्रगति का प्रतिनिधित्व करती है। उपकरण तंत्रिका स्तर पर दृश्य धारणा को डिकोड करने के लिए AI की क्षमता का प्रदर्शन करता है, चेतना को समझने, न्यूरोलॉजिकल स्थितियों के इलाज, और मानव-कंप्यूटर इंटरैक्शन के नए रूपों को विकसित करने के निहितार्थ के साथ।",
-        "audio_hi": ""
+        "title": "US arrests tech CEO accused of smuggling $300M in Nvidia chips into China",
+        "summary": "U.S. authorities have arrested a technology CEO on charges of smuggling approximately $300 million worth of Nvidia chips into China, continuing a pattern of enforcement against illegal semiconductor exports. The arrest underscores ongoing concerns about advanced chip diversion to restricted destinations, particularly China, which faces U.S. export controls on cutting-edge semiconductor technology. Nvidia's advanced processors are critical for AI development, making them subject to strict export regulations. This case demonstrates the persistent challenge U.S. law enforcement faces in preventing the illegal transfer of sensitive technology despite increased vigilance and enforcement efforts.",
+        "url": "https://arstechnica.com/tech-policy/2026/10/us-arrests-tech-ceo-accused-of-smuggling-300m-in-nvidia-chips-into-china/",
+        "source": "Ars Technica",
+        "published_at": "Fri, 02 Oct 2026 18:39:36 +0000",
+        "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/10/GettyImages-1258977050-2-1024x648.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/2.mp3"
       },
       {
-        "title": "Don't be fooled—LLMs don't reason",
-        "summary": "This article challenges widespread assumptions about large language models' reasoning capabilities, arguing that LLMs do not genuinely reason despite appearing to do so. The author draws parallels to AlphaGo's historic victory in Go, referencing Move 37 in 2016 that seemed absurd to commentators but proved strategically sound. The piece examines how AI systems can produce outputs that appear intelligent and reasoned while operating through fundamentally different mechanisms than human reasoning. It addresses the critical distinction between pattern recognition and true logical reasoning, cautioning against anthropomorphizing AI capabilities and overestimating their cognitive abilities.",
-        "url": "https://www.technologyreview.com/2026/10/02/1145639/dont-be-fooled-llms-dont-reason/",
-        "source": "MIT Technology Review",
-        "published_at": "Fri, 02 Oct 2026 08:00:00 +0000",
-        "image": "https://wp.technologyreview.com/wp-content/uploads/2026/10/2llm-go.jpg?resize=1200,600",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/3.mp3",
-        "title_hi": "धोखा न खाएं—LLM तर्क नहीं करते",
-        "summary_hi": "यह लेख बड़े भाषा मॉडल की तर्क क्षमताओं के बारे में व्यापक मान्यताओं को चुनौती देता है, यह तर्क देते हुए कि LLM वास्तविक रूप से तर्क नहीं करते हैं भले ही ऐसा प्रतीत हो। लेखक AlphaGo की Go में ऐतिहासिक जीत के समानांतर खींचता है, 2016 में Move 37 का संदर्भ देते हुए जो टिप्पणीकारों को बेतुका लगा लेकिन रणनीतिक रूप से ध्वनि साबित हुआ। यह लेख यह जांचता है कि कैसे AI प्रणालियां ऐसे आउटपुट उत्पन्न कर सकती हैं जो बुद्धिमान और तर्कसंगत प्रतीत होते हैं जबकि मानव तर्क की तुलना में मौलिक रूप से अलग तंत्र के माध्यम से काम करते हैं। यह पैटर्न पहचान और वास्तविक तार्किक तर्क के बीच महत्वपूर्ण अंतर को संबोधित करता है, AI क्षमताओं को मानवीकृत करने और उनकी संज्ञानात्मक क्षमताओं को कम आंकने के खिलाफ सावधानी बरतता है।",
-        "audio_hi": ""
+        "title": "Google figures out how to watermark AI-designed proteins",
+        "summary": "Google has developed a method to watermark proteins designed by artificial intelligence, creating a biosecurity tool intended to track and identify AI-generated biological sequences. The watermarking technique is compatible with popular AI protein design tools, enabling researchers to distinguish between naturally occurring and artificially designed proteins. This advancement addresses growing biosecurity concerns as AI becomes increasingly capable of designing novel biological molecules. The watermarking approach represents an important step toward responsible AI development in biotechnology, helping researchers and regulators monitor the creation of potentially sensitive biological materials.",
+        "url": "https://arstechnica.com/science/2026/09/google-figures-out-how-to-watermark-ai-designed-proteins/",
+        "source": "Ars Technica",
+        "published_at": "Wed, 30 Sep 2026 15:54:52 +0000",
+        "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/09/GettyImages-2204734561-1152x648.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/3.mp3"
       },
       {
-        "title": "AMD acquires World Labs AI startup, upping the ante against Nvidia",
-        "summary": "AMD has acquired World Labs, an AI startup founded by Fei-Fei Li focused on world models, in an $8.2 billion deal expected to close by year-end. This acquisition represents AMD's strategic effort to compete more aggressively with Nvidia in the AI chip and AI research markets. World Labs specializes in developing AI systems that can understand and model the physical world, a capability considered crucial for advanced AI applications. The acquisition signals AMD's commitment to building comprehensive AI capabilities beyond hardware, positioning the company to challenge Nvidia's dominance in AI infrastructure and research.",
-        "url": "https://arstechnica.com/ai/2026/09/amd-acquires-world-labs-ai-pioneer-fei-fei-lis-world-models-startup/",
-        "source": "AI - Ars Technica",
-        "published_at": "Tue, 29 Sep 2026 21:14:49 +0000",
-        "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/09/AMD-World-Labs-1152x648-1790711860.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/4.mp3",
-        "title_hi": "AMD ने World Labs AI स्टार्टअप का अधिग्रहण किया, Nvidia के खिलाफ दांव बढ़ाया",
-        "summary_hi": "AMD ने World Labs का अधिग्रहण किया है, एक AI स्टार्टअप जिसकी स्थापना Fei-Fei Li ने विश्व मॉडल पर ध्यान केंद्रित करते हुए की थी, $8.2 बिलियन के सौदे में जिसके वर्ष के अंत तक बंद होने की उम्मीद है। यह अधिग्रहण AI चिप और AI अनुसंधान बाजारों में Nvidia के साथ अधिक आक्रामक रूप से प्रतिस्पर्धा करने के लिए AMD के रणनीतिक प्रयास का प्रतिनिधित्व करता है। World Labs ऐसी AI प्रणालियों को विकसित करने में माहिर है जो भौतिक दुनिया को समझ सकती हैं और मॉडल कर सकती हैं, एक क्षमता जिसे उन्नत AI अनुप्रयोगों के लिए महत्वपूर्ण माना जाता है। अधिग्रहण हार्डवेयर से परे व्यापक AI क्षमताओं का निर्माण करने के लिए AMD की प्रतिबद्धता का संकेत देता है, कंपनी को AI बुनियादी ढांचे और अनुसंधान में Nvidia के प्रभुत्व को चुनौती देने के लिए स्थापित करता है।",
-        "audio_hi": ""
+        "title": "With most information hidden, the game Stratego had stumped AI—until now",
+        "summary": "Artificial intelligence has successfully defeated the best human Stratego player in history, overcoming the game's fundamental challenge of incomplete information where most pieces remain hidden from opponents. Researchers achieved this breakthrough by implementing a second neural network that predicts the identity of hidden pieces, enabling the AI to make strategic decisions despite information asymmetry. This accomplishment represents a significant milestone in AI development, as Stratego's hidden information mechanics have long posed a greater challenge than fully observable games like chess. The achievement demonstrates AI's advancing capability to reason under uncertainty and develop sophisticated strategies in complex competitive environments.",
+        "url": "https://arstechnica.com/science/2026/10/ai-finally-beat-the-best-stratego-player-in-history-and-did-it-on-a-budget/",
+        "source": "Ars Technica",
+        "published_at": "Thu, 01 Oct 2026 16:28:04 +0000",
+        "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/10/GettyImages-1864707238-1152x648.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/4.mp3"
       }
     ],
     "quantum": [
       {
-        "title": "Gravity Seems Holographic. What Does That Mean for Reality?",
-        "summary": "A major breakthrough in theoretical physics reveals that gravity can collapse the dimensions of space, suggesting a holographic nature to reality itself. This discovery represents one of the biggest advances in modern physics, fundamentally challenging our understanding of how gravity operates at fundamental levels. The holographic principle implies that three-dimensional space and gravity may emerge from information encoded on a lower-dimensional surface. However, physicists are still working to fully comprehend the profound implications of this finding for our understanding of the universe's structure and the nature of reality itself.",
-        "url": "https://www.quantamagazine.org/gravity-seems-holographic-what-does-that-mean-for-reality-20260925/",
+        "title": "Is AI the End of Math As We Know It?",
+        "summary": "Mathematicians are grappling with significant disruption as artificial intelligence transforms their field, expressing concerns through grief and anger while seeking new directions. The community faces an existential question about mathematics' future, with some warning that without adaptation, the discipline could fundamentally change within 50 years. This shift reflects broader anxieties about AI's impact on knowledge work and traditional academic pursuits, prompting mathematicians to reconsider foundational approaches and identify areas where human mathematical insight remains irreplaceable and essential.",
+        "url": "https://www.quantamagazine.org/is-ai-the-end-of-math-as-we-know-it-20261005/",
         "source": "Quanta Magazine",
-        "published_at": "Fri, 25 Sep 2026 14:40:26 +0000",
-        "image": "https://www.quantamagazine.org/wp-content/uploads/2026/09/Qualia-Holography-cr.Ada-Zejun-Shen-Default.webp",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/0.mp3",
-        "title_hi": "गुरुत्वाकर्षण होलोग्राफिक प्रतीत होता है। इसका वास्तविकता के लिए क्या अर्थ है?",
-        "summary_hi": "सैद्धांतिक भौतिकी में एक बड़ी सफलता से पता चलता है कि गुरुत्वाकर्षण अंतरिक्ष के आयामों को ढह सकता है, जो वास्तविकता के होलोग्राफिक स्वभाव का सुझाव देता है। यह खोज आधुनिक भौतिकी में सबसे बड़ी प्रगति का प्रतिनिधित्व करती है, जो गुरुत्वाकर्षण के मौलिक स्तरों पर कार्य करने के तरीके के बारे में हमारी समझ को मौलिक रूप से चुनौती देती है। होलोग्राफिक सिद्धांत का अर्थ है कि त्रि-आयामी अंतरिक्ष और गुरुत्वाकर्षण निम्न-आयामी सतह पर एन्कोड की गई जानकारी से उत्पन्न हो सकते हैं। हालांकि, भौतिकविद अभी भी इस खोज के ब्रह्मांड की संरचना और वास्तविकता की प्रकृति के बारे में हमारी समझ के लिए गहरे निहितार्थों को पूरी तरह से समझने के लिए काम कर रहे हैं।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/quantum/0.mp3"
+        "published_at": "Mon, 05 Oct 2026 13:40:07 +0000",
+        "image": "https://www.quantamagazine.org/wp-content/uploads/2026/10/Qualia-MathWoes-cr.Eduardo-Ramon-Default-1.webp",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/0.mp3"
       },
       {
         "title": "Mathematicians Harness Randomness To Crack a 55-Year-Old Conjecture",
-        "summary": "A group of young mathematicians has finally resolved a long-standing mathematical conjecture that had remained unsolved for 55 years. The problem, which was likely inspired by juggling, required innovative approaches using randomness to overcome previous obstacles. This breakthrough represents a significant achievement in pure mathematics, demonstrating how creative application of probabilistic methods can solve problems that resisted traditional approaches. The resolution of this conjecture opens new avenues for mathematical research and may have applications across various fields that rely on advanced mathematical theory and computational methods.",
+        "summary": "A group of young mathematicians has successfully resolved a long-standing mathematical problem that remained unsolved for 55 years, likely inspired by juggling patterns. The breakthrough employed randomness as a key tool in their approach, marking a significant achievement after an extended period without progress on the conjecture. This resolution demonstrates the continued vitality of mathematical problem-solving and the value of novel methodological approaches, particularly those leveraging probabilistic techniques to overcome obstacles that had resisted traditional deterministic methods.",
         "url": "https://www.quantamagazine.org/mathematicians-harness-randomness-to-crack-a-55-year-old-conjecture-20260928/",
         "source": "Quanta Magazine",
         "published_at": "Mon, 28 Sep 2026 14:35:21 +0000",
         "image": "https://www.quantamagazine.org/wp-content/uploads/2026/09/GrahamConjecture-crIrenePerez-Default.webp",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/1.mp3",
-        "title_hi": "गणितज्ञ 55 साल पुराने अनुमान को हल करने के लिए यादृच्छिकता का उपयोग करते हैं",
-        "summary_hi": "युवा गणितज्ञों के एक समूह ने अंततः एक दीर्घकालीन गणितीय अनुमान को हल किया है जो 55 वर्षों तक अनसुलझा रहा है। यह समस्या, जो संभवतः जग्लिंग से प्रेरित थी, को यादृच्छिकता का उपयोग करके पिछली बाधाओं को दूर करने के लिए नवीन दृष्टिकोण की आवश्यकता थी। यह सफलता शुद्ध गणित में एक महत्वपूर्ण उपलब्धि का प्रतिनिधित्व करती है, जो दर्शाती है कि संभाव्य विधियों का रचनात्मक अनुप्रयोग उन समस्याओं को कैसे हल कर सकता है जो पारंपरिक दृष्टिकोणों का विरोध करती हैं। इस अनुमान का समाधान गणितीय अनुसंधान के लिए नए रास्ते खोलता है और उन विभिन्न क्षेत्रों में अनुप्रयोग हो सकते हैं जो उन्नत गणितीय सिद्धांत और कम्प्यूटेशनल विधियों पर निर्भर करते हैं।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/quantum/1.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/1.mp3"
       },
       {
         "title": "Sea Monkeys Show Scientists How To Rewrite a Rule of Turbulence",
-        "summary": "Scientists have discovered that a fundamental assumption about turbulent systems may be incorrect. Previously, researchers believed energy flows in only one direction within turbulent systems, but observations of brine shrimp have revealed that a simple factor can reverse this energy flow. This finding challenges established turbulence theory and suggests that the physics governing turbulent behavior is more complex than previously understood. The discovery has implications for understanding fluid dynamics across various scales, from microscopic biological systems to large-scale atmospheric and oceanic phenomena, potentially requiring revision of existing turbulence models.",
+        "summary": "Scientists have discovered that a fundamental assumption about turbulent systems requires revision based on observations of brine shrimp behavior. Previously, researchers believed energy flows in only one direction within turbulent systems, but detailed study of sea monkeys revealed that a simple factor can reverse this energy flow. This finding challenges established turbulence theory and demonstrates how biological systems can provide insights into physical phenomena, potentially reshaping understanding of fluid dynamics and energy transfer mechanisms in complex systems.",
         "url": "https://www.quantamagazine.org/sea-monkeys-show-scientists-how-to-rewrite-a-rule-of-turbulence-20261002/",
         "source": "Quanta Magazine",
         "published_at": "Fri, 02 Oct 2026 14:45:02 +0000",
         "image": "https://www.quantamagazine.org/wp-content/uploads/2026/10/ManipulatingTurbulence-crXinyuSi_UniversityOfPittsburgh-Default.webp",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/2.mp3",
-        "title_hi": "समुद्री बंदर वैज्ञानिकों को दिखाते हैं कि अशांति के नियम को कैसे फिर से लिखें",
-        "summary_hi": "वैज्ञानिकों ने खोज की है कि अशांत प्रणालियों के बारे में एक मौलिक धारणा गलत हो सकती है। पहले, शोधकर्ताओं का मानना था कि ऊर्जा अशांत प्रणालियों के भीतर केवल एक दिशा में बहती है, लेकिन ब्राइन श्रिम्प के अवलोकन से पता चला है कि एक सरल कारक इस ऊर्जा प्रवाह को उलट सकता है। यह खोज स्थापित अशांति सिद्धांत को चुनौती देती है और सुझाती है कि अशांत व्यवहार को नियंत्रित करने वाली भौतिकी पहले की तुलना में अधिक जटिल है। इस खोज का सूक्ष्म जैविक प्रणालियों से लेकर बड़े पैमाने पर वायुमंडलीय और महासागरीय घटनाओं तक विभिन्न पैमानों पर द्रव गतिकी को समझने के लिए निहितार्थ हैं, जिससे संभवतः मौजूदा अशांति मॉडल के संशोधन की आवश्यकता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/quantum/2.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/2.mp3"
+      },
+      {
+        "title": "Surprisingly Complex Waves Reveal the Brain's Inner Workings",
+        "summary": "Researchers have identified unexpected wave patterns traveling across the human brain that appear to reorganize neural activity in real time. These surprisingly complex waves represent a previously underappreciated mechanism through which the brain coordinates and modulates its operations. The discovery suggests that brain function involves more sophisticated dynamic processes than previously understood, with traveling waves potentially playing a crucial role in information processing, neural communication, and cognitive function, opening new avenues for understanding consciousness and brain organization.",
+        "url": "https://www.quantamagazine.org/surprisingly-complex-waves-reveal-the-brains-inner-workings-20260930/",
+        "source": "Quanta Magazine",
+        "published_at": "Wed, 30 Sep 2026 14:52:12 +0000",
+        "image": "https://www.quantamagazine.org/wp-content/uploads/2026/09/Thought-Geometry-cr.Mark-Belan-Default.webp",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/3.mp3"
       },
       {
         "title": "With most information hidden, the game Stratego had stumped AI—until now",
-        "summary": "Artificial intelligence has successfully defeated the best human Stratego player in history, overcoming a significant challenge posed by the game's hidden information mechanics. The breakthrough involved adding a second neural network that guesses the identity of hidden pieces, enabling the AI to make strategic decisions despite incomplete information. This achievement demonstrates advances in AI's ability to handle uncertainty and incomplete knowledge, capabilities essential for real-world applications. The success represents progress in developing AI systems that can reason strategically under conditions of imperfect information, a problem more complex than traditional games with complete information visibility.",
+        "summary": "Artificial intelligence has achieved a breakthrough by defeating the best human Stratego player in history, overcoming the challenge posed by hidden information in the game. The key innovation involved adding a second neural network that predicts the identity of concealed pieces, enabling the AI system to reason effectively under uncertainty. This accomplishment represents significant progress in developing AI capable of handling incomplete information scenarios, a common challenge in real-world applications ranging from strategic decision-making to competitive environments where not all relevant data is visible.",
         "url": "https://arstechnica.com/science/2026/10/ai-finally-beat-the-best-stratego-player-in-history-and-did-it-on-a-budget/",
         "source": "Science - Ars Technica",
         "published_at": "Thu, 01 Oct 2026 16:28:04 +0000",
         "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/10/GettyImages-1864707238-1152x648.jpg",
-        "audio": "",
-        "title_hi": "अधिकांश जानकारी छिपी होने के साथ, स्ट्रेटेगो खेल ने कृत्रिम बुद्धिमत्ता को हैरान कर दिया था—जब तक कि अब नहीं",
-        "summary_hi": "कृत्रिम बुद्धिमत्ता ने इतिहास के सर्वश्रेष्ठ मानव स्ट्रेटेगो खिलाड़ी को सफलतापूर्वक हराया है, खेल की छिपी जानकारी यांत्रिकी द्वारा प्रस्तुत एक महत्वपूर्ण चुनौती को दूर किया है। सफलता में एक दूसरे तंत्रिका नेटवर्क को जोड़ना शामिल था जो छिपे हुए टुकड़ों की पहचान का अनुमान लगाता है, जिससे कृत्रिम बुद्धिमत्ता को अधूरी जानकारी के बावजूद रणनीतिक निर्णय लेने में सक्षम बनाया जाता है। यह उपलब्धि अनिश्चितता और अधूरे ज्ञान को संभालने की कृत्रिम बुद्धिमत्ता की क्षमता में प्रगति का प्रदर्शन करती है, जो वास्तविक दुनिया के अनुप्रयोगों के लिए आवश्यक क्षमताएं हैं। यह सफलता अपूर्ण जानकारी की स्थितियों में रणनीतिक रूप से तर्क कर सकने वाली कृत्रिम बुद्धिमत्ता प्रणालियों को विकसित करने में प्रगति का प्रतिनिधित्व करती है, एक समस्या जो पूर्ण जानकारी दृश्यमानता वाले पारंपरिक खेलों की तुलना में अधिक जटिल है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/quantum/3.mp3"
-      },
-      {
-        "title": "Scientists make progress in quantum communication, make 90% identical photons",
-        "summary": "Researchers from the universities of Basel, Ruhr, and Paderborn have achieved a significant milestone in quantum communication by successfully creating photons with 90% identical properties. This advancement represents important progress toward practical quantum communication systems, which rely on generating and manipulating quantum states with high fidelity. The ability to produce nearly identical photons is crucial for quantum information processing, quantum cryptography, and quantum networking applications. This collaborative research effort demonstrates the international scientific community's continued progress in developing the quantum technologies necessary for next-generation secure communication and computational systems.",
-        "url": "https://www.msn.com/en-us/news/other/scientists-make-progress-in-quantum-communication-make-90-identical-photons/ar-AA2dBH7I?ocid=BingNewsVerp",
-        "source": "Interesting Engineering on MSN",
-        "published_at": "2026-09-10T12:47:11+00:00",
-        "image": "https://www.bing.com/th?id=ONUT.JYDjIriv0PAqGhCKrh4NVw",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/4.mp3",
-        "title_hi": "वैज्ञानिक क्वांटम संचार में प्रगति करते हैं, 90% समान फोटॉन बनाते हैं",
-        "summary_hi": "बेसल, रुहर और पेडरबोर्न विश्वविद्यालयों के शोधकर्ताओं ने 90% समान गुणों वाले फोटॉन को सफलतापूर्वक बनाकर क्वांटम संचार में एक महत्वपूर्ण मील का पत्थर हासिल किया है। यह प्रगति व्यावहारिक क्वांटम संचार प्रणालियों की ओर महत्वपूर्ण प्रगति का प्रतिनिधित्व करती है, जो उच्च निष्ठा के साथ क्वांटम अवस्थाओं को उत्पन्न और हेरफेर करने पर निर्भर करती हैं। लगभग समान फोटॉन का उत्पादन करने की क्षमता क्वांटम सूचना प्रसंस्करण, क्वांटम क्रिप्टोग्राफी और क्वांटम नेटवर्किंग अनुप्रयोगों के लिए महत्वपूर्ण है। यह सहयोगी अनुसंधान प्रयास अगली पीढ़ी के सुरक्षित संचार और कम्प्यूटेशनल प्रणालियों के लिए आवश्यक क्वांटम प्रौद्योगिकियों को विकसित करने में अंतर्राष्ट्रीय वैज्ञानिक समुदाय की निरंतर प्रगति का प्रदर्शन करता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/quantum/4.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/4.mp3"
       }
     ],
     "trump": [
       {
-        "title": "Trump chooses top spy boss to run new AI taskforce",
-        "summary": "President Trump has appointed his national intelligence chief to lead a new artificial intelligence taskforce as concerns about AI continue to grow. This administrative move reflects the Trump administration's approach to addressing emerging technological challenges by placing intelligence leadership at the helm of AI policy coordination. The appointment signals the administration's prioritization of AI governance amid broader national security considerations and growing public concerns about artificial intelligence's implications for the economy, employment, and national security.",
-        "url": "https://www.bbc.co.uk/news/articles/cqj6jenp26zyo?at_medium=RSS&at_campaign=rss",
+        "title": "California leaders hit back after Trump says Iran can 'take out' LA and San Diego",
+        "summary": "President Trump stated at a Nebraska election rally that rising gas prices were a \"small price to pay for keeping the world safe,\" comments that prompted swift criticism from California leaders. Trump's remarks appeared to reference Iran's potential military capabilities against U.S. cities, drawing accusations of dangerous rhetoric from Governor Gavin Newsom, San Diego Mayor Todd Gloria, and Los Angeles Mayor Karen Bass. The comments occurred amid broader tensions related to the Iran conflict and elevated fuel costs affecting Americans nationwide. California officials warned that such statements were irresponsible and dangerous, particularly weeks before the midterm elections.",
+        "url": "https://www.bbc.co.uk/news/articles/c6r7yn8pknyxo?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
-        "published_at": "Mon, 05 Oct 2026 10:03:38 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9a97/live/e8568220-c056-11f1-ba75-170165fdb734.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/0.mp3",
-        "title_hi": "ट्रम्प ने नई AI टास्कफोर्स चलाने के लिए शीर्ष जासूसी प्रमुख को चुना",
-        "summary_hi": "राष्ट्रपति ट्रम्प ने अपने राष्ट्रीय खुफिया प्रमुख को कृत्रिम बुद्धिमत्ता के लिए एक नई टास्कफोर्स का नेतृत्व करने के लिए नियुक्त किया है क्योंकि AI के बारे में चिंताएं बढ़ती जा रही हैं। यह प्रशासनिक कदम उभरती हुई तकनीकी चुनौतियों का समाधान करने के लिए ट्रम्प प्रशासन के दृष्टिकोण को दर्शाता है, जिसमें खुफिया नेतृत्व को AI नीति समन्वय के मुखिया के रूप में रखा गया है। यह नियुक्ति व्यापक राष्ट्रीय सुरक्षा विचारों और कृत्रिम बुद्धिमत्ता के अर्थव्यवस्था, रोजगार और राष्ट्रीय सुरक्षा के लिए निहितार्थों के बारे में बढ़ती जनता की चिंताओं के बीच AI शासन को प्राथमिकता देने का संकेत देती है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/trump/0.mp3"
+        "published_at": "Tue, 06 Oct 2026 11:13:27 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6e38/live/ca132f80-c177-11f1-bed0-05ebd781c53c.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/0.mp3"
       },
       {
-        "title": "US pressures Europe to release diesel reserves as Trump threatens export ban",
-        "summary": "President Trump has threatened to ban diesel exports to ease fuel prices in the United States ahead of the November midterm elections. The administration is simultaneously pressuring European nations to release their diesel reserves to help stabilize global markets and reduce domestic costs. This dual approach reflects Trump's strategy to address energy prices as a key electoral issue, combining protectionist trade measures with diplomatic pressure on allies to support American economic interests during the critical pre-election period.",
-        "url": "https://www.bbc.co.uk/news/articles/c5zjzjgdeneeo?at_medium=RSS&at_campaign=rss",
+        "title": "What are the US midterms? A simple guide",
+        "summary": "U.S. voters are scheduled to head to the polls on November 3rd in midterm elections that could significantly impact President Donald Trump's presidency. The midterms represent a critical electoral moment that will determine the composition of Congress and test Trump's political strength and influence over the Republican Party. These elections occur at a time of notable political turbulence, including debates over economic policy, foreign affairs, and Trump's approval ratings. The outcome could reshape the political landscape and affect Trump's ability to advance his legislative agenda during the remainder of his term.",
+        "url": "https://www.bbc.co.uk/news/articles/c6wyz223j19po?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
-        "published_at": "Fri, 02 Oct 2026 08:54:00 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/95a3/live/c2123c20-be1d-11f1-8202-6fffc4c0ebaa.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/1.mp3",
-        "title_hi": "ट्रम्प निर्यात प्रतिबंध की धमकी देते हुए डीजल भंडार जारी करने के लिए यूरोप पर दबाव डालते हैं",
-        "summary_hi": "राष्ट्रपति ट्रम्प ने नवंबर के मध्यावधि चुनावों से पहले संयुक्त राज्य में ईंधन की कीमतों को कम करने के लिए डीजल निर्यात पर प्रतिबंध लगाने की धमकी दी है। प्रशासन एक साथ यूरोपीय देशों को वैश्विक बाजारों को स्थिर करने और घरेलू लागतों को कम करने में मदद करने के लिए अपने डीजल भंडार जारी करने के लिए दबाव डाल रहा है। यह दोहरा दृष्टिकोण ऊर्जा कीमतों को एक महत्वपूर्ण चुनावी मुद्दे के रूप में संबोधित करने की ट्रम्प की रणनीति को दर्शाता है, जो संरक्षणवादी व्यापार उपायों को महत्वपूर्ण चुनाव-पूर्व अवधि के दौरान अमेरिकी आर्थिक हितों का समर्थन करने के लिए सहयोगियों पर राजनयिक दबाव के साथ जोड़ता है।",
-        "audio_hi": ""
+        "published_at": "Mon, 05 Oct 2026 23:40:58 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0722/live/5cb72e20-be3c-11f1-a64c-550be9e3c66b.png",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/1.mp3"
       },
       {
-        "title": "Trump's immigration crackdown divides rural voters as midterms approach, AP-KFF poll finds",
-        "summary": "An Associated Press-KFF poll reveals that rural American voters are divided on the impact of Trump's sweeping immigration crackdown, which has been in effect for over a year. The survey indicates that rural communities hold differing views on whether the administration's immigration policies have benefited or harmed their areas. This division among traditionally Republican-leaning rural voters presents a significant political challenge for the Trump administration as midterm elections approach, potentially affecting GOP electoral prospects in key agricultural and rural regions.",
-        "url": "https://www.msn.com/en-us/news/other/trump-s-immigration-crackdown-divides-rural-voters-as-midterms-approach-ap-kff-poll-finds/ar-AA2dB4oh",
-        "source": "Associated Press News",
-        "published_at": "2026-10-05T10:00:22+00:00",
-        "image": "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA2dBgCh.img?w=768&h=512&m=6&x=296&y=76&s=104&d=104",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/2.mp3",
-        "title_hi": "मध्यावधि चुनावों के करीब आते हुए ट्रम्प की आप्रवासन कार्रवाई ग्रामीण मतदाताओं को विभाजित करती है, AP-KFF सर्वेक्षण पाता है",
-        "summary_hi": "एक एसोसिएटेड प्रेस-KFF सर्वेक्षण से पता चलता है कि ग्रामीण अमेरिकी मतदाता ट्रम्प की व्यापक आप्रवासन कार्रवाई के प्रभाव पर विभाजित हैं, जो एक वर्ष से अधिक समय से लागू है। सर्वेक्षण से संकेत मिलता है कि ग्रामीण समुदायों के पास इस बारे में अलग-अलग विचार हैं कि क्या प्रशासन की आप्रवासन नीतियों ने उनके क्षेत्रों को लाभान्वित किया है या नुकसान पहुंचाया है। परंपरागत रूप से रिपब्लिकन-झुकाव वाले ग्रामीण मतदाताओं के बीच यह विभाजन मध्यावधि चुनावों के करीब आते हुए ट्रम्प प्रशासन के लिए एक महत्वपूर्ण राजनीतिक चुनौती प्रस्तुत करता है, जो कृषि और ग्रामीण क्षेत्रों में मुख्य GOP चुनावी संभावनाओं को प्रभावित कर सकता है।",
-        "audio_hi": ""
+        "title": "Trump says 'threat' led US to pull bombers from RAF Fairford",
+        "summary": "The Pentagon confirmed it removed approximately a dozen B-1 bombers from RAF Fairford in England and returned them to their home stations in America. President Trump stated that a \"threat\" prompted the military withdrawal from the British base. The sudden redeployment raised questions about the nature and severity of the threat that necessitated the rapid removal of strategic military assets from a key NATO ally location. The incident highlighted ongoing security concerns and the coordination between U.S. and British military operations during a period of heightened international tensions.",
+        "url": "https://www.bbc.co.uk/news/articles/cwj3413e5m1lo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC News",
+        "published_at": "Tue, 06 Oct 2026 07:02:24 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/976f/live/26933ef0-c14e-11f1-babe-4199b0e7ccea.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/2.mp3"
       },
       {
-        "title": "Trump hits new polling lows as Election Day looms",
-        "summary": "Recent polling data shows President Trump reaching near career-low approval ratings as the midterm elections approach. The declining numbers reflect growing Democratic confidence and increasing concerns among Republicans about the party's prospects in November. These polling lows come amid various controversies and policy debates, suggesting potential challenges for Republican candidates seeking to maintain or gain seats in Congress. The timing is significant as the midterm campaign intensifies and voters prepare to cast ballots.",
-        "url": "https://www.yahoo.com/news/politics/articles/trump-hits-polling-lows-election-225322563.html",
-        "source": "Detroit News via Yahoo News",
-        "published_at": "2026-10-04T22:47:12+00:00",
-        "image": "https://media.zenfs.com/en/detroit_news_articles_230/93ed01f36a12276ad336a8e929630df9.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/3.mp3",
-        "title_hi": "चुनाव दिवस के करीब आते हुए ट्रम्प नई सर्वेक्षण न्यूनतम तक पहुंचते हैं",
-        "summary_hi": "हाल के सर्वेक्षण डेटा से पता चलता है कि राष्ट्रपति ट्रम्प मध्यावधि चुनावों के करीब आते हुए करियर के निम्न स्वीकृति रेटिंग तक पहुंच गए हैं। गिरती हुई संख्याएं बढ़ती हुई डेमोक्रेटिक आत्मविश्वास और नवंबर में पार्टी की संभावनाओं के बारे में रिपब्लिकन के बीच बढ़ती चिंताओं को दर्शाती हैं। ये सर्वेक्षण न्यूनतम विभिन्न विवादों और नीति बहसों के बीच आते हैं, जो कांग्रेस में सीटें बनाए रखने या हासिल करने की मांग करने वाले रिपब्लिकन उम्मीदवारों के लिए संभावित चुनौतियों का सुझाव देते हैं। समय महत्वपूर्ण है क्योंकि मध्यावधि अभियान तीव्र होता है और मतदाता मतपत्र डालने की तैयारी करते हैं।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/trump/3.mp3"
+        "title": "Trump says he will stop using taxpayer funds for ads after bipartisan pushback",
+        "summary": "President Trump announced he would cease using taxpayer funds for political advertisements promoting himself and his policies following bipartisan criticism. The advertisements in question potentially violated U.S. laws that prohibit government funds from being spent on political advertising. The decision came after significant pushback from lawmakers across party lines who raised concerns about the misuse of public resources for campaign purposes. Trump's reversal on the issue demonstrated the effectiveness of bipartisan opposition to what many viewed as an inappropriate use of federal funds during an election year.",
+        "url": "https://www.bbc.co.uk/news/articles/cm9qzlvpqex9o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC News",
+        "published_at": "Tue, 06 Oct 2026 01:58:29 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/8a95/live/ab6998c0-c11e-11f1-884f-cf10d6a6ba5b.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/3.mp3"
       },
       {
-        "title": "3 Things Xi Won From Trump",
-        "summary": "Chinese leader Xi Jinping achieved three significant objectives during his recent state visit to the United States through negotiations with President Trump. According to analysis, Xi secured favorable bargains that appear to lock in a strategic advantage for Beijing in the ongoing U.S.-China relationship. The successful outcomes suggest that Trump administration officials made concessions that benefit Chinese interests, potentially affecting the balance of power in U.S.-China relations and raising questions about the administration's negotiating strategy with major geopolitical rivals.",
-        "url": "https://www.newsweek.com/3-things-xi-won-trump-12524143",
-        "source": "Newsweek",
-        "published_at": "2026-10-05T12:36:00+00:00",
-        "image": "https://assets.newsweek.com/wp-content/uploads/2026/10/AP26266791651294.jpg?w=1200&crop=1",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/4.mp3",
-        "title_hi": "ट्रम्प से शी को 3 चीजें मिलीं",
-        "summary_hi": "चीनी नेता शी जिनपिंग ने राष्ट्रपति ट्रम्प के साथ बातचीत के माध्यम से संयुक्त राज्य की अपनी हाल की राजकीय यात्रा के दौरान तीन महत्वपूर्ण उद्देश्य हासिल किए। विश्लेषण के अनुसार, शी ने अनुकूल सौदे हासिल किए जो बीजिंग के लिए चल रहे U.S.-चीन संबंधों में एक रणनीतिक लाभ को बंद करते हैं। सफल परिणाम बताते हैं कि ट्रम्प प्रशासन के अधिकारियों ने ऐसी रियायतें दीं जो चीनी हितों को लाभान्वित करती हैं, संभवतः U.S.-चीन संबंधों में शक्ति के संतुलन को प्रभावित करती हैं और प्रमुख भू-राजनीतिक प्रतिद्वंद्वियों के साथ प्रशासन की बातचीत रणनीति के बारे में सवाल उठाती हैं।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/trump/4.mp3"
+        "title": "US announces mass denaturalization action",
+        "summary": "The Trump administration announced a mass denaturalization action targeting approximately 40 naturalized American citizens, seeking to strip them of their U.S. citizenship. This represents a significant and controversial immigration enforcement initiative that raised concerns among civil rights advocates and immigrant communities. The action reflects the administration's hardline stance on immigration policy and citizenship matters. The denaturalization effort marks an escalation in enforcement actions and has sparked debate about due process rights, the criteria for citizenship revocation, and the broader implications for naturalized Americans.",
+        "url": "https://www.yahoo.com/news/us/articles/us-announces-mass-denaturalization-action-075753760.html",
+        "source": "NEWSWEEK via Yahoo News",
+        "published_at": "2026-10-06T08:21:14+00:00",
+        "image": "https://media.zenfs.com/en/newsweek_sports_200/2085c98cb42d6d3d7a38858906eb15b0.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/4.mp3"
       }
     ],
-    "local": [],
-    "local_events": [
+    "local": [
       {
-        "title": "Melissa Tribute Fest",
-        "summary": "A celebration featuring live music throughout the day with a beer and wine garden, curated vendor market, variety of food, and family-friendly play zone.",
-        "url": "https://www.eventeny.com/events/melissa-tribute-fest-30970/",
-        "source": "McKinney, Texas",
+        "title": "Melissa ISD employee fired after 'inappropriate' communication with student",
+        "summary": "A Melissa Independent School District employee was terminated following an investigation by the district's police department that uncovered inappropriate electronic communication between the employee and a student. The incident highlights concerns about student safety and professional conduct within the school system. Melissa ISD, located in Collin County north of Dallas, serves a growing suburban community. The district has been expanding its facilities and operations to accommodate population growth in the area. This personnel action reflects the district's commitment to maintaining appropriate boundaries and protecting students from potential misconduct by staff members.",
+        "url": "https://www.fox4news.com/news/melissa-isd-employee-fired-high-school",
+        "source": "Fox 4 News",
         "published_at": "",
-        "image": "",
-        "category": "festival",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local_events/0.mp3",
-        "title_hi": "मेलिसा ट्रिब्यूट फेस्ट",
-        "summary_hi": "पूरे दिन लाइव संगीत के साथ एक समारोह जिसमें बीयर और वाइन गार्डन, क्यूरेटेड विक्रेता बाजार, विभिन्न प्रकार के भोजन और परिवार के अनुकूल खेल क्षेत्र शामिल है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/local_events/0.mp3"
+        "image": "https://images.foxtv.com/static.fox4news.com/www.fox4news.com/content/uploads/2019/08/1200/630/8362b09b-Melissa20HS_1440458562544_121015_ver1.0.jpg?ve=1&tl=1",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local/0.mp3"
+      },
+      {
+        "title": "Melissa gas leak: Homes evacuated after gas main damaged",
+        "summary": "A six-inch gas main was damaged by construction crews working near Melissa Road and Fannin Street on Tuesday morning, prompting emergency evacuations in the area. Residents in the 2600 and 2700 blocks of McKinney Street and the Villages of Melissa neighborhood were ordered to evacuate as a precautionary measure. Emergency crews responded to secure the area and manage the situation. The incident underscores infrastructure vulnerabilities in rapidly developing areas and the importance of careful coordination between construction projects and utility companies. Gas main damage poses significant safety risks, requiring immediate emergency response protocols to protect residents and prevent potential explosions or gas exposure.",
+        "url": "https://www.fox4news.com/news/melissa-gas-leak-evacuations",
+        "source": "Fox 4 News",
+        "published_at": "",
+        "image": "https://images.foxtv.com/static.fox4news.com/www.fox4news.com/content/uploads/2024/11/1200/630/112624-sky4-tuesday-1156am-kdfweme002_11_56_34_2_m_00.08.34.28.jpg?ve=1&tl=1",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local/1.mp3"
       }
     ],
+    "local_events": [],
     "local_weather": [
       {
         "title": "Weather in Melissa, Texas",
-        "summary": "Clear sky, 64°F (feels like 64°F). Today's range: 62°F to 66°F. Humidity 87%, wind 5 mph.",
+        "summary": "Clear sky, 61°F (feels like 61°F). Today's range: 59°F to 63°F. Humidity 79%, wind 3 mph.",
         "url": "",
         "source": "OpenWeatherMap",
-        "published_at": "2026-10-05T12:47:11.270502+00:00",
+        "published_at": "2026-10-06T12:17:19.353944+00:00",
         "image": "",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local_weather/0.mp3",
-        "title_hi": "मेलिसा, टेक्सास में मौसम",
-        "summary_hi": "साफ आसमान, 64°F (महसूस होता है 64°F)। आज की रेंज: 62°F से 66°F। आर्द्रता 87%, हवा 5 mph।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/local_weather/0.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local_weather/0.mp3"
       }
     ]
-  },
-  "hindi_generated_at": "2026-10-05T12:53:17.995865+00:00"
+  }
 }
