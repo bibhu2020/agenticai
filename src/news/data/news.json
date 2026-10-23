@@ -9,7 +9,10 @@
         "source": "BBC News",
         "published_at": "Fri, 23 Oct 2026 05:16:37 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d9bb/live/35523df0-ce6f-11f1-a64c-550be9e3c66b.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/0.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/0.mp3",
+        "title_hi": "तिब्बत में शक्तिशाली भूकंप से 16 लोगों की मौत, रिपोर्ट्स कहती हैं",
+        "summary_hi": "तिब्बत के एक पहाड़ी, कम आबादी वाले क्षेत्र में एक शक्तिशाली भूकंप आया, जिससे रिपोर्ट्स के अनुसार कम से कम 16 लोगों की मौत हुई। भूकंप चीन द्वारा नामित तिब्बत स्वायत्त क्षेत्र में आया। दूरस्थ स्थान और कम जनसंख्या घनत्व के कारण कुल हताहतों की संख्या सीमित रही, हालांकि प्रारंभिक रिपोर्ट्स में भूकंप का सटीक परिमाण और विशिष्ट नुकसान का आकलन विस्तार से नहीं दिया गया। यह प्राकृतिक आपदा इस क्षेत्र को प्रभावित करने वाली एक महत्वपूर्ण मानवीय घटना है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/world/0.mp3"
       },
       {
         "title": "Hospitals deliberately targeted by Sudan's RSF fighters, BBC finds",
@@ -18,7 +21,10 @@
         "source": "BBC News",
         "published_at": "Fri, 23 Oct 2026 10:23:07 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6eeb/live/c8bb2ad0-cec3-11f1-a701-fddedf244c16.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/1.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/1.mp3",
+        "title_hi": "सूडान में आरएसएफ लड़ाकों द्वारा अस्पतालों को जानबूझकर निशाना बनाया गया, बीबीसी को मिले सबूत",
+        "summary_hi": "बीबीसी की जांच से पता चलता है कि सूडान के अस्पतालों को चल रहे संघर्ष के दौरान आरएसएफ (रैपिड सपोर्ट फोर्सेज) लड़ाकों द्वारा जानबूझकर निशाना बनाया गया है। संयुक्त राष्ट्र के मानवाधिकार प्रमुख वोल्कर टर्क ने कहा कि चिकित्सा सुविधाओं पर ये कई हमले अंतर्राष्ट्रीय कानून के तहत युद्ध अपराध माने जा सकते हैं। अस्पतालों को जानबूझकर निशाना बनाना मानवीय सिद्धांतों और सशस्त्र संघर्षों के दौरान चिकित्सा बुनियादी ढांचे की सुरक्षा के लिए अंतर्राष्ट्रीय सम्मेलनों का गंभीर उल्लंघन है, जो नागरिक सुरक्षा और स्वास्थ्यसेवा तक पहुंच के बारे में महत्वपूर्ण चिंताएं उठाता है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/world/1.mp3"
       },
       {
         "title": "Hundreds of flights cancelled as Typhoon Champi shuts Taiwan",
@@ -27,7 +33,10 @@
         "source": "BBC News",
         "published_at": "Fri, 23 Oct 2026 08:45:58 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/8cb6/live/26f20040-cec1-11f1-ae9c-0303957c36f8.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/2.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/2.mp3",
+        "title_hi": "टाइफून चंपी के कारण ताइवान बंद, सैकड़ों उड़ानें रद्द",
+        "summary_hi": "टाइफून चंपी ने ताइवान में व्यापक व्यवधान पैदा किया है, जिससे सैकड़ों उड़ानें रद्द हुई हैं। अधिकारियों के अनुसार, ताइवान के लिउकिउ द्वीप पर लहरों में बहकर कम से कम एक व्यक्ति की मौत हुई। इस गंभीर मौसम प्रणाली ने परिवहन में महत्वपूर्ण बाधा डाली और निवासियों और यात्रियों के लिए गंभीर सुरक्षा जोखिम पैदा किए। टाइफून के प्रभाव से द्वीप राष्ट्रों की उष्णकटिबंधीय चक्रवातों के प्रति कमजोरी और चरम मौसम की घटनाओं के दौरान बुनियादी ढांचे, वाणिज्य और सार्वजनिक सुरक्षा पर पड़ने वाले व्यापक प्रभाव का प्रदर्शन होता है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/world/2.mp3"
       },
       {
         "title": "Woman with Ebola in Nigeria confirmed as wife of Swiss diplomat",
@@ -36,7 +45,10 @@
         "source": "BBC News",
         "published_at": "Fri, 23 Oct 2026 10:14:33 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/bc0c/live/cdfdf700-ce98-11f1-a6ca-3fa3d92134e2.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/3.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/3.mp3",
+        "title_hi": "नाइजीरिया में इबोला से संक्रमित महिला स्विस राजनयिक की पत्नी के रूप में पुष्टि",
+        "summary_hi": "नाइजीरिया में इबोला से संक्रमित पुष्टि की गई एक महिला को एक स्विस राजनयिक की पत्नी के रूप में पहचाना गया है। उसके पति वर्तमान में एक सावधानी के तौर पर अलगाव में हैं, हालांकि स्विस अधिकारियों की रिपोर्ट है कि उन्होंने अभी तक वायरस के कोई लक्षण विकसित नहीं किए हैं। यह मामला रोग संचरण और अंतर्राष्ट्रीय स्वास्थ्य प्रोटोकॉल के बारे में चिंताएं उठाता है। एक राजनयिक परिवार के सदस्य की संलिप्तता इबोला के विभिन्न सामाजिक-आर्थिक पृष्ठभूमि के व्यक्तियों को प्रभावित करने की संभावना और संक्रामक रोग के प्रकोप को नियंत्रित करने में तेजी से अलगाव और निगरानी प्रक्रियाओं के महत्व को उजागर करता है।",
+        "audio_hi": ""
       },
       {
         "title": "Germany target of 'intensive' espionage, Merz says after suspected Russian spy arrest",
@@ -45,7 +57,10 @@
         "source": "BBC News",
         "published_at": "Thu, 22 Oct 2026 17:07:03 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/ae81/live/811fe3f0-ce37-11f1-a68f-db480c983a58.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/4.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/world/4.mp3",
+        "title_hi": "संदिग्ध रूसी जासूस गिरफ्तारी के बाद मर्ज़ कहते हैं कि जर्मनी 'गहन' जासूसी का लक्ष्य है",
+        "summary_hi": "जर्मन राजनीतिक नेता मर्ज़ ने कहा कि जर्मनी एक यूक्रेनी व्यक्ति की गिरफ्तारी के बाद 'गहन' जासूसी गतिविधियों का अनुभव कर रहा है, जिस पर रूस के लिए जासूसी करने का संदेह है। यह मामला वर्ष के दौरान जर्मनी में कई जासूसी घटनाओं में से एक है, जो भू-राजनीतिक तनाव के बीच बढ़ी हुई खुफिया कार्रवाइयों को दर्शाता है। गिरफ्तारी जर्मन सुरक्षा और रणनीतिक हितों को लक्षित करने वाली विदेशी खुफिया गतिविधियों के बारे में चिंताओं को रेखांकित करती है। यह घटना यूरोपीय राष्ट्रों के सामने आने वाली जटिल सुरक्षा चुनौतियों, विशेष रूप से रूसी खुफिया कार्यों के संबंध में और जासूसी के लिए भर्ती किए जाने के लिए व्यक्तियों की कमजोरी को उजागर करती है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/world/4.mp3"
       }
     ],
     "usa": [
@@ -56,7 +71,10 @@
         "source": "BBC News",
         "published_at": "Fri, 23 Oct 2026 09:23:53 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d2f6/live/7d318ca0-cd90-11f1-b1e7-39558e114359.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/0.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/0.mp3",
+        "title_hi": "हिस्पैनिक मतदाताओं ने ट्रम्प को सत्ता में लाने में मदद की - टेक्सास में ज्वार बदल सकता है",
+        "summary_hi": "हाल के मतदान डेटा से संकेत मिलता है कि राष्ट्रपति ट्रम्प को मध्यावधि चुनावों से पहले टेक्सास में महत्वपूर्ण राजनीतिक चुनौतियों का सामना करना पड़ रहा है। हिस्पैनिक मतदाता, जिन्होंने पिछले चुनावों में राज्य को ट्रम्प को सौंपने में महत्वपूर्ण भूमिका निभाई थी, अपना समर्थन बदलते दिख रहे हैं। टेक्सास में यह संभावित पुनर्संरेखण, जो परंपरागत रूप से रिपब्लिकन गढ़ है, मध्यावधि चुनावों के परिणामों और व्यापक राजनीतिक परिदृश्य के लिए बड़े निहितार्थ हो सकते हैं। हिस्पैनिक समुदायों के बीच बदलते मतदान पैटर्न इस प्रभावशाली जनसांख्यिकीय समूह के विकसित होते प्राथमिकताओं और चिंताओं का संकेत देते हैं।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/usa/0.mp3"
       },
       {
         "title": "Prominent Virginia senator charged over allegations she ran criminal cannabis scheme",
@@ -65,7 +83,10 @@
         "source": "BBC News",
         "published_at": "Thu, 22 Oct 2026 20:39:16 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/deb7/live/d3e6df50-ce4e-11f1-8507-d7f0bcb84e7e.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/1.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/1.mp3",
+        "title_hi": "प्रमुख वर्जीनिया सीनेटर पर आपराधिक कैनबिस योजना चलाने के आरोपों में मुकदमा",
+        "summary_hi": "डेमोक्रेटिक सीनेटर एल लुईस लुकास और छह अन्य व्यक्तियों, जिनमें परिवार के सदस्य भी शामिल हैं, को कैनबिस के अवैध वितरण के लिए आरोपित किया गया है। ये आरोप एक प्रमुख राज्य सीनेटर और उनके सहयोगियों को शामिल करते हुए एक महत्वपूर्ण कानूनी विकास का प्रतिनिधित्व करते हैं। आरोपों से नियंत्रित पदार्थ के वितरण की एक संगठित योजना का संकेत मिलता है, जो राज्य स्तरीय राजनीति को प्रभावित करने वाला एक गंभीर आपराधिक मामला है। यह मामला राज्य विधायी स्तर पर सार्वजनिक भ्रष्टाचार और अवैध ड्रग वितरण की चिंताओं को उजागर करता है, जो वर्जीनिया में डेमोक्रेटिक नेतृत्व और शासन को संभावित रूप से प्रभावित कर सकता है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/usa/1.mp3"
       },
       {
         "title": "Ilhan Omar says 'bizarre' pre-dawn raid on her home is forcing her to move out",
@@ -74,7 +95,10 @@
         "source": "BBC News",
         "published_at": "Thu, 22 Oct 2026 13:36:21 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/972d/live/a8e0d8b0-ce1c-11f1-906e-e3128518d85d.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/2.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/2.mp3",
+        "title_hi": "इलहान ओमर कहती हैं कि उनके घर पर 'अजीब' भोर की छापेमारी उन्हें स्थानांतरित करने के लिए मजबूर कर रही है",
+        "summary_hi": "कांग्रेसवुमन इलहान ओमर ने बताया कि संघीय एजेंटों ने एक संघीय जांच के हिस्से के रूप में उनके निवास पर भोर की छापेमारी की। अधिकारियों ने ऑपरेशन के दौरान सेल फोन और नोटबुक सहित एक दर्जन से अधिक वस्तुओं को जब्त किया। ओमर ने छापेमारी को असामान्य और व्यवधानकारी बताया, कहा कि यह उन्हें स्थानांतरित करने के लिए मजबूर कर रही है। कांग्रेसवुमन के विवरण से संघीय जांच की प्रकृति और इसके दायरे के बारे में सवाल उठते हैं। इस घटना ने निर्वाचित अधिकारियों को लक्षित करने वाली संघीय कानून प्रवर्तन गतिविधियों और गोपनीयता और नागरिक स्वतंत्रता के लिए व्यापक निहितार्थों पर ध्यान आकर्षित किया है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/usa/2.mp3"
       },
       {
         "title": "Supreme Court upholds pause on Trump's anti-trans prison policy",
@@ -83,7 +107,10 @@
         "source": "NPR Topics: National",
         "published_at": "Wed, 21 Oct 2026 11:46:27 -0400",
         "image": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/8126x4571+0+423/resize/1400/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F32%2Fca%2F101aa09243d3b3fa4de648137a9e%2Fgettyimages-2299615293.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/3.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/3.mp3",
+        "title_hi": "सर्वोच्च न्यायालय ने ट्रम्प की ट्रांस-विरोधी जेल नीति पर रोक को बरकरार रखा",
+        "summary_hi": "सर्वोच्च न्यायालय ने फैसला सुनाया कि ट्रम्प प्रशासन को नीति को बदलने के प्रयासों पर मुकदमेबाजी जारी रहने के दौरान संघीय जेलों में कैदियों को लिंग-पुष्टि देखभाल प्रदान करना जारी रखना चाहिए। यह निर्णय संघीय जेल प्रणाली में ट्रांसजेंडर व्यक्तियों के लिए चिकित्सा देखभाल के संबंध में स्थिति को बनाए रखता है। यह निर्णय ट्रांसजेंडर अधिकारों और चिकित्सा देखभाल तक पहुंच के वकीलों के लिए एक महत्वपूर्ण कानूनी जीत का प्रतिनिधित्व करता है। यह मामला प्रशासन अपने नीति उद्देश्यों को आगे बढ़ाने के प्रयास के रूप में अदालतों के माध्यम से जारी रहेगा। यह निर्णय ट्रांसजेंडर अधिकारों और सुधारात्मक सुविधाओं में चिकित्सा उपचार के आसपास चल रही संवैधानिक और नीति बहसों को प्रतिबिंबित करता है।",
+        "audio_hi": ""
       },
       {
         "title": "How long does it take to save up for a starter home? Twice as long as it did in 2019",
@@ -92,7 +119,10 @@
         "source": "NPR Topics: National",
         "published_at": "Thu, 22 Oct 2026 05:00:00 -0400",
         "image": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/5794x3259+0+341/resize/1400/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F72%2F4f%2Fa6ef628346e5b0e8961027373fce%2Fgettyimages-2285398485.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/4.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/4.mp3",
+        "title_hi": "स्टार्टर होम के लिए बचत करने में कितना समय लगता है? 2019 की तुलना में दोगुना",
+        "summary_hi": "एक नई विश्लेषण से पता चलता है कि औसत किराएदार परिवारों को अब स्टार्टर होम पर डाउन पेमेंट और समापन लागत के लिए धन जमा करने के लिए लगभग सोलह साल की आवश्यकता है, जो 2019 से दोगुना समय है। बढ़ते किराए और बढ़ते जीवन यापन के खर्च ने घरेलू बजट के एक बढ़ते हिस्से को खपत किया है, जिससे बचत क्षमता में महत्वपूर्ण प्रभाव पड़ा है। यह नाटकीय वृद्धि लाखों अमेरिकियों को प्रभावित करने वाले आवास सामर्थ्य संकट को दर्शाती है। विस्तारित बचत समय सारणी दर्शाती है कि कैसे आर्थिक दबाव किराएदारों और युवा पीढ़ियों के लिए घर के मालिकाना अधिकार को तेजी से दुर्गम बना दिया है। डेटा रियल एस्टेट बाजार में संरचनात्मक चुनौतियों और धन संचय और वित्तीय स्थिरता को प्रभावित करने वाली व्यापक आर्थिक स्थितियों को रेखांकित करता है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/usa/4.mp3"
       }
     ],
     "india": [
@@ -103,7 +133,10 @@
         "source": "BBC News",
         "published_at": "Fri, 23 Oct 2026 08:39:42 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4816/live/10dcbb60-ce21-11f1-906e-e3128518d85d.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/0.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/0.mp3",
+        "title_hi": "अमेरिका को तेल की कीमतों का सामना करते हुए रुबियो भारत के एक छोटे शहर की ओर रुख करते हैं",
+        "summary_hi": "अमेरिका के विदेश मंत्री मार्को रुबियो ने इस साल अपनी दूसरी यात्रा पर भारत का दौरा किया, जिसमें उन्होंने पारंपरिक कूटनीति के बजाय व्यावसायिक और ऊर्जा चर्चाओं को प्राथमिकता दी। यह यात्रा ट्रम्प प्रशासन के भारत के साथ रणनीतिक साझेदारी के माध्यम से उच्च तेल की कीमतों को संबोधित करने के फोकस को दर्शाती है। रुबियो की ऊर्जा सहयोग पर जोर वैश्विक ऊर्जा बाजारों में एक प्रमुख खिलाड़ी के रूप में भारत के महत्व और विश्वसनीय ऊर्जा आपूर्ति सुरक्षित करने के लिए अमेरिकी प्रयासों को रेखांकित करता है। यह यात्रा अमेरिका-भारत संबंधों में व्यावहारिक आर्थिक जुड़ाव की ओर एक बदलाव का संकेत देती है, जिसमें ऊर्जा सुरक्षा द्विपक्षीय चर्चाओं का एक केंद्रीय स्तंभ बन गई है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/india/0.mp3"
       },
       {
         "title": "YouTuber arrested after popular Indian finance influencer's suicide",
@@ -112,7 +145,10 @@
         "source": "BBC News",
         "published_at": "Thu, 22 Oct 2026 14:08:10 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2457/live/95e759e0-ce18-11f1-bbba-c577fd901ff7.png",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/1.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/1.mp3",
+        "title_hi": "लोकप्रिय भारतीय वित्त प्रभावशाली की आत्महत्या के बाद यूट्यूबर गिरफ्तार",
+        "summary_hi": "वी हरीश, जिन्होंने अत्यंत लोकप्रिय इंस्टाग्राम खाता \"फाइनेंस विथ हरीश\" संचालित किया, को मंगलवार को मृत पाया गया, जिससे अधिकारियों ने इस घटना से संबंधित एक यूट्यूबर को गिरफ्तार किया। प्रमुख वित्त प्रभावशाली की मृत्यु ने सामग्री निर्माताओं की जिम्मेदारियों और सोशल मीडिया व्यक्तित्वों द्वारा सामना किए जाने वाले संभावित दबावों के बारे में गंभीर चिंताएं उठाई हैं। यह मामला भारत में प्रभावशाली अर्थव्यवस्था की बढ़ती जांच और डिजिटल सामग्री निर्माण स्थान के भीतर जवाबदेही के बारे में सवालों को उजागर करता है। हरीश की मृत्यु के आसपास की परिस्थितियों और यूट्यूबर की कथित भागीदारी को निर्धारित करने के लिए जांच जारी है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/india/1.mp3"
       },
       {
         "title": "Trump's green card curbs test Indian tech workers' American dream",
@@ -121,7 +157,10 @@
         "source": "BBC News",
         "published_at": "Wed, 21 Oct 2026 23:06:37 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/51e1/live/804b8da0-cc6e-11f1-baeb-8d65d4bcd7ab.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/2.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/2.mp3",
+        "title_hi": "ट्रम्प की ग्रीन कार्ड पाबंदियां भारतीय तकनीकी कर्मचारियों के अमेरिकी सपने की परीक्षा लेती हैं",
+        "summary_hi": "ट्रम्प प्रशासन की आप्रवासन प्रतिबंध और तकनीकी कंपनियों की विदेशी भर्ती में कमी भारतीय प्रौद्योगिकी कर्मचारियों के लिए अमेरिकी निवास को तेजी से कठिन बना रही है। ये नीति परिवर्तन उस पारंपरिक मार्ग को एक महत्वपूर्ण चुनौती का प्रतिनिधित्व करते हैं जिस पर कई भारतीय तकनीकी पेशेवर अमेरिका में स्थायी निवास सुरक्षित करने के लिए निर्भर हैं। ग्रीन कार्ड पर प्रतिबंध सीधे भारत के आईटी क्षेत्र को प्रभावित करते हैं, जो लंबे समय से अमेरिकी कंपनियों को कुशल कर्मचारी प्रदान करता आया है। सख्त आप्रवासन नीतियों और कॉर्पोरेट भर्ती में कटौती का संयोजन भारतीय तकनीकी कर्मचारियों के लिए कैरियर में उन्नति और संयुक्त राज्य में स्थायी निपटान की मांग करने वाले पर्याप्त अनिश्चितता पैदा करता है।",
+        "audio_hi": ""
       },
       {
         "title": "Billionaire Mukesh Ambani's Jio launches India's biggest share sale",
@@ -130,7 +169,10 @@
         "source": "BBC News",
         "published_at": "Wed, 21 Oct 2026 05:16:44 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/72d9/live/d85fca80-cd20-11f1-acea-8755f0f28c17.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/3.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/3.mp3",
+        "title_hi": "अरबपति मुकेश अंबानी का जियो भारत की सबसे बड़ी शेयर बिक्री शुरू करता है",
+        "summary_hi": "अरबपति मुकेश अंबानी का जियो एक महीने के भीतर भारत की दूसरी प्रमुख प्रारंभिक सार्वजनिक पेशकश शुरू की है, जिसका लक्ष्य चुनौतीपूर्ण इक्विटी बाजार की स्थितियों के बावजूद 3.2 बिलियन डॉलर जुटाना है। आईपीओ भारत के सबसे बड़े समूहों में से एक द्वारा एक महत्वपूर्ण पूंजी जुटाने का प्रयास है, जो कमजोर बाजार भावना के बावजूद विकास की संभावनाओं में आत्मविश्वास प्रदर्शित करता है। जियो की शेयर बिक्री आर्थिक गतिविधि और निवेश को चलाने में प्रमुख भारतीय निगमों के निरंतर महत्व को रेखांकित करती है। यह पेशकश एक समय में आती है जब भारतीय इक्विटी बाजारों को चुनौतियों का सामना करना पड़ रहा है, फिर भी प्रमुख कंपनियां सार्वजनिक पूंजी बाजारों के माध्यम से विस्तार और आधुनिकीकरण की खोज जारी रखती हैं।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/india/3.mp3"
       },
       {
         "title": "India 'cockroach' leaders who called on election chief to quit are freed from jail",
@@ -139,7 +181,10 @@
         "source": "BBC News",
         "published_at": "Wed, 21 Oct 2026 18:22:28 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0c4c/live/6c343880-cd77-11f1-bc2e-018d645d8d21.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/4.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/4.mp3",
+        "title_hi": "भारत के 'तिलचट्टे' नेता जिन्होंने चुनाव प्रमुख से इस्तीफे की मांग की, जेल से रिहा किए गए",
+        "summary_hi": "सौरव दास और अशुतोष रंका, जिन पर दिल्ली में एक अनधिकृत विरोध स्थल में घुसपैठ करने और चुनाव प्रमुख के बारे में विवादास्पद बयान देने का आरोप था, जेल से रिहा किए गए हैं। दोनों नेताओं को अनधिकृत प्रदर्शनों में उनकी भागीदारी और भड़काऊ बयानबाजी से संबंधित आरोपों का सामना करना पड़ा था। उनकी रिहाई एक ऐसे मामले में एक विकास को चिह्नित करती है जिसने भारत में विरोध की गतिशीलता और राजनीतिक भाषण पर ध्यान आकर्षित किया। यह घटना देश के लोकतांत्रिक ढांचे में राजनीतिक सक्रियता और अनुमेय असहमति की सीमाओं के आसपास चल रहे तनाव को दर्शाती है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/india/4.mp3"
       }
     ],
     "odisha": [
@@ -150,7 +195,10 @@
         "source": "The Times of India on MSN",
         "published_at": "2026-09-15T10:35:39+00:00",
         "image": "https://www.bing.com/th?id=ONUT.yV1_oFKj8adJS_YDRro6gg",
-        "audio": ""
+        "audio": "",
+        "title_hi": "चक्रवात अर्नब अलर्ट: आईएमडी ने कहा कि 26 अक्टूबर तक बंगाल की खाड़ी में तूफान आने की संभावना, आंध्र प्रदेश-दक्षिण ओडिशा तट के पास लैंडफॉल की संभावना; मछुआरों को चेतावनी",
+        "summary_hi": "भारतीय मौसम विज्ञान विभाग ने चक्रवात अर्नब के संबंध में एक अलर्ट जारी किया है, जिसमें 26 अक्टूबर तक बंगाल की खाड़ी पर एक चक्रवाती तूफान विकसित होने की भविष्यवाणी की गई है और आंध्र प्रदेश और दक्षिण ओडिशा तट के पास लैंडफॉल की उम्मीद है। ओडिशा सरकार ने आने वाली मौसम प्रणाली के बारे में नागरिकों को सतर्क किया है। मछुआरों को सावधानी बरतने और प्रभावित जल में जाने से बचने की चेतावनी दी गई है। चक्रवात क्षेत्र में तटीय समुदायों और बुनियादी ढांचे के लिए संभावित जोखिम पैदा करता है, जिसके लिए तैयारी के उपायों और राज्य अधिकारियों तथा मौसम विज्ञान एजेंसियों के बीच आपातकालीन प्रतिक्रिया समन्वय की आवश्यकता है।",
+        "audio_hi": ""
       },
       {
         "title": "Odisha braces for cyclone as IMD issues Red Warning for several districts",
@@ -159,7 +207,10 @@
         "source": "Sambad English",
         "published_at": "2026-09-08T10:35:39+00:00",
         "image": "https://www.bing.com/th?id=ONUT.DPYVqnznbSmr3SEqlEskXA",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/1.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/1.mp3",
+        "title_hi": "ओडिशा चक्रवात के लिए तैयार है क्योंकि आईएमडी ने कई जिलों के लिए रेड वार्निंग जारी की है",
+        "summary_hi": "भारतीय मौसम विज्ञान विभाग ने गजपति, गंजाम और पुरी सहित ओडिशा के कई जिलों के लिए रेड वार्निंग जारी की है क्योंकि बंगाल की खाड़ी पर एक निम्न दबाव प्रणाली एक चक्रवात में तीव्र होने की उम्मीद है। रेड वार्निंग सर्वोच्च अलर्ट स्तर का प्रतिनिधित्व करता है, जो गंभीर मौसम की स्थिति और जीवन और संपत्ति के लिए महत्वपूर्ण जोखिम को दर्शाता है। राज्य मौसम विज्ञान अलर्ट के जवाब में तैयारी के उपायों को लागू कर रहा है। प्रभावित जिलों के निवासियों को सतर्क रहने और आधिकारिक मार्गदर्शन का पालन करने की सलाह दी जाती है। रेड वार्निंग आने वाली मौसम प्रणाली की गंभीर प्रकृति और व्यापक आपदा प्रबंधन योजना और संसाधन जुटाने की आवश्यकता को रेखांकित करता है।",
+        "audio_hi": ""
       },
       {
         "title": "'Night out turns fatal': Odisha youth found dead in Ganjam, family alleges murder",
@@ -168,7 +219,10 @@
         "source": "Odisha TV",
         "published_at": "2026-10-09T10:35:39+00:00",
         "image": "https://www.bing.com/th?id=ONUT.yxvJAfqm8T8ufmCVmPjIjg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/2.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/2.mp3",
+        "title_hi": "'रात की सैर घातक साबित हुई': ओडिशा के गंजाम में युवक की मृत्यु, परिवार ने हत्या का आरोप लगाया",
+        "summary_hi": "ओडिशा के गंजाम जिले में एक युवक को शुक्रवार को कबीसूर्यनगर के मालगुडिया छक में गंभीर रूप से घायल पाया गया और बाद में उसकी चोटों से मृत्यु हो गई। इस घटना ने गंभीर चिंताएं बढ़ाई हैं क्योंकि युवक के परिवार ने गलत काम का आरोप लगाया है, जिससे संकेत मिलता है कि मृत्यु दुर्घटनावश नहीं हो सकती है। चोट और मृत्यु के आसपास की परिस्थितियां जांच के अधीन हैं। यह मामला क्षेत्र में चल रही सुरक्षा संबंधी चिंताओं को उजागर करता है और कानून प्रवर्तन अधिकारियों द्वारा पूरी तरह से जांच की आवश्यकता को दर्शाता है। परिवार के हत्या के आरोपों ने अधिकारियों को साक्ष्य और परिस्थितियों की अधिक सावधानी से जांच करने के लिए प्रेरित किया है ताकि मृत्यु का वास्तविक कारण निर्धारित किया जा सके।",
+        "audio_hi": ""
       },
       {
         "title": "70-year-old couple pledges KSh 32k pension cards, sells land to fulfil son's career dream",
@@ -177,7 +231,10 @@
         "source": "Tuko News on MSN",
         "published_at": "2026-09-13T10:35:39+00:00",
         "image": "https://www.bing.com/th?id=ONUT.IISE4pisvQrdESbvJqaTRw",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/3.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/3.mp3",
+        "title_hi": "70 वर्षीय दंपति ने 32,000 रुपये की पेंशन कार्ड गिरवी रखी, बेटे के करियर के सपने को पूरा करने के लिए जमीन बेची",
+        "summary_hi": "ओडिशा के एक बुजुर्ग दंपति ने अपने बेटे सुशांत की मेडिकल कॉलेज में प्रवेश के लिए धन जुटाने के लिए अपने वृद्धावस्था पेंशन कार्ड गिरवी रखे और जमीन बेची। दंपति का महत्वपूर्ण आर्थिक बलिदान उनके बेटे की शैक्षणिक आकांक्षाओं और चिकित्सा क्षेत्र में करियर की उन्नति का समर्थन करने के लिए उनकी प्रतिबद्धता को प्रदर्शित करता है। पेंशन कार्ड गिरवी रखकर और संपत्ति संपत्ति से विनिवेश करके, माता-पिता ने व्यक्तिगत आर्थिक तनाव के बावजूद अपने बच्चे के भविष्य के अवसरों को प्राथमिकता दी है। यह मामला भारत में व्यापक सामाजिक-आर्थिक वास्तविकताओं को दर्शाता है जहां परिवार अपने बच्चों के लिए उच्च शिक्षा सक्षम करने के लिए पर्याप्त बलिदान करते हैं। यह कहानी माता-पिता की समर्पण और परिवारों द्वारा गुणवत्तापूर्ण चिकित्सा शिक्षा तक पहुंचने में सामना की जाने वाली आर्थिक चुनौतियों दोनों को रेखांकित करती है।",
+        "audio_hi": ""
       }
     ],
     "sports": [
@@ -188,7 +245,10 @@
         "source": "BBC Sport",
         "published_at": "Fri, 23 Oct 2026 05:56:04 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6ebf/live/e0714a50-cea6-11f1-bbfb-357cf921a5e9.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/0.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/0.mp3",
+        "title_hi": "क्या मैनचेस्टर यूनाइटेड एक अप्रबंधनीय क्लब बन गया है?",
+        "summary_hi": "मैनचेस्टर यूनाइटेड की प्रबंधकीय समस्याएं माइकल कैरिक के तहत जारी हैं, जो अब सर एलेक्स फर्ग्यूसन के प्रस्थान के बाद से हर प्रबंधक को प्रभावित करने वाले कठिनाइयों के समान चक्र का सामना कर रहे हैं। क्लब की अपने कोचों को निरंतर सफलता प्रदान करने में असमर्थता इस बात पर सवाल उठाती है कि क्या संस्थागत समस्याओं ने इस पद को आंतरिक रूप से चुनौतीपूर्ण बना दिया है। कैरिक को ओल्ड ट्रैफर्ड में दबाव और अपेक्षाओं को नेविगेट करना चाहिए जबकि टीम की किस्मत को उलटने और फर्ग्यूसन के बाद के युग को परिभाषित करने वाली प्रबंधकीय निराशा के पैटर्न को तोड़ने का प्रयास करना चाहिए।",
+        "audio_hi": ""
       },
       {
         "title": "Bournemouth's 3-0 win over AC Milan signals Premier League dominance",
@@ -197,7 +257,10 @@
         "source": "BBC Sport",
         "published_at": "Thu, 22 Oct 2026 21:30:31 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/45c2/live/fcc4e790-ce59-11f1-a166-e30097724580.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/1.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/1.mp3",
+        "title_hi": "बोर्नमाउथ की एसी मिलान पर 3-0 की जीत प्रीमियर लीग के वर्चस्व का संकेत देती है",
+        "summary_hi": "बोर्नमाउथ ने एसी मिलान को 3-0 से हराया, एक प्रभावशाली प्रदर्शन में जो यूरोपीय समकक्षों पर प्रीमियर लीग की बढ़ती श्रेष्ठता को और प्रदर्शित करता है। यह जोरदार जीत अंग्रेजी शीर्ष-स्तरीय क्लबों की प्रतिस्पर्धी शक्ति और महाद्वीपीय मंच पर गुणवत्ता को प्रदर्शित करती है। यह परिणाम इस सबूत में जोड़ता है कि प्रीमियर लीग की टीमें यूरोपीय फुटबॉल में अपने आप को दुर्जेय प्रतिद्वंद्वी के रूप में स्थापित कर चुकी हैं, जो परंपरागत रूप से मजबूत विरोधियों को सापेक्ष आसानी से नष्ट करने में सक्षम हैं। यह जीत इंग्लैंड के अभिजात विभाग में उपलब्ध रणनीतिक कौशल और प्रतिभा की गहराई को उजागर करती है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/sports/1.mp3"
       },
       {
         "title": "Katie Boulter reclaims British No. 1 ranking with Japan Open semi-final run",
@@ -206,7 +269,10 @@
         "source": "BBC Sport",
         "published_at": "Fri, 23 Oct 2026 10:22:32 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0430/live/34c414d0-cec9-11f1-bed9-e3a2c35dfdd6.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/2.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/2.mp3",
+        "title_hi": "केटी बोल्टर ने जापान ओपन सेमीफाइनल रन के साथ ब्रिटिश नंबर 1 रैंकिंग फिर से हासिल की",
+        "summary_hi": "केटी बोल्टर ने जापान ओपन के क्वार्टर-फाइनल में एंटोनिया रुजिक को तीन सेटों में हराने के बाद ब्रिटिश नंबर एक रैंकिंग फिर से हासिल की है। यह वापसी की जीत अंतर्राष्ट्रीय टेनिस सर्किट पर बोल्टर के लचीलेपन और प्रतिस्पर्धी गुणवत्ता को प्रदर्शित करती है। ब्रिटिश खिलाड़ियों के बीच शीर्ष रैंकिंग में उनकी वापसी उनके कैरियर के प्रक्षेपवक्र में एक महत्वपूर्ण उपलब्धि का प्रतिनिधित्व करती है। एक प्रतिष्ठित टूर्नामेंट में सेमीफाइनल की उपस्थिति ब्रिटेन की प्रमुख टेनिस प्रतिभाओं में से एक के रूप में उनकी स्थिति और महत्वपूर्ण मैचों में दबाव में प्रदर्शन करने की उनकी क्षमता को रेखांकित करती है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/sports/2.mp3"
       },
       {
         "title": "World Treadmill Championship launches with elite and amateur runners competing",
@@ -215,7 +281,10 @@
         "source": "BBC Sport",
         "published_at": "Fri, 23 Oct 2026 05:58:25 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f8f5/live/2a6805b0-ce28-11f1-9f18-490cec60aa0f.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/3.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/sports/3.mp3",
+        "title_hi": "विश्व ट्रेडमिल चैंपियनशिप अभिजात और शौकीन धावकों के साथ शुरू होती है",
+        "summary_hi": "उद्घाटन विश्व ट्रेडमिल चैंपियनशिप रोजमर्रा के धावकों को एक वैश्विक 5-किलोमीटर प्रतियोगिता में अभिजात एथलीटों के साथ प्रतिस्पर्धा करने का अभूतपूर्व अवसर प्रदान करती है। यह नवीन कार्यक्रम ट्रेडमिल पर पेशेवर धावकों को चुनौती देने के लिए शौकीन प्रतिभागियों को अनुमति देकर अभिजात-स्तरीय प्रतियोगिता को लोकतांत्रिक बनाता है। चैंपियनशिप में $100,000 का पुरस्कार पूल है और सभी प्रतिस्पर्धियों के लिए वाइल्डकार्ड रेस प्रविष्टियां प्रदान करता है, जिससे सभी प्रतिभागियों के लिए वास्तविक दांव बनते हैं। यह प्रारूप एथलेटिक्स प्रतियोगिता के लिए एक नोवल दृष्टिकोण का प्रतिनिधित्व करता है, पहुंच को प्रतिस्पर्धी उत्कृष्टता के साथ मिश्रित करता है और संभवतः दौड़ने वाली घटनाओं को विश्वव्यापी पेशेवर और मनोरंजक प्रतिभागियों के साथ कैसे जुड़ते हैं इसे पुनर्गठित करता है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/sports/3.mp3"
       },
       {
         "title": "England Women's Rugby League faces Australia with Las Vegas redemption in mind",
@@ -224,7 +293,10 @@
         "source": "BBC Sport",
         "published_at": "Fri, 23 Oct 2026 06:21:59 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d2d1/live/85de3010-cc5a-11f1-9b08-37acac6be953.jpg",
-        "audio": ""
+        "audio": "",
+        "title_hi": "इंग्लैंड महिला रग्बी लीग लास वेगास प्रतिशोध के साथ ऑस्ट्रेलिया का सामना करती है",
+        "summary_hi": "इंग्लैंड की महिला रग्बी लीग टीम शनिवार को महिला रग्बी लीग विश्व कप में ऑस्ट्रेलिया का सामना करती है, उन्नीस महीने पहले लास वेगास में अपनी पिछली मुलाकात के आघात को दूर करने के लिए दृढ़ संकल्प के साथ। आने वाला मैच महत्वपूर्ण भावनात्मक वजन रखता है क्योंकि इंग्लैंड प्रगति का प्रदर्शन करना चाहता है और उस निराशाजनक मुलाकात से आगे बढ़ना चाहता है। यह फिक्सचर एक पारंपरिक प्रतिद्वंद्वी के खिलाफ टीम के विकास और प्रतिस्पर्धी स्थिति को साबित करने का एक महत्वपूर्ण अवसर का प्रतिनिधित्व करता है। सफलता मनोवैज्ञानिक समापन प्रदान करेगी और इंग्लैंड की तैयारियों को मान्य करेगी, उनके विश्व कप अभियान के लिए गति स्थापित करेगी।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/sports/4.mp3"
       }
     ],
     "cricket": [
@@ -235,7 +307,10 @@
         "source": "Cricket news from Cricinfo.com",
         "published_at": "Fri, 23 Oct 2026 09:46:14 GMT",
         "image": "http://p.imgci.com/db/PICTURES/CMS/347000/347024.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/0.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/0.mp3",
+        "title_hi": "एस मेघना ने 30 साल की उम्र में सभी प्रारूपों से संन्यास लिया",
+        "summary_hi": "भारतीय महिला क्रिकेटर एस मेघना ने 30 साल की उम्र में क्रिकेट के सभी प्रारूपों से संन्यास की घोषणा की है। अपने संन्यास वक्तव्य में, मेघना ने व्यक्त किया कि क्रिकेट के साथ उनका रिश्ता कभी नहीं टूटेगा और महिला क्रिकेटरों की अगली पीढ़ी को प्रशिक्षण देने के लिए अपनी प्रतिबद्धता का संकेत दिया। यह उनके खेल के करियर का अंत है, हालांकि वह कोचिंग और विकास भूमिकाओं के माध्यम से खेल में शामिल रहने की योजना बना रही हैं। मेघना का संन्यास सक्रिय भागीदारी से महिला क्रिकेट में उभरती प्रतिभा के मार्गदर्शन और सलाह के माध्यम से योगदान देने का एक संक्रमण दर्शाता है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/cricket/0.mp3"
       },
       {
         "title": "South Africa level series with win over Australia in second Test",
@@ -244,7 +319,10 @@
         "source": "Reuters",
         "published_at": "2026-10-22T17:50:10+00:00",
         "image": "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA2fP5Wa.img?w=800&h=570&m=4&q=79",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/1.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/1.mp3",
+        "title_hi": "दक्षिण अफ्रीका ने दूसरे टेस्ट में ऑस्ट्रेलिया को हराकर सीरीज बराबर की",
+        "summary_hi": "दक्षिण अफ्रीका ने गकेबेरहा के सेंट जॉर्ज पार्क में दूसरे टेस्ट में ऑस्ट्रेलिया को एक पारी और 31 रनों से हराया, तीन मैचों की सीरीज को 1-1 से बराबर किया। ऑस्ट्रेलिया को मैच के अंतिम सत्र में 295 रनों पर आउट कर दिया गया। यह जीत पहला टेस्ट हारने के बाद दक्षिण अफ्रीका के लिए एक महत्वपूर्ण वापसी का प्रतिनिधित्व करती है, जो विश्व टेस्ट चैंपियनशिप के धारकों के रूप में उनकी प्रतिस्पर्धी शक्ति को प्रदर्शित करती है। यह परिणाम एक निर्णायक तीसरे टेस्ट के लिए मंच तैयार करता है जो सीरीज विजेता का निर्धारण करेगा, दोनों टीमें अब अंतिम मुकाबले में समान रूप से मजबूत हैं।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/cricket/1.mp3"
       },
       {
         "title": "Harry Brook Breaks Shubman Gill's Record for the Fastest Double Century in ODI Cricket",
@@ -253,7 +331,10 @@
         "source": "Jagran Josh",
         "published_at": "2026-10-22T13:11:00+00:00",
         "image": "",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/2.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/2.mp3",
+        "title_hi": "हैरी ब्रुक ने वनडे क्रिकेट में शुभमन गिल का सबसे तेज दोहरा शतक का रिकॉर्ड तोड़ा",
+        "summary_hi": "इंग्लैंड के कप्तान हैरी ब्रुक ने 22 अक्टूबर 2026 को वनडे क्रिकेट इतिहास में सबसे तेज दोहरा शतक बनाया, जिससे शुभमन गिल द्वारा रखा गया पिछला रिकॉर्ड टूट गया। ब्रुक के असाधारण बल्लेबाजी प्रदर्शन ने क्रिकेट के सभी प्रारूपों में उनके निरंतर प्रभुत्व को प्रदर्शित किया। इंग्लैंड के कप्तान हाल ही में शानदार फॉर्म में हैं और धीमा होने के कोई संकेत नहीं दिखा रहे हैं। यह रिकॉर्ड-तोड़ने वाली उपलब्धि अंतर्राष्ट्रीय क्रिकेट में ब्रुक की स्थिति को प्रमुख बल्लेबाजों में से एक के रूप में उजागर करती है और उनके प्रभावशाली करियर के रिज्यूमे में एक और मील का पत्थर जोड़ती है।",
+        "audio_hi": ""
       },
       {
         "title": "Injured Ishan Kishan ruled out of second T20I against New Zealand",
@@ -262,7 +343,10 @@
         "source": "Reuters",
         "published_at": "2026-10-23T05:40:29+00:00",
         "image": "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA2fTJRF.img?w=800&h=530&m=4&q=79",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/3.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/3.mp3",
+        "title_hi": "घायल ईशान किशन को न्यूजीलैंड के खिलाफ दूसरे टी20आई से बाहर किया गया",
+        "summary_hi": "भारतीय बल्लेबाज ईशान किशन को न्यूजीलैंड के खिलाफ दूसरे ट्वेंटी20 अंतर्राष्ट्रीय से पांच मैचों की सीरीज के पहले मैच में भारत की चार विकेट की जीत के दौरान सही जांघ के निचले ग्रेड के खिंचाव के कारण बाहर कर दिया गया है। 28 वर्षीय खिलाड़ी की चोट ने भारतीय क्रिकेट बोर्ड को अपने दल में बदलाव करने के लिए मजबूर किया। भारत के बल्लेबाजी कोच सितांशु कोटक ने संकेत दिया कि वैभव सूर्यवंशी को आने वाले मैच के लिए किशन के प्रतिस्थापन के रूप में माना जाएगा, जिससे युवा खिलाड़ी को सीरीज में अंतर्राष्ट्रीय अनुभव प्राप्त करने का अवसर मिलेगा।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/cricket/3.mp3"
       },
       {
         "title": "LA Olympics qualifiers to take place in January-February 2028",
@@ -271,7 +355,10 @@
         "source": "Cricket news from Cricinfo.com",
         "published_at": "Fri, 23 Oct 2026 07:54:40 GMT",
         "image": "http://p.imgci.com/db/PICTURES/CMS/368600/368636.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/4.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/cricket/4.mp3",
+        "title_hi": "एलए ओलंपिक क्वालीफायर जनवरी-फरवरी 2028 में होंगे",
+        "summary_hi": "2028 लॉस एंजिल्स ओलंपिक के लिए क्रिकेट की क्वालीफाइंग टूर्नामेंट जनवरी-फरवरी 2028 में आयोजित की जाएगी, जो क्रिकेट के ओलंपिक डेब्यू की तैयारी में एक महत्वपूर्ण मील का पत्थर है। घोषणा ने यह भी पुष्टि की कि 2029 विश्व टेस्ट चैंपियनशिप फाइनल 8 से 12 जून तक इंग्लैंड में आयोजित होगा। ये शेड्यूलिंग निर्णय अंतर्राष्ट्रीय क्रिकेट के कैलेंडर में महत्वपूर्ण विकास का प्रतिनिधित्व करते हैं, ओलंपिक क्वालीफायर टीमों को खेलों में क्रिकेट के समावेश के लिए स्थान सुरक्षित करने का अवसर प्रदान करते हैं, जबकि डब्ल्यूटीसी फाइनल पारंपरिक टेस्ट क्रिकेट के मजबूत क्षेत्र में चैंपियनशिप के स्थापित प्रारूप को जारी रखता है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/cricket/4.mp3"
       }
     ],
     "usa_stock": [
@@ -282,7 +369,10 @@
         "source": "MarketWatch.com",
         "published_at": "Fri, 23 Oct 2026 10:29:00 GMT",
         "image": "https://images.mktw.net/im-91980124",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/0.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/0.mp3",
+        "title_hi": "अमेरिकी स्टॉक मार्केट दो शिविरों में विभाजित हो रहा है, और यह निवेशकों को भयंकर झटके दे रहा है",
+        "summary_hi": "अमेरिकी स्टॉक मार्केट में कृत्रिम बुद्धिमत्ता व्यापार को बाधाओं का सामना करते हुए महत्वपूर्ण अस्थिरता का अनुभव हो रहा है। CNN फियर एंड ग्रीड इंडेक्स निवेशकों के बीच भय का संकेत दे रहा है, जबकि 10-वर्षीय ट्रेजरी यील्ड ने सिलिकॉन वैली बैंक के पतन के बाद से सबसे बड़ी एकल-दिवसीय गिरावट दर्ज की है। यह बाजार विभाजन विभिन्न निवेशक भावनाओं को दर्शाता है, कुछ क्षेत्र संघर्ष कर रहे हैं जबकि अन्य लचीले बने हुए हैं। ट्रेजरी यील्ड में तीव्र गतिविधियां और एआई क्षेत्र की कमजोरी बाजार के मूलभूत सिद्धांतों और एआई उत्साह द्वारा संचालित हाल के लाभों की स्थिरता के बारे में व्यापक चिंताओं का संकेत देती है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/usa_stock/0.mp3"
       },
       {
         "title": "This market signal just occurred for only the second time since 1999. Here's what happened and what it means.",
@@ -291,7 +381,10 @@
         "source": "MarketWatch.com",
         "published_at": "Fri, 23 Oct 2026 09:35:00 GMT",
         "image": "https://images.mktw.net/im-85389401",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/1.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/1.mp3",
+        "title_hi": "यह बाजार संकेत 1999 के बाद से केवल दूसरी बार हुआ है। यहाँ देखें कि क्या हुआ और इसका क्या मतलब है।",
+        "summary_hi": "व्यापकता संकेतकों से जुड़ा एक असामान्य बाजार संकेत 1999 के बाद से केवल दूसरी बार हुआ है, जो बाजार गतिविधियों में संभावित महत्वपूर्ण बदलाव का संकेत दे रहा है। बाजार व्यापकता, जो बढ़ते बनाम गिरते स्टॉक की संख्या को मापती है, बाजार स्वास्थ्य और निवेशक भागीदारी का एक महत्वपूर्ण संकेतक है। यह दुर्लभ घटना असामान्य बाजार स्थितियों का सुझाव देती है जो निवेशक ध्यान की मांग करती है। इस संकेत की दुर्लभता—दो दशकों से अधिक में केवल दो बार दिखाई देना—यह संकेत देता है कि इसके आगे बाजार की दिशा और निवेशक स्थिति के लिए महत्वपूर्ण निहितार्थ हो सकते हैं।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/usa_stock/1.mp3"
       },
       {
         "title": "The mobile ambitions of SpaceX see telecom stocks get hit again. What the latest developments mean.",
@@ -300,7 +393,10 @@
         "source": "MarketWatch.com",
         "published_at": "Fri, 23 Oct 2026 09:01:00 GMT",
         "image": "https://images.mktw.net/im-85027218",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/2.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/2.mp3",
+        "title_hi": "SpaceX की मोबाइल महत्वाकांक्षाएं दूरसंचार स्टॉक को फिर से प्रभावित करती हैं। नवीनतम विकास का क्या मतलब है।",
+        "summary_hi": "SpaceX का स्टारलिंक मोबाइल दूरसंचार महत्वाकांक्षाओं का पीछा कर रहा है, कथित तौर पर सेल-टावर मालिकों के साथ साझेदारी पर चर्चा कर रहा है। इस विकास ने वेरिजॉन, एटी एंड टी और टी-मोबाइल सहित प्रमुख दूरसंचार स्टॉक को नकारात्मक रूप से प्रभावित किया है, क्योंकि शेयरधारक संभावित प्रतिस्पर्धी खतरों पर प्रतिक्रिया दे रहे हैं। स्टारलिंक का मोबाइल सेवाओं में प्रवेश अपने उपग्रह बुनियादी ढांचे का लाभ उठाकर वैकल्पिक कनेक्टिविटी समाधान प्रदान करके पारंपरिक दूरसंचार उद्योग को बाधित कर सकता है। बाजार की नकारात्मक प्रतिक्रिया इस उभरते प्रतिद्वंद्वी से स्थापित दूरसंचार प्रदाताओं का सामना करने वाले मार्जिन संपीड़न और प्रतिस्पर्धी दबावों के बारे में निवेशक चिंताओं को दर्शाती है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/usa_stock/2.mp3"
       },
       {
         "title": "This hot AI-fueled stock has been in a rut. It just beat earnings expectations by 36%.",
@@ -309,7 +405,10 @@
         "source": "MarketWatch.com",
         "published_at": "Fri, 23 Oct 2026 09:19:00 GMT",
         "image": "https://images.mktw.net/im-50517059",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/3.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/3.mp3",
+        "title_hi": "यह गर्म एआई-संचालित स्टॉक एक मंदी में रहा है। इसने कमाई की अपेक्षाओं को 36% से अधिक किया।",
+        "summary_hi": "ब्लूम एनर्जी, एक ईंधन-सेल निर्माता जो एआई बुनियादी ढांचे निर्माण द्वारा संचालित डेटा-सेंटर मांग से लाभान्वित हुआ है, ने कमाई की अपेक्षाओं को 36% से और राजस्व की अपेक्षाओं को 15% से महत्वपूर्ण रूप से अधिक किया है। इस पर्याप्त बेहतर प्रदर्शन के बावजूद, स्टॉक ने विशिष्ट कमाई-बाद की रैली का अनुभव नहीं किया है, जो एआई-संबंधित स्टॉक में व्यापक कमजोरी को दर्शाता है। मजबूत वित्तीय परिणामों और स्टॉक प्रदर्शन के बीच यह विच्छेद एआई खर्च की स्थिरता और क्षेत्र को प्रभावित करने वाले मूल्यांकन दबावों के बारे में निवेशक चिंताओं को उजागर करता है। म्यूट बाजार प्रतिक्रिया सुझाती है कि निवेशक एआई-निर्भर कंपनियों के लिए विकास अपेक्षाओं का पुनर्मूल्यांकन कर रहे हैं।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/usa_stock/3.mp3"
       },
       {
         "title": "Earnings flood, Fed meeting pose pivotal tests for rickety AI market rally",
@@ -318,7 +417,10 @@
         "source": "Reuters",
         "published_at": "2026-10-23T10:05:00+00:00",
         "image": "https://www.reuters.com/resizer/v2/EEUVWEGMGVOHVBL3NMXMVXYQSI.jpg?auth=e8d63dc1b3b36657972da306d4b2e25572fcace055983117817d97c174f2b4ea&height=1005&width=1920&quality=80&smart=true",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/4.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/4.mp3",
+        "title_hi": "कमाई की बाढ़, फेड मीटिंग कमजोर एआई बाजार रैली के लिए महत्वपूर्ण परीक्षाएं प्रस्तुत करती है",
+        "summary_hi": "अमेरिकी स्टॉक निवेशकों को एक महत्वपूर्ण सप्ताह का सामना करना पड़ रहा है जिसमें एआई-केंद्रित कंपनियों से प्रमुख कॉर्पोरेट कमाई रिपोर्ट और एक फेडरल रिजर्व मीटिंग दोनों अचानक नाजुक बाजार रैली के लिए महत्वपूर्ण परीक्षाएं हैं। कमाई सीजन और मौद्रिक नीति निर्णयों का संयोजन निवेशकों के लिए महत्वपूर्ण अनिश्चितता पैदा करता है। प्रमुख एआई खिलाड़ियों के कमाई परिणाम खर्च प्रवृत्तियों और लाभप्रदता में महत्वपूर्ण अंतर्दृष्टि प्रदान करेंगे, जबकि फेड की नीति स्थिति बाजार मूल्यांकन और निवेशक जोखिम भूख को प्रभावित करेगी। ये समवर्ती घटनाएं महत्वपूर्ण मोड़ के बिंदु का प्रतिनिधित्व करती हैं जो बाजार की दिशा और हाल के लाभों की स्थिरता को निर्धारित कर सकती हैं।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/usa_stock/4.mp3"
       }
     ],
     "ai": [
@@ -329,7 +431,10 @@
         "source": "MIT Technology Review",
         "published_at": "Thu, 22 Oct 2026 21:17:29 +0000",
         "image": "https://wp.technologyreview.com/wp-content/uploads/2026/10/GettyImages-2188328005_9f1d59-e1791493652782.jpg?resize=1200,600",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/0.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/0.mp3",
+        "title_hi": "एक AI सर्विंग हार्नेस डिजाइन करना जो लंबे समय तक चले",
+        "summary_hi": "एंटरप्राइज AI की प्रतिस्पर्धात्मक बढ़त तेजी से मॉडल क्षमता अकेले के बजाय मॉडल के चारों ओर बनाए गए बुनियादी ढांचे और प्रणालियों पर निर्भर करती है। यह लेख AI रणनीति में एक महत्वपूर्ण बदलाव पर चर्चा करता है, जो बड़े मॉडल, बेहतर तर्क और उच्च बेंचमार्क स्कोर पर ध्यान केंद्रित करने से हटकर मजबूत सर्विंग बुनियादी ढांचे के निर्माण की ओर जाता है। यह AI उद्योग की परिपक्वता का प्रतिनिधित्व करता है, जो सोच-समझकर इंजीनियरिंग, प्लेटफॉर्म डिजाइन और परिचालन ढांचे पर जोर देता है जो व्यावसायिक वातावरण में विश्वसनीय, स्केलेबल AI तैनाती को सक्षम बनाते हैं।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/ai/0.mp3"
       },
       {
         "title": "AI's hidden storage bill: What inference leaves behind",
@@ -338,7 +443,10 @@
         "source": "MIT Technology Review",
         "published_at": "Thu, 22 Oct 2026 08:41:18 +0000",
         "image": "https://wp.technologyreview.com/wp-content/uploads/2026/10/WD-MITTR-Infographic-Final@2x.png?resize=1200,600",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/1.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/1.mp3",
+        "title_hi": "AI का छिपा हुआ स्टोरेज बिल: अनुमान क्या पीछे छोड़ता है",
+        "summary_hi": "जबकि कार्यकारी आमतौर पर AI खर्चों की गणना करते समय GPU लागत और सिलिकॉन उपलब्धता पर ध्यान केंद्रित करते हैं, डेटा स्टोरेज में एक महत्वपूर्ण छिपी हुई लागत मौजूद है। यह लेख अरबों दैनिक AI प्रॉम्प्ट, छवियों और वीडियो से उत्पन्न डेटा को प्रबंधित करने के लिए आवश्यक बैकएंड बुनियादी ढांचे की जांच करता है। यह स्टोरेज बुनियादी ढांचा एक महत्वपूर्ण लेकिन अक्सर अनदेखी परिचालन व्यय का प्रतिनिधित्व करता है जिसे कंपनियों को बड़े पैमाने पर AI सिस्टम तैनात करते समय ध्यान में रखना चाहिए। इन छिपी हुई लागतों को समझना सटीक AI निवेश योजना और कुल स्वामित्व लागत गणना के लिए महत्वपूर्ण है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/ai/1.mp3"
       },
       {
         "title": "Making the case for context-aware AI",
@@ -347,7 +455,10 @@
         "source": "MIT Technology Review",
         "published_at": "Thu, 22 Oct 2026 10:00:00 +0000",
         "image": "https://wp.technologyreview.com/wp-content/uploads/2026/10/MITTR-Celonis-social-card.png?resize=1200,600",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/2.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/2.mp3",
+        "title_hi": "संदर्भ-जागरूक AI के लिए मामला बनाना",
+        "summary_hi": "एंटरप्राइज AI सिस्टम सिफारिशें उत्पन्न कर सकते हैं और कार्यों को स्वचालित कर सकते हैं, लेकिन वास्तविक व्यावसायिक संचालन को समझे बिना, वे निर्णय गुणवत्ता को प्रभावित करने वाली महत्वपूर्ण बाधाओं और संबंधों को याद कर सकते हैं। जैसे-जैसे संगठन AI को प्रयोग से रोजमर्रा के संचालन में स्थानांतरित करते हैं, संदर्भ-जागरूकता आवश्यक हो जाती है। यह लेख इस बात पर जोर देता है कि शक्तिशाली मॉडल अकेले अपर्याप्त हैं; AI सिस्टम को यह समझना चाहिए कि व्यवसाय वास्तव में कैसे काम करते हैं ताकि उपयुक्त निर्णय लिए जा सकें। यह संदर्भगत समझ AI को पायलट प्रोजेक्ट से विश्वसनीय, उत्पादन-ग्रेड व्यावसायिक अनुप्रयोगों में स्थानांतरित करने के लिए महत्वपूर्ण है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/ai/2.mp3"
       },
       {
         "title": "OpenAI's latest AI models are coming to Google Cloud and Antigravity",
@@ -356,7 +467,10 @@
         "source": "Ars Technica",
         "published_at": "Wed, 21 Oct 2026 18:51:42 +0000",
         "image": "https://cdn.arstechnica.net/wp-content/uploads/2025/06/Google-cloud-IO-1152x648.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/3.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/3.mp3",
+        "title_hi": "OpenAI के नवीनतम AI मॉडल Google Cloud और Antigravity में आ रहे हैं",
+        "summary_hi": "OpenAI प्रमुख क्लाउड प्लेटफॉर्म के माध्यम से अपने नवीनतम AI मॉडल का वितरण बढ़ा रहा है। Google Cloud को आने वाले हफ्तों में GPT 6.1 Astra, Sol और Luna मॉडल तक पहुंच प्राप्त होगी। यह साझेदारी महत्वपूर्ण उद्योग समेकन का प्रतिनिधित्व करती है और OpenAI की रणनीति को प्रदर्शित करती है कि उन्नत AI क्षमताओं को स्थापित क्लाउड बुनियादी ढांचे प्रदाताओं के माध्यम से व्यापक रूप से सुलभ बनाया जाए। यह कदम Google Cloud का उपयोग करने वाले एंटरप्राइज को अपने अनुप्रयोगों और वर्कफ़्लो में अत्याधुनिक OpenAI मॉडल को एकीकृत करने में सक्षम बनाता है।",
+        "audio_hi": ""
       },
       {
         "title": "Anthropic gives outside AI watchdog \"employee-like\" access",
@@ -365,7 +479,10 @@
         "source": "Ars Technica",
         "published_at": "Sun, 18 Oct 2026 16:25:19 +0000",
         "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/09/claudebyanthropic-1024x648.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/4.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/4.mp3",
+        "title_hi": "Anthropic ने बाहरी AI पर्यवेक्षक को \"कर्मचारी जैसी\" पहुंच दी",
+        "summary_hi": "Anthropic ने एक बाहरी AI पर्यवेक्षक संगठन को अपने सिस्टम और संचालन तक कर्मचारी-स्तर की पहुंच प्रदान की है, जो कंपनी की AI विकास प्रथाओं की स्वतंत्र निरीक्षा की अनुमति देता है। उल्लेखनीय रूप से, पर्यवेक्षक Anthropic की अनुमति की आवश्यकता के बिना अपने निष्कर्ष प्रकाशित कर सकता है, जो निगरानी प्रक्रिया में वास्तविक स्वतंत्रता स्थापित करता है। यह व्यवस्था AI विकास में तीसरे पक्ष की जवाबदेही की ओर एक महत्वपूर्ण कदम का प्रतिनिधित्व करती है, जो बाहरी विशेषज्ञों को Anthropic की सुरक्षा प्रथाओं और AI सिस्टम के अर्थपूर्ण ऑडिट और मूल्यांकन संचालित करने की अनुमति देता है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/ai/4.mp3"
       }
     ],
     "quantum": [
@@ -376,7 +493,10 @@
         "source": "Ars Technica",
         "published_at": "Tue, 20 Oct 2026 18:08:57 +0000",
         "image": "https://cdn.arstechnica.net/wp-content/uploads/2025/11/helios-chip_top-1152x648.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/0.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/0.mp3",
+        "title_hi": "क्वांटम त्रुटि सुधार ब्रेकइवन से कहीं आगे जाता है",
+        "summary_hi": "त्रुटि-सुधारित क्यूबिट्स का एक महत्वपूर्ण प्रदर्शन क्यूबिट संख्या बढ़ने के साथ त्रुटियों में पर्याप्त कमी दिखाया है, जो ब्रेकइवन बिंदु से परे एक प्रमुख मील का पत्थर चिह्नित करता है। यह प्रगति क्वांटम कंप्यूटिंग की एक मौलिक चुनौती को संबोधित करती है—त्रुटि दरें जिन्होंने ऐतिहासिक रूप से व्यावहारिक अनुप्रयोगों को सीमित किया है। यह सफलता सुझाती है कि क्वांटम कंप्यूटरों को व्यावहारिक उपयोगिता की ओर स्केल करना पहले की तुलना में अधिक संभव हो सकता है, संभवतः क्वांटम सिस्टम को दवा विकास, सामग्री विज्ञान और अनुकूलन कार्यों में वास्तविक समस्याओं को हल करने के लिए समयरेखा को तेज करता है जहां शास्त्रीय कंप्यूटर वर्तमान में अपर्याप्त हैं।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/quantum/0.mp3"
       },
       {
         "title": "AI Proved the Quasi-Riemann Hypothesis. What Happens Now?",
@@ -385,7 +505,10 @@
         "source": "Quanta Magazine",
         "published_at": "Mon, 19 Oct 2026 15:40:26 +0000",
         "image": "https://www.quantamagazine.org/wp-content/uploads/2026/10/ReimannAI-crEmilyBuder_GuanHueiWu-Default.webp",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/1.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/1.mp3",
+        "title_hi": "एआई ने अर्ध-रीमैन परिकल्पना को सिद्ध किया। अब क्या होता है?",
+        "summary_hi": "कृत्रिम बुद्धिमत्ता ने अर्ध-रीमैन परिकल्पना को सफलतापूर्वक सिद्ध किया है, जिसके बाद मानव गणितज्ञों द्वारा प्रमाण को सत्यापित और विश्लेषण किया गया है। पिछले एआई गणितीय प्रमाणों के विपरीत जो अपारदर्शी रहे, इस उपलब्धि की विशेषज्ञों द्वारा गहन जांच की गई है जो निहितार्थों को \"विस्मयकारी\" बताते हैं। यह विकास गणितीय समस्याओं से निपटने की एआई की क्षमता में एक महत्वपूर्ण मील का पत्थर है और गणितीय अनुसंधान, प्रमाण सत्यापन और मशीन-सहायता प्राप्त खोज के युग में गणितीय समझ की भविष्य की भूमिका के बारे में महत्वपूर्ण प्रश्न उठाता है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/quantum/1.mp3"
       },
       {
         "title": "A blueprint for future quantum computer software",
@@ -394,7 +517,10 @@
         "source": "Tech Xplore",
         "published_at": "2026-10-22T16:20:00+00:00",
         "image": "https://scx2.b-cdn.net/gfx/news/hires/2025/quantum-computer-2.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/2.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/2.mp3",
+        "title_hi": "भविष्य के क्वांटम कंप्यूटर सॉफ्टवेयर के लिए एक खाका",
+        "summary_hi": "शोधकर्ताओं ने क्वांटम कंप्यूटर सॉफ्टवेयर आर्किटेक्चर के लिए एक खाका विकसित किया है जो क्वांटम सिस्टम में वर्तमान सीमाओं को संबोधित करने के लिए डिज़ाइन किया गया है। जबकि क्वांटम कंप्यूटर सामग्री विकास और आपूर्ति-श्रृंखला अनुकूलन में जटिल समस्याओं को हल करने का वादा करते हैं, मौजूदा सिस्टम त्रुटि-प्रवण हैं और बड़े पैमाने पर अनुसंधान प्रयोगशालाओं तक सीमित हैं। यह खाका ऐसी नींव सॉफ्टवेयर रूपरेखा स्थापित करने का लक्ष्य रखता है जो व्यावहारिक क्वांटम कंप्यूटिंग अनुप्रयोगों को सक्षम कर सके। यह कार्य सैद्धांतिक क्वांटम कंप्यूटिंग क्षमता और वास्तविक-विश्व तैनाती के बीच अंतर को पाटने की दिशा में एक महत्वपूर्ण कदम है, जो तकनीकी और आर्किटेक्चरल दोनों चुनौतियों को संबोधित करता है जो वर्तमान में क्वांटम सिस्टम उपयोगिता को सीमित करती हैं।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/quantum/2.mp3"
       },
       {
         "title": "Triplet of 'Ghostly' Galaxies Hints at What Dark Matter Is — and Isn't",
@@ -403,7 +529,10 @@
         "source": "Quanta Magazine",
         "published_at": "Wed, 14 Oct 2026 14:04:05 +0000",
         "image": "https://www.quantamagazine.org/wp-content/uploads/2026/10/Dark-Matter-Galaxies-cr.several-Default.webp",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/3.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/3.mp3",
+        "title_hi": "'भूतिया' आकाशगंगाओं का त्रिक संकेत देता है कि डार्क मैटर क्या है—और क्या नहीं",
+        "summary_hi": "खगोलविदों ने आकाशगंगाओं का एक त्रिक खोजा है जो स्पष्ट रूप से डार्क मैटर से वंचित है, संभवतः एक टकराव घटना के कारण। यह असामान्य खोज डार्क मैटर की प्रकृति पर महत्वपूर्ण बाधाएं प्रदान करती है और वैकल्पिक गुरुत्वाकर्षण सिद्धांतों को महत्वपूर्ण चुनौतियां प्रस्तुत करती है जो डार्क मैटर का आह्वान किए बिना आकाशगंगा की गतिशीलता को समझाने का प्रयास करते हैं। अवलोकन सुझाता है कि डार्क मैटर एक अलग भौतिक इकाई है न कि केवल गुरुत्वाकर्षण कानूनों का संशोधन, जैसा कि वैकल्पिक सिद्धांत प्रस्तावित करते हैं। यह खोज आकाशगंगा निर्माण और विकास में डार्क मैटर की भूमिका की हमारी समझ को आगे बढ़ाती है जबकि साथ ही ब्रह्मांड विज्ञान में प्रतिस्पर्धी सैद्धांतिक ढांचे का परीक्षण करती है।",
+        "audio_hi": ""
       },
       {
         "title": "Researchers use AI to design proteins that cut up other proteins",
@@ -412,7 +541,10 @@
         "source": "Ars Technica",
         "published_at": "Wed, 14 Oct 2026 17:10:15 +0000",
         "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/10/GettyImages-2298087641-1152x648.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/4.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/4.mp3",
+        "title_hi": "शोधकर्ताओं ने अन्य प्रोटीन को काटने वाले प्रोटीन डिजाइन करने के लिए एआई का उपयोग किया",
+        "summary_hi": "वैज्ञानिकों ने कृत्रिम बुद्धिमत्ता डिजाइन उपकरणों का लाभ उठाकर उपन्यास प्रोटीन बनाए हैं जो रासायनिक बंधों को तोड़ने में सक्षम हैं जो सामान्य परिस्थितियों में सदियों तक स्थिर रहते हैं। यह सफलता प्रोटीन इंजीनियरिंग और सिंथेटिक जीव विज्ञान में एआई की विस्तारित भूमिका को प्रदर्शित करती है, अभूतपूर्व उत्प्रेरक क्षमताओं वाले प्रोटीन के डिजाइन को सक्षम करती है। अत्यंत स्थिर आणविक बंधों को नष्ट करने वाले प्रोटीन को इंजीनियर करने की क्षमता का जैव प्रौद्योगिकी के लिए महत्वपूर्ण निहितार्थ है, जिसमें अपशिष्ट क्षरण, औद्योगिक प्रक्रियाओं और चिकित्सीय हस्तक्षेपों में संभावित अनुप्रयोग शामिल हैं। यह उपलब्धि दर्शाती है कि कैसे एआई-सहायता प्राप्त आणविक डिजाइन प्राकृतिक प्रोटीन विकास की सीमाओं को कैसे दूर कर सकता है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/quantum/4.mp3"
       }
     ],
     "trump": [
@@ -423,7 +555,10 @@
         "source": "BBC News",
         "published_at": "Fri, 23 Oct 2026 09:23:53 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d2f6/live/7d318ca0-cd90-11f1-b1e7-39558e114359.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/0.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/0.mp3",
+        "title_hi": "हिस्पैनिक मतदाताओं ने ट्रम्प को सत्ता में लाने में मदद की - टेक्सास में ज्वार बदल सकता है",
+        "summary_hi": "हाल के मतदान डेटा से संकेत मिलता है कि राष्ट्रपति ट्रम्प को मध्यावधि चुनावों से पहले टेक्सास में महत्वपूर्ण चुनावी चुनौतियों का सामना करना पड़ सकता है। हिस्पैनिक मतदाता, जिन्होंने पिछले चुनावों में राज्य को ट्रम्प के पास पहुंचाने में महत्वपूर्ण भूमिका निभाई थी, राजनीतिक समर्थन में बदलाव के संकेत दे रहे हैं। राज्य की बदलती जनसांख्यिकी और मतदाता भावना मध्यावधि चुनावों में रिपब्लिकन उम्मीदवारों के लिए संभावित चुनौतियों का सुझाव देती है। टेक्सास, जो परंपरागत रूप से रिपब्लिकन का गढ़ रहा है, एक महत्वपूर्ण युद्धक्षेत्र का प्रतिनिधित्व करता है क्योंकि पार्टी विकसित होती मतदाता प्राथमिकताओं और जनसांख्यिकीय प्रवृत्तियों को नेविगेट करती है जो अमेरिका के सबसे अधिक आबादी वाले राज्यों में से एक में राजनीतिक परिदृश्य को फिर से आकार दे सकती है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/trump/0.mp3"
       },
       {
         "title": "Trump ordered to answer questions under oath in BBC lawsuit",
@@ -432,7 +567,10 @@
         "source": "BBC News",
         "published_at": "Fri, 23 Oct 2026 01:38:44 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6bf5/live/f171dec0-ce3b-11f1-a86f-f78305ec9987.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/1.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/1.mp3",
+        "title_hi": "ट्रम्प को बीबीसी मुकदमे में शपथ के तहत सवालों का जवाब देने का आदेश दिया गया",
+        "summary_hi": "राष्ट्रपति ट्रम्प को 2021 के पैनोरामा एपिसोड के संबंध में बीबीसी के खिलाफ दायर किए गए मुकदमे में शपथबद्ध गवाही प्रदान करने का आदेश दिया गया है। विवाद इस आरोप के इर्द-गिर्द केंद्रित है कि बीबीसी ने ट्रम्प द्वारा दिए गए भाषण के दो अलग-अलग हिस्सों को अनुचित तरीके से संपादित किया, संभवतः उनके बयानों को गलत तरीके से प्रस्तुत किया। कानूनी कार्यवाही के लिए ट्रम्प को मुकदमे की प्रक्रिया के हिस्से के रूप में शपथ के तहत सवालों का जवाब देना आवश्यक है। यह मामला पत्रकारीय संपादन प्रथाओं और मीडिया द्वारा ट्रम्प के सार्वजनिक बयानों के गलत प्रतिनिधित्व के बारे में ट्रम्प के दावों से संबंधित एक चल रही कानूनी चुनौती का प्रतिनिधित्व करता है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/trump/1.mp3"
       },
       {
         "title": "Trump backs Ramaswamy on ad featuring Amy Acton's estranged mother",
@@ -441,7 +579,10 @@
         "source": "Associated Press",
         "published_at": "2026-10-23T08:35:40+00:00",
         "image": "https://s.yimg.com/bo/d56db8bf-ac96-5a6f-85fe-fd858aea5a28_1792703911368.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/2.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/2.mp3",
+        "title_hi": "ट्रम्प ने एमी एक्टन की अलग रहने वाली माता को दिखाने वाले विज्ञापन पर रामास्वामी का समर्थन किया",
+        "summary_hi": "राष्ट्रपति ट्रम्प ने रिपब्लिकन ओहियो गवर्नरशिप उम्मीदवार विवेक रामास्वामी के विवादास्पद चुनाव प्रचार विज्ञापन का समर्थन किया है जिसमें डेमोक्रेटिक प्रतिद्वंद्वी एमी एक्टन की अलग रहने वाली माता को दिखाया गया है। विज्ञापन एक्टन के आघातपूर्ण बचपन का संदर्भ देता है, विशेष रूप से उसके सौतेले पिता पर यौन दुर्व्यवहार से संबंधित आरोप। ट्रम्प के विज्ञापन के समर्थन की आलोचना उन लोगों द्वारा की गई है जो इसे राजनीतिक लाभ के लिए व्यक्तिगत पारिवारिक आघात का दोहन मानते हैं। उपराष्ट्रपति वांस ने भी विज्ञापन का बचाव किया, रिपब्लिकन को \"शिकायत करना बंद करने\" के लिए कहा। समर्थन मध्यावधि चुनाव चक्र के दौरान चुनाव नैतिकता और स्वीकार्य राजनीतिक संदेश मानकों के बारे में चल रही बहस को उजागर करता है।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/trump/2.mp3"
       },
       {
         "title": "Trump's Approval Rating On The Economy Reaches An All-Time Low",
@@ -450,7 +591,10 @@
         "source": "Forbes",
         "published_at": "2026-10-22T20:35:40+00:00",
         "image": "https://s.yimg.com/bo/36f822ea-af9a-56a6-91b4-33fc3323f792_1792535122197.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/3.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/3.mp3",
+        "title_hi": "ट्रम्प की अर्थव्यवस्था पर अनुमोदन रेटिंग सर्वकालिक निम्न स्तर पर पहुंची",
+        "summary_hi": "राष्ट्रपति ट्रम्प की आर्थिक मुद्दों पर अनुमोदन रेटिंग सीएनबीसी के हाल के मतदान डेटा के अनुसार ऐतिहासिक निम्न स्तर तक गिर गई है, जो 40% अनुमोदन रेटिंग दिखाता है। आर्थिक अनुमोदन मीट्रिक राजकोषीय नीति और आर्थिक प्रबंधन के ट्रम्प की संभालने के संबंध में जनता के विश्वास में एक महत्वपूर्ण गिरावट का प्रतिनिधित्व करता है। इस गिरावट के साथ, आर्थिक स्थितियों के बारे में रिपब्लिकन निराशावाद भी सर्वकालिक उच्च स्तर पर पहुंच गई है, जो राष्ट्रपति की अपनी पार्टी के सदस्यों के बीच आर्थिक प्रक्षेपवक्र के बारे में बढ़ती चिंता का सुझाव देता है। अर्थव्यवस्था पर ये गिरती अनुमोदन संख्याएं मध्यावधि चुनावों के करीब आती हैं, संभवतः मतदाता भावना और पूरे देश में कई दौड़ों में चुनावी परिणामों को प्रभावित करती हैं।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/trump/3.mp3"
       },
       {
         "title": "Trump says NBA star LeBron James 'disrespected' US anthem",
@@ -459,7 +603,10 @@
         "source": "BBC News",
         "published_at": "Thu, 22 Oct 2026 20:04:27 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/fadf/live/e1bf1060-ce40-11f1-a86f-f78305ec9987.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/4.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/4.mp3",
+        "title_hi": "ट्रम्प का कहना है कि एनबीए स्टार लेब्रॉन जेम्स ने अमेरिकी राष्ट्रगान का 'अनादर' किया",
+        "summary_hi": "राष्ट्रपति ट्रम्प ने एनबीए स्टार लेब्रॉन जेम्स की आलोचना की है कि उन्होंने हाल के एक सार्वजनिक प्रदर्शन के दौरान संयुक्त राज्य के राष्ट्रगान का कथित रूप से अनादर किया। ट्रम्प की टिप्पणियों में जेम्स के राष्ट्रगान के प्रदर्शन के दौरान गोल्फ स्विंग और बास्केटबॉल शॉट का अभ्यास करते हुए दिखाई देने का संदर्भ दिया गया। यह घटना ट्रम्प और प्रमुख एथलीटों के बीच देशभक्ति प्रदर्शन और राष्ट्रगान प्रोटोकॉल के संबंध में चल रहे तनाव को दर्शाती है। जेम्स ने बाद में ट्रम्प की आलोचना के लिए एक खारिज करने वाली प्रतिक्रिया दी। यह आदान-प्रदान राष्ट्रगान प्रदर्शन के दौरान उचित आचरण और समकालीन अमेरिकी प्रवचन में खेल, राजनीति और देशभक्ति के प्रतिच्छेदन के बारे में व्यापक सांस्कृतिक और राजनीतिक बहसों का उदाहरण है।",
+        "audio_hi": ""
       }
     ],
     "local": [
@@ -470,7 +617,10 @@
         "source": "WFAA",
         "published_at": "",
         "image": "",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local/0.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local/0.mp3",
+        "title_hi": "उत्तरी टेक्सास बस चालक बाल पोर्नोग्राफी आरोपों पर गिरफ्तार, अधिकारियों द्वारा पुष्टि",
+        "summary_hi": "मेलिसा इंडिपेंडेंट स्कूल डिस्ट्रिक्ट के एक बस चालक को बाल पोर्नोग्राफी के कब्जे के आरोपों पर गिरफ्तार किया गया है, जैसा कि जिले द्वारा WFAA को पुष्टि की गई है। यह घटना एक स्कूल कर्मचारी से जुड़ा एक गंभीर आपराधिक मामला है जिसके पास छात्रों तक सीधी पहुंच है। गिरफ्तारी शैक्षणिक सेटिंग्स में कर्मचारियों की पृष्ठभूमि जांच और निरीक्षण के बारे में चिंताओं को उजागर करती है। विशिष्ट आरोपों, साक्ष्य और चालक के रोजगार इतिहास के बारे में विवरण प्रारंभिक रिपोर्ट में तुरंत प्रकट नहीं किए गए थे। जिले ने अभी तक घोषणा नहीं की है कि क्या गिरफ्तारी के जवाब में अतिरिक्त सुरक्षा उपाय या भर्ती प्रथाओं की समीक्षा लागू की जाएगी।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/local/0.mp3"
       },
       {
         "title": "Melissa, Texas police officer on leave after fatal shooting",
@@ -479,7 +629,10 @@
         "source": "NBC 5",
         "published_at": "",
         "image": "https://media.nbcdfw.com/2026/04/GettyImages-2243470331_4f91a8.jpg?quality=85&strip=all&resize=1200%2C675",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local/1.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local/1.mp3",
+        "title_hi": "मेलिसा, टेक्सास पुलिस अधिकारी घातक शूटिंग के बाद छुट्टी पर",
+        "summary_hi": "मेलिसा, टेक्सास के एक पुलिस अधिकारी को एक गड़बड़ी की कॉल के दौरान एक सशस्त्र व्यक्ति की घातक शूटिंग के बाद प्रशासनिक छुट्टी पर रखा गया है। इस घटना के परिणामस्वरूप सशस्त्र व्यक्ति की मृत्यु हुई जो पुलिस प्रतिक्रिया को प्रेरित करने वाली कॉल में शामिल था। प्रशासनिक छुट्टी अधिकारी-संलग्न शूटिंग जांच में मानक प्रोटोकॉल है ताकि परिस्थितियों की उचित जांच और समीक्षा की जा सके। मामले में अधिकारी के कार्यों, सशस्त्र व्यक्ति द्वारा उत्पन्न खतरे के स्तर, और क्या विभाग के बल प्रयोग नीतियों का पालन किया गया था, की जांच शामिल होगी। विशिष्ट गड़बड़ी कॉल और सशस्त्र व्यक्ति की पहचान के बारे में विवरण जांच के अधीन रहते हैं।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/local/1.mp3"
       },
       {
         "title": "Melissa ISD employee fired after 'inappropriate' communication with student",
@@ -488,7 +641,10 @@
         "source": "FOX 4 News",
         "published_at": "",
         "image": "https://images.foxtv.com/static.fox4news.com/www.fox4news.com/content/uploads/2019/08/1200/630/8362b09b-Melissa20HS_1440458562544_121015_ver1.0.jpg?ve=1&tl=1",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local/2.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local/2.mp3",
+        "title_hi": "मेलिसा ISD कर्मचारी छात्र के साथ 'अनुचित' संचार के बाद निकाला गया",
+        "summary_hi": "मेलिसा इंडिपेंडेंट स्कूल डिस्ट्रिक्ट के एक कर्मचारी को जिले की पुलिस विभाग द्वारा जांच के बाद समाप्त किया गया था जिसमें कर्मचारी और एक छात्र के बीच अनुचित इलेक्ट्रॉनिक संचार का पता चला था। निकाला जाना एक स्कूल कर्मचारी और एक नाबालिग से जुड़ी चिंताजनक आचरण के जवाब में तेजी से अनुशासनात्मक कार्रवाई का प्रतिनिधित्व करता है। स्कूल कर्मचारियों और छात्रों के बीच इलेक्ट्रॉनिक संचार छात्र सुरक्षा की रक्षा करने और व्यावसायिक सीमाओं को बनाए रखने के लिए बढ़ी हुई जांच के अधीन हैं। जिले की पुलिस विभाग की भागीदारी इंगित करती है कि इस मामले को एक गंभीर सुरक्षा समस्या के रूप में माना गया था। संचार की विशिष्ट प्रकृति और जिले के भीतर कर्मचारी की स्थिति प्रारंभिक रिपोर्ट में विस्तृत नहीं की गई थी।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/local/2.mp3"
       },
       {
         "title": "Melissa gas leak: Homes evacuated after gas main damaged",
@@ -497,7 +653,10 @@
         "source": "FOX 4 News",
         "published_at": "",
         "image": "https://images.foxtv.com/static.fox4news.com/www.fox4news.com/content/uploads/2024/11/1200/630/112624-sky4-tuesday-1156am-kdfweme002_11_56_34_2_m_00.08.34.28.jpg?ve=1&tl=1",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local/3.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local/3.mp3",
+        "title_hi": "मेलिसा गैस रिसाव: गैस मुख्य क्षतिग्रस्त होने के बाद घरों को खाली किया गया",
+        "summary_hi": "मंगलवार सुबह मेलिसा रोड और फैनिन स्ट्रीट के पास काम करने वाले निर्माण दल द्वारा छह इंच की गैस मुख्य क्षतिग्रस्त की गई थी, जिससे क्षेत्र में आपातकालीन निकासी हुई। मैकिनी स्ट्रीट के 2600 और 2700 ब्लॉक और विलेजेस ऑफ मेलिसा में निवासियों को एक सावधानीपूर्वक उपाय के रूप में खाली करने का आदेश दिया गया था। आपातकालीन दल स्थिति को नियंत्रित करने के लिए प्रतिक्रिया दी और क्षति और गैस रिसाव का आकलन करते समय निकासी प्रोटोकॉल आयोजित किए। गैस मुख्य टूटने से संभावित विस्फोट और कार्बन मोनोऑक्साइड जोखिम सहित महत्वपूर्ण सुरक्षा जोखिम पैदा होते हैं, जिसके लिए आस-पास के आवासों की तत्काल निकासी आवश्यक है। यह घटना आबादी वाले क्षेत्रों में निर्माण कार्य शुरू करने से पहले उपयोगिता स्थान प्रक्रियाओं के महत्व को उजागर करती है।",
+        "audio_hi": ""
       }
     ],
     "local_events": [
@@ -509,7 +668,10 @@
         "published_at": "Oct 24, 2026",
         "image": "",
         "category": "community",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local_events/0.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local_events/0.mp3",
+        "title_hi": "प्रीस्कूल कहानी का समय",
+        "summary_hi": "3-5 साल के प्रीस्कूलर बच्चों के लिए कहानी का समय कार्यक्रम जिसमें गीत, हरकतें, संगीत, बुलबुले और किताबें शामिल हैं। प्रतिभागी सत्र के अंत में एक शिल्प गतिविधि के रूप में टॉयलेट पेपर रोल मॉन्स्टर बनाएंगे।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/local_events/0.mp3"
       }
     ],
     "local_weather": [
@@ -520,8 +682,12 @@
         "source": "OpenWeatherMap",
         "published_at": "2026-10-23T10:35:39.274052+00:00",
         "image": "",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local_weather/0.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local_weather/0.mp3",
+        "title_hi": "मेलिसा, टेक्सास में मौसम",
+        "summary_hi": "टूटे हुए बादल, 59°F (महसूस होता है 57°F)। आज की रेंज: 57°F से 62°F। आर्द्रता 69%, हवा 2 mph।",
+        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/local_weather/0.mp3"
       }
     ]
-  }
+  },
+  "hindi_generated_at": "2026-10-23T10:41:20.273240+00:00"
 }
