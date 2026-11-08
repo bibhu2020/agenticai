@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T12:06:37.872349+00:00",
+  "generated_at": "2026-11-08T12:19:05.852587+00:00",
   "categories": {
     "world": [
       {
@@ -66,187 +66,142 @@
     "usa": [
       {
         "title": "Trump names Stephen Miller as new White House chief of staff",
-        "summary": "President Trump has appointed Stephen Miller, architect of his hard-line immigration policy, as the new White House chief of staff, effective Monday. Miller is a loyal partisan firebrand whose promotion is expected to set up likely clashes with Congress. His appointment signals Trump's continued emphasis on strict immigration enforcement and suggests potential confrontations with legislative bodies over policy implementation and executive authority during the administration's tenure.",
+        "summary": "President Donald Trump has appointed Stephen Miller, architect of his hard-line immigration policy, as White House chief of staff, effective Monday. Miller, described as a loyal partisan firebrand, is expected to set up likely clashes with Congress. His promotion signals Trump's continued commitment to aggressive immigration enforcement and suggests potential confrontations with the Democratic-controlled legislature over policy implementation and oversight.",
         "url": "https://www.bbc.co.uk/news/articles/cm9qzz5x9g5yo?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
         "published_at": "Fri, 06 Nov 2026 20:11:45 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5751/live/463b6050-da19-11f1-bba7-b50f1faa7672.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/0.mp3",
-        "title_hi": "ट्रम्प ने स्टीफन मिलर को नए व्हाइट हाउस चीफ ऑफ स्टाफ के रूप में नियुक्त किया",
-        "summary_hi": "राष्ट्रपति ट्रम्प ने स्टीफन मिलर को, जो उनकी कठोर आप्रवासन नीति के आर्किटेक्ट हैं, सोमवार से प्रभावी नए व्हाइट हाउस चीफ ऑफ स्टाफ के रूप में नियुक्त किया है। मिलर एक वफादार पक्षपाती अग्निशामक हैं जिनके पदोन्नति से कांग्रेस के साथ संभावित टकराव की उम्मीद है। उनकी नियुक्ति ट्रम्प के कठोर आप्रवासन प्रवर्तन पर निरंतर जोर देने का संकेत देती है और प्रशासन के कार्यकाल के दौरान नीति कार्यान्वयन और कार्यकारी अधिकार पर विधायी निकायों के साथ संभावित संघर्षों का सुझाव देती है।",
-        "audio_hi": ""
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/0.mp3"
       },
       {
-        "title": "Razor-tight Mississippi Senate race sparks ballot battle - could there be a recount?",
-        "summary": "Mississippi's US Senate race has concluded with an extremely close margin, prompting lawyers from both campaigns to prepare for potential legal battles as the final count continues. The razor-thin results have raised questions about whether a recount may be necessary to determine the winner. Both campaigns are mobilizing legal resources to contest the outcome, reflecting the high stakes and competitive nature of the race in this closely divided electoral environment.",
-        "url": "https://www.bbc.co.uk/news/articles/cwj0llvqqm72o?at_medium=RSS&at_campaign=rss",
+        "title": "US offers $20m reward for information about Iran's nuclear programme",
+        "summary": "The United States is offering a $20 million reward for information regarding Iran's nuclear program. This initiative reflects President Donald Trump's repeated statements about potentially renewing military strikes against Iran's nuclear facilities. The reward program represents an escalation in pressure on Iran and signals the administration's hardline stance on nuclear proliferation concerns in the Middle East region.",
+        "url": "https://www.bbc.co.uk/news/articles/c6d091ev3p0jo?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
-        "published_at": "Fri, 06 Nov 2026 22:22:51 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/eacc/live/9e950150-da20-11f1-93e1-3b657b665bcf.png",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/1.mp3",
-        "title_hi": "मिसिसिपी की कसी हुई सीनेट दौड़ मतपत्र युद्ध को भड़काती है - क्या पुनर्गणना हो सकती है?",
-        "summary_hi": "मिसिसिपी की यूएस सीनेट दौड़ अत्यंत करीबी मार्जिन के साथ समाप्त हुई है, जिससे दोनों अभियानों के वकीलों को संभावित कानूनी लड़ाइयों के लिए तैयारी करने के लिए प्रेरित किया गया है क्योंकि अंतिम गणना जारी है। बेहद पतले परिणामों ने विजेता निर्धारित करने के लिए पुनर्गणना की आवश्यकता हो सकती है इस सवाल को उठाया है। दोनों अभियान परिणाम पर विवाद करने के लिए कानूनी संसाधनों को गतिशील कर रहे हैं, जो इस निकटता से विभाजित चुनावी वातावरण में दौड़ के उच्च दांव और प्रतिस्पर्धी प्रकृति को प्रतिबिंबित करता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/usa/1.mp3"
+        "published_at": "Sat, 07 Nov 2026 18:14:38 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0b84/live/0f887590-dad0-11f1-93e1-3b657b665bcf.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/1.mp3"
       },
       {
-        "title": "Why public schools nationwide are facing a massive drop in student enrollment",
-        "summary": "Public schools across the United States are confronting a severe enrollment crisis, with projections indicating a decline of approximately two million students by 2030. Education experts attribute the crisis partly to anticipated demographic trends, but warn that deportation of immigrant families—many with school-age children—is exacerbating the problem significantly. This enrollment collapse threatens school funding, staffing levels, and educational infrastructure nationwide, creating substantial challenges for districts already struggling with resource constraints and operational sustainability.",
-        "url": "https://www.npr.org/2026/11/06/nx-s1-5971283/public-school-enrollment-ice-deportation-birthrate",
+        "title": "Dozens of Democrats eyeing 2028 presidential run, says former Obama aide",
+        "summary": "According to former Obama aide Jim Messina, over two dozen Democratic campaigns are already preparing for the 2028 presidential race following the party's significant midterm victories. Some campaigns have begun hiring staff, indicating serious early preparations. The Democratic gains in Congress this election cycle appear to be energizing multiple potential candidates to position themselves for the next presidential contest.",
+        "url": "https://www.bbc.co.uk/news/articles/cx8dzzy8n713o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC News",
+        "published_at": "Fri, 06 Nov 2026 16:51:01 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/698e/live/fc50b650-d9fc-11f1-93e1-3b657b665bcf.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/2.mp3"
+      },
+      {
+        "title": "Homelessness in the U.S. saw its largest drop in more than a decade last year",
+        "summary": "The United States experienced its largest decline in homelessness in over a decade, with the homeless population dropping from record-high levels. However, approximately 700,000 people remain homeless. The Trump administration and homeless advocacy groups attribute the decrease to different factors, reflecting ongoing debate about the causes and solutions to homelessness in America.",
+        "url": "https://www.npr.org/2026/11/07/nx-s1-6033491/homelessness-in-the-u-s-saw-its-largest-drop-in-more-than-a-decade-last-year",
         "source": "NPR Topics: National",
-        "published_at": "Fri, 06 Nov 2026 05:00:00 -0500",
-        "image": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/4500x2531+0+965/resize/1400/quality/85/format/webp/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F20%2Fee%2Fc54b9b0c43b6b4855ac9c4d97ce3%2Fdsc6224.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/2.mp3",
-        "title_hi": "देशभर के सार्वजनिक स्कूल छात्र नामांकन में भारी गिरावट का सामना कर रहे हैं",
-        "summary_hi": "संयुक्त राज्य भर के सार्वजनिक स्कूल एक गंभीर नामांकन संकट का सामना कर रहे हैं, जिसमें 2030 तक लगभग दो मिलियन छात्रों की गिरावट का अनुमान है। शिक्षा विशेषज्ञ संकट को आंशिक रूप से अनुमानित जनसांख्यिकीय प्रवृत्तियों के लिए जिम्मेदार ठहराते हैं, लेकिन चेतावनी देते हैं कि आप्रवासी परिवारों का निर्वासन—जिनमें से कई स्कूल-आयु के बच्चों के साथ हैं—समस्या को काफी हद तक बढ़ा रहा है। यह नामांकन पतन स्कूल फंडिंग, कर्मचारी स्तरों और शैक्षणिक बुनियादी ढांचे को खतरे में डालता है, जो पहले से ही संसाधन बाधाओं और परिचालन स्थिरता के साथ संघर्ष कर रहे जिलों के लिए पर्याप्त चुनौतियां पैदा करता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/usa/2.mp3"
+        "published_at": "Sat, 07 Nov 2026 19:19:52 -0500",
+        "image": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/5760x3240+0+267/resize/1400/quality/85/format/webp/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F3a%2F55%2Fd90a15694546848291f987d5ec35%2Fap23139601436536.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/3.mp3"
       },
       {
-        "title": "Texas mayor instructs police to limit co-operation with ICE",
-        "summary": "Houston's mayor has directed police to limit cooperation with Immigration and Customs Enforcement (ICE) following months of public outcry. The directive comes after an ICE officer fatally shot a man who was driving to work, sparking community anger and demands for accountability. The mayor's instruction reflects growing tensions between local law enforcement and federal immigration authorities, highlighting broader debates over sanctuary policies and the appropriate role of local police in federal immigration enforcement operations.",
-        "url": "https://www.bbc.co.uk/news/articles/c8dx33d22zkro?at_medium=RSS&at_campaign=rss",
-        "source": "BBC News",
-        "published_at": "Sat, 07 Nov 2026 08:15:55 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4095/live/09b20f70-da4c-11f1-ad69-611c5b2ed04a.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/3.mp3",
-        "title_hi": "टेक्सास के मेयर ने पुलिस को आईसीई के साथ सहयोग सीमित करने का निर्देश दिया",
-        "summary_hi": "ह्यूस्टन के मेयर ने महीनों की जनता की आलोचना के बाद पुलिस को इमिग्रेशन एंड कस्टम्स एनफोर्समेंट (आईसीई) के साथ सहयोग सीमित करने का निर्देश दिया है। यह निर्देश एक आईसीई अधिकारी द्वारा एक आदमी को घातक रूप से गोली मारने के बाद आया है जो काम पर जा रहा था, जिससे सामुदायिक क्रोध और जवाबदेही की मांग हुई। मेयर का निर्देश स्थानीय कानून प्रवर्तन और संघीय आप्रवासन अधिकारियों के बीच बढ़ते तनाव को प्रतिबिंबित करता है, जो अभयारण्य नीतियों और संघीय आप्रवासन प्रवर्तन संचालन में स्थानीय पुलिस की उपयुक्त भूमिका पर व्यापक बहस को उजागर करता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/usa/3.mp3"
-      },
-      {
-        "title": "AI stocks climb after trillions wiped from market values",
-        "summary": "Technology stocks, particularly in the artificial intelligence sector, have rebounded following a significant market selloff that erased trillions in value. Investors had been selling off tech shares due to concerns that Democratic election victories would result in slower AI development and increased regulatory scrutiny. The subsequent recovery suggests renewed investor confidence in the sector's prospects. The volatility reflects broader market anxieties about regulatory policy changes and their potential impact on technological innovation and corporate profitability in the AI industry.",
-        "url": "https://www.bbc.co.uk/news/articles/c35ynnpzdq51o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC News",
-        "published_at": "Fri, 06 Nov 2026 21:06:25 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/fdde/live/9036f7e0-da01-11f1-93e1-3b657b665bcf.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/4.mp3",
-        "title_hi": "बाजार मूल्यों से ट्रिलियन मिटने के बाद एआई स्टॉक चढ़ते हैं",
-        "summary_hi": "प्रौद्योगिकी स्टॉक, विशेष रूप से कृत्रिम बुद्धिमत्ता क्षेत्र में, एक महत्वपूर्ण बाजार बिक्री के बाद उछले हैं जिसने ट्रिलियन मूल्य मिटा दिया है। निवेशकों ने तकनीकी शेयरों को बेच रहे थे क्योंकि चिंता थी कि डेमोक्रेटिक चुनाव जीत से एआई विकास धीमा होगा और नियामक जांच बढ़ेगी। बाद की वसूली क्षेत्र की संभावनाओं में नवीनीकृत निवेशक आत्मविश्वास का सुझाव देती है। अस्थिरता नियामक नीति परिवर्तनों और तकनीकी नवाचार और एआई उद्योग में कॉर्पोरेट लाभप्रदता पर उनके संभावित प्रभाव के बारे में व्यापक बाजार चिंताओं को प्रतिबिंबित करती है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/usa/4.mp3"
+        "title": "Democrats plan to widen their probes of fatal ICE shootings",
+        "summary": "Following Democrats' sweeping electoral victories this week, the party plans to expand investigations into fatal shootings by Immigration and Customs Enforcement agents. The deaths of Renee Good and Alex Pretti during an ICE surge in Minneapolis last winter were pivotal moments that galvanized public attention. With Democratic control of Congress, renewed scrutiny of immigration enforcement practices and agent conduct is expected to intensify.",
+        "url": "https://www.npr.org/2026/11/07/nx-s1-6029659/democrats-investigate-fatal-ice-shootings",
+        "source": "NPR Topics: National",
+        "published_at": "Sat, 07 Nov 2026 08:19:09 -0500",
+        "image": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/6000x3375+0+313/resize/1400/quality/85/format/webp/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Ff5%2F51%2Ff396903449859ddabe2ea56444b5%2Fgettyimages-2302917816.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa/4.mp3"
       }
     ],
     "india": [
       {
         "title": "Homes and temples glow across India as Diwali celebrations begin",
-        "summary": "Millions of Indians are celebrating Diwali, the festival of lights, with traditional customs including glowing lamps, fireworks, and sweets. This major Hindu festival marks the victory of light over darkness and is one of India's most significant cultural events. Diwali celebrations span across homes, temples, and public spaces throughout the country, bringing communities together in festive observance. The festival holds deep religious and cultural significance in Indian society, with families gathering to participate in rituals and share meals. These celebrations represent continuity of ancient traditions while adapting to modern contexts across urban and rural India.",
+        "summary": "Millions of Indians are celebrating Diwali, the festival of lights, with traditional customs and festivities. The celebration involves lighting glowing lamps, setting off fireworks, and preparing traditional sweets across homes and temples throughout the country. Diwali is one of India's most significant festivals, symbolizing the victory of light over darkness and good over evil. The festival brings communities together in widespread celebrations marked by decorations, family gatherings, and religious observances. This year's Diwali celebrations showcase the cultural continuity and importance of the festival in Indian society.",
         "url": "https://www.bbc.co.uk/news/articles/cm70pdwz122ro?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
         "published_at": "Fri, 06 Nov 2026 10:21:30 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d1cd/live/cc05a720-d9d5-11f1-b441-2b33b063138f.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/0.mp3",
-        "title_hi": "भारत भर में घरों और मंदिरों में दिवाली की रोशनी",
-        "summary_hi": "लाखों भारतीय दिवाली, प्रकाश का त्योहार, मनाते हुए परंपरागत रीति-रिवाजों का पालन कर रहे हैं जिनमें जलते हुए दीये, आतिशबाजी और मिठाइयां शामिल हैं। यह प्रमुख हिंदू त्योहार प्रकाश की अंधकार पर विजय का प्रतीक है और भारत की सबसे महत्वपूर्ण सांस्कृतिक घटनाओं में से एक है। दिवाली के उत्सव पूरे देश में घरों, मंदिरों और सार्वजनिक स्थानों पर फैले हुए हैं, जो समुदायों को त्योहार के अवसर पर एक साथ लाते हैं। यह त्योहार भारतीय समाज में गहरा धार्मिक और सांस्कृतिक महत्व रखता है, परिवार अनुष्ठानों में भाग लेने और भोजन साझा करने के लिए एकत्रित होते हैं। ये उत्सव प्राचीन परंपराओं की निरंतरता का प्रतिनिधित्व करते हैं जबकि भारत के शहरी और ग्रामीण क्षेत्रों में आधुनिक संदर्भों के अनुरूप ढल रहे हैं।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/india/0.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/0.mp3"
       },
       {
         "title": "Delhi's toxic winter air is back - is the Indian capital prepared for pollution?",
-        "summary": "Delhi faces its annual winter air pollution crisis as toxic smog returns to the capital. The Delhi government has announced a four-month winter action plan to combat deteriorating air quality, but environmental experts contend these measures are insufficient to address the severity of the problem. The city's air quality index regularly reaches hazardous levels during winter months, posing significant health risks to millions of residents. Pollution sources include vehicle emissions, industrial activity, and agricultural burning in neighboring states. Despite government interventions and restrictions on fireworks during Diwali, experts warn that comprehensive, long-term solutions are needed to effectively tackle Delhi's persistent air quality challenges.",
+        "summary": "Delhi faces the return of severe winter air pollution as the season approaches, with air quality reaching dangerous levels. The Delhi government has announced a four-month winter action plan to address the pollution crisis, but environmental experts argue these measures are insufficient to tackle the problem. The capital experiences hazardous air quality during winter months due to factors including vehicle emissions, industrial pollution, and agricultural burning in neighboring states. The recurring pollution crisis poses significant health risks to Delhi's residents, particularly vulnerable populations including children and the elderly. Authorities continue to grapple with finding effective long-term solutions to combat the seasonal air quality deterioration.",
         "url": "https://www.bbc.co.uk/news/articles/cm78p0n09q3xo?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
         "published_at": "Thu, 05 Nov 2026 23:16:53 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f26c/live/86fa1990-d94e-11f1-a701-fddedf244c16.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/1.mp3",
-        "title_hi": "दिल्ली की जहरीली सर्दियों की हवा वापस आई - क्या भारतीय राजधानी प्रदूषण के लिए तैयार है?",
-        "summary_hi": "दिल्ली अपने वार्षिक सर्दियों की वायु प्रदूषण संकट का सामना कर रही है क्योंकि जहरीली धुंध राजधानी में लौट आई है। दिल्ली सरकार ने वायु गुणवत्ता में गिरावट से निपटने के लिए चार महीने की सर्दियों की कार्य योजना की घोषणा की है, लेकिन पर्यावरण विशेषज्ञों का तर्क है कि ये उपाय समस्या की गंभीरता को संबोधित करने के लिए अपर्याप्त हैं। शहर का वायु गुणवत्ता सूचकांक सर्दियों के महीनों में नियमित रूप से खतरनाक स्तर तक पहुंचता है, जो लाखों निवासियों के लिए महत्वपूर्ण स्वास्थ्य जोखिम पैदा करता है। प्रदूषण के स्रोतों में वाहन उत्सर्जन, औद्योगिक गतिविधि और पड़ोसी राज्यों में कृषि जलन शामिल हैं। सरकारी हस्तक्षेप और दिवाली के दौरान आतिशबाजी पर प्रतिबंध के बावजूद, विशेषज्ञ चेतावनी देते हैं कि दिल्ली की स्थायी वायु गुणवत्ता की समस्याओं को प्रभावी ढंग से हल करने के लिए व्यापक, दीर्घकालीन समाधान की आवश्यकता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/india/1.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/1.mp3"
       },
       {
         "title": "India's costliest film retells a beloved Hindu epic - but divides critics",
-        "summary": "Ramayana: Rise of a Legend, Bollywood's most expensive film production to date, has become the year's most anticipated movie release. The film is the first installment of a two-part adaptation of the Hindu epic Ramayana, one of India's most revered religious and cultural texts. Despite significant production investment and widespread public interest, the film has generated critical division among reviewers and commentators. The ambitious project aims to bring the ancient epic to contemporary audiences through modern filmmaking techniques and high production values. The film's reception reflects broader discussions about how classical Indian narratives are adapted for modern cinema and the balance between artistic interpretation and cultural reverence.",
+        "summary": "Ramayana: Rise of a Legend, Bollywood's most expensive film production to date, has become the year's most anticipated movie release. The film is the first installment of a two-part adaptation of the Hindu epic Ramayana, one of India's most revered religious and cultural texts. Despite significant production investment and widespread anticipation, the film has generated divided critical responses regarding its artistic interpretation and execution. The ambitious project represents a major investment in Indian cinema and reflects Bollywood's efforts to create large-scale adaptations of classical Indian literature. The film's reception highlights ongoing debates within the film industry about how to authentically represent beloved cultural narratives for contemporary audiences.",
         "url": "https://www.bbc.co.uk/news/articles/cm93zv62v1n7o?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
         "published_at": "Thu, 05 Nov 2026 09:04:42 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/891f/live/5dbe2290-d932-11f1-93e1-3b657b665bcf.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/2.mp3",
-        "title_hi": "भारत की सबसे महंगी फिल्म एक प्रिय हिंदू महाकाव्य को दोबारा बताती है - लेकिन आलोचकों को विभाजित करती है",
-        "summary_hi": "रामायण: राइज ऑफ ए लीजेंड, बॉलीवुड का अब तक का सबसे महंगा फिल्म निर्माण, इस साल की सबसे प्रत्याशित फिल्म रिलीज बन गई है। यह फिल्म हिंदू महाकाव्य रामायण के दो भागों के अनुकूलन की पहली कड़ी है, जो भारत के सबसे सम्मानित धार्मिक और सांस्कृतिक ग्रंथों में से एक है। महत्वपूर्ण निर्माण निवेश और व्यापक जनता की रुचि के बावजूद, फिल्म ने समीक्षकों और टिप्पणीकारों के बीच आलोचनात्मक विभाजन पैदा किया है। यह महत्वाकांक्षी परियोजना आधुनिक फिल्म निर्माण तकनीकों और उच्च निर्माण मूल्यों के माध्यम से प्राचीन महाकाव्य को समकालीन दर्शकों के सामने लाने का लक्ष्य रखती है। फिल्म की प्रतिक्रिया इस बारे में व्यापक चर्चा को दर्शाती है कि शास्त्रीय भारतीय आख्यानों को आधुनिक सिनेमा के लिए कैसे अनुकूलित किया जाए और कलात्मक व्याख्या और सांस्कृतिक सम्मान के बीच संतुलन कैसे बनाया जाए।",
-        "audio_hi": ""
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/2.mp3"
       },
       {
         "title": "'We grew up around this historic Delhi mosque - now we have been forced out'",
-        "summary": "Authorities in central Delhi have demolished hundreds of homes in a neighborhood, claiming the structures were illegally built on government land. Residents, many of whom grew up in the area surrounding a historic mosque, have been forcibly displaced from their long-established community. The demolition campaign has affected families with deep historical and cultural ties to the neighborhood, raising concerns about displacement and loss of heritage. The government's land reclamation efforts have disrupted communities and livelihoods, with residents expressing distress over losing their homes and neighborhood connections. This incident highlights ongoing tensions between urban development policies and the protection of established residential communities and cultural heritage sites in India's capital city.",
+        "summary": "Authorities in central Delhi have demolished hundreds of residential houses in a neighborhood, claiming the structures were illegally constructed on government land. Long-time residents, many of whom grew up in the area surrounding a historic mosque, have been forcibly displaced from their homes. The demolition campaign has affected entire communities with deep historical and cultural ties to the neighborhood. Residents report emotional distress over losing their homes and displacement from areas where their families have lived for generations. The incident raises concerns about urban development policies, property rights, and the impact of government land reclamation efforts on vulnerable populations in Delhi's historic districts.",
         "url": "https://www.bbc.co.uk/news/articles/cwp9gljmp3kdo?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
         "published_at": "Tue, 03 Nov 2026 00:20:50 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/70ed/live/39e7bed0-d676-11f1-a806-e976ee8757a1.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/3.mp3",
-        "title_hi": "'हम इस ऐतिहासिक दिल्ली मस्जिद के आसपास बड़े हुए - अब हमें बाहर निकाल दिया गया है'",
-        "summary_hi": "केंद्रीय दिल्ली के अधिकारियों ने सैकड़ों घरों को ध्वस्त कर दिया है, यह दावा करते हुए कि संरचनाएं सरकारी भूमि पर अवैध रूप से बनी थीं। निवासी, जिनमें से कई एक ऐतिहासिक मस्जिद के आसपास के क्षेत्र में बड़े हुए हैं, अपने लंबे समय से स्थापित समुदाय से जबरन विस्थापित कर दिए गए हैं। ध्वस्त करने के अभियान ने गहरे ऐतिहासिक और सांस्कृतिक संबंधों वाले परिवारों को प्रभावित किया है, जिससे विस्थापन और विरासत के नुकसान के बारे में चिंताएं उठी हैं। सरकार की भूमि पुनः प्राप्ति के प्रयासों ने समुदायों और आजीविका को बाधित किया है, निवासी अपने घरों और पड़ोस के संबंधों को खोने पर दुःख व्यक्त कर रहे हैं। यह घटना भारत की राजधानी में शहरी विकास नीतियों और स्थापित आवासीय समुदायों और सांस्कृतिक विरासत स्थलों की सुरक्षा के बीच चल रहे तनाव को उजागर करती है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/india/3.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/3.mp3"
       },
       {
-        "title": "Accused arrested for shooting tech executive over parking dispute in Haryana",
-        "summary": "A fatal shooting in Faridabad, Haryana resulted from escalating tensions between neighbors over parking and a pet dog. Paramjeet Dhankar, a former Tech Mahindra regional head who had recently returned from Singapore, was shot multiple times by neighbor Mohan Sharma during an argument. The two families had experienced ongoing tensions for several days before the incident. Dhankar was attending a family wedding when the shooting occurred. The accused fled the scene, prompting a police search. The incident underscores how disputes over mundane neighborhood issues can escalate into serious violence, raising concerns about conflict resolution and community safety in residential areas.",
-        "url": "https://timesofindia.indiatimes.com/city/faridabad/accused-who-shot-ex-tech-mahindra-regional-head-paramjeet-dhankar-dead-arrested/articleshow/135634580.cms",
-        "source": "Times of India",
-        "published_at": "Sat, 07 Nov 2026 16:55:53 +0530",
-        "image": "https://static.toiimg.com/photo/msid-135635130,imgsize-248339.cms",
-        "audio": "",
-        "title_hi": "हरियाणा में पार्किंग विवाद पर तकनीकी कार्यकारी को गोली मारने के आरोप में गिरफ्तार",
-        "summary_hi": "फरीदाबाद, हरियाणा में एक घातक गोलीबारी पड़ोसियों के बीच पार्किंग और एक पालतू कुत्ते को लेकर बढ़ते तनाव के परिणामस्वरूप हुई। परमजीत ढांकर, टेक महिंद्रा के पूर्व क्षेत्रीय प्रमुख जो हाल ही में सिंगापुर से लौटे थे, को पड़ोसी मोहन शर्मा ने एक बहस के दौरान कई बार गोली मार दी। दोनों परिवारों ने घटना से कुछ दिन पहले चल रहे तनाव का अनुभव किया था। ढांकर एक पारिवारिक विवाह में भाग ले रहे थे जब गोलीबारी हुई। आरोपी घटनास्थल से भाग गया, जिससे पुलिस की खोज शुरू हुई। यह घटना इस बात को रेखांकित करती है कि पड़ोस के मामूली मुद्दों पर विवाद कैसे गंभीर हिंसा में बदल सकते हैं, जिससे आवासीय क्षेत्रों में संघर्ष समाधान और सामुदायिक सुरक्षा के बारे में चिंताएं उठती हैं।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/india/4.mp3"
+        "title": "Indians turn to start-ups to care for ageing parents as young become more mobile",
+        "summary": "Changing family structures and increased mobility of younger generations in India are driving demand for eldercare start-ups offering professional services for aging parents. Traditional joint family systems, where multiple generations lived together, are evolving as young Indians migrate for employment and educational opportunities. This demographic shift has created a market gap for innovative eldercare solutions provided by emerging start-ups. These companies offer services designed to support elderly parents whose adult children are geographically dispersed, addressing healthcare, companionship, and daily living assistance needs. The trend reflects broader social transformations in Indian society, including urbanization, changing work patterns, and evolving family dynamics that challenge conventional caregiving arrangements.",
+        "url": "https://www.bbc.co.uk/news/articles/cmx2qr4rp1xeo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC News",
+        "published_at": "Fri, 30 Oct 2026 00:02:35 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/83eb/live/3d4d12b0-d37d-11f1-bf63-739fb2907d03.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/india/4.mp3"
       }
     ],
     "odisha": [
       {
-        "title": "Odisha CM, LoP cancel Diwali celebrations in solidarity with disaster-hit people",
-        "summary": "Odisha Chief Minister Mohan Charan Majhi and Leader of Opposition Naveen Patnaik announced the cancellation of their Diwali celebrations this year in solidarity with people affected by Cyclone Arnab and subsequent floods. The decision reflects the state leadership's commitment to standing with disaster-affected communities during their time of suffering. By forgoing festive celebrations, both leaders are urging the public to support flood-hit families and demonstrate collective compassion. This gesture symbolizes the state's prioritization of relief and rehabilitation efforts over ceremonial festivities, emphasizing unity and shared responsibility in addressing the cyclone's devastating aftermath and its impact on vulnerable populations across Odisha.",
-        "url": "https://www.msn.com/en-in/news/other/odisha-cm-lop-cancel-diwali-celebrations-in-solidarity-with-disaster-hit-people/ar-AA2gWFJx",
-        "source": "Press Trust of India",
-        "published_at": "2026-11-07T00:00:00+00:00",
-        "image": "",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/0.mp3",
-        "title_hi": "ओडिशा के मुख्यमंत्री और विपक्ष के नेता ने आपदा प्रभावित लोगों के साथ एकजुटता में दिवाली समारोह रद्द किए",
-        "summary_hi": "ओडिशा के मुख्यमंत्री मोहन चरण माझी और विपक्ष के नेता नवीन पटनायक ने इस वर्ष अपने दिवाली समारोह को रद्द करने की घोषणा की है, जो चक्रवात अर्नब और बाद की बाढ़ से प्रभावित लोगों के साथ एकजुटता प्रदर्शित करता है। यह निर्णय राज्य के नेतृत्व की आपदा प्रभावित समुदायों के साथ खड़े होने की प्रतिबद्धता को दर्शाता है। पर्व समारोह का त्याग करके, दोनों नेता जनता को बाढ़ प्रभावित परिवारों का समर्थन करने और सामूहिक करुणा प्रदर्शित करने के लिए प्रेरित कर रहे हैं। यह संकेत राज्य की राहत और पुनर्वास प्रयासों को अनुष्ठानिक समारोहों से ऊपर प्राथमिकता देने का प्रतीक है, जो चक्रवात की विनाशकारी परिणति और ओडिशा भर के कमजोर आबादी पर इसके प्रभाव को संबोधित करने में एकता और साझा जिम्मेदारी पर जोर देता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/odisha/0.mp3"
+        "title": "Odisha gets 318 additional PG medical seats, total rises to 938",
+        "summary": "The National Medical Commission has approved a significant expansion of postgraduate medical education in Odisha, increasing PG medical seats by 318 across five government medical colleges. This expansion raises the total PG seats from 620 to 938, representing a 51% increase in capacity. The move aims to enhance medical education infrastructure and produce more specialized medical professionals in the state, addressing the growing demand for postgraduate medical training and improving healthcare delivery capabilities across Odisha's medical institutions.",
+        "url": "https://www.msn.com/en-in/news/other/odisha-gets-318-additional-pg-medical-seats-total-rises-to-938/ar-AA2h0f18",
+        "source": "Times Now",
+        "published_at": "2026-11-08T10:57:00+00:00",
+        "image": "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA2gZG4p.img?w=1280&h=720&m=4&q=79",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/0.mp3"
       },
       {
-        "title": "Odisha's KG to PG free education scheme boosts college admissions by 14,758",
-        "summary": "Odisha's comprehensive free education scheme spanning kindergarten through postgraduate levels has significantly boosted college admissions, with undergraduate enrollment increasing by 14,758 students in the current academic year. The total undergraduate enrollment has reached 1,78,937 students, demonstrating the scheme's substantial impact on higher education accessibility. This initiative removes financial barriers to education, enabling more students from economically disadvantaged backgrounds to pursue college degrees. The scheme represents a major policy intervention aimed at democratizing education and improving social mobility across the state. By providing free education from foundational to advanced levels, Odisha is investing in human capital development and creating opportunities for broader sections of society to access quality education.",
-        "url": "https://www.thehindubusinessline.com/news/education/odishas-kg-to-pg-free-education-scheme-boosts-college-admissions-by-14758/article71677855.ece",
-        "source": "The Hindu BusinessLine",
-        "published_at": "2026-11-07T03:30:00+00:00",
-        "image": "https://bl-i.thgim.com/public/incoming/jydwaa/article71677921.ece/alternates/LANDSCAPE_1200/Suryabanshi+Suraj+Odisha+Minister.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/1.mp3",
-        "title_hi": "ओडिशा की केजी से पीजी तक मुफ्त शिक्षा योजना कॉलेज प्रवेश में 14,758 की वृद्धि करती है",
-        "summary_hi": "ओडिशा की व्यापक मुफ्त शिक्षा योजना जो किंडरगार्टन से स्नातकोत्तर स्तर तक फैली है, ने कॉलेज प्रवेश में महत्वपूर्ण वृद्धि की है, वर्तमान शैक्षणिक वर्ष में स्नातक नामांकन 14,758 छात्रों से बढ़ गया है। कुल स्नातक नामांकन 1,78,937 छात्रों तक पहुंच गया है, जो योजना के उच्च शिक्षा की पहुंच पर पर्याप्त प्रभाव को प्रदर्शित करता है। यह पहल शिक्षा के लिए वित्तीय बाधाओं को दूर करती है, जिससे आर्थिक रूप से वंचित पृष्ठभूमि के अधिक छात्र कॉलेज की डिग्री प्राप्त कर सकते हैं। यह योजना शिक्षा को लोकतांत्रिक बनाने और राज्य भर में सामाजिक गतिशीलता में सुधार के लिए एक प्रमुख नीति हस्तक्षेप का प्रतिनिधित्व करती है। मौलिक से उन्नत स्तर तक मुफ्त शिक्षा प्रदान करके, ओडिशा मानव पूंजी विकास में निवेश कर रहा है और समाज के व्यापक वर्गों को गुणवत्तापूर्ण शिक्षा तक पहुंचने के अवसर बना रहा है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/odisha/1.mp3"
+        "title": "Odisha invites scholarship applications under 'Mukhyamantri Medhabi Chhatra Protsahan Yojana' 2026-27",
+        "summary": "The Odisha government has opened applications for the Mukhyamantri Medhabi Chhatra Protsahan Yojana scholarship program for the 2026-27 academic year. This merit-based scholarship scheme aims to support talented and deserving students in pursuing higher education. Interested applicants can submit their applications through the official Odisha State Scholarship Portal at scholarship.odisha.gov.in. The initiative reflects the state's commitment to promoting educational excellence and providing financial assistance to meritorious students, helping reduce educational barriers and encouraging academic achievement across the state.",
+        "url": "https://www.msn.com/en-in/money/general/odisha-invites-scholarship-applications-under-mukhyamantri-medhabi-chhatra-protsahan-yojana-2026-27/ar-AA2gZlPT",
+        "source": "NDTV",
+        "published_at": "2026-11-08T11:04:07+00:00",
+        "image": "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA2h0phN.img?w=1280&h=720&m=4&q=87",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/1.mp3"
       },
       {
-        "title": "NMC approves 318 additional PG medical seats in Odisha, total rises to 938",
-        "summary": "The National Medical Commission has approved 318 additional postgraduate medical seats across Odisha, raising the total from 620 to 938 seats. This significant expansion includes five new government colleges launching postgraduate programs with 153 seats combined. The approval represents a major step toward decentralizing advanced healthcare training and expanding specialist medical education across the state. The increased capacity will enable more doctors to pursue specialized training in various medical disciplines, addressing the shortage of specialists in Odisha. This expansion is expected to improve healthcare delivery by producing more qualified specialists and reducing the burden on existing medical institutions, ultimately benefiting patients through better access to specialized medical services throughout the state.",
-        "url": "https://www.msn.com/en-in/news/other/nmc-approves-318-additional-pg-medical-seats-in-odisha-total-rises-to-938/ar-AA2gVOAc",
-        "source": "India Today",
-        "published_at": "2026-11-07T05:53:00+00:00",
-        "image": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202611/five-children-of-odisha-tribal-family-clear-neet--move-closer-to-becoming-doctors-053555814-16x9_0.jpg?VersionId=CA5.Rq6lg.tNvi_O6juMT7DbhJ5E.sPV",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/2.mp3",
-        "title_hi": "एनएमसी ने ओडिशा में 318 अतिरिक्त पीजी चिकित्सा सीटों को मंजूरी दी, कुल 938 तक पहुंची",
-        "summary_hi": "राष्ट्रीय चिकित्सा आयोग ने ओडिशा भर में 318 अतिरिक्त स्नातकोत्तर चिकित्सा सीटों को मंजूरी दी है, जिससे कुल 620 से 938 सीटों तक पहुंच गई है। इस महत्वपूर्ण विस्तार में पांच नई सरकारी कॉलेजें शामिल हैं जो 153 सीटों के साथ स्नातकोत्तर कार्यक्रम शुरू कर रही हैं। यह अनुमोदन उन्नत स्वास्थ्यसेवा प्रशिक्षण को विकेंद्रीकृत करने और राज्य भर में विशेषज्ञ चिकित्सा शिक्षा का विस्तार करने की दिशा में एक प्रमुख कदम है। बढ़ी हुई क्षमता अधिक डॉक्टरों को विभिन्न चिकित्सा विषयों में विशेषज्ञ प्रशिक्षण प्राप्त करने में सक्षम करेगी, जिससे ओडिशा में विशेषज्ञों की कमी को दूर किया जा सकेगा। यह विस्तार अधिक योग्य विशेषज्ञों का उत्पादन करके और मौजूदा चिकित्सा संस्थानों पर बोझ कम करके स्वास्थ्यसेवा वितरण में सुधार करने की उम्मीद है, जिससे अंततः रोगियों को राज्य भर में विशेषज्ञ चिकित्सा सेवाओं तक बेहतर पहुंच मिलेगी।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/odisha/2.mp3"
+        "title": "Odisha Plans Drug-Free Zones Within 500 Metres of Schools, Colleges and Universities",
+        "summary": "The Odisha government is implementing a comprehensive initiative to establish drug-free zones within a 500-metre radius of all educational institutions, including schools, colleges, universities, and their hostels across the state. This preventive measure aims to protect students from substance abuse and create safer campus environments. The drug-free zone designation will involve strict enforcement and monitoring to prevent drug trafficking and consumption near educational facilities, addressing growing concerns about youth substance abuse and supporting the government's broader public health and safety objectives.",
+        "url": "https://timesofindia.indiatimes.com/education/news/odisha-plans-drug-free-zones-within-500-metres-of-all-schools-colleges-and-university-campuses/articleshow/135640544.cms",
+        "source": "The Times of India",
+        "published_at": "2026-11-07T15:41:00+00:00",
+        "image": "https://static.toiimg.com/thumb/msid-135640544,width-1280,height-720,resizemode-6,overlay-toi_sw,pt-32,y_pad-600/photo.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/2.mp3"
       },
       {
-        "title": "Odisha CM Mohan Charan Majhi Lays Foundation Stones for Three Mega Lift Irrigation Projects in Kendujhar",
-        "summary": "Odisha Chief Minister Mohan Charan Majhi laid foundation stones for three mega lift irrigation projects in Kendujhar district, marking a significant investment in agricultural infrastructure. These projects are designed to expand water access for farmers and enhance agricultural productivity across the region. Lift irrigation systems are crucial for areas where conventional gravity-based irrigation is not feasible, enabling farmers to access water from lower elevations for cultivation. The projects represent the state government's commitment to agricultural development and farmer welfare through improved irrigation facilities. By increasing water availability, these mega projects are expected to boost crop yields, enable cultivation of additional land, and provide economic stability to farming communities in Kendujhar, contributing to overall agricultural growth and rural prosperity in Odisha.",
-        "url": "https://www.oneindia.com/india/kendujhar-mega-lift-irrigation-projects-odisha-012-8253601.html",
-        "source": "Oneindia",
-        "published_at": "2026-11-07T11:32:00+00:00",
-        "image": "https://imagesvs.oneindia.com/img/2026/11/kendujhar-irrigation-mega-1794031239154-600x340.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/3.mp3",
-        "title_hi": "ओडिशा के मुख्यमंत्री मोहन चरण माझी ने केंदुझर में तीन मेगा लिफ्ट सिंचाई परियोजनाओं की आधारशिला रखी",
-        "summary_hi": "ओडिशा के मुख्यमंत्री मोहन चरण माझी ने केंदुझर जिले में तीन मेगा लिफ्ट सिंचाई परियोजनाओं की आधारशिला रखी, जो कृषि बुनियादी ढांचे में एक महत्वपूर्ण निवेश को चिह्नित करता है। ये परियोजनाएं किसानों के लिए जल पहुंच का विस्तार करने और क्षेत्र में कृषि उत्पादकता बढ़ाने के लिए डिज़ाइन की गई हैं। लिफ्ट सिंचाई प्रणालियां उन क्षेत्रों के लिए महत्वपूर्ण हैं जहां पारंपरिक गुरुत्वाकर्षण-आधारित सिंचाई संभव नहीं है, जिससे किसान निचली ऊंचाई से खेती के लिए पानी तक पहुंच सकते हैं। ये परियोजनाएं कृषि विकास और सुधारी गई सिंचाई सुविधाओं के माध्यम से किसान कल्याण के प्रति राज्य सरकार की प्रतिबद्धता का प्रतिनिधित्व करती हैं। जल की उपलब्धता बढ़ाकर, ये मेगा परियोजनाएं फसल की पैदावार बढ़ाने, अतिरिक्त भूमि की खेती सक्षम करने और केंदुझर में कृषि समुदायों को आर्थिक स्थिरता प्रदान करने की उम्मीद है, जो ओडिशा में समग्र कृषि वृद्धि और ग्रामीण समृद्धि में योगदान देती है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/odisha/3.mp3"
+        "title": "Diwali 2026: Food safety raids across Odisha uncover stale sweets, unhygienic practices",
+        "summary": "Food safety inspections conducted across Odisha ahead of Diwali 2026 revealed significant quality concerns regarding sweets sold in markets during the festival season. The raids uncovered instances of stale sweets and unhygienic manufacturing practices among vendors. These findings raised serious public health concerns as citizens traditionally exchange sweets with family and friends during Diwali celebrations. The inspections highlight the need for stricter food safety regulations and vendor compliance to protect consumers from contaminated or substandard food products during major festivals and celebrations.",
+        "url": "https://odishatv.in/odisha/diwali-2026-food-safety-raids-across-odisha-uncover-stale-sweets-unhygienic-practices-12793709",
+        "source": "Odisha TV",
+        "published_at": "2026-11-08T08:33:00+00:00",
+        "image": "https://img-cdn.publive.online/fit-in/1200x675/odishatv/media/media_files/2026/11/08/food-safety-raids-across-odisha-uncover-stale-sweets-2026-11-08-14-03-52.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/3.mp3"
       },
       {
-        "title": "Odisha man builds Rs 1 crore desi lemon business after monkeys and elephants destroy his crops",
-        "summary": "An Odisha farmer transformed agricultural adversity into entrepreneurial success by establishing a thriving Rs 1 crore desi lemon business after wildlife destroyed his initial crops. What began with just 50 lemon saplings has evolved into a substantial village enterprise, with approximately 500 households now cultivating the fruit across 150 acres of land. The farmer has successfully created a supply chain connecting local growers with wholesale buyers, establishing a sustainable agricultural model. This initiative demonstrates resilience and innovation in addressing both wildlife conflict and livelihood challenges. The expansion of lemon cultivation has generated employment opportunities for hundreds of families, contributing to rural economic development. The success story illustrates how agricultural diversification and farmer-led entrepreneurship can transform communities and create prosperity despite environmental and wildlife-related obstacles.",
-        "url": "https://www.moneycontrol.com/news/trends/odisha-man-builds-rs-1-crore-desi-lemon-business-after-monkeys-and-elephants-destroy-his-crops-14074233.html",
-        "source": "Moneycontrol",
-        "published_at": "2026-11-06T23:41:00+00:00",
-        "image": "https://images.moneycontrol.com/static-mcnews/2026/11/20261107080940_odishafarm.png?impolicy=website&width=770&height=431",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/4.mp3",
-        "title_hi": "ओडिशा के व्यक्ति ने बंदरों और हाथियों द्वारा फसलों को नष्ट करने के बाद 1 करोड़ रुपये का देशी नींबू व्यवसाय बनाया",
-        "summary_hi": "एक ओडिशा के किसान ने वन्यजीवन द्वारा अपनी प्रारंभिक फसलों को नष्ट करने के बाद कृषि विपत्ति को उद्यमशील सफलता में बदल दिया, जिससे 1 करोड़ रुपये का देशी नींबू व्यवसाय स्थापित किया। जो केवल 50 नींबू के पौधों से शुरू हुआ था, वह 150 एकड़ भूमि में लगभग 500 घरों के साथ एक पर्याप्त गांव उद्यम में विकसित हुआ है। किसान ने स्थानीय उत्पादकों को थोक खरीदारों से जोड़ने वाली एक आपूर्ति श्रृंखला सफलतापूर्वक स्थापित की है, जिससे एक टिकाऊ कृषि मॉडल बनाया गया है। यह पहल वन्यजीवन संघर्ष और आजीविका चुनौतियों दोनों को संबोधित करने में लचीलापन और नवाचार को प्रदर्शित करती है। नींबू की खेती का विस्तार सैकड़ों परिवारों के लिए रोजगार के अवसर पैदा किए हैं, जो ग्रामीण आर्थिक विकास में योगदान देता है। यह सफलता की कहानी दर्शाती है कि कैसे कृषि विविधीकरण और किसान-नेतृत्व वाली उद्यमशीलता पर्यावरणीय और वन्यजीवन-संबंधित बाधाओं के बावजूद समुदायों को रूपांतरित कर सकती है और समृद्धि बना सकती है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/odisha/4.mp3"
+        "title": "AI-based model to help scrutinise Odisha pension cases",
+        "summary": "Odisha is developing an artificial intelligence-based pension model designed to streamline and improve the examination of pension cases for state government employees. The AI system will verify pay fixation, service-related details, and other critical pension information with greater accuracy and efficiency. This technological initiative aims to accelerate pension processing timelines while reducing errors and ensuring transparency in pension administration. The implementation of AI-driven scrutiny represents the state's effort to modernize administrative processes, enhance service delivery to retired employees, and maintain integrity in pension disbursement systems.",
+        "url": "https://timesofindia.indiatimes.com/city/bhubaneswar/ai-based-model-to-help-scrutinise-odisha-pension-cases/articleshow/135641873.cms",
+        "source": "The Times of India",
+        "published_at": "2026-11-07T16:33:00+00:00",
+        "image": "https://static.toiimg.com/thumb/msid-135641867,width-1280,height-720,resizemode-6,overlay-toi_sw,pt-32,y_pad-600/photo.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/odisha/4.mp3"
       }
     ],
     "sports": [
@@ -375,117 +330,102 @@
     ],
     "usa_stock": [
       {
-        "title": "Nvidia, AMD and other chip stocks rebound — but is relief from the 'violent' selloff only temporary?",
-        "summary": "Semiconductor stocks including Nvidia and AMD experienced a significant rebound following a sharp market decline. The chip sector had endured a violent selloff amid broader market volatility, but analysts note several new factors supporting the AI trade going forward. However, experts warn that further volatility may lie ahead, suggesting the recovery could be temporary. The rebound reflects investor sentiment shifts regarding artificial intelligence investments and semiconductor valuations after recent market turbulence.",
-        "url": "https://www.marketwatch.com/story/nvidia-amd-and-other-chip-stocks-rebound-is-the-violent-ai-selloff-over-8f7df533?mod=mw_rss_topstories",
+        "title": "This market signal called the tech selloff. Now it's sending another warning.",
+        "summary": "Stock correlations have recently hit record lows, indicating that individual stocks are moving independently rather than in tandem. Historically, such extreme divergence tends to revert to the mean, which market analysts warn could signal trouble ahead for equities. This technical indicator previously preceded the recent technology sector selloff and is now flashing caution signals again. The reversion to normal correlation patterns could indicate increased market volatility or broader weakness as investors reassess valuations and positioning across different stock categories.",
+        "url": "https://www.marketwatch.com/story/this-market-signal-called-the-tech-selloff-now-its-sending-another-warning-f7f8eb9b?mod=mw_rss_topstories",
         "source": "MarketWatch.com - Top Stories",
-        "published_at": "Fri, 06 Nov 2026 21:24:00 GMT",
-        "image": "https://images.mktw.net/im-78248485",
+        "published_at": "Sun, 08 Nov 2026 12:00:00 GMT",
+        "image": "https://images.mktw.net/im-68677954",
         "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/0.mp3"
       },
       {
-        "title": "Data centers run on debt. That was a problem for bonds this year — and it's only going to get worse.",
-        "summary": "Data center operators have increasingly relied on debt financing to fund expansion, creating significant challenges for bond investors throughout 2026. Artificial intelligence-related debt issuance overwhelmed investor portfolios and underperformed expectations. The funding requirements for data centers supporting AI infrastructure are expected to intensify further, particularly with Democrats controlling Congress. This debt-driven model poses ongoing risks to bond market stability and investor returns as AI infrastructure demands continue escalating.",
-        "url": "https://www.marketwatch.com/story/data-centers-run-on-debt-that-was-a-problem-for-bonds-this-year-and-its-only-going-to-get-worse-09c03be6?mod=mw_rss_topstories",
+        "title": "The S&P 500 could be dangerously exposed to AI. Here are some simple alternatives.",
+        "summary": "The S&P 500 index has become heavily concentrated in artificial intelligence-related stocks, reducing its diversification despite its reputation as a broad market benchmark. This concentration creates significant risk exposure to the AI sector, which has experienced substantial volatility recently. Analysts suggest that investors seeking broader market exposure should consider alternative index strategies that provide more balanced sector representation. The large-cap index's heavy weighting toward AI stocks means that sector-specific downturns could disproportionately impact overall portfolio performance for investors relying solely on the S&P 500.",
+        "url": "https://www.marketwatch.com/story/the-s-p-500-has-become-a-big-ai-bet-here-are-some-simple-alternatives-3c7574a4?mod=mw_rss_topstories",
         "source": "MarketWatch.com - Top Stories",
-        "published_at": "Fri, 06 Nov 2026 21:37:00 GMT",
-        "image": "https://images.mktw.net/im-27823796",
+        "published_at": "Sat, 07 Nov 2026 16:40:00 GMT",
+        "image": "https://images.mktw.net/im-21345539",
         "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/1.mp3"
       },
       {
-        "title": "Elon Musk opens the door for a big SpaceX acquisition",
-        "summary": "SpaceX, Elon Musk's rocket and satellite-internet company, is positioning itself for a significant acquisition as it seeks to challenge established telecom giants. The company is exploring strategic moves to expand its competitive footprint in the telecommunications sector. SpaceX's satellite-internet capabilities and rocket technology provide a foundation for disrupting traditional telecom markets. This potential acquisition signals Musk's ambitions to leverage SpaceX's infrastructure advantages against incumbent telecommunications providers in the broadband and connectivity space.",
-        "url": "https://www.marketwatch.com/story/elon-musk-opens-the-door-for-a-big-spacex-acquisition-4f62bcad?mod=mw_rss_topstories",
-        "source": "MarketWatch.com - Top Stories",
-        "published_at": "Fri, 06 Nov 2026 21:45:00 GMT",
-        "image": "https://images.mktw.net/im-63491767",
+        "title": "AI stocks halt their brutal, worldwide sell-off as Wall Street trims its loss for the week",
+        "summary": "Artificial intelligence stocks rebounded on Friday after experiencing a severe global selloff over the previous two days, allowing Wall Street to recover some losses from the week. The broader U.S. stock market remained mixed as investors processed the implications of Democrats' sweeping victories in midterm elections for the economy and corporate policy. The volatile trading week reflected uncertainty about how political changes might affect business conditions, particularly in technology and AI sectors. The Friday recovery provided temporary relief but underscored ongoing market uncertainty regarding valuations and economic direction.",
+        "url": "https://jamaica-gleaner.com/article/business/20261108/ai-stocks-halt-their-brutal-worldwide-sell-wall-street-trims-its-loss",
+        "source": "Jamaica Gleaner",
+        "published_at": "2026-11-08T11:12:00+00:00",
+        "image": "https://jamaica-gleaner.com/sites/default/files/media/article_images/2026/11/08/3513623/8549687.jpg",
         "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/2.mp3"
       },
       {
-        "title": "Cybertruck's run comes to an end as Musk kills off pricey pet project",
-        "summary": "Tesla's Cybertruck production is being discontinued as Elon Musk shifts factory operations away from the vehicle. The Cybertruck failed to gain significant market traction among consumers, hampered by high pricing and multiple notable recalls that damaged consumer confidence. The decision to end production represents a major strategic pivot for Tesla, acknowledging the vehicle's commercial underperformance. This move reflects broader challenges in the electric vehicle market and suggests Tesla is reallocating manufacturing resources toward more commercially viable products.",
-        "url": "https://www.marketwatch.com/story/is-it-the-end-of-the-cybertruck-elon-musk-announces-factory-will-shift-production-3e33cafd?mod=mw_rss_topstories",
+        "title": "Here are the 2027 capital-gains tax rates for each income level",
+        "summary": "The Internal Revenue Service has released the official capital-gains tax rates that will apply to different income levels in 2027, providing crucial information for investors planning their tax strategies. Understanding these rates is essential for making informed decisions about when to realize gains or losses on investment positions. The timing of stock sales and portfolio rebalancing can significantly impact after-tax returns, making this information particularly relevant as investors approach year-end planning. Taxpayers across various income brackets should review the updated rates to optimize their investment strategies and minimize tax liability in the coming year.",
+        "url": "https://www.marketwatch.com/story/here-are-the-2027-capital-gains-tax-rates-for-each-income-level-166fc306?mod=mw_rss_topstories",
         "source": "MarketWatch.com - Top Stories",
-        "published_at": "Fri, 06 Nov 2026 18:54:00 GMT",
-        "image": "https://images.mktw.net/im-76323444",
+        "published_at": "Sat, 07 Nov 2026 19:48:00 GMT",
+        "image": "https://images.mktw.net/im-26428515",
         "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/3.mp3"
       },
       {
-        "title": "Micron's stock is dirt cheap — and that's igniting a fierce online debate",
-        "summary": "Micron Technology's stock valuation has become the subject of intense debate among investors and analysts. Valuation-focused investors argue the stock is trading at ridiculously inexpensive levels, presenting a compelling buying opportunity. However, some semiconductor industry investors express skepticism, contending that Micron's earnings power may not sustain current valuations or justify further appreciation. The disagreement reflects broader uncertainty about the semiconductor sector's profitability outlook and whether current market prices accurately reflect fundamental business prospects.",
-        "url": "https://www.marketwatch.com/story/microns-stock-is-dirt-cheap-and-thats-igniting-a-fierce-online-debate-0626791d?mod=mw_rss_topstories",
-        "source": "MarketWatch.com - Top Stories",
-        "published_at": "Fri, 06 Nov 2026 20:58:00 GMT",
-        "image": "https://images.mktw.net/im-84938354",
+        "title": "Oracle Stock Plunges 8.8% on US$20bn Capital Raise Plans",
+        "summary": "Oracle shares declined 8.8% following the company's announcement of plans to raise $20 billion for artificial intelligence infrastructure investments. The significant stock price drop reflects investor concerns about the company's mounting debt levels and its reliance on partnerships with OpenAI for AI capabilities. The capital raise signals Oracle's commitment to competing in the AI infrastructure space but raises questions about the sustainability of its financial structure and competitive positioning. The market reaction suggests skepticism about whether the company's AI strategy and debt levels justify the investment required to maintain competitiveness in this rapidly evolving sector.",
+        "url": "https://businesschief.com/news/oracle-stock-plunges-8-8-on-us-20bn-capital-raise-plans",
+        "source": "Business Chief",
+        "published_at": "2026-11-08T09:00:00+00:00",
+        "image": "https://assets.bizclikmedia.net/1200/f80afabf188023daeff1891b1e7ce53f:8bbdfc61e945c76503fc1fa718deac9e/aiworld-sphere-credit-oracle.jpg.jpg",
         "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/usa_stock/4.mp3"
       }
     ],
     "ai": [
       {
         "title": "I watched a humanoid robot clean my apartment. It felt like a taste of the future.",
-        "summary": "MIT Technology Review editor Grace Huckins describes her experience with a new humanoid robot cleaning service in San Francisco. Despite typically preferring to clean her own apartment, she decided to try the service after seeing a social media post about it. The article explores how humanoid robots are transitioning from theoretical concepts to practical commercial applications in everyday household tasks, representing a significant milestone in robotics deployment and consumer adoption of autonomous cleaning technology.",
+        "summary": "A MIT Technology Review journalist experienced a new humanoid robot cleaning service in San Francisco, providing firsthand perspective on emerging robotics technology. The article documents the practical application of humanoid robots in residential settings, marking a significant milestone in bringing advanced robotics into everyday consumer services. This development represents a tangible step toward integrating autonomous machines into household tasks, demonstrating both the technological capabilities and real-world viability of humanoid robots for commercial cleaning applications.",
         "url": "https://www.technologyreview.com/2026/11/06/1148090/i-watched-a-humanoid-robot-clean-my-apartment-it-felt-like-a-taste-of-the-future/",
         "source": "MIT Technology Review",
         "published_at": "Fri, 06 Nov 2026 10:00:00 +0000",
         "image": "https://wp.technologyreview.com/wp-content/uploads/2026/11/TauRobot-3up.jpg?resize=1200,600",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/0.mp3",
-        "title_hi": "मैंने एक मानवीय रोबोट को अपने अपार्टमेंट की सफाई करते देखा। यह भविष्य का स्वाद लगा।",
-        "summary_hi": "MIT टेक्नोलॉजी रिव्यू की संपादक ग्रेस हकिंस ने सैन फ्रांसिस्को में एक नई मानवीय रोबोट सफाई सेवा के साथ अपने अनुभव का वर्णन किया है। आमतौर पर अपने अपार्टमेंट की सफाई खुद करना पसंद करने के बावजूद, उन्होंने सोशल मीडिया पर इसके बारे में एक पोस्ट देखने के बाद इस सेवा को आजमाने का फैसला किया। यह लेख यह दर्शाता है कि कैसे मानवीय रोबोट सैद्धांतिक अवधारणाओं से रोजमर्रा के घरेलू कार्यों में व्यावहारिक वाणिज्यिक अनुप्रयोगों की ओर बढ़ रहे हैं, जो रोबोटिक्स तैनाती और स्वायत्त सफाई प्रौद्योगिकी के उपभोक्ता अपनाने में एक महत्वपूर्ण मील का पत्थर है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/ai/0.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/0.mp3"
       },
       {
         "title": "Texas was the new epicenter of the AI data center buildout. That might be kaput.",
-        "summary": "Texas has been the fastest-growing data center market in the US and the primary location for major tech companies' AI infrastructure investments. However, recent midterm election results showing Democratic victories, including James Talarico winning the US Senate seat and Gina Hinojosa winning the gubernatorial race, may jeopardize Texas's position as the AI hub. The political shift could impact energy policy and regulatory frameworks that have made Texas attractive for large-scale data center development.",
+        "summary": "Texas has been the fastest-growing data center market in the US and the primary location for major tech companies' AI infrastructure investments. However, recent midterm election results showing Democratic victories in key races may jeopardize this position. The political shift could impact energy policies and regulatory environments that have made Texas attractive for data center development, potentially affecting the state's role as the epicenter of America's AI infrastructure expansion and raising questions about future tech investment patterns.",
         "url": "https://www.technologyreview.com/2026/11/04/1148043/texas-was-the-new-epicenter-of-the-ai-data-center-buildout-that-might-be-kaput/",
         "source": "MIT Technology Review",
         "published_at": "Wed, 04 Nov 2026 18:50:55 +0000",
         "image": "https://wp.technologyreview.com/wp-content/uploads/2026/11/GettyImages-2303431102.jpg?resize=1200,600",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/1.mp3",
-        "title_hi": "टेक्सास AI डेटा सेंटर निर्माण का नया केंद्र था। यह अब खत्म हो सकता है।",
-        "summary_hi": "टेक्सास संयुक्त राज्य अमेरिका में सबसे तेजी से बढ़ता डेटा सेंटर बाजार रहा है और प्रमुख तकनीकी कंपनियों के AI बुनियादी ढांचे निवेश के लिए प्राथमिक स्थान है। हालांकि, हाल के मध्यावधि चुनाव परिणामों में जेम्स तलारिको द्वारा अमेरिकी सीनेट की सीट जीतने और गीना हिनोजोसा द्वारा राज्यपाल की दौड़ जीतने सहित डेमोक्रेटिक जीत दिखाई दी है, जो टेक्सास की AI हब के रूप में स्थिति को खतरे में डाल सकती है। राजनीतिक बदलाव ऊर्जा नीति और नियामक ढांचे को प्रभावित कर सकता है जिन्होंने बड़े पैमाने पर डेटा सेंटर विकास के लिए टेक्सास को आकर्षक बनाया है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/ai/1.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/1.mp3"
       },
       {
         "title": "Securing the agentic enterprise with data lineage",
-        "summary": "The article examines security challenges posed by autonomous AI agents operating within enterprise environments without human oversight. It describes a scenario where multiple AI agents sequentially access and process data from various sources—including restricted pricing systems, internal communications, and archived quotes—without human verification between handoffs. This highlights critical vulnerabilities in agentic AI systems where data accuracy and security cannot be guaranteed, raising concerns about the reliability and safety of autonomous AI agents in business-critical applications.",
+        "summary": "As AI agents become increasingly deployed in enterprise environments, data security and governance present significant challenges. The article examines scenarios where multiple AI agents autonomously access and process data from various sources without human oversight, creating potential vulnerabilities. Data lineage—tracking the origin and flow of information through systems—emerges as a critical security mechanism for enterprises deploying autonomous AI agents. This addresses growing concerns about maintaining control, accuracy, and security when AI systems operate independently across complex organizational data ecosystems.",
         "url": "https://www.technologyreview.com/2026/11/04/1147596/securing-the-agentic-enterprise-with-data-lineage/",
         "source": "MIT Technology Review",
         "published_at": "Wed, 04 Nov 2026 13:00:00 +0000",
         "image": "https://wp.technologyreview.com/wp-content/uploads/2026/10/MITTR2026_CyberhavenV1COV1200SocialCards.png?resize=1200,600",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/2.mp3",
-        "title_hi": "डेटा वंशावली के साथ एजेंटिक एंटरप्राइज को सुरक्षित करना",
-        "summary_hi": "यह लेख मानव निरीक्षण के बिना एंटरप्राइज वातावरण में काम करने वाले स्वायत्त AI एजेंटों द्वारा उत्पन्न सुरक्षा चुनौतियों की जांच करता है। यह एक परिदृश्य का वर्णन करता है जहां कई AI एजेंट क्रमिक रूप से विभिन्न स्रोतों से डेटा तक पहुंचते और संसाधित करते हैं—जिसमें प्रतिबंधित मूल्य निर्धारण प्रणालियां, आंतरिक संचार और संग्रहीत उद्धरण शामिल हैं—हस्तांतरण के बीच मानव सत्यापन के बिना। यह एजेंटिक AI सिस्टम में महत्वपूर्ण कमजोरियों को उजागर करता है जहां डेटा सटीकता और सुरक्षा की गारंटी नहीं दी जा सकती, जो व्यावसायिक-महत्वपूर्ण अनुप्रयोगों में स्वायत्त AI एजेंटों की विश्वसनीयता और सुरक्षा के बारे में चिंताएं बढ़ाता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/ai/2.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/2.mp3"
       },
       {
         "title": "Agility Robotics' Nasdaq debut invites scrutiny of humanoid robot market",
-        "summary": "Agility Robotics, the US leader in deploying humanoid robots, has gone public on the Nasdaq stock exchange. The company's public debut marks a significant milestone for the humanoid robotics industry and invites broader market scrutiny of the sector's viability and growth prospects. The IPO reflects investor confidence in commercial robotics applications while also raising questions about market valuations, profitability timelines, and the realistic deployment potential of humanoid robots across various industries and use cases.",
+        "summary": "Agility Robotics, a leading US company in humanoid robot deployment, has gone public on the Nasdaq stock exchange. This milestone marks significant investor confidence in the commercial viability of humanoid robotics technology. The public offering brings increased scrutiny to the broader humanoid robot market, raising questions about valuations, practical applications, and the timeline for widespread adoption. The debut reflects growing momentum in robotics commercialization while inviting critical examination of market maturity and realistic deployment prospects.",
         "url": "https://arstechnica.com/ai/2026/11/agility-robotics-nasdaq-debut-invites-scrutiny-of-humanoid-robot-market/",
         "source": "AI - Ars Technica",
         "published_at": "Thu, 05 Nov 2026 12:00:41 +0000",
         "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/11/Agility-Digit-5-humanoid-robots-at-work-1152x648.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/3.mp3",
-        "title_hi": "एजिलिटी रोबोटिक्स की नैस्डैक शुरुआत मानवीय रोबोट बाजार की जांच को आमंत्रित करती है",
-        "summary_hi": "एजिलिटी रोबोटिक्स, मानवीय रोबोट तैनाती में अमेरिकी नेता, नैस्डैक स्टॉक एक्सचेंज पर सार्वजनिक हुआ है। कंपनी की सार्वजनिक शुरुआत मानवीय रोबोटिक्स उद्योग के लिए एक महत्वपूर्ण मील का पत्थर है और क्षेत्र की व्यवहार्यता और विकास संभावनाओं की व्यापक बाजार जांच को आमंत्रित करती है। IPO निवेशकों के वाणिज्यिक रोबोटिक्स अनुप्रयोगों में आत्मविश्वास को दर्शाता है जबकि बाजार मूल्यांकन, लाभप्रदता समय सीमा और विभिन्न उद्योगों और उपयोग मामलों में मानवीय रोबोट की यथार्थवादी तैनाती क्षमता के बारे में सवाल भी उठाता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/ai/3.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/3.mp3"
       },
       {
-        "title": "British-born godfather of artificial intelligence issues chilling warning: 'Humanity is on the line!'",
-        "summary": "Geoffrey Hinton, a Nobel Prize laureate and pioneering figure in artificial intelligence research, has issued a stark warning that humanity's future is at risk due to AI's rapid and uncontrolled development. Hinton stated that artificial intelligence is \"hurtling out of control\" and its future has become \"extremely uncertain.\" His warning from a leading AI researcher carries significant weight in ongoing debates about AI safety, governance, and the need for regulatory frameworks to manage the technology's accelerating advancement and potential risks.",
-        "url": "https://www.gbnews.com/news/artificial-intelligence-warning-humanity-geoffrey-hinton",
-        "source": "GB News",
-        "published_at": "2026-11-07T09:07:00+00:00",
-        "image": "https://www.gbnews.com/media-library/geoffrey-hinton.jpg?id=68622234&width=1200&height=600&coordinates=0,417,0,417",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/4.mp3",
-        "title_hi": "ब्रिटेन में जन्मे कृत्रिम बुद्धिमत्ता के पिता ने भयावह चेतावनी दी: 'मानवता दांव पर है!'",
-        "summary_hi": "जेफ्री हिंटन, एक नोबेल पुरस्कार विजेता और कृत्रिम बुद्धिमत्ता अनुसंधान में अग्रणी व्यक्ति, ने एक कठोर चेतावनी दी है कि AI के तेजी से और अनियंत्रित विकास के कारण मानवता का भविष्य जोखिम में है। हिंटन ने कहा कि कृत्रिम बुद्धिमत्ता 'नियंत्रण से बाहर भाग रही है' और इसका भविष्य 'अत्यंत अनिश्चित' हो गया है। एक प्रमुख AI शोधकर्ता की यह चेतावनी AI सुरक्षा, शासन और प्रौद्योगिकी की त्वरित प्रगति और संभावित जोखिमों को प्रबंधित करने के लिए नियामक ढांचे की आवश्यकता के बारे में चल रही बहस में महत्वपूर्ण वजन रखती है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/ai/4.mp3"
+        "title": "Google: Schools can keep search while skipping Gemini, but AI search is non-negotiable",
+        "summary": "Google is offering schools limited choices regarding AI tool adoption, allowing them to maintain search access while declining Gemini AI services. However, the company positions AI-powered search as mandatory, effectively limiting genuine optionality for educational institutions. This approach reflects Google's strategy to integrate AI capabilities into core products while presenting the appearance of choice. The policy raises concerns about institutional autonomy in technology adoption and the increasing difficulty for organizations to avoid AI integration in essential digital services.",
+        "url": "https://arstechnica.com/ai/2026/11/google-schools-can-keep-search-while-skipping-gemini-but-ai-search-is-non-negotiable/",
+        "source": "AI - Ars Technica",
+        "published_at": "Thu, 05 Nov 2026 21:40:36 +0000",
+        "image": "https://cdn.arstechnica.net/wp-content/uploads/2025/05/Google-sign-IO-1152x648.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/ai/4.mp3"
       }
     ],
     "quantum": [
       {
         "title": "A Strange Quantum Theorem Has Killed Einstein's Reality",
-        "summary": "Albert Einstein spent decades defending classical notions of reality against quantum mechanics' counterintuitive implications. Recent research into quantum theorems continues to challenge Einstein's foundational arguments, poking holes in his attempts to preserve a deterministic, observer-independent reality. These findings suggest that the strange features of quantum mechanics—such as superposition and entanglement—cannot be reconciled with Einstein's classical worldview, effectively undermining his philosophical position on the nature of physical reality.",
+        "summary": "Albert Einstein spent decades defending classical notions of reality against quantum mechanics' counterintuitive implications. Recent research continues to challenge his foundational arguments through novel quantum theorems. These developments suggest that the everyday understanding of reality—where objects possess definite properties independent of observation—may be fundamentally incompatible with quantum theory. Researchers investigating Einstein's proposed solutions keep discovering logical inconsistencies and mathematical contradictions. This ongoing work deepens the philosophical implications of quantum mechanics, suggesting that reality at the quantum scale operates under principles radically different from our intuitive classical experience.",
         "url": "https://www.quantamagazine.org/a-strange-quantum-theorem-has-killed-einsteins-reality-20261106/",
         "source": "Quanta Magazine",
         "published_at": "Fri, 06 Nov 2026 15:48:54 +0000",
@@ -494,7 +434,7 @@
       },
       {
         "title": "Is There Anything Left in the Dream of Cold Fusion?",
-        "summary": "Cold fusion, once heralded as a revolutionary energy solution, has evolved into a legitimate research program exploring exotic atoms and pushing the boundaries of physics. While modern cold fusion research will not solve the global energy crisis, scientists continue investigating phenomena that challenge conventional understanding. This ongoing work demonstrates how failed scientific dreams can transform into productive research directions that expand fundamental knowledge, even if they don't deliver the originally promised technological breakthroughs.",
+        "summary": "Cold fusion research, once dismissed after failed 1989 experiments, continues as an active research program exploring exotic atoms and unconventional physics. While modern cold fusion research won't solve the global energy crisis, it remains scientifically valuable for pushing the boundaries of physics understanding. Researchers are investigating phenomena involving exotic atomic configurations that challenge conventional physics models. This work represents a shift from seeking practical energy solutions toward fundamental scientific exploration. The persistence of cold fusion research demonstrates how failed scientific endeavors can evolve into legitimate fields that expand theoretical knowledge, even without delivering the originally promised technological breakthroughs.",
         "url": "https://www.quantamagazine.org/is-there-anything-left-in-the-dream-of-cold-fusion-20261102/",
         "source": "Quanta Magazine",
         "published_at": "Mon, 02 Nov 2026 15:48:57 +0000",
@@ -502,148 +442,111 @@
         "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/1.mp3"
       },
       {
-        "title": "An unreleased Anthropic model just helped solve a major quantum-computing question",
-        "summary": "An unreleased artificial intelligence model from Anthropic has successfully resolved a longstanding problem in quantum computing, marking another significant achievement in using AI to tackle complex mathematical challenges. This breakthrough demonstrates the growing synergy between artificial intelligence and quantum computing research, where advanced AI systems can contribute to solving fundamental questions in quantum theory. The collaboration highlights how cutting-edge AI capabilities are becoming instrumental tools for advancing quantum computing science and addressing previously intractable theoretical problems.",
-        "url": "https://www.msn.com/en-us/technology/artificial-intelligence/an-unreleased-anthropic-model-just-helped-solve-a-major-quantum-computing-question/ar-AA2gUWHu",
-        "source": "Insider",
-        "published_at": "2026-11-07T00:49:10+00:00",
-        "image": "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA2gURsA.img?w=3966&h=2975&m=4&q=75",
+        "title": "How Do You Take a Picture of a Black Hole?",
+        "summary": "Astrophysicist Shep Doeleman explains the groundbreaking achievement of capturing the first black hole image, which required coordinating a global network of telescopes functioning as a single Earth-sized instrument. This unprecedented observational feat combined radio telescopes worldwide to achieve the necessary resolution for imaging black hole shadows. Beyond static images, researchers now aim to create dynamic movies of black holes, requiring even more sophisticated coordination and data processing capabilities. The technical challenges involve synchronizing observations across continents and processing enormous datasets. This progression from still images to video represents the next frontier in black hole astronomy, enabling scientists to observe dynamic phenomena around these extreme cosmic objects in real time.",
+        "url": "https://www.quantamagazine.org/how-do-you-take-a-picture-of-a-black-hole-20261029/",
+        "source": "Quanta Magazine",
+        "published_at": "Thu, 29 Oct 2026 15:11:57 +0000",
+        "image": "https://www.quantamagazine.org/wp-content/uploads/2026/10/JOW-S5-E11-cr.Chanelle-Nibbelink-Default-NO-LOGO.webp",
         "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/2.mp3"
       },
       {
-        "title": "IBM Unveils Its Most Advanced Quantum Computer in Chicago, Marking a Milestone for Illinois's Quantum Future",
-        "summary": "IBM, in partnership with the University of Chicago, the State of Illinois, and the Illinois Quantum and Microelectronics Park, unveiled an IBM Quantum System Two in Chicago. This represents IBM's first quantum computer installation in Illinois and marks the company's most advanced quantum system currently available. The deployment signals significant progress in making quantum computing infrastructure accessible beyond major tech hubs, establishing Illinois as an emerging center for quantum research and development while advancing the practical deployment of cutting-edge quantum technology.",
-        "url": "https://finance.yahoo.com/technology/ai/articles/ibm-unveils-most-advanced-quantum-200000777.html",
-        "source": "Yahoo Finance",
-        "published_at": "2026-11-06T20:00:00+00:00",
-        "image": "https://s.yimg.com/lo/mysterio/api/8a0f30916335deeae51022ad4861eb8be8e04214b896e13bb942c2c7533409e1/lightyear_networkapi/resizefill_w1200;quality_80;format_webp/https://media.zenfs.com/en/prnewswire.com/2ac94e6496caa4553bd7b2fe3420fa65.jpg",
+        "title": "Stanford team confirms at Physical Superintelligence's proof of quantum speedup limits",
+        "summary": "A research team at Physical Superintelligence (PSI) using an Anthropic AI model has proven the Aaronson-Ambainis conjecture, resolving a fundamental question in quantum computing that remained open for nearly two decades. This mathematical proof establishes theoretical limits on quantum computational speedup—the advantage quantum computers can achieve over classical computers for specific problems. The conjecture's resolution has significant implications for understanding the fundamental capabilities and constraints of quantum computing. This achievement demonstrates the emerging role of advanced AI systems in solving complex mathematical problems in theoretical computer science. The proof provides crucial theoretical foundations for assessing realistic expectations about quantum computing's practical advantages.",
+        "url": "https://quantumzeitgeist.com/physical-superintelligence-aaronson-ambainis-conjecture/",
+        "source": "quantumzeitgeist",
+        "published_at": "2026-11-08T09:03:00+00:00",
+        "image": "https://quantumzeitgeist.com/wp-content/uploads/quantum-proof-settles-core-question-speed-1200x630.png",
         "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/3.mp3"
       },
       {
-        "title": "Perimeter Institute explains how error correction makes quantum computing possible",
-        "summary": "The Perimeter Institute has provided an explanation of quantum error correction, a fundamental technology essential for building practical quantum computers. Error correction addresses one of quantum computing's most significant challenges: the fragility of quantum states and their susceptibility to decoherence. By detailing how error correction mechanisms work, the institute illuminates why this capability is critical for scaling quantum computers from experimental prototypes to reliable, functional systems capable of solving real-world problems.",
-        "url": "https://quantumzeitgeist.com/perimeter-institute-explains-error-correction-quantum/",
-        "source": "quantumzeitgeist",
-        "published_at": "2026-11-06T20:32:00+00:00",
-        "image": "https://quantumzeitgeist.com/wp-content/uploads/perimeter-institute-explains-error-correction-quantum-1200x630.png",
+        "title": "A New Map of 'Empty' Space Challenges a Tranquil Picture of the Galaxy",
+        "summary": "Advanced three-dimensional mapping technologies are revealing that the interstellar medium—the gas and dust between stars traditionally treated as static background—exhibits dynamic and complex behavior. For decades, astronomers largely ignored the interstellar medium's active properties, focusing instead on stars and galaxies. New mapping initiatives demonstrate that this supposedly empty space contains significant structure, motion, and interactions that influence galactic evolution. These discoveries reshape our understanding of how the galaxy functions as an interconnected system. The interstellar medium's dynamic nature affects star formation, cosmic ray propagation, and galactic magnetic fields, making it essential for comprehensive models of galactic structure and evolution.",
+        "url": "https://www.quantamagazine.org/a-new-map-of-empty-space-challenges-a-tranquil-picture-of-the-galaxy-20261030/",
+        "source": "Quanta Magazine",
+        "published_at": "Fri, 30 Oct 2026 14:52:05 +0000",
+        "image": "https://www.quantamagazine.org/wp-content/uploads/2026/10/Mapping-ISM-cr.NASA-Default.webp",
         "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/quantum/4.mp3"
       }
     ],
     "trump": [
       {
         "title": "Trump names Stephen Miller as new White House chief of staff",
-        "summary": "President Trump has appointed Stephen Miller, the architect of his hard-line immigration policy, as his new White House chief of staff, effective Monday. Miller, a longtime Trump adviser and partisan firebrand, is expected to drive significant policy direction in the administration. His promotion sets up likely clashes with Congress, particularly as Democrats prepare to take control following their midterm victories. Miller's appointment signals Trump's continued focus on immigration enforcement and suggests potential confrontations with the Democratic-controlled legislature over policy implementation and oversight.",
+        "summary": "President Trump has appointed Stephen Miller, architect of his hard-line immigration policy, as White House chief of staff, effective Monday. Miller is considered a loyal partisan firebrand whose promotion is expected to set up likely clashes with Congress. His appointment signals Trump's continued commitment to aggressive immigration enforcement and suggests potential confrontations with the Democratic-controlled legislature over policy implementation and oversight during the remainder of Trump's term.",
         "url": "https://www.bbc.co.uk/news/articles/cm9qzz5x9g5yo?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
         "published_at": "Fri, 06 Nov 2026 20:11:45 GMT",
         "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5751/live/463b6050-da19-11f1-bba7-b50f1faa7672.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/0.mp3",
-        "title_hi": "ट्रम्प ने स्टीफन मिलर को नए व्हाइट हाउस चीफ ऑफ स्टाफ के रूप में नियुक्त किया",
-        "summary_hi": "राष्ट्रपति ट्रम्प ने स्टीफन मिलर को अपने कठोर आप्रवासन नीति के वास्तुकार के रूप में अपने नए व्हाइट हाउस चीफ ऑफ स्टाफ के रूप में नियुक्त किया है, जो सोमवार से प्रभावी होगा। मिलर, एक दीर्घकालीन ट्रम्प सलाहकार और पक्षपाती अग्रदूत, प्रशासन में महत्वपूर्ण नीति दिशा चलाने की उम्मीद है। उनका पदोन्नति कांग्रेस के साथ संभावित टकराव स्थापित करता है, विशेष रूप से जैसे-जैसे डेमोक्रेट अपनी मध्यावधि जीत के बाद नियंत्रण लेने की तैयारी कर रहे हैं। मिलर की नियुक्ति ट्रम्प के आप्रवासन प्रवर्तन पर निरंतर ध्यान का संकेत देती है और लोकतांत्रिक-नियंत्रित विधायिका के साथ नीति कार्यान्वयन और निरीक्षण पर संभावित टकराव का सुझाव देती है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/trump/0.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/0.mp3"
       },
       {
-        "title": "With Stephen Miller pick, Trump readies for a battle",
-        "summary": "Trump's promotion of Stephen Miller to chief of staff represents a strategic positioning for conflict with Congress. Miller, known as a loyal partisan firebrand and architect of Trump's restrictive immigration policies, is expected to intensify ideological battles on Capitol Hill. The appointment comes amid Democratic gains in recent midterms, setting the stage for legislative confrontations. Miller's elevation signals Trump's intention to pursue aggressive policy initiatives despite reduced Republican congressional strength, likely triggering disputes over immigration enforcement, executive authority, and budgetary priorities between the White House and Democratic leadership.",
-        "url": "https://www.bbc.co.uk/news/articles/crp3gg2z171go?at_medium=RSS&at_campaign=rss",
+        "title": "The Trump coalition is shattered - what will Republicans do now?",
+        "summary": "Following significant Republican losses in recent midterm elections, the Trump coalition faces fracturing, with party members confronting a critical choice between continuing Trumpism or charting a new political direction. BBC Washington correspondent Daniel Bush examines the implications of these electoral setbacks for Republican strategy and identity. The analysis explores whether Republicans will maintain loyalty to Trump's political movement or pivot toward alternative leadership and policy approaches as the party reassesses its electoral viability and future positioning.",
+        "url": "https://www.bbc.co.uk/news/articles/cm3r5gnxqz3jo?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
-        "published_at": "Fri, 06 Nov 2026 23:24:15 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/492d/live/41326240-da17-11f1-bba7-b50f1faa7672.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/1.mp3",
-        "title_hi": "स्टीफन मिलर की नियुक्ति के साथ, ट्रम्प संघर्ष के लिए तैयार हैं",
-        "summary_hi": "ट्रम्प द्वारा स्टीफन मिलर को चीफ ऑफ स्टाफ में पदोन्नति कांग्रेस के साथ संघर्ष के लिए एक रणनीतिक स्थिति का प्रतिनिधित्व करती है। मिलर, एक वफादार पक्षपाती अग्रदूत और ट्रम्प की प्रतिबंधात्मक आप्रवासन नीतियों के वास्तुकार के रूप में जाने जाते हैं, कैपिटल हिल पर वैचारिक लड़ाइयों को तीव्र करने की उम्मीद है। यह नियुक्ति हाल की मध्यावधि चुनावों में डेमोक्रेटिक लाभ के बीच आती है, विधायी टकरावों के लिए मंच तैयार करती है। मिलर का उन्नयन ट्रम्प के आक्रामक नीति पहल को आगे बढ़ाने के इरादे का संकेत देता है, भले ही रिपब्लिकन कांग्रेसी शक्ति में कमी हो, संभवतः व्हाइट हाउस और डेमोक्रेटिक नेतृत्व के बीच आप्रवासन प्रवर्तन, कार्यकारी प्राधिकार और बजटीय प्राथमिकताओं पर विवाद को ट्रिगर करता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/trump/1.mp3"
+        "published_at": "Sun, 08 Nov 2026 00:52:39 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/fa4b/live/74e0bf70-dae8-11f1-93e1-3b657b665bcf.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/1.mp3"
       },
       {
-        "title": "Texas mayor instructs police to limit co-operation with ICE",
-        "summary": "A Houston mayor has instructed local police to limit cooperation with Immigration and Customs Enforcement (ICE) following months of public outcry. The directive stems from an incident where an ICE officer fatally shot a man who was driving to work, sparking community concerns about immigration enforcement practices. This action reflects growing tensions between local jurisdictions and federal immigration authorities over enforcement methods and accountability. The move represents a significant challenge to Trump administration immigration policies at the municipal level, highlighting resistance from local governments to aggressive ICE operations and raising questions about coordination between federal and local law enforcement.",
-        "url": "https://www.bbc.co.uk/news/articles/c8dx33d22zkro?at_medium=RSS&at_campaign=rss",
+        "title": "US offers $20m reward for information about Iran's nuclear programme",
+        "summary": "The United States is offering a $20 million reward for information regarding Iran's nuclear program, reflecting escalating tensions between the two nations. President Donald Trump has repeatedly raised the prospect of renewing military strikes against Iran's nuclear facilities. This reward initiative represents part of the Trump administration's broader strategy to pressure Iran on its nuclear development, combining intelligence-gathering incentives with explicit threats of potential military action against Iranian nuclear infrastructure.",
+        "url": "https://www.bbc.co.uk/news/articles/c6d091ev3p0jo?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
-        "published_at": "Sat, 07 Nov 2026 08:15:55 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4095/live/09b20f70-da4c-11f1-ad69-611c5b2ed04a.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/2.mp3",
-        "title_hi": "टेक्सास के मेयर ने पुलिस को आईसीई के साथ सहयोग सीमित करने का निर्देश दिया",
-        "summary_hi": "एक ह्यूस्टन मेयर ने महीनों की जनता की आलोचना के बाद स्थानीय पुलिस को आप्रवासन और सीमा शुल्क प्रवर्तन (आईसीई) के साथ सहयोग सीमित करने का निर्देश दिया है। यह निर्देश एक घटना से उत्पन्न होता है जहां एक आईसीई अधिकारी ने एक आदमी को घातक रूप से गोली मार दी जो काम पर जा रहा था, जिससे आप्रवासन प्रवर्तन प्रथाओं के बारे में सामुदायिक चिंताएं उत्पन्न हुईं। यह कार्रवाई प्रवर्तन विधियों और जवाबदेही पर स्थानीय क्षेत्राधिकार और संघीय आप्रवासन अधिकारियों के बीच बढ़ते तनाव को दर्शाता है। यह कदम नगरपालिका स्तर पर ट्रम्प प्रशासन आप्रवासन नीतियों के लिए एक महत्वपूर्ण चुनौती का प्रतिनिधित्व करता है, स्थानीय सरकारों द्वारा आक्रामक आईसीई संचालन के प्रतिरोध को उजागर करता है और संघीय और स्थानीय कानून प्रवर्तन के बीच समन्वय के बारे में सवाल उठाता है।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/trump/2.mp3"
+        "published_at": "Sat, 07 Nov 2026 18:14:38 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0b84/live/0f887590-dad0-11f1-93e1-3b657b665bcf.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/2.mp3"
       },
       {
-        "title": "Razor-tight Mississippi Senate race sparks ballot battle - could there be a recount?",
-        "summary": "Mississippi's U.S. Senate race has resulted in an extremely close outcome, prompting legal preparations from both campaigns for a potential recount and ballot dispute. Lawyers representing each side are actively preparing for possible litigation as vote counting continues. The razor-thin margin has raised questions about whether a recount will be triggered and what legal challenges may emerge. This closely contested race reflects the broader political polarization and competitive nature of recent elections, with both campaigns mobilizing legal resources to protect their interests and ensure accurate vote tallying in this significant Senate contest.",
-        "url": "https://www.bbc.co.uk/news/articles/cwj0llvqqm72o?at_medium=RSS&at_campaign=rss",
+        "title": "'Dana, please take the job!' - Trump asks UFC boss to be White House press secretary",
+        "summary": "President Trump publicly offered UFC President Dana White the position of White House press secretary, which has remained vacant for weeks. The sincerity of Trump's offer remained unclear, though White later indicated willingness to travel to Washington for a meeting with the president. The unconventional appointment proposal highlights the administration's difficulty filling the high-profile communications role and reflects Trump's tendency toward unorthodox personnel decisions in staffing key White House positions.",
+        "url": "https://www.bbc.co.uk/news/articles/cvze47p9jeexo?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
-        "published_at": "Fri, 06 Nov 2026 22:22:51 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/eacc/live/9e950150-da20-11f1-93e1-3b657b665bcf.png",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/3.mp3",
-        "title_hi": "तंग मिसिसिपी सीनेट दौड़ मतपत्र लड़ाई को जन्म देती है - क्या पुनर्गणना हो सकती है?",
-        "summary_hi": "मिसिसिपी की यू.एस. सीनेट दौड़ के परिणाम अत्यंत करीब हैं, दोनों अभियानों से पुनर्गणना और मतपत्र विवाद की संभावना के लिए कानूनी तैयारी को प्रेरित कर रहे हैं। प्रत्येक पक्ष का प्रतिनिधित्व करने वाले वकील मतगणना जारी रहने के साथ संभावित मुकदमेबाजी के लिए सक्रिय रूप से तैयारी कर रहे हैं। बेहद पतले मार्जिन ने सवाल उठाए हैं कि क्या पुनर्गणना ट्रिगर की जाएगी और कौन सी कानूनी चुनौतियां उभर सकती हैं। यह घनिष्ठ रूप से प्रतिस्पर्धी दौड़ व्यापक राजनीतिक ध्रुवीकरण और हाल के चुनावों की प्रतिस्पर्धी प्रकृति को दर्शाता है, दोनों अभियान अपने हितों की रक्षा करने और इस महत्वपूर्ण सीनेट प्रतियोगिता में सटीक मतगणना सुनिश्चित करने के लिए कानूनी संसाधनों को गतिशील कर रहे हैं।",
-        "audio_hi": ""
+        "published_at": "Sun, 08 Nov 2026 00:31:53 GMT",
+        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/8536/live/2fdfe760-dafd-11f1-b441-2b33b063138f.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/3.mp3"
       },
       {
-        "title": "Trump signs order to preserve Oval Office as national monument",
-        "summary": "President Trump has signed an executive order designating the Oval Office as a national monument, following significant renovations he commissioned. The order comes after Trump made substantial changes to the Oval Office decor and oversaw the demolition of the White House East Wing. The designation as a national monument represents an unusual move that protects the space from future alterations by subsequent administrations. This action reflects Trump's effort to preserve his architectural and design legacy within the White House, ensuring that his vision for the presidential workspace remains protected under national monument status regardless of future leadership changes.",
-        "url": "https://www.bbc.co.uk/news/articles/cmy0eeg101djo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC News",
-        "published_at": "Fri, 06 Nov 2026 09:19:57 GMT",
-        "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/97ff/live/e5957760-d9b2-11f1-93e1-3b657b665bcf.jpg",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/4.mp3",
-        "title_hi": "ट्रम्प ने ओवल ऑफिस को राष्ट्रीय स्मारक के रूप में संरक्षित करने के लिए आदेश पर हस्ताक्षर किए",
-        "summary_hi": "राष्ट्रपति ट्रम्प ने ओवल ऑफिस को एक राष्ट्रीय स्मारक के रूप में नामित करने के लिए एक कार्यकारी आदेश पर हस्ताक्षर किए हैं, जो उन्होंने किए गए महत्वपूर्ण नवीकरण के बाद। यह आदेश ट्रम्प द्वारा ओवल ऑफिस सजावट में किए गए पर्याप्त परिवर्तन और व्हाइट हाउस पूर्व विंग के विध्वंस की देखरेख के बाद आता है। राष्ट्रीय स्मारक के रूप में पदनाम एक असामान्य कदम का प्रतिनिधित्व करता है जो अंतरिम प्रशासन द्वारा भविष्य के परिवर्तन से अंतरिक्ष की रक्षा करता है। यह कार्रवाई व्हाइट हाउस के भीतर अपनी वास्तुकला और डिजाइन विरासत को संरक्षित करने के ट्रम्प के प्रयास को दर्शाती है, यह सुनिश्चित करती है कि राष्ट्रीय स्मारक स्थिति के तहत भविष्य के नेतृत्व परिवर्तन की परवाह किए बिना राष्ट्रपति कार्यस्थल के लिए उनकी दृष्टि संरक्षित रहे।",
-        "audio_hi": ""
+        "title": "U.S. launches task force to disrupt Iranian ground shipping routes",
+        "summary": "The United States has launched a task force aimed at disrupting Iranian ground shipping routes, escalating pressure on Iran's military and economic capabilities. The initiative represents part of Trump administration efforts to contain Iranian influence and weapons proliferation. The U.S. did not specify whether military action would be involved in preventing weapons technology transfers through these routes, leaving open the possibility of direct military intervention as part of the broader strategy to confront Iranian activities in the region.",
+        "url": "https://www.yahoo.com/news/politics/articles/trump-touts-imminent-decision-potential-123052899.html",
+        "source": "CBS News via Yahoo News",
+        "published_at": "2026-11-08T10:17:08+00:00",
+        "image": "https://media.zenfs.com/en/cbs_news_897/2c4087ec56335e755f4c355cc072075a.jpg",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/trump/4.mp3"
       }
     ],
     "local": [
       {
+        "title": "News | Melissa Schools",
+        "summary": "The Melissa Sixth Grade Center Choir, directed by Brooke Grall and Marissa Martin, is hosting a Fall into Winter Choir Concert open to the community. This event represents the school district's ongoing commitment to engaging families and showcasing student musical talent. The concert provides an opportunity for residents to support local student performers and participate in school-sponsored cultural activities. Such events are important for building community connections and celebrating the achievements of young musicians in the Melissa Independent School District.",
+        "url": "https://www.melissaisd.org/news",
+        "source": "Melissa Schools",
+        "published_at": "2.0 days ago",
+        "image": "",
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local/0.mp3"
+      },
+      {
         "title": "Melissa gas leak: Homes evacuated after gas main damaged",
-        "summary": "A 6-inch gas main was damaged by construction crews working near Melissa Road and Fannin Street, prompting evacuations in the area. Emergency crews ordered evacuations for the 2600 and 2700 blocks of McKinney Street and the Villages of Melissa on Tuesday morning. The incident occurred when construction work inadvertently damaged the gas infrastructure, creating a hazardous situation that required immediate response from emergency personnel. Residents were displaced while crews worked to address the damaged gas main and ensure public safety in the affected neighborhoods.",
+        "summary": "A six-inch gas main was damaged by construction crews working near Melissa Road and Fannin Street on Tuesday morning, prompting emergency evacuations. Residents in the 2600 and 2700 blocks of McKinney Street and the Villages of Melissa were ordered to evacuate as emergency crews responded to the incident. The evacuation was being held as crews worked to address the damaged gas infrastructure. This incident highlights the risks associated with construction activities near critical utility lines and the importance of emergency response protocols in protecting public safety during infrastructure emergencies.",
         "url": "https://www.fox4news.com/news/melissa-gas-leak-evacuations",
         "source": "FOX 4 Dallas-Fort Worth",
         "published_at": "",
         "image": "https://images.foxtv.com/static.fox4news.com/www.fox4news.com/content/uploads/2024/11/1200/630/112624-sky4-tuesday-1156am-kdfweme002_11_56_34_2_m_00.08.34.28.jpg?ve=1&tl=1",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local/0.mp3",
-        "title_hi": "मेलिसा गैस रिसाव: गैस मुख्य लाइन को नुकसान पहुंचने के बाद घरों को खाली किया गया",
-        "summary_hi": "मेलिसा रोड और फैनिन स्ट्रीट के पास काम कर रहे निर्माण कर्मचारियों द्वारा 6 इंच की गैस मुख्य लाइन को नुकसान पहुंचाया गया, जिससे इस क्षेत्र में खाली करने का आदेश दिया गया। आपातकालीन दल ने मंगलवार सुबह मैकिनी स्ट्रीट के 2600 और 2700 ब्लॉक और विलेजेस ऑफ मेलिसा में खाली करने का आदेश दिया। यह घटना तब हुई जब निर्माण कार्य ने अनजाने में गैस बुनियादी ढांचे को नुकसान पहुंचाया, जिससे एक खतरनाक स्थिति पैदा हुई जिसके लिए आपातकालीन कर्मियों की तत्काल प्रतिक्रिया की आवश्यकता थी। प्रभावित पड़ोस में सार्वजनिक सुरक्षा सुनिश्चित करने के लिए क्रू द्वारा क्षतिग्रस्त गैस मुख्य लाइन को संबोधित करने के दौरान निवासियों को विस्थापित किया गया।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/local/0.mp3"
-      },
-      {
-        "title": "Truck Rollover, Chemical Spill Prompts Evacuations Near Melissa",
-        "summary": "A truck rollover near Melissa resulted in a chemical spill that prompted evacuations in the surrounding area. Officials indicated the truck was carrying mineral spirits or other common household petroleum-based products. The crash occurred south of the intersection of Highway 5 and Collin County Road 275, positioned south of Melissa and north of McKinney. The incident created a hazardous situation requiring emergency response and evacuation protocols to protect residents in nearby communities from potential exposure to the spilled chemical materials.",
-        "url": "https://www.nbcdfw.com/news/local/truck-rollover-chemical-spill-prompts-evacuations-near-melissa/1905140/",
-        "source": "NBC DFW",
-        "published_at": "",
-        "image": "https://media.nbcdfw.com/2024/05/Tile-NBC-Dallas-Fort-Worth.png?fit=1920%2C1080&quality=85&strip=all",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local/1.mp3",
-        "title_hi": "ट्रक पलटना, रासायनिक रिसाव मेलिसा के पास खाली करने का कारण बनता है",
-        "summary_hi": "मेलिसा के पास एक ट्रक पलटने के कारण रासायनिक रिसाव हुआ जिसने आसपास के क्षेत्र में खाली करने का आदेश दिया। अधिकारियों ने संकेत दिया कि ट्रक खनिज आत्माओं या अन्य सामान्य घरेलू पेट्रोलियम-आधारित उत्पादों को ले जा रहा था। दुर्घटना हाईवे 5 और कॉलिन काउंटी रोड 275 के चौराहे के दक्षिण में हुई, जो मेलिसा के दक्षिण और मैकिनी के उत्तर में स्थित है। इस घटना ने एक खतरनाक स्थिति पैदा की जिसके लिए आपातकालीन प्रतिक्रिया और खाली करने की प्रोटोकॉल की आवश्यकता थी ताकि पास के समुदायों में निवासियों को रिसाव किए गए रासायनिक सामग्री के संभावित संपर्क से बचाया जा सके।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/local/1.mp3"
-      },
-      {
-        "title": "2 Melissa ISD students hit by car on the way to school",
-        "summary": "Two Melissa Independent School District students were struck by a vehicle while traveling to school in a recent incident. Melissa police are investigating the accident but have not yet released details about the driver involved or whether charges are being considered. It remains unclear whether the driver stopped to render assistance at the scene. The incident raises concerns about student safety during school commutes and highlights the need for continued attention to traffic safety in school zones and surrounding areas.",
-        "url": "https://www.fox4news.com/news/2-melissa-isd-students-hit-car-way-school",
-        "source": "FOX 4 Dallas-Fort Worth",
-        "published_at": "",
-        "image": "https://images.foxtv.com/static.fox4news.com/www.fox4news.com/content/uploads/2022/10/1200/630/school-bus-stop-sign-1.jpg?ve=1&tl=1",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local/2.mp3",
-        "title_hi": "2 मेलिसा आईएसडी छात्र स्कूल जाते समय कार से टकराए गए",
-        "summary_hi": "मेलिसा इंडिपेंडेंट स्कूल डिस्ट्रिक्ट के दो छात्र हाल की एक घटना में स्कूल जाते समय एक वाहन से टकराए गए। मेलिसा पुलिस दुर्घटना की जांच कर रही है लेकिन अभी तक शामिल ड्राइवर के बारे में विवरण या यह नहीं बताया गया है कि क्या आरोप पर विचार किया जा रहा है। यह स्पष्ट नहीं है कि ड्राइवर घटना स्थल पर सहायता प्रदान करने के लिए रुका या नहीं। यह घटना स्कूल आवागमन के दौरान छात्र सुरक्षा के बारे में चिंताएं बढ़ाती है और स्कूल क्षेत्रों और आसपास के क्षेत्रों में यातायात सुरक्षा पर निरंतर ध्यान देने की आवश्यकता को उजागर करती है।",
-        "audio_hi": ""
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local/1.mp3"
       }
     ],
     "local_events": [],
     "local_weather": [
       {
         "title": "Weather in Melissa, Texas",
-        "summary": "Broken clouds, 49°F (feels like 47°F). Today's range: 48°F to 51°F. Humidity 91%, wind 6 mph.",
+        "summary": "Broken clouds, 55°F (feels like 55°F). Today's range: 54°F to 58°F. Humidity 83%, wind 6 mph.",
         "url": "",
         "source": "OpenWeatherMap",
-        "published_at": "2026-11-07T11:58:51.835090+00:00",
+        "published_at": "2026-11-08T12:16:54.213770+00:00",
         "image": "",
-        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local_weather/0.mp3",
-        "title_hi": "मेलिसा, टेक्सास में मौसम",
-        "summary_hi": "टूटे हुए बादल, 49°F (महसूस होता है 47°F)। आज की रेंज: 48°F से 51°F। आर्द्रता 91%, हवा 6 mph।",
-        "audio_hi": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/hi/local_weather/0.mp3"
+        "audio": "https://raw.githubusercontent.com/bibhu2020/media/main/news/audio/local_weather/0.mp3"
       }
     ]
-  },
-  "hindi_generated_at": "2026-11-07T12:09:58.245161+00:00"
+  }
 }
